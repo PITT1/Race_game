@@ -61,7 +61,6 @@ shape = SubResource("BoxShape3D_ddb2p")
 
 [node name="Hot-rod-1" parent="." instance=ExtResource("1_6rrmi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.21482, 0)
-collision_mask = 7
 
 [node name="objetos" type="Node3D" parent="."]
 
@@ -169,3 +168,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.8556, 0.869326, 23.8129)
 
 [node name="Cone35" parent="objetos" instance=ExtResource("6_68x1l")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1759, 0.869326, 24.2199)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-1, 5.9062e-08, -6.44548e-08, 0, 0.737277, 0.67559, 8.74228e-08, 0.67559, -0.737277, -11.741, 21.232, 3.52515)
