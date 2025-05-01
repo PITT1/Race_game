@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://xc1noq5s054l"]
+[gd_scene load_steps=13 format=3 uid="uid://xc1noq5s054l"]
 
 [ext_resource type="PackedScene" uid="uid://de8rfk3kauv7p" path="res://Cars/hot_rod_1/hot_rod_1.tscn" id="1_6rrmi"]
 [ext_resource type="Texture2D" uid="uid://bm552631w02kq" path="res://Maps/test_map/textures/Asphalt025C_1K-JPG_Color.jpg" id="1_bo2x5"]
 [ext_resource type="Texture2D" uid="uid://u4w6r0fgn1j4" path="res://Maps/test_map/textures/Asphalt025C_1K-JPG_NormalDX.jpg" id="2_68x1l"]
 [ext_resource type="Texture2D" uid="uid://b73mb54fgpqie" path="res://Maps/test_map/textures/Asphalt025C_1K-JPG_Displacement.jpg" id="3_uufj7"]
 [ext_resource type="Texture2D" uid="uid://obfc5g3ntpqh" path="res://Maps/test_map/textures/Asphalt025C_1K-JPG_Roughness.jpg" id="4_ynjwq"]
+[ext_resource type="PackedScene" uid="uid://bhevwsndruup5" path="res://others/cone/cone.tscn" id="6_68x1l"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_qhj7d"]
 sky_top_color = Color(0.461087, 0.641883, 0.858997, 1)
@@ -48,7 +49,7 @@ shadow_enabled = true
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 collision_layer = 2
-collision_mask = 3
+collision_mask = 7
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
 material_override = SubResource("StandardMaterial3D_ompcc")
@@ -59,4 +60,112 @@ skeleton = NodePath("../..")
 shape = SubResource("BoxShape3D_ddb2p")
 
 [node name="Hot-rod-1" parent="." instance=ExtResource("1_6rrmi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.40991, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.21482, 0)
+collision_mask = 7
+
+[node name="objetos" type="Node3D" parent="."]
+
+[node name="Cone2" parent="objetos" instance=ExtResource("6_68x1l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 1, 3)
+
+[node name="Cone" parent="objetos" instance=ExtResource("6_68x1l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.378398, 0.869326, 7.14729)
+
+[node name="Cone3" parent="objetos" instance=ExtResource("6_68x1l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, -3)
+
+[node name="Cone4" parent="objetos" instance=ExtResource("6_68x1l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.6291, 1, 11.2885)
+
+[node name="Cone5" parent="objetos" instance=ExtResource("6_68x1l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.90503, 1, 11.6737)
+
+[node name="Cone6" parent="objetos" instance=ExtResource("6_68x1l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.8628, 0.869326, 11.1565)
+
+[node name="Cone7" parent="objetos" instance=ExtResource("6_68x1l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.5001, 0.869326, 11.6272)
+
+[node name="Cone8" parent="objetos" instance=ExtResource("6_68x1l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.8711, 0.869326, 11.8971)
+
+[node name="Cone9" parent="objetos" instance=ExtResource("6_68x1l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.9996, 0.869326, 12.0503)
+
+[node name="Cone10" parent="objetos" instance=ExtResource("6_68x1l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.48053, 0.869328, 23.8843)
+
+[node name="Cone11" parent="objetos" instance=ExtResource("6_68x1l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.4579, 0.869326, 23.8197)
+
+[node name="Cone12" parent="objetos" instance=ExtResource("6_68x1l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.538, 0.869326, 23.3321)
+
+[node name="Cone13" parent="objetos" instance=ExtResource("6_68x1l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.5942, 0.869326, 23.2561)
+
+[node name="Cone14" parent="objetos" instance=ExtResource("6_68x1l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.2692, 0.869326, 22.6636)
+
+[node name="Cone15" parent="objetos" instance=ExtResource("6_68x1l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.0583, 0.869324, 21.7777)
+
+[node name="Cone16" parent="objetos" instance=ExtResource("6_68x1l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42.8642, 0.869326, 15.3294)
+
+[node name="Cone17" parent="objetos" instance=ExtResource("6_68x1l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.5193, 0.869326, 20.9005)
+
+[node name="Cone18" parent="objetos" instance=ExtResource("6_68x1l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42.4688, 0.869326, 28.16)
+
+[node name="Cone19" parent="objetos" instance=ExtResource("6_68x1l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.6418, 0.869326, 32.2394)
+
+[node name="Cone20" parent="objetos" instance=ExtResource("6_68x1l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.451, 0.869326, 33.4518)
+
+[node name="Cone21" parent="objetos" instance=ExtResource("6_68x1l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.3929, 0.869326, 33.6866)
+
+[node name="Cone22" parent="objetos" instance=ExtResource("6_68x1l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.4193, 0.869326, 33.8164)
+
+[node name="Cone23" parent="objetos" instance=ExtResource("6_68x1l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.104, 0.869326, 2.22122)
+
+[node name="Cone24" parent="objetos" instance=ExtResource("6_68x1l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.632, 0.869326, -5.63395)
+
+[node name="Cone25" parent="objetos" instance=ExtResource("6_68x1l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.4427, 0.869326, -17.7532)
+
+[node name="Cone26" parent="objetos" instance=ExtResource("6_68x1l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.96343, 0.869326, -23.8153)
+
+[node name="Cone27" parent="objetos" instance=ExtResource("6_68x1l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.79336, 0.869326, 34.1109)
+
+[node name="Cone28" parent="objetos" instance=ExtResource("6_68x1l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.88627, 0.869326, 34.0009)
+
+[node name="Cone29" parent="objetos" instance=ExtResource("6_68x1l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.6261, 0.869324, 34.2089)
+
+[node name="Cone30" parent="objetos" instance=ExtResource("6_68x1l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.12588, 0.869326, 23.7852)
+
+[node name="Cone31" parent="objetos" instance=ExtResource("6_68x1l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.871, 0.869326, 31.8621)
+
+[node name="Cone32" parent="objetos" instance=ExtResource("6_68x1l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.4855, 0.869326, 9.50568)
+
+[node name="Cone33" parent="objetos" instance=ExtResource("6_68x1l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.8043, 0.869324, 15.3619)
+
+[node name="Cone34" parent="objetos" instance=ExtResource("6_68x1l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.8556, 0.869326, 23.8129)
+
+[node name="Cone35" parent="objetos" instance=ExtResource("6_68x1l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1759, 0.869326, 24.2199)

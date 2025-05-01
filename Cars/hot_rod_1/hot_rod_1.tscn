@@ -27,7 +27,7 @@ wheel_roll_influence = 0.0
 wheel_radius = 0.625
 wheel_rest_length = 0.3
 wheel_friction_slip = 1.0
-suspension_stiffness = 80.0
+suspension_stiffness = 50.0
 suspension_max_force = 100000.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="wheel_1"]
@@ -40,7 +40,7 @@ wheel_roll_influence = 0.0
 wheel_radius = 0.625
 wheel_rest_length = 0.3
 wheel_friction_slip = 1.0
-suspension_stiffness = 80.0
+suspension_stiffness = 50.0
 suspension_max_force = 100000.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="wheel_2"]
@@ -53,7 +53,7 @@ wheel_roll_influence = 0.0
 wheel_radius = 0.625
 wheel_rest_length = 0.3
 wheel_friction_slip = 1.0
-suspension_stiffness = 80.0
+suspension_stiffness = 50.0
 suspension_max_force = 100000.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="wheel_3"]
@@ -67,7 +67,7 @@ wheel_roll_influence = 0.0
 wheel_radius = 0.625
 wheel_rest_length = 0.3
 wheel_friction_slip = 1.0
-suspension_stiffness = 80.0
+suspension_stiffness = 50.0
 suspension_max_force = 100000.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="wheel_4"]
@@ -75,4 +75,4 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 
 mesh = ExtResource("2_qjy37")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-1, 5.84973e-08, -6.49678e-08, 0, 0.743145, 0.669131, 8.74228e-08, 0.669131, -0.743145, 2.82208, 11.971, -14.8576)
+transform = Transform3D(-1, -4.82519e-08, 7.29006e-08, 0, 0.833886, 0.551937, -8.74228e-08, 0.551937, -0.833886, -0.00341463, 3.71646, -3.76703)

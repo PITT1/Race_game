@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 3d_physics/layer_1="Cars"
 3d_physics/layer_2="terrain"
+3d_physics/layer_3="objetos"
 
 [rendering]
 
