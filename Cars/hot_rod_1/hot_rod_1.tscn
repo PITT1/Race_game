@@ -1,0 +1,78 @@
+[gd_scene load_steps=5 format=3 uid="uid://de8rfk3kauv7p"]
+
+[ext_resource type="ArrayMesh" uid="uid://djruo35vxgual" path="res://Cars/hot_rod_1/hot-rod-body.obj" id="1_eyabc"]
+[ext_resource type="Script" uid="uid://b6e3ejmyn4u4" path="res://Cars/hot_rod_1/hot_rod_1.gd" id="1_qjy37"]
+[ext_resource type="ArrayMesh" uid="uid://cs400ksphy3ue" path="res://Cars/hot_rod_1/wheel.obj" id="2_qjy37"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sattu"]
+size = Vector3(1, 0.653809, 3.71319)
+
+[node name="Hot-rod-1" type="VehicleBody3D"]
+collision_mask = 3
+mass = 100.0
+script = ExtResource("1_qjy37")
+ENGINE_POWER = 400
+
+[node name="Hot-rod-body" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_eyabc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.173096, 0.0823326)
+shape = SubResource("BoxShape3D_sattu")
+
+[node name="wheel_1" type="VehicleWheel3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.813407, -0.0477209, 1.71769)
+use_as_steering = true
+wheel_roll_influence = 0.0
+wheel_radius = 0.625
+wheel_rest_length = 0.3
+wheel_friction_slip = 1.0
+suspension_stiffness = 80.0
+suspension_max_force = 100000.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="wheel_1"]
+mesh = ExtResource("2_qjy37")
+
+[node name="wheel_2" type="VehicleWheel3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.856201, -0.0477209, -1.6314)
+use_as_traction = true
+wheel_roll_influence = 0.0
+wheel_radius = 0.625
+wheel_rest_length = 0.3
+wheel_friction_slip = 1.0
+suspension_stiffness = 80.0
+suspension_max_force = 100000.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="wheel_2"]
+mesh = ExtResource("2_qjy37")
+
+[node name="wheel_3" type="VehicleWheel3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.813, -0.048, 1.718)
+use_as_steering = true
+wheel_roll_influence = 0.0
+wheel_radius = 0.625
+wheel_rest_length = 0.3
+wheel_friction_slip = 1.0
+suspension_stiffness = 80.0
+suspension_max_force = 100000.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="wheel_3"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+mesh = ExtResource("2_qjy37")
+
+[node name="wheel_4" type="VehicleWheel3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.856, -0.048, -1.631)
+use_as_traction = true
+wheel_roll_influence = 0.0
+wheel_radius = 0.625
+wheel_rest_length = 0.3
+wheel_friction_slip = 1.0
+suspension_stiffness = 80.0
+suspension_max_force = 100000.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="wheel_4"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+mesh = ExtResource("2_qjy37")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-1, 5.84973e-08, -6.49678e-08, 0, 0.743145, 0.669131, 8.74228e-08, 0.669131, -0.743145, 2.82208, 11.971, -14.8576)

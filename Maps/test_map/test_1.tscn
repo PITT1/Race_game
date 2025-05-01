@@ -1,0 +1,62 @@
+[gd_scene load_steps=12 format=3 uid="uid://xc1noq5s054l"]
+
+[ext_resource type="PackedScene" uid="uid://de8rfk3kauv7p" path="res://Cars/hot_rod_1/hot_rod_1.tscn" id="1_6rrmi"]
+[ext_resource type="Texture2D" uid="uid://bm552631w02kq" path="res://Maps/test_map/textures/Asphalt025C_1K-JPG_Color.jpg" id="1_bo2x5"]
+[ext_resource type="Texture2D" uid="uid://u4w6r0fgn1j4" path="res://Maps/test_map/textures/Asphalt025C_1K-JPG_NormalDX.jpg" id="2_68x1l"]
+[ext_resource type="Texture2D" uid="uid://b73mb54fgpqie" path="res://Maps/test_map/textures/Asphalt025C_1K-JPG_Displacement.jpg" id="3_uufj7"]
+[ext_resource type="Texture2D" uid="uid://obfc5g3ntpqh" path="res://Maps/test_map/textures/Asphalt025C_1K-JPG_Roughness.jpg" id="4_ynjwq"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_qhj7d"]
+sky_top_color = Color(0.461087, 0.641883, 0.858997, 1)
+sky_horizon_color = Color(0.8253, 0.862749, 0.908028, 1)
+ground_horizon_color = Color(0.8253, 0.862749, 0.908028, 1)
+
+[sub_resource type="Sky" id="Sky_6rrmi"]
+sky_material = SubResource("ProceduralSkyMaterial_qhj7d")
+
+[sub_resource type="Environment" id="Environment_ddb2p"]
+background_mode = 2
+sky = SubResource("Sky_6rrmi")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ompcc"]
+albedo_texture = ExtResource("1_bo2x5")
+roughness_texture = ExtResource("4_ynjwq")
+normal_enabled = true
+normal_texture = ExtResource("2_68x1l")
+rim = 0.54
+rim_tint = 0.21
+rim_texture = ExtResource("3_uufj7")
+uv1_scale = Vector3(10, 10, 10)
+
+[sub_resource type="BoxMesh" id="BoxMesh_6rrmi"]
+lightmap_size_hint = Vector2i(1004, 516)
+size = Vector3(100, 1, 100)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ddb2p"]
+size = Vector3(100, 1, 100)
+
+[node name="Test1" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ddb2p")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.0122172, 0.916992, -0.398719, 0, 0.398749, 0.91706, 0.999925, -0.0112039, 0.00487161, 0, 0, 0)
+shadow_enabled = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+collision_layer = 2
+collision_mask = 3
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+material_override = SubResource("StandardMaterial3D_ompcc")
+mesh = SubResource("BoxMesh_6rrmi")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_ddb2p")
+
+[node name="Hot-rod-1" parent="." instance=ExtResource("1_6rrmi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.40991, 0)
