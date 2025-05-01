@@ -5,10 +5,12 @@
 [ext_resource type="ArrayMesh" uid="uid://cs400ksphy3ue" path="res://Cars/hot_rod_1/wheel.obj" id="2_qjy37"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_sattu"]
-size = Vector3(1, 0.653809, 3.71319)
+size = Vector3(1.8418, 1.1886, 4.23779)
 
 [node name="Hot-rod-1" type="VehicleBody3D"]
 collision_mask = 7
+center_of_mass_mode = 1
+center_of_mass = Vector3(0, -0.1, 0)
 script = ExtResource("1_qjy37")
 MAX_STEER = 0.4
 ENGINE_POWER = 200
@@ -17,7 +19,7 @@ ENGINE_POWER = 200
 mesh = ExtResource("1_eyabc")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.173096, 0.0823326)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0576172, 0.329285, 0.00869656)
 shape = SubResource("BoxShape3D_sattu")
 
 [node name="wheel_1" type="VehicleWheel3D" parent="."]
@@ -26,7 +28,7 @@ use_as_traction = true
 use_as_steering = true
 wheel_roll_influence = 0.0
 wheel_radius = 0.625
-wheel_friction_slip = 2.0
+wheel_friction_slip = 5.0
 suspension_travel = 0.1
 suspension_stiffness = 100.0
 suspension_max_force = 10000.0
@@ -39,7 +41,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.856201, -0.0477209, -1.6314
 use_as_traction = true
 wheel_roll_influence = 0.0
 wheel_radius = 0.625
-wheel_friction_slip = 2.0
+wheel_friction_slip = 5.0
 suspension_travel = 0.1
 suspension_stiffness = 100.0
 suspension_max_force = 10000.0
@@ -53,7 +55,7 @@ use_as_traction = true
 use_as_steering = true
 wheel_roll_influence = 0.0
 wheel_radius = 0.625
-wheel_friction_slip = 2.0
+wheel_friction_slip = 5.0
 suspension_travel = 0.1
 suspension_stiffness = 100.0
 suspension_max_force = 10000.0
@@ -67,7 +69,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.856, -0.048, -1.631)
 use_as_traction = true
 wheel_roll_influence = 0.0
 wheel_radius = 0.625
-wheel_friction_slip = 2.0
+wheel_friction_slip = 5.0
 suspension_travel = 0.1
 suspension_stiffness = 100.0
 suspension_max_force = 10000.0
