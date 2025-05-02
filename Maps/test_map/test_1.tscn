@@ -9,7 +9,7 @@
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="7_ompcc"]
 [ext_resource type="Script" uid="uid://csjccrhj5wnx7" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="8_rp5gc"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="9_20d3k"]
-[ext_resource type="PackedScene" uid="uid://capolqfeqswrx" path="res://others/ramps/ramp_1.dae" id="10_rp5gc"]
+[ext_resource type="PackedScene" uid="uid://b0fyvn1iybud7" path="res://others/ramps/ramp1.tscn" id="10_rp5gc"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_qhj7d"]
 sky_top_color = Color(0.461087, 0.641883, 0.858997, 1)
@@ -170,7 +170,7 @@ script = ExtResource("7_ompcc")
 metadata/_custom_type_script = "uid://bd046eokvcnu2"
 
 [node name="PhantomCamera3D" type="Node3D" parent="." node_paths=PackedStringArray("follow_target", "look_at_target")]
-transform = Transform3D(-0.752376, 0.501235, -0.447636, -3.02791e-08, 0.666102, 0.745858, 0.682774, 0.55233, -0.493268, -11.085, 19.6848, -12.215)
+transform = Transform3D(-0.760191, 0.501235, -0.447636, -3.05936e-08, 0.666102, 0.745858, 0.689866, 0.55233, -0.493268, -11.085, 19.6848, -12.215)
 top_level = true
 script = ExtResource("8_rp5gc")
 follow_mode = 2
@@ -182,4 +182,4 @@ follow_offset = Vector3(-11.085, 18.47, -12.215)
 metadata/_custom_type_script = "uid://csjccrhj5wnx7"
 
 [node name="ramp_1" parent="." instance=ExtResource("10_rp5gc")]
-transform = Transform3D(1.965, 0, 0, 0, 1.965, 0, 0, 0, 1.965, 23.2786, 1.83012, -23.1626)
+transform = Transform3D(1.705, 0, 0, 0, 1.705, 0, 0, 0, 1.705, 19.291, 1.663, -28.211)

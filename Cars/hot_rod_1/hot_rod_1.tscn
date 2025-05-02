@@ -77,3 +77,8 @@ suspension_max_force = 10000.0
 [node name="MeshInstance3D" type="MeshInstance3D" parent="wheel_4"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 mesh = ExtResource("2_qjy37")
+
+[node name="ground_sensor" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00145769, -0.0211686, 0.46519)
+collision_mask = 2
+hit_from_inside = true

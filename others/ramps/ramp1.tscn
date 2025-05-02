@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0fyvn1iybud7"]
+
+[ext_resource type="PackedScene" uid="uid://capolqfeqswrx" path="res://others/ramps/ramp_1.dae" id="1_31svv"]
+
+[node name="ramp_1" instance=ExtResource("1_31svv")]
+
+[node name="@StaticBody3D@64674" parent="." index="0"]
+collision_layer = 2
+collision_mask = 7
