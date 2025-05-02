@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://xc1noq5s054l"]
+[gd_scene load_steps=19 format=3 uid="uid://xc1noq5s054l"]
 
 [ext_resource type="PackedScene" uid="uid://de8rfk3kauv7p" path="res://Cars/hot_rod_1/hot_rod_1.tscn" id="1_6rrmi"]
 [ext_resource type="Texture2D" uid="uid://bm552631w02kq" path="res://Maps/test_map/textures/Asphalt025C_1K-JPG_Color.jpg" id="1_bo2x5"]
@@ -10,18 +10,20 @@
 [ext_resource type="Script" uid="uid://csjccrhj5wnx7" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="8_rp5gc"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="9_20d3k"]
 [ext_resource type="PackedScene" uid="uid://b0fyvn1iybud7" path="res://others/ramps/ramp1.tscn" id="10_rp5gc"]
+[ext_resource type="PackedScene" uid="uid://bv0ud4flas23l" path="res://Maps/circuit_test/circuit_test.glb" id="11_20d3k"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_qhj7d"]
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_20d3k"]
 sky_top_color = Color(0.461087, 0.641883, 0.858997, 1)
-sky_horizon_color = Color(0.8253, 0.862749, 0.908028, 1)
-ground_horizon_color = Color(0.8253, 0.862749, 0.908028, 1)
+sky_horizon_color = Color(0.631155, 0.676354, 0.730632, 1)
+ground_bottom_color = Color(0, 0, 0, 1)
+ground_horizon_color = Color(0.631155, 0.676354, 0.730632, 1)
 
-[sub_resource type="Sky" id="Sky_6rrmi"]
-sky_material = SubResource("ProceduralSkyMaterial_qhj7d")
+[sub_resource type="Sky" id="Sky_opc3v"]
+sky_material = SubResource("ProceduralSkyMaterial_20d3k")
 
-[sub_resource type="Environment" id="Environment_ddb2p"]
+[sub_resource type="Environment" id="Environment_6od13"]
 background_mode = 2
-sky = SubResource("Sky_6rrmi")
+sky = SubResource("Sky_opc3v")
 tonemap_mode = 2
 glow_enabled = true
 
@@ -51,10 +53,10 @@ ease = 2
 [node name="Test1" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_ddb2p")
+environment = SubResource("Environment_6od13")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.0122172, 0.916992, -0.398719, 0, 0.398749, 0.91706, 0.999925, -0.0112039, 0.00487161, 0, 0, 0)
+transform = Transform3D(0.763796, 0.645458, 2.82138e-08, 0, -4.37114e-08, 1, 0.645458, -0.763796, -3.33866e-08, 0, 0, 0)
 shadow_enabled = true
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
@@ -170,7 +172,7 @@ script = ExtResource("7_ompcc")
 metadata/_custom_type_script = "uid://bd046eokvcnu2"
 
 [node name="PhantomCamera3D" type="Node3D" parent="." node_paths=PackedStringArray("follow_target", "look_at_target")]
-transform = Transform3D(-0.760191, 0.501235, -0.447636, -3.05936e-08, 0.666102, 0.745858, 0.689866, 0.55233, -0.493268, -11.085, 19.6848, -12.215)
+transform = Transform3D(-0.829419, 0.501235, -0.447636, -3.33797e-08, 0.666102, 0.745858, 0.75269, 0.55233, -0.493268, -11.085, 19.6848, -12.215)
 top_level = true
 script = ExtResource("8_rp5gc")
 follow_mode = 2
@@ -183,3 +185,12 @@ metadata/_custom_type_script = "uid://csjccrhj5wnx7"
 
 [node name="ramp_1" parent="." instance=ExtResource("10_rp5gc")]
 transform = Transform3D(1.705, 0, 0, 0, 1.705, 0, 0, 0, 1.705, 19.291, 1.663, -28.211)
+
+[node name="circuit_test" parent="." instance=ExtResource("11_20d3k")]
+transform = Transform3D(2.455, 0, 0, 0, 2.455, 0, 0, 0, 2.455, -12.289, 0.514, 88.156)
+
+[node name="@StaticBody3D@93812" parent="circuit_test" index="1"]
+collision_layer = 2
+collision_mask = 7
+
+[editable path="circuit_test"]
