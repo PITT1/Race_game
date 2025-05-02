@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b73mb54fgpqie"
-path.s3tc="res://.godot/imported/Asphalt025C_1K-JPG_Displacement.jpg-87670675b9dbb9f5712576f8c1c04fd6.s3tc.ctex"
+uid="uid://bk3p8umc7mpd0"
+path.s3tc="res://.godot/imported/Grass001_1K-JPG_Color.jpg-70525bc7133f0f30fb84bed384f03830.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Maps/test_map/textures/Asphalt025C_1K-JPG_Displacement.jpg"
-dest_files=["res://.godot/imported/Asphalt025C_1K-JPG_Displacement.jpg-87670675b9dbb9f5712576f8c1c04fd6.s3tc.ctex"]
+source_file="res://Maps/test_map/textures/Grass001_1K-JPG_Color.jpg"
+dest_files=["res://.godot/imported/Grass001_1K-JPG_Color.jpg-70525bc7133f0f30fb84bed384f03830.s3tc.ctex"]
 
 [params]
 

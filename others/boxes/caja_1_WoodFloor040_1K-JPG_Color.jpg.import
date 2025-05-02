@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://u4w6r0fgn1j4"
-path.s3tc="res://.godot/imported/Asphalt025C_1K-JPG_NormalDX.jpg-56247959bd9e93c376f4ed9210a84bce.s3tc.ctex"
+uid="uid://bqggboe0lhjeu"
+path.s3tc="res://.godot/imported/caja_1_WoodFloor040_1K-JPG_Color.jpg-9241c57350673b676fc192ba4dcfb73c.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "116deca43c5fb71e9baccc833b3b1bc4"
+}
 
 [deps]
 
-source_file="res://Maps/test_map/textures/Asphalt025C_1K-JPG_NormalDX.jpg"
-dest_files=["res://.godot/imported/Asphalt025C_1K-JPG_NormalDX.jpg-56247959bd9e93c376f4ed9210a84bce.s3tc.ctex"]
+source_file="res://others/boxes/caja_1_WoodFloor040_1K-JPG_Color.jpg"
+dest_files=["res://.godot/imported/caja_1_WoodFloor040_1K-JPG_Color.jpg-9241c57350673b676fc192ba4dcfb73c.s3tc.ctex"]
 
 [params]
 
@@ -20,12 +23,12 @@ compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/normal_map=1
+compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=1
-roughness/src_normal="res://Maps/test_map/textures/Asphalt025C_1K-JPG_NormalDX.jpg"
+roughness/mode=0
+roughness/src_normal=""
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false

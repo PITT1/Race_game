@@ -1,16 +1,16 @@
-[gd_scene load_steps=19 format=3 uid="uid://xc1noq5s054l"]
+[gd_scene load_steps=23 format=3 uid="uid://xc1noq5s054l"]
 
 [ext_resource type="PackedScene" uid="uid://de8rfk3kauv7p" path="res://Cars/hot_rod_1/hot_rod_1.tscn" id="1_6rrmi"]
 [ext_resource type="Texture2D" uid="uid://bm552631w02kq" path="res://Maps/test_map/textures/Asphalt025C_1K-JPG_Color.jpg" id="1_bo2x5"]
-[ext_resource type="Texture2D" uid="uid://u4w6r0fgn1j4" path="res://Maps/test_map/textures/Asphalt025C_1K-JPG_NormalDX.jpg" id="2_68x1l"]
-[ext_resource type="Texture2D" uid="uid://b73mb54fgpqie" path="res://Maps/test_map/textures/Asphalt025C_1K-JPG_Displacement.jpg" id="3_uufj7"]
-[ext_resource type="Texture2D" uid="uid://obfc5g3ntpqh" path="res://Maps/test_map/textures/Asphalt025C_1K-JPG_Roughness.jpg" id="4_ynjwq"]
+[ext_resource type="Texture2D" uid="uid://bk3p8umc7mpd0" path="res://Maps/test_map/textures/Grass001_1K-JPG_Color.jpg" id="2_rp5gc"]
+[ext_resource type="Texture2D" uid="uid://b6cnimeif6j5p" path="res://Maps/test_map/textures/Ground079S_1K-JPG_Color.jpg" id="5_6od13"]
 [ext_resource type="PackedScene" uid="uid://bhevwsndruup5" path="res://others/cone/cone.tscn" id="6_68x1l"]
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="7_ompcc"]
 [ext_resource type="Script" uid="uid://csjccrhj5wnx7" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="8_rp5gc"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="9_20d3k"]
 [ext_resource type="PackedScene" uid="uid://b0fyvn1iybud7" path="res://others/ramps/ramp1.tscn" id="10_rp5gc"]
 [ext_resource type="PackedScene" uid="uid://bv0ud4flas23l" path="res://Maps/circuit_test/circuit_test.glb" id="11_20d3k"]
+[ext_resource type="PackedScene" uid="uid://x4l2usdlfsxp" path="res://others/boxes/box_1.tscn" id="12_opc3v"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_20d3k"]
 sky_top_color = Color(0.461087, 0.641883, 0.858997, 1)
@@ -27,15 +27,9 @@ sky = SubResource("Sky_opc3v")
 tonemap_mode = 2
 glow_enabled = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ompcc"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rp5gc"]
 albedo_texture = ExtResource("1_bo2x5")
-roughness_texture = ExtResource("4_ynjwq")
-normal_enabled = true
-normal_texture = ExtResource("2_68x1l")
-rim = 0.54
-rim_tint = 0.21
-rim_texture = ExtResource("3_uufj7")
-uv1_scale = Vector3(10, 10, 10)
+uv1_scale = Vector3(2.875, 2.875, 2.875)
 
 [sub_resource type="BoxMesh" id="BoxMesh_6rrmi"]
 lightmap_size_hint = Vector2i(1004, 516)
@@ -44,11 +38,25 @@ size = Vector3(100, 1, 100)
 [sub_resource type="BoxShape3D" id="BoxShape3D_ddb2p"]
 size = Vector3(100, 1, 100)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_20d3k"]
+albedo_texture = ExtResource("5_6od13")
+uv1_scale = Vector3(10, 10, 10)
+
+[sub_resource type="BoxMesh" id="BoxMesh_etmvp"]
+size = Vector3(100, 1, 100)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6od13"]
+size = Vector3(100, 1, 100)
+
 [sub_resource type="Resource" id="Resource_opc3v"]
 script = ExtResource("9_20d3k")
 duration = 1.0
 transition = 0
 ease = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iw6yb"]
+albedo_texture = ExtResource("2_rp5gc")
+uv1_scale = Vector3(10, 10, 10)
 
 [node name="Test1" type="Node3D"]
 
@@ -64,12 +72,24 @@ collision_layer = 2
 collision_mask = 7
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
-material_override = SubResource("StandardMaterial3D_ompcc")
+material_override = SubResource("StandardMaterial3D_rp5gc")
 mesh = SubResource("BoxMesh_6rrmi")
 skeleton = NodePath("../..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 shape = SubResource("BoxShape3D_ddb2p")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -108.506, 0, 0)
+collision_layer = 2
+collision_mask = 7
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D2"]
+material_override = SubResource("StandardMaterial3D_20d3k")
+mesh = SubResource("BoxMesh_etmvp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2"]
+shape = SubResource("BoxShape3D_6od13")
 
 [node name="Hot-rod-1" parent="." instance=ExtResource("1_6rrmi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.21482, 0)
@@ -172,7 +192,7 @@ script = ExtResource("7_ompcc")
 metadata/_custom_type_script = "uid://bd046eokvcnu2"
 
 [node name="PhantomCamera3D" type="Node3D" parent="." node_paths=PackedStringArray("follow_target", "look_at_target")]
-transform = Transform3D(-0.829419, 0.501235, -0.447636, -3.33797e-08, 0.666102, 0.745858, 0.75269, 0.55233, -0.493268, -11.085, 19.6848, -12.215)
+transform = Transform3D(-0.846367, 0.501235, -0.447636, -3.40617e-08, 0.666102, 0.745858, 0.76807, 0.55233, -0.493268, -11.085, 19.6848, -12.215)
 top_level = true
 script = ExtResource("8_rp5gc")
 follow_mode = 2
@@ -192,5 +212,49 @@ transform = Transform3D(2.455, 0, 0, 0, 2.455, 0, 0, 0, 2.455, -12.289, 0.514, 8
 [node name="@StaticBody3D@93812" parent="circuit_test" index="1"]
 collision_layer = 2
 collision_mask = 7
+
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="Box1" parent="Node3D" instance=ExtResource("12_opc3v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.74055, 1.7907, -24.5442)
+
+[node name="Box2" parent="Node3D" instance=ExtResource("12_opc3v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.78908, 1.90795, -29.2298)
+
+[node name="Box3" parent="Node3D" instance=ExtResource("12_opc3v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.87189, 1.83142, -31.6725)
+
+[node name="Box4" parent="Node3D" instance=ExtResource("12_opc3v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.70462, 1.83793, -26.6972)
+
+[node name="Box5" parent="Node3D" instance=ExtResource("12_opc3v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.59179, 4.45252, -27.6558)
+
+[node name="Box6" parent="Node3D" instance=ExtResource("12_opc3v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.78475, 4.28231, -30.5323)
+
+[node name="Box7" parent="Node3D" instance=ExtResource("12_opc3v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.04718, 6.50296, -29.0669)
+
+[node name="Box8" parent="Node3D" instance=ExtResource("12_opc3v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.94122, 3.79946, -25.3711)
+
+[node name="Box9" parent="Node3D" instance=ExtResource("12_opc3v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.70082, 6.61427, -26.5895)
+
+[node name="ramp_2" parent="." instance=ExtResource("10_rp5gc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -47.7258, 1.1886, -28.1136)
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -108.506, 0, -107.613)
+collision_layer = 2
+collision_mask = 7
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D3"]
+material_override = SubResource("StandardMaterial3D_iw6yb")
+mesh = SubResource("BoxMesh_etmvp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D3"]
+shape = SubResource("BoxShape3D_6od13")
 
 [editable path="circuit_test"]
