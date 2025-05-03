@@ -1,0 +1,68 @@
+[gd_scene load_steps=8 format=3 uid="uid://cto48mf7hn0mn"]
+
+[ext_resource type="ArrayMesh" uid="uid://dpbqlhydbkycn" path="res://others/planchas/planchas_body.obj" id="1_i6jre"]
+[ext_resource type="Script" uid="uid://c5b1db15uqpxm" path="res://others/planchas/plancha.gd" id="1_kyf8s"]
+[ext_resource type="ArrayMesh" uid="uid://bajatudaetqt" path="res://others/planchas/planchas_damage_L.obj" id="2_341eu"]
+[ext_resource type="ArrayMesh" uid="uid://clkuv8onhf8a4" path="res://others/planchas/planchas_damage_R.obj" id="3_kyf8s"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qn8lx"]
+size = Vector3(1.98924, 1.60645, 0.990112)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tgcm5"]
+size = Vector3(2.02545, 1.64209, 0.321518)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h2amt"]
+size = Vector3(4, 1.18945, 3.12836)
+
+[node name="Plancha" type="Node3D"]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
+script = ExtResource("1_kyf8s")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = ExtResource("1_i6jre")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000389099, 0.065918, 2.48963)
+shape = SubResource("BoxShape3D_qn8lx")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000389099, 0.065918, -2.48311)
+shape = SubResource("BoxShape3D_qn8lx")
+
+[node name="plancha_L" type="RigidBody3D" parent="."]
+collision_layer = 2
+axis_lock_linear_x = true
+axis_lock_linear_y = true
+mass = 1000.0
+gravity_scale = 0.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="plancha_L"]
+mesh = ExtResource("2_341eu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="plancha_L"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00674438, 0.108643, 1.7471)
+shape = SubResource("BoxShape3D_tgcm5")
+
+[node name="plancha_R" type="RigidBody3D" parent="."]
+axis_lock_linear_x = true
+axis_lock_linear_y = true
+gravity_scale = 0.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="plancha_R"]
+mesh = ExtResource("3_kyf8s")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="plancha_R"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00674438, 0.108643, -1.75503)
+shape = SubResource("BoxShape3D_tgcm5")
+
+[node name="sensor" type="Area3D" parent="."]
+collision_layer = 8
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="sensor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.158752, -0.0947266, -0.0330505)
+shape = SubResource("BoxShape3D_h2amt")
+debug_color = Color(1, 0.00684556, 0.0524812, 0.42)
+
+[connection signal="body_entered" from="sensor" to="." method="_on_sensor_body_entered"]

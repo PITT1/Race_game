@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bajatudaetqt"
+path="res://.godot/imported/planchas_damage_L.obj-bc43902c2073ecf27bcbf3a4a436227a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/planchas_damage_L.obj-bc43902c2073ecf27bcbf3a4a436227a.mesh"]
+
+source_file="res://others/planchas/planchas_damage_L.obj"
+dest_files=["res://.godot/imported/planchas_damage_L.obj-bc43902c2073ecf27bcbf3a4a436227a.mesh", "res://.godot/imported/planchas_damage_L.obj-bc43902c2073ecf27bcbf3a4a436227a.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
