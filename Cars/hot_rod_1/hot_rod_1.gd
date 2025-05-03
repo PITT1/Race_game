@@ -13,14 +13,14 @@ func _physics_process(delta: float) -> void:
 
 func air_control(delta):
 	if not ground_sensor.is_colliding():
-		if Input.is_action_just_pressed("ui_left"):
-			set_angular_velocity(Vector3.UP * 100 * delta)
+		if Input.is_action_pressed("ui_left"):
+			set_angular_velocity(lerp(angular_velocity, Vector3.UP * 5, delta))
 		
-		if Input.is_action_just_pressed("ui_right"):
-			set_angular_velocity(Vector3.DOWN * 100 * delta)
+		if Input.is_action_pressed("ui_right"):
+			set_angular_velocity(lerp(angular_velocity, Vector3.DOWN * 5, delta))
 			
-		if Input.is_action_just_pressed("ui_up"):
-			set_angular_velocity(lerp(Vector3(0,0,0), Vector3(0,0,100), delta))
+		if Input.is_action_pressed("ui_up"):
+			set_angular_velocity(lerp(angular_velocity, Vector3(0,0,5), delta))
 		
-		if Input.is_action_just_pressed("ui_down"):
-			set_angular_velocity(Vector3(0,0,-100) * delta)
+		if Input.is_action_pressed("ui_down"):
+			set_angular_velocity(lerp(angular_velocity, Vector3(0,0,-5), delta))

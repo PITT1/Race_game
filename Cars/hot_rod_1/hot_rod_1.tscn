@@ -80,5 +80,6 @@ mesh = ExtResource("2_qjy37")
 
 [node name="ground_sensor" type="RayCast3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00145769, -0.0211686, 0.46519)
+target_position = Vector3(0, -2, 0)
 collision_mask = 2
 hit_from_inside = true
