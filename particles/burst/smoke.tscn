@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://bhcgypypsxj4i"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1675o"]
+albedo_color = Color(0.431373, 0.431373, 0.431373, 0.227451)
+
+[sub_resource type="SphereMesh" id="SphereMesh_12q03"]
+
+[sub_resource type="Curve" id="Curve_8fbsx"]
+_limits = [0.0, 4.0, 0.0, 1.0]
+_data = [Vector2(0.0585938, 0), 0.0, 0.0, 0, 0, Vector2(0.152344, 0.88716), 0.0, 0.0, 0, 0, Vector2(0.316406, 4), 0.0, 0.0, 0, 0, Vector2(0.722656, 4), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 5
+
+[node name="smoke" type="CPUParticles3D"]
+material_override = SubResource("StandardMaterial3D_1675o")
+emitting = false
+amount = 20
+lifetime = 1.5
+one_shot = true
+explosiveness = 1.0
+randomness = 1.0
+mesh = SubResource("SphereMesh_12q03")
+spread = 180.0
+gravity = Vector3(0, 10, 0)
+initial_velocity_min = 1.0
+initial_velocity_max = 2.0
+scale_amount_curve = SubResource("Curve_8fbsx")

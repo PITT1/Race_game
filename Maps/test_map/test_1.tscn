@@ -192,7 +192,7 @@ script = ExtResource("7_ompcc")
 metadata/_custom_type_script = "uid://bd046eokvcnu2"
 
 [node name="PhantomCamera3D" type="Node3D" parent="." node_paths=PackedStringArray("follow_target", "look_at_target")]
-transform = Transform3D(-0.846367, 0.501235, -0.447636, -3.40617e-08, 0.666102, 0.745858, 0.76807, 0.55233, -0.493268, -11.085, 19.6848, -12.215)
+transform = Transform3D(-0.84811, 0.501235, -0.447636, -3.41319e-08, 0.666102, 0.745858, 0.769652, 0.55233, -0.493268, -11.085, 19.6848, -12.215)
 top_level = true
 script = ExtResource("8_rp5gc")
 follow_mode = 2
@@ -216,31 +216,7 @@ collision_mask = 7
 [node name="Node3D" type="Node3D" parent="."]
 
 [node name="Box1" parent="Node3D" instance=ExtResource("12_opc3v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.74055, 1.7907, -24.5442)
-
-[node name="Box2" parent="Node3D" instance=ExtResource("12_opc3v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.78908, 1.90795, -29.2298)
-
-[node name="Box3" parent="Node3D" instance=ExtResource("12_opc3v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.87189, 1.83142, -31.6725)
-
-[node name="Box4" parent="Node3D" instance=ExtResource("12_opc3v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.70462, 1.83793, -26.6972)
-
-[node name="Box5" parent="Node3D" instance=ExtResource("12_opc3v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.59179, 4.45252, -27.6558)
-
-[node name="Box6" parent="Node3D" instance=ExtResource("12_opc3v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.78475, 4.28231, -30.5323)
-
-[node name="Box7" parent="Node3D" instance=ExtResource("12_opc3v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.04718, 6.50296, -29.0669)
-
-[node name="Box8" parent="Node3D" instance=ExtResource("12_opc3v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.94122, 3.79946, -25.3711)
-
-[node name="Box9" parent="Node3D" instance=ExtResource("12_opc3v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.70082, 6.61427, -26.5895)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.980172, 1.7907, -24.5442)
 
 [node name="ramp_2" parent="." instance=ExtResource("10_rp5gc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -47.7258, 1.1886, -28.1136)
@@ -256,5 +232,14 @@ mesh = SubResource("BoxMesh_etmvp")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D3"]
 shape = SubResource("BoxShape3D_6od13")
+
+[node name="Box1" parent="." instance=ExtResource("12_opc3v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.11057, 1.5, -27.5301)
+
+[node name="Box2" parent="." instance=ExtResource("12_opc3v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.961767, 1.5, -30.3285)
+
+[node name="Box3" parent="." instance=ExtResource("12_opc3v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.50513, 1.5, -28.9693)
 
 [editable path="circuit_test"]

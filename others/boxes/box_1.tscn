@@ -1,6 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://x4l2usdlfsxp"]
+[gd_scene load_steps=7 format=3 uid="uid://x4l2usdlfsxp"]
 
 [ext_resource type="PackedScene" uid="uid://cwckdlwktbrmi" path="res://others/boxes/caja_1.glb" id="1_e7fik"]
+[ext_resource type="Script" uid="uid://cy6x76nmdr5wk" path="res://others/boxes/box_1_fixed.gd" id="1_qj7y6"]
+[ext_resource type="PackedScene" uid="uid://dajldxkv32esj" path="res://particles/burst/fire.tscn" id="2_nbcvm"]
+[ext_resource type="PackedScene" uid="uid://bhcgypypsxj4i" path="res://particles/burst/smoke.tscn" id="3_4vb1m"]
+[ext_resource type="PackedScene" uid="uid://dqrl8f7hncfid" path="res://particles/burst/particles.tscn" id="4_rh4rw"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4rnfg"]
 size = Vector3(1.99583, 2.01237, 2.00623)
@@ -8,9 +12,22 @@ size = Vector3(1.99583, 2.01237, 2.00623)
 [node name="Box1" type="RigidBody3D"]
 collision_layer = 4
 collision_mask = 7
+script = ExtResource("1_qj7y6")
+
+[node name="particles" parent="." instance=ExtResource("4_rh4rw")]
+
+[node name="fire" parent="." instance=ExtResource("2_nbcvm")]
+
+[node name="smoke" parent="." instance=ExtResource("3_4vb1m")]
 
 [node name="caja_1" parent="." instance=ExtResource("1_e7fik")]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0014267, 0.00257492, -0.000915527)
 shape = SubResource("BoxShape3D_4rnfg")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 1.5
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

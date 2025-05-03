@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://dqrl8f7hncfid"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3e0kh"]
+albedo_color = Color(0.698039, 0.470588, 0, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_syute"]
+top_radius = 0.0
+bottom_radius = 0.1
+height = 1.0
+
+[sub_resource type="Curve" id="Curve_8gmps"]
+_limits = [0.0, 4.0, 0.0, 1.0]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.246094, 1.63424), 0.0, 0.0, 0, 0, Vector2(0.558594, 4), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[node name="particles" type="CPUParticles3D"]
+material_override = SubResource("StandardMaterial3D_3e0kh")
+emitting = false
+amount = 15
+one_shot = true
+explosiveness = 1.0
+randomness = 1.0
+mesh = SubResource("CylinderMesh_syute")
+particle_flag_align_y = true
+spread = 180.0
+initial_velocity_min = 10.0
+initial_velocity_max = 10.0
+scale_amount_curve = SubResource("Curve_8gmps")
