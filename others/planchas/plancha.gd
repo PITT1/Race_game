@@ -1,18 +1,12 @@
 extends Node3D
-
-var smash: bool = false
-
-@onready var plancha_l: RigidBody3D = $plancha_L
-@onready var plancha_r: RigidBody3D = $plancha_R
-
-
-func _physics_process(delta: float) -> void:
-	if smash:
-		plancha_l.linear_velocity.z = -5
-		plancha_r.linear_velocity.z = 5
-		print("hola")
+@onready var anim: AnimationPlayer = $AnimationPlayer
+@onready var sensor_collision: CollisionShape3D = $sensor/sensor_collision
 
 func _on_sensor_body_entered(body: Node3D) -> void:
 	if body is VehicleBody3D:
-		smash = true
-		print("aplasta")
+		anim.play("smash")
+
+
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	if anim_name == "smash":
+		anim.play("reset_sensor")

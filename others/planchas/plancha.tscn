@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cto48mf7hn0mn"]
+[gd_scene load_steps=12 format=3 uid="uid://cto48mf7hn0mn"]
 
 [ext_resource type="ArrayMesh" uid="uid://dpbqlhydbkycn" path="res://others/planchas/planchas_body.obj" id="1_i6jre"]
 [ext_resource type="Script" uid="uid://c5b1db15uqpxm" path="res://others/planchas/plancha.gd" id="1_kyf8s"]
@@ -13,6 +13,96 @@ size = Vector3(2.02545, 1.64209, 0.321518)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_h2amt"]
 size = Vector3(4, 1.18945, 3.12836)
+
+[sub_resource type="Animation" id="Animation_kyf8s"]
+resource_name = "smash"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("plancha_L:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.6, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, -1.55), Vector3(0, 0, -1.55), Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("plancha_R:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.6, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 1.55), Vector3(0, 0, 1.55), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_tgcm5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("plancha_L:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("plancha_R:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("sensor:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_h2amt"]
+resource_name = "reset_sensor"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sensor:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 2, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_h2amt"]
+_data = {
+&"RESET": SubResource("Animation_tgcm5"),
+&"reset_sensor": SubResource("Animation_h2amt"),
+&"smash": SubResource("Animation_kyf8s")
+}
 
 [node name="Plancha" type="Node3D"]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
@@ -31,12 +121,10 @@ shape = SubResource("BoxShape3D_qn8lx")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000389099, 0.065918, -2.48311)
 shape = SubResource("BoxShape3D_qn8lx")
 
-[node name="plancha_L" type="RigidBody3D" parent="."]
+[node name="plancha_L" type="StaticBody3D" parent="."]
 collision_layer = 2
 axis_lock_linear_x = true
 axis_lock_linear_y = true
-mass = 1000.0
-gravity_scale = 0.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="plancha_L"]
 mesh = ExtResource("2_341eu")
@@ -45,10 +133,9 @@ mesh = ExtResource("2_341eu")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00674438, 0.108643, 1.7471)
 shape = SubResource("BoxShape3D_tgcm5")
 
-[node name="plancha_R" type="RigidBody3D" parent="."]
+[node name="plancha_R" type="StaticBody3D" parent="."]
 axis_lock_linear_x = true
 axis_lock_linear_y = true
-gravity_scale = 0.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="plancha_R"]
 mesh = ExtResource("3_kyf8s")
@@ -60,9 +147,15 @@ shape = SubResource("BoxShape3D_tgcm5")
 [node name="sensor" type="Area3D" parent="."]
 collision_layer = 8
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="sensor"]
+[node name="sensor_collision" type="CollisionShape3D" parent="sensor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.158752, -0.0947266, -0.0330505)
 shape = SubResource("BoxShape3D_h2amt")
 debug_color = Color(1, 0.00684556, 0.0524812, 0.42)
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_h2amt")
+}
+
 [connection signal="body_entered" from="sensor" to="." method="_on_sensor_body_entered"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
