@@ -12,7 +12,7 @@ size = Vector3(1.98924, 1.60645, 0.990112)
 size = Vector3(2.02545, 1.64209, 0.321518)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_h2amt"]
-size = Vector3(4, 1.18945, 3.12836)
+size = Vector3(3.10518, 1.18945, 3.12836)
 
 [sub_resource type="Animation" id="Animation_kyf8s"]
 resource_name = "smash"
@@ -148,7 +148,7 @@ shape = SubResource("BoxShape3D_tgcm5")
 collision_layer = 8
 
 [node name="sensor_collision" type="CollisionShape3D" parent="sensor"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.158752, -0.0947266, -0.0330505)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0321121, 0, 0)
 shape = SubResource("BoxShape3D_h2amt")
 debug_color = Color(1, 0.00684556, 0.0524812, 0.42)
 

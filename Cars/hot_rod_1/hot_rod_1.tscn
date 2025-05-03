@@ -8,7 +8,7 @@
 size = Vector3(1.8418, 1.1886, 4.23779)
 
 [node name="Hot-rod-1" type="VehicleBody3D"]
-collision_mask = 15
+collision_mask = 31
 center_of_mass_mode = 1
 center_of_mass = Vector3(0, -0.1, 0)
 script = ExtResource("1_qjy37")
@@ -83,3 +83,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00145769, -0.0211686, 0.465
 target_position = Vector3(0, -2, 0)
 collision_mask = 2
 hit_from_inside = true
+
+[node name="Timer_oil_trap" type="Timer" parent="."]
+wait_time = 1.5
+
+[connection signal="timeout" from="Timer_oil_trap" to="." method="_on_timer_oil_trap_timeout"]

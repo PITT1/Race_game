@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://c1k4ybkxnddr5"]
+
+[ext_resource type="ArrayMesh" uid="uid://cfb7i4cutdw3c" path="res://others/oil_trap/oil_trap.obj" id="1_j7bkw"]
+[ext_resource type="Script" uid="uid://0kixxastvjgb" path="res://others/oil_trap/oil_trap.gd" id="1_nepq2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_j7bkw"]
+size = Vector3(3.90826, 1.328, 4.04184)
+
+[node name="OilTrap" type="Node3D"]
+script = ExtResource("1_nepq2")
+
+[node name="OilTrap" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.541455, 0.888702, -0.222707)
+mesh = ExtResource("1_j7bkw")
+
+[node name="sensor" type="Area3D" parent="."]
+collision_layer = 16
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="sensor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.743073, 0.584412, -0.0902252)
+shape = SubResource("BoxShape3D_j7bkw")
+debug_color = Color(0.984529, 0.693946, 0, 0.42)
+
+[connection signal="body_entered" from="sensor" to="." method="_on_sensor_body_entered"]
+[connection signal="body_exited" from="sensor" to="." method="_on_sensor_body_exited"]
