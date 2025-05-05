@@ -13,7 +13,6 @@ center_of_mass_mode = 1
 center_of_mass = Vector3(0, -0.1, 0)
 script = ExtResource("1_qjy37")
 MAX_STEER = 0.4
-ENGINE_POWER = 200
 
 [node name="Hot-rod-body" type="MeshInstance3D" parent="."]
 mesh = ExtResource("1_eyabc")

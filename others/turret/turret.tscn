@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://c8nxxq2q82i02"]
+
+[ext_resource type="ArrayMesh" uid="uid://bcfw51eia4r67" path="res://others/turret/turret_body.obj" id="1_8bw24"]
+[ext_resource type="ArrayMesh" uid="uid://dcohnet2gm0bm" path="res://others/turret/turret_gun.obj" id="2_yyk56"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_osotw"]
+size = Vector3(3.89098, 4.63623, 3.71545)
+
+[node name="Turret" type="RigidBody3D"]
+collision_mask = 7
+axis_lock_linear_x = true
+axis_lock_linear_y = true
+axis_lock_linear_z = true
+
+[node name="TurretBody" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_8bw24")
+
+[node name="TurretGun" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.334, 0)
+mesh = ExtResource("2_yyk56")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00471246, 1.01367, -0.0671997)
+shape = SubResource("BoxShape3D_osotw")

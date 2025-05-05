@@ -26,6 +26,7 @@ gravity_scale = 2.0
 center_of_mass_mode = 1
 script = ExtResource("1_dk3bl")
 ACCELERATION = 4000
+ENGINE_PEAK = 2000
 
 [node name="SuperDozerBody" type="MeshInstance3D" parent="."]
 mesh = ExtResource("1_eijmg")

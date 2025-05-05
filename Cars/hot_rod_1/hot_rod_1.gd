@@ -1,7 +1,7 @@
 extends VehicleBody3D
 
 @export var MAX_STEER = 0.7
-@export var ENGINE_POWER = 1000
+@export var ENGINE_POWER = 200
 @onready var ground_sensor: RayCast3D = $ground_sensor
 
 @onready var wheel_1: VehicleWheel3D = $wheel_1
