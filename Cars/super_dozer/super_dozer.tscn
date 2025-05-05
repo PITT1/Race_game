@@ -1,0 +1,78 @@
+[gd_scene load_steps=6 format=3 uid="uid://djcileqlafjvg"]
+
+[ext_resource type="Script" uid="uid://c5d8s4rqngl8c" path="res://Cars/super_dozer/super_dozer.gd" id="1_dk3bl"]
+[ext_resource type="ArrayMesh" uid="uid://bveflvpoky1t7" path="res://Cars/super_dozer/super_dozer_body.obj" id="1_eijmg"]
+[ext_resource type="ArrayMesh" uid="uid://cyjkre37aqkgq" path="res://Cars/super_dozer/super_dozer_front_wheel.obj" id="2_dk3bl"]
+[ext_resource type="ArrayMesh" uid="uid://d0gu3sus51sbt" path="res://Cars/super_dozer/super_dozer_rear_wheel.obj" id="3_k515j"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_r7xft"]
+size = Vector3(6.97131, 2.91577, 8.67189)
+
+[node name="SuperDozer" type="VehicleBody3D"]
+collision_mask = 15
+mass = 400.0
+gravity_scale = 2.0
+center_of_mass_mode = 1
+script = ExtResource("1_dk3bl")
+ACCELERATION = 4000
+
+[node name="SuperDozerBody" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_eijmg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0371704, 0.501099, -1.68667)
+shape = SubResource("BoxShape3D_r7xft")
+
+[node name="wheel_1" type="VehicleWheel3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.547, -0.565872, 2.002)
+use_as_steering = true
+wheel_roll_influence = 0.0
+wheel_radius = 1.28
+wheel_friction_slip = 7.0
+suspension_stiffness = 90.0
+suspension_max_force = 20000.0
+
+[node name="SuperDozerFrontWheel" type="MeshInstance3D" parent="wheel_1"]
+mesh = ExtResource("2_dk3bl")
+skeleton = NodePath("../..")
+
+[node name="wheel_2" type="VehicleWheel3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.524, -0.106, -4.12)
+use_as_traction = true
+wheel_roll_influence = 0.0
+wheel_radius = 1.87
+wheel_friction_slip = 5.0
+suspension_stiffness = 90.0
+suspension_max_force = 20000.0
+
+[node name="SuperDozerRearWheel" type="MeshInstance3D" parent="wheel_2"]
+mesh = ExtResource("3_k515j")
+skeleton = NodePath("../..")
+
+[node name="wheel_3" type="VehicleWheel3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.524, -0.106, -4.12)
+use_as_traction = true
+wheel_roll_influence = 0.0
+wheel_radius = 1.87
+wheel_friction_slip = 5.0
+suspension_stiffness = 90.0
+suspension_max_force = 20000.0
+
+[node name="SuperDozerRearWheel2" type="MeshInstance3D" parent="wheel_3"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+mesh = ExtResource("3_k515j")
+skeleton = NodePath("../..")
+
+[node name="wheel_4" type="VehicleWheel3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.547, -0.565872, 2.002)
+use_as_steering = true
+wheel_roll_influence = 0.0
+wheel_radius = 1.28
+wheel_friction_slip = 7.0
+suspension_stiffness = 90.0
+suspension_max_force = 20000.0
+
+[node name="SuperDozerFrontWheel2" type="MeshInstance3D" parent="wheel_4"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+mesh = ExtResource("2_dk3bl")
+skeleton = NodePath("../..")
