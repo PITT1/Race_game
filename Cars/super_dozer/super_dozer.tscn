@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://djcileqlafjvg"]
+[gd_scene load_steps=9 format=3 uid="uid://djcileqlafjvg"]
 
 [ext_resource type="Script" uid="uid://c5d8s4rqngl8c" path="res://Cars/super_dozer/super_dozer.gd" id="1_dk3bl"]
 [ext_resource type="ArrayMesh" uid="uid://bveflvpoky1t7" path="res://Cars/super_dozer/super_dozer_body.obj" id="1_eijmg"]
@@ -6,7 +6,18 @@
 [ext_resource type="ArrayMesh" uid="uid://d0gu3sus51sbt" path="res://Cars/super_dozer/super_dozer_rear_wheel.obj" id="3_k515j"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_r7xft"]
-size = Vector3(6.97131, 2.91577, 8.67189)
+size = Vector3(3.59822, 2.76697, 8.43909)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_dk3bl"]
+height = 6.05438
+radius = 1.42139
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_k515j"]
+height = 5.72267
+radius = 0.98584
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dk3bl"]
+size = Vector3(4.17468, 1.2522, 1.74426)
 
 [node name="SuperDozer" type="VehicleBody3D"]
 collision_mask = 15
@@ -20,8 +31,20 @@ ACCELERATION = 4000
 mesh = ExtResource("1_eijmg")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0371704, 0.501099, -1.68667)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00299835, 0.426697, -1.25521)
 shape = SubResource("BoxShape3D_r7xft")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0.00485229, -0.0917866, -4.14917)
+shape = SubResource("CylinderShape3D_dk3bl")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -0.0239029, -0.579219, 2.01581)
+shape = SubResource("CylinderShape3D_k515j")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00579834, -0.126099, 4.26896)
+shape = SubResource("BoxShape3D_dk3bl")
 
 [node name="wheel_1" type="VehicleWheel3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.547, -0.565872, 2.002)
