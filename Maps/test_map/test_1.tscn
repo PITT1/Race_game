@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://xc1noq5s054l"]
+[gd_scene load_steps=29 format=3 uid="uid://xc1noq5s054l"]
 
 [ext_resource type="Texture2D" uid="uid://bm552631w02kq" path="res://Maps/test_map/textures/Asphalt025C_1K-JPG_Color.jpg" id="1_bo2x5"]
 [ext_resource type="Texture2D" uid="uid://bk3p8umc7mpd0" path="res://Maps/test_map/textures/Grass001_1K-JPG_Color.jpg" id="2_rp5gc"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://x4l2usdlfsxp" path="res://others/boxes/box_1.tscn" id="12_opc3v"]
 [ext_resource type="PackedScene" uid="uid://c1k4ybkxnddr5" path="res://others/oil_trap/oil_trap.tscn" id="14_iw6yb"]
 [ext_resource type="PackedScene" uid="uid://djcileqlafjvg" path="res://Cars/super_dozer/super_dozer.tscn" id="15_etmvp"]
+[ext_resource type="PackedScene" uid="uid://c8nxxq2q82i02" path="res://others/turret/turret.tscn" id="15_quhu1"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_20d3k"]
 sky_top_color = Color(0.461087, 0.641883, 0.858997, 1)
@@ -355,6 +356,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.6063, 0.49538, -12.9898)
 
 [node name="SuperDozer" parent="." instance=ExtResource("15_etmvp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.18648, -2.30503, -106.416)
+
+[node name="Turret" parent="." instance=ExtResource("15_quhu1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.63675, -5.21912, -83.1729)
 
 [editable path="circuit_test"]
 [editable path="arena_1"]
