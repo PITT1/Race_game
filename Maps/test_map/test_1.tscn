@@ -191,7 +191,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1759, 0.869326, 24.2199)
 
 [node name="Camera3D" type="Camera3D" parent="."]
 physics_interpolation_mode = 1
-transform = Transform3D(-0.74053, 0.501236, -0.447637, 0, 0.666103, 0.74586, 0.672024, 0.552331, -0.493269, -9.89852, 16.165, -118.631)
+transform = Transform3D(-0.74053, 0.501236, -0.447637, 0, 0.666103, 0.74586, 0.672024, 0.552331, -0.493269, -9.89852, 16.165, -144.132)
 
 [node name="PhantomCameraHost" type="Node" parent="Camera3D"]
 process_priority = 300
@@ -200,7 +200,7 @@ script = ExtResource("7_ompcc")
 metadata/_custom_type_script = "uid://bd046eokvcnu2"
 
 [node name="PhantomCamera3D" type="Node3D" parent="." node_paths=PackedStringArray("follow_target", "look_at_target")]
-transform = Transform3D(-1.12765, 0.501231, -0.447637, 0, 0.666096, 0.74586, 1.02333, 0.552326, -0.493269, -9.89852, 16.165, -118.631)
+transform = Transform3D(-1.12765, 0.501231, -0.447637, 0, 0.666096, 0.74586, 1.02333, 0.552326, -0.493269, -9.89852, 16.165, -144.132)
 top_level = true
 script = ExtResource("8_rp5gc")
 follow_mode = 2
@@ -355,10 +355,11 @@ transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -100.349, 3.511, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.6063, 0.49538, -12.9898)
 
 [node name="SuperDozer" parent="." instance=ExtResource("15_etmvp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.18648, -2.30503, -106.416)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.18648, -2.30503, -131.917)
 
 [node name="Turret" parent="." instance=ExtResource("15_quhu1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.63675, -5.21912, -83.1729)
+mass = 1000.0
 
 [editable path="circuit_test"]
 [editable path="arena_1"]

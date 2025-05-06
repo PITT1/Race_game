@@ -1,14 +1,82 @@
-[gd_scene load_steps=6 format=3 uid="uid://c8nxxq2q82i02"]
+[gd_scene load_steps=11 format=3 uid="uid://c8nxxq2q82i02"]
 
 [ext_resource type="ArrayMesh" uid="uid://bcfw51eia4r67" path="res://others/turret/turret_body.obj" id="1_8bw24"]
 [ext_resource type="Script" uid="uid://5w3o81m8o34y" path="res://others/turret/turret.gd" id="1_yyk56"]
+[ext_resource type="PackedScene" uid="uid://dfe1whnakn6ew" path="res://others/projectils/projectil_1.tscn" id="2_osotw"]
 [ext_resource type="ArrayMesh" uid="uid://dcohnet2gm0bm" path="res://others/turret/turret_gun.obj" id="2_yyk56"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_osotw"]
 size = Vector3(3.89098, 4.63623, 3.71545)
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_8bw24"]
-radius = 15.0
+radius = 30.0
+
+[sub_resource type="Animation" id="Animation_osotw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TurretGun:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("sensor/CollisionShape3D:shape:radius")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [30.0]
+}
+
+[sub_resource type="Animation" id="Animation_yyk56"]
+resource_name = "idle"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TurretGun:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 6.28319, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_lm2di"]
+resource_name = "reset_sensor"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sensor/CollisionShape3D:shape:radius")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [30.0, 1.0, 30.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lm2di"]
+_data = {
+&"RESET": SubResource("Animation_osotw"),
+&"idle": SubResource("Animation_yyk56"),
+&"reset_sensor": SubResource("Animation_lm2di")
+}
 
 [node name="Turret" type="RigidBody3D"]
 collision_mask = 7
@@ -16,6 +84,7 @@ axis_lock_linear_x = true
 axis_lock_linear_y = true
 axis_lock_linear_z = true
 script = ExtResource("1_yyk56")
+projectile = ExtResource("2_osotw")
 
 [node name="TurretBody" type="MeshInstance3D" parent="."]
 mesh = ExtResource("1_8bw24")
@@ -35,5 +104,15 @@ collision_layer = 32
 shape = SubResource("SphereShape3D_8bw24")
 debug_color = Color(0.847059, 0, 0.305882, 0.145098)
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_lm2di")
+}
+
+[node name="fire_interval" type="Timer" parent="."]
+wait_time = 1.5
+one_shot = true
+
 [connection signal="body_entered" from="sensor" to="." method="_on_sensor_body_entered"]
 [connection signal="body_exited" from="sensor" to="." method="_on_sensor_body_exited"]
+[connection signal="timeout" from="fire_interval" to="." method="_on_fire_interval_timeout"]

@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://dfe1whnakn6ew"]
+
+[ext_resource type="Script" uid="uid://bhdb0v167let5" path="res://others/projectils/projectil_1.gd" id="1_27uxi"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mf5fp"]
+albedo_color = Color(0.16654, 0.154389, 0.151112, 1)
+metallic = 0.67
+
+[sub_resource type="SphereMesh" id="SphereMesh_p067c"]
+uv2_padding = 1.6
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_hqvmu"]
+
+[node name="Projectil1" type="RigidBody3D"]
+collision_layer = 64
+collision_mask = 71
+gravity_scale = 0.0
+contact_monitor = true
+max_contacts_reported = 1
+script = ExtResource("1_27uxi")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_mf5fp")
+mesh = SubResource("SphereMesh_p067c")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+shape = SubResource("SphereShape3D_hqvmu")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
