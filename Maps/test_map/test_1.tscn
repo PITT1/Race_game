@@ -332,7 +332,7 @@ mesh = SubResource("BoxMesh_etmvp")
 shape = SubResource("BoxShape3D_6od13")
 
 [node name="arena_1" parent="." instance=ExtResource("12_6od13")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.74041, -7.23347, -103.96)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.74, -7.233, -103.96)
 
 [node name="Cube" parent="arena_1" index="0"]
 surface_material_override/0 = SubResource("StandardMaterial3D_opc3v")
