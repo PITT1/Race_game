@@ -27,7 +27,7 @@ enabled=PackedStringArray("res://addons/phantom_camera/plugin.cfg")
 
 3d_physics/layer_1="Cars"
 3d_physics/layer_2="terrain"
-3d_physics/layer_3="objetos"
+3d_physics/layer_3="objetos ligeros"
 3d_physics/layer_4="traps"
 3d_physics/layer_5="oil_trap"
 3d_physics/layer_6="turret_sensor"
