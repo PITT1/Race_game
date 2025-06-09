@@ -200,7 +200,7 @@ script = ExtResource("7_ompcc")
 metadata/_custom_type_script = "uid://bd046eokvcnu2"
 
 [node name="PhantomCamera3D" type="Node3D" parent="." node_paths=PackedStringArray("follow_target", "look_at_target")]
-transform = Transform3D(-1.13186, 0.50123, -0.447637, -4.55511e-08, 0.666096, 0.74586, 1.02715, 0.552326, -0.493269, -5.2291, 19.6342, -16.6122)
+transform = Transform3D(-1.13208, 0.50123, -0.447637, -4.55602e-08, 0.666096, 0.74586, 1.02735, 0.552326, -0.493269, -5.2291, 19.6342, -16.6122)
 top_level = true
 script = ExtResource("8_rp5gc")
 follow_mode = 2
