@@ -64,7 +64,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.8048, 7.32806, 8.89948)
 
 [node name="Camera3D" type="Camera3D" parent="."]
 physics_interpolation_mode = 1
-transform = Transform3D(-0.74053, 0.501235, -0.447637, -2.98023e-08, 0.666103, 0.74586, 0.672024, 0.552331, -0.493269, 9.71984, 25.7981, -3.31552)
+transform = Transform3D(-0.49225, 0.51973, -0.698263, 0, 0.802182, 0.597079, 0.870454, 0.293912, -0.394874, -0.795162, 25.7981, -3.31552)
 
 [node name="PhantomCameraHost" type="Node" parent="Camera3D"]
 process_priority = 300
@@ -73,7 +73,7 @@ script = ExtResource("3_0r5jd")
 metadata/_custom_type_script = "uid://bd046eokvcnu2"
 
 [node name="PhantomCamera3D" type="Node3D" parent="." node_paths=PackedStringArray("follow_target", "look_at_target")]
-transform = Transform3D(-1.14281, 0.50123, -0.447637, -4.59918e-08, 0.666096, 0.74586, 1.03709, 0.552326, -0.493269, 9.71984, 25.7981, -3.31552)
+transform = Transform3D(-0.787857, 0.519724, -0.698256, 0, 0.802173, 0.597074, 1.39318, 0.293909, -0.394871, -0.795162, 25.7981, -3.31552)
 top_level = true
 script = ExtResource("4_3xdu8")
 follow_mode = 2
@@ -81,5 +81,5 @@ follow_target = NodePath("../Hot-rod-1")
 look_at_mode = 2
 look_at_target = NodePath("../Hot-rod-1")
 tween_resource = SubResource("Resource_8fw60")
-follow_offset = Vector3(-11.085, 18.47, -12.215)
+follow_offset = Vector3(-21.6, 18.47, -12.215)
 metadata/_custom_type_script = "uid://csjccrhj5wnx7"
