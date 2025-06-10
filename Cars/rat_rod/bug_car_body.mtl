@@ -24,12 +24,12 @@ illum 3
 newmtl carroceria
 Ns 134.444458
 Ka 0.666667 0.666667 0.666667
-Kd 0.801675 0.689786 0.549388
 Ks 0.500000 0.500000 0.500000
 Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 3
+map_Kd F:/blender_cars/textures/texture_3.jpg
 
 newmtl luces
 Ns 587.777710
@@ -44,12 +44,12 @@ illum 3
 newmtl luces_cuerpo
 Ns 250.000000
 Ka 0.783333 0.783333 0.783333
-Kd 0.312669 0.312669 0.312669
 Ks 0.500000 0.500000 0.500000
 Ke 0.000000 0.000000 0.000000
 Ni 1.500000
 d 1.000000
 illum 3
+map_Kd F:/blender_cars/textures/CorrugatedSteel007B_1K-JPG_Color.jpg
 
 newmtl luces_traceras
 Ns 250.000000
