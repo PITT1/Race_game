@@ -54,7 +54,6 @@ gravity_scale = 5.0
 center_of_mass_mode = 1
 center_of_mass = Vector3(0, -1, 0)
 script = ExtResource("1_q3ra6")
-ENGINE_POWER = 2000
 
 [node name="BugCarBody" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0, 0)
