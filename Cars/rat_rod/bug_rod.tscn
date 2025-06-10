@@ -1,6 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://b6m4yvkxlcpuo"]
+[gd_scene load_steps=14 format=3 uid="uid://b6m4yvkxlcpuo"]
 
 [ext_resource type="ArrayMesh" uid="uid://rgbpy0gs4uf7" path="res://Cars/rat_rod/bug_car_body.obj" id="1_h54rw"]
+[ext_resource type="Script" uid="uid://dn8cru75adetk" path="res://Cars/rat_rod/bug_rod.gd" id="1_q3ra6"]
 [ext_resource type="ArrayMesh" uid="uid://vws8cc1dskg" path="res://Cars/rat_rod/bug_car_front_wheel.obj" id="2_q3ra6"]
 [ext_resource type="ArrayMesh" uid="uid://dpr5hvsc86g8i" path="res://Cars/rat_rod/bug_car_rear_wheel.obj" id="3_tabbm"]
 
@@ -43,12 +44,20 @@ albedo_color = Color(0.984314, 0, 0, 1)
 metallic = 0.63
 roughness = 0.62
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_n8ysn"]
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_q3ra6"]
 points = PackedVector3Array(-1.24969, 0.760595, -2.23672, 1.40211, -0.565117, 1.07735, 1.30995, -0.663225, 1.00148, -0.835124, 0.0980919, 2.40339, 1.23633, 1.50662, -2.15417, -0.586604, -0.896839, -2.73464, -1.41574, -0.730978, 0.580472, 0.821766, -0.813791, -2.65105, -1.24969, 1.50662, -2.3198, 0.739018, 0.263718, 2.40339, 0.7481, -0.789998, 2.33375, -0.700648, -0.813048, 2.38462, 1.31908, -0.813791, -0.579427, -1.33272, 0.0150438, 1.32605, -0.752652, 0.263718, 2.40339, 1.23633, 1.50662, -2.3198, 1.31908, 0.0150438, 1.32605, -0.835124, -0.813791, -2.65105, 0.572971, -0.896839, -2.73464, -1.24969, 1.50662, -2.15365, 1.23633, 0.760595, -2.23672, -0.721042, -0.687077, 2.45714, 1.40211, -0.482304, 0.0825565, 0.821766, 0.180905, 2.40339, -1.41574, -0.399256, 0.414327, -1.15765, -0.807844, -0.158509, 0.987538, -0.316678, -2.48594, 1.40211, -0.316678, 0.663025, -1.34009, -0.675363, 0.936954, 0.655995, -0.896839, -2.65105, -1.2435, -0.738518, -0.468511, 0.228159, -0.596226, 2.42501)
 
 [node name="BugRod" type="VehicleBody3D"]
+collision_mask = 123
+mass = 200.0
+gravity_scale = 5.0
+center_of_mass_mode = 1
+center_of_mass = Vector3(0, -1, 0)
+script = ExtResource("1_q3ra6")
+ENGINE_POWER = 2000
 
 [node name="BugCarBody" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0, 0)
 mesh = ExtResource("1_h54rw")
 surface_material_override/0 = SubResource("StandardMaterial3D_xx7w4")
 surface_material_override/1 = SubResource("StandardMaterial3D_i2rf7")
@@ -60,33 +69,69 @@ surface_material_override/6 = SubResource("StandardMaterial3D_0hn22")
 surface_material_override/7 = SubResource("StandardMaterial3D_bloct")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("ConvexPolygonShape3D_n8ysn")
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_q3ra6")
 
-[node name="VehicleWheel3D" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.993072, -0.682987, 2.14306)
+[node name="wheel_1" type="VehicleWheel3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.637229, -0.443056, 1.4994)
+use_as_steering = true
+wheel_roll_influence = 1.5
+wheel_radius = 0.43
+wheel_friction_slip = 5.0
+suspension_stiffness = 100.0
+suspension_max_force = 100000.0
+damping_compression = 10.0
+damping_relaxation = 10.0
 
-[node name="BugCarFrontWheel" type="MeshInstance3D" parent="VehicleWheel3D"]
+[node name="BugCarFrontWheel" type="MeshInstance3D" parent="wheel_1"]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0, 0)
 mesh = ExtResource("2_q3ra6")
 skeleton = NodePath("../..")
 
-[node name="VehicleWheel3D2" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.993, -0.681, 2.143)
+[node name="wheel_2" type="VehicleWheel3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.637157, -0.441073, 1.49935)
+use_as_steering = true
+wheel_roll_influence = 1.5
+wheel_radius = 0.43
+wheel_friction_slip = 5.0
+suspension_stiffness = 100.0
+suspension_max_force = 100000.0
+damping_compression = 10.0
+damping_relaxation = 10.0
 
-[node name="BugCarFrontWheel" type="MeshInstance3D" parent="VehicleWheel3D2"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+[node name="BugCarFrontWheel" type="MeshInstance3D" parent="wheel_2"]
+transform = Transform3D(-0.65, 0, -5.68248e-08, 0, 0.65, 0, 5.68248e-08, 0, -0.65, 0, 0, 0)
 mesh = ExtResource("2_q3ra6")
 skeleton = NodePath("../..")
 
-[node name="VehicleWheel3D3" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.815666, -0.680882, -1.88946)
+[node name="wheel_3" type="VehicleWheel3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.633013, -0.458883, -1.26332)
+use_as_traction = true
+wheel_roll_influence = 1.5
+wheel_radius = 0.43
+wheel_friction_slip = 5.0
+suspension_stiffness = 100.0
+suspension_max_force = 100000.0
+damping_compression = 10.0
+damping_relaxation = 10.0
 
-[node name="BugCarRearWheel" type="MeshInstance3D" parent="VehicleWheel3D3"]
+[node name="BugCarRearWheel" type="MeshInstance3D" parent="wheel_3"]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0, 0)
 mesh = ExtResource("3_tabbm")
 skeleton = NodePath("../..")
 
-[node name="VehicleWheel3D4" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.816, -0.681, -1.889)
+[node name="wheel_4" type="VehicleWheel3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.633347, -0.459001, -1.26286)
+use_as_traction = true
+wheel_roll_influence = 1.5
+wheel_radius = 0.43
+wheel_friction_slip = 5.0
+suspension_stiffness = 100.0
+suspension_max_force = 100000.0
+damping_compression = 10.0
+damping_relaxation = 10.0
 
-[node name="BugCarRearWheel" type="MeshInstance3D" parent="VehicleWheel3D4"]
+[node name="BugCarRearWheel" type="MeshInstance3D" parent="wheel_4"]
+transform = Transform3D(-0.65, 0, -5.68248e-08, 0, 0.65, 0, 5.68248e-08, 0, -0.65, 0, 0, 0)
 mesh = ExtResource("3_tabbm")
 skeleton = NodePath("../..")

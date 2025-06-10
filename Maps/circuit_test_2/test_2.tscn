@@ -1,13 +1,14 @@
-[gd_scene load_steps=19 format=3 uid="uid://cjb4nd6otxjsg"]
+[gd_scene load_steps=20 format=3 uid="uid://cjb4nd6otxjsg"]
 
 [ext_resource type="Texture2D" uid="uid://bm552631w02kq" path="res://Maps/test_map/textures/Asphalt025C_1K-JPG_Color.jpg" id="1_3xdu8"]
-[ext_resource type="PackedScene" uid="uid://de8rfk3kauv7p" path="res://Cars/hot_rod_1/hot_rod_1.tscn" id="2_8jcmn"]
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="3_0r5jd"]
 [ext_resource type="Script" uid="uid://csjccrhj5wnx7" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="4_3xdu8"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="5_ro3cy"]
 [ext_resource type="Texture2D" uid="uid://bk3p8umc7mpd0" path="res://Maps/test_map/textures/Grass001_1K-JPG_Color.jpg" id="6_3xdu8"]
 [ext_resource type="PackedScene" uid="uid://c6qu4tpu556av" path="res://Maps/circuit_test_2/pista_1_CIRCUIT.glb" id="6_8fw60"]
+[ext_resource type="PackedScene" uid="uid://b6m4yvkxlcpuo" path="res://Cars/rat_rod/bug_rod.tscn" id="8_6mnti"]
 [ext_resource type="PackedScene" uid="uid://bhevwsndruup5" path="res://others/cone/cone.tscn" id="8_8fw60"]
+[ext_resource type="PackedScene" uid="uid://b0fyvn1iybud7" path="res://others/ramps/ramp1.tscn" id="9_6mnti"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3xdu8"]
 sky_top_color = Color(0.461087, 0.641883, 0.858997, 1)
@@ -59,12 +60,9 @@ environment = SubResource("Environment_8fw60")
 transform = Transform3D(-0.531399, 0.731401, -0.427396, 0, 0.504528, 0.863396, 0.847122, 0.458807, -0.268105, 0, 0, 0)
 shadow_enabled = true
 
-[node name="Hot-rod-1" parent="." instance=ExtResource("2_8jcmn")]
-transform = Transform3D(-0.99943, 0, -0.0337657, 0, 1, 0, 0.0337657, 0, -0.99943, 90.4875, 1.17194, -105.319)
-
 [node name="Camera3D" type="Camera3D" parent="."]
 physics_interpolation_mode = 1
-transform = Transform3D(0.758494, -0.00550009, -0.651656, -2.32831e-10, 0.999964, -0.00843986, 0.65168, 0.00640159, 0.758467, 0, 0, 0)
+transform = Transform3D(-0.732664, 0.563276, -0.382, 2.98023e-08, 0.561278, 0.827627, 0.680591, 0.606373, -0.411228, 74.3601, 41.8934, -131.196)
 
 [node name="PhantomCameraHost" type="Node" parent="Camera3D"]
 process_priority = 300
@@ -73,13 +71,13 @@ script = ExtResource("3_0r5jd")
 metadata/_custom_type_script = "uid://bd046eokvcnu2"
 
 [node name="PhantomCamera3D" type="Node3D" parent="." node_paths=PackedStringArray("follow_target", "look_at_target")]
-transform = Transform3D(-1.12928, 0.563261, -0.381521, 4.59353e-08, 0.561263, 0.826589, 1.04902, 0.606357, -0.410712, 74.6075, 35.5769, -122.414)
+transform = Transform3D(-1.11407, 0.563261, -0.381521, 4.53166e-08, 0.561263, 0.826589, 1.03489, 0.606357, -0.410712, 74.3601, 41.8934, -131.196)
 top_level = true
 script = ExtResource("4_3xdu8")
 follow_mode = 2
-follow_target = NodePath("../Hot-rod-1")
+follow_target = NodePath("../BugRod")
 look_at_mode = 2
-look_at_target = NodePath("../Hot-rod-1")
+look_at_target = NodePath("../BugRod")
 tween_resource = SubResource("Resource_8fw60")
 follow_offset = Vector3(-15.88, 34.405, -17.095)
 metadata/_custom_type_script = "uid://csjccrhj5wnx7"
@@ -135,5 +133,17 @@ surface_material_override/2 = SubResource("StandardMaterial3D_lppdq")
 surface_material_override/3 = SubResource("StandardMaterial3D_4rsws")
 surface_material_override/4 = SubResource("StandardMaterial3D_uxm7u")
 surface_material_override/5 = SubResource("StandardMaterial3D_i1n1h")
+
+[node name="BugRod" parent="." instance=ExtResource("8_6mnti")]
+transform = Transform3D(-0.999848, 0, -0.0174525, 0, 1, 0, 0.0174525, 0, -0.999848, 90.2401, 7.48838, -114.101)
+
+[node name="ramp_1" parent="." instance=ExtResource("9_6mnti")]
+transform = Transform3D(-3.81819e-07, 0.064226, -4.81453, 0, 4.59955, 0.0672279, 8.735, 2.80741e-09, -2.1045e-07, 91.839, 1.988, -126.449)
+
+[node name="ramp_2" parent="." instance=ExtResource("9_6mnti")]
+transform = Transform3D(6.59239, -0.0421361, 3.15862, 0, 4.59955, 0.0672279, -5.73068, -0.048472, 3.63357, 6.839, 1.988, -79.3092)
+
+[node name="ramp_3" parent="." instance=ExtResource("9_6mnti")]
+transform = Transform3D(4.03337, 0.0569692, -4.27054, 0, 4.59955, 0.0672279, 7.74804, -0.0296563, 2.2231, 6.25618, 1.988, 90.4474)
 
 [editable path="pista_1_CIRCUIT"]

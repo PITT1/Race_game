@@ -1,12 +1,13 @@
-[gd_scene load_steps=16 format=3 uid="uid://dl4l032e7tmky"]
+[gd_scene load_steps=18 format=3 uid="uid://dl4l032e7tmky"]
 
 [ext_resource type="PackedScene" uid="uid://deh3gsrnhaefo" path="res://Maps/loby_1/loby_1.glb" id="1_68xm8"]
 [ext_resource type="Texture2D" uid="uid://bm552631w02kq" path="res://Maps/test_map/textures/Asphalt025C_1K-JPG_Color.jpg" id="2_1vtqb"]
-[ext_resource type="PackedScene" uid="uid://de8rfk3kauv7p" path="res://Cars/hot_rod_1/hot_rod_1.tscn" id="2_j8ml7"]
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="3_dbgys"]
 [ext_resource type="Texture2D" uid="uid://bk3p8umc7mpd0" path="res://Maps/test_map/textures/Grass001_1K-JPG_Color.jpg" id="3_f42dt"]
 [ext_resource type="Script" uid="uid://csjccrhj5wnx7" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="4_1vtqb"]
+[ext_resource type="PackedScene" uid="uid://b6m4yvkxlcpuo" path="res://Cars/rat_rod/bug_rod.tscn" id="4_f42dt"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="5_f42dt"]
+[ext_resource type="ArrayMesh" uid="uid://djruo35vxgual" path="res://Cars/hot_rod_1/hot-rod-body.obj" id="8_f42dt"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_j8ml7"]
 sky_top_color = Color(0.461087, 0.641883, 0.858997, 1)
@@ -48,6 +49,9 @@ duration = 1.0
 transition = 0
 ease = 2
 
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_tb0jv"]
+points = PackedVector3Array(1.103, 0.144059, 0.917493, 1.103, -0.103164, 0.917493, -1.1216, 0.14392, 0.917493, 0.852053, 0.9587, -0.751145, -0.742262, 0.946943, 0.390783, 0.237637, 0.452775, 2.0301, -0.37992, -0.412298, 1.84466, 0.484791, -0.226845, -1.73936, -0.881367, -0.253971, -0.761146, -0.56523, 0.638088, -1.9248, 0.423166, -0.412298, 2.0301, -0.870481, 0.9587, -0.750987, 0.723665, 0.946943, 0.390783, 0.546633, 0.638088, -1.9248, -0.318077, 0.390865, 2.0301, 0.86863, -0.257551, -0.766614, -0.503388, -0.226845, -1.73936, -0.441763, -0.350387, 2.0301, -0.0709235, 0.76177, -1.73936, 1.103, 0.082149, 0.299637, 0.546633, 0.20583, -1.9248, -1.01779, -0.0658171, 0.836777, -1.1216, 0.082149, 0.423131, -0.56523, 0.20583, -1.9248, 0.423166, 0.20583, 2.0301, -0.441763, 0.20583, 2.0301, 0.791652, 0.956133, 0.223966, -0.256234, 0.452775, 2.0301, 0.423166, -0.412298, 1.84466, -0.808517, 0.955004, 0.0526501, 1.103, -0.103164, 0.299637, 0.847888, 0.955507, -0.347304)
+
 [node name="Loby1" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -66,12 +70,9 @@ surface_material_override/1 = SubResource("StandardMaterial3D_4wx4f")
 surface_material_override/2 = SubResource("StandardMaterial3D_h4d6f")
 surface_material_override/3 = SubResource("StandardMaterial3D_j8ml7")
 
-[node name="Hot-rod-1" parent="." instance=ExtResource("2_j8ml7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.41714, 0)
-
 [node name="Camera3D" type="Camera3D" parent="."]
 physics_interpolation_mode = 1
-transform = Transform3D(-0.732664, 0.563276, -0.382001, -5.96046e-08, 0.561278, 0.827628, 0.680591, 0.606373, -0.411228, -15.88, 35.8221, -17.095)
+transform = Transform3D(-0.475347, 0.692263, -0.542971, -2.98023e-08, 0.617154, 0.786842, 0.879799, 0.374023, -0.293362, 3.0839, 17.7285, -6.135)
 
 [node name="PhantomCameraHost" type="Node" parent="Camera3D"]
 process_priority = 300
@@ -80,15 +81,28 @@ script = ExtResource("3_dbgys")
 metadata/_custom_type_script = "uid://bd046eokvcnu2"
 
 [node name="PhantomCamera3D" type="Node3D" parent="." node_paths=PackedStringArray("follow_target", "look_at_target")]
-transform = Transform3D(-1.1292, 0.563261, -0.381494, -9.18641e-08, 0.561263, 0.826531, 1.04894, 0.606356, -0.410683, -15.88, 35.8221, -17.095)
+transform = Transform3D(-0.732591, 0.692228, -0.540246, -4.59305e-08, 0.617123, 0.782893, 1.35592, 0.374004, -0.29189, 3.0839, 17.7285, -6.135)
 top_level = true
 script = ExtResource("4_1vtqb")
 follow_mode = 2
-follow_target = NodePath("../Hot-rod-1")
+follow_target = NodePath("../BugRod")
 look_at_mode = 2
-look_at_target = NodePath("../Hot-rod-1")
+look_at_target = NodePath("../BugRod")
 tween_resource = SubResource("Resource_tb0jv")
-follow_offset = Vector3(-15.88, 34.405, -17.095)
+follow_offset = Vector3(-11.355, 16.455, -6.135)
 metadata/_custom_type_script = "uid://csjccrhj5wnx7"
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.4004, 1.00229, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_tb0jv")
+
+[node name="Hot-rod-body" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = ExtResource("8_f42dt")
+skeleton = NodePath("../..")
+
+[node name="BugRod" parent="." instance=ExtResource("4_f42dt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.4389, 1.27352, 0)
 
 [editable path="loby_1"]

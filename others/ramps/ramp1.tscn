@@ -1,9 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://b0fyvn1iybud7"]
+[gd_scene load_steps=3 format=3 uid="uid://b0fyvn1iybud7"]
 
 [ext_resource type="PackedScene" uid="uid://capolqfeqswrx" path="res://others/ramps/ramp_1.dae" id="1_31svv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_31svv"]
+albedo_color = Color(0.536665, 0.50832, 0.280287, 1)
+metallic = 0.29
+roughness = 0.51
 
 [node name="ramp_1" instance=ExtResource("1_31svv")]
 
 [node name="@StaticBody3D@64674" parent="." index="0"]
 collision_layer = 2
 collision_mask = 7
+
+[node name="Cube" parent="." index="1"]
+surface_material_override/0 = SubResource("StandardMaterial3D_31svv")
