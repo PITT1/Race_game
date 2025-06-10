@@ -24,7 +24,8 @@ func _physics_process(delta: float) -> void:
 		#ESTO LO HACE SOLO EL BOT
 		var distance_to_point = global_position.distance_to(path_follow.global_position)
 		if distance_to_point < 25:
-			path_follow.progress += 25
+			path_follow.progress += 30
+			path_follow.h_offset = randf_range(5, -5)
 			
 		# Calcular dirección hacia el siguiente puntovar 
 		var direction_to_target = path_follow.get_global_position() - global_transform.origin
