@@ -1,7 +1,7 @@
 extends VehicleBody3D
 
 @export var MAX_STEER = 0.7
-@export var ENGINE_POWER = 2000
+@export var ENGINE_POWER = 1500
 
 # Sistema BOT
 @export var is_player: bool = true
@@ -20,14 +20,28 @@ func _physics_process(delta: float) -> void:
 	if is_player:
 		steering = move_toward(steering, Input.get_axis("ui_right", "ui_left") * MAX_STEER, delta * 10)
 		engine_force = Input.get_axis("ui_down", "ui_up") * ENGINE_POWER
-		
+	else:
 		#ESTO LO HACE SOLO EL BOT
 		var distance_to_point = global_position.distance_to(path_follow.global_position)
-		#if distance_to_point < 30:
-		#	path_follow.progress += 30
+		if distance_to_point < 25:
+			path_follow.progress += 25
 			
 		# Calcular dirección hacia el siguiente puntovar 
-		var direction = (path_follow.get_global_position() - get_global_position())
+		var direction_to_target = path_follow.get_global_position() - global_transform.origin
+		direction_to_target.y = 0
+		direction_to_target = direction_to_target.normalized()
+		
+		#calculando angulo
+		var current_forward = -global_transform.basis.z
+		var angle_to_target = atan2(direction_to_target.x, direction_to_target.z)
+		var current_angle = atan2(current_forward.x, current_forward.z)
+		
+		#angulo de direccion necesario
+		var target_angle = angle_to_target - current_angle
+		
+		steering = target_angle
+		engine_force = 1500
+		
 		
 		
 
