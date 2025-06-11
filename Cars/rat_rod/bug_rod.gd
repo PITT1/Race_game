@@ -28,7 +28,7 @@ func _physics_process(delta: float) -> void:
 			path_follow.h_offset = randf_range(5, -5)
 			
 		# Calcular dirección hacia el siguiente puntovar 
-		var direction_to_target = path_follow.get_global_position() - global_transform.origin
+		var direction_to_target = path_follow.global_transform.origin - global_transform.origin
 		direction_to_target.y = 0
 		direction_to_target = direction_to_target.normalized()
 		
@@ -40,8 +40,24 @@ func _physics_process(delta: float) -> void:
 		#angulo de direccion necesario
 		var target_angle = angle_to_target - current_angle
 		
-		steering = target_angle
-		engine_force = 1500
+		#calculando rotacion en el eje y del auto
+		var current_rotation = global_transform.basis.get_euler()
+		var auto_rotation_deg = rad_to_deg(current_rotation.y)
+		
+		# Calcular ángulo relativo al vehículo
+		var relative_angle = wrapf(angle_to_target - current_angle, PI, -PI)
+		
+		#limite al angulo relativo
+		relative_angle = clamp(relative_angle, -0.7, 0.7)
+		
+		print(relative_angle)
+		
+		
+		steering = relative_angle
+		
+		
+		#engine_force = 1500
+		engine_force = Input.get_axis("ui_down", "ui_up") * ENGINE_POWER
 		
 		
 		
