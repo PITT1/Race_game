@@ -33,7 +33,7 @@ func _physics_process(delta: float) -> void:
 		direction_to_target = direction_to_target.normalized()
 		
 		#calculando angulo
-		var current_forward = -global_transform.basis.z
+		var current_forward = global_transform.basis.z
 		var angle_to_target = atan2(direction_to_target.x, direction_to_target.z)
 		var current_angle = atan2(current_forward.x, current_forward.z)
 		
@@ -45,19 +45,15 @@ func _physics_process(delta: float) -> void:
 		var auto_rotation_deg = rad_to_deg(current_rotation.y)
 		
 		# Calcular ángulo relativo al vehículo
-		var relative_angle = wrapf(angle_to_target - current_angle, PI, -PI)
+		var relative_angle = wrapf(angle_to_target - current_angle, -PI, PI)
 		
 		#limite al angulo relativo
 		relative_angle = clamp(relative_angle, -0.7, 0.7)
 		
-		print(relative_angle)
-		
 		
 		steering = relative_angle
 		
-		
-		#engine_force = 1500
-		engine_force = Input.get_axis("ui_down", "ui_up") * ENGINE_POWER
+		engine_force = 1500
 		
 		
 		
