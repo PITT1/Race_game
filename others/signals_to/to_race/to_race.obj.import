@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://hspr6mh1wqo3"
+path="res://.godot/imported/to_race.obj-eed277f424cdefdd08d05e3d0c9a751c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/to_race.obj-eed277f424cdefdd08d05e3d0c9a751c.mesh"]
+
+source_file="res://others/signals_to/to_race/to_race.obj"
+dest_files=["res://.godot/imported/to_race.obj-eed277f424cdefdd08d05e3d0c9a751c.mesh", "res://.godot/imported/to_race.obj-eed277f424cdefdd08d05e3d0c9a751c.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

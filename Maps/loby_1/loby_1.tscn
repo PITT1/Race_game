@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dl4l032e7tmky"]
+[gd_scene load_steps=19 format=3 uid="uid://dl4l032e7tmky"]
 
 [ext_resource type="PackedScene" uid="uid://deh3gsrnhaefo" path="res://Maps/loby_1/loby_1.glb" id="1_68xm8"]
 [ext_resource type="Texture2D" uid="uid://bm552631w02kq" path="res://Maps/test_map/textures/Asphalt025C_1K-JPG_Color.jpg" id="2_1vtqb"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://b6m4yvkxlcpuo" path="res://Cars/rat_rod/bug_rod.tscn" id="4_f42dt"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="5_f42dt"]
 [ext_resource type="ArrayMesh" uid="uid://djruo35vxgual" path="res://Cars/hot_rod_1/hot-rod-body.obj" id="8_f42dt"]
+[ext_resource type="PackedScene" uid="uid://brakaji82desp" path="res://others/signals_to/to_race/to_race.tscn" id="9_tb0jv"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_j8ml7"]
 sky_top_color = Color(0.461087, 0.641883, 0.858997, 1)
@@ -104,5 +105,8 @@ skeleton = NodePath("../..")
 
 [node name="BugRod" parent="." instance=ExtResource("4_f42dt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.4389, 1.27352, 0)
+
+[node name="ToRace" parent="." instance=ExtResource("9_tb0jv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.89139, 23.9339)
 
 [editable path="loby_1"]
