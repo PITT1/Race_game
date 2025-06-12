@@ -71,7 +71,7 @@ shadow_enabled = true
 
 [node name="Camera3D" type="Camera3D" parent="."]
 physics_interpolation_mode = 1
-transform = Transform3D(-0.348557, 0.73195, -0.585454, 0, 0.624626, 0.780924, 0.937288, 0.272197, -0.217718, 79.1863, 28.592, -114.603)
+transform = Transform3D(-0.348557, 0.73195, -0.585454, 0, 0.624626, 0.780924, 0.937288, 0.272197, -0.217718, 70.4156, 29.4634, -114.397)
 
 [node name="PhantomCameraHost" type="Node" parent="Camera3D"]
 process_priority = 300
@@ -80,13 +80,13 @@ script = ExtResource("3_0r5jd")
 metadata/_custom_type_script = "uid://bd046eokvcnu2"
 
 [node name="PhantomCamera3D" type="Node3D" parent="." node_paths=PackedStringArray("follow_target", "look_at_target")]
-transform = Transform3D(-0.51987, 0.731903, -0.584729, 0, 0.624586, 0.779956, 1.39796, 0.272179, -0.217448, 79.1863, 28.592, -114.603)
+transform = Transform3D(-0.519871, 0.731903, -0.584729, 0, 0.624586, 0.779956, 1.39796, 0.272179, -0.217448, 70.4156, 29.4634, -114.397)
 top_level = true
 script = ExtResource("4_3xdu8")
 follow_mode = 2
-follow_target = NodePath("../BugRod2")
+follow_target = NodePath("../BugRod")
 look_at_mode = 2
-look_at_target = NodePath("../BugRod2")
+look_at_target = NodePath("../BugRod")
 tween_resource = SubResource("Resource_8fw60")
 follow_offset = Vector3(-16.42, 26.57, -4.85)
 follow_damping = true
@@ -97,12 +97,13 @@ metadata/_custom_type_script = "uid://csjccrhj5wnx7"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 90.6599, 2.91922, -121.999)
 curve = SubResource("Curve3D_6mnti")
 
-[node name="PathFollow3D" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.999918, -0.000147796, -0.00127702, 0.000145934, 0.999827, -0.00146797, 0.00127733, 0.00146775, 0.999847, 1.15587, -0.0748099, -27.2627)
+[node name="PathFollow_1" type="PathFollow3D" parent="Path3D"]
+transform = Transform3D(0.999917, -0.000147796, -0.00127702, 0.000145934, 0.999827, -0.00146797, 0.00127733, 0.00146775, 0.999847, 1.15587, -0.0748099, -27.2627)
 progress = 32.0
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Path3D/PathFollow3D"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Path3D/PathFollow_1"]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+visible = false
 mesh = SubResource("SphereMesh_8fw60")
 
 [node name="conos" type="Node3D" parent="."]
@@ -157,9 +158,13 @@ surface_material_override/3 = SubResource("StandardMaterial3D_4rsws")
 surface_material_override/4 = SubResource("StandardMaterial3D_uxm7u")
 surface_material_override/5 = SubResource("StandardMaterial3D_i1n1h")
 
+[node name="BugRod" parent="." instance=ExtResource("8_6mnti")]
+transform = Transform3D(-0.999645, 0, 0.0266481, 0, 1, 0, -0.0266481, 0, -0.999645, 86.8356, 2.89337, -109.547)
+
 [node name="BugRod2" parent="." instance=ExtResource("8_6mnti")]
 transform = Transform3D(-0.999903, 0, 0.0139621, 0, 1, 0, -0.0139621, 0, -0.999903, 95.6063, 2.02196, -109.753)
 is_player = false
+dificulty = 2
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 

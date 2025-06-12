@@ -5,9 +5,11 @@ extends VehicleBody3D
 
 # Sistema BOT
 @export var is_player: bool = true
+@export_category("BOT")
+@export var dificulty : int = 1
 @onready var path_follow = get_parent().get_child(4).get_child(0)
 @onready var path = get_parent().get_child(4)
-var speed = 5.0
+var speed = 5.0 
 var target_progress = 0.0
 
 #@export var camera_distance: float = 4
@@ -23,7 +25,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		#ESTO LO HACE SOLO EL BOT
 		var distance_to_point = global_position.distance_to(path_follow.global_position)
-		if distance_to_point < 25:
+		if distance_to_point < 30:
 			path_follow.progress += 30
 			path_follow.h_offset = randf_range(5, -5)
 			
@@ -37,23 +39,21 @@ func _physics_process(delta: float) -> void:
 		var angle_to_target = atan2(direction_to_target.x, direction_to_target.z)
 		var current_angle = atan2(current_forward.x, current_forward.z)
 		
-		#angulo de direccion necesario
-		var target_angle = angle_to_target - current_angle
-		
-		#calculando rotacion en el eje y del auto
-		var current_rotation = global_transform.basis.get_euler()
-		var auto_rotation_deg = rad_to_deg(current_rotation.y)
-		
 		# Calcular ángulo relativo al vehículo
 		var relative_angle = wrapf(angle_to_target - current_angle, -PI, PI)
 		
 		#limite al angulo relativo
-		relative_angle = clamp(relative_angle, -0.7, 0.7)
+		relative_angle = clamp(relative_angle, -MAX_STEER, MAX_STEER)
 		
 		
 		steering = relative_angle
 		
-		engine_force = 1500
+		if dificulty == 1:
+			engine_force = ENGINE_POWER / 1.5
+		elif dificulty == 2:
+			engine_force = ENGINE_POWER
+		elif dificulty == 3:
+			engine_force = ENGINE_POWER * 1.1
 		
 		
 		
