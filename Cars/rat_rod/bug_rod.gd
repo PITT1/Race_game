@@ -7,6 +7,7 @@ extends VehicleBody3D
 @export var is_player: bool = true
 @export_category("BOT")
 @export var dificulty : int = 1
+@export var path_to_follow: int = 0
 @onready var path_follow = get_parent().get_child(4).get_child(0)
 @onready var path = get_parent().get_child(4)
 var speed = 5.0 
@@ -23,7 +24,9 @@ var laps_num: int = 1
 #var current_offset = Vector2.ZERO
 
 func _ready() -> void:
-	all_checkpoints = get_parent().num_checkpoints
+	all_checkpoints = get_parent().num_checkpoints #esto hay que cambiarlo para el futuro ya que no se podra entrar al loby ni eventos de destruccion
+	
+	#obteniendo el path follow correspondiente a cada bot
 
 func _physics_process(delta: float) -> void:
 	if is_player:
@@ -81,7 +84,6 @@ func _on_checkpoint_sensor_area_entered(area: Area3D) -> void:
 		checkpoint_store.append(area.name)
 	
 	if checkpoint_store.size() == all_checkpoints and area.name == "point_0":
-		print("diste toda la vuelta")
 		laps_num += 1
 		print("lap: ", laps_num)
 		checkpoint_store = ["point_0"]

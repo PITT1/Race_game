@@ -1,6 +1,7 @@
-[gd_scene load_steps=19 format=3 uid="uid://dl4l032e7tmky"]
+[gd_scene load_steps=20 format=3 uid="uid://dl4l032e7tmky"]
 
 [ext_resource type="PackedScene" uid="uid://deh3gsrnhaefo" path="res://Maps/loby_1/loby_1.glb" id="1_68xm8"]
+[ext_resource type="Script" uid="uid://ddn22yn6bgmbe" path="res://Maps/loby_1/loby_1.gd" id="1_jk0es"]
 [ext_resource type="Texture2D" uid="uid://bm552631w02kq" path="res://Maps/test_map/textures/Asphalt025C_1K-JPG_Color.jpg" id="2_1vtqb"]
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="3_dbgys"]
 [ext_resource type="Texture2D" uid="uid://bk3p8umc7mpd0" path="res://Maps/test_map/textures/Grass001_1K-JPG_Color.jpg" id="3_f42dt"]
@@ -54,6 +55,7 @@ ease = 2
 points = PackedVector3Array(1.103, 0.144059, 0.917493, 1.103, -0.103164, 0.917493, -1.1216, 0.14392, 0.917493, 0.852053, 0.9587, -0.751145, -0.742262, 0.946943, 0.390783, 0.237637, 0.452775, 2.0301, -0.37992, -0.412298, 1.84466, 0.484791, -0.226845, -1.73936, -0.881367, -0.253971, -0.761146, -0.56523, 0.638088, -1.9248, 0.423166, -0.412298, 2.0301, -0.870481, 0.9587, -0.750987, 0.723665, 0.946943, 0.390783, 0.546633, 0.638088, -1.9248, -0.318077, 0.390865, 2.0301, 0.86863, -0.257551, -0.766614, -0.503388, -0.226845, -1.73936, -0.441763, -0.350387, 2.0301, -0.0709235, 0.76177, -1.73936, 1.103, 0.082149, 0.299637, 0.546633, 0.20583, -1.9248, -1.01779, -0.0658171, 0.836777, -1.1216, 0.082149, 0.423131, -0.56523, 0.20583, -1.9248, 0.423166, 0.20583, 2.0301, -0.441763, 0.20583, 2.0301, 0.791652, 0.956133, 0.223966, -0.256234, 0.452775, 2.0301, 0.423166, -0.412298, 1.84466, -0.808517, 0.955004, 0.0526501, 1.103, -0.103164, 0.299637, 0.847888, 0.955507, -0.347304)
 
 [node name="Loby1" type="Node3D"]
+script = ExtResource("1_jk0es")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_1vtqb")

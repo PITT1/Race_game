@@ -8,3 +8,4 @@ func _ready() -> void:
 	for i in get_child_count():
 		if get_child(i).get_class() == "VehicleBody3D":
 			car_list.append(get_child(i))
+			print(car_list)
