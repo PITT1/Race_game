@@ -32,6 +32,7 @@ enabled=PackedStringArray("res://addons/phantom_camera/plugin.cfg")
 3d_physics/layer_5="oil_trap"
 3d_physics/layer_6="turret_sensor"
 3d_physics/layer_7="projectil"
+3d_physics/layer_8="checkpoints"
 
 [rendering]
 

@@ -12,11 +12,18 @@ extends VehicleBody3D
 var speed = 5.0 
 var target_progress = 0.0
 
+var checkpoint_store = []
+var all_checkpoints: int
+var laps_num: int = 1
+
 #@export var camera_distance: float = 4
 #@export var camera_height: float = 4
 
 #var target_offset = Vector2.ZERO
 #var current_offset = Vector2.ZERO
+
+func _ready() -> void:
+	all_checkpoints = get_parent().num_checkpoints
 
 func _physics_process(delta: float) -> void:
 	if is_player:
@@ -67,3 +74,15 @@ func _physics_process(delta: float) -> void:
 #		pCam.follow_offset = Vector3(current_offset.x, camera_height, current_offset.y)
 #	else:
 #		print("no se encontro phanton camera")
+
+
+func _on_checkpoint_sensor_area_entered(area: Area3D) -> void:
+	if not checkpoint_store.has(area.name):
+		checkpoint_store.append(area.name)
+	
+	if checkpoint_store.size() == all_checkpoints and area.name == "point_0":
+		print("diste toda la vuelta")
+		laps_num += 1
+		print("lap: ", laps_num)
+		checkpoint_store = ["point_0"]
+		
