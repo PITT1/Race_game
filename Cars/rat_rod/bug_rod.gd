@@ -109,3 +109,4 @@ func _on_shock_timer_sensor_timeout() -> void:
 	recovery_mode = false
 	shock_timer_sensor.stop()
 	print(name, " uso el recovery")
+	path_follow[path_to_follow].progress -= 30
