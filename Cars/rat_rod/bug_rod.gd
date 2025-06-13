@@ -8,7 +8,7 @@ extends VehicleBody3D
 @export_category("BOT")
 @export var dificulty : int = 1
 @export var path_to_follow: int = 0
-@onready var path_follow = get_parent().get_child(4).get_child(0)
+@onready var path_follow = [$"../Path3D/PathFollow_0", $"../Path3D/PathFollow_1", $"../Path3D/PathFollow_2", $"../Path3D/PathFollow_3", $"../Path3D/PathFollow_4", $"../Path3D/PathFollow_5", $"../Path3D/PathFollow_6", $"../Path3D/PathFollow_7"]
 @onready var path = get_parent().get_child(4)
 var speed = 5.0 
 var target_progress = 0.0
@@ -16,6 +16,11 @@ var target_progress = 0.0
 var checkpoint_store = []
 var all_checkpoints: int
 var laps_num: int = 1
+
+#sistema bot para detectar cuando el auto no avanza
+@onready var shock_sensor: RayCast3D = $shock_sensor
+var recovery_mode: bool = false
+@onready var shock_timer_sensor: Timer = $shock_timer_sensor
 
 #@export var camera_distance: float = 4
 #@export var camera_height: float = 4
@@ -25,22 +30,22 @@ var laps_num: int = 1
 
 func _ready() -> void:
 	all_checkpoints = get_parent().num_checkpoints #esto hay que cambiarlo para el futuro ya que no se podra entrar al loby ni eventos de destruccion
-	
-	#obteniendo el path follow correspondiente a cada bot
 
 func _physics_process(delta: float) -> void:
 	if is_player:
 		steering = move_toward(steering, Input.get_axis("ui_right", "ui_left") * MAX_STEER, delta * 10)
 		engine_force = Input.get_axis("ui_down", "ui_up") * ENGINE_POWER
-	else:
+		
+		
+	if not is_player:
 		#ESTO LO HACE SOLO EL BOT
-		var distance_to_point = global_position.distance_to(path_follow.global_position)
+		var distance_to_point = global_position.distance_to(path_follow[path_to_follow].global_position)
 		if distance_to_point < 30:
-			path_follow.progress += 30
-			path_follow.h_offset = randf_range(5, -5)
+			path_follow[path_to_follow].progress += 30
+			path_follow[path_to_follow].h_offset = randf_range(5, -5)
 			
 		# Calcular dirección hacia el siguiente puntovar 
-		var direction_to_target = path_follow.global_transform.origin - global_transform.origin
+		var direction_to_target = path_follow[path_to_follow].global_transform.origin - global_transform.origin
 		direction_to_target.y = 0
 		direction_to_target = direction_to_target.normalized()
 		
@@ -65,6 +70,16 @@ func _physics_process(delta: float) -> void:
 		elif dificulty == 3:
 			engine_force = ENGINE_POWER * 1.1
 		
+		if linear_velocity.length() < 10 and shock_sensor.collide_with_bodies and not is_player:
+			var distance = shock_sensor.get_collision_point().distance_to(global_position)
+			if distance < 3:
+				print("detenido")
+				recovery_mode = true
+				shock_timer_sensor.start()
+		
+	if recovery_mode and not is_player:
+		engine_force = -ENGINE_POWER
+		
 		
 		
 
@@ -85,6 +100,12 @@ func _on_checkpoint_sensor_area_entered(area: Area3D) -> void:
 	
 	if checkpoint_store.size() == all_checkpoints and area.name == "point_0":
 		laps_num += 1
-		print("lap: ", laps_num)
+		print(name," lap: ", laps_num)
 		checkpoint_store = ["point_0"]
 		
+
+
+func _on_shock_timer_sensor_timeout() -> void:
+	recovery_mode = false
+	shock_timer_sensor.stop()
+	print(name, " uso el recovery")
