@@ -8,6 +8,8 @@ extends VehicleBody3D
 @export_category("BOT")
 @export var dificulty : int = 1
 @export var path_to_follow: int = 0
+@export var min_distance_to_point = 30 
+@export var poitn_desviation = 5
 @onready var path_follow = [$"../Path3D/PathFollow_0", $"../Path3D/PathFollow_1", $"../Path3D/PathFollow_2", $"../Path3D/PathFollow_3", $"../Path3D/PathFollow_4", $"../Path3D/PathFollow_5", $"../Path3D/PathFollow_6", $"../Path3D/PathFollow_7"]
 @onready var path = get_parent().get_child(4)
 var speed = 5.0 
@@ -40,9 +42,9 @@ func _physics_process(delta: float) -> void:
 	if not is_player:
 		#ESTO LO HACE SOLO EL BOT
 		var distance_to_point = global_position.distance_to(path_follow[path_to_follow].global_position)
-		if distance_to_point < 30:
-			path_follow[path_to_follow].progress += 30
-			path_follow[path_to_follow].h_offset = randf_range(5, -5)
+		if distance_to_point < min_distance_to_point:
+			path_follow[path_to_follow].progress += min_distance_to_point
+			path_follow[path_to_follow].h_offset = randf_range(poitn_desviation, -poitn_desviation)
 			
 		# Calcular dirección hacia el siguiente puntovar 
 		var direction_to_target = path_follow[path_to_follow].global_transform.origin - global_transform.origin
@@ -73,7 +75,6 @@ func _physics_process(delta: float) -> void:
 		if linear_velocity.length() < 10 and shock_sensor.collide_with_bodies and not is_player:
 			var distance = shock_sensor.get_collision_point().distance_to(global_position)
 			if distance < 3:
-				print("detenido")
 				recovery_mode = true
 				shock_timer_sensor.start()
 		
@@ -109,4 +110,4 @@ func _on_shock_timer_sensor_timeout() -> void:
 	recovery_mode = false
 	shock_timer_sensor.stop()
 	print(name, " uso el recovery")
-	path_follow[path_to_follow].progress -= 30
+	path_follow[path_to_follow].progress -= min_distance_to_point
