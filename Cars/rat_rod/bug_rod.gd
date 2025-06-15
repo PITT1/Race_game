@@ -75,6 +75,13 @@ func _on_checkpoint_sensor_area_entered(area: Area3D) -> void:
 		print(name," lap: ", laps_num)
 		checkpoint_store = ["point_0"]
 		
+		if laps_num >= get_parent().laps_num_to_finish:
+			print("FIN DE LA CARRERA")
+			is_on_race = false
+			engine_force = 0
+			steering = 0
+			brake = 20
+		
 
 
 func _on_shock_timer_sensor_timeout() -> void:
