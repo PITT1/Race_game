@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://c0e7xj0w2s5k1"]
+[gd_scene load_steps=26 format=3 uid="uid://c0e7xj0w2s5k1"]
 
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="1_758mf"]
 [ext_resource type="Script" uid="uid://jboquaotqdu7" path="res://Maps/rc_circuit/rc_circuit_1.gd" id="1_vd6h8"]
@@ -9,6 +9,8 @@
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="3_74nw3"]
 [ext_resource type="Texture2D" uid="uid://b6cnimeif6j5p" path="res://Maps/test_map/textures/Ground079S_1K-JPG_Color.jpg" id="4_d4tgu"]
 [ext_resource type="PackedScene" uid="uid://b6m4yvkxlcpuo" path="res://Cars/rat_rod/bug_rod.tscn" id="5_46ir1"]
+[ext_resource type="PackedScene" uid="uid://bhevwsndruup5" path="res://others/cone/cone.tscn" id="10_gkmgf"]
+[ext_resource type="PackedScene" uid="uid://x4l2usdlfsxp" path="res://others/boxes/box_1.tscn" id="11_gkmgf"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_4lugw"]
 sky_top_color = Color(0.461087, 0.641883, 0.858997, 1)
@@ -87,7 +89,7 @@ shadow_enabled = true
 
 [node name="Camera3D" type="Camera3D" parent="."]
 physics_interpolation_mode = 1
-transform = Transform3D(-0.612589, -0.637666, 0.46703, 0, 0.590876, 0.806762, -0.790402, 0.494214, -0.361964, 69.3712, 27.3207, -19.7336)
+transform = Transform3D(-0.612589, -0.637666, 0.467029, 0, 0.590876, 0.806762, -0.790402, 0.494214, -0.361964, 69.3712, 27.3207, -19.7336)
 
 [node name="PhantomCameraHost" type="Node" parent="Camera3D"]
 process_priority = 300
@@ -96,7 +98,7 @@ script = ExtResource("1_758mf")
 metadata/_custom_type_script = "uid://bd046eokvcnu2"
 
 [node name="PhantomCamera3D" type="Node3D" parent="." node_paths=PackedStringArray("follow_target", "look_at_target")]
-transform = Transform3D(-0.913678, -0.637617, 0.466454, 0, 0.590831, 0.805767, -1.17889, 0.494176, -0.361518, 69.3712, 27.3207, -19.7336)
+transform = Transform3D(-0.913681, -0.637617, 0.466453, 0, 0.590831, 0.805767, -1.17889, 0.494176, -0.361518, 69.3712, 27.3207, -19.7336)
 top_level = true
 script = ExtResource("2_vd6h8")
 follow_mode = 2
@@ -114,10 +116,10 @@ transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 56.53, 0, 4.58)
 curve = SubResource("Curve3D_vd6h8")
 
 [node name="PathFollow_0" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.991598, 0, 0.12925, 0, 1, 0, -0.12925, 0, -0.991598, -0.0940285, 3.19481e-05, 14.2737)
+transform = Transform3D(-0.991598, 0, 0.129249, 0, 1, 0, -0.129249, 0, -0.991598, -0.0940285, 3.19481e-05, 14.2737)
 
 [node name="PathFollow_1" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.991598, 0, 0.12925, 0, 1, 0, -0.12925, 0, -0.991598, -0.0940285, 3.19481e-05, 14.2737)
+transform = Transform3D(-0.991598, 0, 0.129249, 0, 1, 0, -0.129249, 0, -0.991598, -0.0940285, 3.19481e-05, 14.2737)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Path3D/PathFollow_1"]
 transform = Transform3D(1.865, 0, 0, 0, 1.865, 0, 0, 0, 1.865, 0, 0, 0)
@@ -125,22 +127,22 @@ visible = false
 mesh = SubResource("SphereMesh_vd6h8")
 
 [node name="PathFollow_2" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.991598, 0, 0.12925, 0, 1, 0, -0.12925, 0, -0.991598, -0.0940285, 3.19481e-05, 14.2737)
+transform = Transform3D(-0.991598, 0, 0.129249, 0, 1, 0, -0.129249, 0, -0.991598, -0.0940285, 3.19481e-05, 14.2737)
 
 [node name="PathFollow_3" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.991598, 0, 0.12925, 0, 1, 0, -0.12925, 0, -0.991598, -0.0940285, 3.19481e-05, 14.2737)
+transform = Transform3D(-0.991598, 0, 0.129249, 0, 1, 0, -0.129249, 0, -0.991598, -0.0940285, 3.19481e-05, 14.2737)
 
 [node name="PathFollow_4" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.991598, 0, 0.12925, 0, 1, 0, -0.12925, 0, -0.991598, -0.0940285, 3.19481e-05, 14.2737)
+transform = Transform3D(-0.991598, 0, 0.129249, 0, 1, 0, -0.129249, 0, -0.991598, -0.0940285, 3.19481e-05, 14.2737)
 
 [node name="PathFollow_5" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.991598, 0, 0.12925, 0, 1, 0, -0.12925, 0, -0.991598, -0.0940285, 3.19481e-05, 14.2737)
+transform = Transform3D(-0.991598, 0, 0.129249, 0, 1, 0, -0.129249, 0, -0.991598, -0.0940285, 3.19481e-05, 14.2737)
 
 [node name="PathFollow_6" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.991599, 0, 0.12925, 0, 1, 0, -0.12925, 0, -0.991599, -0.0940285, 3.19481e-05, 14.2737)
+transform = Transform3D(-0.991599, 0, 0.129249, 0, 1, 0, -0.129249, 0, -0.991599, -0.0940285, 3.19481e-05, 14.2737)
 
 [node name="PathFollow_7" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.991599, 0, 0.12925, 0, 1, 0, -0.12925, 0, -0.991599, -0.0940285, 3.19481e-05, 14.2737)
+transform = Transform3D(-0.991599, 0, 0.129249, 0, 1, 0, -0.129249, 0, -0.991599, -0.0940285, 3.19481e-05, 14.2737)
 
 [node name="pista_rc_1" parent="." instance=ExtResource("1_wpyyc")]
 transform = Transform3D(1.5, 0, 0, 0, 1, 0, 0, 0, 1.5, 0, 0, 0)
@@ -292,48 +294,117 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59.4419, 1.12434, 9.63886)
 is_player = false
 path_to_follow = 1
 min_distance_to_point = 10
-poitn_desviation = 2
+poitn_desviation = 0
 
 [node name="BugRod3" parent="." instance=ExtResource("5_46ir1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 53.8116, 1.12434, 9.63886)
 is_player = false
 path_to_follow = 2
 min_distance_to_point = 10
-poitn_desviation = 2
+poitn_desviation = 0
 
 [node name="BugRod4" parent="." instance=ExtResource("5_46ir1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59.4419, 1.12434, 2.96005)
 is_player = false
 path_to_follow = 3
 min_distance_to_point = 10
-poitn_desviation = 2
+poitn_desviation = 0
 
 [node name="BugRod5" parent="." instance=ExtResource("5_46ir1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 53.6313, 1.12434, 2.92874)
 is_player = false
 path_to_follow = 4
 min_distance_to_point = 10
-poitn_desviation = 2
+poitn_desviation = 0
 
 [node name="BugRod6" parent="." instance=ExtResource("5_46ir1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 53.883, 1.12434, -3.44569)
 is_player = false
 path_to_follow = 5
 min_distance_to_point = 10
-poitn_desviation = 2
+poitn_desviation = 0
 
 [node name="BugRod7" parent="." instance=ExtResource("5_46ir1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59.4419, 1.12434, -3.39211)
 is_player = false
 path_to_follow = 6
 min_distance_to_point = 10
-poitn_desviation = 2
+poitn_desviation = 0
 
 [node name="BugRod8" parent="." instance=ExtResource("5_46ir1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59.4419, 1.12434, -10.6183)
 is_player = false
 path_to_follow = 7
 min_distance_to_point = 10
-poitn_desviation = 2
+poitn_desviation = 0
+
+[node name="conos" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.383, 3.70927, 35.7854)
+
+[node name="Cone" parent="conos" instance=ExtResource("10_gkmgf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.01115, -3.20562, 11.3184)
+
+[node name="Cone2" parent="conos" instance=ExtResource("10_gkmgf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.01115, -3.20562, 8.96207)
+
+[node name="Cone3" parent="conos" instance=ExtResource("10_gkmgf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.01115, -3.20562, 6.59241)
+
+[node name="Cone4" parent="conos" instance=ExtResource("10_gkmgf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.01115, -3.20562, 3.90885)
+
+[node name="Cone5" parent="conos" instance=ExtResource("10_gkmgf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.01115, -3.20562, 1.02338)
+
+[node name="Cone6" parent="conos" instance=ExtResource("10_gkmgf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.01115, -3.20562, -2.3739)
+
+[node name="Cone7" parent="conos" instance=ExtResource("10_gkmgf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.01115, -3.20562, -5.4211)
+
+[node name="Cone8" parent="conos" instance=ExtResource("10_gkmgf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.01115, -3.20562, -8.23569)
+
+[node name="Cone9" parent="conos" instance=ExtResource("10_gkmgf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.01115, -3.20562, -11.275)
+
+[node name="Cone10" parent="conos" instance=ExtResource("10_gkmgf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.01115, -3.20562, -14.1005)
+
+[node name="Cone11" parent="conos" instance=ExtResource("10_gkmgf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.01115, -3.20562, -16.9304)
+
+[node name="Cone12" parent="conos" instance=ExtResource("10_gkmgf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.01115, -3.20562, -19.5371)
+
+[node name="Cone13" parent="conos" instance=ExtResource("10_gkmgf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.01115, -3.20562, -22.2894)
+
+[node name="tnts" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.3172, 1.86882, 43.5015)
+
+[node name="Box1" parent="tnts" instance=ExtResource("11_gkmgf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.83871)
+
+[node name="Box2" parent="tnts" instance=ExtResource("11_gkmgf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.95651)
+
+[node name="Box3" parent="tnts" instance=ExtResource("11_gkmgf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5.52851)
+
+[node name="Box4" parent="tnts" instance=ExtResource("11_gkmgf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -9.58733)
+
+[node name="Box5" parent="tnts" instance=ExtResource("11_gkmgf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -13.5671)
+
+[node name="Box6" parent="tnts" instance=ExtResource("11_gkmgf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -17.4291)
+
+[node name="Box7" parent="tnts" instance=ExtResource("11_gkmgf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -21.5406)
+
+[node name="Box8" parent="tnts" instance=ExtResource("11_gkmgf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -25.1311)
 
 [editable path="pista_rc_1"]

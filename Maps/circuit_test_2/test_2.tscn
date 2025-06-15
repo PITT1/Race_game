@@ -83,7 +83,7 @@ script = ExtResource("3_0r5jd")
 metadata/_custom_type_script = "uid://bd046eokvcnu2"
 
 [node name="PhantomCamera3D" type="Node3D" parent="." node_paths=PackedStringArray("follow_target", "look_at_target")]
-transform = Transform3D(0.293408, 0.810164, -0.551448, -8.89005e-08, 0.563094, 0.825348, 1.46236, -0.162551, 0.110643, 65.4106, 38.2879, -83.3616)
+transform = Transform3D(0.293408, 0.810164, -0.551448, -8.89006e-08, 0.563094, 0.825348, 1.46236, -0.162551, 0.110643, 65.4106, 38.2879, -83.3616)
 top_level = true
 script = ExtResource("4_3xdu8")
 follow_mode = 2
@@ -101,7 +101,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 90.6599, 2.91922, -121.999)
 curve = SubResource("Curve3D_6mnti")
 
 [node name="PathFollow_0" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.999853, 0.000119865, -0.00127702, -0.000121743, 0.999827, -0.00146797, 0.00127685, 0.00146809, 0.999847, 1.15108, -0.0803156, -23.5127)
+transform = Transform3D(0.999853, 0.000119866, -0.00127702, -0.000121744, 0.999827, -0.00146797, 0.00127685, 0.00146809, 0.999847, 1.15108, -0.0803156, -23.5127)
 progress = 28.25
 
 [node name="PathFollow_1" type="PathFollow3D" parent="Path3D"]

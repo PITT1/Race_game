@@ -32,7 +32,6 @@ var recovery_mode: bool = false
 
 func _ready() -> void:
 	all_checkpoints = get_parent().num_checkpoints #esto hay que cambiarlo para el futuro ya que no se podra entrar al loby ni eventos de destruccion
-
 func _physics_process(delta: float) -> void:
 	if is_player:
 		steering = move_toward(steering, Input.get_axis("ui_right", "ui_left") * MAX_STEER, delta * 10)

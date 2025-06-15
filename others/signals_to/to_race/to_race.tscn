@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://brakaji82desp"]
+[gd_scene load_steps=8 format=3 uid="uid://brakaji82desp"]
 
 [ext_resource type="ArrayMesh" uid="uid://hspr6mh1wqo3" path="res://others/signals_to/to_race/to_race.obj" id="1_iynm8"]
 [ext_resource type="Script" uid="uid://8wxj664ekvsi" path="res://others/signals_to/to_race/to_race.gd" id="1_rrha5"]
+[ext_resource type="PackedScene" uid="uid://dqqd5jgymydsp" path="res://huds/loby_menus/to_race_menu.tscn" id="2_wa4o3"]
 
 [sub_resource type="Animation" id="Animation_wa4o3"]
 length = 0.001
@@ -71,6 +72,7 @@ radius = 1.92432
 
 [node name="ToRace" type="Node3D"]
 script = ExtResource("1_rrha5")
+race_hud = ExtResource("2_wa4o3")
 
 [node name="ToRace" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
