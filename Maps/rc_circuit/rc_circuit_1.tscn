@@ -1,9 +1,10 @@
-[gd_scene load_steps=26 format=3 uid="uid://c0e7xj0w2s5k1"]
+[gd_scene load_steps=27 format=3 uid="uid://c0e7xj0w2s5k1"]
 
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="1_758mf"]
 [ext_resource type="Script" uid="uid://jboquaotqdu7" path="res://Maps/rc_circuit/rc_circuit_1.gd" id="1_vd6h8"]
 [ext_resource type="PackedScene" uid="uid://dg2q3t77ysq4m" path="res://Maps/rc_circuit/pista_rc_1.glb" id="1_wpyyc"]
 [ext_resource type="Texture2D" uid="uid://bm552631w02kq" path="res://Maps/test_map/textures/Asphalt025C_1K-JPG_Color.jpg" id="2_46ir1"]
+[ext_resource type="PackedScene" uid="uid://cd2fjxhklg8i1" path="res://huds/on_race_huds/countdown.tscn" id="2_am243"]
 [ext_resource type="Script" uid="uid://csjccrhj5wnx7" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="2_vd6h8"]
 [ext_resource type="Texture2D" uid="uid://bk3p8umc7mpd0" path="res://Maps/test_map/textures/Grass001_1K-JPG_Color.jpg" id="3_4lugw"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="3_74nw3"]
@@ -79,6 +80,7 @@ size = Vector3(18.6459, 4.65912, 1)
 
 [node name="RcCircuit1" type="Node3D"]
 script = ExtResource("1_vd6h8")
+countdown = ExtResource("2_am243")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_758mf")
@@ -309,6 +311,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 110.542, 0.825741, 4.14963)
 
 [node name="BugRod2" parent="." instance=ExtResource("5_46ir1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 116.792, 1.12434, 24.5321)
+ENGINE_POWER = 2000
 is_player = false
 path_to_follow = 1
 min_distance_to_point = 10
@@ -316,6 +319,7 @@ poitn_desviation = 1
 
 [node name="BugRod3" parent="." instance=ExtResource("5_46ir1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111.162, 1.12434, 24.5321)
+ENGINE_POWER = 2000
 is_player = false
 path_to_follow = 2
 min_distance_to_point = 10
@@ -323,6 +327,7 @@ poitn_desviation = 1
 
 [node name="BugRod4" parent="." instance=ExtResource("5_46ir1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 116.792, 1.12434, 17.8533)
+ENGINE_POWER = 2000
 is_player = false
 path_to_follow = 3
 min_distance_to_point = 10
@@ -330,6 +335,7 @@ poitn_desviation = 1
 
 [node name="BugRod5" parent="." instance=ExtResource("5_46ir1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 110.982, 1.12434, 17.822)
+ENGINE_POWER = 2000
 is_player = false
 path_to_follow = 4
 min_distance_to_point = 10
@@ -337,6 +343,7 @@ poitn_desviation = 1
 
 [node name="BugRod6" parent="." instance=ExtResource("5_46ir1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111.234, 1.12434, 11.4475)
+ENGINE_POWER = 2000
 is_player = false
 path_to_follow = 5
 min_distance_to_point = 10
@@ -344,6 +351,7 @@ poitn_desviation = 1
 
 [node name="BugRod7" parent="." instance=ExtResource("5_46ir1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 116.792, 1.12434, 11.5011)
+ENGINE_POWER = 2000
 is_player = false
 path_to_follow = 6
 min_distance_to_point = 10
@@ -351,6 +359,7 @@ poitn_desviation = 1
 
 [node name="BugRod8" parent="." instance=ExtResource("5_46ir1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 116.792, 1.12434, 4.27493)
+ENGINE_POWER = 2000
 is_player = false
 path_to_follow = 7
 min_distance_to_point = 10
