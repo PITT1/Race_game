@@ -10,3 +10,6 @@ func _ready() -> void:
 			car_list.append(get_child(i))
 	
 	print(car_list)
+	await get_tree().create_timer(3).timeout
+	for car in car_list:
+		car.start_race()

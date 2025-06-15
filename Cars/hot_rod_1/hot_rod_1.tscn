@@ -12,7 +12,7 @@ radius = 1.80891
 
 [node name="Hot-rod-1" type="VehicleBody3D"]
 collision_mask = 27
-mass = 150.0
+mass = 200.0
 gravity_scale = 5.0
 center_of_mass_mode = 1
 center_of_mass = Vector3(0, -1, 0)
@@ -27,10 +27,10 @@ shape = SubResource("ConvexPolygonShape3D_qjy37")
 [node name="wheel_1" type="VehicleWheel3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.813407, -0.0477209, 1.71769)
 use_as_steering = true
-wheel_roll_influence = 1.5
+wheel_roll_influence = 2.0
 wheel_radius = 0.625
 wheel_friction_slip = 10.0
-suspension_stiffness = 100.0
+suspension_stiffness = 150.0
 suspension_max_force = 100000.0
 damping_compression = 10.0
 damping_relaxation = 10.0
@@ -41,10 +41,10 @@ mesh = ExtResource("2_qjy37")
 [node name="wheel_2" type="VehicleWheel3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.856201, -0.0477209, -1.6314)
 use_as_traction = true
-wheel_roll_influence = 1.5
+wheel_roll_influence = 2.0
 wheel_radius = 0.625
 wheel_friction_slip = 10.0
-suspension_stiffness = 100.0
+suspension_stiffness = 150.0
 suspension_max_force = 100000.0
 damping_compression = 10.0
 damping_relaxation = 10.0
@@ -55,10 +55,10 @@ mesh = ExtResource("2_qjy37")
 [node name="wheel_3" type="VehicleWheel3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.813, -0.048, 1.718)
 use_as_steering = true
-wheel_roll_influence = 1.5
+wheel_roll_influence = 2.0
 wheel_radius = 0.625
 wheel_friction_slip = 10.0
-suspension_stiffness = 100.0
+suspension_stiffness = 150.0
 suspension_max_force = 100000.0
 damping_compression = 10.0
 damping_relaxation = 10.0
@@ -70,10 +70,10 @@ mesh = ExtResource("2_qjy37")
 [node name="wheel_4" type="VehicleWheel3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.856, -0.048, -1.631)
 use_as_traction = true
-wheel_roll_influence = 1.5
+wheel_roll_influence = 2.0
 wheel_radius = 0.625
 wheel_friction_slip = 10.0
-suspension_stiffness = 100.0
+suspension_stiffness = 150.0
 suspension_max_force = 100000.0
 damping_compression = 10.0
 damping_relaxation = 10.0
