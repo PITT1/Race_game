@@ -78,6 +78,21 @@ uv1_scale = Vector3(50, 50, 50)
 [sub_resource type="BoxShape3D" id="BoxShape3D_46ir1"]
 size = Vector3(18.6459, 4.65912, 1)
 
+[sub_resource type="Animation" id="Animation_j2xqt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
 [sub_resource type="Animation" id="Animation_am243"]
 resource_name = "init_race"
 length = 0.5
@@ -92,21 +107,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_j2xqt"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CanvasLayer/ColorRect:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(0, 0, 0, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_alync"]
@@ -128,7 +128,7 @@ shadow_enabled = true
 
 [node name="Camera3D" type="Camera3D" parent="."]
 physics_interpolation_mode = 1
-transform = Transform3D(-0.612589, -0.637666, 0.46703, 0, 0.590876, 0.806762, -0.790402, 0.494214, -0.361964, 126.722, 27.3207, -4.84037)
+transform = Transform3D(-0.612589, -0.637666, 0.467029, 0, 0.590876, 0.806762, -0.790402, 0.494214, -0.361964, 126.722, 27.3207, -4.84037)
 
 [node name="PhantomCameraHost" type="Node" parent="Camera3D"]
 process_priority = 300
@@ -137,7 +137,7 @@ script = ExtResource("1_758mf")
 metadata/_custom_type_script = "uid://bd046eokvcnu2"
 
 [node name="PhantomCamera3D" type="Node3D" parent="." node_paths=PackedStringArray("follow_target", "look_at_target")]
-transform = Transform3D(-0.913681, -0.637617, 0.466454, 0, 0.590831, 0.805767, -1.17889, 0.494176, -0.361518, 126.722, 27.3207, -4.84037)
+transform = Transform3D(-0.913681, -0.637617, 0.466456, 0, 0.590831, 0.805772, -1.17889, 0.494176, -0.36152, 126.722, 27.3207, -4.84037)
 top_level = true
 script = ExtResource("2_vd6h8")
 follow_mode = 2
@@ -155,10 +155,10 @@ transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 113.778, 0, 4.58)
 curve = SubResource("Curve3D_vd6h8")
 
 [node name="PathFollow_0" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.86785, 0, 0.496792, 0, 1, 0, -0.496792, 0, -0.86785, -0.408192, 3.19481e-05, 15.4264)
+transform = Transform3D(-0.867848, 0, 0.496796, 0, 1, 0, -0.496796, 0, -0.867848, -0.408192, 3.19481e-05, 15.4264)
 
 [node name="PathFollow_1" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.86785, 0, 0.496792, 0, 1, 0, -0.496792, 0, -0.86785, -0.408192, 3.19481e-05, 15.4264)
+transform = Transform3D(-0.867848, 0, 0.496796, 0, 1, 0, -0.496796, 0, -0.867848, -0.408192, 3.19481e-05, 15.4264)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Path3D/PathFollow_1"]
 transform = Transform3D(1.865, 0, 0, 0, 1.865, 0, 0, 0, 1.865, 0, 0, 0)
@@ -166,22 +166,22 @@ visible = false
 mesh = SubResource("SphereMesh_vd6h8")
 
 [node name="PathFollow_2" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.86785, 0, 0.496792, 0, 1, 0, -0.496792, 0, -0.86785, -0.408192, 3.19481e-05, 15.4264)
+transform = Transform3D(-0.867848, 0, 0.496796, 0, 1, 0, -0.496796, 0, -0.867848, -0.408192, 3.19481e-05, 15.4264)
 
 [node name="PathFollow_3" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.86785, 0, 0.496792, 0, 1, 0, -0.496792, 0, -0.86785, -0.408192, 3.19481e-05, 15.4264)
+transform = Transform3D(-0.867848, 0, 0.496796, 0, 1, 0, -0.496796, 0, -0.867848, -0.408192, 3.19481e-05, 15.4264)
 
 [node name="PathFollow_4" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.86785, 0, 0.496792, 0, 1, 0, -0.496792, 0, -0.86785, -0.408192, 3.19481e-05, 15.4264)
+transform = Transform3D(-0.867848, 0, 0.496796, 0, 1, 0, -0.496796, 0, -0.867848, -0.408192, 3.19481e-05, 15.4264)
 
 [node name="PathFollow_5" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.86785, 0, 0.496792, 0, 1, 0, -0.496792, 0, -0.86785, -0.408192, 3.19481e-05, 15.4264)
+transform = Transform3D(-0.867848, 0, 0.496796, 0, 1, 0, -0.496796, 0, -0.867848, -0.408192, 3.19481e-05, 15.4264)
 
 [node name="PathFollow_6" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.867851, 0, 0.496793, 0, 1, 0, -0.496793, 0, -0.867851, -0.408192, 3.19481e-05, 15.4264)
+transform = Transform3D(-0.867849, 0, 0.496797, 0, 1, 0, -0.496797, 0, -0.867849, -0.408192, 3.19481e-05, 15.4264)
 
 [node name="PathFollow_7" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.867851, 0, 0.496793, 0, 1, 0, -0.496793, 0, -0.867851, -0.408192, 3.19481e-05, 15.4264)
+transform = Transform3D(-0.867849, 0, 0.496797, 0, 1, 0, -0.496797, 0, -0.867849, -0.408192, 3.19481e-05, 15.4264)
 
 [node name="pista_rc_1" parent="." instance=ExtResource("1_wpyyc")]
 transform = Transform3D(1.5, 0, 0, 0, 1, 0, 0, 0, 1.5, 0, 0, 0)
@@ -349,6 +349,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 110.542, 0.825741, 4.14963)
 [node name="BugRod2" parent="." instance=ExtResource("5_46ir1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 116.792, 1.12434, 24.5321)
 is_player = false
+dificulty = 3
 path_to_follow = 1
 min_distance_to_point = 10
 poitn_desviation = 1
@@ -356,6 +357,7 @@ poitn_desviation = 1
 [node name="BugRod3" parent="." instance=ExtResource("5_46ir1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111.162, 1.12434, 24.5321)
 is_player = false
+dificulty = 3
 path_to_follow = 2
 min_distance_to_point = 10
 poitn_desviation = 1
@@ -363,6 +365,7 @@ poitn_desviation = 1
 [node name="BugRod4" parent="." instance=ExtResource("5_46ir1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 116.792, 1.12434, 17.8533)
 is_player = false
+dificulty = 3
 path_to_follow = 3
 min_distance_to_point = 10
 poitn_desviation = 1
@@ -370,6 +373,7 @@ poitn_desviation = 1
 [node name="BugRod5" parent="." instance=ExtResource("5_46ir1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 110.982, 1.12434, 17.822)
 is_player = false
+dificulty = 3
 path_to_follow = 4
 min_distance_to_point = 10
 poitn_desviation = 1
@@ -377,6 +381,7 @@ poitn_desviation = 1
 [node name="BugRod6" parent="." instance=ExtResource("5_46ir1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111.234, 1.12434, 11.4475)
 is_player = false
+dificulty = 3
 path_to_follow = 5
 min_distance_to_point = 10
 poitn_desviation = 1
@@ -384,6 +389,7 @@ poitn_desviation = 1
 [node name="BugRod7" parent="." instance=ExtResource("5_46ir1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 116.792, 1.12434, 11.5011)
 is_player = false
+dificulty = 3
 path_to_follow = 6
 min_distance_to_point = 10
 poitn_desviation = 1
@@ -391,6 +397,7 @@ poitn_desviation = 1
 [node name="BugRod8" parent="." instance=ExtResource("5_46ir1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 116.792, 1.12434, 4.27493)
 is_player = false
+dificulty = 3
 path_to_follow = 7
 min_distance_to_point = 10
 poitn_desviation = 1

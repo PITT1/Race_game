@@ -2,6 +2,21 @@
 
 [ext_resource type="Script" uid="uid://vp3tfdjrqljh" path="res://huds/loby_menus/to_race_menu.gd" id="1_vdh7p"]
 
+[sub_resource type="Animation" id="Animation_gwf60"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
 [sub_resource type="Animation" id="Animation_607i0"]
 resource_name = "input"
 length = 0.5
@@ -16,21 +31,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 0.870551),
 "update": 0,
 "values": [Vector2(0, 0), Vector2(1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_gwf60"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CanvasLayer:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_fgc3l"]
@@ -82,12 +82,12 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Button" type="Button" parent="CanvasLayer/VBoxContainer"]
+[node name="to_f1_race" type="Button" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 33
 text = "F1 race"
 
-[node name="Button2" type="Button" parent="CanvasLayer/VBoxContainer"]
+[node name="to_rc_circuit" type="Button" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 33
 text = "RC circuit"
@@ -97,4 +97,6 @@ libraries = {
 &"": SubResource("AnimationLibrary_256t0")
 }
 
+[connection signal="button_up" from="CanvasLayer/VBoxContainer/to_f1_race" to="." method="_on_to_f_1_race_button_up"]
+[connection signal="button_up" from="CanvasLayer/VBoxContainer/to_rc_circuit" to="." method="_on_to_rc_circuit_button_up"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

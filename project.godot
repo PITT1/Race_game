@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Car_game"
-run/main_scene="uid://xc1noq5s054l"
+run/main_scene="uid://dl4l032e7tmky"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
 
