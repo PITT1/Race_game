@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://bhehqj2450xtc"]
+[gd_scene load_steps=62 format=3 uid="uid://bhehqj2450xtc"]
 
 [ext_resource type="Script" uid="uid://bbkomqcnkihxo" path="res://huds/car_selection/car_selection.gd" id="1_u64g1"]
 [ext_resource type="Texture2D" uid="uid://bm552631w02kq" path="res://Maps/test_map/textures/Asphalt025C_1K-JPG_Color.jpg" id="1_wibte"]
@@ -10,6 +10,12 @@
 [ext_resource type="Script" uid="uid://csjccrhj5wnx7" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="6_mycvf"]
 [ext_resource type="ArrayMesh" uid="uid://cs400ksphy3ue" path="res://Cars/hot_rod_1/wheel.obj" id="7_6rdnw"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="7_btktd"]
+[ext_resource type="ArrayMesh" uid="uid://dvql0pec6iek8" path="res://Cars/sentinel_gt/corvette.obj" id="8_6rdnw"]
+[ext_resource type="ArrayMesh" uid="uid://bogrkkm22yith" path="res://Cars/empaler_truck/empaler_truck.obj" id="9_mycvf"]
+[ext_resource type="ArrayMesh" uid="uid://sslfbangykhf" path="res://Cars/raven_356/hot_rod_356.obj" id="10_btktd"]
+[ext_resource type="ArrayMesh" uid="uid://bk8ypp3oyer21" path="res://Cars/racing_rod/hot_rod_racing.obj" id="11_gw526"]
+[ext_resource type="ArrayMesh" uid="uid://lteoryqgltte" path="res://Cars/blade_rod/hot_rod2.obj" id="12_8jbfh"]
+[ext_resource type="ArrayMesh" uid="uid://2tybfvfdfkj3" path="res://Cars/thunderbolt/hot_rod3.obj" id="13_6lp0e"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_gw526"]
 sky_top_color = Color(0.461087, 0.641883, 0.858997, 1)
@@ -74,11 +80,250 @@ albedo_color = Color(0.984314, 0, 0, 1)
 metallic = 0.63
 roughness = 0.62
 
-[sub_resource type="Resource" id="Resource_fq8jf"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c3i15"]
+albedo_color = Color(0.484983, 0.168594, 0.713228, 1)
+metallic = 0.6
+roughness = 0.38
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6rdnw"]
+albedo_color = Color(0.556863, 0, 0, 1)
+metallic = 0.46
+roughness = 0.35
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mycvf"]
+albedo_color = Color(0.862745, 0.447059, 0, 1)
+metallic = 0.32
+roughness = 0.7
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_btktd"]
+albedo_color = Color(0.574328, 0.574328, 0.574328, 1)
+metallic = 0.54
+roughness = 0.48
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gw526"]
+albedo_color = Color(0.513783, 0, 0, 1)
+metallic = 0.57
+roughness = 0.3
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8jbfh"]
+albedo_color = Color(0.655601, 0.655601, 0.655601, 1)
+metallic = 0.44
+roughness = 0.36
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6lp0e"]
+albedo_color = Color(0.505344, 0.505344, 0.505344, 1)
+metallic = 0.84
+roughness = 0.46
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fq8jf"]
+albedo_color = Color(1, 0, 0, 1)
+metallic = 0.59
+roughness = 0.22
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vv7oi"]
+albedo_color = Color(0, 0, 0, 1)
+metallic = 0.51
+roughness = 0.4
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gt30f"]
+albedo_color = Color(0.643137, 0.329412, 0, 1)
+metallic = 0.41
+roughness = 0.38
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vscs0"]
+albedo_color = Color(0.639206, 0.639206, 0.639206, 1)
+metallic = 0.47
+roughness = 0.3
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_op732"]
+albedo_color = Color(0.568973, 0.568973, 0.568973, 1)
+metallic = 0.65
+roughness = 0.4
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dphnb"]
+albedo_color = Color(0.730876, 0.746142, 0.765898, 1)
+metallic = 0.77
+roughness = 0.65
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o8i27"]
+albedo_color = Color(0.135154, 0.411371, 0.703751, 1)
+metallic = 0.65
+roughness = 0.42
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hyck2"]
+metallic = 0.38
+roughness = 0.36
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qq1jb"]
+albedo_color = Color(0.463587, 0.463587, 0.463587, 1)
+metallic = 0.86
+roughness = 0.21
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cp2nr"]
+albedo_color = Color(1, 0, 0, 1)
+metallic = 0.73
+roughness = 0.21
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7ktic"]
+albedo_color = Color(0.263679, 0.370093, 0.370124, 1)
+metallic = 0.81
+roughness = 0.47
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bgmxk"]
+albedo_color = Color(0, 0, 0, 1)
+metallic = 0.78
+roughness = 0.51
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lpntj"]
+albedo_color = Color(0.73859, 0.73859, 0.73859, 1)
+metallic = 0.77
+roughness = 0.09
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_llynu"]
+albedo_color = Color(0.526423, 0.526423, 0.526423, 1)
+metallic = 0.84
+roughness = 0.51
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a74dt"]
+albedo_color = Color(0.417257, 0.417257, 0.417257, 1)
+metallic = 0.79
+roughness = 0.57
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cmwnc"]
+albedo_color = Color(0.612036, 0.612036, 0.612036, 1)
+metallic = 0.89
+roughness = 0.36
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hgpnr"]
+albedo_color = Color(0, 0, 0, 1)
+metallic = 0.69
+roughness = 0.36
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pekxc"]
+albedo_color = Color(0.0836618, 0.493095, 0.244651, 1)
+metallic = 0.75
+roughness = 0.43
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d02y5"]
+albedo_color = Color(0.635814, 0.62575, 0.625579, 1)
+metallic = 1.0
+roughness = 0.43
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_psw2t"]
+albedo_color = Color(0.628315, 0.628315, 0.628315, 1)
+metallic = 0.72
+roughness = 0.38
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_841ai"]
+albedo_color = Color(0.705194, 0.705194, 0.705194, 1)
+metallic = 1.0
+roughness = 0.48
+
+[sub_resource type="Resource" id="Resource_c3i15"]
 script = ExtResource("7_btktd")
 duration = 1.0
 transition = 0
-ease = 2
+ease = 0
+metadata/_custom_type_script = "uid://8umksf8e80fw"
+
+[sub_resource type="Animation" id="Animation_u64g1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("vehicles/bugrod:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("vehicles/hotrod1:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("vehicles/sentinel_gt:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("vehicles/empaler_truck:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.845544, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("vehicles/raven_356:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("vehicles/racing_rod:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("vehicles/blade_rod:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("vehicles/thunderbolt:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_wibte"]
 resource_name = "rotate"
@@ -108,32 +353,77 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector3(0, 0, 0), Vector3(0, 6.28319, 0)]
 }
-
-[sub_resource type="Animation" id="Animation_u64g1"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("vehicles/bugrod:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("vehicles/sentinel_gt:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector3(0, 0, 0)]
+"values": [Vector3(0, 0, 0), Vector3(0, 6.28319, 0)]
 }
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("vehicles/hotrod1:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("vehicles/empaler_truck:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector3(0, 0, 0)]
+"values": [Vector3(0, 0, 0), Vector3(0, 6.28319, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("vehicles/raven_356:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 6.28319, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("vehicles/racing_rod:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 6.28319, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("vehicles/blade_rod:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 6.28319, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("vehicles/thunderbolt:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 6.28319, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_h8baf"]
@@ -200,6 +490,10 @@ skeleton = NodePath("../../..")
 [node name="Hot-rod-body" type="MeshInstance3D" parent="vehicles/hotrod1"]
 transform = Transform3D(-0.73583, 0, -0.0784489, 0, 0.74, 0, 0.0784489, 0, -0.73583, 0, 0.689717, 0)
 mesh = ExtResource("6_c3i15")
+surface_material_override/0 = SubResource("StandardMaterial3D_c3i15")
+surface_material_override/1 = SubResource("StandardMaterial3D_6rdnw")
+surface_material_override/2 = SubResource("StandardMaterial3D_mycvf")
+surface_material_override/4 = SubResource("StandardMaterial3D_btktd")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="vehicles/hotrod1/Hot-rod-body"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.813407, -0.0477209, 1.71769)
@@ -221,8 +515,112 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.856
 mesh = ExtResource("7_6rdnw")
 skeleton = NodePath("")
 
+[node name="sentinel_gt" type="Node3D" parent="vehicles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.8279, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="vehicles/sentinel_gt"]
+material_override = SubResource("StandardMaterial3D_hg4ax")
+mesh = SubResource("CylinderMesh_hwucu")
+skeleton = NodePath("../../..")
+
+[node name="Corvette" type="MeshInstance3D" parent="vehicles/sentinel_gt"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.691, -0.551)
+mesh = ExtResource("8_6rdnw")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_gw526")
+surface_material_override/1 = SubResource("StandardMaterial3D_8jbfh")
+surface_material_override/5 = SubResource("StandardMaterial3D_6lp0e")
+surface_material_override/7 = SubResource("StandardMaterial3D_fq8jf")
+surface_material_override/8 = SubResource("StandardMaterial3D_vv7oi")
+
+[node name="empaler_truck" type="Node3D" parent="vehicles"]
+transform = Transform3D(0.663324, 0, 0.748332, 0, 1, 0, -0.748332, 0, 0.663324, 44.8691, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="vehicles/empaler_truck"]
+material_override = SubResource("StandardMaterial3D_hg4ax")
+mesh = SubResource("CylinderMesh_hwucu")
+skeleton = NodePath("../../..")
+
+[node name="EmpalerTruck" type="MeshInstance3D" parent="vehicles/empaler_truck"]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 1.5949, 0)
+mesh = ExtResource("9_mycvf")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_gt30f")
+surface_material_override/2 = SubResource("StandardMaterial3D_vscs0")
+surface_material_override/3 = SubResource("StandardMaterial3D_op732")
+surface_material_override/8 = SubResource("StandardMaterial3D_dphnb")
+surface_material_override/9 = SubResource("StandardMaterial3D_dphnb")
+surface_material_override/10 = SubResource("StandardMaterial3D_dphnb")
+
+[node name="raven_356" type="Node3D" parent="vehicles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59.3503, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="vehicles/raven_356"]
+material_override = SubResource("StandardMaterial3D_hg4ax")
+mesh = SubResource("CylinderMesh_hwucu")
+skeleton = NodePath("../../..")
+
+[node name="HotRod356" type="MeshInstance3D" parent="vehicles/raven_356"]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0.994385, 0)
+mesh = ExtResource("10_btktd")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_o8i27")
+surface_material_override/2 = SubResource("StandardMaterial3D_hyck2")
+surface_material_override/7 = SubResource("StandardMaterial3D_qq1jb")
+surface_material_override/8 = SubResource("StandardMaterial3D_cp2nr")
+
+[node name="racing_rod" type="Node3D" parent="vehicles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 73.0855, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="vehicles/racing_rod"]
+material_override = SubResource("StandardMaterial3D_hg4ax")
+mesh = SubResource("CylinderMesh_hwucu")
+skeleton = NodePath("../../..")
+
+[node name="HotRodRacing" type="MeshInstance3D" parent="vehicles/racing_rod"]
+transform = Transform3D(0.67, 0, 0, 0, 0.67, 0, 0, 0, 0.67, 0, 1.101, 0)
+mesh = ExtResource("11_gw526")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_7ktic")
+surface_material_override/3 = SubResource("StandardMaterial3D_bgmxk")
+surface_material_override/4 = SubResource("StandardMaterial3D_lpntj")
+surface_material_override/5 = SubResource("StandardMaterial3D_llynu")
+surface_material_override/6 = SubResource("StandardMaterial3D_a74dt")
+
+[node name="blade_rod" type="Node3D" parent="vehicles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 87.0001, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="vehicles/blade_rod"]
+material_override = SubResource("StandardMaterial3D_hg4ax")
+mesh = SubResource("CylinderMesh_hwucu")
+skeleton = NodePath("../../..")
+
+[node name="HotRod2" type="MeshInstance3D" parent="vehicles/blade_rod"]
+transform = Transform3D(0.48, 0, 0, 0, 0.48, 0, 0, 0, 0.48, -0.0208592, 0.860799, 0.297836)
+mesh = ExtResource("12_8jbfh")
+skeleton = NodePath("../../..")
+surface_material_override/4 = SubResource("StandardMaterial3D_cmwnc")
+surface_material_override/5 = SubResource("StandardMaterial3D_hgpnr")
+surface_material_override/6 = SubResource("StandardMaterial3D_pekxc")
+
+[node name="thunderbolt" type="Node3D" parent="vehicles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 100.792, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="vehicles/thunderbolt"]
+material_override = SubResource("StandardMaterial3D_hg4ax")
+mesh = SubResource("CylinderMesh_hwucu")
+skeleton = NodePath("../../..")
+
+[node name="HotRod3" type="MeshInstance3D" parent="vehicles/thunderbolt"]
+transform = Transform3D(0.34, 0, 0, 0, 0.34, 0, 0, 0, 0.34, 0, 0.574573, 0)
+mesh = ExtResource("13_6lp0e")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_d02y5")
+surface_material_override/2 = SubResource("StandardMaterial3D_psw2t")
+surface_material_override/4 = SubResource("StandardMaterial3D_841ai")
+
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.944298, 0.329091, 0, -0.329091, 0.944298, 15, 1.455, 4.175)
+transform = Transform3D(1, 0, 0, 0, 0.944298, 0.329091, 0, -0.329091, 0.944298, 0, 1.455, 4.175)
 
 [node name="PhantomCameraHost" type="Node" parent="Camera3D"]
 process_priority = 300
@@ -231,14 +629,14 @@ script = ExtResource("5_6rdnw")
 metadata/_custom_type_script = "uid://bd046eokvcnu2"
 
 [node name="PhantomCamera3D" type="Node3D" parent="." node_paths=PackedStringArray("follow_target", "look_at_target")]
-transform = Transform3D(0.999999, 0, 0, 0, 0.944293, 0.329089, 0, -0.329089, 0.944293, 15, 1.455, 4.175)
+transform = Transform3D(0.999999, 0, 0, 0, 0.944291, 0.329088, 0, -0.329088, 0.944291, 0, 1.455, 4.175)
 top_level = true
 script = ExtResource("6_mycvf")
 follow_mode = 2
-follow_target = NodePath("../vehicles/hotrod1")
+follow_target = NodePath("../vehicles/bugrod")
 look_at_mode = 2
-look_at_target = NodePath("../vehicles/hotrod1")
-tween_resource = SubResource("Resource_fq8jf")
+look_at_target = NodePath("../vehicles/bugrod")
+tween_resource = SubResource("Resource_c3i15")
 follow_offset = Vector3(0, 1.455, 4.175)
 metadata/_custom_type_script = "uid://csjccrhj5wnx7"
 
