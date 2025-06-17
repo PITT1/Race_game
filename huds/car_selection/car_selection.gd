@@ -5,6 +5,8 @@ extends Node3D
 var car_list: Array = []
 var selector: int = 0
 
+var global_var = load("res://global_var.gd").new()
+
 func _ready() -> void:
 	anim.play("rotate")
 	car_list.append($vehicles/bugrod)
@@ -32,3 +34,12 @@ func _on_right_button_up() -> void:
 	pCam.follow_offset = Vector3(0, 1.455, 4.175)
 	if pCam.follow_target.name == "empaler_truck":
 		pCam.follow_offset = Vector3(0, 1.455, 6)
+
+
+func _on_go_back_button_up() -> void:
+	get_tree().change_scene_to_file("res://Maps/loby_1/loby_1.tscn")
+
+
+func _on_select_button_up() -> void:
+	global_var.player.car = car_list[selector].name
+	print(global_var.player.car)
