@@ -2,6 +2,12 @@ extends Node
 
 const SAVE_GAME_PATH: String = "user://save_game1.dat"
 
+var car_list = {
+	bugrod = "res://Cars/rat_rod/bug_rod.tscn",
+	hotrod1 = "res://Cars/hot_rod_1/hot_rod_1.tscn"
+} 
+	
+	
 var player_canvas = {
 	money = 0,
 	car = "bugrod"

@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dycbk7i5kcu8x"
+path="res://.godot/imported/to_select_car.obj-d8446fa244d3c81bd6cf12ff81b37c19.mesh"
+
+[deps]
+
+files=["res://.godot/imported/to_select_car.obj-d8446fa244d3c81bd6cf12ff81b37c19.mesh"]
+
+source_file="res://others/signals_to/to_select_car/to_select_car.obj"
+dest_files=["res://.godot/imported/to_select_car.obj-d8446fa244d3c81bd6cf12ff81b37c19.mesh", "res://.godot/imported/to_select_car.obj-d8446fa244d3c81bd6cf12ff81b37c19.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
