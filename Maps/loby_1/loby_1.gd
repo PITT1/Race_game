@@ -6,8 +6,10 @@ var global_var = load("res://global_var.gd").new()
 var car_selected = ""
 
 func _ready() -> void:
-	car_selected = global_var.player.car
+	var data = JSON.parse_string(global_var.load_data())
+	car_selected = data.car
 	print(car_selected)
+	
 	var childs = get_children()
 	for item in childs:
 		if item.get_class() == "VehicleBody3D":

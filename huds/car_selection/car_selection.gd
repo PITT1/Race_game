@@ -41,5 +41,6 @@ func _on_go_back_button_up() -> void:
 
 
 func _on_select_button_up() -> void:
-	global_var.player.car = car_list[selector].name
-	print(global_var.player.car)
+	var data = JSON.parse_string(global_var.load_data())
+	data.car = car_list[selector].name
+	global_var.save_data(JSON.stringify(data))
