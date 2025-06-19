@@ -1,0 +1,62 @@
+# Blender 4.3.2 MTL File: 'empaler_truck.blend'
+# www.blender.org
+
+newmtl Material
+Ns 259.899994
+Ka 0.752941 0.752941 0.752941
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd F:/blender_cars/textures/oxido_paint.jpg
+
+newmtl Material.001
+Ns 418.685059
+Ka 0.874510 0.874510 0.874510
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 3
+map_Kd F:/blender_cars/textures/texture_3.jpg
+
+newmtl Material.002
+Ns 250.000000
+Ka 0.584314 0.584314 0.584314
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 3
+map_Kd F:/blender_cars/textures/oxido_paint.jpg
+
+newmtl Material.003
+Ns 250.000000
+Ka 0.700000 0.700000 0.700000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 3
+map_Kd F:/blender_cars/textures/oxido_4.jpg
+
+newmtl Material.005
+Ns 250.000000
+Ka 0.300000 0.300000 0.300000
+Kd 0.800165 0.009380 0.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 3
+
+newmtl vidrios
+Ns 250.000000
+Ka 0.900000 0.900000 0.900000
+Kd 0.026443 0.026443 0.026443
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 3

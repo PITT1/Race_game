@@ -93,7 +93,7 @@ script = ExtResource("4_1vtqb")
 follow_mode = 2
 look_at_mode = 2
 tween_resource = SubResource("Resource_tb0jv")
-follow_offset = Vector3(-2.695, 4.3, -6.135)
+follow_offset = Vector3(-13.155, 17.935, -6.135)
 metadata/_custom_type_script = "uid://csjccrhj5wnx7"
 
 [node name="Path3D" type="Path3D" parent="."]
@@ -111,7 +111,7 @@ transform = Transform3D(0.99996, -1.8752e-06, -0.00127721, 1.13682e-13, 0.999997
 transform = Transform3D(0.999989, -1.8752e-06, -0.00127722, 1.13686e-13, 0.999999, -0.00146819, 0.00127721, 0.00146819, 0.999998, 1.115, -0.121792, 4.73727)
 
 [node name="PathFollow_3" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.999981, -1.8752e-06, -0.00127722, 1.13685e-13, 0.999998, -0.00146819, 0.0012772, 0.00146819, 0.999997, 1.115, -0.121792, 4.73727)
+transform = Transform3D(0.999981, -1.8752e-06, -0.00127722, 1.13685e-13, 0.999998, -0.00146819, 0.00127719, 0.00146819, 0.999997, 1.115, -0.121792, 4.73727)
 
 [node name="PathFollow_4" type="PathFollow3D" parent="Path3D"]
 transform = Transform3D(0.999989, -1.8752e-06, -0.00127722, 1.13686e-13, 0.999999, -0.00146819, 0.00127721, 0.00146819, 0.999998, 1.115, -0.121792, 4.73727)
