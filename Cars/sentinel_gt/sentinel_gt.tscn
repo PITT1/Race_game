@@ -1,0 +1,129 @@
+[gd_scene load_steps=12 format=3 uid="uid://clyqsoa81b2rw"]
+
+[ext_resource type="ArrayMesh" uid="uid://ccuo25onnns44" path="res://Cars/sentinel_gt/corvette_body.obj" id="1_e76x8"]
+[ext_resource type="Script" uid="uid://bi2lhi1pxdtfu" path="res://Cars/sentinel_gt/sentinel_gt.gd" id="1_eh15g"]
+[ext_resource type="ArrayMesh" uid="uid://c3ua5r7rpu2kl" path="res://Cars/sentinel_gt/corvette_wheel.obj" id="2_eh15g"]
+[ext_resource type="ArrayMesh" uid="uid://vws8cc1dskg" path="res://Cars/rat_rod/bug_car_front_wheel.obj" id="3_8e5np"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8e5np"]
+albedo_color = Color(0.513783, 0, 0, 1)
+metallic = 0.57
+roughness = 0.3
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vu82b"]
+albedo_color = Color(0.655601, 0.655601, 0.655601, 1)
+metallic = 0.44
+roughness = 0.36
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gqndx"]
+albedo_color = Color(0.552956, 0.552956, 0.552955, 1)
+metallic = 0.84
+roughness = 0.46
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tjky1"]
+albedo_color = Color(1, 0, 0, 1)
+metallic = 0.59
+roughness = 0.22
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7bnkr"]
+albedo_color = Color(0, 0, 0, 1)
+metallic = 0.51
+roughness = 0.4
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_8e5np"]
+points = PackedVector3Array(-1.78644, -0.370747, 4.40408, 2.07972, -0.558485, 1.74114, -2.03453, -0.564866, -2.14806, -0.581195, 1.26039, 0.727849, 1.47834, 0.88523, -2.6283, 1.35263, 0.759403, 4.65667, 2.03789, -0.59175, -2.25558, -1.53548, 0.88523, -2.6283, 1.60404, -0.621984, 5.15791, -1.28407, 0.759403, 4.65667, -2.03785, 0.633993, -0.241684, -1.53548, -0.621984, 5.15791, 1.98072, 0.633993, -0.115783, 0.630714, 1.25471, 1.17135, -1.98357, -0.657385, 1.73473, 2.23213, -0.245129, 1.64133, -2.2897, -0.245129, 1.14008, -0.264612, 0.378879, 5.17464, -1.40977, 0.88523, 4.02795, 1.47834, 0.88523, 4.02795, 1.9, -0.64439, -1.78553, 1.42749, -0.347442, -2.4927, 1.98072, 0.508165, -2.3765, 1.93807, -0.663426, 2.316, -1.95758, -0.64439, -1.78553, -1.05251, 1.17381, -0.0886722, 0.996012, 1.17404, -0.0890792, -1.46175, -0.336944, -2.43162, -1.78644, 0.00610876, 4.40408, 1.72931, -0.621984, 5.03359, 1.10167, -0.621984, 5.2846, 2.23213, -0.11951, 0.512151)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_vu82b"]
+radius = 1.80891
+
+[node name="SentinelGt" type="VehicleBody3D"]
+collision_mask = 511
+mass = 150.0
+gravity_scale = 5.0
+center_of_mass_mode = 1
+center_of_mass = Vector3(0, -1, 0)
+script = ExtResource("1_eh15g")
+
+[node name="CorvetteBody" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.675, 0, 0, 0, 0.675, 0, 0, 0, 0.675, 0, 0.0208251, -0.786802)
+mesh = ExtResource("1_e76x8")
+surface_material_override/0 = SubResource("StandardMaterial3D_8e5np")
+surface_material_override/1 = SubResource("StandardMaterial3D_vu82b")
+surface_material_override/5 = SubResource("StandardMaterial3D_gqndx")
+surface_material_override/7 = SubResource("StandardMaterial3D_tjky1")
+surface_material_override/8 = SubResource("StandardMaterial3D_7bnkr")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.675, 0, 0, 0, 0.675, 0, 0, 0, 0.675, 0, 0.0208251, -0.786802)
+shape = SubResource("ConvexPolygonShape3D_8e5np")
+
+[node name="wheel_1" type="VehicleWheel3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.94, -0.309872, 1.758)
+use_as_steering = true
+wheel_roll_influence = 1.5
+wheel_radius = 0.49
+wheel_friction_slip = 10.0
+suspension_stiffness = 100.0
+suspension_max_force = 100000.0
+damping_compression = 10.0
+damping_relaxation = 10.0
+
+[node name="BugCarFrontWheel" type="MeshInstance3D" parent="wheel_1"]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0)
+mesh = ExtResource("3_8e5np")
+skeleton = NodePath("../..")
+
+[node name="wheel_2" type="VehicleWheel3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.940304, -0.307872, 1.758)
+use_as_steering = true
+wheel_roll_influence = 1.5
+wheel_radius = 0.49
+wheel_friction_slip = 10.0
+suspension_stiffness = 100.0
+suspension_max_force = 100000.0
+damping_compression = 10.0
+damping_relaxation = 10.0
+
+[node name="BugCarFrontWheel" type="MeshInstance3D" parent="wheel_2"]
+transform = Transform3D(-0.75, 0, -1.13247e-07, 0, 0.75, 0, 1.13247e-07, 0, -0.75, 0, 0, 0)
+mesh = ExtResource("3_8e5np")
+skeleton = NodePath("../..")
+
+[node name="wheel_3" type="VehicleWheel3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.15579, -0.458883, -1.41868)
+use_as_traction = true
+wheel_roll_influence = 1.5
+wheel_radius = 0.49
+wheel_friction_slip = 10.0
+suspension_stiffness = 100.0
+suspension_max_force = 100000.0
+damping_compression = 10.0
+damping_relaxation = 10.0
+
+[node name="CorvetteWheel" type="MeshInstance3D" parent="wheel_3"]
+transform = Transform3D(0.685, 0, 0, 0, 0.685, 0, 0, 0, 0.685, 0, 0, 0)
+mesh = ExtResource("2_eh15g")
+
+[node name="wheel_4" type="VehicleWheel3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.156, -0.459, -1.418)
+use_as_traction = true
+wheel_roll_influence = 1.5
+wheel_radius = 0.49
+wheel_friction_slip = 10.0
+suspension_stiffness = 100.0
+suspension_max_force = 100000.0
+damping_compression = 10.0
+damping_relaxation = 10.0
+
+[node name="CorvetteWheel" type="MeshInstance3D" parent="wheel_4"]
+transform = Transform3D(-0.685, 0, -5.98846e-08, 0, 0.685, 0, 5.98846e-08, 0, -0.685, 0, 0, 0)
+mesh = ExtResource("2_eh15g")
+skeleton = NodePath("../..")
+
+[node name="checkpoint_sensor" type="Area3D" parent="."]
+collision_layer = 0
+collision_mask = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoint_sensor"]
+shape = SubResource("SphereShape3D_vu82b")
+debug_color = Color(0.47455, 0.00208011, 0.733338, 0.133333)
