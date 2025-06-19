@@ -6,7 +6,8 @@ var car_list = {
 	bugrod = "res://Cars/rat_rod/bug_rod.tscn",
 	hotrod1 = "res://Cars/hot_rod_1/hot_rod_1.tscn",
 	sentinel_gt = "res://Cars/sentinel_gt/sentinel_gt.tscn",
-	empaler_truck = "res://Cars/empaler_truck/empaler_truck.tscn"
+	empaler_truck = "res://Cars/empaler_truck/empaler_truck.tscn",
+	raven_356 = "res://Cars/raven_356/raven_356.tscn"
 } 
 	
 	
