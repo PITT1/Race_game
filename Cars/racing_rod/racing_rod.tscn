@@ -1,0 +1,119 @@
+[gd_scene load_steps=11 format=3 uid="uid://davupqses8n0i"]
+
+[ext_resource type="ArrayMesh" uid="uid://dkn7sb6jgfydc" path="res://Cars/racing_rod/hot_rod_racing_body.obj" id="1_6427m"]
+[ext_resource type="Script" uid="uid://dmtoqyaueu2aq" path="res://Cars/racing_rod/racing_rod.gd" id="1_p3wy4"]
+[ext_resource type="ArrayMesh" uid="uid://dmgdyspa701" path="res://Cars/empaler_truck/empaler_truck_front_wheel.obj" id="2_ihxdo"]
+[ext_resource type="Script" uid="uid://btgjj3k8ktdgo" path="res://Cars/racing_rod/hot_rod_racing_body.gd" id="3_gw4e7"]
+[ext_resource type="ArrayMesh" uid="uid://dpr5hvsc86g8i" path="res://Cars/rat_rod/bug_car_rear_wheel.obj" id="3_p3wy4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p3wy4"]
+albedo_color = Color(0.263679, 0.370093, 0.370124, 1)
+metallic = 0.81
+roughness = 0.47
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gw4e7"]
+albedo_color = Color(0.526423, 0.526423, 0.526423, 1)
+metallic = 0.84
+roughness = 0.51
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j3l61"]
+albedo_color = Color(0.417257, 0.417257, 0.417257, 1)
+metallic = 0.79
+roughness = 0.57
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_6427m"]
+points = PackedVector3Array(1.64579, -0.998407, 0.230856, 0.713589, 0.0881181, 2.24934, -1.50686, -1.0839, 0.220507, -0.062497, 1.02034, -1.0887, 0.60581, -0.807135, -1.84461, 0.480859, -1.23163, 2.56014, -0.68343, 0.165932, 2.24934, -0.784495, -1.15989, -1.30506, 0.868743, 0.554118, -0.622745, -0.838902, 0.631711, -0.544924, 0.0926564, -0.14422, -2.40874, 1.53702, -1.0839, -0.648789, -1.61563, -0.920813, -0.700566, -0.940745, -0.951244, 1.98755, 1.17969, -0.688034, -1.55465, -1.61563, -0.920813, 0.230856, 0.816446, -1.16265, -1.30867, 0.480859, 0.243745, 2.24934, 1.02422, -0.61022, 2.09419, -0.717211, 0.297036, -1.38922, 0.672014, 0.514849, -1.2385, -0.062497, -0.14422, -2.40874, 1.49031, -0.532627, -0.157277, -0.994056, -0.61022, 2.09419, -0.424775, -0.728685, -1.97696, -0.528276, 0.243745, 2.24934, 0.0926564, 1.02034, -1.01088, 0.169914, 0.942525, -1.32168, -0.400936, -1.11133, 2.29471, -0.68343, 0.0881181, 2.32716, 0.636013, 0.165932, 2.32716, 1.49031, -0.532627, -0.390254)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_p3wy4"]
+radius = 1.80891
+
+[node name="RacingRod" type="VehicleBody3D"]
+collision_mask = 511
+mass = 180.0
+gravity_scale = 5.0
+center_of_mass_mode = 1
+center_of_mass = Vector3(0, -1, 0)
+script = ExtResource("1_p3wy4")
+
+[node name="HotRodRacingBody" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.345225)
+mesh = ExtResource("1_6427m")
+surface_material_override/0 = SubResource("StandardMaterial3D_p3wy4")
+surface_material_override/5 = SubResource("StandardMaterial3D_gw4e7")
+surface_material_override/6 = SubResource("StandardMaterial3D_j3l61")
+script = ExtResource("3_gw4e7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.345225)
+shape = SubResource("ConvexPolygonShape3D_6427m")
+
+[node name="wheel_1" type="VehicleWheel3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.28254, -0.803074, 1.52633)
+use_as_steering = true
+wheel_roll_influence = 1.5
+wheel_radius = 0.655
+wheel_friction_slip = 10.0
+suspension_stiffness = 100.0
+suspension_max_force = 100000.0
+damping_compression = 10.0
+damping_relaxation = 10.0
+
+[node name="EmpalerTruckFrontWheel" type="MeshInstance3D" parent="wheel_1"]
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0, 0, 0)
+mesh = ExtResource("2_ihxdo")
+skeleton = NodePath("../..")
+
+[node name="wheel_2" type="VehicleWheel3D" parent="."]
+transform = Transform3D(0.94, 0, 0, 0, 0.94, 0, 0, 0, 0.94, -1.28254, -0.783593, -1.67128)
+use_as_traction = true
+wheel_roll_influence = 1.5
+wheel_radius = 0.655
+wheel_friction_slip = 10.0
+suspension_stiffness = 100.0
+suspension_max_force = 100000.0
+damping_compression = 10.0
+damping_relaxation = 10.0
+
+[node name="BugCarRearWheel" type="MeshInstance3D" parent="wheel_2"]
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0, 0, 0)
+mesh = ExtResource("3_p3wy4")
+skeleton = NodePath("../..")
+
+[node name="wheel_3" type="VehicleWheel3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.283, -0.803074, 1.52633)
+use_as_steering = true
+wheel_roll_influence = 1.5
+wheel_radius = 0.655
+wheel_friction_slip = 10.0
+suspension_stiffness = 100.0
+suspension_max_force = 100000.0
+damping_compression = 10.0
+damping_relaxation = 10.0
+
+[node name="EmpalerTruckFrontWheel" type="MeshInstance3D" parent="wheel_3"]
+mesh = ExtResource("2_ihxdo")
+skeleton = NodePath("../..")
+
+[node name="wheel_4" type="VehicleWheel3D" parent="."]
+transform = Transform3D(0.94, 0, 0, 0, 0.94, 0, 0, 0, 0.94, 1.283, -0.783593, -1.67128)
+use_as_traction = true
+wheel_roll_influence = 1.5
+wheel_radius = 0.655
+wheel_friction_slip = 10.0
+suspension_stiffness = 100.0
+suspension_max_force = 100000.0
+damping_compression = 10.0
+damping_relaxation = 10.0
+
+[node name="BugCarRearWheel" type="MeshInstance3D" parent="wheel_4"]
+mesh = ExtResource("3_p3wy4")
+skeleton = NodePath("../..")
+
+[node name="checkpoint_sensor" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.115698)
+collision_layer = 0
+collision_mask = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoint_sensor"]
+shape = SubResource("SphereShape3D_p3wy4")
+debug_color = Color(0.47455, 0.00208011, 0.733338, 0.133333)
