@@ -9,7 +9,8 @@ var car_list = {
 	empaler_truck = "res://Cars/empaler_truck/empaler_truck.tscn",
 	raven_356 = "res://Cars/raven_356/raven_356.tscn",
 	racing_rod = "res://Cars/racing_rod/racing_rod.tscn",
-	blade_rod = "res://Cars/blade_rod/blade_rod.tscn"
+	blade_rod = "res://Cars/blade_rod/blade_rod.tscn",
+	thunderbolt = "res://Cars/thunderbolt/thunderbolt.tscn"
 } 
 	
 	
@@ -17,9 +18,6 @@ var player_canvas = {
 	money = 0,
 	car = "bugrod"
 }
-
-func hola():
-	print("hola")
 
 func init_save_canvas():
 	if not FileAccess.file_exists(SAVE_GAME_PATH):

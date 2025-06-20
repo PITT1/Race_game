@@ -1,23 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://djcileqlafjvg"]
+[gd_scene load_steps=6 format=3 uid="uid://djcileqlafjvg"]
 
 [ext_resource type="Script" uid="uid://c5d8s4rqngl8c" path="res://Cars/super_dozer/super_dozer.gd" id="1_dk3bl"]
 [ext_resource type="ArrayMesh" uid="uid://bveflvpoky1t7" path="res://Cars/super_dozer/super_dozer_body.obj" id="1_eijmg"]
 [ext_resource type="ArrayMesh" uid="uid://cyjkre37aqkgq" path="res://Cars/super_dozer/super_dozer_front_wheel.obj" id="2_dk3bl"]
 [ext_resource type="ArrayMesh" uid="uid://d0gu3sus51sbt" path="res://Cars/super_dozer/super_dozer_rear_wheel.obj" id="3_k515j"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_r7xft"]
-size = Vector3(3.59822, 2.76697, 8.43909)
-
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_dk3bl"]
-height = 6.05438
-radius = 1.42139
-
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_k515j"]
-height = 5.72267
-radius = 0.98584
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_dk3bl"]
-size = Vector3(4.17468, 1.2522, 1.74426)
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_dk3bl"]
+points = PackedVector3Array(3.59359, 2.95372, -4.82292, 3.59359, 2.76733, -4.82292, -3.68249, 2.95372, -6.50248, 1.25016, -1.5362, -3.46699, 2.28737, 0.901489, 4.69112, -2.18966, 0.900996, 4.69112, 2.1618, -1.76115, 4.93954, -1.81646, -1.7099, -2.39649, -1.36706, 0.181322, -6.00046, 3.59359, 2.95372, -6.50248, -3.68249, 3.1406, -5.38277, 2.28737, -1.89678, 3.38557, -2.00235, -1.7099, 5.43798, 1.4058, 0.195666, -5.82243, -2.18966, -1.89678, 3.38557, 2.28737, -1.33664, 5.25098, 3.59359, 3.14011, -5.3816, -2.37627, -1.7099, 3.57141, -2.2871, -1.44148, 4.84997, 3.59359, 2.76733, -6.31548, -3.68249, 2.76733, -4.82292, -3.68249, 2.76733, -6.31548, -1.2954, -1.46343, -3.36804, 2.05945, 3.0929, -6.38943, 1.26189, -1.0331, -4.36463, 1.91417, -1.7099, 5.43798, -1.92888, -1.80227, 5.21394, -3.5892, 3.07602, -6.3494, 1.84067, -1.80227, 5.21394, -3.68249, 2.95372, -4.82292, 3.52448, 3.09227, -6.38906, -2.18966, -1.33664, 5.25098)
 
 [node name="SuperDozer" type="VehicleBody3D"]
 collision_mask = 15
@@ -32,20 +21,7 @@ ENGINE_PEAK = 2000
 mesh = ExtResource("1_eijmg")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00299835, 0.426697, -1.25521)
-shape = SubResource("BoxShape3D_r7xft")
-
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
-transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0.00485229, -0.0917866, -4.14917)
-shape = SubResource("CylinderShape3D_dk3bl")
-
-[node name="CollisionShape3D3" type="CollisionShape3D" parent="."]
-transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -0.0239029, -0.579219, 2.01581)
-shape = SubResource("CylinderShape3D_k515j")
-
-[node name="CollisionShape3D4" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00579834, -0.126099, 4.26896)
-shape = SubResource("BoxShape3D_dk3bl")
+shape = SubResource("ConvexPolygonShape3D_dk3bl")
 
 [node name="wheel_1" type="VehicleWheel3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.547, -0.565872, 2.002)
