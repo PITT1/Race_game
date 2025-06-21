@@ -1,7 +1,8 @@
-[gd_scene load_steps=23 format=3 uid="uid://cjb4nd6otxjsg"]
+[gd_scene load_steps=27 format=3 uid="uid://cjb4nd6otxjsg"]
 
 [ext_resource type="Texture2D" uid="uid://bm552631w02kq" path="res://Maps/test_map/textures/Asphalt025C_1K-JPG_Color.jpg" id="1_3xdu8"]
 [ext_resource type="Script" uid="uid://kghgfx151qgh" path="res://Maps/circuit_test_2/test_2.gd" id="1_6mnti"]
+[ext_resource type="PackedScene" uid="uid://cd2fjxhklg8i1" path="res://huds/on_race_huds/countdown.tscn" id="2_lppdq"]
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="3_0r5jd"]
 [ext_resource type="Script" uid="uid://csjccrhj5wnx7" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="4_3xdu8"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="5_ro3cy"]
@@ -63,8 +64,47 @@ albedo_color = Color(0.306923, 0.306923, 0.306923, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_8fw60"]
 size = Vector3(58.3376, 18.7666, 5.27968)
 
+[sub_resource type="Animation" id="Animation_j2xqt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_am243"]
+resource_name = "init_race"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ColorRect:color")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_alync"]
+_data = {
+&"RESET": SubResource("Animation_j2xqt"),
+&"init_race": SubResource("Animation_am243")
+}
+
 [node name="Test2" type="Node3D"]
 script = ExtResource("1_6mnti")
+countdown = ExtResource("2_lppdq")
+laps_num_to_finish = 3
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_8fw60")
@@ -102,7 +142,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 90.6599, 2.91922, -121.999)
 curve = SubResource("Curve3D_6mnti")
 
 [node name="PathFollow_0" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.99985, 0.000119866, -0.00127702, -0.000121743, 0.999827, -0.00146797, 0.00127685, 0.00146809, 0.999847, 1.15108, -0.0803156, -23.5127)
+transform = Transform3D(0.999849, 0.000119866, -0.00127702, -0.000121743, 0.999827, -0.00146797, 0.00127685, 0.00146809, 0.999847, 1.15108, -0.0803156, -23.5127)
 progress = 28.25
 
 [node name="PathFollow_1" type="PathFollow3D" parent="Path3D"]
@@ -112,19 +152,19 @@ transform = Transform3D(0.999914, -1.8752e-06, -0.00127721, 1.13677e-13, 0.99999
 transform = Transform3D(0.999943, -1.8752e-06, -0.00127722, 1.1368e-13, 0.999999, -0.00146819, 0.00127715, 0.00146819, 0.999998, 1.115, -0.121792, 4.73727)
 
 [node name="PathFollow_3" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.999935, -1.8752e-06, -0.00127722, 1.1368e-13, 0.999998, -0.00146819, 0.00127714, 0.00146819, 0.999997, 1.115, -0.121792, 4.73727)
+transform = Transform3D(0.999934, -1.8752e-06, -0.00127722, 1.13679e-13, 0.999998, -0.00146819, 0.00127714, 0.00146819, 0.999997, 1.115, -0.121792, 4.73727)
 
 [node name="PathFollow_4" type="PathFollow3D" parent="Path3D"]
 transform = Transform3D(0.999943, -1.8752e-06, -0.00127722, 1.1368e-13, 0.999999, -0.00146819, 0.00127715, 0.00146819, 0.999998, 1.115, -0.121792, 4.73727)
 
 [node name="PathFollow_5" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.999944, -1.8752e-06, -0.00127722, 1.13681e-13, 0.999999, -0.00146819, 0.00127715, 0.00146819, 0.999998, 1.115, -0.121792, 4.73727)
+transform = Transform3D(0.999943, -1.8752e-06, -0.00127722, 1.13681e-13, 0.999999, -0.00146819, 0.00127715, 0.00146819, 0.999998, 1.115, -0.121792, 4.73727)
 
 [node name="PathFollow_6" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.999944, -1.8752e-06, -0.00127722, 1.13681e-13, 0.999999, -0.00146819, 0.00127715, 0.00146819, 0.999998, 1.115, -0.121792, 4.73727)
+transform = Transform3D(0.999943, -1.8752e-06, -0.00127722, 1.13681e-13, 0.999999, -0.00146819, 0.00127715, 0.00146819, 0.999998, 1.115, -0.121792, 4.73727)
 
 [node name="PathFollow_7" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.999944, -1.8752e-06, -0.00127722, 1.13681e-13, 0.999999, -0.00146819, 0.00127715, 0.00146819, 0.999998, 1.115, -0.121792, 4.73727)
+transform = Transform3D(0.999943, -1.8752e-06, -0.00127722, 1.13681e-13, 0.999999, -0.00146819, 0.00127715, 0.00146819, 0.999998, 1.115, -0.121792, 4.73727)
 
 [node name="conos" type="Node3D" parent="."]
 
@@ -437,5 +477,20 @@ path_to_follow = 5
 transform = Transform3D(-0.999893, 0, 0.0146078, 0, 1, 0, -0.0146078, 0, -0.999893, 93.7672, 1.18498, -95.6916)
 is_player = false
 path_to_follow = 6
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_alync")
+}
 
 [editable path="pista_1_CIRCUIT"]

@@ -37,6 +37,7 @@ gravity_scale = 5.0
 center_of_mass_mode = 1
 center_of_mass = Vector3(0, -1, 0)
 script = ExtResource("1_u3bej")
+dificulty = 2
 
 [node name="Hot-rod-body" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.115698)

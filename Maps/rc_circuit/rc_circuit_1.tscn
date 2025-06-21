@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://c0e7xj0w2s5k1"]
+[gd_scene load_steps=39 format=3 uid="uid://c0e7xj0w2s5k1"]
 
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="1_758mf"]
 [ext_resource type="Script" uid="uid://jboquaotqdu7" path="res://Maps/rc_circuit/rc_circuit_1.gd" id="1_vd6h8"]
@@ -11,8 +11,14 @@
 [ext_resource type="Texture2D" uid="uid://b6cnimeif6j5p" path="res://Maps/test_map/textures/Ground079S_1K-JPG_Color.jpg" id="4_d4tgu"]
 [ext_resource type="PackedScene" uid="uid://b6m4yvkxlcpuo" path="res://Cars/rat_rod/bug_rod.tscn" id="5_46ir1"]
 [ext_resource type="PackedScene" uid="uid://bhevwsndruup5" path="res://others/cone/cone.tscn" id="10_gkmgf"]
+[ext_resource type="PackedScene" uid="uid://cnkh1n6ut1tdy" path="res://Cars/thunderbolt/thunderbolt_bot.tscn" id="11_enonn"]
 [ext_resource type="PackedScene" uid="uid://x4l2usdlfsxp" path="res://others/boxes/box_1.tscn" id="11_gkmgf"]
 [ext_resource type="PackedScene" uid="uid://caiwrddld4olp" path="res://Cars/hot_rod_1/hot_rod_1_BOT.tscn" id="11_j2xqt"]
+[ext_resource type="PackedScene" uid="uid://dlv8tdpda3s4s" path="res://Cars/racing_rod/racing_rod_BOT.tscn" id="11_k0adl"]
+[ext_resource type="PackedScene" uid="uid://66qkphbmpmyh" path="res://Cars/raven_356/raven_356_BOT.tscn" id="11_lbryg"]
+[ext_resource type="PackedScene" uid="uid://dhrhbkegc35qf" path="res://Cars/sentinel_gt/sentinel_gt_BOT.tscn" id="11_lge22"]
+[ext_resource type="PackedScene" uid="uid://bxte01efysfbb" path="res://Cars/empaler_truck/empaler_truck_BOT.tscn" id="11_s7vdf"]
+[ext_resource type="PackedScene" uid="uid://igehpjs23h35" path="res://Cars/blade_rod/blade_rod_BOT.tscn" id="14_alync"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_4lugw"]
 sky_top_color = Color(0.461087, 0.641883, 0.858997, 1)
@@ -44,6 +50,10 @@ _data = {
 point_count = 61
 
 [sub_resource type="SphereMesh" id="SphereMesh_vd6h8"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_k0adl"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_s7vdf"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_758mf"]
 albedo_texture = ExtResource("2_46ir1")
@@ -175,8 +185,16 @@ transform = Transform3D(-0.867848, 0, 0.496796, 0, 1, 0, -0.496796, 0, -0.867848
 [node name="PathFollow_4" type="PathFollow3D" parent="Path3D"]
 transform = Transform3D(-0.867848, 0, 0.496796, 0, 1, 0, -0.496796, 0, -0.867848, -0.408192, 3.19481e-05, 15.4264)
 
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Path3D/PathFollow_4"]
+mesh = SubResource("BoxMesh_k0adl")
+
 [node name="PathFollow_5" type="PathFollow3D" parent="Path3D"]
 transform = Transform3D(-0.867848, 0, 0.496796, 0, 1, 0, -0.496796, 0, -0.867848, -0.408192, 3.19481e-05, 15.4264)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Path3D/PathFollow_5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0079, 0)
+visible = false
+mesh = SubResource("BoxMesh_s7vdf")
 
 [node name="PathFollow_6" type="PathFollow3D" parent="Path3D"]
 transform = Transform3D(-0.867849, 0, 0.496797, 0, 1, 0, -0.496797, 0, -0.867849, -0.408192, 3.19481e-05, 15.4264)
@@ -347,49 +365,43 @@ debug_color = Color(0, 0.922168, 0.568891, 1)
 [node name="BugRod" parent="." instance=ExtResource("5_46ir1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 110.542, 0.825741, 4.14963)
 
-[node name="BugRod2" parent="." instance=ExtResource("5_46ir1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 116.792, 1.12434, 24.5321)
-is_player = false
+[node name="ThunderboltBot" parent="." instance=ExtResource("11_enonn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 117.393, 0.608534, 23.4939)
 dificulty = 3
 path_to_follow = 1
 min_distance_to_point = 10
 poitn_desviation = 1
 
-[node name="BugRod3" parent="." instance=ExtResource("5_46ir1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111.162, 1.12434, 24.5321)
-is_player = false
+[node name="SentinelGtBot" parent="." instance=ExtResource("11_lge22")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111.436, 0.930555, 24.7173)
 dificulty = 3
 path_to_follow = 2
 min_distance_to_point = 10
 poitn_desviation = 1
 
-[node name="BugRod4" parent="." instance=ExtResource("5_46ir1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 116.792, 1.12434, 17.8533)
-is_player = false
+[node name="Raven356Bot" parent="." instance=ExtResource("11_lbryg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 117.211, 0.682989, 17.7802)
 dificulty = 3
 path_to_follow = 3
-min_distance_to_point = 10
+min_distance_to_point = 15
 poitn_desviation = 1
 
-[node name="BugRod5" parent="." instance=ExtResource("5_46ir1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 110.982, 1.12434, 17.822)
-is_player = false
+[node name="RacingRodBot" parent="." instance=ExtResource("11_k0adl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 110.654, 1.45026, 18.7803)
 dificulty = 3
 path_to_follow = 4
 min_distance_to_point = 10
 poitn_desviation = 1
 
-[node name="BugRod6" parent="." instance=ExtResource("5_46ir1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111.234, 1.12434, 11.4475)
-is_player = false
+[node name="EmpalerTruckBot" parent="." instance=ExtResource("11_s7vdf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 110.571, 1.48026, 11.6596)
 dificulty = 3
 path_to_follow = 5
 min_distance_to_point = 10
 poitn_desviation = 1
 
-[node name="BugRod7" parent="." instance=ExtResource("5_46ir1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 116.792, 1.12434, 11.5011)
-is_player = false
+[node name="BladeRodBot" parent="." instance=ExtResource("14_alync")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 116.926, 0.949946, 11.6524)
 dificulty = 3
 path_to_follow = 6
 min_distance_to_point = 10
