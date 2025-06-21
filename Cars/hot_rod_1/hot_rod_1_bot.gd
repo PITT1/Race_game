@@ -4,8 +4,6 @@ extends VehicleBody3D
 @export var ENGINE_POWER = 1500
 var is_on_race = false
 
-# Sistema BOT
-@export var is_player: bool = true
 @export_category("BOT")
 @export var dificulty : int = 1
 @export var path_to_follow: int = 0
@@ -25,75 +23,21 @@ var laps_num: int = 1
 var recovery_mode: bool = false
 @onready var shock_timer_sensor: Timer = $shock_timer_sensor
 
-#@export var camera_distance: float = 4
-#@export var camera_height: float = 4
-
-#var target_offset = Vector2.ZERO
-#var current_offset = Vector2.ZERO
-
 func _ready() -> void:
 	all_checkpoints = get_parent().num_checkpoints #esto hay que cambiarlo para el futuro ya que no se podra entrar al loby ni eventos de destruccion
 	
-
 func _physics_process(delta: float) -> void:
-	if is_player and is_on_race:
-		steering = move_toward(steering, Input.get_axis("ui_right", "ui_left") * MAX_STEER, delta * 10)
-		engine_force = Input.get_axis("ui_down", "ui_up") * ENGINE_POWER
-		
-		
-	if not is_player and is_on_race:
-		#ESTO LO HACE SOLO EL BOT
+	if is_on_race:
 		bot_sistem()
-		
-		if linear_velocity.length() < 10 and shock_sensor.collide_with_bodies and not is_player: #BOT
+		if linear_velocity.length() < 10 and shock_sensor.collide_with_bodies: #BOT
 			var distance = shock_sensor.get_collision_point().distance_to(global_position)
 			if distance < 3:
 				recovery_mode = true
 				shock_timer_sensor.start()
-		
-	if recovery_mode and not is_player and is_on_race: #BOT
-		engine_force = -ENGINE_POWER
-		
-		
-		
-
-#func update_pcam():
-#	var forward_direction = -global_transform.basis.z.normalized()
-#	target_offset = Vector2(forward_direction.x * camera_distance, forward_direction.z * camera_distance)
-#	current_offset = current_offset.lerp(target_offset, 0.05)
-#	var pCam = get_parent().get_child(3) 
-#	if pCam.name == "PhantomCamera3D":
-#		pCam.follow_offset = Vector3(current_offset.x, camera_height, current_offset.y)
-#	else:
-#		print("no se encontro phanton camera")
-
-
-func _on_checkpoint_sensor_area_entered(area: Area3D) -> void:
-	if not checkpoint_store.has(area.name):
-		checkpoint_store.append(area.name)
 	
-	if checkpoint_store.size() == all_checkpoints and area.name == "point_0":
-		laps_num += 1
-		print(name," lap: ", laps_num)
-		checkpoint_store = ["point_0"]
-		
-		if laps_num >= get_parent().laps_num_to_finish:
-			print("FIN DE LA CARRERA")
-			is_on_race = false
-			engine_force = 0
-			steering = 0
-			brake = 20
-		
+	if recovery_mode and is_on_race: #BOT
+		engine_force = -ENGINE_POWER
 
-
-func _on_shock_timer_sensor_timeout() -> void: #BOT
-	recovery_mode = false
-	shock_timer_sensor.stop()
-	print(name, " uso el recovery")
-	path_follow[path_to_follow].progress -= min_distance_to_point
-
-func start_race():
-	is_on_race = true
 
 func bot_sistem(): #BOT
 	var distance_to_point = global_position.distance_to(path_follow[path_to_follow].global_position)
@@ -127,4 +71,30 @@ func bot_sistem(): #BOT
 	elif dificulty == 3:
 		engine_force = ENGINE_POWER * 1.1
 	
+
+func start_race():
+	is_on_race = true
+
+func _on_checkpoint_sensor_area_entered(area: Area3D) -> void:
+	if not checkpoint_store.has(area.name):
+		checkpoint_store.append(area.name)
 	
+	if checkpoint_store.size() == all_checkpoints and area.name == "point_0":
+		laps_num += 1
+		print(name," lap: ", laps_num)
+		checkpoint_store = ["point_0"]
+		
+		if laps_num >= get_parent().laps_num_to_finish:
+			print("FIN DE LA CARRERA")
+			is_on_race = false
+			engine_force = 0
+			steering = 0
+			brake = 20
+		
+
+
+func _on_shock_timer_sensor_timeout() -> void:
+	recovery_mode = false
+	shock_timer_sensor.stop()
+	print(name, " uso el recovery")
+	path_follow[path_to_follow].progress -= min_distance_to_point

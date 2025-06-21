@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://c0e7xj0w2s5k1"]
+[gd_scene load_steps=31 format=3 uid="uid://c0e7xj0w2s5k1"]
 
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="1_758mf"]
 [ext_resource type="Script" uid="uid://jboquaotqdu7" path="res://Maps/rc_circuit/rc_circuit_1.gd" id="1_vd6h8"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://b6m4yvkxlcpuo" path="res://Cars/rat_rod/bug_rod.tscn" id="5_46ir1"]
 [ext_resource type="PackedScene" uid="uid://bhevwsndruup5" path="res://others/cone/cone.tscn" id="10_gkmgf"]
 [ext_resource type="PackedScene" uid="uid://x4l2usdlfsxp" path="res://others/boxes/box_1.tscn" id="11_gkmgf"]
+[ext_resource type="PackedScene" uid="uid://caiwrddld4olp" path="res://Cars/hot_rod_1/hot_rod_1_BOT.tscn" id="11_j2xqt"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_4lugw"]
 sky_top_color = Color(0.461087, 0.641883, 0.858997, 1)
@@ -394,9 +395,8 @@ path_to_follow = 6
 min_distance_to_point = 10
 poitn_desviation = 1
 
-[node name="BugRod8" parent="." instance=ExtResource("5_46ir1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 116.792, 1.12434, 4.27493)
-is_player = false
+[node name="HotRod1Bot" parent="." instance=ExtResource("11_j2xqt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 116.675, 0.735411, 4.01724)
 dificulty = 3
 path_to_follow = 7
 min_distance_to_point = 10
