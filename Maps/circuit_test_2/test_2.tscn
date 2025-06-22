@@ -460,34 +460,42 @@ libraries = {
 
 [node name="spawn_point_0" type="MeshInstance3D" parent="spawners"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 86.799, 2.723, -111.117)
+visible = false
 mesh = ExtResource("10_ow4v7")
 
 [node name="spawn_point_1" type="MeshInstance3D" parent="spawners"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 95.4649, 2.72269, -111.117)
+visible = false
 mesh = ExtResource("10_ow4v7")
 
 [node name="spawn_point_2" type="MeshInstance3D" parent="spawners"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 86.5854, 2.72269, -104.426)
+visible = false
 mesh = ExtResource("10_ow4v7")
 
 [node name="spawn_point_3" type="MeshInstance3D" parent="spawners"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 95.2418, 2.72269, -104.426)
+visible = false
 mesh = ExtResource("10_ow4v7")
 
 [node name="spawn_point_4" type="MeshInstance3D" parent="spawners"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 86.8355, 2.72269, -96.7581)
+visible = false
 mesh = ExtResource("10_ow4v7")
 
 [node name="spawn_point_5" type="MeshInstance3D" parent="spawners"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 95.1806, 2.72269, -96.7581)
+visible = false
 mesh = ExtResource("10_ow4v7")
 
 [node name="spawn_point_6" type="MeshInstance3D" parent="spawners"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 87.0431, 2.72269, -89.2849)
+visible = false
 mesh = ExtResource("10_ow4v7")
 
 [node name="spawn_point_7" type="MeshInstance3D" parent="spawners"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 95.2636, 2.72269, -89.2849)
+visible = false
 mesh = ExtResource("10_ow4v7")
 
 [editable path="pista_1_CIRCUIT"]

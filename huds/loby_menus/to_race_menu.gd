@@ -16,7 +16,7 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 
 
 func _on_to_f_1_race_button_up() -> void:
-	print("ir al circuito f1")
+	get_tree().change_scene_to_file("res://Maps/circuit_test_2/test_2.tscn")
 
 
 func _on_to_rc_circuit_button_up() -> void:
