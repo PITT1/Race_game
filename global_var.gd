@@ -11,7 +11,17 @@ var car_list = {
 	racing_rod = "res://Cars/racing_rod/racing_rod.tscn",
 	blade_rod = "res://Cars/blade_rod/blade_rod.tscn",
 	thunderbolt = "res://Cars/thunderbolt/thunderbolt.tscn"
-} 
+}
+
+var bot_list = {
+	hotrod1_BOT = "res://Cars/hot_rod_1/hot_rod_1_BOT.tscn",
+	sentinel_gt_BOT = "res://Cars/sentinel_gt/sentinel_gt_BOT.tscn",
+	empaler_truck_BOT = "res://Cars/empaler_truck/empaler_truck_BOT.tscn",
+	raven_356_BOT = "res://Cars/raven_356/raven_356_BOT.tscn",
+	racing_rod_BOT = "res://Cars/racing_rod/racing_rod_BOT.tscn",
+	blade_rod_BOT = "res://Cars/blade_rod/blade_rod_BOT.tscn",
+	thunderbolt_BOT = "res://Cars/thunderbolt/thunderbolt_BOT.tscn"
+}
 	
 	
 var player_canvas = {

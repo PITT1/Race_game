@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://b6cnimeif6j5p" path="res://Maps/test_map/textures/Ground079S_1K-JPG_Color.jpg" id="4_d4tgu"]
 [ext_resource type="PackedScene" uid="uid://b6m4yvkxlcpuo" path="res://Cars/rat_rod/bug_rod.tscn" id="5_46ir1"]
 [ext_resource type="PackedScene" uid="uid://bhevwsndruup5" path="res://others/cone/cone.tscn" id="10_gkmgf"]
-[ext_resource type="PackedScene" uid="uid://cnkh1n6ut1tdy" path="res://Cars/thunderbolt/thunderbolt_bot.tscn" id="11_enonn"]
+[ext_resource type="PackedScene" uid="uid://cnkh1n6ut1tdy" path="res://Cars/thunderbolt/thunderbolt_BOT.tscn" id="11_enonn"]
 [ext_resource type="PackedScene" uid="uid://x4l2usdlfsxp" path="res://others/boxes/box_1.tscn" id="11_gkmgf"]
 [ext_resource type="PackedScene" uid="uid://caiwrddld4olp" path="res://Cars/hot_rod_1/hot_rod_1_BOT.tscn" id="11_j2xqt"]
 [ext_resource type="PackedScene" uid="uid://dlv8tdpda3s4s" path="res://Cars/racing_rod/racing_rod_BOT.tscn" id="11_k0adl"]
@@ -139,7 +139,7 @@ shadow_enabled = true
 
 [node name="Camera3D" type="Camera3D" parent="."]
 physics_interpolation_mode = 1
-transform = Transform3D(-0.612589, -0.637666, 0.46703, 0, 0.590876, 0.806762, -0.790402, 0.494214, -0.361964, 126.722, 27.3207, -4.84037)
+transform = Transform3D(-0.612589, -0.637666, 0.467029, 0, 0.590876, 0.806762, -0.790402, 0.494214, -0.361964, 126.722, 27.3207, -4.84037)
 
 [node name="PhantomCameraHost" type="Node" parent="Camera3D"]
 process_priority = 300
@@ -186,6 +186,7 @@ transform = Transform3D(-0.867848, 0, 0.496796, 0, 1, 0, -0.496796, 0, -0.867848
 transform = Transform3D(-0.867848, 0, 0.496796, 0, 1, 0, -0.496796, 0, -0.867848, -0.408192, 3.19481e-05, 15.4264)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Path3D/PathFollow_4"]
+visible = false
 mesh = SubResource("BoxMesh_k0adl")
 
 [node name="PathFollow_5" type="PathFollow3D" parent="Path3D"]

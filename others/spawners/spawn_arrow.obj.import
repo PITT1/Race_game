@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dc4upx53e4gie"
+path="res://.godot/imported/spawn_arrow.obj-8dcd25c98ede1821fc377da17173d838.mesh"
+
+[deps]
+
+files=["res://.godot/imported/spawn_arrow.obj-8dcd25c98ede1821fc377da17173d838.mesh"]
+
+source_file="res://others/spawners/spawn_arrow.obj"
+dest_files=["res://.godot/imported/spawn_arrow.obj-8dcd25c98ede1821fc377da17173d838.mesh", "res://.godot/imported/spawn_arrow.obj-8dcd25c98ede1821fc377da17173d838.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
