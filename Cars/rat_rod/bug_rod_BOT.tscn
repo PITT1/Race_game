@@ -1,78 +1,79 @@
-[gd_scene load_steps=15 format=3 uid="uid://b6m4yvkxlcpuo"]
+[gd_scene load_steps=15 format=3 uid="uid://c55crud412ukg"]
 
-[ext_resource type="ArrayMesh" uid="uid://rgbpy0gs4uf7" path="res://Cars/rat_rod/bug_car_body.obj" id="1_h54rw"]
-[ext_resource type="Script" uid="uid://dn8cru75adetk" path="res://Cars/rat_rod/bug_rod.gd" id="1_q3ra6"]
-[ext_resource type="ArrayMesh" uid="uid://vws8cc1dskg" path="res://Cars/rat_rod/bug_car_front_wheel.obj" id="2_q3ra6"]
-[ext_resource type="ArrayMesh" uid="uid://dpr5hvsc86g8i" path="res://Cars/rat_rod/bug_car_rear_wheel.obj" id="3_tabbm"]
+[ext_resource type="Script" uid="uid://bub163oegeem3" path="res://Cars/rat_rod/bug_rod_bot.gd" id="1_5htpr"]
+[ext_resource type="ArrayMesh" uid="uid://rgbpy0gs4uf7" path="res://Cars/rat_rod/bug_car_body.obj" id="2_0pkha"]
+[ext_resource type="ArrayMesh" uid="uid://vws8cc1dskg" path="res://Cars/rat_rod/bug_car_front_wheel.obj" id="3_31ayi"]
+[ext_resource type="ArrayMesh" uid="uid://dpr5hvsc86g8i" path="res://Cars/rat_rod/bug_car_rear_wheel.obj" id="4_qnlqo"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xx7w4"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c4f5u"]
 albedo_color = Color(0.771578, 2.28621e-06, 1.05888e-06, 1)
 metallic = 0.75
 roughness = 0.48
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i2rf7"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ocx8h"]
 albedo_color = Color(0.327081, 0.327354, 0.320814, 1)
 metallic = 0.85
 roughness = 0.3
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vwscl"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h5chs"]
 albedo_color = Color(0.453232, 0.453232, 0.453232, 1)
 metallic = 0.53
 roughness = 0.48
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ro40e"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hky70"]
 albedo_color = Color(0.854181, 3.77826e-06, 7.70092e-07, 1)
 metallic = 0.72
 roughness = 0.78
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8lau6"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_icako"]
 albedo_color = Color(0.964706, 0.482353, 0, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6oifr"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dnij0"]
 albedo_color = Color(0.0267215, 0.0267215, 0.0267215, 1)
 metallic = 0.51
 roughness = 0.43
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0hn22"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_57yjm"]
 albedo_color = Color(0.644073, 0.602524, 0.482867, 1)
 metallic = 0.45
 metallic_specular = 1.0
 roughness = 0.33
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bloct"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cnk6y"]
 albedo_color = Color(0.984314, 0, 0, 1)
 metallic = 0.63
 roughness = 0.62
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_q3ra6"]
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_rgasl"]
 points = PackedVector3Array(-1.24969, 0.760595, -2.23672, 1.40211, -0.565117, 1.07735, 1.30995, -0.663225, 1.00148, -0.835124, 0.0980919, 2.40339, 1.23633, 1.50662, -2.15417, -0.586604, -0.896839, -2.73464, -1.41574, -0.730978, 0.580472, 0.821766, -0.813791, -2.65105, -1.24969, 1.50662, -2.3198, 0.739018, 0.263718, 2.40339, 0.7481, -0.789998, 2.33375, -0.700648, -0.813048, 2.38462, 1.31908, -0.813791, -0.579427, -1.33272, 0.0150438, 1.32605, -0.752652, 0.263718, 2.40339, 1.23633, 1.50662, -2.3198, 1.31908, 0.0150438, 1.32605, -0.835124, -0.813791, -2.65105, 0.572971, -0.896839, -2.73464, -1.24969, 1.50662, -2.15365, 1.23633, 0.760595, -2.23672, -0.721042, -0.687077, 2.45714, 1.40211, -0.482304, 0.0825565, 0.821766, 0.180905, 2.40339, -1.41574, -0.399256, 0.414327, -1.15765, -0.807844, -0.158509, 0.987538, -0.316678, -2.48594, 1.40211, -0.316678, 0.663025, -1.34009, -0.675363, 0.936954, 0.655995, -0.896839, -2.65105, -1.2435, -0.738518, -0.468511, 0.228159, -0.596226, 2.42501)
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_q3ra6"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_yak3o"]
 radius = 1.80891
 
-[node name="BugRod" type="VehicleBody3D"]
+[node name="BugRodBot" type="VehicleBody3D"]
 collision_mask = 123
 mass = 200.0
 gravity_scale = 5.0
 center_of_mass_mode = 1
 center_of_mass = Vector3(0, -1, 0)
-script = ExtResource("1_q3ra6")
+script = ExtResource("1_5htpr")
+dificulty = 2
 
 [node name="BugCarBody" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0)
-mesh = ExtResource("1_h54rw")
-surface_material_override/0 = SubResource("StandardMaterial3D_xx7w4")
-surface_material_override/1 = SubResource("StandardMaterial3D_i2rf7")
-surface_material_override/2 = SubResource("StandardMaterial3D_vwscl")
-surface_material_override/3 = SubResource("StandardMaterial3D_ro40e")
-surface_material_override/4 = SubResource("StandardMaterial3D_8lau6")
-surface_material_override/5 = SubResource("StandardMaterial3D_6oifr")
-surface_material_override/6 = SubResource("StandardMaterial3D_0hn22")
-surface_material_override/7 = SubResource("StandardMaterial3D_bloct")
+mesh = ExtResource("2_0pkha")
+surface_material_override/0 = SubResource("StandardMaterial3D_c4f5u")
+surface_material_override/1 = SubResource("StandardMaterial3D_ocx8h")
+surface_material_override/2 = SubResource("StandardMaterial3D_h5chs")
+surface_material_override/3 = SubResource("StandardMaterial3D_hky70")
+surface_material_override/4 = SubResource("StandardMaterial3D_icako")
+surface_material_override/5 = SubResource("StandardMaterial3D_dnij0")
+surface_material_override/6 = SubResource("StandardMaterial3D_57yjm")
+surface_material_override/7 = SubResource("StandardMaterial3D_cnk6y")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0)
-shape = SubResource("ConvexPolygonShape3D_q3ra6")
+shape = SubResource("ConvexPolygonShape3D_rgasl")
 
 [node name="wheel_1" type="VehicleWheel3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.637229, -0.443056, 1.75834)
@@ -87,7 +88,7 @@ damping_relaxation = 10.0
 
 [node name="BugCarFrontWheel" type="MeshInstance3D" parent="wheel_1"]
 transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0)
-mesh = ExtResource("2_q3ra6")
+mesh = ExtResource("3_31ayi")
 skeleton = NodePath("../..")
 
 [node name="wheel_2" type="VehicleWheel3D" parent="."]
@@ -103,7 +104,7 @@ damping_relaxation = 10.0
 
 [node name="BugCarFrontWheel" type="MeshInstance3D" parent="wheel_2"]
 transform = Transform3D(-0.75, 0, -1.13247e-07, 0, 0.75, 0, 1.13247e-07, 0, -0.75, 0, 0, 0)
-mesh = ExtResource("2_q3ra6")
+mesh = ExtResource("3_31ayi")
 skeleton = NodePath("../..")
 
 [node name="wheel_3" type="VehicleWheel3D" parent="."]
@@ -119,7 +120,7 @@ damping_relaxation = 10.0
 
 [node name="BugCarRearWheel" type="MeshInstance3D" parent="wheel_3"]
 transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0)
-mesh = ExtResource("3_tabbm")
+mesh = ExtResource("4_qnlqo")
 skeleton = NodePath("../..")
 
 [node name="wheel_4" type="VehicleWheel3D" parent="."]
@@ -135,7 +136,7 @@ damping_relaxation = 10.0
 
 [node name="BugCarRearWheel" type="MeshInstance3D" parent="wheel_4"]
 transform = Transform3D(-0.75, 0, -1.13247e-07, 0, 0.75, 0, 1.13247e-07, 0, -0.75, 0, 0, 0)
-mesh = ExtResource("3_tabbm")
+mesh = ExtResource("4_qnlqo")
 skeleton = NodePath("../..")
 
 [node name="checkpoint_sensor" type="Area3D" parent="."]
@@ -143,7 +144,15 @@ collision_layer = 0
 collision_mask = 128
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoint_sensor"]
-shape = SubResource("SphereShape3D_q3ra6")
+shape = SubResource("SphereShape3D_yak3o")
 debug_color = Color(0.47455, 0.00208011, 0.733338, 0.133333)
 
+[node name="shock_sensor" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.282398, 1.33794)
+target_position = Vector3(0, 0, 1.165)
+collision_mask = 2
+
+[node name="shock_timer_sensor" type="Timer" parent="."]
+
 [connection signal="area_entered" from="checkpoint_sensor" to="." method="_on_checkpoint_sensor_area_entered"]
+[connection signal="timeout" from="shock_timer_sensor" to="." method="_on_shock_timer_sensor_timeout"]

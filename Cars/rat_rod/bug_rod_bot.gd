@@ -31,7 +31,7 @@ func _physics_process(delta: float) -> void:
 		bot_sistem()
 		if linear_velocity.length() < 10 and shock_sensor.collide_with_bodies: #BOT
 			var distance = shock_sensor.get_collision_point().distance_to(global_position)
-			if distance < 7:
+			if distance < 3:
 				recovery_mode = true
 				shock_timer_sensor.start()
 	
@@ -76,13 +76,6 @@ func start_race():
 	is_on_race = true
 
 
-func _on_shock_timer_sensor_timeout() -> void:
-	recovery_mode = false
-	shock_timer_sensor.stop()
-	print(name, " uso el recovery")
-	path_follow[path_to_follow].progress -= min_distance_to_point
-
-
 func _on_checkpoint_sensor_area_entered(area: Area3D) -> void:
 	if not checkpoint_store.has(area.name):
 		checkpoint_store.append(area.name)
@@ -99,3 +92,11 @@ func _on_checkpoint_sensor_area_entered(area: Area3D) -> void:
 			steering = 0
 			brake = 20
 		
+
+
+
+func _on_shock_timer_sensor_timeout() -> void:
+	recovery_mode = false
+	shock_timer_sensor.stop()
+	print(name, " uso el recovery")
+	path_follow[path_to_follow].progress -= min_distance_to_point

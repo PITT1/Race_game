@@ -33,6 +33,7 @@ gravity_scale = 5.0
 center_of_mass_mode = 1
 center_of_mass = Vector3(0, -1, 0)
 script = ExtResource("1_ethln")
+dificulty = 2
 
 [node name="HotRod3Body" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.435, 0, 0, 0, 0.435, 0, 0, 0, 0.435, 0, 0, 0)

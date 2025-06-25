@@ -116,10 +116,3 @@ collision_mask = 128
 [node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoint_sensor"]
 shape = SubResource("SphereShape3D_qjy37")
 debug_color = Color(0.47455, 0.00208011, 0.733338, 0.133333)
-
-[node name="shock_sensor" type="RayCast3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.282398, 1.45364)
-target_position = Vector3(0, 0, 1.165)
-collision_mask = 2
-
-[node name="shock_timer_sensor" type="Timer" parent="."]

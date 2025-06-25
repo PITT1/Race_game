@@ -3,6 +3,7 @@ extends VehicleBody3D
 @export var MAX_STEER = 0.7
 @export var ENGINE_POWER = 1500
 var is_on_race = false
+var path_to_follow = 0
 
 @export var is_player: bool = true
 

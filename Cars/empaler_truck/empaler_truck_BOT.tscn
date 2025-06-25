@@ -159,12 +159,12 @@ transform = Transform3D(-0.9, 0, -7.86805e-08, 0, 0.9, 0, 7.86805e-08, 0, -0.9, 
 mesh = ExtResource("3_5ay7i")
 skeleton = NodePath("../..")
 
-[node name="checkpoint_sensor2" type="Area3D" parent="."]
+[node name="checkpoint_sensor" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.115698)
 collision_layer = 0
 collision_mask = 128
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoint_sensor2"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoint_sensor"]
 shape = SubResource("SphereShape3D_jobtp")
 debug_color = Color(0.47455, 0.00208011, 0.733338, 0.133333)
 
@@ -175,5 +175,5 @@ collision_mask = 2
 
 [node name="shock_timer_sensor" type="Timer" parent="."]
 
-[connection signal="area_entered" from="checkpoint_sensor2" to="." method="_on_checkpoint_sensor_2_area_entered"]
+[connection signal="area_entered" from="checkpoint_sensor" to="." method="_on_checkpoint_sensor_area_entered"]
 [connection signal="timeout" from="shock_timer_sensor" to="." method="_on_shock_timer_sensor_timeout"]
