@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://66qkphbmpmyh"]
 
 [ext_resource type="ArrayMesh" uid="uid://eom2mvj0wxbr" path="res://Cars/raven_356/hot_rod_356_body.obj" id="1_bvi6s"]
-[ext_resource type="Script" uid="uid://d4dxvesc62qav" path="res://Cars/raven_356/raven_356_bot.gd" id="1_mhhqx"]
+[ext_resource type="Script" uid="uid://bub163oegeem3" path="res://BOT_sistem/BOTS_for_race.gd" id="1_mhhqx"]
 [ext_resource type="ArrayMesh" uid="uid://cxiyy3dp202by" path="res://Cars/raven_356/hot_rod_356_wheel.obj" id="2_mhhqx"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7lsj3"]

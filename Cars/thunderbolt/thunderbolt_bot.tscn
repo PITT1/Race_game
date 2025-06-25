@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://cnkh1n6ut1tdy"]
 
-[ext_resource type="Script" uid="uid://vdjpugw768l3" path="res://Cars/thunderbolt/thunderbolt_bot.gd" id="1_ethln"]
+[ext_resource type="Script" uid="uid://bub163oegeem3" path="res://BOT_sistem/BOTS_for_race.gd" id="1_p433n"]
 [ext_resource type="ArrayMesh" uid="uid://b5k6e6cnxe8me" path="res://Cars/thunderbolt/hot_rod3_body.obj" id="1_udoe6"]
 [ext_resource type="ArrayMesh" uid="uid://d4kiuvteuggex" path="res://Cars/blade_rod/hot_rod2_front_wheel.obj" id="2_ethln"]
 [ext_resource type="ArrayMesh" uid="uid://uc3xmpbgj2rc" path="res://Cars/blade_rod/hot_rod2_rear_wheel.obj" id="3_7wn8a"]
@@ -32,8 +32,7 @@ mass = 200.0
 gravity_scale = 5.0
 center_of_mass_mode = 1
 center_of_mass = Vector3(0, -1, 0)
-script = ExtResource("1_ethln")
-dificulty = 2
+script = ExtResource("1_p433n")
 
 [node name="HotRod3Body" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.435, 0, 0, 0, 0.435, 0, 0, 0, 0.435, 0, 0, 0)

@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://igehpjs23h35"]
 
-[ext_resource type="Script" uid="uid://ch28q5l6riw2l" path="res://Cars/blade_rod/blade_rod_bot.gd" id="1_svmar"]
+[ext_resource type="Script" uid="uid://bub163oegeem3" path="res://BOT_sistem/BOTS_for_race.gd" id="1_svmar"]
 [ext_resource type="ArrayMesh" uid="uid://dkk515yxuttsv" path="res://Cars/blade_rod/hot_rod2_body.obj" id="1_yq0n0"]
 [ext_resource type="ArrayMesh" uid="uid://d4kiuvteuggex" path="res://Cars/blade_rod/hot_rod2_front_wheel.obj" id="2_svmar"]
 [ext_resource type="ArrayMesh" uid="uid://uc3xmpbgj2rc" path="res://Cars/blade_rod/hot_rod2_rear_wheel.obj" id="3_uijpc"]
@@ -33,7 +33,6 @@ gravity_scale = 5.0
 center_of_mass_mode = 1
 center_of_mass = Vector3(0, -1, 0)
 script = ExtResource("1_svmar")
-dificulty = 2
 
 [node name="HotRod2Body" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.57, 0, 0, 0, 0.57, 0, 0, 0, 0.57, 0, 0, 0)

@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://dhrhbkegc35qf"]
 
-[ext_resource type="Script" uid="uid://der858po2aaoe" path="res://Cars/sentinel_gt/sentinel_gt_bot.gd" id="1_du4xg"]
+[ext_resource type="Script" uid="uid://bub163oegeem3" path="res://BOT_sistem/BOTS_for_race.gd" id="1_du4xg"]
 [ext_resource type="ArrayMesh" uid="uid://ccuo25onnns44" path="res://Cars/sentinel_gt/corvette_body.obj" id="2_vvk1t"]
 [ext_resource type="ArrayMesh" uid="uid://vws8cc1dskg" path="res://Cars/rat_rod/bug_car_front_wheel.obj" id="3_4v76p"]
 [ext_resource type="ArrayMesh" uid="uid://c3ua5r7rpu2kl" path="res://Cars/sentinel_gt/corvette_wheel.obj" id="4_xk2tc"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://dlv8tdpda3s4s"]
 
-[ext_resource type="Script" uid="uid://bc6x562bpc1af" path="res://Cars/racing_rod/racing_rod_bot.gd" id="1_r5523"]
+[ext_resource type="Script" uid="uid://bub163oegeem3" path="res://BOT_sistem/BOTS_for_race.gd" id="1_r5523"]
 [ext_resource type="ArrayMesh" uid="uid://dkn7sb6jgfydc" path="res://Cars/racing_rod/hot_rod_racing_body.obj" id="1_wmy8t"]
 [ext_resource type="Script" uid="uid://btgjj3k8ktdgo" path="res://Cars/racing_rod/hot_rod_racing_body.gd" id="2_r5523"]
 [ext_resource type="ArrayMesh" uid="uid://dmgdyspa701" path="res://Cars/empaler_truck/empaler_truck_front_wheel.obj" id="3_puosc"]
