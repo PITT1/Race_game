@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=3 uid="uid://bhehqj2450xtc"]
+[gd_scene load_steps=63 format=3 uid="uid://bhehqj2450xtc"]
 
 [ext_resource type="Script" uid="uid://bbkomqcnkihxo" path="res://huds/car_selection/car_selection.gd" id="1_u64g1"]
 [ext_resource type="Texture2D" uid="uid://bm552631w02kq" path="res://Maps/test_map/textures/Asphalt025C_1K-JPG_Color.jpg" id="1_wibte"]
@@ -16,6 +16,7 @@
 [ext_resource type="ArrayMesh" uid="uid://bk8ypp3oyer21" path="res://Cars/racing_rod/hot_rod_racing.obj" id="11_gw526"]
 [ext_resource type="ArrayMesh" uid="uid://lteoryqgltte" path="res://Cars/blade_rod/hot_rod2.obj" id="12_8jbfh"]
 [ext_resource type="ArrayMesh" uid="uid://2tybfvfdfkj3" path="res://Cars/thunderbolt/hot_rod3.obj" id="13_6lp0e"]
+[ext_resource type="ArrayMesh" uid="uid://bb1tugpk4ot2k" path="res://Cars/pinkinator/monster_pink_all_model.obj" id="14_hg4ax"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_gw526"]
 sky_top_color = Color(0.461087, 0.641883, 0.858997, 1)
@@ -324,6 +325,18 @@ tracks/7/keys = {
 "update": 0,
 "values": [Vector3(0, 0, 0)]
 }
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("vehicles/pinkinator:rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_wibte"]
 resource_name = "rotate"
@@ -348,7 +361,7 @@ tracks/1/path = NodePath("vehicles/hotrod1:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 10),
+"times": PackedFloat32Array(0, 8),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector3(0, 0, 0), Vector3(0, 6.28319, 0)]
@@ -425,6 +438,18 @@ tracks/7/keys = {
 "update": 0,
 "values": [Vector3(0, 0, 0), Vector3(0, 6.28319, 0)]
 }
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("vehicles/pinkinator:rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 6.28319, 0)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_h8baf"]
 _data = {
@@ -488,7 +513,7 @@ mesh = SubResource("CylinderMesh_hwucu")
 skeleton = NodePath("../../..")
 
 [node name="Hot-rod-body" type="MeshInstance3D" parent="vehicles/hotrod1"]
-transform = Transform3D(-0.73583, 0, -0.0784489, 0, 0.74, 0, 0.0784489, 0, -0.73583, 0, 0.689717, 0)
+transform = Transform3D(0.74, 0, 0, 0, 0.74, 0, 0, 0, 0.74, 0, 0.689717, 0)
 mesh = ExtResource("6_c3i15")
 surface_material_override/0 = SubResource("StandardMaterial3D_c3i15")
 surface_material_override/1 = SubResource("StandardMaterial3D_6rdnw")
@@ -618,6 +643,19 @@ skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_d02y5")
 surface_material_override/2 = SubResource("StandardMaterial3D_psw2t")
 surface_material_override/4 = SubResource("StandardMaterial3D_841ai")
+
+[node name="pinkinator" type="Node3D" parent="vehicles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 114.087, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="vehicles/pinkinator"]
+material_override = SubResource("StandardMaterial3D_hg4ax")
+mesh = SubResource("CylinderMesh_hwucu")
+skeleton = NodePath("../../..")
+
+[node name="MonsterPinkAllModel" type="MeshInstance3D" parent="vehicles/pinkinator"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.877396, 0)
+mesh = ExtResource("14_hg4ax")
+skeleton = NodePath("../..")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.944298, 0.329091, 0, -0.329091, 0.944298, 0, 1.455, 4.175)

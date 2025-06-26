@@ -17,8 +17,9 @@ func _ready() -> void:
 	car_list.append($vehicles/racing_rod)
 	car_list.append($vehicles/blade_rod)
 	car_list.append($vehicles/thunderbolt)
-
-
+	car_list.append($vehicles/pinkinator)
+	
+	
 func _on_left_button_up() -> void:
 	selector -= 1
 	pCam.follow_target = car_list[selector]
