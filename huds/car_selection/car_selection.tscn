@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=3 uid="uid://bhehqj2450xtc"]
+[gd_scene load_steps=64 format=3 uid="uid://bhehqj2450xtc"]
 
 [ext_resource type="Script" uid="uid://bbkomqcnkihxo" path="res://huds/car_selection/car_selection.gd" id="1_u64g1"]
 [ext_resource type="Texture2D" uid="uid://bm552631w02kq" path="res://Maps/test_map/textures/Asphalt025C_1K-JPG_Color.jpg" id="1_wibte"]
@@ -17,6 +17,7 @@
 [ext_resource type="ArrayMesh" uid="uid://lteoryqgltte" path="res://Cars/blade_rod/hot_rod2.obj" id="12_8jbfh"]
 [ext_resource type="ArrayMesh" uid="uid://2tybfvfdfkj3" path="res://Cars/thunderbolt/hot_rod3.obj" id="13_6lp0e"]
 [ext_resource type="ArrayMesh" uid="uid://bb1tugpk4ot2k" path="res://Cars/pinkinator/monster_pink_all_model.obj" id="14_hg4ax"]
+[ext_resource type="ArrayMesh" uid="uid://cyxlf381qqk30" path="res://Cars/f1_70s/f1-70s_all_model.obj" id="15_7suyo"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_gw526"]
 sky_top_color = Color(0.461087, 0.641883, 0.858997, 1)
@@ -337,6 +338,18 @@ tracks/8/keys = {
 "update": 0,
 "values": [Vector3(0, 0, 0)]
 }
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("vehicles/f1_70s:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_wibte"]
 resource_name = "rotate"
@@ -445,6 +458,18 @@ tracks/8/path = NodePath("vehicles/pinkinator:rotation")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 6.28319, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("vehicles/f1_70s:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
 "times": PackedFloat32Array(0, 10),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
@@ -656,6 +681,19 @@ skeleton = NodePath("../../..")
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.877396, 0)
 mesh = ExtResource("14_hg4ax")
 skeleton = NodePath("../..")
+
+[node name="f1_70s" type="Node3D" parent="vehicles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 127.917, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="vehicles/f1_70s"]
+material_override = SubResource("StandardMaterial3D_hg4ax")
+mesh = SubResource("CylinderMesh_hwucu")
+skeleton = NodePath("../../..")
+
+[node name="F1-70sAllModel" type="MeshInstance3D" parent="vehicles/f1_70s"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0.548546, 0)
+mesh = ExtResource("15_7suyo")
+skeleton = NodePath("../../..")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.944298, 0.329091, 0, -0.329091, 0.944298, 0, 1.455, 4.175)

@@ -11,7 +11,8 @@ var car_list = {
 	racing_rod = "res://Cars/racing_rod/racing_rod.tscn",
 	blade_rod = "res://Cars/blade_rod/blade_rod.tscn",
 	thunderbolt = "res://Cars/thunderbolt/thunderbolt.tscn",
-	pinkinator = "res://Cars/pinkinator/pinkinator.tscn"
+	pinkinator = "res://Cars/pinkinator/pinkinator.tscn",
+	f1_70s = "res://Cars/f1_70s/f1_70s.tscn"
 }
 
 var bot_list = {

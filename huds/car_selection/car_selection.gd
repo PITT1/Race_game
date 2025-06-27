@@ -18,6 +18,7 @@ func _ready() -> void:
 	car_list.append($vehicles/blade_rod)
 	car_list.append($vehicles/thunderbolt)
 	car_list.append($vehicles/pinkinator)
+	car_list.append($vehicles/f1_70s)
 	
 	
 func _on_left_button_up() -> void:

@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://c2bqla2b0wqcg"]
 
-[ext_resource type="Script" uid="uid://byu2ygdvbwa7r" path="res://Cars/thunderbolt/thunderbolt.gd" id="1_xfy0n"]
+[ext_resource type="Script" uid="uid://dn8cru75adetk" path="res://Cars/rat_rod/bug_rod.gd" id="1_xfy0n"]
 [ext_resource type="ArrayMesh" uid="uid://b5k6e6cnxe8me" path="res://Cars/thunderbolt/hot_rod3_body.obj" id="2_j0rnq"]
 [ext_resource type="ArrayMesh" uid="uid://d4kiuvteuggex" path="res://Cars/blade_rod/hot_rod2_front_wheel.obj" id="3_fgdmu"]
 [ext_resource type="ArrayMesh" uid="uid://uc3xmpbgj2rc" path="res://Cars/blade_rod/hot_rod2_rear_wheel.obj" id="4_uivqt"]
@@ -116,9 +116,4 @@ collision_mask = 128
 shape = SubResource("SphereShape3D_xfy0n")
 debug_color = Color(0.47455, 0.00208011, 0.733338, 0.133333)
 
-[node name="shock_sensor" type="RayCast3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0198343, 1.96184)
-target_position = Vector3(0, 0, 1.165)
-collision_mask = 2
-
-[node name="shock_timer_sensor" type="Timer" parent="."]
+[connection signal="area_entered" from="checkpoint_sensor" to="." method="_on_checkpoint_sensor_area_entered"]
