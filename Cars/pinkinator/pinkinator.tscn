@@ -1,42 +1,38 @@
 [gd_scene load_steps=7 format=3 uid="uid://eo506uxokoxq"]
 
 [ext_resource type="Script" uid="uid://dn8cru75adetk" path="res://Cars/rat_rod/bug_rod.gd" id="1_oqayv"]
+[ext_resource type="PhysicsMaterial" uid="uid://dioc2dlho64fc" path="res://car_physic_material/car_physic.tres" id="1_srb5a"]
 [ext_resource type="ArrayMesh" uid="uid://2w052jjpuubr" path="res://Cars/pinkinator/monster_pink_body.obj" id="1_y6k44"]
-[ext_resource type="ArrayMesh" uid="uid://c40jkc0fd2p2d" path="res://Cars/pinkinator/monster_pink_wheel.obj" id="3_srb5a"]
+[ext_resource type="ArrayMesh" uid="uid://c40jkc0fd2p2d" path="res://Cars/pinkinator/monster_pink_wheel.obj" id="4_srb5a"]
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_oqayv"]
-friction = 0.2
-bounce = 1.0
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_q3ra6"]
+points = PackedVector3Array(-1.24969, 0.760595, -2.23672, 1.40211, -0.565117, 1.07735, 1.30995, -0.663225, 1.00148, -0.835124, 0.0980919, 2.40339, 1.23633, 1.50662, -2.15417, -0.586604, -0.896839, -2.73464, -1.41574, -0.730978, 0.580472, 0.821766, -0.813791, -2.65105, -1.24969, 1.50662, -2.3198, 0.739018, 0.263718, 2.40339, 0.7481, -0.789998, 2.33375, -0.700648, -0.813048, 2.38462, 1.31908, -0.813791, -0.579427, -1.33272, 0.0150438, 1.32605, -0.752652, 0.263718, 2.40339, 1.23633, 1.50662, -2.3198, 1.31908, 0.0150438, 1.32605, -0.835124, -0.813791, -2.65105, 0.572971, -0.896839, -2.73464, -1.24969, 1.50662, -2.15365, 1.23633, 0.760595, -2.23672, -0.721042, -0.687077, 2.45714, 1.40211, -0.482304, 0.0825565, 0.821766, 0.180905, 2.40339, -1.41574, -0.399256, 0.414327, -1.15765, -0.807844, -0.158509, 0.987538, -0.316678, -2.48594, 1.40211, -0.316678, 0.663025, -1.34009, -0.675363, 0.936954, 0.655995, -0.896839, -2.65105, -1.2435, -0.738518, -0.468511, 0.228159, -0.596226, 2.42501)
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_2chyx"]
-points = PackedVector3Array(2.83024, -0.81506, 5.74622, 2.37458, -0.359889, 6.20112, -2.86052, -1.49799, 5.28989, 1.91947, -1.72576, -7.45455, 1.49795, 1.70952, -2.06368, -1.94975, 1.00491, 5.51948, -0.81171, 1.68785, -7.45455, -2.86052, -1.49799, -7.45455, 2.60185, 0.549741, -5.6335, 2.83024, -1.49799, 5.51948, 1.91947, 1.00491, 5.51948, -2.40485, 0.549741, -5.86024, 2.83024, -1.49799, -7.45455, -1.31045, 1.68894, 0.1416, -2.63213, 0.549741, 4.38008, 0.781434, 1.68785, -7.45455, -1.94975, -1.49799, 6.20112, -1.94975, -1.72576, -6.99822, 2.60185, 0.549741, 4.38008, -2.86052, -0.81506, -7.22638, -0.552005, 0.0949262, -7.72938, -2.40485, -0.359889, 6.20112, -1.49706, 1.67626, -2.03875, 1.91947, -1.49799, 6.20112, 1.28461, 1.69439, 0.145004, 2.83024, -0.81506, -7.22638, -2.86052, -0.587652, 5.28989, -1.72136, 1.23268, -6.77148, 1.69109, 1.23268, -6.77148, 1.00815, 1.00491, -7.68128, -1.03843, 1.00491, -7.68128, 2.83024, -0.587652, 5.28989)
+[sub_resource type="SphereShape3D" id="SphereShape3D_q3ra6"]
+radius = 2.354
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_m5i0a"]
-radius = 1.80891
-
-[node name="Pinkinator" type="VehicleBody3D"]
-collision_mask = 507
+[node name="pinkinator" type="VehicleBody3D"]
+collision_mask = 123
 mass = 200.0
-physics_material_override = SubResource("PhysicsMaterial_oqayv")
+physics_material_override = ExtResource("1_srb5a")
 gravity_scale = 5.0
 center_of_mass_mode = 1
 center_of_mass = Vector3(0, -1, 0)
 script = ExtResource("1_oqayv")
 
 [node name="MonsterPinkBody" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+transform = Transform3D(0.38, 0, 0, 0, 0.38, 0, 0, 0, 0.38, 0, 0, 0.652663)
 mesh = ExtResource("1_y6k44")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
-shape = SubResource("ConvexPolygonShape3D_2chyx")
+transform = Transform3D(0.75, 0, 0, 0, 0.69, 0, 0, 0, 1, 0, 0, 0.437663)
+shape = SubResource("ConvexPolygonShape3D_q3ra6")
 
 [node name="wheel_1" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.637229, -0.443056, 1.0322)
-use_as_traction = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.728332, -0.443, 1.92566)
 use_as_steering = true
 wheel_roll_influence = 1.5
-wheel_radius = 0.385
+wheel_radius = 0.57
 wheel_friction_slip = 10.0
 suspension_stiffness = 100.0
 suspension_max_force = 100000.0
@@ -44,15 +40,15 @@ damping_compression = 10.0
 damping_relaxation = 10.0
 
 [node name="MonsterPinkWheel" type="MeshInstance3D" parent="wheel_1"]
-transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
-mesh = ExtResource("3_srb5a")
+transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, 0, 0, 0)
+mesh = ExtResource("4_srb5a")
+skeleton = NodePath("../..")
 
 [node name="wheel_2" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.637157, -0.441073, 1.03215)
-use_as_traction = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.728, -0.443, 1.926)
 use_as_steering = true
 wheel_roll_influence = 1.5
-wheel_radius = 0.385
+wheel_radius = 0.57
 wheel_friction_slip = 10.0
 suspension_stiffness = 100.0
 suspension_max_force = 100000.0
@@ -60,14 +56,15 @@ damping_compression = 10.0
 damping_relaxation = 10.0
 
 [node name="MonsterPinkWheel" type="MeshInstance3D" parent="wheel_2"]
-transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
-mesh = ExtResource("3_srb5a")
+transform = Transform3D(-0.45, 0, -3.93403e-08, 0, 0.45, 0, 3.93403e-08, 0, -0.45, 0, 0, 0)
+mesh = ExtResource("4_srb5a")
+skeleton = NodePath("../..")
 
 [node name="wheel_3" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.633013, -0.458883, -1.56856)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.728, -0.459, -1.331)
 use_as_traction = true
 wheel_roll_influence = 1.5
-wheel_radius = 0.385
+wheel_radius = 0.57
 wheel_friction_slip = 10.0
 suspension_stiffness = 100.0
 suspension_max_force = 100000.0
@@ -75,14 +72,15 @@ damping_compression = 10.0
 damping_relaxation = 10.0
 
 [node name="MonsterPinkWheel" type="MeshInstance3D" parent="wheel_3"]
-transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
-mesh = ExtResource("3_srb5a")
+transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, 0, 0, 0)
+mesh = ExtResource("4_srb5a")
+skeleton = NodePath("../..")
 
 [node name="wheel_4" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.633347, -0.459001, -1.5681)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.728, -0.459, -1.331)
 use_as_traction = true
 wheel_roll_influence = 1.5
-wheel_radius = 0.385
+wheel_radius = 0.57
 wheel_friction_slip = 10.0
 suspension_stiffness = 100.0
 suspension_max_force = 100000.0
@@ -90,13 +88,17 @@ damping_compression = 10.0
 damping_relaxation = 10.0
 
 [node name="MonsterPinkWheel" type="MeshInstance3D" parent="wheel_4"]
-transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
-mesh = ExtResource("3_srb5a")
+transform = Transform3D(-0.45, 0, -3.93403e-08, 0, 0.45, 0, 3.93403e-08, 0, -0.45, 0, 0, 0)
+mesh = ExtResource("4_srb5a")
+skeleton = NodePath("../..")
 
 [node name="checkpoint_sensor" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.652663)
 collision_layer = 0
 collision_mask = 128
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoint_sensor"]
-shape = SubResource("SphereShape3D_m5i0a")
-debug_color = Color(0.870588, 0.752941, 1, 0.792157)
+shape = SubResource("SphereShape3D_q3ra6")
+debug_color = Color(0.941176, 0.890196, 1, 0.615686)
+
+[connection signal="area_entered" from="checkpoint_sensor" to="." method="_on_checkpoint_sensor_area_entered"]

@@ -1,7 +1,8 @@
-[gd_scene load_steps=15 format=3 uid="uid://b6m4yvkxlcpuo"]
+[gd_scene load_steps=16 format=3 uid="uid://b6m4yvkxlcpuo"]
 
 [ext_resource type="ArrayMesh" uid="uid://rgbpy0gs4uf7" path="res://Cars/rat_rod/bug_car_body.obj" id="1_h54rw"]
 [ext_resource type="Script" uid="uid://dn8cru75adetk" path="res://Cars/rat_rod/bug_rod.gd" id="1_q3ra6"]
+[ext_resource type="PhysicsMaterial" uid="uid://dioc2dlho64fc" path="res://car_physic_material/car_physic.tres" id="1_tabbm"]
 [ext_resource type="ArrayMesh" uid="uid://vws8cc1dskg" path="res://Cars/rat_rod/bug_car_front_wheel.obj" id="2_q3ra6"]
 [ext_resource type="ArrayMesh" uid="uid://dpr5hvsc86g8i" path="res://Cars/rat_rod/bug_car_rear_wheel.obj" id="3_tabbm"]
 
@@ -53,6 +54,7 @@ radius = 1.80891
 [node name="BugRod" type="VehicleBody3D"]
 collision_mask = 123
 mass = 200.0
+physics_material_override = ExtResource("1_tabbm")
 gravity_scale = 5.0
 center_of_mass_mode = 1
 center_of_mass = Vector3(0, -1, 0)
