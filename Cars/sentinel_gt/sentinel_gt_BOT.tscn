@@ -1,6 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://dhrhbkegc35qf"]
+[gd_scene load_steps=13 format=3 uid="uid://dhrhbkegc35qf"]
 
 [ext_resource type="Script" uid="uid://bub163oegeem3" path="res://BOT_sistem/BOTS_for_race.gd" id="1_du4xg"]
+[ext_resource type="PhysicsMaterial" uid="uid://dioc2dlho64fc" path="res://car_physic_material/car_physic.tres" id="1_vvk1t"]
 [ext_resource type="ArrayMesh" uid="uid://ccuo25onnns44" path="res://Cars/sentinel_gt/corvette_body.obj" id="2_vvk1t"]
 [ext_resource type="ArrayMesh" uid="uid://vws8cc1dskg" path="res://Cars/rat_rod/bug_car_front_wheel.obj" id="3_4v76p"]
 [ext_resource type="ArrayMesh" uid="uid://c3ua5r7rpu2kl" path="res://Cars/sentinel_gt/corvette_wheel.obj" id="4_xk2tc"]
@@ -39,6 +40,7 @@ radius = 1.80891
 [node name="SentinelGtBot" type="VehicleBody3D"]
 collision_mask = 507
 mass = 200.0
+physics_material_override = ExtResource("1_vvk1t")
 gravity_scale = 5.0
 center_of_mass_mode = 1
 center_of_mass = Vector3(0, -1, 0)

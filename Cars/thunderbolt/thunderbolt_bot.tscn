@@ -1,5 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://cnkh1n6ut1tdy"]
+[gd_scene load_steps=11 format=3 uid="uid://cnkh1n6ut1tdy"]
 
+[ext_resource type="PhysicsMaterial" uid="uid://dioc2dlho64fc" path="res://car_physic_material/car_physic.tres" id="1_l18o8"]
 [ext_resource type="Script" uid="uid://bub163oegeem3" path="res://BOT_sistem/BOTS_for_race.gd" id="1_p433n"]
 [ext_resource type="ArrayMesh" uid="uid://b5k6e6cnxe8me" path="res://Cars/thunderbolt/hot_rod3_body.obj" id="1_udoe6"]
 [ext_resource type="ArrayMesh" uid="uid://d4kiuvteuggex" path="res://Cars/blade_rod/hot_rod2_front_wheel.obj" id="2_ethln"]
@@ -29,6 +30,7 @@ radius = 1.80891
 [node name="ThunderboltBot" type="VehicleBody3D"]
 collision_mask = 507
 mass = 200.0
+physics_material_override = ExtResource("1_l18o8")
 gravity_scale = 5.0
 center_of_mass_mode = 1
 center_of_mass = Vector3(0, -1, 0)

@@ -4,6 +4,8 @@ extends VehicleBody3D
 @export var ENGINE_POWER = 1500
 var is_on_race = false
 var dificulty: int = 0
+var min_distance_to_point: int = 0
+var poitn_desviation: int = 0
 
 
 @export var is_player: bool = true

@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://de8rfk3kauv7p"]
+[gd_scene load_steps=11 format=3 uid="uid://de8rfk3kauv7p"]
 
 [ext_resource type="ArrayMesh" uid="uid://djruo35vxgual" path="res://Cars/hot_rod_1/hot-rod-body.obj" id="1_eyabc"]
 [ext_resource type="Script" uid="uid://dn8cru75adetk" path="res://player_controller/player_controller.gd" id="1_qjy37"]
+[ext_resource type="PhysicsMaterial" uid="uid://dioc2dlho64fc" path="res://car_physic_material/car_physic.tres" id="1_sattu"]
 [ext_resource type="ArrayMesh" uid="uid://cs400ksphy3ue" path="res://Cars/hot_rod_1/wheel.obj" id="2_qjy37"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qjy37"]
@@ -33,6 +34,7 @@ radius = 1.80891
 [node name="Hot-rod-1" type="VehicleBody3D"]
 collision_mask = 27
 mass = 200.0
+physics_material_override = ExtResource("1_sattu")
 gravity_scale = 5.0
 center_of_mass_mode = 1
 center_of_mass = Vector3(0, -1, 0)

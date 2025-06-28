@@ -8,6 +8,8 @@ var num_checkpoints
 @export var countdown: PackedScene
 @export var laps_num_to_finish = 5
 @export var vehicle_num: int = 8
+@export var min_distance_to_point_BOT: int = 30
+@export var poitn_desviation_BOT: int = 5
 @export var BOTS_dificulty: int = 2 # 1=facil, 2=normal, 3=dificil
 @onready var car_spawners: Array = [$spawners/spawn_point_0, $spawners/spawn_point_1, $spawners/spawn_point_2, $spawners/spawn_point_3, $spawners/spawn_point_4, $spawners/spawn_point_5, $spawners/spawn_point_6, $spawners/spawn_point_7]
 @onready var checkpoints_sistem: Node3D = $checkpoints_sistem
@@ -57,3 +59,5 @@ func put_cars():
 		car_instantia.set_rotation(car_spawners[i].get_rotation())
 		car_instantia.path_to_follow = i
 		car_instantia.dificulty = BOTS_dificulty
+		car_instantia.min_distance_to_point = min_distance_to_point_BOT
+		car_instantia.poitn_desviation = poitn_desviation_BOT

@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://davupqses8n0i"]
+[gd_scene load_steps=11 format=3 uid="uid://davupqses8n0i"]
 
 [ext_resource type="ArrayMesh" uid="uid://dkn7sb6jgfydc" path="res://Cars/racing_rod/hot_rod_racing_body.obj" id="1_6427m"]
 [ext_resource type="Script" uid="uid://dn8cru75adetk" path="res://player_controller/player_controller.gd" id="1_ihxdo"]
+[ext_resource type="PhysicsMaterial" uid="uid://dioc2dlho64fc" path="res://car_physic_material/car_physic.tres" id="1_p3wy4"]
 [ext_resource type="ArrayMesh" uid="uid://dmgdyspa701" path="res://Cars/empaler_truck/empaler_truck_front_wheel.obj" id="2_ihxdo"]
 [ext_resource type="ArrayMesh" uid="uid://dpr5hvsc86g8i" path="res://Cars/rat_rod/bug_car_rear_wheel.obj" id="3_p3wy4"]
 
@@ -27,8 +28,9 @@ points = PackedVector3Array(1.64579, -0.998407, 0.230856, 0.713589, 0.0881181, 2
 radius = 1.80891
 
 [node name="RacingRod" type="VehicleBody3D"]
-collision_mask = 511
+collision_mask = 507
 mass = 180.0
+physics_material_override = ExtResource("1_p3wy4")
 gravity_scale = 5.0
 center_of_mass_mode = 1
 center_of_mass = Vector3(0, -1, 0)

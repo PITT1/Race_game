@@ -1,5 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://baw62ja85e8o0"]
+[gd_scene load_steps=11 format=3 uid="uid://baw62ja85e8o0"]
 
+[ext_resource type="PhysicsMaterial" uid="uid://dioc2dlho64fc" path="res://car_physic_material/car_physic.tres" id="1_nvvph"]
 [ext_resource type="ArrayMesh" uid="uid://dkk515yxuttsv" path="res://Cars/blade_rod/hot_rod2_body.obj" id="1_tmcrc"]
 [ext_resource type="Script" uid="uid://dn8cru75adetk" path="res://player_controller/player_controller.gd" id="1_yva7t"]
 [ext_resource type="ArrayMesh" uid="uid://d4kiuvteuggex" path="res://Cars/blade_rod/hot_rod2_front_wheel.obj" id="2_yva7t"]
@@ -29,6 +30,7 @@ radius = 1.80891
 [node name="BladeRod" type="VehicleBody3D"]
 collision_mask = 511
 mass = 200.0
+physics_material_override = ExtResource("1_nvvph")
 gravity_scale = 5.0
 center_of_mass_mode = 1
 center_of_mass = Vector3(0, -1, 0)

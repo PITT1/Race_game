@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://j7nvrqv5y858"]
+[gd_scene load_steps=11 format=3 uid="uid://j7nvrqv5y858"]
 
 [ext_resource type="ArrayMesh" uid="uid://eom2mvj0wxbr" path="res://Cars/raven_356/hot_rod_356_body.obj" id="1_8xo24"]
 [ext_resource type="Script" uid="uid://dn8cru75adetk" path="res://player_controller/player_controller.gd" id="1_dek74"]
+[ext_resource type="PhysicsMaterial" uid="uid://dioc2dlho64fc" path="res://car_physic_material/car_physic.tres" id="1_iw3u8"]
 [ext_resource type="ArrayMesh" uid="uid://cxiyy3dp202by" path="res://Cars/raven_356/hot_rod_356_wheel.obj" id="2_pypix"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r426c"]
@@ -33,6 +34,7 @@ radius = 1.80891
 [node name="Raven356" type="VehicleBody3D"]
 collision_mask = 511
 mass = 120.0
+physics_material_override = ExtResource("1_iw3u8")
 gravity_scale = 5.0
 center_of_mass_mode = 1
 center_of_mass = Vector3(0, -1, 0)

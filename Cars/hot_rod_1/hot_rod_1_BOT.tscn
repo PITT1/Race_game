@@ -1,5 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://caiwrddld4olp"]
+[gd_scene load_steps=11 format=3 uid="uid://caiwrddld4olp"]
 
+[ext_resource type="PhysicsMaterial" uid="uid://dioc2dlho64fc" path="res://car_physic_material/car_physic.tres" id="1_qdks1"]
 [ext_resource type="Script" uid="uid://bub163oegeem3" path="res://BOT_sistem/BOTS_for_race.gd" id="1_u3bej"]
 [ext_resource type="ArrayMesh" uid="uid://djruo35vxgual" path="res://Cars/hot_rod_1/hot-rod-body.obj" id="2_qdks1"]
 [ext_resource type="ArrayMesh" uid="uid://cs400ksphy3ue" path="res://Cars/hot_rod_1/wheel.obj" id="3_wrbpk"]
@@ -33,6 +34,7 @@ radius = 1.80891
 [node name="HotRod1Bot" type="VehicleBody3D"]
 collision_mask = 251
 mass = 200.0
+physics_material_override = ExtResource("1_qdks1")
 gravity_scale = 5.0
 center_of_mass_mode = 1
 center_of_mass = Vector3(0, -1, 0)

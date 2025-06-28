@@ -1,5 +1,6 @@
-[gd_scene load_steps=13 format=3 uid="uid://bxte01efysfbb"]
+[gd_scene load_steps=14 format=3 uid="uid://bxte01efysfbb"]
 
+[ext_resource type="PhysicsMaterial" uid="uid://dioc2dlho64fc" path="res://car_physic_material/car_physic.tres" id="1_5ay7i"]
 [ext_resource type="Script" uid="uid://bub163oegeem3" path="res://BOT_sistem/BOTS_for_race.gd" id="1_f8fad"]
 [ext_resource type="ArrayMesh" uid="uid://baaqqufa1faxf" path="res://Cars/empaler_truck/empaler_truck_body.obj" id="1_vjgtb"]
 [ext_resource type="ArrayMesh" uid="uid://dmgdyspa701" path="res://Cars/empaler_truck/empaler_truck_front_wheel.obj" id="2_f8fad"]
@@ -44,6 +45,7 @@ radius = 1.80891
 [node name="EmpalerTruckBot" type="VehicleBody3D"]
 collision_mask = 507
 mass = 300.0
+physics_material_override = ExtResource("1_5ay7i")
 gravity_scale = 5.0
 center_of_mass_mode = 1
 center_of_mass = Vector3(0, -1, 0)

@@ -1,7 +1,7 @@
-[gd_scene load_steps=39 format=3 uid="uid://c0e7xj0w2s5k1"]
+[gd_scene load_steps=32 format=3 uid="uid://c0e7xj0w2s5k1"]
 
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="1_758mf"]
-[ext_resource type="Script" uid="uid://jboquaotqdu7" path="res://Maps/rc_circuit/rc_circuit_1.gd" id="1_vd6h8"]
+[ext_resource type="Script" uid="uid://kghgfx151qgh" path="res://Maps/circuit_test_2/test_2.gd" id="1_gkmgf"]
 [ext_resource type="PackedScene" uid="uid://dg2q3t77ysq4m" path="res://Maps/rc_circuit/pista_rc_1.glb" id="1_wpyyc"]
 [ext_resource type="Texture2D" uid="uid://bm552631w02kq" path="res://Maps/test_map/textures/Asphalt025C_1K-JPG_Color.jpg" id="2_46ir1"]
 [ext_resource type="PackedScene" uid="uid://cd2fjxhklg8i1" path="res://huds/on_race_huds/countdown.tscn" id="2_am243"]
@@ -9,16 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://bk3p8umc7mpd0" path="res://Maps/test_map/textures/Grass001_1K-JPG_Color.jpg" id="3_4lugw"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="3_74nw3"]
 [ext_resource type="Texture2D" uid="uid://b6cnimeif6j5p" path="res://Maps/test_map/textures/Ground079S_1K-JPG_Color.jpg" id="4_d4tgu"]
-[ext_resource type="PackedScene" uid="uid://b6m4yvkxlcpuo" path="res://Cars/rat_rod/bug_rod.tscn" id="5_46ir1"]
+[ext_resource type="ArrayMesh" uid="uid://dc4upx53e4gie" path="res://others/spawners/spawn_arrow.obj" id="10_am243"]
 [ext_resource type="PackedScene" uid="uid://bhevwsndruup5" path="res://others/cone/cone.tscn" id="10_gkmgf"]
-[ext_resource type="PackedScene" uid="uid://cnkh1n6ut1tdy" path="res://Cars/thunderbolt/thunderbolt_BOT.tscn" id="11_enonn"]
 [ext_resource type="PackedScene" uid="uid://x4l2usdlfsxp" path="res://others/boxes/box_1.tscn" id="11_gkmgf"]
-[ext_resource type="PackedScene" uid="uid://caiwrddld4olp" path="res://Cars/hot_rod_1/hot_rod_1_BOT.tscn" id="11_j2xqt"]
-[ext_resource type="PackedScene" uid="uid://dlv8tdpda3s4s" path="res://Cars/racing_rod/racing_rod_BOT.tscn" id="11_k0adl"]
-[ext_resource type="PackedScene" uid="uid://66qkphbmpmyh" path="res://Cars/raven_356/raven_356_BOT.tscn" id="11_lbryg"]
-[ext_resource type="PackedScene" uid="uid://dhrhbkegc35qf" path="res://Cars/sentinel_gt/sentinel_gt_BOT.tscn" id="11_lge22"]
-[ext_resource type="PackedScene" uid="uid://bxte01efysfbb" path="res://Cars/empaler_truck/empaler_truck_BOT.tscn" id="11_s7vdf"]
-[ext_resource type="PackedScene" uid="uid://igehpjs23h35" path="res://Cars/blade_rod/blade_rod_BOT.tscn" id="14_alync"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_4lugw"]
 sky_top_color = Color(0.461087, 0.641883, 0.858997, 1)
@@ -127,8 +120,10 @@ _data = {
 }
 
 [node name="RcCircuit1" type="Node3D"]
-script = ExtResource("1_vd6h8")
+script = ExtResource("1_gkmgf")
 countdown = ExtResource("2_am243")
+min_distance_to_point_BOT = 10
+poitn_desviation_BOT = 1
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_758mf")
@@ -138,8 +133,7 @@ transform = Transform3D(-0.899558, -0.282519, 0.333135, 0, 0.762668, 0.64679, -0
 shadow_enabled = true
 
 [node name="Camera3D" type="Camera3D" parent="."]
-physics_interpolation_mode = 1
-transform = Transform3D(-0.612589, -0.637666, 0.46703, 0, 0.590876, 0.806762, -0.790402, 0.494214, -0.361964, 126.722, 27.3207, -4.84037)
+transform = Transform3D(-0.913681, -0.637617, 0.466457, 0, 0.590831, 0.805772, -1.17889, 0.494176, -0.36152, 44.2476, 27.3207, -4.84037)
 
 [node name="PhantomCameraHost" type="Node" parent="Camera3D"]
 process_priority = 300
@@ -147,14 +141,12 @@ process_physics_priority = 300
 script = ExtResource("1_758mf")
 metadata/_custom_type_script = "uid://bd046eokvcnu2"
 
-[node name="PhantomCamera3D" type="Node3D" parent="." node_paths=PackedStringArray("follow_target", "look_at_target")]
-transform = Transform3D(-0.913681, -0.637617, 0.466457, 0, 0.590831, 0.805772, -1.17889, 0.494176, -0.36152, 126.722, 27.3207, -4.84037)
+[node name="PhantomCamera3D" type="Node3D" parent="."]
+transform = Transform3D(-0.913681, -0.637617, 0.466457, 0, 0.590831, 0.805772, -1.17889, 0.494176, -0.36152, 44.2476, 27.3207, -4.84037)
 top_level = true
 script = ExtResource("2_vd6h8")
 follow_mode = 2
-follow_target = NodePath("../BugRod")
 look_at_mode = 2
-look_at_target = NodePath("../BugRod")
 tween_resource = SubResource("Resource_gkmgf")
 follow_offset = Vector3(16.18, 26.495, -8.99)
 follow_damping = true
@@ -363,57 +355,48 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.34959, 1.0463, 0)
 shape = SubResource("BoxShape3D_46ir1")
 debug_color = Color(0, 0.922168, 0.568891, 1)
 
-[node name="BugRod" parent="." instance=ExtResource("5_46ir1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 110.542, 0.825741, 4.14963)
+[node name="spawners" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 107.844, 4.73023, 31.9797)
 
-[node name="ThunderboltBot" parent="." instance=ExtResource("11_enonn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 117.393, 0.608534, 23.4939)
-dificulty = 3
-path_to_follow = 1
-min_distance_to_point = 10
-poitn_desviation = 1
+[node name="spawn_point_0" type="MeshInstance3D" parent="spawners"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.4471, 0, -5.83194)
+visible = false
+mesh = ExtResource("10_am243")
 
-[node name="SentinelGtBot" parent="." instance=ExtResource("11_lge22")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111.436, 0.930555, 24.7173)
-dificulty = 3
-path_to_follow = 2
-min_distance_to_point = 10
-poitn_desviation = 1
+[node name="spawn_point_1" type="MeshInstance3D" parent="spawners"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.388794, 0, -5.83194)
+visible = false
+mesh = ExtResource("10_am243")
 
-[node name="Raven356Bot" parent="." instance=ExtResource("11_lbryg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 117.211, 0.682989, 17.7802)
-dificulty = 3
-path_to_follow = 3
-min_distance_to_point = 15
-poitn_desviation = 1
+[node name="spawn_point_2" type="MeshInstance3D" parent="spawners"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5387, 0, -16.9126)
+visible = false
+mesh = ExtResource("10_am243")
 
-[node name="RacingRodBot" parent="." instance=ExtResource("11_k0adl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 110.654, 1.45026, 18.7803)
-dificulty = 3
-path_to_follow = 4
-min_distance_to_point = 10
-poitn_desviation = 1
+[node name="spawn_point_3" type="MeshInstance3D" parent="spawners"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.388794, 0, -17.107)
+visible = false
+mesh = ExtResource("10_am243")
 
-[node name="EmpalerTruckBot" parent="." instance=ExtResource("11_s7vdf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 110.571, 1.48026, 11.6596)
-dificulty = 3
-path_to_follow = 5
-min_distance_to_point = 10
-poitn_desviation = 1
+[node name="spawn_point_4" type="MeshInstance3D" parent="spawners"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5387, 0, -28.5765)
+visible = false
+mesh = ExtResource("10_am243")
 
-[node name="BladeRodBot" parent="." instance=ExtResource("14_alync")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 116.926, 0.949946, 11.6524)
-dificulty = 3
-path_to_follow = 6
-min_distance_to_point = 10
-poitn_desviation = 1
+[node name="spawn_point_5" type="MeshInstance3D" parent="spawners"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.291603, 0, -28.6737)
+visible = false
+mesh = ExtResource("10_am243")
 
-[node name="HotRod1Bot" parent="." instance=ExtResource("11_j2xqt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 116.675, 0.735411, 4.01724)
-dificulty = 3
-path_to_follow = 7
-min_distance_to_point = 10
-poitn_desviation = 1
+[node name="spawn_point_6" type="MeshInstance3D" parent="spawners"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.4415, 0, -39.8516)
+visible = false
+mesh = ExtResource("10_am243")
+
+[node name="spawn_point_7" type="MeshInstance3D" parent="spawners"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.291595, 0, -39.9488)
+visible = false
+mesh = ExtResource("10_am243")
 
 [node name="conos" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.0317, 3.70927, 66.4612)
