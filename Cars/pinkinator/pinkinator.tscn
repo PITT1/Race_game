@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://eo506uxokoxq"]
 
-[ext_resource type="Script" uid="uid://dn8cru75adetk" path="res://Cars/rat_rod/bug_rod.gd" id="1_oqayv"]
+[ext_resource type="Script" uid="uid://dn8cru75adetk" path="res://player_controller/player_controller.gd" id="1_oqayv"]
 [ext_resource type="PhysicsMaterial" uid="uid://dioc2dlho64fc" path="res://car_physic_material/car_physic.tres" id="1_srb5a"]
 [ext_resource type="ArrayMesh" uid="uid://2w052jjpuubr" path="res://Cars/pinkinator/monster_pink_body.obj" id="1_y6k44"]
 [ext_resource type="ArrayMesh" uid="uid://c40jkc0fd2p2d" path="res://Cars/pinkinator/monster_pink_wheel.obj" id="4_srb5a"]

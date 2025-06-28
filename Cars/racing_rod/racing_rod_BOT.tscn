@@ -1,8 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://dlv8tdpda3s4s"]
+[gd_scene load_steps=10 format=3 uid="uid://dlv8tdpda3s4s"]
 
 [ext_resource type="Script" uid="uid://bub163oegeem3" path="res://BOT_sistem/BOTS_for_race.gd" id="1_r5523"]
 [ext_resource type="ArrayMesh" uid="uid://dkn7sb6jgfydc" path="res://Cars/racing_rod/hot_rod_racing_body.obj" id="1_wmy8t"]
-[ext_resource type="Script" uid="uid://btgjj3k8ktdgo" path="res://Cars/racing_rod/hot_rod_racing_body.gd" id="2_r5523"]
 [ext_resource type="ArrayMesh" uid="uid://dmgdyspa701" path="res://Cars/empaler_truck/empaler_truck_front_wheel.obj" id="3_puosc"]
 [ext_resource type="ArrayMesh" uid="uid://dpr5hvsc86g8i" path="res://Cars/rat_rod/bug_car_rear_wheel.obj" id="4_owsye"]
 
@@ -41,7 +40,6 @@ mesh = ExtResource("1_wmy8t")
 surface_material_override/0 = SubResource("StandardMaterial3D_d2qd8")
 surface_material_override/5 = SubResource("StandardMaterial3D_5ygq3")
 surface_material_override/6 = SubResource("StandardMaterial3D_ws3t4")
-script = ExtResource("2_r5523")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.76023)

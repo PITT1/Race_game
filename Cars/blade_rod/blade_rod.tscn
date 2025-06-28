@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://baw62ja85e8o0"]
 
 [ext_resource type="ArrayMesh" uid="uid://dkk515yxuttsv" path="res://Cars/blade_rod/hot_rod2_body.obj" id="1_tmcrc"]
-[ext_resource type="Script" uid="uid://bkv6laiegyy2l" path="res://Cars/blade_rod/blade_rod.gd" id="1_yva7t"]
+[ext_resource type="Script" uid="uid://dn8cru75adetk" path="res://player_controller/player_controller.gd" id="1_yva7t"]
 [ext_resource type="ArrayMesh" uid="uid://d4kiuvteuggex" path="res://Cars/blade_rod/hot_rod2_front_wheel.obj" id="2_yva7t"]
 [ext_resource type="ArrayMesh" uid="uid://uc3xmpbgj2rc" path="res://Cars/blade_rod/hot_rod2_rear_wheel.obj" id="3_bb8mo"]
 
@@ -114,3 +114,5 @@ collision_mask = 128
 [node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoint_sensor"]
 shape = SubResource("SphereShape3D_tmcrc")
 debug_color = Color(0.47455, 0.00208011, 0.733338, 0.133333)
+
+[connection signal="area_entered" from="checkpoint_sensor" to="." method="_on_checkpoint_sensor_area_entered"]

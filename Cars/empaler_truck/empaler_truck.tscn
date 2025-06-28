@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://ch6uctkwrw1jr"]
 
 [ext_resource type="ArrayMesh" uid="uid://baaqqufa1faxf" path="res://Cars/empaler_truck/empaler_truck_body.obj" id="1_4vlp5"]
-[ext_resource type="Script" uid="uid://dnqrym8lwb7pu" path="res://Cars/empaler_truck/empaler_truck.gd" id="1_r77yt"]
+[ext_resource type="Script" uid="uid://dn8cru75adetk" path="res://player_controller/player_controller.gd" id="1_r77yt"]
 [ext_resource type="ArrayMesh" uid="uid://dmgdyspa701" path="res://Cars/empaler_truck/empaler_truck_front_wheel.obj" id="2_r77yt"]
 [ext_resource type="ArrayMesh" uid="uid://dpr5hvsc86g8i" path="res://Cars/rat_rod/bug_car_rear_wheel.obj" id="3_brnwu"]
 
@@ -167,3 +167,5 @@ collision_mask = 128
 [node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoint_sensor"]
 shape = SubResource("SphereShape3D_4vlp5")
 debug_color = Color(0.47455, 0.00208011, 0.733338, 0.133333)
+
+[connection signal="area_entered" from="checkpoint_sensor" to="." method="_on_checkpoint_sensor_area_entered"]

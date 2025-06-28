@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://b5xsylen0fmlf"]
 
-[ext_resource type="Script" uid="uid://dn8cru75adetk" path="res://Cars/rat_rod/bug_rod.gd" id="1_c8ckq"]
+[ext_resource type="Script" uid="uid://dn8cru75adetk" path="res://player_controller/player_controller.gd" id="1_c8ckq"]
 [ext_resource type="ArrayMesh" uid="uid://dtqptne17jy1f" path="res://Cars/f1_70s/f1-70s_body.obj" id="1_e5p01"]
 [ext_resource type="PhysicsMaterial" uid="uid://dioc2dlho64fc" path="res://car_physic_material/car_physic.tres" id="1_g2ypv"]
 [ext_resource type="ArrayMesh" uid="uid://bobsj7aai5w76" path="res://Cars/f1_70s/f1-70s_front_wheel.obj" id="2_wxaeb"]

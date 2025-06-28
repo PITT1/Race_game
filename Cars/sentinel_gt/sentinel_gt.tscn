@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://clyqsoa81b2rw"]
 
+[ext_resource type="Script" uid="uid://dn8cru75adetk" path="res://player_controller/player_controller.gd" id="1_8e5np"]
 [ext_resource type="ArrayMesh" uid="uid://ccuo25onnns44" path="res://Cars/sentinel_gt/corvette_body.obj" id="1_e76x8"]
-[ext_resource type="Script" uid="uid://bi2lhi1pxdtfu" path="res://Cars/sentinel_gt/sentinel_gt.gd" id="1_eh15g"]
 [ext_resource type="ArrayMesh" uid="uid://c3ua5r7rpu2kl" path="res://Cars/sentinel_gt/corvette_wheel.obj" id="2_eh15g"]
 [ext_resource type="ArrayMesh" uid="uid://vws8cc1dskg" path="res://Cars/rat_rod/bug_car_front_wheel.obj" id="3_8e5np"]
 
@@ -42,7 +42,7 @@ mass = 150.0
 gravity_scale = 5.0
 center_of_mass_mode = 1
 center_of_mass = Vector3(0, -1, 0)
-script = ExtResource("1_eh15g")
+script = ExtResource("1_8e5np")
 
 [node name="CorvetteBody" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.675, 0, 0, 0, 0.675, 0, 0, 0, 0.675, 0, 0.0208251, -0.786802)
@@ -127,3 +127,5 @@ collision_mask = 128
 [node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoint_sensor"]
 shape = SubResource("SphereShape3D_vu82b")
 debug_color = Color(0.47455, 0.00208011, 0.733338, 0.133333)
+
+[connection signal="area_entered" from="checkpoint_sensor" to="." method="_on_checkpoint_sensor_area_entered"]

@@ -1,9 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://davupqses8n0i"]
+[gd_scene load_steps=10 format=3 uid="uid://davupqses8n0i"]
 
 [ext_resource type="ArrayMesh" uid="uid://dkn7sb6jgfydc" path="res://Cars/racing_rod/hot_rod_racing_body.obj" id="1_6427m"]
-[ext_resource type="Script" uid="uid://dmtoqyaueu2aq" path="res://Cars/racing_rod/racing_rod.gd" id="1_p3wy4"]
+[ext_resource type="Script" uid="uid://dn8cru75adetk" path="res://player_controller/player_controller.gd" id="1_ihxdo"]
 [ext_resource type="ArrayMesh" uid="uid://dmgdyspa701" path="res://Cars/empaler_truck/empaler_truck_front_wheel.obj" id="2_ihxdo"]
-[ext_resource type="Script" uid="uid://btgjj3k8ktdgo" path="res://Cars/racing_rod/hot_rod_racing_body.gd" id="3_gw4e7"]
 [ext_resource type="ArrayMesh" uid="uid://dpr5hvsc86g8i" path="res://Cars/rat_rod/bug_car_rear_wheel.obj" id="3_p3wy4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p3wy4"]
@@ -33,7 +32,7 @@ mass = 180.0
 gravity_scale = 5.0
 center_of_mass_mode = 1
 center_of_mass = Vector3(0, -1, 0)
-script = ExtResource("1_p3wy4")
+script = ExtResource("1_ihxdo")
 
 [node name="HotRodRacingBody" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.345225)
@@ -41,7 +40,6 @@ mesh = ExtResource("1_6427m")
 surface_material_override/0 = SubResource("StandardMaterial3D_p3wy4")
 surface_material_override/5 = SubResource("StandardMaterial3D_gw4e7")
 surface_material_override/6 = SubResource("StandardMaterial3D_j3l61")
-script = ExtResource("3_gw4e7")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.345225)
@@ -117,3 +115,5 @@ collision_mask = 128
 [node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoint_sensor"]
 shape = SubResource("SphereShape3D_p3wy4")
 debug_color = Color(0.47455, 0.00208011, 0.733338, 0.133333)
+
+[connection signal="area_entered" from="checkpoint_sensor" to="." method="_on_checkpoint_sensor_area_entered"]
