@@ -1,39 +1,38 @@
-[gd_scene load_steps=9 format=3 uid="uid://b5xsylen0fmlf"]
+[gd_scene load_steps=9 format=3 uid="uid://byr7lvjpadquv"]
 
-[ext_resource type="Script" uid="uid://dn8cru75adetk" path="res://Cars/rat_rod/bug_rod.gd" id="1_c8ckq"]
-[ext_resource type="ArrayMesh" uid="uid://dtqptne17jy1f" path="res://Cars/f1_70s/f1-70s_body.obj" id="1_e5p01"]
-[ext_resource type="PhysicsMaterial" uid="uid://dioc2dlho64fc" path="res://car_physic_material/car_physic.tres" id="1_g2ypv"]
-[ext_resource type="ArrayMesh" uid="uid://bobsj7aai5w76" path="res://Cars/f1_70s/f1-70s_front_wheel.obj" id="2_wxaeb"]
-[ext_resource type="ArrayMesh" uid="uid://cvstq2c8y4e3e" path="res://Cars/f1_70s/f1-70s_rear_wheel.obj" id="3_c8ckq"]
+[ext_resource type="PhysicsMaterial" uid="uid://dioc2dlho64fc" path="res://car_physic_material/car_physic.tres" id="1_13b5i"]
+[ext_resource type="Script" uid="uid://bub163oegeem3" path="res://BOT_sistem/BOTS_for_race.gd" id="2_jlsye"]
+[ext_resource type="ArrayMesh" uid="uid://dtqptne17jy1f" path="res://Cars/f1_70s/f1-70s_body.obj" id="3_xfwf4"]
+[ext_resource type="ArrayMesh" uid="uid://bobsj7aai5w76" path="res://Cars/f1_70s/f1-70s_front_wheel.obj" id="4_l6pfg"]
+[ext_resource type="ArrayMesh" uid="uid://cvstq2c8y4e3e" path="res://Cars/f1_70s/f1-70s_rear_wheel.obj" id="5_tttne"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g2ypv"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3tje6"]
 albedo_color = Color(0.288596, 0.445465, 1, 1)
 metallic = 0.61
 roughness = 0.47
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_g2ypv"]
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_73e5w"]
 points = PackedVector3Array(-1.24969, 0.760595, -2.23672, 1.40211, -0.565117, 1.07735, 1.30995, -0.663225, 1.00148, -0.835124, 0.0980919, 2.40339, 1.23633, 1.50662, -2.15417, -0.586604, -0.896839, -2.73464, -1.41574, -0.730978, 0.580472, 0.821766, -0.813791, -2.65105, -1.24969, 1.50662, -2.3198, 0.739018, 0.263718, 2.40339, 0.7481, -0.789998, 2.33375, -0.700648, -0.813048, 2.38462, 1.31908, -0.813791, -0.579427, -1.33272, 0.0150438, 1.32605, -0.752652, 0.263718, 2.40339, 1.23633, 1.50662, -2.3198, 1.31908, 0.0150438, 1.32605, -0.835124, -0.813791, -2.65105, 0.572971, -0.896839, -2.73464, -1.24969, 1.50662, -2.15365, 1.23633, 0.760595, -2.23672, -0.721042, -0.687077, 2.45714, 1.40211, -0.482304, 0.0825565, 0.821766, 0.180905, 2.40339, -1.41574, -0.399256, 0.414327, -1.15765, -0.807844, -0.158509, 0.987538, -0.316678, -2.48594, 1.40211, -0.316678, 0.663025, -1.34009, -0.675363, 0.936954, 0.655995, -0.896839, -2.65105, -1.2435, -0.738518, -0.468511, 0.228159, -0.596226, 2.42501)
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_g2ypv"]
-radius = 1.754
+[sub_resource type="SphereShape3D" id="SphereShape3D_irare"]
+radius = 1.80891
 
-[node name="F170s" type="VehicleBody3D"]
-collision_mask = 507
+[node name="F170sBot" type="VehicleBody3D"]
+collision_mask = 255
 mass = 200.0
-physics_material_override = ExtResource("1_g2ypv")
-gravity_scale = 5.0
+physics_material_override = ExtResource("1_13b5i")
 center_of_mass_mode = 1
 center_of_mass = Vector3(0, -1, 0)
-script = ExtResource("1_c8ckq")
+script = ExtResource("2_jlsye")
 
 [node name="F1-70sBody" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0.0864999)
-mesh = ExtResource("1_e5p01")
-surface_material_override/0 = SubResource("StandardMaterial3D_g2ypv")
+mesh = ExtResource("3_xfwf4")
+surface_material_override/0 = SubResource("StandardMaterial3D_3tje6")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.65, 0, 0, 0, 0.415, 0, 0, 0, 0.74, 0, 0.21, -0.124422)
-shape = SubResource("ConvexPolygonShape3D_g2ypv")
+shape = SubResource("ConvexPolygonShape3D_73e5w")
 
 [node name="wheel_1" type="VehicleWheel3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.728332, -0.0452019, 1.01281)
@@ -48,7 +47,7 @@ damping_relaxation = 10.0
 
 [node name="F1-70sFrontWheel" type="MeshInstance3D" parent="wheel_1"]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
-mesh = ExtResource("2_wxaeb")
+mesh = ExtResource("4_l6pfg")
 skeleton = NodePath("../..")
 
 [node name="wheel_2" type="VehicleWheel3D" parent="."]
@@ -64,7 +63,7 @@ damping_relaxation = 10.0
 
 [node name="F1-70sFrontWheel" type="MeshInstance3D" parent="wheel_2"]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
-mesh = ExtResource("2_wxaeb")
+mesh = ExtResource("4_l6pfg")
 skeleton = NodePath("../..")
 
 [node name="wheel_3" type="VehicleWheel3D" parent="."]
@@ -80,7 +79,7 @@ damping_relaxation = 10.0
 
 [node name="F1-70sRearWheel" type="MeshInstance3D" parent="wheel_3"]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
-mesh = ExtResource("3_c8ckq")
+mesh = ExtResource("5_tttne")
 skeleton = NodePath("../..")
 
 [node name="wheel_4" type="VehicleWheel3D" parent="."]
@@ -96,16 +95,20 @@ damping_relaxation = 10.0
 
 [node name="F1-70sRearWheel" type="MeshInstance3D" parent="wheel_4"]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
-mesh = ExtResource("3_c8ckq")
+mesh = ExtResource("5_tttne")
 skeleton = NodePath("../..")
 
 [node name="checkpoint_sensor" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0864999)
 collision_layer = 0
 collision_mask = 128
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoint_sensor"]
-shape = SubResource("SphereShape3D_g2ypv")
-debug_color = Color(0.941176, 0.890196, 1, 0.615686)
+shape = SubResource("SphereShape3D_irare")
+debug_color = Color(0.47455, 0.00208011, 0.733338, 0.133333)
 
-[connection signal="area_entered" from="checkpoint_sensor" to="." method="_on_checkpoint_sensor_area_entered"]
+[node name="shock_sensor" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.989815, 1.19835)
+target_position = Vector3(0, 0, 1.165)
+collision_mask = 2
+
+[node name="shock_timer_sensor" type="Timer" parent="."]

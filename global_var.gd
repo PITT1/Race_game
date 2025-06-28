@@ -24,7 +24,8 @@ var bot_list = {
 	blade_rod_BOT = "res://Cars/blade_rod/blade_rod_BOT.tscn",
 	thunderbolt_BOT = "res://Cars/thunderbolt/thunderbolt_BOT.tscn",
 	bugrod_BOT = "res://Cars/rat_rod/bug_rod_BOT.tscn",
-	pinkinator_BOT = "res://Cars/pinkinator/pinkinator_BOT.tscn"
+	pinkinator_BOT = "res://Cars/pinkinator/pinkinator_BOT.tscn",
+	f1_70s_BOT = "res://Cars/f1_70s/f1_70s_BOT.tscn"
 }
 	
 	

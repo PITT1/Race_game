@@ -10,8 +10,8 @@ metallic = 0.73
 roughness = 0.36
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_qfgbt"]
-height = 1.8894
-radius = 1.57178
+height = 6.83249
+radius = 2.17822
 
 [sub_resource type="Animation" id="Animation_ors7o"]
 length = 0.001
@@ -87,7 +87,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_qfgbt")
 collision_layer = 256
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="sensor"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.107359, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.960346, 0)
 shape = SubResource("CylinderShape3D_qfgbt")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
