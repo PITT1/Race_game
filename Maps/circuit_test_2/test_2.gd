@@ -4,14 +4,18 @@ extends Node3D
 
 var car_list = []
 var starting_grid: Array = []
-var num_checkpoints = 23 #cambiar esta variable cada que cambie el numero de check points en el circuito 
+var num_checkpoints
 @export var countdown: PackedScene
 @export var laps_num_to_finish = 5
+@export var vehicle_num: int = 8
+@export var BOTS_dificulty: int = 2 # 1=facil, 2=normal, 3=dificil
 @onready var car_spawners: Array = [$spawners/spawn_point_0, $spawners/spawn_point_1, $spawners/spawn_point_2, $spawners/spawn_point_3, $spawners/spawn_point_4, $spawners/spawn_point_5, $spawners/spawn_point_6, $spawners/spawn_point_7]
+@onready var checkpoints_sistem: Node3D = $checkpoints_sistem
 
 var global_var = load("res://global_var.gd").new()
 
 func _ready() -> void:
+	num_checkpoints = checkpoints_sistem.get_child_count()
 	anim.play("init_race")
 	put_cars()
 	
@@ -38,7 +42,7 @@ func put_cars():
 	var bots_sort = bots
 	var bot_adress = bots_sort.values()
 	starting_grid.append(global_var.car_list[player.car])
-	for i in 5: #car_spawners.size()
+	for i in vehicle_num: #car_spawners.size() cantidad de carros que apareceran
 		starting_grid.append(bot_adress[i])
 	
 	starting_grid.pop_back()
@@ -52,3 +56,4 @@ func put_cars():
 		car_instantia.set_global_position(car_spawners[i].get_global_position())
 		car_instantia.set_rotation(car_spawners[i].get_rotation())
 		car_instantia.path_to_follow = i
+		car_instantia.dificulty = BOTS_dificulty

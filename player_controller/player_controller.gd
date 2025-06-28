@@ -3,6 +3,7 @@ extends VehicleBody3D
 @export var MAX_STEER = 0.7
 @export var ENGINE_POWER = 1500
 var is_on_race = false
+var dificulty: int = 0
 
 
 @export var is_player: bool = true
@@ -15,7 +16,6 @@ var laps_num: int = 1
 
 func _ready() -> void:
 	all_checkpoints = get_parent().num_checkpoints #esto hay que cambiarlo para el futuro ya que no se podra entrar al loby ni eventos de destruccion
-	
 
 func _physics_process(delta: float) -> void:
 	if is_player and is_on_race:
@@ -27,7 +27,6 @@ func _physics_process(delta: float) -> void:
 func _on_checkpoint_sensor_area_entered(area: Area3D) -> void:
 	if not checkpoint_store.has(area.name):
 		checkpoint_store.append(area.name)
-	
 	if checkpoint_store.size() == all_checkpoints and area.name == "point_0":
 		laps_num += 1
 		print(name," lap: ", laps_num)
