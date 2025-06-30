@@ -1,0 +1,111 @@
+[gd_scene load_steps=9 format=3 uid="uid://t2g61s7tynw8"]
+
+[ext_resource type="ArrayMesh" uid="uid://tdcker0tc6op" path="res://Cars/montana/montana_body.obj" id="1_q0wj3"]
+[ext_resource type="PhysicsMaterial" uid="uid://dioc2dlho64fc" path="res://car_physic_material/car_physic.tres" id="1_wfsiv"]
+[ext_resource type="Script" uid="uid://dn8cru75adetk" path="res://player_controller/player_controller.gd" id="2_1ic3g"]
+[ext_resource type="Texture2D" uid="uid://b2k1bq32hb5wo" path="res://Cars/montana/paint_1.png" id="2_7mcbj"]
+[ext_resource type="ArrayMesh" uid="uid://ms1rxen6kn37" path="res://Cars/montana/montana_wheel.obj" id="3_7mcbj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wfsiv"]
+albedo_texture = ExtResource("2_7mcbj")
+metallic = 0.77
+roughness = 0.29
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_1ic3g"]
+points = PackedVector3Array(1.42481, -0.323674, -0.787805, -1.42481, -0.323674, -0.787805, 1.13165, -0.270881, -3.07143, 1.33053, -0.270881, -3.03449, 1.36623, -0.270881, -2.98957, 1.37432, -0.270881, -2.93161, 1.37432, 0.558043, -1.91006, 1.37432, 0.625459, -1.784, 1.37432, 0.667047, -1.64706, 1.37432, 0.6811, -1.50434, 1.37432, 0.652045, -0.787805, 1.33806, 0.633245, 3.11436, 1.33806, 0.590706, 3.25492, 1.33806, 0.521392, 3.3846, 1.33806, 0.42815, 3.49835, 1.33806, 0.314588, 3.59181, 1.33806, 0.184885, 3.66064, 1.33806, 0.0441671, 3.70338, 1.33806, -0.102058, 3.71787, 1.33806, -0.248283, 3.70338, 1.22788, -0.291201, 4.27791, 0.0214781, -0.302215, 4.27791, -1.33834, -0.102058, 3.71787, -1.33834, 0.0441671, 3.70338, -1.33834, 0.184885, 3.66064, -1.33834, 0.314588, 3.59181, -1.33834, 0.42815, 3.49835, -1.33834, 0.521392, 3.3846, -1.33834, 0.590706, 3.25492, -1.33834, 0.633245, 3.11436, -1.3746, 0.652045, -0.787805, -1.3746, 0.6811, -1.50434, -1.3746, 0.667047, -1.64706, -1.3746, 0.625459, -1.784, -1.3746, 0.558043, -1.91006, -1.3746, -0.270881, -2.93161, -1.36651, -0.270881, -2.98957, -1.33081, -0.270881, -3.03449, -1.13193, -0.270881, -3.07143, -0.0217571, -0.302215, 4.27791, -1.22816, -0.291201, 4.27791, -1.33834, -0.248283, 3.70338, 0.799991, 0.961206, -3.03593, 1.00752, 0.95437, -3.03304, 1.13416, 0.95437, -3.02724, 1.22202, 0.961396, -2.9758, 0.995804, 1.60118, -0.808815, 1.00752, 1.58712, 0.888693, 1.33806, 0.647677, 2.96801, 1.24211, 0.788775, 3.9758, 1.2541, 0.731045, 3.9758, 1.311, 0.216978, 4.1946, 1.311, -0.239737, 4.21271, 1.29092, -0.239737, 4.27936, 1.22788, -0.284174, 4.304, 0.0214781, -0.295189, 4.304, -1.31128, -0.239737, 4.21271, -1.31128, 0.216978, 4.1946, -1.25438, 0.731045, 3.9758, -1.24238, 0.788775, 3.9758, -1.33834, 0.647677, 2.96801, -0.996083, 1.60118, -0.808815, -1.2223, 0.961396, -2.9758, -1.0078, 1.58712, 0.888693, -1.13444, 0.95437, -3.02724, -1.0078, 0.95437, -3.03304, -0.80027, 0.961206, -3.03593, -0.0217571, -0.295189, 4.304, -1.22816, -0.284174, 4.304, -1.2912, -0.239737, 4.27936, 0.969584, 1.61637, -0.800121, 0.984647, 1.61219, -0.805193, 0.999709, 1.60175, 0.880723, 1.22481, 0.805296, 3.9758, 1.22788, 0.259896, 4.30037, 1.29092, 0.216978, 4.26125, 1.22788, -0.239737, 4.33008, 1.22788, -0.265374, 4.32283, 0.0214781, -0.276388, 4.32283, -1.2912, 0.216978, 4.26125, -1.22816, 0.259896, 4.30037, -1.22509, 0.805296, 3.9758, -0.999988, 1.60175, 0.880723, -0.984926, 1.61219, -0.805193, -0.969863, 1.61637, -0.800121, -0.0217571, -0.276388, 4.32283, -1.22816, -0.265374, 4.32283, -1.22816, -0.239737, 4.33008, 0.969584, 1.61637, 0.879999, 0.985763, 1.61238, 0.877101, 0.126637, 0.941077, 3.97942, 1.22788, 0.216978, 4.31196, 0.0214781, -0.250562, 4.33008, -1.22816, 0.216978, 4.31196, -0.126916, 0.941077, 3.97942, -0.969863, 1.61637, 0.879999, -0.986041, 1.61238, 0.877101, -0.0217571, -0.250562, 4.33008, 0.799991, 1.61637, 0.937959, 0.599993, 1.61637, 0.979256, 0.399995, 1.61637, 0.999542, -0.400274, 1.61637, 0.999542, -0.600272, 1.61637, 0.979256, -0.80027, 1.61637, 0.937959)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_7mcbj"]
+radius = 2.404
+
+[node name="Montana" type="VehicleBody3D"]
+collision_mask = 507
+mass = 200.0
+physics_material_override = ExtResource("1_wfsiv")
+gravity_scale = 5.0
+center_of_mass_mode = 1
+center_of_mass = Vector3(0, -1, 0)
+script = ExtResource("2_1ic3g")
+
+[node name="MontanaBody" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, -0.286344)
+mesh = ExtResource("1_q0wj3")
+surface_material_override/0 = SubResource("StandardMaterial3D_wfsiv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, -0.286344)
+shape = SubResource("ConvexPolygonShape3D_1ic3g")
+
+[node name="wheel_1" type="VehicleWheel3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.69, -0.075, 1.51107)
+use_as_steering = true
+wheel_roll_influence = 1.5
+wheel_radius = 0.4
+wheel_friction_slip = 10.0
+suspension_stiffness = 100.0
+suspension_max_force = 100000.0
+damping_compression = 10.0
+damping_relaxation = 10.0
+
+[node name="MontanaWheel" type="MeshInstance3D" parent="wheel_1"]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
+mesh = ExtResource("3_7mcbj")
+skeleton = NodePath("../..")
+
+[node name="wheel_2" type="VehicleWheel3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.69, -0.075, 1.51141)
+use_as_steering = true
+wheel_roll_influence = 1.5
+wheel_radius = 0.4
+wheel_friction_slip = 10.0
+suspension_stiffness = 100.0
+suspension_max_force = 100000.0
+damping_compression = 10.0
+damping_relaxation = 10.0
+
+[node name="MontanaWheel" type="MeshInstance3D" parent="wheel_2"]
+transform = Transform3D(-0.6, 0, -5.24537e-08, 0, 0.6, 0, 5.24537e-08, 0, -0.6, 0, 0, 0)
+mesh = ExtResource("3_7mcbj")
+skeleton = NodePath("../..")
+
+[node name="wheel_3" type="VehicleWheel3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.69, -0.075, -1.1855)
+use_as_traction = true
+wheel_roll_influence = 1.5
+wheel_radius = 0.4
+wheel_friction_slip = 10.0
+suspension_stiffness = 100.0
+suspension_max_force = 100000.0
+damping_compression = 10.0
+damping_relaxation = 10.0
+
+[node name="MontanaWheel2" type="MeshInstance3D" parent="wheel_3"]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
+mesh = ExtResource("3_7mcbj")
+skeleton = NodePath("../../wheel_2")
+
+[node name="wheel_4" type="VehicleWheel3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.69, -0.075, -1.1855)
+use_as_traction = true
+wheel_roll_influence = 1.5
+wheel_radius = 0.4
+wheel_friction_slip = 10.0
+suspension_stiffness = 100.0
+suspension_max_force = 100000.0
+damping_compression = 10.0
+damping_relaxation = 10.0
+
+[node name="MontanaWheel" type="MeshInstance3D" parent="wheel_4"]
+transform = Transform3D(-0.6, 0, -5.24537e-08, 0, 0.6, 0, 5.24537e-08, 0, -0.6, 0, 0, 0)
+mesh = ExtResource("3_7mcbj")
+skeleton = NodePath("../../wheel_3")
+
+[node name="checkpoint_sensor" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.199844)
+collision_layer = 0
+collision_mask = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoint_sensor"]
+shape = SubResource("SphereShape3D_7mcbj")
+debug_color = Color(0.941176, 0.890196, 1, 0.615686)
+
+[connection signal="area_entered" from="checkpoint_sensor" to="." method="_on_checkpoint_sensor_area_entered"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=3 uid="uid://bhehqj2450xtc"]
+[gd_scene load_steps=67 format=3 uid="uid://bhehqj2450xtc"]
 
 [ext_resource type="Script" uid="uid://bbkomqcnkihxo" path="res://huds/car_selection/car_selection.gd" id="1_u64g1"]
 [ext_resource type="Texture2D" uid="uid://bm552631w02kq" path="res://Maps/test_map/textures/Asphalt025C_1K-JPG_Color.jpg" id="1_wibte"]
@@ -18,6 +18,8 @@
 [ext_resource type="ArrayMesh" uid="uid://2tybfvfdfkj3" path="res://Cars/thunderbolt/hot_rod3.obj" id="13_6lp0e"]
 [ext_resource type="ArrayMesh" uid="uid://bb1tugpk4ot2k" path="res://Cars/pinkinator/monster_pink_all_model.obj" id="14_hg4ax"]
 [ext_resource type="ArrayMesh" uid="uid://cyxlf381qqk30" path="res://Cars/f1_70s/f1-70s_all_model.obj" id="15_7suyo"]
+[ext_resource type="ArrayMesh" uid="uid://b8bco4cers3uq" path="res://Cars/montana/montana_all_model.obj" id="16_4oqaj"]
+[ext_resource type="Texture2D" uid="uid://b2k1bq32hb5wo" path="res://Cars/montana/paint_1.png" id="17_am86g"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_gw526"]
 sky_top_color = Color(0.461087, 0.641883, 0.858997, 1)
@@ -221,6 +223,11 @@ albedo_color = Color(0.705194, 0.705194, 0.705194, 1)
 metallic = 1.0
 roughness = 0.48
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lcj7q"]
+albedo_texture = ExtResource("17_am86g")
+metallic = 0.9
+roughness = 0.46
+
 [sub_resource type="Resource" id="Resource_c3i15"]
 script = ExtResource("7_btktd")
 duration = 1.0
@@ -350,6 +357,18 @@ tracks/9/keys = {
 "update": 0,
 "values": [Vector3(0, 0, 0)]
 }
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("vehicles/montana:rotation")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_wibte"]
 resource_name = "rotate"
@@ -374,7 +393,7 @@ tracks/1/path = NodePath("vehicles/hotrod1:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 8),
+"times": PackedFloat32Array(0, 10),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector3(0, 0, 0), Vector3(0, 6.28319, 0)]
@@ -470,6 +489,18 @@ tracks/9/path = NodePath("vehicles/f1_70s:rotation")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 6.28319, 0)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("vehicles/montana:rotation")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
 "times": PackedFloat32Array(0, 10),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
@@ -694,6 +725,20 @@ skeleton = NodePath("../../..")
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0.548546, 0)
 mesh = ExtResource("15_7suyo")
 skeleton = NodePath("../../..")
+
+[node name="montana" type="Node3D" parent="vehicles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 141.033, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="vehicles/montana"]
+material_override = SubResource("StandardMaterial3D_hg4ax")
+mesh = SubResource("CylinderMesh_hwucu")
+skeleton = NodePath("../../..")
+
+[node name="MontanaAllModel" type="MeshInstance3D" parent="vehicles/montana"]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0.669132, 0)
+mesh = ExtResource("16_4oqaj")
+skeleton = NodePath("../../..")
+surface_material_override/2 = SubResource("StandardMaterial3D_lcj7q")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.944298, 0.329091, 0, -0.329091, 0.944298, 0, 1.455, 4.175)

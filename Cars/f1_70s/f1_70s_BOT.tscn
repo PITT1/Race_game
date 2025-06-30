@@ -21,6 +21,7 @@ radius = 1.80891
 collision_mask = 255
 mass = 200.0
 physics_material_override = ExtResource("1_13b5i")
+gravity_scale = 5.0
 center_of_mass_mode = 1
 center_of_mass = Vector3(0, -1, 0)
 script = ExtResource("2_jlsye")
