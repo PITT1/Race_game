@@ -13,7 +13,8 @@ var car_list = {
 	thunderbolt = "res://Cars/thunderbolt/thunderbolt.tscn",
 	pinkinator = "res://Cars/pinkinator/pinkinator.tscn",
 	f1_70s = "res://Cars/f1_70s/f1_70s.tscn",
-	montana = "res://Cars/montana/montana.tscn"
+	montana = "res://Cars/montana/montana.tscn",
+	monster = "res://Cars/monster/monster.tscn"
 }
 
 var bot_list = {
@@ -27,7 +28,8 @@ var bot_list = {
 	bugrod_BOT = "res://Cars/rat_rod/bug_rod_BOT.tscn",
 	pinkinator_BOT = "res://Cars/pinkinator/pinkinator_BOT.tscn",
 	f1_70s_BOT = "res://Cars/f1_70s/f1_70s_BOT.tscn",
-	montana_BOT = "res://Cars/montana/montana_BOT.tscn"
+	montana_BOT = "res://Cars/montana/montana_BOT.tscn",
+	monster_BOT = "res://Cars/monster/monster_BOT.tscn"
 }
 	
 	

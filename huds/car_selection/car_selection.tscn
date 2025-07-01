@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=3 uid="uid://bhehqj2450xtc"]
+[gd_scene load_steps=74 format=3 uid="uid://bhehqj2450xtc"]
 
 [ext_resource type="Script" uid="uid://bbkomqcnkihxo" path="res://huds/car_selection/car_selection.gd" id="1_u64g1"]
 [ext_resource type="Texture2D" uid="uid://bm552631w02kq" path="res://Maps/test_map/textures/Asphalt025C_1K-JPG_Color.jpg" id="1_wibte"]
@@ -20,6 +20,9 @@
 [ext_resource type="ArrayMesh" uid="uid://cyxlf381qqk30" path="res://Cars/f1_70s/f1-70s_all_model.obj" id="15_7suyo"]
 [ext_resource type="ArrayMesh" uid="uid://b8bco4cers3uq" path="res://Cars/montana/montana_all_model.obj" id="16_4oqaj"]
 [ext_resource type="Texture2D" uid="uid://b2k1bq32hb5wo" path="res://Cars/montana/paint_1.png" id="17_am86g"]
+[ext_resource type="ArrayMesh" uid="uid://b33jr2qlyduou" path="res://Cars/monster/monster.obj" id="18_ovl38"]
+[ext_resource type="Texture2D" uid="uid://bsvbcilt60rk8" path="res://Cars/monster/oxido_4_texture.png" id="19_ehe8b"]
+[ext_resource type="Texture2D" uid="uid://f60vfj15y5gq" path="res://Cars/monster/llamas_1_texture.png" id="20_u3eru"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_gw526"]
 sky_top_color = Color(0.461087, 0.641883, 0.858997, 1)
@@ -228,6 +231,26 @@ albedo_texture = ExtResource("17_am86g")
 metallic = 0.9
 roughness = 0.46
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o6p0r"]
+albedo_texture = ExtResource("19_ehe8b")
+metallic = 0.7
+roughness = 0.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vsuos"]
+albedo_color = Color(0.0214346, 0.0214346, 0.0214346, 1)
+metallic = 0.8
+roughness = 0.3
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xc6r1"]
+albedo_color = Color(1, 0, 0, 1)
+metallic = 0.8
+roughness = 0.3
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kn6nc"]
+albedo_texture = ExtResource("20_u3eru")
+metallic = 0.8
+roughness = 0.3
+
 [sub_resource type="Resource" id="Resource_c3i15"]
 script = ExtResource("7_btktd")
 duration = 1.0
@@ -369,6 +392,18 @@ tracks/10/keys = {
 "update": 0,
 "values": [Vector3(0, 0, 0)]
 }
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("vehicles/monster:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_wibte"]
 resource_name = "rotate"
@@ -501,6 +536,18 @@ tracks/10/path = NodePath("vehicles/montana:rotation")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 6.28319, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("vehicles/monster:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
 "times": PackedFloat32Array(0, 10),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
@@ -739,6 +786,24 @@ transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0.669132, 0)
 mesh = ExtResource("16_4oqaj")
 skeleton = NodePath("../../..")
 surface_material_override/2 = SubResource("StandardMaterial3D_lcj7q")
+
+[node name="monster" type="Node3D" parent="vehicles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 154.184, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="vehicles/monster"]
+material_override = SubResource("StandardMaterial3D_hg4ax")
+mesh = SubResource("CylinderMesh_hwucu")
+skeleton = NodePath("../../..")
+
+[node name="Monster" type="MeshInstance3D" parent="vehicles/monster"]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 1.12166, 0)
+mesh = ExtResource("18_ovl38")
+skeleton = NodePath("../../..")
+surface_material_override/4 = SubResource("StandardMaterial3D_o6p0r")
+surface_material_override/6 = SubResource("StandardMaterial3D_vsuos")
+surface_material_override/7 = SubResource("StandardMaterial3D_o6p0r")
+surface_material_override/9 = SubResource("StandardMaterial3D_xc6r1")
+surface_material_override/10 = SubResource("StandardMaterial3D_kn6nc")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.944298, 0.329091, 0, -0.329091, 0.944298, 0, 1.455, 4.175)
