@@ -113,7 +113,7 @@ transform = Transform3D(-0.531399, 0.731401, -0.427396, 0, 0.504528, 0.863396, 0
 shadow_enabled = true
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.293408, 0.810164, -0.551449, 1.77801e-07, 0.563094, 0.825348, 1.46236, -0.162552, 0.110643, -21.425, 37.06, 6.7)
+transform = Transform3D(0.293408, 0.810164, -0.551449, 1.77801e-07, 0.563094, 0.825348, 1.46236, -0.162552, 0.110643, -112.981, 37.06, 6.7)
 
 [node name="PhantomCameraHost" type="Node" parent="Camera3D"]
 process_priority = 300
@@ -122,7 +122,7 @@ script = ExtResource("3_0r5jd")
 metadata/_custom_type_script = "uid://bd046eokvcnu2"
 
 [node name="PhantomCamera3D" type="Node3D" parent="."]
-transform = Transform3D(0.293408, 0.810164, -0.551449, 1.77801e-07, 0.563094, 0.825348, 1.46236, -0.162552, 0.110643, -21.425, 37.06, 6.7)
+transform = Transform3D(0.293408, 0.810164, -0.551449, 1.77801e-07, 0.563094, 0.825348, 1.46236, -0.162552, 0.110643, -112.981, 37.06, 6.7)
 top_level = true
 script = ExtResource("4_3xdu8")
 follow_mode = 2
@@ -215,6 +215,7 @@ surface_material_override/4 = SubResource("StandardMaterial3D_uxm7u")
 surface_material_override/5 = SubResource("StandardMaterial3D_i1n1h")
 
 [node name="checkpoints_sistem" type="Node3D" parent="."]
+visible = false
 
 [node name="point_0" type="Area3D" parent="checkpoints_sistem"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 96.2735, 9.21986, -119.67)
@@ -460,34 +461,42 @@ libraries = {
 
 [node name="spawn_point_0" type="MeshInstance3D" parent="spawners"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 86.799, 2.723, -111.117)
+visible = false
 mesh = ExtResource("10_ow4v7")
 
 [node name="spawn_point_1" type="MeshInstance3D" parent="spawners"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 95.4649, 2.72269, -111.117)
+visible = false
 mesh = ExtResource("10_ow4v7")
 
 [node name="spawn_point_2" type="MeshInstance3D" parent="spawners"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 86.5854, 2.72269, -99.4501)
+visible = false
 mesh = ExtResource("10_ow4v7")
 
 [node name="spawn_point_3" type="MeshInstance3D" parent="spawners"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 95.2418, 2.72269, -99.4501)
+visible = false
 mesh = ExtResource("10_ow4v7")
 
 [node name="spawn_point_4" type="MeshInstance3D" parent="spawners"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 86.8355, 2.72269, -88.3342)
+visible = false
 mesh = ExtResource("10_ow4v7")
 
 [node name="spawn_point_5" type="MeshInstance3D" parent="spawners"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 95.1806, 2.72269, -88.3342)
+visible = false
 mesh = ExtResource("10_ow4v7")
 
 [node name="spawn_point_6" type="MeshInstance3D" parent="spawners"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 87.0431, 2.72269, -77.7872)
+visible = false
 mesh = ExtResource("10_ow4v7")
 
 [node name="spawn_point_7" type="MeshInstance3D" parent="spawners"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 95.2636, 2.72269, -77.7872)
+visible = false
 mesh = ExtResource("10_ow4v7")
 
 [editable path="pista_1_CIRCUIT"]

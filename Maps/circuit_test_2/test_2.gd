@@ -3,6 +3,7 @@ extends Node3D
 @onready var pCam: PhantomCamera3D = $PhantomCamera3D
 
 var car_list = []
+var race_order = []
 var starting_grid: Array = []
 var num_checkpoints
 @export var countdown: PackedScene
@@ -22,6 +23,7 @@ func _ready() -> void:
 	put_cars()
 	
 	get_cars()
+	race_order = car_list
 	
 	var coutdown_instant = countdown.instantiate()
 	await get_tree().create_timer(2).timeout
@@ -30,6 +32,12 @@ func _ready() -> void:
 	for car in car_list:
 		car.start_race()
 
+func _physics_process(delta: float) -> void:
+	if delta:
+		pass
+		
+	ordenar_carrera()
+	
 func get_cars():
 	for i in get_child_count():
 		if get_child(i).get_class() == "VehicleBody3D":
@@ -61,3 +69,12 @@ func put_cars():
 		car_instantia.dificulty = BOTS_dificulty
 		car_instantia.min_distance_to_point = min_distance_to_point_BOT
 		car_instantia.poitn_desviation = poitn_desviation_BOT
+
+func ordenar_carrera():
+	race_order.sort_custom(Callable(self, "_comparar_posiciones"))
+
+func _comparar_posiciones(a:VehicleBody3D, b:VehicleBody3D):
+	if a.laps_num != b.laps_num:
+		return a.laps_num > b.laps_num
+	
+	return a.checkpoint_store.size() > b.checkpoint_store.size()
