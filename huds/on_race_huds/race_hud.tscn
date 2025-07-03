@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://1d1e5ll020cp"]
+[gd_scene load_steps=2 format=3 uid="uid://1d1e5ll020cp"]
+
+[ext_resource type="Script" uid="uid://c8fn0krsmw4c2" path="res://huds/on_race_huds/race_hud.gd" id="1_amnyp"]
 
 [node name="RaceHud" type="Control"]
 layout_mode = 3
@@ -7,3 +9,16 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_amnyp")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="position_label" type="Label" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 23.0
+grow_horizontal = 0
+size_flags_horizontal = 8
+theme_override_font_sizes/font_size = 60
