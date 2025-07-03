@@ -2,7 +2,6 @@ extends Node
 
 const SAVE_GAME_PATH: String = "user://save_game1.dat"
 
-var race_positions: Array = []
 
 var car_list = {
 	bugrod = "res://Cars/rat_rod/bug_rod.tscn",

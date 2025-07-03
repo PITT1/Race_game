@@ -6,6 +6,7 @@ var car_list = []
 var race_order = []
 var starting_grid: Array = []
 var num_checkpoints
+var is_race = true
 @export var countdown: PackedScene
 @export var laps_num_to_finish = 5
 @export var vehicle_num: int = 8

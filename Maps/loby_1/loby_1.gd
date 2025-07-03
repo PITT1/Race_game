@@ -3,6 +3,7 @@ extends Node3D
 
 var num_checkpoints: int = 0
 var global_var = load("res://global_var.gd").new()
+var is_race = false
 
 func _ready() -> void:
 	var data = JSON.parse_string(global_var.load_data())
