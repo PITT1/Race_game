@@ -77,5 +77,5 @@ func ordenar_carrera():
 func _comparar_posiciones(a:VehicleBody3D, b:VehicleBody3D):
 	if a.laps_num != b.laps_num:
 		return a.laps_num > b.laps_num
-	
+		
 	return a.checkpoint_store.size() > b.checkpoint_store.size()

@@ -25,6 +25,8 @@ var recovery_mode: bool = false
 
 func _ready() -> void:
 	all_checkpoints = get_parent().num_checkpoints #esto hay que cambiarlo para el futuro ya que no se podra entrar al loby ni eventos de destruccion
+
+
 func _physics_process(delta: float) -> void:
 	if is_on_race:
 		bot_sistem()
@@ -33,6 +35,7 @@ func _physics_process(delta: float) -> void:
 			if distance < 3:
 				recovery_mode = true
 				shock_timer_sensor.start()
+	
 	
 	if recovery_mode and is_on_race: #BOT
 		engine_force = -ENGINE_POWER
