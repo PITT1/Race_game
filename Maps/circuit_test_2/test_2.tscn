@@ -130,7 +130,7 @@ look_at_mode = 2
 tween_resource = SubResource("Resource_8fw60")
 follow_offset = Vector3(-21.315, 37.06, 6.7)
 follow_damping = true
-look_at_offset = Vector3(2, 2, 2)
+look_at_offset = Vector3(0, 2, 0)
 metadata/_custom_type_script = "uid://csjccrhj5wnx7"
 
 [node name="Path3D" type="Path3D" parent="."]
