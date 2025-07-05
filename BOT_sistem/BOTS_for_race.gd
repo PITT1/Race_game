@@ -83,7 +83,6 @@ func _on_checkpoint_sensor_area_entered(area: Area3D) -> void:
 		checkpoint_store.append(area.name)
 	if checkpoint_store.size() == all_checkpoints and area.name == "point_0":
 		laps_num += 1
-		print(name," lap: ", laps_num)
 		checkpoint_store = ["point_0"]
 		
 		if laps_num >= get_parent().laps_num_to_finish + 1:
