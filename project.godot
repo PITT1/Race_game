@@ -24,6 +24,11 @@ GlobalVar="*res://global_var.gd"
 
 enabled=PackedStringArray("res://addons/phantom_camera/plugin.cfg")
 
+[gui]
+
+theme/custom_font="uid://cbwf465gr1onm"
+theme/default_font_antialiasing=0
+
 [layer_names]
 
 3d_physics/layer_1="Cars"
