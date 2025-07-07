@@ -40,6 +40,7 @@ theme/default_font_antialiasing=0
 3d_physics/layer_7="projectil"
 3d_physics/layer_8="checkpoints"
 3d_physics/layer_9="action_icons"
+3d_physics/layer_10="priority_points"
 
 [rendering]
 

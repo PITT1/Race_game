@@ -29,7 +29,7 @@ points = PackedVector3Array(-0.533573, -1.11188, 2.81951, 0.55186, -1.11188, 2.8
 radius = 1.80891
 
 [node name="BladeRod" type="VehicleBody3D"]
-collision_mask = 511
+collision_mask = 1023
 mass = 200.0
 physics_material_override = ExtResource("1_nvvph")
 gravity_scale = 5.0

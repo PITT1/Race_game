@@ -7,7 +7,10 @@ var race_order = []
 var starting_grid: Array = []
 var num_checkpoints
 var is_race = true
+
 @export var countdown: PackedScene
+@export var priority_points_num: int = 0
+@export var priority_point_fill: int = 0
 @export var laps_num_to_finish = 5
 @export var vehicle_num: int = 8
 @export var min_distance_to_point_BOT: int = 30

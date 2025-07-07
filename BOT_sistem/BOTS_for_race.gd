@@ -15,6 +15,7 @@ var speed = 5.0
 var target_progress = 0.0
 
 var checkpoint_store = []
+var priority_point_store = []
 var all_checkpoints: int
 var laps_num: int = 1
 
@@ -29,13 +30,15 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	if is_on_race:
+		brake = 0
 		bot_sistem()
 		if linear_velocity.length() < 10 and shock_sensor.collide_with_bodies: #BOT
 			var distance = shock_sensor.get_collision_point().distance_to(global_position)
 			if distance < 3:
 				recovery_mode = true
 				shock_timer_sensor.start()
-	
+	else:
+		brake = 100
 	
 	if recovery_mode and is_on_race: #BOT
 		engine_force = -ENGINE_POWER
@@ -79,20 +82,26 @@ func start_race():
 
 
 func _on_checkpoint_sensor_area_entered(area: Area3D) -> void:
-	if not checkpoint_store.has(area.name):
+	if not checkpoint_store.has(area.name) and not area.name.contains("priority"):
 		checkpoint_store.append(area.name)
+	elif not checkpoint_store.has(area.name) and area.name.contains("priority"):
+		if not priority_point_store.has(area.name):
+			priority_point_store.append(area.name)
+	
 	if checkpoint_store.size() == all_checkpoints and area.name == "point_0":
 		laps_num += 1
 		checkpoint_store = ["point_0"]
 		
-		if laps_num >= get_parent().laps_num_to_finish + 1:
+	elif priority_point_store.size() == get_parent().priority_points_num and area.name == "point_0":
+		laps_num += 1
+		checkpoint_store = ["point_0"]
+	
+	if laps_num >= get_parent().laps_num_to_finish + 1:
 			print("FIN DE LA CARRERA")
 			is_on_race = false
 			engine_force = 0
 			steering = 0
 			brake = 20
-		
-
 
 
 func _on_shock_timer_sensor_timeout() -> void:
