@@ -51,11 +51,17 @@ func _on_checkpoint_sensor_area_entered(area: Area3D) -> void:
 	if checkpoint_store.size() == all_checkpoints and area.name == "point_0":
 		laps_num += 1
 		checkpoint_store = ["point_0"]
-		
-	elif priority_point_store.size() == get_parent().priority_points_num and area.name == "point_0":
+	elif priority_point_store.size() == get_parent().priority_points_num and area.name == "point_0" and get_parent().priority_points_num != 0:
 		laps_num += 1
 		checkpoint_store = ["point_0"]
+	elif area.name == "point_0" and priority_point_store.size() == get_parent().priority_points_num:
+		if get_parent().priority_points_num != 0:
+			laps_num += 1
+			checkpoint_store = ["point_0"]
+			print("hola")
 	
+	print(checkpoint_store.size())
+	print(priority_point_store.size())
 	if laps_num >= get_parent().laps_num_to_finish + 1:
 			print("FIN DE LA CARRERA")
 			is_on_race = false

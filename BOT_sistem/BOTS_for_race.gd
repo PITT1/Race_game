@@ -10,7 +10,7 @@ var is_on_race = false
 @export var min_distance_to_point = 30 
 @export var poitn_desviation = 5
 @onready var path_follow = [$"../Path3D/PathFollow_0", $"../Path3D/PathFollow_1", $"../Path3D/PathFollow_2", $"../Path3D/PathFollow_3", $"../Path3D/PathFollow_4", $"../Path3D/PathFollow_5", $"../Path3D/PathFollow_6", $"../Path3D/PathFollow_7"]
-@onready var path = get_parent().get_child(4)
+@onready var path_follow_2 = [$Path3D2/PathFollow_0, $Path3D2/PathFollow_1, $Path3D2/PathFollow_2, $Path3D2/PathFollow_3, $Path3D2/PathFollow_4, $Path3D2/PathFollow_5, $Path3D2/PathFollow_6, $Path3D2/PathFollow_7]
 var speed = 5.0 
 var target_progress = 0.0
 
@@ -91,10 +91,14 @@ func _on_checkpoint_sensor_area_entered(area: Area3D) -> void:
 	if checkpoint_store.size() == all_checkpoints and area.name == "point_0":
 		laps_num += 1
 		checkpoint_store = ["point_0"]
-		
-	elif priority_point_store.size() == get_parent().priority_points_num and area.name == "point_0":
+	elif priority_point_store.size() == get_parent().priority_points_num and area.name == "point_0" and get_parent().priority_points_num != 0:
 		laps_num += 1
 		checkpoint_store = ["point_0"]
+	elif area.name == "point_0" and priority_point_store.size() == get_parent().priority_points_num:
+		if get_parent().priority_points_num != 0:
+			laps_num += 1
+			checkpoint_store = ["point_0"]
+			print("hola")
 	
 	if laps_num >= get_parent().laps_num_to_finish + 1:
 			print("FIN DE LA CARRERA")
