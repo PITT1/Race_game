@@ -10,6 +10,7 @@ var is_on_race = false
 @export var min_distance_to_point = 30 
 @export var poitn_desviation = 5
 @onready var path_follow = [$"../Path3D/PathFollow_0", $"../Path3D/PathFollow_1", $"../Path3D/PathFollow_2", $"../Path3D/PathFollow_3", $"../Path3D/PathFollow_4", $"../Path3D/PathFollow_5", $"../Path3D/PathFollow_6", $"../Path3D/PathFollow_7"]
+var random_path
 var paths_in_race: Array = []
 var speed = 5.0 
 var target_progress = 0.0
@@ -29,7 +30,8 @@ func _ready() -> void:
 	for item in get_parent().get_children():
 		if item.get_class() == "Path3D":
 			paths_in_race.append(item)
-	print(paths_in_race)
+	
+	set_random_path_follow()
 
 func _physics_process(delta: float) -> void:
 	if is_on_race:
@@ -116,3 +118,8 @@ func _on_shock_timer_sensor_timeout() -> void:
 	shock_timer_sensor.stop()
 	print(name, " uso el recovery")
 	path_follow[path_to_follow].progress -= min_distance_to_point
+
+func set_random_path_follow():
+	random_path = paths_in_race.pick_random()
+	path_follow = random_path.get_children()
+	
