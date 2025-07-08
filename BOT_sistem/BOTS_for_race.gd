@@ -10,7 +10,7 @@ var is_on_race = false
 @export var min_distance_to_point = 30 
 @export var poitn_desviation = 5
 @onready var path_follow = [$"../Path3D/PathFollow_0", $"../Path3D/PathFollow_1", $"../Path3D/PathFollow_2", $"../Path3D/PathFollow_3", $"../Path3D/PathFollow_4", $"../Path3D/PathFollow_5", $"../Path3D/PathFollow_6", $"../Path3D/PathFollow_7"]
-@onready var path_follow_2 = [$Path3D2/PathFollow_0, $Path3D2/PathFollow_1, $Path3D2/PathFollow_2, $Path3D2/PathFollow_3, $Path3D2/PathFollow_4, $Path3D2/PathFollow_5, $Path3D2/PathFollow_6, $Path3D2/PathFollow_7]
+var paths_in_race: Array = []
 var speed = 5.0 
 var target_progress = 0.0
 
@@ -26,7 +26,10 @@ var recovery_mode: bool = false
 
 func _ready() -> void:
 	all_checkpoints = get_parent().num_checkpoints #esto hay que cambiarlo para el futuro ya que no se podra entrar al loby ni eventos de destruccion
-
+	for item in get_parent().get_children():
+		if item.get_class() == "Path3D":
+			paths_in_race.append(item)
+	print(paths_in_race)
 
 func _physics_process(delta: float) -> void:
 	if is_on_race:
