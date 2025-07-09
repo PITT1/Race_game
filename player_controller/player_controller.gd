@@ -24,6 +24,8 @@ var priority_point_store = []
 var all_checkpoints: int
 var laps_num: int = 1
 
+var previous: int = -1
+
 func _ready() -> void:
 	all_checkpoints = get_parent().num_checkpoints #esto hay que cambiarlo para el futuro ya que no se podra entrar al loby ni eventos de destruccion
 	var siblings = get_parent().get_children()
@@ -42,6 +44,15 @@ func _physics_process(delta: float) -> void:
 	
 
 func _on_checkpoint_sensor_area_entered(area: Area3D) -> void:
+	var num = area.name.split("_")[1]
+	if num != "point":
+		var numInt = int(num)
+		if numInt >= previous:
+			previous = numInt
+		else:
+			print("direccion erronea")
+			previous = numInt
+		
 	if not checkpoint_store.has(area.name) and not area.name.contains("priority"):
 		checkpoint_store.append(area.name)
 	elif not checkpoint_store.has(area.name) and area.name.contains("priority"):
