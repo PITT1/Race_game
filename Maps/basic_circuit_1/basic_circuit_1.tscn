@@ -1,0 +1,874 @@
+[gd_scene load_steps=19 format=3 uid="uid://daldokiad1rs2"]
+
+[ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="1_dqlug"]
+[ext_resource type="Script" uid="uid://kghgfx151qgh" path="res://Maps/circuit_test_2/test_2.gd" id="1_eco0a"]
+[ext_resource type="PackedScene" uid="uid://gohdvjtglwdh" path="res://Maps/basic_circuit_1/pista_basic_1.glb" id="1_f7gtp"]
+[ext_resource type="PackedScene" uid="uid://cd2fjxhklg8i1" path="res://huds/on_race_huds/countdown.tscn" id="2_avde0"]
+[ext_resource type="Script" uid="uid://csjccrhj5wnx7" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="2_eshm2"]
+[ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="3_g4mv0"]
+[ext_resource type="ArrayMesh" uid="uid://dc4upx53e4gie" path="res://others/spawners/spawn_arrow.obj" id="5_eshm2"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_eco0a"]
+sky_top_color = Color(0.156024, 0.551374, 0.836733, 1)
+sky_horizon_color = Color(0.44557, 0.544408, 0.615747, 1)
+ground_bottom_color = Color(0, 0, 0, 1)
+ground_horizon_color = Color(0.44557, 0.544408, 0.615747, 1)
+
+[sub_resource type="Sky" id="Sky_avde0"]
+sky_material = SubResource("ProceduralSkyMaterial_eco0a")
+
+[sub_resource type="Environment" id="Environment_8yx5d"]
+background_mode = 2
+sky = SubResource("Sky_avde0")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="Resource" id="Resource_f2qnn"]
+script = ExtResource("3_g4mv0")
+duration = 1.0
+transition = 0
+ease = 2
+
+[sub_resource type="Curve3D" id="Curve3D_dqlug"]
+closed = true
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 2.07745, -1.52588e-05, -1.91454, 0, 0, 0, 0, 0, 0, 4.64301, -1.52588e-05, -1.91454, 0, 0, 0, 0, 0, 0, 8.33552, -1.52588e-05, -2.22624, 0, 0, 0, 0, 0, 0, 15.6158, -1.52588e-05, -3.88848, 0, 0, 0, 0, 0, 0, 20.8279, -1.52588e-05, -6.44714, 0, 0, 0, 0, 0, 0, 28.4091, -1.52588e-05, -9.47962, 0, 0, 0, 0, 0, 0, 34.095, -1.52588e-05, -11.0906, 0, 0, 0, 0, 0, 0, 41.3919, -1.52588e-05, -15.2603, 0, 0, 0, 0, 0, 0, 50.1103, -1.52588e-05, -20.5671, 0, 0, 0, 0, 0, 0, 56.7039, -1.52588e-05, -28.5312, 0, 0, 0, 0, 0, 0, 64.0956, -1.52588e-05, -37.4391, 0, 0, 0, 0, 0, 0, 67.6967, -1.52588e-05, -46.4418, 0, 0, 0, 0, 0, 0, 70.0907, -1.52588e-05, -55.498, 0, 0, 0, 0, 0, 0, 69.7116, -1.52588e-05, -65.7326, 0, 0, 0, 0, 0, 0, 70.8499, -1.52588e-05, -76.3601, 0, 0, 0, 0, 0, 0, 72.4609, -1.52588e-05, -86.2156, 0, 0, 0, 0, 0, 0, 74.5241, -1.52588e-05, -102.908, 0, 0, 0, 0, 0, 0, 75.2815, -1.52588e-05, -121.085, 0, 0, 0, 0, 0, 0, 78.6896, -1.52588e-05, -147.971, 0, 0, 0, 0, 0, 0, 81.3404, -1.52588e-05, -168.799, 0, 0, 0, 0, 0, 0, 79.447, -1.52588e-05, -188.112, 0, 0, 0, 0, 0, 0, 70.3586, -1.52588e-05, -199.472, 0, 0, 0, 0, 0, 0, 51.4244, -1.52588e-05, -203.259, 0, 0, 0, 0, 0, 0, 41.9573, -1.52588e-05, -193.413, 0, 0, 0, 0, 0, 0, 40.0639, -1.52588e-05, -172.964, 0, 0, 0, 0, 0, 0, 42.336, -1.52588e-05, -137.747, 0, 0, 0, 0, 0, 0, 43.8507, -1.52588e-05, -109.724, 0, 0, 0, 0, 0, 0, 40.0639, -1.52588e-05, -80.5657, 0, 0, 0, 0, 0, 0, 33.2476, -1.52588e-05, -55.1939, 0, 0, 0, 0, 0, 0, 13.9347, -1.52588e-05, -42.6973, 0, 0, 0, 0, 0, 0, -6.89288, -1.52588e-05, -44.5907, 0, 0, 0, 0, 0, 0, -20.1468, -1.52588e-05, -55.5726, 0, 0, 0, 0, 0, 0, -24.3123, -1.52588e-05, -72.2346, 0, 0, 0, 0, 0, 0, -22.4189, -1.52588e-05, -91.5475, 0, 0, 0, 0, 0, 0, -17.8747, -1.52588e-05, -130.552, 0, 0, 0, 0, 0, 0, -18.2534, -1.52588e-05, -152.137, 0, 0, 0, 0, 0, 0, -17.8747, -1.52588e-05, -172.586, 0, 0, 0, 0, 0, 0, -24.691, -1.52588e-05, -202.88, 0, 0, 0, 0, 0, 0, -33.3879, -1.52588e-05, -215.311, 0, 0, 0, 0, 0, 0, -55.3516, -1.52588e-05, -227.429, 0, 0, 0, 0, 0, 0, -73.5284, -1.52588e-05, -234.624, 0, 0, 0, 0, 0, 0, -90.5691, -1.52588e-05, -238.032, 0, 0, 0, 0, 0, 0, -118.592, -1.52588e-05, -239.547, 0, 0, 0, 0, 0, 0, -142.07, -1.52588e-05, -240.683, 0, 0, 0, 0, 0, 0, -156.839, -1.52588e-05, -240.683, 0, 0, 0, 0, 0, 0, -176.818, -1.52588e-05, -241.197, 0, 0, 0, 0, 0, 0, -202.19, -1.52588e-05, -241.954, 0, 0, 0, 0, 0, 0, -221.882, -1.52588e-05, -241.197, 0, 0, 0, 0, 0, 0, -243.088, -1.52588e-05, -228.7, 0, 0, 0, 0, 0, 0, -257.478, -1.52588e-05, -218.476, 0, 0, 0, 0, 0, 0, -262.022, -1.52588e-05, -194.998, 0, 0, 0, 0, 0, 0, -260.886, -1.52588e-05, -172.655, 0, 0, 0, 0, 0, 0, -252.934, -1.52588e-05, -153.342, 0, 0, 0, 0, 0, 0, -241.194, -1.52588e-05, -144.633, 0, 0, 0, 0, 0, 0, -227.183, -1.52588e-05, -136.68, 0, 0, 0, 0, 0, 0, -216.58, -1.52588e-05, -134.03, 0, 0, 0, 0, 0, 0, -199.161, -1.52588e-05, -132.893, 0, 0, 0, 0, 0, 0, -176.44, -1.52588e-05, -141.603, 0, 0, 0, 0, 0, 0, -154.476, -1.52588e-05, -152.585, 0, 0, 0, 0, 0, 0, -135.542, -1.52588e-05, -158.265, 0, 0, 0, 0, 0, 0, -104.868, -1.52588e-05, -158.265, 0, 0, 0, 0, 0, 0, -80.5388, -1.52588e-05, -133.775, 0, 0, 0, 0, 0, 0, -73.3439, -1.52588e-05, -117.113, 0, 0, 0, 0, 0, 0, -74.8586, -1.52588e-05, -93.635, 0, 0, 0, 0, 0, 0, -81.2962, -1.52588e-05, -76.2155, 0, 0, 0, 0, 0, 0, -93.4141, -1.52588e-05, -64.0976, 0, 0, 0, 0, 0, 0, -113.106, -1.52588e-05, -58.4174, 0, 0, 0, 0, 0, 0, -138.856, -1.52588e-05, -55.0092, 0, 0, 0, 0, 0, 0, -169.151, -1.52588e-05, -55.0092, 0, 0, 0, 0, 0, 0, -195.909, -1.52588e-05, -48.4715, 0, 0, 0, 0, 0, 0, -212.193, -1.52588e-05, -35.2175, 0, 0, 0, 0, 0, 0, -233.778, -1.52588e-05, -13.6326, 0, 0, 0, 0, 0, 0, -235.671, -1.52588e-05, 6.81634, 0, 0, 0, 0, 0, 0, -236.807, -1.52588e-05, 40.8979, 0, 0, 0, 0, 0, 0, -234.92, -1.52588e-05, 85.2811, 0, 0, 0, 0, 0, 0, -230.376, -1.52588e-05, 105.73, 0, 0, 0, 0, 0, 0, -220.909, -1.52588e-05, 118.605, 0, 0, 0, 0, 0, 0, -201.576, -1.52588e-05, 136.654, 0, 0, 0, 0, 0, 0, -182.642, -1.52588e-05, 148.394, 0, 0, 0, 0, 0, 0, -158.406, -1.52588e-05, 157.482, 0, 0, 0, 0, 0, 0, -112.585, -1.52588e-05, 162.784, 0, 0, 0, 0, 0, 0, -70.5514, -1.52588e-05, 160.133, 0, 0, 0, 0, 0, 0, -42.9075, -1.52588e-05, 153.695, 0, 0, 0, 0, 0, 0, -12.397, -1.52588e-05, 148.815, 0, 0, 0, 0, 0, 0, 17.8977, -1.52588e-05, 143.514, 0, 0, 0, 0, 0, 0, 44.7842, -1.52588e-05, 140.863, 0, 0, 0, 0, 0, 0, 64.8545, -1.52588e-05, 126.473, 0, 0, 0, 0, 0, 0, 87.1968, -1.52588e-05, 113.598, 0, 0, 0, 0, 0, 0, 101.208, -1.52588e-05, 104.888, 0, 0, 0, 0, 0, 0, 115.219, -1.52588e-05, 90.1192, 0, 0, 0, 0, 0, 0, 118.628, -1.52588e-05, 71.1851, 0, 0, 0, 0, 0, 0, 108.782, -1.52588e-05, 57.5525, 0, 0, 0, 0, 0, 0, 83.7887, -1.52588e-05, 45.4346, 0, 0, 0, 0, 0, 0, 39.4827, -1.52588e-05, 46.1919, 0, 0, 0, 0, 0, 0, 17.1403, -1.52588e-05, 51.4935, 0, 0, 0, 0, 0, 0, -30.1951, -1.52588e-05, 51.1148, 0, 0, 0, 0, 0, 0, -58.2177, -1.52588e-05, 43.9198, 0, 0, 0, 0, 0, 0, -93.8768, -1.52588e-05, 43.5466, 0, 0, 0, 0, 0, 0, -115.462, -1.52588e-05, 46.1974, 0, 0, 0, 0, 0, 0, -128.716, -1.52588e-05, 56.0431, 0, 0, 0, 0, 0, 0, -141.591, -1.52588e-05, 73.8413, 0, 0, 0, 0, 0, 0, -149.922, -1.52588e-05, 85.9591, 0, 0, 0, 0, 0, 0, -163.555, -1.52588e-05, 95.8049, 0, 0, 0, 0, 0, 0, -181.731, -1.52588e-05, 93.5328, 0, 0, 0, 0, 0, 0, -194.228, -1.52588e-05, 77.6281, 0, 0, 0, 0, 0, 0, -204.452, -1.52588e-05, 52.2563, 0, 0, 0, 0, 0, 0, -199.151, -1.52588e-05, 26.5058, 0, 0, 0, 0, 0, 0, -189.021, -1.52588e-05, 9.98697, 0, 0, 0, 0, 0, 0, -177.282, -1.52588e-05, 0.141195, 0, 0, 0, 0, 0, 0, -164.785, -1.52588e-05, -1.75223, 0, 0, 0, 0, 0, 0, -131.84, -1.52588e-05, -4.40301, 0, 0, 0, 0, 0, 0, -87.534, -1.52588e-05, -4.40301, 0, 0, 0, 0, 0, 0, -67.0759, -1.52588e-05, -5.72791, 0, 0, 0, 0, 0, 0, -53.5698, -1.52588e-05, -5.72791, 0, 0, 0, 0, 0, 0, -32.1706, -1.52588e-05, -5.90332, 0, 0, 0, 0, 0, 0, -21.9972, -1.52588e-05, -5.37711, 0, 0, 0, 0, 0, 0, -17.0859, -1.52588e-05, -4.32468),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 117
+
+[sub_resource type="Curve3D" id="Curve3D_eshm2"]
+closed = true
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 4.19447, -7.15256e-06, 5.53237, 0, 0, 0, 0, 0, 0, 10.088, -7.15256e-06, 5.77793, 0, 0, 0, 0, 0, 0, 17.7496, -7.15256e-06, 5.53237, 0, 0, 0, 0, 0, 0, 23.4958, -7.15256e-06, 4.79567, 0, 0, 0, 0, 0, 0, 45.3467, -7.15256e-06, 1.76214, 0, 0, 0, 0, 0, 0, 60.757, -7.15256e-06, -2.41694, 0, 0, 0, 0, 0, 0, 75.3838, -7.15256e-06, -10.2527, 0, 0, 0, 0, 0, 0, 89.227, -7.15256e-06, -20.4392, 0, 0, 0, 0, 0, 0, 105.682, -7.15256e-06, -36.6331, 0, 0, 0, 0, 0, 0, 114.301, -7.15256e-06, -48.9092, 0, 0, 0, 0, 0, 0, 119.06, -7.15256e-06, -63.5829, 0, 0, 0, 0, 0, 0, 124.545, -7.15256e-06, -94.4036, 0, 0, 0, 0, 0, 0, 130.03, -7.15256e-06, -110.075, 0, 0, 0, 0, 0, 0, 132.38, -7.15256e-06, -127.314, 0, 0, 0, 0, 0, 0, 132.367, -7.15256e-06, -148.292, 0, 0, 0, 0, 0, 0, 134.979, -7.15256e-06, -187.732, 0, 0, 0, 0, 0, 0, 138.636, -7.15256e-06, -208.889, 0, 0, 0, 0, 0, 0, 138.903, -7.15256e-06, -226.635, 0, 0, 0, 0, 0, 0, 143.822, -7.15256e-06, -252.052, 0, 0, 0, 0, 0, 0, 143.822, -7.15256e-06, -270.499, 0, 0, 0, 0, 0, 0, 133.984, -7.15256e-06, -288.537, 0, 0, 0, 0, 0, 0, 120.865, -7.15256e-06, -300.835, 0, 0, 0, 0, 0, 0, 107.337, -7.15256e-06, -306.574, 0, 0, 0, 0, 0, 0, 86.84, -7.15256e-06, -309.444, 0, 0, 0, 0, 0, 0, 61.8335, -7.15256e-06, -304.114, 0, 0, 0, 0, 0, 0, 48.7153, -7.15256e-06, -273.779, 0, 0, 0, 0, 0, 0, 45.4357, -7.15256e-06, -225.405, 0, 0, 0, 0, 0, 0, 52.4047, -7.15256e-06, -190.97, 0, 0, 0, 0, 0, 0, 54.4545, -7.15256e-06, -161.044, 0, 0, 0, 0, 0, 0, 57.6086, -7.15256e-06, -115.651, 0, 0, 0, 0, 0, 0, 53.9191, -7.15256e-06, -87.3645, 0, 0, 0, 0, 0, 0, 46.5401, -7.15256e-06, -76.296, 0, 0, 0, 0, 0, 0, 17.0241, -7.15256e-06, -61.1281, 0, 0, 0, 0, 0, 0, -2.65318, -7.15256e-06, -60.7182, 0, 0, 0, 0, 0, 0, -33.399, -7.15256e-06, -74.6562, 0, 0, 0, 0, 0, 0, -46.9271, -7.15256e-06, -102.532, 0, 0, 0, 0, 0, 0, -47.747, -7.15256e-06, -127.129, 0, 0, 0, 0, 0, 0, -40.368, -7.15256e-06, -157.465, 0, 0, 0, 0, 0, 0, -32.989, -7.15256e-06, -173.453, 0, 0, 0, 0, 0, 0, -24.9376, -7.15256e-06, -196.789, 0, 0, 0, 0, 0, 0, -20.8382, -7.15256e-06, -244.343, 0, 0, 0, 0, 0, 0, -18.3785, -7.15256e-06, -273.859, 0, 0, 0, 0, 0, 0, -20.0183, -7.15256e-06, -297.635, 0, 0, 0, 0, 0, 0, -26.9874, -7.15256e-06, -310.753, 0, 0, 0, 0, 0, 0, -36.517, -7.15256e-06, -325.377, 0, 0, 0, 0, 0, 0, -59.4738, -7.15256e-06, -347.514, 0, 0, 0, 0, 0, 0, -75.8715, -7.15256e-06, -355.303, 0, 0, 0, 0, 0, 0, -113.176, -7.15256e-06, -361.042, 0, 0, 0, 0, 0, 0, -141.872, -7.15256e-06, -364.731, 0, 0, 0, 0, 0, 0, -171.255, -7.15256e-06, -364.26, 0, 0, 0, 0, 0, 0, -246.276, -7.15256e-06, -368.36, 0, 0, 0, 0, 0, 0, -290.14, -7.15256e-06, -368.36, 0, 0, 0, 0, 0, 0, -305.718, -7.15256e-06, -362.211, 0, 0, 0, 0, 0, 0, -354.401, -7.15256e-06, -347.086, 0, 0, 0, 0, 0, 0, -376.948, -7.15256e-06, -332.738, 0, 0, 0, 0, 0, 0, -385.967, -7.15256e-06, -313.881, 0, 0, 0, 0, 0, 0, -386.377, -7.15256e-06, -286.005, 0, 0, 0, 0, 0, 0, -385.557, -7.15256e-06, -253.619, 0, 0, 0, 0, 0, 0, -378.998, -7.15256e-06, -239.681, 0, 0, 0, 0, 0, 0, -366.699, -7.15256e-06, -224.513, 0, 0, 0, 0, 0, 0, -348.662, -7.15256e-06, -218.364, 0, 0, 0, 0, 0, 0, -325.295, -7.15256e-06, -209.345, 0, 0, 0, 0, 0, 0, -292.09, -7.15256e-06, -206.476, 0, 0, 0, 0, 0, 0, -237.977, -7.15256e-06, -215.085, 0, 0, 0, 0, 0, 0, -214.2, -7.15256e-06, -221.234, 0, 0, 0, 0, 0, 0, -169.894, -7.15256e-06, -222.73, 0, 0, 0, 0, 0, 0, -146.937, -7.15256e-06, -220.68, 0, 0, 0, 0, 0, 0, -117.011, -7.15256e-06, -213.711, 0, 0, 0, 0, 0, 0, -98.1538, -7.15256e-06, -191.164, 0, 0, 0, 0, 0, 0, -94.8742, -7.15256e-06, -171.077, 0, 0, 0, 0, 0, 0, -94.0543, -7.15256e-06, -145.66, 0, 0, 0, 0, 0, 0, -103.893, -7.15256e-06, -125.573, 0, 0, 0, 0, 0, 0, -114.552, -7.15256e-06, -113.275, 0, 0, 0, 0, 0, 0, -143.084, -7.15256e-06, -93.0554, 0, 0, 0, 0, 0, 0, -169.32, -7.15256e-06, -83.6267, 0, 0, 0, 0, 0, 0, -215.234, -7.15256e-06, -77.0676, 0, 0, 0, 0, 0, 0, -251.309, -7.15256e-06, -75.8378, 0, 0, 0, 0, 0, 0, -299.682, -7.15256e-06, -58.2102, 0, 0, 0, 0, 0, 0, -328.416, -7.15256e-06, -24.6917, 0, 0, 0, 0, 0, 0, -351.783, -7.15256e-06, 22.4518, 0, 0, 0, 0, 0, 0, -355.883, -7.15256e-06, 56.4771, 0, 0, 0, 0, 0, 0, -347.721, -7.15256e-06, 101.56, 0, 0, 0, 0, 0, 0, -344.441, -7.15256e-06, 139.685, 0, 0, 0, 0, 0, 0, -340.752, -7.15256e-06, 179.859, 0, 0, 0, 0, 0, 0, -328.043, -7.15256e-06, 190.928, 0, 0, 0, 0, 0, 0, -305.906, -7.15256e-06, 204.866, 0, 0, 0, 0, 0, 0, -275.076, -7.15256e-06, 219.528, 0, 0, 0, 0, 0, 0, -233.262, -7.15256e-06, 225.677, 0, 0, 0, 0, 0, 0, -191.448, -7.15256e-06, 235.105, 0, 0, 0, 0, 0, 0, -149.634, -7.15256e-06, 231.416, 0, 0, 0, 0, 0, 0, -104.13, -7.15256e-06, 226.907, 0, 0, 0, 0, 0, 0, -56.8942, -7.15256e-06, 222.225, 0, 0, 0, 0, 0, 0, -17.1297, -7.15256e-06, 209.107, 0, 0, 0, 0, 0, 0, 23.8647, -7.15256e-06, 205.007, 0, 0, 0, 0, 0, 0, 60.3497, -7.15256e-06, 190.249, 0, 0, 0, 0, 0, 0, 94.375, -7.15256e-06, 179.591, 0, 0, 0, 0, 0, 0, 123.42, -7.15256e-06, 168.563, 0, 0, 0, 0, 0, 0, 155.806, -7.15256e-06, 140.277, 0, 0, 0, 0, 0, 0, 175.483, -7.15256e-06, 120.19, 0, 0, 0, 0, 0, 0, 180.402, -7.15256e-06, 106.252, 0, 0, 0, 0, 0, 0, 175.483, -7.15256e-06, 89.0341, 0, 0, 0, 0, 0, 0, 164.415, -7.15256e-06, 77.1457, 0, 0, 0, 0, 0, 0, 150.067, -7.15256e-06, 73.4562, 0, 0, 0, 0, 0, 0, 117.681, -7.15256e-06, 72.2264, 0, 0, 0, 0, 0, 0, 63.9784, -7.15256e-06, 71.4065, 0, 0, 0, 0, 0, 0, 34.0526, -7.15256e-06, 71.8165, 0, 0, 0, 0, 0, 0, 2.89683, -7.15256e-06, 71.8165, 0, 0, 0, 0, 0, 0, -28.2589, -7.15256e-06, 66.4872, 0, 0, 0, 0, 0, 0, -87.1577, -7.15256e-06, 59.6869, 0, 0, 0, 0, 0, 0, -128.972, -7.15256e-06, 59.2769, 0, 0, 0, 0, 0, 0, -153.159, -7.15256e-06, 67.0659, 0, 0, 0, 0, 0, 0, -185.544, -7.15256e-06, 116.259, 0, 0, 0, 0, 0, 0, -208.145, -7.15256e-06, 133.13, 0, 0, 0, 0, 0, 0, -228.642, -7.15256e-06, 148.298, 0, 0, 0, 0, 0, 0, -247.91, -7.15256e-06, 154.447, 0, 0, 0, 0, 0, 0, -274.556, -7.15256e-06, 138.459, 0, 0, 0, 0, 0, 0, -293.003, -7.15256e-06, 109.763, 0, 0, 0, 0, 0, 0, -302.842, -7.15256e-06, 96.2353, 0, 0, 0, 0, 0, 0, -309.811, -7.15256e-06, 82.2972, 0, 0, 0, 0, 0, 0, -303.722, -7.15256e-06, 37.7365, 0, 0, 0, 0, 0, 0, -297.983, -7.15256e-06, 13.5498, 0, 0, 0, 0, 0, 0, -282.815, -7.15256e-06, 2.07142, 0, 0, 0, 0, 0, 0, -263.138, -7.15256e-06, -9.81694, 0, 0, 0, 0, 0, 0, -229.112, -7.15256e-06, -9.407, 0, 0, 0, 0, 0, 0, -202.056, -7.15256e-06, -2.84791, 0, 0, 0, 0, 0, 0, -170.49, -7.15256e-06, 4.12114, 0, 0, 0, 0, 0, 0, -137.695, -7.15256e-06, 9.45041, 0, 0, 0, 0, 0, 0, -107.769, -7.15256e-06, 8.63052, 0, 0, 0, 0, 0, 0, -67.1319, -7.15256e-06, 9.30686, 0, 0, 0, 0, 0, 0, -42.9452, -7.15256e-06, 8.48697, 0, 0, 0, 0, 0, 0, -24.724, -7.15256e-06, 8.03321, 0, 0, 0, 0, 0, 0, -15.6255, -7.15256e-06, 8.03321),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 132
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g4mv0"]
+size = Vector3(58.3376, 18.7666, 5.27968)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_eco0a"]
+size = Vector3(2.10364, 33.2357, 57.0014)
+
+[sub_resource type="Animation" id="Animation_j2xqt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_am243"]
+resource_name = "init_race"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ColorRect:color")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_alync"]
+_data = {
+&"RESET": SubResource("Animation_j2xqt"),
+&"init_race": SubResource("Animation_am243")
+}
+
+[node name="BasicCircuit1" type="Node3D"]
+script = ExtResource("1_eco0a")
+countdown = ExtResource("2_avde0")
+priority_points_num = 3
+laps_num_to_finish = 3
+poitn_desviation_BOT = 2
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_8yx5d")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.899558, -0.427726, 0.0885779, 0, 0.202787, 0.979223, -0.436802, 0.880867, -0.182419, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.732591, 0.692228, -0.540246, -4.59305e-08, 0.617123, 0.782893, 1.35592, 0.374004, -0.29189, 0, 67.935, 126.08)
+
+[node name="PhantomCameraHost" type="Node" parent="Camera3D"]
+process_priority = 300
+process_physics_priority = 300
+script = ExtResource("1_dqlug")
+metadata/_custom_type_script = "uid://bd046eokvcnu2"
+
+[node name="PhantomCamera3D" type="Node3D" parent="."]
+transform = Transform3D(-0.732591, 0.692228, -0.540246, -4.59305e-08, 0.617123, 0.782893, 1.35592, 0.374004, -0.29189, 0, 67.935, 126.08)
+top_level = true
+script = ExtResource("2_eshm2")
+follow_mode = 2
+look_at_mode = 2
+tween_resource = SubResource("Resource_f2qnn")
+follow_offset = Vector3(-13.155, 17.935, -6.135)
+metadata/_custom_type_script = "uid://csjccrhj5wnx7"
+
+[node name="pista_basic_1" parent="." instance=ExtResource("1_f7gtp")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+
+[node name="Path3D" type="Path3D" parent="."]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 109.296, 6.27944, -1.81459)
+curve = SubResource("Curve3D_dqlug")
+
+[node name="PathFollow_0" type="PathFollow3D" parent="Path3D"]
+transform = Transform3D(-4.37047e-08, 0, -0.999849, 0, 0.999827, 0, 0.999846, 0, -4.37048e-08, 2.07745, -1.52588e-05, -1.91454)
+
+[node name="PathFollow_1" type="PathFollow3D" parent="Path3D"]
+transform = Transform3D(-4.37075e-08, 0, -0.999988, 0, 0.999963, 0, 0.999911, 0, -4.37109e-08, 2.07745, -1.52588e-05, -1.91454)
+
+[node name="PathFollow_2" type="PathFollow3D" parent="Path3D"]
+transform = Transform3D(-4.37086e-08, 0, -0.99999, 0, 0.999965, 0, 0.999937, 0, -4.3711e-08, 2.07745, -1.52588e-05, -1.91454)
+
+[node name="PathFollow_3" type="PathFollow3D" parent="Path3D"]
+transform = Transform3D(-4.37078e-08, 0, -0.999988, 0, 0.999964, 0, 0.999919, 0, -4.37109e-08, 2.07745, -1.52588e-05, -1.91454)
+
+[node name="PathFollow_4" type="PathFollow3D" parent="Path3D"]
+transform = Transform3D(-4.37086e-08, 0, -0.99999, 0, 0.999965, 0, 0.999937, 0, -4.3711e-08, 2.07745, -1.52588e-05, -1.91454)
+
+[node name="PathFollow_5" type="PathFollow3D" parent="Path3D"]
+transform = Transform3D(-4.37086e-08, 0, -0.99999, 0, 0.999965, 0, 0.999937, 0, -4.3711e-08, 2.07745, -1.52588e-05, -1.91454)
+
+[node name="PathFollow_6" type="PathFollow3D" parent="Path3D"]
+transform = Transform3D(-4.37086e-08, 0, -0.99999, 0, 0.999965, 0, 0.999937, 0, -4.3711e-08, 2.07745, -1.52588e-05, -1.91454)
+
+[node name="PathFollow_7" type="PathFollow3D" parent="Path3D"]
+transform = Transform3D(-4.37086e-08, 0, -0.99999, 0, 0.999965, 0, 0.999937, 0, -4.3711e-08, 2.07745, -1.52588e-05, -1.91454)
+
+[node name="Path3D2" type="Path3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 104.655, 5.5315, -1.81459)
+curve = SubResource("Curve3D_eshm2")
+
+[node name="PathFollow_0" type="PathFollow3D" parent="Path3D2"]
+transform = Transform3D(0.0986179, 0, -0.994975, 0, 0.999827, 0, 0.994971, 0, 0.0986184, -80.6135, -7.15256e-06, 224.576)
+progress = 2607.02
+
+[node name="PathFollow_1" type="PathFollow3D" parent="Path3D2"]
+transform = Transform3D(-0.0416264, 0, -0.999113, 0, 0.999963, 0, 0.999036, 0, -0.0416296, 4.19447, -7.15256e-06, 5.53237)
+
+[node name="PathFollow_2" type="PathFollow3D" parent="Path3D2"]
+transform = Transform3D(-0.0416278, 0, -0.999115, 0, 0.999965, 0, 0.99907, 0, -0.0416297, 4.19447, -7.15256e-06, 5.53237)
+
+[node name="PathFollow_3" type="PathFollow3D" parent="Path3D2"]
+transform = Transform3D(-0.0416267, 0, -0.999113, 0, 0.999964, 0, 0.999044, 0, -0.0416296, 4.19447, -7.15256e-06, 5.53237)
+
+[node name="PathFollow_4" type="PathFollow3D" parent="Path3D2"]
+transform = Transform3D(-0.0416278, 0, -0.999115, 0, 0.999965, 0, 0.99907, 0, -0.0416297, 4.19447, -7.15256e-06, 5.53237)
+
+[node name="PathFollow_5" type="PathFollow3D" parent="Path3D2"]
+transform = Transform3D(-0.0416278, 0, -0.999115, 0, 0.999965, 0, 0.99907, 0, -0.0416297, 4.19447, -7.15256e-06, 5.53237)
+
+[node name="PathFollow_6" type="PathFollow3D" parent="Path3D2"]
+transform = Transform3D(-0.0416278, 0, -0.999115, 0, 0.999965, 0, 0.99907, 0, -0.0416297, 4.19447, -7.15256e-06, 5.53237)
+
+[node name="PathFollow_7" type="PathFollow3D" parent="Path3D2"]
+transform = Transform3D(-0.0416278, 0, -0.999115, 0, 0.999965, 0, 0.99907, 0, -0.0416297, 4.19447, -7.15256e-06, 5.53237)
+
+[node name="checkpoints_sistem" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 92.4362, 0, -98.6407)
+
+[node name="point_0" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10.8411, 7.92498, 97.5524)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_1" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(-0.102359, 0, 0.994748, 0, 1, 0, -0.994748, 0, -0.102359, 47.321, 7.92498, 96.2573)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_2" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(-0.351548, 0, 0.93617, 0, 1, 0, -0.93617, 0, -0.351548, 83.4133, 7.92498, 84.3656)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_3" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(-0.693012, 0, 0.720926, 0, 1, 0, -0.720926, 0, -0.693012, 115.124, 7.92498, 60.5822)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_4" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(-0.971251, 0, 0.238059, 0, 1, 0, -0.238059, 0, -0.971251, 132.023, 7.92498, 19.9001)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_5" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(-0.987242, 0, 0.159226, 0, 1, 0, -0.159226, 0, -0.987242, 136.822, 7.92498, -21.1993)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_6" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(-0.992454, 0, 0.122614, 0, 1, 0, -0.122614, 0, -0.992454, 140.994, 7.92498, -76.4852)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_7" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(-0.98386, 0, 0.178939, 0, 1, 0, -0.178939, 0, -0.98386, 144.332, 7.92498, -130.519)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_8" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(-0.979935, 0, -0.199317, 0, 1, 0, 0.199317, 0, -0.979935, 148.505, 7.92498, -178.712)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_9" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(-0.405939, 0, -0.9139, 0, 1, 0, 0.9139, 0, -0.405939, 120.34, 7.92498, -211.466)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_10" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(0.472889, 0, -0.881122, 0, 1, 0, 0.881122, 0, 0.472889, 83.4133, 7.92498, -211.466)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_11" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(0.989435, 0, -0.144978, 0, 1, 0, 0.144978, 0, 0.989435, 65.8887, 7.92498, -179.755)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_12" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(0.998338, 0, 0.0576339, 0, 1, 0, -0.0576339, 0, 0.998338, 65.6454, 7.92498, -139.847)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_12"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_13" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(0.992916, 0, 0.11882, 0, 1, 0, -0.11882, 0, 0.992916, 70.7555, 7.92498, -90.4488)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_13"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="priority_point_1" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(0.0636266, 0, 0.997974, 0, 1, 0, -0.997974, 0, 0.0636266, -20.1094, 10.2605, 4.52215)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/priority_point_1"]
+transform = Transform3D(0.741707, 0, 0.670724, 0, 1, 0, -0.670724, 0, 0.741707, 0, 0, 0)
+shape = SubResource("BoxShape3D_eco0a")
+debug_color = Color(1, 0, 0, 1)
+
+[node name="priority_point_2" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(-0.99324, 0, 0.116081, 0, 1, 0, -0.116081, 0, -0.99324, -102.367, 10.2605, -20.8278)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/priority_point_2"]
+transform = Transform3D(0.741707, 0, 0.670724, 0, 1, 0, -0.670724, 0, 0.741707, 0, 0, 0)
+shape = SubResource("BoxShape3D_eco0a")
+debug_color = Color(1, 0, 0, 1)
+
+[node name="priority_point_3" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(0.702675, 0, -0.711511, 0, 1, 0, 0.711511, 0, 0.702675, -209.458, 10.2605, 90.919)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/priority_point_3"]
+transform = Transform3D(0.741707, 0, 0.670724, 0, 1, 0, -0.670724, 0, 0.741707, 0, 0, 0)
+shape = SubResource("BoxShape3D_eco0a")
+debug_color = Color(1, 0, 0, 1)
+
+[node name="point_14" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(0.998398, 0, 0.056571, 0, 1, 0, -0.056571, 0, 0.998398, 72.8249, 7.92498, -48.0264)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_14"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_15" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(0.819382, 0, -0.573247, 0, 1, 0, 0.573247, 0, 0.819382, 64.8393, 7.92498, 4.45016)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_15"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_16" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(-0.111, 0, -0.99382, 0, 1, 0, 0.99382, 0, -0.111, 18.8273, 7.92498, 28.4069)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_16"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_17" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(-0.998672, 0, 0.0515165, 0, 1, 0, -0.0515165, 0, -0.998672, -28.3256, 7.92498, -33.5763)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_17"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_18" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(-0.993009, 0, 0.11804, 0, 1, 0, -0.11804, 0, -0.993009, -25.2835, 7.92498, -86.4332)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_18"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_19" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(-0.993009, 0, 0.11804, 0, 1, 0, -0.11804, 0, -0.993009, -18.4387, 7.92498, -152.599)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_19"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_20" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(-0.96423, 0, -0.265068, 0, 1, 0, 0.265068, 0, -0.96423, -16.5374, 7.92498, -208.498)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_20"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_21" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(-0.658466, 0, -0.752611, 0, 1, 0, 0.752611, 0, -0.658466, -36.6914, 7.92498, -243.483)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_21"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_22" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(-0.219471, 0, -0.975619, 0, 1, 0, 0.975619, 0, -0.219471, -75.0982, 7.92498, -260.975)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_22"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_23" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(-0.0527714, 0, -0.998607, 0, 1, 0, 0.998607, 0, -0.0527714, -119.589, 7.92498, -266.679)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_23"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_24" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(-0.0874684, 0, -0.996167, 0, 1, 0, 0.996167, 0, -0.0874684, -167.883, 7.92498, -270.101)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_24"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_25" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(-0.0596371, 0, -0.99822, 0, 1, 0, 0.99822, 0, -0.0596371, -231.007, 7.92498, -275.805)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_25"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_26" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(0.0679807, 0, -0.997687, 0, 1, 0, 0.997687, 0, 0.0679807, -286.906, 7.92498, -278.087)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_26"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_27" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(0.18733, 0, -0.982297, 0, 1, 0, 0.982297, 0, 0.18733, -335.96, 7.92498, -267.059)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_27"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_28" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(0.948235, 0, -0.317569, 0, 1, 0, 0.317569, 0, 0.948235, -383.113, 7.92498, -224.85)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_28"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_29" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(0.978832, 0, 0.204667, 0, 1, 0, -0.204667, 0, 0.978832, -385.775, 7.92498, -168.951)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_29"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_30" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(0.424262, 0, 0.905539, 0, 1, 0, -0.905539, 0, 0.424262, -358.396, 7.92498, -118.375)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_30"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_31" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(-0.124814, 0, 0.99218, 0, 1, 0, -0.99218, 0, -0.124814, -310.482, 7.92498, -112.671)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_31"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_32" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(-0.124814, 0, 0.99218, 0, 1, 0, -0.99218, 0, -0.124814, -248.879, 7.92498, -124.84)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_32"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_33" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(0.014817, 0, 0.99989, 0, 1, 0, -0.99989, 0, 0.014817, -166.362, 7.92498, -134.727)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_33"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_34" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(0.384811, 0, 0.922996, 0, 1, 0, -0.922996, 0, 0.384811, -118.829, 7.92498, -124.079)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_34"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_35" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(0.950862, 0, 0.309615, 0, 1, 0, -0.309615, 0, 0.950862, -87.2667, 7.92498, -86.4331)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_35"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_36" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(0.30059, 0, -0.953754, 0, 1, 0, 0.953754, 0, 0.30059, -140.124, 7.92498, 0.267418)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_36"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_37" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(0.202497, 0, -0.979283, 0, 1, 0, 0.979283, 0, 0.202497, -199.825, 7.92498, 12.8162)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_37"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_38" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(0.26037, 0, -0.965509, 0, 1, 0, 0.965509, 0, 0.26037, -272.456, 7.92498, 28.0268)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_38"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_39" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(0.707082, 2.17936e-08, -0.707131, -1.1294e-08, 1, 1.95264e-08, 0.707131, -5.82041e-09, 0.707082, -325.693, 7.92498, 65.2928)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_39"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_40" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(0.9893, 1.4022e-08, -0.145893, -1.1294e-08, 1, 1.95264e-08, 0.145893, -1.76698e-08, 0.9893, -348.509, 7.92498, 134.501)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_40"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_41" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(0.995846, 9.46925e-09, 0.09105, -1.1294e-08, 1, 1.95264e-08, -0.09105, -2.04736e-08, 0.995846, -344.326, 7.92498, 213.216)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_41"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_42" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(0.916767, 2.55474e-09, 0.399421, -1.1294e-08, 1, 1.95264e-08, -0.399421, -2.24123e-08, 0.916767, -329.496, 7.92498, 274.058)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_42"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_43" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(0.402523, -1.33286e-08, 0.91541, -1.1294e-08, 1, 1.95264e-08, -0.91541, -1.81985e-08, 0.402523, -279.301, 7.92498, 318.169)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_43"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_44" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(0.186078, -1.70838e-08, 0.982535, -1.1294e-08, 1, 1.95264e-08, -0.982535, -1.47302e-08, 0.186078, -221.12, 7.92498, 332.239)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_44"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_45" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(0.0295961, -1.91836e-08, 0.999562, -1.1294e-08, 1, 1.95264e-08, -0.999562, -1.1867e-08, 0.0295961, -161.418, 7.92498, 334.14)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_45"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_46" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(-0.0830173, -2.03966e-08, 0.996548, -1.1294e-08, 1, 1.95264e-08, -0.996548, -9.63403e-09, -0.0830173, -104.759, 7.92498, 330.718)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_46"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_47" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(-0.143389, -2.09441e-08, 0.989666, -1.1294e-08, 1, 1.95264e-08, -0.989666, -8.37745e-09, -0.143389, -48.4797, 7.92498, 319.31)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_47"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_48" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(-0.207929, -2.1448e-08, 0.978144, -1.1294e-08, 1, 1.95264e-08, -0.978144, -6.98709e-09, -0.207929, 6.27846, 7.92498, 308.282)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_48"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_49" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(-0.221872, -2.15456e-08, 0.975076, -1.1294e-08, 1, 1.95264e-08, -0.975076, -6.68018e-09, -0.221872, 62.938, 7.92498, 294.973)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_49"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_50" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(-0.226975, -2.15802e-08, 0.973901, -1.1294e-08, 1, 1.95264e-08, -0.973901, -6.56727e-09, -0.226975, 110.471, 7.92498, 284.706)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_50"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_51" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(-0.465105, -2.25388e-08, 0.885256, -1.1294e-08, 1, 1.95264e-08, -0.885256, -9.16278e-10, -0.465105, 153.441, 7.92498, 261.89)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_51"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_52" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(-0.567657, -2.24866e-08, 0.823265, -1.1294e-08, 1, 1.95264e-08, -0.823265, 1.78632e-09, -0.567657, 185.003, 7.92498, 235.652)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_52"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_53" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(-0.998366, -1.01597e-08, -0.0571462, -1.1294e-08, 1, 1.95264e-08, 0.0571462, 2.01399e-08, -0.998366, 204.397, 7.92498, 199.146)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_53"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_54" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(-0.67907, 6.66439e-09, -0.734074, -1.1294e-08, 1, 1.95264e-08, 0.734074, 2.15505e-08, -0.67907, 189.947, 7.92498, 168.725)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_54"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_55" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(-0.00888327, 1.94253e-08, -0.999961, -1.1294e-08, 1, 1.95264e-08, 0.999961, 1.14671e-08, -0.00888327, 149.258, 7.92498, 154.275)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_55"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_56" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(0.247574, 2.17147e-08, -0.968869, -1.1294e-08, 1, 1.95264e-08, 0.968869, 6.10821e-09, 0.247574, 94.8803, 7.92498, 161.12)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_56"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_57" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(0.0562227, 2.01305e-08, -0.998418, -1.1294e-08, 1, 1.95264e-08, 0.998418, 1.01783e-08, 0.0562227, 48.4879, 7.92498, 171.767)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_57"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_58" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(-0.0566053, 1.88558e-08, -0.998397, -1.1294e-08, 1, 1.95264e-08, 0.998397, 1.23812e-08, -0.0566053, -6.27023, 7.92498, 168.725)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_58"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_59" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(-0.0566053, 1.88558e-08, -0.998397, -1.1294e-08, 1, 1.95264e-08, 0.998397, 1.23812e-08, -0.0566053, -56.8455, 7.92498, 166.824)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_59"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_60" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(-0.000278879, 1.95233e-08, -1, -1.1294e-08, 1, 1.95264e-08, 1, 1.12995e-08, -0.000278879, -108.562, 7.92498, 165.302)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_60"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_61" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(0.576461, 2.24661e-08, -0.817125, -1.1294e-08, 1, 1.95264e-08, 0.817125, -2.02758e-09, 0.576461, -155.334, 7.92498, 178.612)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_61"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_62" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(0.576461, 2.24661e-08, -0.817125, -1.1294e-08, 1, 1.95264e-08, 0.817125, -2.02758e-09, 0.576461, -193.361, 7.92498, 214.357)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_62"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_63" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(0.282559, 2.19219e-08, -0.95925, -1.1294e-08, 1, 1.95264e-08, 0.95925, 5.31644e-09, 0.282559, -233.288, 7.92498, 248.581)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_63"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_64" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(-0.879972, -6.62895e-10, -0.475026, -1.1294e-08, 1, 1.95264e-08, 0.475026, 2.25477e-08, -0.879972, -283.483, 7.92498, 212.455)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_64"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_65" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(-0.998862, -1.22126e-08, 0.0476988, -1.1294e-08, 1, 1.95264e-08, -0.0476988, 1.89655e-08, -0.998862, -289.948, 7.92498, 155.796)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_65"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_66" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(-0.523436, -2.25495e-08, 0.852065, -1.1294e-08, 1, 1.95264e-08, -0.852065, 5.97573e-10, -0.523436, -270.935, 7.92498, 97.9955)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_66"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="point_67" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(0.0284447, -1.91973e-08, 0.999595, -1.1294e-08, 1, 1.95264e-08, -0.999595, -1.18449e-08, 0.0284447, -163.7, 7.92498, 94.1929)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_67"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
+shape = SubResource("BoxShape3D_g4mv0")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_alync")
+}
+
+[node name="spawners" type="Node3D" parent="."]
+transform = Transform3D(0.999991, 0, 0.00417132, 0, 1, 0, -0.00417132, 0, 0.999991, 95.6519, 1.69493, -8.04174)
+
+[node name="spawn_point_0" type="MeshInstance3D" parent="spawners"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+mesh = ExtResource("5_eshm2")
+
+[node name="spawn_point_1" type="MeshInstance3D" parent="spawners"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 13.3675)
+mesh = ExtResource("5_eshm2")
+
+[node name="spawn_point_2" type="MeshInstance3D" parent="spawners"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9.10127, 0, 0.189606)
+mesh = ExtResource("5_eshm2")
+
+[node name="spawn_point_3" type="MeshInstance3D" parent="spawners"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9.19608, 0, 13.3675)
+mesh = ExtResource("5_eshm2")
+
+[node name="spawn_point_4" type="MeshInstance3D" parent="spawners"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -19.2454, 0, 0.284409)
+mesh = ExtResource("5_eshm2")
+
+[node name="spawn_point_5" type="MeshInstance3D" parent="spawners"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -19.3402, 0, 13.3675)
+mesh = ExtResource("5_eshm2")
+
+[node name="spawn_point_6" type="MeshInstance3D" parent="spawners"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -28.2518, 0, 0.0948029)
+mesh = ExtResource("5_eshm2")
+
+[node name="spawn_point_7" type="MeshInstance3D" parent="spawners"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -29.0103, 0, 12.609)
+mesh = ExtResource("5_eshm2")

@@ -130,13 +130,13 @@ transform = Transform3D(-0.0934637, 0, -0.995471, 0, 0.999828, 0, 0.995468, 0, -
 progress = 28.25
 
 [node name="PathFollow_1" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.0934698, 0, -0.995617, 0, 0.999998, 0, 0.995533, 0, -0.0934776, 44.483, -3.05176e-05, 2.48443)
+transform = Transform3D(-0.0934698, 0, -0.995617, 0, 0.999998, 0, 0.995533, 0, -0.0934777, 44.483, -3.05176e-05, 2.48443)
 
 [node name="PathFollow_2" type="PathFollow3D" parent="Path3D"]
 transform = Transform3D(-0.0934723, 0, -0.995621, 0, 1, 0, 0.99556, 0, -0.093478, 44.483, -3.05176e-05, 2.48443)
 
 [node name="PathFollow_3" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.0934713, 0, -0.995618, 0, 0.999999, 0, 0.99555, 0, -0.0934777, 44.483, -3.05176e-05, 2.48443)
+transform = Transform3D(-0.0934714, 0, -0.995618, 0, 0.999999, 0, 0.99555, 0, -0.0934777, 44.483, -3.05176e-05, 2.48443)
 
 [node name="PathFollow_4" type="PathFollow3D" parent="Path3D"]
 transform = Transform3D(-0.0934723, 0, -0.995621, 0, 1, 0, 0.99556, 0, -0.093478, 44.483, -3.05176e-05, 2.48443)

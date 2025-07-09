@@ -92,7 +92,7 @@ mesh = ExtResource("3_4v76p")
 skeleton = NodePath("../..")
 
 [node name="wheel_3" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.15579, -0.458883, -1.81568)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.15579, -0.299971, -1.66368)
 use_as_traction = true
 wheel_roll_influence = 1.5
 wheel_radius = 0.49
@@ -107,7 +107,7 @@ transform = Transform3D(0.685, 0, 0, 0, 0.685, 0, 0, 0, 0.685, 0, 0, 0)
 mesh = ExtResource("4_xk2tc")
 
 [node name="wheel_4" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.156, -0.459, -1.815)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.156, -0.300088, -1.663)
 use_as_traction = true
 wheel_roll_influence = 1.5
 wheel_radius = 0.49

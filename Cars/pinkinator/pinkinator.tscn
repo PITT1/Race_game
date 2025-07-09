@@ -1,9 +1,14 @@
-[gd_scene load_steps=7 format=3 uid="uid://eo506uxokoxq"]
+[gd_scene load_steps=8 format=3 uid="uid://eo506uxokoxq"]
 
 [ext_resource type="Script" uid="uid://dn8cru75adetk" path="res://player_controller/player_controller.gd" id="1_oqayv"]
 [ext_resource type="PhysicsMaterial" uid="uid://dioc2dlho64fc" path="res://car_physic_material/car_physic.tres" id="1_srb5a"]
 [ext_resource type="ArrayMesh" uid="uid://2w052jjpuubr" path="res://Cars/pinkinator/monster_pink_body.obj" id="1_y6k44"]
 [ext_resource type="ArrayMesh" uid="uid://c40jkc0fd2p2d" path="res://Cars/pinkinator/monster_pink_wheel.obj" id="4_srb5a"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_srb5a"]
+albedo_color = Color(0.85098, 0, 0.65098, 1)
+metallic = 0.78
+roughness = 0.32
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_q3ra6"]
 points = PackedVector3Array(-1.24969, 0.760595, -2.23672, 1.40211, -0.565117, 1.07735, 1.30995, -0.663225, 1.00148, -0.835124, 0.0980919, 2.40339, 1.23633, 1.50662, -2.15417, -0.586604, -0.896839, -2.73464, -1.41574, -0.730978, 0.580472, 0.821766, -0.813791, -2.65105, -1.24969, 1.50662, -2.3198, 0.739018, 0.263718, 2.40339, 0.7481, -0.789998, 2.33375, -0.700648, -0.813048, 2.38462, 1.31908, -0.813791, -0.579427, -1.33272, 0.0150438, 1.32605, -0.752652, 0.263718, 2.40339, 1.23633, 1.50662, -2.3198, 1.31908, 0.0150438, 1.32605, -0.835124, -0.813791, -2.65105, 0.572971, -0.896839, -2.73464, -1.24969, 1.50662, -2.15365, 1.23633, 0.760595, -2.23672, -0.721042, -0.687077, 2.45714, 1.40211, -0.482304, 0.0825565, 0.821766, 0.180905, 2.40339, -1.41574, -0.399256, 0.414327, -1.15765, -0.807844, -0.158509, 0.987538, -0.316678, -2.48594, 1.40211, -0.316678, 0.663025, -1.34009, -0.675363, 0.936954, 0.655995, -0.896839, -2.65105, -1.2435, -0.738518, -0.468511, 0.228159, -0.596226, 2.42501)
@@ -23,6 +28,7 @@ script = ExtResource("1_oqayv")
 [node name="MonsterPinkBody" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.38, 0, 0, 0, 0.38, 0, 0, 0, 0.38, 0, 0, 0.652663)
 mesh = ExtResource("1_y6k44")
+surface_material_override/0 = SubResource("StandardMaterial3D_srb5a")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.75, 0, 0, 0, 0.69, 0, 0, 0, 1, 0, 0, 0.437663)
