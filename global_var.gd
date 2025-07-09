@@ -16,7 +16,8 @@ var car_list = {
 	f1_70s = "res://Cars/f1_70s/f1_70s.tscn",
 	montana = "res://Cars/montana/montana.tscn",
 	monster = "res://Cars/monster/monster.tscn",
-	z40 = "res://Cars/z40/z40.tscn"
+	z40 = "res://Cars/z40/z40.tscn",
+	toreto = "res://Cars/toreto/toreto.tscn"
 }
 
 var bot_list = {
