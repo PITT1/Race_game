@@ -33,7 +33,8 @@ var bot_list = {
 	f1_70s_BOT = "res://Cars/f1_70s/f1_70s_BOT.tscn",
 	montana_BOT = "res://Cars/montana/montana_BOT.tscn",
 	monster_BOT = "res://Cars/monster/monster_BOT.tscn",
-	z40_BOT = "res://Cars/z40/z40_BOT.tscn"
+	z40_BOT = "res://Cars/z40/z40_BOT.tscn",
+	toreto_BOT = "res://Cars/toreto/toreto_BOT.tscn"
 }
 	
 	
