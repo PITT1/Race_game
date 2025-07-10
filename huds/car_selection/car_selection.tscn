@@ -1,4 +1,4 @@
-[gd_scene load_steps=76 format=3 uid="uid://bhehqj2450xtc"]
+[gd_scene load_steps=80 format=3 uid="uid://bhehqj2450xtc"]
 
 [ext_resource type="Script" uid="uid://bbkomqcnkihxo" path="res://huds/car_selection/car_selection.gd" id="1_u64g1"]
 [ext_resource type="Texture2D" uid="uid://bm552631w02kq" path="res://Maps/test_map/textures/Asphalt025C_1K-JPG_Color.jpg" id="1_wibte"]
@@ -25,6 +25,8 @@
 [ext_resource type="Texture2D" uid="uid://f60vfj15y5gq" path="res://Cars/monster/llamas_1_texture.png" id="20_u3eru"]
 [ext_resource type="ArrayMesh" uid="uid://cfgih04qv01d0" path="res://Cars/z40/Z40_all_model.obj" id="21_ehe8b"]
 [ext_resource type="ArrayMesh" uid="uid://crt8e3jokavek" path="res://Cars/toreto/toreto_all_body.obj" id="22_u3eru"]
+[ext_resource type="ArrayMesh" uid="uid://bl5jvh5mwftgv" path="res://Cars/nomad/nomad_all_model.obj" id="23_fq8jf"]
+[ext_resource type="Texture2D" uid="uid://pgx01q58gm1s" path="res://Cars/nomad/camoflaje.png" id="24_vv7oi"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_gw526"]
 sky_top_color = Color(0.461087, 0.641883, 0.858997, 1)
@@ -253,6 +255,16 @@ albedo_texture = ExtResource("20_u3eru")
 metallic = 0.8
 roughness = 0.3
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k7gmd"]
+albedo_texture = ExtResource("24_vv7oi")
+metallic = 0.52
+roughness = 0.46
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dbumn"]
+albedo_color = Color(0.118581, 0.118581, 0.118581, 1)
+metallic = 0.56
+roughness = 0.7
+
 [sub_resource type="Resource" id="Resource_c3i15"]
 script = ExtResource("7_btktd")
 duration = 1.0
@@ -430,6 +442,18 @@ tracks/13/keys = {
 "update": 0,
 "values": [Vector3(0, 0, 0)]
 }
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("vehicles/nomad:rotation")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_wibte"]
 resource_name = "rotate"
@@ -598,6 +622,18 @@ tracks/13/path = NodePath("vehicles/toreto:rotation")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 6.28319, 0)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("vehicles/nomad:rotation")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
 "times": PackedFloat32Array(0, 10),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
@@ -880,6 +916,20 @@ skeleton = NodePath("../../..")
 transform = Transform3D(1, 0, 0, 0, 0.999548, -0.0300675, 0, 0.0300675, 0.999548, 0, 0.873602, 0)
 mesh = ExtResource("22_u3eru")
 skeleton = NodePath("../..")
+
+[node name="nomad" type="Node3D" parent="vehicles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 194.258, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="vehicles/nomad"]
+material_override = SubResource("StandardMaterial3D_hg4ax")
+mesh = SubResource("CylinderMesh_hwucu")
+skeleton = NodePath("../../..")
+
+[node name="NomadAllModel" type="MeshInstance3D" parent="vehicles/nomad"]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 1.45247, 0)
+mesh = ExtResource("23_fq8jf")
+surface_material_override/3 = SubResource("StandardMaterial3D_k7gmd")
+surface_material_override/4 = SubResource("StandardMaterial3D_dbumn")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.944298, 0.329091, 0, -0.329091, 0.944298, 0, 1.455, 4.175)

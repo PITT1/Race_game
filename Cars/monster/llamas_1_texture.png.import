@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://f60vfj15y5gq"
 path.s3tc="res://.godot/imported/llamas_1_texture.png-51bc629f56c93aab1d847c38b7a3142a.s3tc.ctex"
+path.etc2="res://.godot/imported/llamas_1_texture.png-51bc629f56c93aab1d847c38b7a3142a.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Cars/monster/llamas_1_texture.png"
-dest_files=["res://.godot/imported/llamas_1_texture.png-51bc629f56c93aab1d847c38b7a3142a.s3tc.ctex"]
+dest_files=["res://.godot/imported/llamas_1_texture.png-51bc629f56c93aab1d847c38b7a3142a.s3tc.ctex", "res://.godot/imported/llamas_1_texture.png-51bc629f56c93aab1d847c38b7a3142a.etc2.ctex"]
 
 [params]
 

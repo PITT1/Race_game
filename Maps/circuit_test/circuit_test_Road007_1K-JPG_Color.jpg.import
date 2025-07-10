@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dcxy5qmhgbnf4"
 path.s3tc="res://.godot/imported/circuit_test_Road007_1K-JPG_Color.jpg-40553e2d1551a5c8752d3f0f664fc776.s3tc.ctex"
+path.etc2="res://.godot/imported/circuit_test_Road007_1K-JPG_Color.jpg-40553e2d1551a5c8752d3f0f664fc776.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://Maps/circuit_test/circuit_test_Road007_1K-JPG_Color.jpg"
-dest_files=["res://.godot/imported/circuit_test_Road007_1K-JPG_Color.jpg-40553e2d1551a5c8752d3f0f664fc776.s3tc.ctex"]
+dest_files=["res://.godot/imported/circuit_test_Road007_1K-JPG_Color.jpg-40553e2d1551a5c8752d3f0f664fc776.s3tc.ctex", "res://.godot/imported/circuit_test_Road007_1K-JPG_Color.jpg-40553e2d1551a5c8752d3f0f664fc776.etc2.ctex"]
 
 [params]
 
