@@ -118,8 +118,11 @@ shape = SubResource("SphereShape3D_had3h")
 debug_color = Color(0.941176, 0.890196, 1, 0.615686)
 
 [node name="shock_sensor" type="RayCast3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.221311, 1.96184)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.221311, 2.34872)
 target_position = Vector3(0, 0, 1.165)
 collision_mask = 2
 
 [node name="shock_timer_sensor" type="Timer" parent="."]
+
+[connection signal="area_entered" from="checkpoint_sensor" to="." method="_on_checkpoint_sensor_area_entered"]
+[connection signal="timeout" from="shock_timer_sensor" to="." method="_on_shock_timer_sensor_timeout"]

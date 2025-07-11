@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://dl4l032e7tmky"]
+[gd_scene load_steps=20 format=3 uid="uid://dl4l032e7tmky"]
 
 [ext_resource type="PackedScene" uid="uid://deh3gsrnhaefo" path="res://Maps/loby_1/loby_1.glb" id="1_68xm8"]
 [ext_resource type="Script" uid="uid://ddn22yn6bgmbe" path="res://Maps/loby_1/loby_1.gd" id="1_jk0es"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="5_f42dt"]
 [ext_resource type="PackedScene" uid="uid://cbnhucy2wtfwc" path="res://others/signals_to/to_select_car/to_select_car.tscn" id="9_jk0es"]
 [ext_resource type="PackedScene" uid="uid://brakaji82desp" path="res://others/signals_to/to_race/to_race.tscn" id="9_tb0jv"]
+[ext_resource type="PackedScene" uid="uid://b0fyvn1iybud7" path="res://others/ramps/ramp1.tscn" id="10_jk0es"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_j8ml7"]
 sky_top_color = Color(0.461087, 0.641883, 0.858997, 1)
@@ -130,5 +131,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.89139, 23.9339)
 
 [node name="ToSelectCar" parent="." instance=ExtResource("9_jk0es")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.7734, 2.13947, 29.8051)
+
+[node name="ramp_1" parent="." instance=ExtResource("10_jk0es")]
+transform = Transform3D(4.22932, 0.0193456, -0.231907, -0.0370441, 2.22492, 0, 0.362581, 0.0016585, 2.70508, 8.137, 0.658, -22.436)
 
 [editable path="loby_1"]

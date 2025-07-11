@@ -45,7 +45,7 @@ func _physics_process(delta: float) -> void:
 
 func _on_checkpoint_sensor_area_entered(area: Area3D) -> void:
 	var num = area.name.split("_")[1]
-	if num != "point":
+	if num != "point" and num != "0":
 		var numInt = int(num)
 		if numInt >= previous:
 			previous = numInt
