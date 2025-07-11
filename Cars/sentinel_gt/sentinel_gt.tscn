@@ -1,10 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://clyqsoa81b2rw"]
+[gd_scene load_steps=14 format=3 uid="uid://clyqsoa81b2rw"]
 
 [ext_resource type="Script" uid="uid://dn8cru75adetk" path="res://player_controller/player_controller.gd" id="1_8e5np"]
 [ext_resource type="ArrayMesh" uid="uid://ccuo25onnns44" path="res://Cars/sentinel_gt/corvette_body.obj" id="1_e76x8"]
 [ext_resource type="PhysicsMaterial" uid="uid://dioc2dlho64fc" path="res://car_physic_material/car_physic.tres" id="1_vu82b"]
 [ext_resource type="ArrayMesh" uid="uid://c3ua5r7rpu2kl" path="res://Cars/sentinel_gt/corvette_wheel.obj" id="2_eh15g"]
 [ext_resource type="ArrayMesh" uid="uid://vws8cc1dskg" path="res://Cars/rat_rod/bug_car_front_wheel.obj" id="3_8e5np"]
+[ext_resource type="PackedScene" uid="uid://1d1e5ll020cp" path="res://huds/on_race_huds/race_hud.tscn" id="6_gqndx"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8e5np"]
 albedo_color = Color(0.513783, 0, 0, 1)
@@ -129,5 +130,7 @@ collision_mask = 128
 [node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoint_sensor"]
 shape = SubResource("SphereShape3D_vu82b")
 debug_color = Color(0.47455, 0.00208011, 0.733338, 0.133333)
+
+[node name="RaceHud" parent="." instance=ExtResource("6_gqndx")]
 
 [connection signal="area_entered" from="checkpoint_sensor" to="." method="_on_checkpoint_sensor_area_entered"]

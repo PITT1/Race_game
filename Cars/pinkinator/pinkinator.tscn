@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://eo506uxokoxq"]
+[gd_scene load_steps=9 format=3 uid="uid://eo506uxokoxq"]
 
 [ext_resource type="Script" uid="uid://dn8cru75adetk" path="res://player_controller/player_controller.gd" id="1_oqayv"]
 [ext_resource type="PhysicsMaterial" uid="uid://dioc2dlho64fc" path="res://car_physic_material/car_physic.tres" id="1_srb5a"]
 [ext_resource type="ArrayMesh" uid="uid://2w052jjpuubr" path="res://Cars/pinkinator/monster_pink_body.obj" id="1_y6k44"]
 [ext_resource type="ArrayMesh" uid="uid://c40jkc0fd2p2d" path="res://Cars/pinkinator/monster_pink_wheel.obj" id="4_srb5a"]
+[ext_resource type="PackedScene" uid="uid://1d1e5ll020cp" path="res://huds/on_race_huds/race_hud.tscn" id="5_m5i0a"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_srb5a"]
 albedo_color = Color(0.85098, 0, 0.65098, 1)
@@ -106,5 +107,7 @@ collision_mask = 128
 [node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoint_sensor"]
 shape = SubResource("SphereShape3D_q3ra6")
 debug_color = Color(0.941176, 0.890196, 1, 0.615686)
+
+[node name="RaceHud" parent="." instance=ExtResource("5_m5i0a")]
 
 [connection signal="area_entered" from="checkpoint_sensor" to="." method="_on_checkpoint_sensor_area_entered"]

@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://t2g61s7tynw8"]
+[gd_scene load_steps=10 format=3 uid="uid://t2g61s7tynw8"]
 
 [ext_resource type="ArrayMesh" uid="uid://tdcker0tc6op" path="res://Cars/montana/montana_body.obj" id="1_q0wj3"]
 [ext_resource type="PhysicsMaterial" uid="uid://dioc2dlho64fc" path="res://car_physic_material/car_physic.tres" id="1_wfsiv"]
 [ext_resource type="Script" uid="uid://dn8cru75adetk" path="res://player_controller/player_controller.gd" id="2_1ic3g"]
 [ext_resource type="Texture2D" uid="uid://b2k1bq32hb5wo" path="res://Cars/montana/paint_1.png" id="2_7mcbj"]
 [ext_resource type="ArrayMesh" uid="uid://ms1rxen6kn37" path="res://Cars/montana/montana_wheel.obj" id="3_7mcbj"]
+[ext_resource type="PackedScene" uid="uid://1d1e5ll020cp" path="res://huds/on_race_huds/race_hud.tscn" id="6_vhin2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wfsiv"]
 albedo_texture = ExtResource("2_7mcbj")
@@ -107,5 +108,7 @@ collision_mask = 128
 [node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoint_sensor"]
 shape = SubResource("SphereShape3D_7mcbj")
 debug_color = Color(0.941176, 0.890196, 1, 0.615686)
+
+[node name="RaceHud" parent="." instance=ExtResource("6_vhin2")]
 
 [connection signal="area_entered" from="checkpoint_sensor" to="." method="_on_checkpoint_sensor_area_entered"]
