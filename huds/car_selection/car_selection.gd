@@ -27,7 +27,8 @@ func _ready() -> void:
 	
 	
 func _on_left_button_up() -> void:
-	selector -= 1
+	if selector > 0:
+		selector -= 1
 	pCam.follow_target = car_list[selector]
 	pCam.look_at_target = car_list[selector]
 	pCam.follow_offset = Vector3(0, 1.455, 4.175)
@@ -35,12 +36,13 @@ func _on_left_button_up() -> void:
 		pCam.follow_offset = Vector3(0, 1.455, 6)
 
 func _on_right_button_up() -> void:
-	selector += 1
-	pCam.follow_target = car_list[selector]
-	pCam.look_at_target = car_list[selector]
-	pCam.follow_offset = Vector3(0, 1.455, 4.175)
-	if pCam.follow_target.name == "empaler_truck":
-		pCam.follow_offset = Vector3(0, 1.455, 6)
+	if selector + 1 < car_list.size():
+		selector += 1
+		pCam.follow_target = car_list[selector]
+		pCam.look_at_target = car_list[selector]
+		pCam.follow_offset = Vector3(0, 1.455, 4.175)
+		if pCam.follow_target.name == "empaler_truck":
+			pCam.follow_offset = Vector3(0, 1.455, 6)
 
 
 func _on_go_back_button_up() -> void:
