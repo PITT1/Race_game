@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://b8xogvbf3yyap"]
+[gd_scene load_steps=2 format=3 uid="uid://b8xogvbf3yyap"]
+
+[ext_resource type="Script" uid="uid://2bgyk7eqwj83" path="res://huds/on_race_huds/on_finish_race_hud.gd" id="1_87msb"]
 
 [node name="OnFinishRaceHud" type="Control"]
 layout_mode = 3
@@ -7,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_87msb")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -35,9 +38,23 @@ text = "1st"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label2" type="Label" parent="CanvasLayer/VBoxContainer"]
+[node name="reward_label" type="Label" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 60
 text = "You reward:"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Button" type="Button" parent="CanvasLayer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Go back"
+
+[node name="Button2" type="Button" parent="CanvasLayer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Next race"

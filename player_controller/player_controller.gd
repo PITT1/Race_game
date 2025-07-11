@@ -72,6 +72,7 @@ func _on_checkpoint_sensor_area_entered(area: Area3D) -> void:
 	
 	if laps_num >= get_parent().laps_num_to_finish + 1:
 			print("FIN DE LA CARRERA")
+			get_parent().player_is_finish = true
 			is_on_race = false
 			engine_force = 0
 			steering = 0

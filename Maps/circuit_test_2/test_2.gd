@@ -7,8 +7,11 @@ var race_order = []
 var starting_grid: Array = []
 var num_checkpoints
 var is_race = true
+var player_is_finish = false
 
 @export var countdown: PackedScene
+var on_finish_race_hud: PackedScene = preload("res://huds/on_race_huds/on_finish_race_hud.tscn")
+var finish_hud_instance
 @export var priority_points_num: int = 0
 @export var laps_num_to_finish = 5
 @export var vehicle_num: int = 8
@@ -40,6 +43,10 @@ func _physics_process(delta: float) -> void:
 		pass
 		
 	ordenar_carrera()
+	
+	if player_is_finish and not finish_hud_instance:
+		finish_hud_instance = on_finish_race_hud.instantiate()
+		add_child(finish_hud_instance)
 	
 func get_cars():
 	for i in get_child_count():
