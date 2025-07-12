@@ -49,12 +49,14 @@ vertical_alignment = 1
 layout_mode = 2
 alignment = 1
 
-[node name="Button" type="Button" parent="CanvasLayer/VBoxContainer/HBoxContainer"]
+[node name="back_btn" type="Button" parent="CanvasLayer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "Go back"
 
-[node name="Button2" type="Button" parent="CanvasLayer/VBoxContainer/HBoxContainer"]
+[node name="next_race_btn" type="Button" parent="CanvasLayer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "Next race"
+
+[connection signal="button_up" from="CanvasLayer/VBoxContainer/HBoxContainer/back_btn" to="." method="_on_back_btn_button_up"]

@@ -103,7 +103,7 @@ _data = {
 [node name="Test2" type="Node3D"]
 script = ExtResource("1_6mnti")
 countdown = ExtResource("2_lppdq")
-laps_num_to_finish = 3
+laps_num_to_finish = 1
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_8fw60")
