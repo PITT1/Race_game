@@ -34,7 +34,7 @@ radius = 1.80891
 
 [node name="Raven356" type="VehicleBody3D"]
 collision_mask = 511
-mass = 120.0
+mass = 200.0
 physics_material_override = ExtResource("1_iw3u8")
 gravity_scale = 5.0
 center_of_mass_mode = 1
@@ -42,7 +42,7 @@ center_of_mass = Vector3(0, -1, 0)
 script = ExtResource("1_dek74")
 
 [node name="HotRod356Body" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.665, 0, 0, 0, 0.665, 0, 0, 0, 0.665, -0.00861323, 0.173086, -0.475602)
+transform = Transform3D(0.665, 0, 0, 0, 0.665, 0, 0, 0, 0.665, -0.00861323, 0.173086, -0.6562)
 mesh = ExtResource("1_8xo24")
 surface_material_override/0 = SubResource("StandardMaterial3D_r426c")
 surface_material_override/1 = SubResource("StandardMaterial3D_56r0o")
@@ -50,11 +50,11 @@ surface_material_override/3 = SubResource("StandardMaterial3D_dek74")
 surface_material_override/4 = SubResource("StandardMaterial3D_iw3u8")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.665, 0, 0, 0, 0.665, 0, 0, 0, 0.665, -0.00861323, 0.173086, -0.475602)
+transform = Transform3D(0.665, 0, 0, 0, 0.665, 0, 0, 0, 0.665, -0.00861323, 0.173086, -0.6562)
 shape = SubResource("ConvexPolygonShape3D_dek74")
 
 [node name="wheel_1" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.777098, -0.252106, -1.13158)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.777098, -0.252106, -1.31218)
 use_as_traction = true
 wheel_roll_influence = 1.5
 wheel_radius = 0.44
@@ -70,7 +70,7 @@ mesh = ExtResource("2_pypix")
 skeleton = NodePath("../..")
 
 [node name="wheel_2" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.777098, -0.252106, 1.47515)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.777098, -0.252106, 1.29455)
 use_as_steering = true
 wheel_roll_influence = 1.5
 wheel_radius = 0.44
@@ -86,7 +86,7 @@ mesh = ExtResource("2_pypix")
 skeleton = NodePath("../..")
 
 [node name="wheel_3" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.777, -0.252106, -1.13158)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.777, -0.252106, -1.31218)
 use_as_traction = true
 wheel_roll_influence = 1.5
 wheel_radius = 0.44
@@ -102,7 +102,7 @@ mesh = ExtResource("2_pypix")
 skeleton = NodePath("../..")
 
 [node name="wheel_4" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.777, -0.252106, 1.47515)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.777, -0.252106, 1.29455)
 use_as_steering = true
 wheel_roll_influence = 1.5
 wheel_radius = 0.44
@@ -118,7 +118,7 @@ mesh = ExtResource("2_pypix")
 skeleton = NodePath("../..")
 
 [node name="checkpoint_sensor" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.27127)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0906716)
 collision_layer = 0
 collision_mask = 128
 

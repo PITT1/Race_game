@@ -5,6 +5,10 @@ extends Control
 @export var reward_multiplier: Array = []
 var reward_to_save: int
 var global_var = load("res://global_var.gd").new()
+@onready var anim: AnimationPlayer = $AnimationPlayer
+
+func _ready() -> void:
+	anim.play("entered")
 
 func set_finish_result(position: int, reward):
 	var pos_str: Array = ["ro", "st", "nd", "rd", "th"]

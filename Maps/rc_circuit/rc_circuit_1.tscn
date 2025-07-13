@@ -133,7 +133,7 @@ transform = Transform3D(-0.899558, -0.282519, 0.333135, 0, 0.762668, 0.64679, -0
 shadow_enabled = true
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-0.913681, -0.637617, 0.466457, 0, 0.590831, 0.805772, -1.17889, 0.494176, -0.36152, 44.2476, 27.3207, -4.84037)
+transform = Transform3D(-0.612589, -0.637666, 0.46703, 0, 0.590876, 0.806762, -0.790402, 0.494214, -0.361964, 44.2476, 27.3207, -4.84037)
 
 [node name="PhantomCameraHost" type="Node" parent="Camera3D"]
 process_priority = 300

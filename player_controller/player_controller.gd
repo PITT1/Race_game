@@ -23,6 +23,7 @@ var checkpoint_store = []
 var priority_point_store = []
 var all_checkpoints: int
 var laps_num: int = 1
+var vel: int = 0
 
 var previous: int = -1
 
@@ -34,6 +35,7 @@ func _ready() -> void:
 			pCam = item
 
 func _physics_process(delta: float) -> void:
+	stering_asist()
 	if is_player and is_on_race:
 		brake = 0
 		steering = move_toward(steering, Input.get_axis("ui_right", "ui_left") * MAX_STEER, delta * 10)
@@ -88,3 +90,17 @@ func update_pcam():
 	target_offset = Vector2(forward_direction.x * camera_distance, forward_direction.z * camera_distance)
 	current_offset = current_offset.lerp(target_offset, 0.02)
 	pCam.follow_offset = Vector3(current_offset.x, camera_height, current_offset.y)
+
+
+func stering_asist():
+	vel = int(linear_velocity.length())
+	if vel < 10:
+		MAX_STEER = 0.7
+	elif vel < 20:
+		MAX_STEER = 0.6
+	elif vel < 25:
+		MAX_STEER = 0.5
+	elif vel < 30:
+		MAX_STEER = 0.4
+	elif vel < 35:
+		MAX_STEER = 0.3
