@@ -30,7 +30,7 @@ radius = 1.80891
 
 [node name="RacingRod" type="VehicleBody3D"]
 collision_mask = 507
-mass = 180.0
+mass = 200.0
 physics_material_override = ExtResource("1_p3wy4")
 gravity_scale = 5.0
 center_of_mass_mode = 1
@@ -38,80 +38,82 @@ center_of_mass = Vector3(0, -1, 0)
 script = ExtResource("1_ihxdo")
 
 [node name="HotRodRacingBody" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.345225)
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0.337491, -0.319444)
 mesh = ExtResource("1_6427m")
 surface_material_override/0 = SubResource("StandardMaterial3D_p3wy4")
 surface_material_override/5 = SubResource("StandardMaterial3D_gw4e7")
 surface_material_override/6 = SubResource("StandardMaterial3D_j3l61")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.345225)
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0.337491, -0.319444)
 shape = SubResource("ConvexPolygonShape3D_6427m")
 
 [node name="wheel_1" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.28254, -0.803074, 1.52633)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.86676, -0.285866, 1.08133)
 use_as_steering = true
 wheel_roll_influence = 1.5
-wheel_radius = 0.655
+wheel_radius = 0.455
 wheel_friction_slip = 10.0
-suspension_stiffness = 100.0
+suspension_stiffness = 150.0
 suspension_max_force = 100000.0
 damping_compression = 10.0
 damping_relaxation = 10.0
 
 [node name="EmpalerTruckFrontWheel" type="MeshInstance3D" parent="wheel_1"]
-transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.7, 0, -1.05697e-07, 0, 0.7, 0, 1.05697e-07, 0, -0.7, 0, 0, 0)
 mesh = ExtResource("2_ihxdo")
 skeleton = NodePath("../..")
 
 [node name="wheel_2" type="VehicleWheel3D" parent="."]
-transform = Transform3D(0.94, 0, 0, 0, 0.94, 0, 0, 0, 0.94, -1.28254, -0.783593, -1.67128)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.86676, -0.266385, -0.885189)
 use_as_traction = true
 wheel_roll_influence = 1.5
-wheel_radius = 0.655
+wheel_radius = 0.455
 wheel_friction_slip = 10.0
-suspension_stiffness = 100.0
+suspension_stiffness = 150.0
 suspension_max_force = 100000.0
 damping_compression = 10.0
 damping_relaxation = 10.0
 
 [node name="BugCarRearWheel" type="MeshInstance3D" parent="wheel_2"]
-transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.7, 0, -1.05697e-07, 0, 0.7, 0, 1.05697e-07, 0, -0.7, 0, 0, 0)
 mesh = ExtResource("3_p3wy4")
 skeleton = NodePath("../..")
 
 [node name="wheel_3" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.283, -0.803074, 1.52633)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.86, -0.285866, 1.08133)
 use_as_steering = true
 wheel_roll_influence = 1.5
-wheel_radius = 0.655
+wheel_radius = 0.455
 wheel_friction_slip = 10.0
-suspension_stiffness = 100.0
+suspension_stiffness = 150.0
 suspension_max_force = 100000.0
 damping_compression = 10.0
 damping_relaxation = 10.0
 
 [node name="EmpalerTruckFrontWheel" type="MeshInstance3D" parent="wheel_3"]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 mesh = ExtResource("2_ihxdo")
 skeleton = NodePath("../..")
 
 [node name="wheel_4" type="VehicleWheel3D" parent="."]
-transform = Transform3D(0.94, 0, 0, 0, 0.94, 0, 0, 0, 0.94, 1.283, -0.783593, -1.67128)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.86, -0.266385, -1.17304)
 use_as_traction = true
 wheel_roll_influence = 1.5
-wheel_radius = 0.655
+wheel_radius = 0.455
 wheel_friction_slip = 10.0
-suspension_stiffness = 100.0
+suspension_stiffness = 150.0
 suspension_max_force = 100000.0
 damping_compression = 10.0
 damping_relaxation = 10.0
 
 [node name="BugCarRearWheel" type="MeshInstance3D" parent="wheel_4"]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 mesh = ExtResource("3_p3wy4")
 skeleton = NodePath("../..")
 
 [node name="checkpoint_sensor" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.115698)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.517208, 0.141479)
 collision_layer = 0
 collision_mask = 128
 
