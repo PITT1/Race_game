@@ -26,6 +26,7 @@ var recovery_mode: bool = false
 @onready var shock_timer_sensor: Timer = $shock_timer_sensor
 
 func _ready() -> void:
+	gravity_scale = 3
 	all_checkpoints = get_parent().num_checkpoints #esto hay que cambiarlo para el futuro ya que no se podra entrar al loby ni eventos de destruccion
 	for item in get_parent().get_children():
 		if item.get_class() == "Path3D":
@@ -127,4 +128,3 @@ func set_random_path_follow():
 		random_path = paths_in_race.pick_random()
 		path_follow = random_path.get_children()
 		path_follow[path_to_follow].progress = 0
-		

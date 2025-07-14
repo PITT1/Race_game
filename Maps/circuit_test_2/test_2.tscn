@@ -1,15 +1,16 @@
-[gd_scene load_steps=26 format=3 uid="uid://cjb4nd6otxjsg"]
+[gd_scene load_steps=24 format=3 uid="uid://cjb4nd6otxjsg"]
 
-[ext_resource type="Texture2D" uid="uid://bm552631w02kq" path="res://Maps/test_map/textures/Asphalt025C_1K-JPG_Color.jpg" id="1_3xdu8"]
 [ext_resource type="Script" uid="uid://kghgfx151qgh" path="res://Maps/circuit_test_2/test_2.gd" id="1_6mnti"]
 [ext_resource type="PackedScene" uid="uid://cd2fjxhklg8i1" path="res://huds/on_race_huds/countdown.tscn" id="2_lppdq"]
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="3_0r5jd"]
 [ext_resource type="Script" uid="uid://csjccrhj5wnx7" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="4_3xdu8"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="5_ro3cy"]
-[ext_resource type="Texture2D" uid="uid://bk3p8umc7mpd0" path="res://Maps/test_map/textures/Grass001_1K-JPG_Color.jpg" id="6_3xdu8"]
 [ext_resource type="PackedScene" uid="uid://c6qu4tpu556av" path="res://Maps/circuit_test_2/pista_1_CIRCUIT.glb" id="6_8fw60"]
 [ext_resource type="PackedScene" uid="uid://bhevwsndruup5" path="res://others/cone/cone.tscn" id="8_8fw60"]
+[ext_resource type="Texture2D" uid="uid://bk3p8umc7mpd0" path="res://Maps/textures/f1_circuits/Grass001_1K-JPG_Color.jpg" id="8_lppdq"]
+[ext_resource type="Texture2D" uid="uid://b6cnimeif6j5p" path="res://Maps/textures/f1_circuits/Ground079S_1K-JPG_Color.jpg" id="9_4rsws"]
 [ext_resource type="ArrayMesh" uid="uid://dc4upx53e4gie" path="res://others/spawners/spawn_arrow.obj" id="10_ow4v7"]
+[ext_resource type="Texture2D" uid="uid://bm552631w02kq" path="res://Maps/textures/f1_circuits/Asphalt025C_1K-JPG_Color.jpg" id="10_uxm7u"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3xdu8"]
 sky_top_color = Color(0.461087, 0.641883, 0.858997, 1)
@@ -40,25 +41,18 @@ _data = {
 }
 point_count = 90
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6mnti"]
-albedo_texture = ExtResource("1_3xdu8")
-uv1_scale = Vector3(20, 20, 20)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ow4v7"]
-albedo_color = Color(1, 0, 0, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lppdq"]
-albedo_color = Color(0.903598, 0.903598, 0.903598, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4rsws"]
-albedo_color = Color(0.0674377, 0.0674377, 0.0674377, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uxm7u"]
-albedo_texture = ExtResource("6_3xdu8")
-uv1_scale = Vector3(20, 20, 20)
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i1n1h"]
-albedo_color = Color(0.306923, 0.306923, 0.306923, 1)
+albedo_texture = ExtResource("8_lppdq")
+uv1_scale = Vector3(37.31, 37.31, 37.31)
+uv2_scale = Vector3(1.95, 1.95, 1.95)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ns3y0"]
+albedo_texture = ExtResource("9_4rsws")
+uv1_scale = Vector3(46.73, 46.73, 46.73)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8fw60"]
+albedo_texture = ExtResource("10_uxm7u")
+uv1_scale = Vector3(28.195, 28.195, 28.195)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8fw60"]
 size = Vector3(58.3376, 18.7666, 5.27968)
@@ -103,7 +97,7 @@ _data = {
 [node name="Test2" type="Node3D"]
 script = ExtResource("1_6mnti")
 countdown = ExtResource("2_lppdq")
-laps_num_to_finish = 1
+laps_num_to_finish = 3
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_8fw60")
@@ -114,6 +108,7 @@ shadow_enabled = true
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(-0.732591, 0.692228, -0.540246, -4.59305e-08, 0.617123, 0.782893, 1.35592, 0.374004, -0.29189, -11.355, 16.455, -6.135)
+current = true
 
 [node name="PhantomCameraHost" type="Node" parent="Camera3D"]
 process_priority = 300
@@ -136,29 +131,29 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 90.6599, 2.91922, -121.999)
 curve = SubResource("Curve3D_6mnti")
 
 [node name="PathFollow_0" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.999843, 0.000119866, -0.00127702, -0.000121742, 0.999827, -0.00146797, 0.00127684, 0.00146809, 0.999847, 1.15108, -0.0803156, -23.5127)
+transform = Transform3D(0.999842, 0.000119866, -0.00127702, -0.000121742, 0.999827, -0.00146797, 0.00127684, 0.00146809, 0.999847, 1.15108, -0.0803156, -23.5127)
 progress = 28.25
 
 [node name="PathFollow_1" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.999908, -1.8752e-06, -0.00127721, 1.13676e-13, 0.999997, -0.00146819, 0.0012771, 0.00146819, 0.999996, 1.115, -0.121792, 4.73727)
+transform = Transform3D(0.999907, -1.8752e-06, -0.00127721, 1.13676e-13, 0.999997, -0.00146819, 0.0012771, 0.00146819, 0.999996, 1.115, -0.121792, 4.73727)
 
 [node name="PathFollow_2" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.999937, -1.8752e-06, -0.00127722, 1.1368e-13, 0.999999, -0.00146819, 0.00127714, 0.00146819, 0.999998, 1.115, -0.121792, 4.73727)
+transform = Transform3D(0.999936, -1.8752e-06, -0.00127722, 1.1368e-13, 0.999999, -0.00146819, 0.00127714, 0.00146819, 0.999998, 1.115, -0.121792, 4.73727)
 
 [node name="PathFollow_3" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.999928, -1.8752e-06, -0.00127722, 1.13679e-13, 0.999998, -0.00146819, 0.00127713, 0.00146819, 0.999997, 1.115, -0.121792, 4.73727)
+transform = Transform3D(0.999927, -1.8752e-06, -0.00127722, 1.13679e-13, 0.999998, -0.00146819, 0.00127713, 0.00146819, 0.999997, 1.115, -0.121792, 4.73727)
 
 [node name="PathFollow_4" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.999937, -1.8752e-06, -0.00127722, 1.1368e-13, 0.999999, -0.00146819, 0.00127714, 0.00146819, 0.999998, 1.115, -0.121792, 4.73727)
+transform = Transform3D(0.999936, -1.8752e-06, -0.00127722, 1.1368e-13, 0.999999, -0.00146819, 0.00127714, 0.00146819, 0.999998, 1.115, -0.121792, 4.73727)
 
 [node name="PathFollow_5" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.999937, -1.8752e-06, -0.00127722, 1.1368e-13, 0.999999, -0.00146819, 0.00127714, 0.00146819, 0.999998, 1.115, -0.121792, 4.73727)
+transform = Transform3D(0.999936, -1.8752e-06, -0.00127722, 1.1368e-13, 0.999999, -0.00146819, 0.00127714, 0.00146819, 0.999998, 1.115, -0.121792, 4.73727)
 
 [node name="PathFollow_6" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.999937, -1.8752e-06, -0.00127722, 1.1368e-13, 0.999999, -0.00146819, 0.00127714, 0.00146819, 0.999998, 1.115, -0.121792, 4.73727)
+transform = Transform3D(0.999936, -1.8752e-06, -0.00127722, 1.1368e-13, 0.999999, -0.00146819, 0.00127714, 0.00146819, 0.999998, 1.115, -0.121792, 4.73727)
 
 [node name="PathFollow_7" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.999937, -1.8752e-06, -0.00127722, 1.1368e-13, 0.999999, -0.00146819, 0.00127714, 0.00146819, 0.999998, 1.115, -0.121792, 4.73727)
+transform = Transform3D(0.999936, -1.8752e-06, -0.00127722, 1.1368e-13, 0.999999, -0.00146819, 0.00127714, 0.00146819, 0.999998, 1.115, -0.121792, 4.73727)
 
 [node name="conos" type="Node3D" parent="."]
 
@@ -204,16 +199,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 101.848, 0.922667, -100.736)
 [node name="pista_1_CIRCUIT" parent="." instance=ExtResource("6_8fw60")]
 transform = Transform3D(0.655, 0, 0, 0, 0.655, 0, 0, 0, 0.655, 0, 0, 0)
 
-[node name="circuito" parent="pista_1_CIRCUIT" index="0"]
-surface_material_override/0 = SubResource("StandardMaterial3D_6mnti")
-surface_material_override/1 = SubResource("StandardMaterial3D_ow4v7")
-surface_material_override/2 = SubResource("StandardMaterial3D_lppdq")
-surface_material_override/3 = SubResource("StandardMaterial3D_4rsws")
-surface_material_override/4 = SubResource("StandardMaterial3D_uxm7u")
-surface_material_override/5 = SubResource("StandardMaterial3D_i1n1h")
+[node name="terrain" parent="pista_1_CIRCUIT" index="0"]
+surface_material_override/1 = SubResource("StandardMaterial3D_i1n1h")
+surface_material_override/3 = SubResource("StandardMaterial3D_ns3y0")
+
+[node name="pista" parent="pista_1_CIRCUIT" index="1"]
+surface_material_override/0 = SubResource("StandardMaterial3D_8fw60")
 
 [node name="checkpoints_sistem" type="Node3D" parent="."]
-visible = false
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.28194, 0)
 
 [node name="point_0" type="Area3D" parent="checkpoints_sistem"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 96.2735, 9.21986, -119.67)

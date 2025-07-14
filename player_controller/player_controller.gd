@@ -28,6 +28,7 @@ var vel: int = 0
 var previous: int = -1
 
 func _ready() -> void:
+	gravity_scale = 3 
 	all_checkpoints = get_parent().num_checkpoints #esto hay que cambiarlo para el futuro ya que no se podra entrar al loby ni eventos de destruccion
 	var siblings = get_parent().get_children()
 	for item in siblings:
@@ -104,3 +105,5 @@ func stering_asist():
 		MAX_STEER = 0.4
 	elif vel < 35:
 		MAX_STEER = 0.3
+	elif vel < 40:
+		MAX_STEER = 0.2

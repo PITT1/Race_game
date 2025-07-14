@@ -2,9 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://deh3gsrnhaefo" path="res://Maps/loby_1/loby_1.glb" id="1_68xm8"]
 [ext_resource type="Script" uid="uid://ddn22yn6bgmbe" path="res://Maps/loby_1/loby_1.gd" id="1_jk0es"]
-[ext_resource type="Texture2D" uid="uid://bm552631w02kq" path="res://Maps/test_map/textures/Asphalt025C_1K-JPG_Color.jpg" id="2_1vtqb"]
+[ext_resource type="Texture2D" uid="uid://bm552631w02kq" path="res://Maps/textures/f1_circuits/Asphalt025C_1K-JPG_Color.jpg" id="2_1vtqb"]
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="3_dbgys"]
-[ext_resource type="Texture2D" uid="uid://bk3p8umc7mpd0" path="res://Maps/test_map/textures/Grass001_1K-JPG_Color.jpg" id="3_f42dt"]
+[ext_resource type="Texture2D" uid="uid://bk3p8umc7mpd0" path="res://Maps/textures/f1_circuits/Grass001_1K-JPG_Color.jpg" id="3_f42dt"]
 [ext_resource type="Script" uid="uid://csjccrhj5wnx7" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="4_1vtqb"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="5_f42dt"]
 [ext_resource type="PackedScene" uid="uid://cbnhucy2wtfwc" path="res://others/signals_to/to_select_car/to_select_car.tscn" id="9_jk0es"]
