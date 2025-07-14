@@ -35,11 +35,9 @@ import_script/path=""
 _subresources={
 "nodes": {
 "PATH:pista": {
-"generate/physics": true,
 "physics/mask": 95
 },
 "PATH:terrain": {
-"generate/physics": true,
 "physics/layer": 2,
 "physics/mask": 95
 }

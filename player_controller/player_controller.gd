@@ -2,6 +2,7 @@ extends VehicleBody3D
 
 @export var MAX_STEER = 0.7
 @export var ENGINE_POWER = 1500
+@export var ENGINE_POWER_REDUCTOR: int = 400 
 var is_on_race = false
 var dificulty: int = 0
 var min_distance_to_point: int = 0
@@ -13,6 +14,9 @@ var poitn_desviation: int = 0
 @export var camera_height: float = 8
 var target_offset = Vector2.ZERO
 var current_offset = Vector2.ZERO
+var wheels: Array = []
+var surface: String = ""
+var is_on_pista: bool = true
 
 
 @export var is_player: bool = true
@@ -29,21 +33,31 @@ var previous: int = -1
 
 func _ready() -> void:
 	gravity_scale = 3 
-	all_checkpoints = get_parent().num_checkpoints #esto hay que cambiarlo para el futuro ya que no se podra entrar al loby ni eventos de destruccion
+	all_checkpoints = get_parent().num_checkpoints 
 	var siblings = get_parent().get_children()
 	for item in siblings:
 		if item.name == "PhantomCamera3D":
 			pCam = item
+	
+	var childs = get_children()
+	for item in childs:
+		if item.get_class() == "VehicleWheel3D":
+			wheels.append(item)
 
 func _physics_process(delta: float) -> void:
 	stering_asist()
 	if is_player and is_on_race:
 		brake = 0
 		steering = move_toward(steering, Input.get_axis("ui_right", "ui_left") * MAX_STEER, delta * 10)
-		engine_force = Input.get_axis("ui_down", "ui_up") * ENGINE_POWER
+		if is_on_pista:
+			engine_force = Input.get_axis("ui_down", "ui_up") * ENGINE_POWER
+		else:
+			engine_force = Input.get_axis("ui_down", "ui_up") * ENGINE_POWER_REDUCTOR
 	else:
 		brake = 100
 	update_pcam()
+	
+	traction_by_terrain_control()
 	
 
 func _on_checkpoint_sensor_area_entered(area: Area3D) -> void:
@@ -107,3 +121,13 @@ func stering_asist():
 		MAX_STEER = 0.3
 	elif vel < 40:
 		MAX_STEER = 0.2
+
+
+func traction_by_terrain_control():
+	for wheel in wheels:
+		surface = str(wheel.get_contact_body())
+		if surface.contains("pista"):
+			is_on_pista = true
+		elif surface.contains("terrain"):
+			is_on_pista = false
+		
