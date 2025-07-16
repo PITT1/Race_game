@@ -1,0 +1,42 @@
+# Blender 4.3.2 MTL File: 'circuito_monster_1.blend'
+# www.blender.org
+
+newmtl concreto
+Ns 250.000000
+Ka 0.500000 0.500000 0.500000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 3
+map_Kd F:/blender_cars/textures/oxido_4.jpg
+
+newmtl piano_blanco
+Ns 250.000000
+Ka 0.500000 0.500000 0.500000
+Kd 0.567980 0.567980 0.567980
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 3
+
+newmtl piano_rojo
+Ns 250.000000
+Ka 0.500000 0.500000 0.500000
+Kd 0.424897 0.008915 0.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 3
+
+newmtl rejilla
+Ns 250.000000
+Ka 0.500000 0.500000 0.500000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 3
+map_Kd F:/blender_cars/textures/rejillas circulares (1).png

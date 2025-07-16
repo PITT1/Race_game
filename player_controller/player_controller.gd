@@ -2,7 +2,8 @@ extends VehicleBody3D
 
 @export var MAX_STEER = 0.7
 @export var ENGINE_POWER = 1500
-@export var ENGINE_POWER_REDUCTOR: int = 400 
+@export var ENGINE_POWER_REDUCTOR: int = 800
+@export var stering_asiste_on: bool = true 
 var is_on_race = false
 var dificulty: int = 0
 var min_distance_to_point: int = 0
@@ -32,7 +33,7 @@ var vel: int = 0
 var previous: int = -1
 
 func _ready() -> void:
-	gravity_scale = 3 
+	gravity_scale = 4
 	all_checkpoints = get_parent().num_checkpoints 
 	var siblings = get_parent().get_children()
 	for item in siblings:
@@ -108,19 +109,20 @@ func update_pcam():
 
 
 func stering_asist():
-	vel = int(linear_velocity.length())
-	if vel < 10:
-		MAX_STEER = 0.7
-	elif vel < 20:
-		MAX_STEER = 0.6
-	elif vel < 25:
-		MAX_STEER = 0.5
-	elif vel < 30:
-		MAX_STEER = 0.4
-	elif vel < 35:
-		MAX_STEER = 0.3
-	elif vel < 40:
-		MAX_STEER = 0.2
+	if stering_asiste_on:
+		vel = int(linear_velocity.length())
+		if vel < 10:
+			MAX_STEER = 0.7
+		elif vel < 20:
+			MAX_STEER = 0.6
+		elif vel < 25:
+			MAX_STEER = 0.5
+		elif vel < 30:
+			MAX_STEER = 0.4
+		elif vel < 35:
+			MAX_STEER = 0.3
+		elif vel < 40:
+			MAX_STEER = 0.2
 
 
 func traction_by_terrain_control():

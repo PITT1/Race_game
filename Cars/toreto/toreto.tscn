@@ -38,16 +38,18 @@ center_of_mass = Vector3(0, -1, 0)
 script = ExtResource("2_c0lmv")
 
 [node name="ToretoBody" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0652078)
 mesh = ExtResource("1_yvtuk")
 surface_material_override/0 = SubResource("StandardMaterial3D_lwgyu")
 surface_material_override/1 = SubResource("StandardMaterial3D_2b8yx")
 surface_material_override/2 = SubResource("StandardMaterial3D_8c85w")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0652078)
 shape = SubResource("ConvexPolygonShape3D_ka8i3")
 
 [node name="wheel_1" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.67, -0.392661, 1.61755)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.67, -0.392661, 1.55234)
 use_as_steering = true
 wheel_roll_influence = 1.5
 wheel_radius = 0.355
@@ -62,7 +64,7 @@ mesh = ExtResource("2_xsx2t")
 skeleton = NodePath("../..")
 
 [node name="wheel_2" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.670348, -0.393059, 1.61729)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.670348, -0.393059, 1.55208)
 use_as_steering = true
 wheel_roll_influence = 1.5
 wheel_radius = 0.355
@@ -78,7 +80,7 @@ mesh = ExtResource("2_xsx2t")
 skeleton = NodePath("../..")
 
 [node name="wheel_3" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.67, -0.40586, -1.30762)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.67, -0.40586, -1.37283)
 use_as_traction = true
 wheel_roll_influence = 1.5
 wheel_radius = 0.405
@@ -93,7 +95,7 @@ mesh = ExtResource("3_c0lmv")
 skeleton = NodePath("../..")
 
 [node name="wheel_4" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.670348, -0.40586, -1.30762)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.670348, -0.40586, -1.37283)
 use_as_traction = true
 wheel_roll_influence = 1.5
 wheel_radius = 0.405
@@ -109,7 +111,7 @@ mesh = ExtResource("3_c0lmv")
 skeleton = NodePath("../..")
 
 [node name="checkpoint_sensor" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.199844)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.265052)
 collision_layer = 0
 collision_mask = 128
 
