@@ -30,7 +30,7 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -0.00133407, 0.131401, 
 shape = SubResource("ConvexPolygonShape3D_c5gpq")
 
 [node name="wheel_1" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.89596, -0.405462, 0.985258)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.89596, -0.300573, 0.985258)
 use_as_steering = true
 wheel_roll_influence = 1.5
 wheel_radius = 0.385
@@ -45,7 +45,7 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 mesh = ExtResource("2_djvli")
 
 [node name="wheel_2" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.896, -0.40586, 0.985)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.896, -0.300971, 0.985)
 use_as_steering = true
 wheel_roll_influence = 1.5
 wheel_radius = 0.385
@@ -60,7 +60,7 @@ transform = Transform3D(-0.7, 0, -6.11959e-08, 0, 0.7, 0, 6.11959e-08, 0, -0.7, 
 mesh = ExtResource("2_djvli")
 
 [node name="wheel_3" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.896, -0.40586, -1.734)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.896, -0.300971, -1.734)
 use_as_traction = true
 wheel_roll_influence = 1.5
 wheel_radius = 0.385
@@ -75,7 +75,7 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 mesh = ExtResource("2_djvli")
 
 [node name="wheel_4" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.896, -0.40586, -1.734)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.896, -0.300971, -1.734)
 use_as_traction = true
 wheel_roll_influence = 1.5
 wheel_radius = 0.385

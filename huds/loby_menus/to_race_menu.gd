@@ -21,3 +21,15 @@ func _on_to_f_1_race_button_up() -> void:
 
 func _on_to_rc_circuit_button_up() -> void:
 	get_tree().change_scene_to_file("res://Maps/rc_circuit/rc_circuit_1.tscn")
+
+
+func _on_nascar_circuit_button_up() -> void:
+	get_tree().change_scene_to_file("res://Maps/nascar_circuit/nascar_circuit.tscn")
+
+
+func _on_double_circuit_button_up() -> void:
+	get_tree().change_scene_to_file("res://Maps/2_vias_circuit_1/pista_doble_1.tscn")
+
+
+func _on_basic_circuit_button_up() -> void:
+	get_tree().change_scene_to_file("res://Maps/basic_circuit_1/basic_circuit_1.tscn")

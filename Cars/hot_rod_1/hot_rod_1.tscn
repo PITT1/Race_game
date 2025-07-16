@@ -42,7 +42,7 @@ center_of_mass = Vector3(0, -1, 0)
 script = ExtResource("1_qjy37")
 
 [node name="Hot-rod-body" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.115698)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0234684)
 mesh = ExtResource("1_eyabc")
 surface_material_override/0 = SubResource("StandardMaterial3D_qjy37")
 surface_material_override/1 = SubResource("StandardMaterial3D_sattu")
@@ -50,13 +50,13 @@ surface_material_override/2 = SubResource("StandardMaterial3D_qe6o7")
 surface_material_override/4 = SubResource("StandardMaterial3D_gg0sc")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.115698)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0234684)
 shape = SubResource("ConvexPolygonShape3D_qjy37")
 
 [node name="wheel_1" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.813407, -0.0477209, 1.83339)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.813407, -0.0477209, 1.69422)
 use_as_steering = true
-wheel_roll_influence = 2.0
+wheel_roll_influence = 1.5
 wheel_radius = 0.625
 wheel_friction_slip = 10.0
 suspension_stiffness = 150.0
@@ -68,9 +68,9 @@ damping_relaxation = 10.0
 mesh = ExtResource("2_qjy37")
 
 [node name="wheel_2" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.856201, -0.0477209, -1.5157)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.856201, -0.0477209, -1.65487)
 use_as_traction = true
-wheel_roll_influence = 2.0
+wheel_roll_influence = 1.5
 wheel_radius = 0.625
 wheel_friction_slip = 10.0
 suspension_stiffness = 150.0
@@ -82,9 +82,9 @@ damping_relaxation = 10.0
 mesh = ExtResource("2_qjy37")
 
 [node name="wheel_3" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.813, -0.048, 1.8337)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.813, -0.048, 1.69453)
 use_as_steering = true
-wheel_roll_influence = 2.0
+wheel_roll_influence = 1.5
 wheel_radius = 0.625
 wheel_friction_slip = 10.0
 suspension_stiffness = 150.0
@@ -97,9 +97,9 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 
 mesh = ExtResource("2_qjy37")
 
 [node name="wheel_4" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.856, -0.048, -1.5153)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.856, -0.048, -1.65447)
 use_as_traction = true
-wheel_roll_influence = 2.0
+wheel_roll_influence = 1.5
 wheel_radius = 0.625
 wheel_friction_slip = 10.0
 suspension_stiffness = 150.0
@@ -112,7 +112,7 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 
 mesh = ExtResource("2_qjy37")
 
 [node name="checkpoint_sensor" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.115698)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0234684)
 collision_layer = 0
 collision_mask = 128
 

@@ -129,6 +129,21 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 33
 text = "RC circuit"
 
+[node name="nascar_circuit" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 33
+text = "Nascar circuit"
+
+[node name="double_circuit" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 33
+text = "pista double"
+
+[node name="basic_circuit" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 33
+text = "basic circuit"
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_256t0")
@@ -136,4 +151,7 @@ libraries = {
 
 [connection signal="button_up" from="CanvasLayer/VBoxContainer/to_f1_race" to="." method="_on_to_f_1_race_button_up"]
 [connection signal="button_up" from="CanvasLayer/VBoxContainer/to_rc_circuit" to="." method="_on_to_rc_circuit_button_up"]
+[connection signal="button_up" from="CanvasLayer/VBoxContainer/nascar_circuit" to="." method="_on_nascar_circuit_button_up"]
+[connection signal="button_up" from="CanvasLayer/VBoxContainer/double_circuit" to="." method="_on_double_circuit_button_up"]
+[connection signal="button_up" from="CanvasLayer/VBoxContainer/basic_circuit" to="." method="_on_basic_circuit_button_up"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
