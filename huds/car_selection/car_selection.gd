@@ -1,6 +1,8 @@
 extends Node3D
 @onready var anim: AnimationPlayer = $AnimationPlayer
 @onready var pCam: PhantomCamera3D = $PhantomCamera3D
+@onready var car_name_label: Label = $CanvasLayer/car_name_label
+@onready var car_num: Label = $CanvasLayer/car_num
 
 var car_list: Array = []
 var selector: int = 0
@@ -25,6 +27,9 @@ func _ready() -> void:
 	car_list.append($vehicles/toreto)
 	car_list.append($vehicles/nomad)
 	
+	car_name_label.text = car_list[0].name
+	car_num.text = str(0) + "/" + str(car_list.size() - 1)
+	
 	
 func _on_left_button_up() -> void:
 	if selector > 0:
@@ -34,6 +39,9 @@ func _on_left_button_up() -> void:
 	pCam.follow_offset = Vector3(0, 1.455, 4.175)
 	if pCam.follow_target.name == "empaler_truck":
 		pCam.follow_offset = Vector3(0, 1.455, 6)
+	
+	car_name_label.text = car_list[selector].name
+	car_num.text = str(selector) + "/" + str(car_list.size() - 1)
 
 func _on_right_button_up() -> void:
 	if selector + 1 < car_list.size():
@@ -43,6 +51,9 @@ func _on_right_button_up() -> void:
 		pCam.follow_offset = Vector3(0, 1.455, 4.175)
 		if pCam.follow_target.name == "empaler_truck":
 			pCam.follow_offset = Vector3(0, 1.455, 6)
+		
+		car_name_label.text = car_list[selector].name
+		car_num.text = str(selector) + "/" + str(car_list.size() - 1)
 
 
 func _on_go_back_button_up() -> void:
