@@ -28,7 +28,7 @@ mass = 200.0
 physics_material_override = ExtResource("1_yn304")
 gravity_scale = 5.0
 center_of_mass_mode = 1
-center_of_mass = Vector3(0, -1, 0)
+center_of_mass = Vector3(0, -2, 0)
 script = ExtResource("2_edb17")
 dificulty = 2
 
@@ -45,7 +45,7 @@ shape = SubResource("ConvexPolygonShape3D_k7eka")
 [node name="wheel_1" type="VehicleWheel3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.886, -0.816465, 1.54524)
 use_as_steering = true
-wheel_roll_influence = 1.1
+wheel_roll_influence = 2.0
 wheel_radius = 0.505
 wheel_friction_slip = 10.0
 suspension_stiffness = 150.0
@@ -60,7 +60,7 @@ mesh = ExtResource("5_744bi")
 [node name="wheel_2" type="VehicleWheel3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.88, -0.816863, 1.54497)
 use_as_steering = true
-wheel_roll_influence = 1.1
+wheel_roll_influence = 2.0
 wheel_radius = 0.505
 wheel_friction_slip = 10.0
 suspension_stiffness = 150.0
@@ -75,7 +75,7 @@ mesh = ExtResource("5_744bi")
 [node name="wheel_3" type="VehicleWheel3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.886, -0.829664, -1.46377)
 use_as_traction = true
-wheel_roll_influence = 1.1
+wheel_roll_influence = 2.0
 wheel_radius = 0.505
 wheel_friction_slip = 10.0
 suspension_stiffness = 150.0
@@ -90,7 +90,7 @@ mesh = ExtResource("5_744bi")
 [node name="wheel_4" type="VehicleWheel3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.88, -0.829664, -1.46377)
 use_as_traction = true
-wheel_roll_influence = 1.1
+wheel_roll_influence = 2.0
 wheel_radius = 0.505
 wheel_friction_slip = 10.0
 suspension_stiffness = 150.0

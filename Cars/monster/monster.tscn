@@ -45,7 +45,7 @@ mass = 200.0
 physics_material_override = ExtResource("1_bglxn")
 gravity_scale = 3.0
 center_of_mass_mode = 1
-center_of_mass = Vector3(0, -1, 0)
+center_of_mass = Vector3(0, -3, 0)
 script = ExtResource("1_lpv4x")
 
 [node name="MonsterBody" type="MeshInstance3D" parent="."]
@@ -64,7 +64,7 @@ shape = SubResource("ConvexPolygonShape3D_msou8")
 [node name="wheel_1" type="VehicleWheel3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.03506, -0.413239, 0.973424)
 use_as_steering = true
-wheel_roll_influence = 1.5
+wheel_roll_influence = 2.0
 wheel_radius = 0.71
 wheel_friction_slip = 10.0
 suspension_stiffness = 150.0
@@ -80,7 +80,7 @@ skeleton = NodePath("../..")
 [node name="wheel_2" type="VehicleWheel3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.035, -0.413239, 0.973764)
 use_as_steering = true
-wheel_roll_influence = 1.5
+wheel_roll_influence = 2.0
 wheel_radius = 0.71
 wheel_friction_slip = 10.0
 suspension_stiffness = 150.0
@@ -96,7 +96,7 @@ skeleton = NodePath("../..")
 [node name="wheel_3" type="VehicleWheel3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.03506, -0.413239, -1.84763)
 use_as_traction = true
-wheel_roll_influence = 1.5
+wheel_roll_influence = 2.0
 wheel_radius = 0.71
 wheel_friction_slip = 10.0
 suspension_stiffness = 150.0
@@ -112,7 +112,7 @@ skeleton = NodePath("../..")
 [node name="wheel_4" type="VehicleWheel3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.035, -0.413239, -1.84763)
 use_as_traction = true
-wheel_roll_influence = 1.5
+wheel_roll_influence = 2.0
 wheel_radius = 0.71
 wheel_friction_slip = 10.0
 suspension_stiffness = 150.0

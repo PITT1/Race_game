@@ -39,7 +39,7 @@ shape = SubResource("ConvexPolygonShape3D_1ic3g")
 [node name="wheel_1" type="VehicleWheel3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.69, -0.075, 1.35561)
 use_as_steering = true
-wheel_roll_influence = 1.5
+wheel_roll_influence = 2.0
 wheel_radius = 0.4
 wheel_friction_slip = 10.0
 suspension_stiffness = 100.0
@@ -55,7 +55,7 @@ skeleton = NodePath("../..")
 [node name="wheel_2" type="VehicleWheel3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.69, -0.075, 1.35595)
 use_as_steering = true
-wheel_roll_influence = 1.5
+wheel_roll_influence = 2.0
 wheel_radius = 0.4
 wheel_friction_slip = 10.0
 suspension_stiffness = 100.0
@@ -71,7 +71,7 @@ skeleton = NodePath("../..")
 [node name="wheel_3" type="VehicleWheel3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.69, -0.075, -1.34096)
 use_as_traction = true
-wheel_roll_influence = 1.5
+wheel_roll_influence = 2.0
 wheel_radius = 0.4
 wheel_friction_slip = 10.0
 suspension_stiffness = 100.0
@@ -87,7 +87,7 @@ skeleton = NodePath("../../wheel_2")
 [node name="wheel_4" type="VehicleWheel3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.69, -0.075, -1.34096)
 use_as_traction = true
-wheel_roll_influence = 1.5
+wheel_roll_influence = 2.0
 wheel_radius = 0.4
 wheel_friction_slip = 10.0
 suspension_stiffness = 100.0
