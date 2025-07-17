@@ -26,9 +26,9 @@ GlobalVar="*res://global_var.gd"
 
 window/size/viewport_width=1612
 window/size/viewport_height=720
-window/frame_pacing/android/swappy_mode=0
+window/frame_pacing/android/swappy_mode=1
 window/stretch/mode="canvas_items"
-window/stretch/aspect="keep_height"
+window/stretch/aspect="expand"
 
 [editor_plugins]
 

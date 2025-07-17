@@ -1,7 +1,6 @@
-[gd_scene load_steps=80 format=3 uid="uid://bhehqj2450xtc"]
+[gd_scene load_steps=77 format=3 uid="uid://bhehqj2450xtc"]
 
 [ext_resource type="Script" uid="uid://bbkomqcnkihxo" path="res://huds/car_selection/car_selection.gd" id="1_u64g1"]
-[ext_resource type="Texture2D" uid="uid://bm552631w02kq" path="res://Maps/textures/f1_circuits/Asphalt025C_1K-JPG_Color.jpg" id="1_wibte"]
 [ext_resource type="ArrayMesh" uid="uid://rgbpy0gs4uf7" path="res://Cars/rat_rod/bug_car_body.obj" id="2_u64g1"]
 [ext_resource type="ArrayMesh" uid="uid://vws8cc1dskg" path="res://Cars/rat_rod/bug_car_front_wheel.obj" id="3_h8baf"]
 [ext_resource type="ArrayMesh" uid="uid://dpr5hvsc86g8i" path="res://Cars/rat_rod/bug_car_rear_wheel.obj" id="4_c3i15"]
@@ -28,29 +27,22 @@
 [ext_resource type="ArrayMesh" uid="uid://bl5jvh5mwftgv" path="res://Cars/nomad/nomad_all_model.obj" id="23_fq8jf"]
 [ext_resource type="Texture2D" uid="uid://pgx01q58gm1s" path="res://Cars/nomad/camoflaje.png" id="24_vv7oi"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_gw526"]
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_vv7oi"]
 sky_top_color = Color(0.461087, 0.641883, 0.858997, 1)
 sky_horizon_color = Color(0.631155, 0.676354, 0.730632, 1)
 ground_bottom_color = Color(0, 0, 0, 1)
 ground_horizon_color = Color(0.631155, 0.676354, 0.730632, 1)
+use_debanding = false
 
-[sub_resource type="Sky" id="Sky_8jbfh"]
-sky_material = SubResource("ProceduralSkyMaterial_gw526")
+[sub_resource type="Sky" id="Sky_r43wq"]
+sky_material = SubResource("ProceduralSkyMaterial_vv7oi")
 
-[sub_resource type="Environment" id="Environment_6lp0e"]
+[sub_resource type="Environment" id="Environment_gt30f"]
 background_mode = 2
-sky = SubResource("Sky_8jbfh")
+sky = SubResource("Sky_r43wq")
+sky_rotation = Vector3(0.767945, 0, 0)
 tonemap_mode = 2
 glow_enabled = true
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hg4ax"]
-albedo_texture = ExtResource("1_wibte")
-uv1_scale = Vector3(4.945, 4.945, 4.945)
-
-[sub_resource type="CylinderMesh" id="CylinderMesh_hwucu"]
-top_radius = 6.0
-bottom_radius = 6.0
-height = 0.31
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7suyo"]
 albedo_color = Color(0.771578, 2.28621e-06, 1.05888e-06, 1)
@@ -650,20 +642,21 @@ _data = {
 script = ExtResource("1_u64g1")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_6lp0e")
+environment = SubResource("Environment_gt30f")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.953191, 0.30237, 1.3217e-08, 0, -4.37114e-08, 1, 0.30237, 0.953191, 4.16653e-08, 0, 0, 0)
-shadow_enabled = true
+transform = Transform3D(-0.899558, -0.282519, 0.333135, 0, 0.762668, 0.64679, -0.436802, 0.581825, -0.686064, 0, 0, 0)
+light_bake_mode = 1
+shadow_bias = 0.0
+shadow_normal_bias = 1.885
+shadow_transmittance_bias = -9.494
+shadow_blur = 0.0
+directional_shadow_mode = 0
+sky_mode = 1
 
 [node name="vehicles" type="Node3D" parent="."]
 
 [node name="bugrod" type="Node3D" parent="vehicles"]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="vehicles/bugrod"]
-material_override = SubResource("StandardMaterial3D_hg4ax")
-mesh = SubResource("CylinderMesh_hwucu")
-skeleton = NodePath("../../..")
 
 [node name="BugCarBody" type="MeshInstance3D" parent="vehicles/bugrod"]
 transform = Transform3D(0.56, 0, 0, 0, 0.56, 0, 0, 0, 0.56, 0, 0.860685, 0)
@@ -696,11 +689,6 @@ mesh = ExtResource("3_h8baf")
 [node name="hotrod1" type="Node3D" parent="vehicles"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 0)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="vehicles/hotrod1"]
-material_override = SubResource("StandardMaterial3D_hg4ax")
-mesh = SubResource("CylinderMesh_hwucu")
-skeleton = NodePath("../../..")
-
 [node name="Hot-rod-body" type="MeshInstance3D" parent="vehicles/hotrod1"]
 transform = Transform3D(0.74, 0, 0, 0, 0.74, 0, 0, 0, 0.74, 0, 0.689717, 0)
 mesh = ExtResource("6_c3i15")
@@ -732,11 +720,6 @@ skeleton = NodePath("")
 [node name="sentinel_gt" type="Node3D" parent="vehicles"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.8279, 0, 0)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="vehicles/sentinel_gt"]
-material_override = SubResource("StandardMaterial3D_hg4ax")
-mesh = SubResource("CylinderMesh_hwucu")
-skeleton = NodePath("../../..")
-
 [node name="Corvette" type="MeshInstance3D" parent="vehicles/sentinel_gt"]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.691, -0.551)
 mesh = ExtResource("8_6rdnw")
@@ -749,11 +732,6 @@ surface_material_override/8 = SubResource("StandardMaterial3D_vv7oi")
 
 [node name="empaler_truck" type="Node3D" parent="vehicles"]
 transform = Transform3D(0.663324, 0, 0.748332, 0, 1, 0, -0.748332, 0, 0.663324, 44.8691, 0, 0)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="vehicles/empaler_truck"]
-material_override = SubResource("StandardMaterial3D_hg4ax")
-mesh = SubResource("CylinderMesh_hwucu")
-skeleton = NodePath("../../..")
 
 [node name="EmpalerTruck" type="MeshInstance3D" parent="vehicles/empaler_truck"]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 1.5949, 0)
@@ -769,11 +747,6 @@ surface_material_override/10 = SubResource("StandardMaterial3D_dphnb")
 [node name="raven_356" type="Node3D" parent="vehicles"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59.3503, 0, 0)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="vehicles/raven_356"]
-material_override = SubResource("StandardMaterial3D_hg4ax")
-mesh = SubResource("CylinderMesh_hwucu")
-skeleton = NodePath("../../..")
-
 [node name="HotRod356" type="MeshInstance3D" parent="vehicles/raven_356"]
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0.994385, 0)
 mesh = ExtResource("10_btktd")
@@ -785,11 +758,6 @@ surface_material_override/8 = SubResource("StandardMaterial3D_cp2nr")
 
 [node name="racing_rod" type="Node3D" parent="vehicles"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 73.0855, 0, 0)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="vehicles/racing_rod"]
-material_override = SubResource("StandardMaterial3D_hg4ax")
-mesh = SubResource("CylinderMesh_hwucu")
-skeleton = NodePath("../../..")
 
 [node name="HotRodRacing" type="MeshInstance3D" parent="vehicles/racing_rod"]
 transform = Transform3D(0.67, 0, 0, 0, 0.67, 0, 0, 0, 0.67, 0, 1.101, 0)
@@ -804,11 +772,6 @@ surface_material_override/6 = SubResource("StandardMaterial3D_a74dt")
 [node name="blade_rod" type="Node3D" parent="vehicles"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 87.0001, 0, 0)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="vehicles/blade_rod"]
-material_override = SubResource("StandardMaterial3D_hg4ax")
-mesh = SubResource("CylinderMesh_hwucu")
-skeleton = NodePath("../../..")
-
 [node name="HotRod2" type="MeshInstance3D" parent="vehicles/blade_rod"]
 transform = Transform3D(0.48, 0, 0, 0, 0.48, 0, 0, 0, 0.48, -0.0208592, 0.860799, 0.297836)
 mesh = ExtResource("12_8jbfh")
@@ -819,11 +782,6 @@ surface_material_override/6 = SubResource("StandardMaterial3D_pekxc")
 
 [node name="thunderbolt" type="Node3D" parent="vehicles"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 100.792, 0, 0)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="vehicles/thunderbolt"]
-material_override = SubResource("StandardMaterial3D_hg4ax")
-mesh = SubResource("CylinderMesh_hwucu")
-skeleton = NodePath("../../..")
 
 [node name="HotRod3" type="MeshInstance3D" parent="vehicles/thunderbolt"]
 transform = Transform3D(0.34, 0, 0, 0, 0.34, 0, 0, 0, 0.34, 0, 0.574573, 0)
@@ -836,11 +794,6 @@ surface_material_override/4 = SubResource("StandardMaterial3D_841ai")
 [node name="pinkinator" type="Node3D" parent="vehicles"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 114.087, 0, 0)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="vehicles/pinkinator"]
-material_override = SubResource("StandardMaterial3D_hg4ax")
-mesh = SubResource("CylinderMesh_hwucu")
-skeleton = NodePath("../../..")
-
 [node name="MonsterPinkAllModel" type="MeshInstance3D" parent="vehicles/pinkinator"]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.877396, 0)
 mesh = ExtResource("14_hg4ax")
@@ -848,11 +801,6 @@ skeleton = NodePath("../..")
 
 [node name="f1_70s" type="Node3D" parent="vehicles"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 127.917, 0, 0)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="vehicles/f1_70s"]
-material_override = SubResource("StandardMaterial3D_hg4ax")
-mesh = SubResource("CylinderMesh_hwucu")
-skeleton = NodePath("../../..")
 
 [node name="F1-70sAllModel" type="MeshInstance3D" parent="vehicles/f1_70s"]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0.548546, 0)
@@ -862,11 +810,6 @@ skeleton = NodePath("../../..")
 [node name="montana" type="Node3D" parent="vehicles"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 141.033, 0, 0)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="vehicles/montana"]
-material_override = SubResource("StandardMaterial3D_hg4ax")
-mesh = SubResource("CylinderMesh_hwucu")
-skeleton = NodePath("../../..")
-
 [node name="MontanaAllModel" type="MeshInstance3D" parent="vehicles/montana"]
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0.669132, 0)
 mesh = ExtResource("16_4oqaj")
@@ -875,11 +818,6 @@ surface_material_override/2 = SubResource("StandardMaterial3D_lcj7q")
 
 [node name="monster" type="Node3D" parent="vehicles"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 154.184, 0, 0)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="vehicles/monster"]
-material_override = SubResource("StandardMaterial3D_hg4ax")
-mesh = SubResource("CylinderMesh_hwucu")
-skeleton = NodePath("../../..")
 
 [node name="Monster" type="MeshInstance3D" parent="vehicles/monster"]
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 1.12166, 0)
@@ -894,11 +832,6 @@ surface_material_override/10 = SubResource("StandardMaterial3D_kn6nc")
 [node name="z40" type="Node3D" parent="vehicles"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 167.577, 0, 0)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="vehicles/z40"]
-material_override = SubResource("StandardMaterial3D_hg4ax")
-mesh = SubResource("CylinderMesh_hwucu")
-skeleton = NodePath("../../..")
-
 [node name="Z40AllModel" type="MeshInstance3D" parent="vehicles/z40"]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0.890851, 0)
 mesh = ExtResource("21_ehe8b")
@@ -906,11 +839,6 @@ skeleton = NodePath("../..")
 
 [node name="toreto" type="Node3D" parent="vehicles"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 181.162, 0, 0)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="vehicles/toreto"]
-material_override = SubResource("StandardMaterial3D_hg4ax")
-mesh = SubResource("CylinderMesh_hwucu")
-skeleton = NodePath("../../..")
 
 [node name="ToretoAllBody" type="MeshInstance3D" parent="vehicles/toreto"]
 transform = Transform3D(1, 0, 0, 0, 0.999548, -0.0300675, 0, 0.0300675, 0.999548, 0, 0.873602, 0)
@@ -920,11 +848,6 @@ skeleton = NodePath("../..")
 [node name="nomad" type="Node3D" parent="vehicles"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 194.258, 0, 0)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="vehicles/nomad"]
-material_override = SubResource("StandardMaterial3D_hg4ax")
-mesh = SubResource("CylinderMesh_hwucu")
-skeleton = NodePath("../../..")
-
 [node name="NomadAllModel" type="MeshInstance3D" parent="vehicles/nomad"]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 1.45247, 0)
 mesh = ExtResource("23_fq8jf")
@@ -932,7 +855,7 @@ surface_material_override/3 = SubResource("StandardMaterial3D_k7gmd")
 surface_material_override/4 = SubResource("StandardMaterial3D_dbumn")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.944298, 0.329091, 0, -0.329091, 0.944298, 0, 1.455, 4.175)
+transform = Transform3D(1, 0, 0, 0, 0.994114, 0.108341, 0, -0.108341, 0.994114, 0, 1.455, 4.175)
 
 [node name="PhantomCameraHost" type="Node" parent="Camera3D"]
 process_priority = 300
@@ -941,7 +864,7 @@ script = ExtResource("5_6rdnw")
 metadata/_custom_type_script = "uid://bd046eokvcnu2"
 
 [node name="PhantomCamera3D" type="Node3D" parent="." node_paths=PackedStringArray("follow_target", "look_at_target")]
-transform = Transform3D(0.999999, 0, 0, 0, 0.944291, 0.329088, 0, -0.329088, 0.944291, 0, 1.455, 4.175)
+transform = Transform3D(0.999999, 0, 0, 0, 0.994106, 0.10834, 0, -0.10834, 0.994106, 0, 1.455, 4.175)
 top_level = true
 script = ExtResource("6_mycvf")
 follow_mode = 2
@@ -950,6 +873,7 @@ look_at_mode = 2
 look_at_target = NodePath("../vehicles/bugrod")
 tween_resource = SubResource("Resource_c3i15")
 follow_offset = Vector3(0, 1.455, 4.175)
+look_at_offset = Vector3(0, 1, 0)
 metadata/_custom_type_script = "uid://csjccrhj5wnx7"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -960,69 +884,67 @@ libraries = {
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="left" type="Button" parent="CanvasLayer"]
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_top = -4.0
-offset_right = 8.0
-offset_bottom = 4.0
+anchors_preset = -1
+anchor_top = 0.222222
+anchor_right = 0.124069
+anchor_bottom = 0.777778
 grow_vertical = 2
 theme_override_font_sizes/font_size = 154
 text = "<<"
+metadata/_edit_use_anchors_ = true
 
 [node name="right" type="Button" parent="CanvasLayer"]
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
+anchors_preset = -1
+anchor_left = 0.875931
+anchor_top = 0.222222
 anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -8.0
-offset_top = -4.0
-offset_bottom = 4.0
+anchor_bottom = 0.777778
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_font_sizes/font_size = 154
 text = ">>"
+metadata/_edit_use_anchors_ = true
 
 [node name="select" type="Button" parent="CanvasLayer"]
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
+anchors_preset = -1
+anchor_left = 0.375931
+anchor_top = 0.861111
+anchor_right = 0.624069
 anchor_bottom = 1.0
-offset_left = -4.0
-offset_top = -8.0
-offset_right = 4.0
+offset_right = 6.10352e-05
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 60
 text = "Select"
+metadata/_edit_use_anchors_ = true
 
 [node name="go_back" type="Button" parent="CanvasLayer"]
-offset_right = 203.0
-offset_bottom = 77.0
-theme_override_font_sizes/font_size = 50
+anchors_preset = -1
+anchor_right = 0.186104
+anchor_bottom = 0.166667
+theme_override_font_sizes/font_size = 60
 text = "Go Back"
+metadata/_edit_use_anchors_ = true
 
 [node name="car_name_label" type="Label" parent="CanvasLayer"]
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -20.0
-offset_right = 20.0
-offset_bottom = 21.0
+anchors_preset = -1
+anchor_left = 0.487593
+anchor_right = 0.512407
+anchor_bottom = 0.0777778
 grow_horizontal = 2
-theme_override_font_sizes/font_size = 44
+theme_override_font_sizes/font_size = 60
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="car_num" type="Label" parent="CanvasLayer"]
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -40.0
-offset_bottom = 21.0
+anchors_preset = -1
+anchor_left = 0.868486
+anchor_right = 0.8933
+anchor_bottom = 0.106944
 grow_horizontal = 0
-theme_override_font_sizes/font_size = 44
+size_flags_horizontal = 6
+theme_override_font_sizes/font_size = 60
+metadata/_edit_use_anchors_ = true
 
 [connection signal="button_up" from="CanvasLayer/left" to="." method="_on_left_button_up"]
 [connection signal="button_up" from="CanvasLayer/right" to="." method="_on_right_button_up"]

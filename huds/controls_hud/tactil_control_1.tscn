@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://ctvbggtg0dtyb"]
+[gd_scene load_steps=3 format=3 uid="uid://ctvbggtg0dtyb"]
 
 [ext_resource type="Texture2D" uid="uid://c23qydjjavpf1" path="res://images/arrow.png" id="1_dcn82"]
+[ext_resource type="PackedScene" uid="uid://c2i8lvkgcsf8g" path="res://huds/fps_visual/fps_hud.tscn" id="2_xqbiy"]
 
 [node name="TactilControl1" type="Control"]
 layout_mode = 3
@@ -42,3 +43,13 @@ scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("1_dcn82")
 passby_press = true
 action = "ui_right"
+
+[node name="FpsHud" parent="." instance=ExtResource("2_xqbiy")]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.0
+offset_top = -3.0
+offset_bottom = -3.0
+grow_vertical = 1

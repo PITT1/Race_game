@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://cjb4nd6otxjsg"]
+[gd_scene load_steps=27 format=3 uid="uid://cjb4nd6otxjsg"]
 
 [ext_resource type="Script" uid="uid://kghgfx151qgh" path="res://Maps/circuit_test_2/test_2.gd" id="1_6mnti"]
 [ext_resource type="PackedScene" uid="uid://cd2fjxhklg8i1" path="res://huds/on_race_huds/countdown.tscn" id="2_lppdq"]
@@ -12,7 +12,6 @@
 [ext_resource type="ArrayMesh" uid="uid://dc4upx53e4gie" path="res://others/spawners/spawn_arrow.obj" id="10_ow4v7"]
 [ext_resource type="Texture2D" uid="uid://bm552631w02kq" path="res://Maps/textures/f1_circuits/Asphalt025C_1K-JPG_Color.jpg" id="10_uxm7u"]
 [ext_resource type="PackedScene" uid="uid://ctvbggtg0dtyb" path="res://huds/controls_hud/tactil_control_1.tscn" id="12_4rsws"]
-[ext_resource type="PackedScene" uid="uid://c2i8lvkgcsf8g" path="res://huds/fps_visual/fps_hud.tscn" id="12_uxm7u"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_uxm7u"]
 sky_top_color = Color(0.461087, 0.641883, 0.858997, 1)
@@ -520,10 +519,6 @@ mesh = ExtResource("10_ow4v7")
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 95.2636, 2.72269, -77.7872)
 visible = false
 mesh = ExtResource("10_ow4v7")
-
-[node name="FpsHud" parent="." instance=ExtResource("12_uxm7u")]
-offset_top = -1.0
-offset_bottom = -1.0
 
 [node name="TactilControl1" parent="." instance=ExtResource("12_4rsws")]
 
