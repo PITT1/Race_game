@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://dl4l032e7tmky"]
+[gd_scene load_steps=23 format=3 uid="uid://dl4l032e7tmky"]
 
 [ext_resource type="PackedScene" uid="uid://deh3gsrnhaefo" path="res://Maps/loby_1/loby_1.glb" id="1_68xm8"]
 [ext_resource type="Script" uid="uid://ddn22yn6bgmbe" path="res://Maps/loby_1/loby_1.gd" id="1_jk0es"]
@@ -12,19 +12,20 @@
 [ext_resource type="PackedScene" uid="uid://b0fyvn1iybud7" path="res://others/ramps/ramp1.tscn" id="10_jk0es"]
 [ext_resource type="PackedScene" uid="uid://jg3fambfdk88" path="res://huds/loby_menus/loby_hud.tscn" id="11_6tc5e"]
 [ext_resource type="PackedScene" uid="uid://ctvbggtg0dtyb" path="res://huds/controls_hud/tactil_control_1.tscn" id="12_n0ykm"]
+[ext_resource type="PackedScene" uid="uid://c2i8lvkgcsf8g" path="res://huds/fps_visual/fps_hud.tscn" id="12_r43wq"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_j8ml7"]
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_n0ykm"]
 sky_top_color = Color(0.461087, 0.641883, 0.858997, 1)
 sky_horizon_color = Color(0.631155, 0.676354, 0.730632, 1)
 ground_bottom_color = Color(0, 0, 0, 1)
 ground_horizon_color = Color(0.631155, 0.676354, 0.730632, 1)
 
-[sub_resource type="Sky" id="Sky_dbgys"]
-sky_material = SubResource("ProceduralSkyMaterial_j8ml7")
+[sub_resource type="Sky" id="Sky_r43wq"]
+sky_material = SubResource("ProceduralSkyMaterial_n0ykm")
 
-[sub_resource type="Environment" id="Environment_1vtqb"]
+[sub_resource type="Environment" id="Environment_6850l"]
 background_mode = 2
-sky = SubResource("Sky_dbgys")
+sky = SubResource("Sky_r43wq")
 tonemap_mode = 2
 glow_enabled = true
 
@@ -65,11 +66,17 @@ point_count = 90
 script = ExtResource("1_jk0es")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_1vtqb")
+environment = SubResource("Environment_6850l")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.899558, -0.282519, 0.333135, 0, 0.762668, 0.64679, -0.436802, 0.581825, -0.686064, 0, 0, 0)
-shadow_enabled = true
+light_bake_mode = 1
+shadow_bias = 0.0
+shadow_normal_bias = 1.885
+shadow_transmittance_bias = -9.494
+shadow_blur = 0.0
+directional_shadow_mode = 0
+sky_mode = 1
 
 [node name="loby_1" parent="." instance=ExtResource("1_68xm8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.493831, 0, 0.154423)
@@ -138,6 +145,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.7734, 2.13947, 29.8051)
 transform = Transform3D(5.57667, 0.0217846, 0.194263, -0.0487376, 2.4999, 1.58632e-08, -0.300947, -0.00117563, 3.59976, 8.137, 1.79567, -27.387)
 
 [node name="LobyHud" parent="." instance=ExtResource("11_6tc5e")]
+
+[node name="FpsHud" parent="." instance=ExtResource("12_r43wq")]
 
 [node name="TactilControl1" parent="." instance=ExtResource("12_n0ykm")]
 

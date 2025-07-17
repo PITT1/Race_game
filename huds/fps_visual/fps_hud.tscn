@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://c2i8lvkgcsf8g"]
+
+[ext_resource type="Script" uid="uid://utorubk85fqo" path="res://huds/fps_visual/label.gd" id="1_uh4ix"]
+
+[node name="FpsHud" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 56.0
+grow_horizontal = 2
+size_flags_horizontal = 8
+theme_override_font_sizes/font_size = 44
+script = ExtResource("1_uh4ix")

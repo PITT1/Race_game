@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://coq6k5s1owo2s"]
+[gd_scene load_steps=21 format=3 uid="uid://coq6k5s1owo2s"]
 
 [ext_resource type="PackedScene" uid="uid://cmolawirn8q8f" path="res://Maps/nascar_circuit/nascar_circuit.glb" id="1_4hug8"]
 [ext_resource type="Script" uid="uid://kghgfx151qgh" path="res://Maps/circuit_test_2/test_2.gd" id="1_w1t2r"]
@@ -7,19 +7,20 @@
 [ext_resource type="Script" uid="uid://csjccrhj5wnx7" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="4_1nag2"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="5_jvpel"]
 [ext_resource type="ArrayMesh" uid="uid://dc4upx53e4gie" path="res://others/spawners/spawn_arrow.obj" id="6_1nag2"]
+[ext_resource type="PackedScene" uid="uid://ctvbggtg0dtyb" path="res://huds/controls_hud/tactil_control_1.tscn" id="8_aad1i"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_58aey"]
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_aad1i"]
 sky_top_color = Color(0.461087, 0.641883, 0.858997, 1)
 sky_horizon_color = Color(0.631155, 0.676354, 0.730632, 1)
 ground_bottom_color = Color(0, 0, 0, 1)
 ground_horizon_color = Color(0.631155, 0.676354, 0.730632, 1)
 
-[sub_resource type="Sky" id="Sky_w1t2r"]
-sky_material = SubResource("ProceduralSkyMaterial_58aey")
+[sub_resource type="Sky" id="Sky_mj5r1"]
+sky_material = SubResource("ProceduralSkyMaterial_aad1i")
 
-[sub_resource type="Environment" id="Environment_cixrn"]
+[sub_resource type="Environment" id="Environment_lledn"]
 background_mode = 2
-sky = SubResource("Sky_w1t2r")
+sky = SubResource("Sky_mj5r1")
 tonemap_mode = 2
 glow_enabled = true
 
@@ -96,11 +97,17 @@ countdown = ExtResource("2_jvpel")
 laps_num_to_finish = 3
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_cixrn")
+environment = SubResource("Environment_lledn")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.899558, -0.377133, 0.220379, 0, 0.504528, 0.863396, -0.436802, 0.776674, -0.453852, 0, 0, 0)
-shadow_enabled = true
+transform = Transform3D(-0.899558, -0.282519, 0.333135, 0, 0.762668, 0.64679, -0.436802, 0.581825, -0.686064, 0, 0, 0)
+light_bake_mode = 1
+shadow_bias = 0.0
+shadow_normal_bias = 1.885
+shadow_transmittance_bias = -9.494
+shadow_blur = 0.0
+directional_shadow_mode = 0
+sky_mode = 1
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(-0.732591, 0.692228, -0.540246, -4.59305e-08, 0.617123, 0.782893, 1.35592, 0.374004, -0.29189, -11.355, 16.455, -6.135)
@@ -486,5 +493,7 @@ mesh = ExtResource("6_1nag2")
 [node name="spawn_point_7" type="MeshInstance3D" parent="spawners"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -29.0103, 0, 12.609)
 mesh = ExtResource("6_1nag2")
+
+[node name="TactilControl1" parent="." instance=ExtResource("8_aad1i")]
 
 [editable path="StaticBody3D/nascar_circuit"]

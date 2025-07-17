@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://cjb4nd6otxjsg"]
+[gd_scene load_steps=28 format=3 uid="uid://cjb4nd6otxjsg"]
 
 [ext_resource type="Script" uid="uid://kghgfx151qgh" path="res://Maps/circuit_test_2/test_2.gd" id="1_6mnti"]
 [ext_resource type="PackedScene" uid="uid://cd2fjxhklg8i1" path="res://huds/on_race_huds/countdown.tscn" id="2_lppdq"]
@@ -11,19 +11,21 @@
 [ext_resource type="Texture2D" uid="uid://b6cnimeif6j5p" path="res://Maps/textures/f1_circuits/Ground079S_1K-JPG_Color.jpg" id="9_4rsws"]
 [ext_resource type="ArrayMesh" uid="uid://dc4upx53e4gie" path="res://others/spawners/spawn_arrow.obj" id="10_ow4v7"]
 [ext_resource type="Texture2D" uid="uid://bm552631w02kq" path="res://Maps/textures/f1_circuits/Asphalt025C_1K-JPG_Color.jpg" id="10_uxm7u"]
+[ext_resource type="PackedScene" uid="uid://ctvbggtg0dtyb" path="res://huds/controls_hud/tactil_control_1.tscn" id="12_4rsws"]
+[ext_resource type="PackedScene" uid="uid://c2i8lvkgcsf8g" path="res://huds/fps_visual/fps_hud.tscn" id="12_uxm7u"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3xdu8"]
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_uxm7u"]
 sky_top_color = Color(0.461087, 0.641883, 0.858997, 1)
 sky_horizon_color = Color(0.631155, 0.676354, 0.730632, 1)
 ground_bottom_color = Color(0, 0, 0, 1)
 ground_horizon_color = Color(0.631155, 0.676354, 0.730632, 1)
 
-[sub_resource type="Sky" id="Sky_ro3cy"]
-sky_material = SubResource("ProceduralSkyMaterial_3xdu8")
+[sub_resource type="Sky" id="Sky_r43wq"]
+sky_material = SubResource("ProceduralSkyMaterial_uxm7u")
 
-[sub_resource type="Environment" id="Environment_8fw60"]
+[sub_resource type="Environment" id="Environment_i1n1h"]
 background_mode = 2
-sky = SubResource("Sky_ro3cy")
+sky = SubResource("Sky_r43wq")
 tonemap_mode = 2
 glow_enabled = true
 
@@ -106,11 +108,17 @@ countdown = ExtResource("2_lppdq")
 laps_num_to_finish = 3
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_8fw60")
+environment = SubResource("Environment_i1n1h")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.531399, 0.731401, -0.427396, 0, 0.504528, 0.863396, 0.847122, 0.458807, -0.268105, 0, 0, 0)
-shadow_enabled = true
+transform = Transform3D(-0.899558, -0.282519, 0.333135, 0, 0.762668, 0.64679, -0.436802, 0.581825, -0.686064, 0, 0, 0)
+light_bake_mode = 1
+shadow_bias = 0.0
+shadow_normal_bias = 1.885
+shadow_transmittance_bias = -9.494
+shadow_blur = 0.0
+directional_shadow_mode = 0
+sky_mode = 1
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(-0.732591, 0.692228, -0.540246, -4.59305e-08, 0.617123, 0.782893, 1.35592, 0.374004, -0.29189, -11.355, 16.455, -6.135)
@@ -512,5 +520,11 @@ mesh = ExtResource("10_ow4v7")
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 95.2636, 2.72269, -77.7872)
 visible = false
 mesh = ExtResource("10_ow4v7")
+
+[node name="FpsHud" parent="." instance=ExtResource("12_uxm7u")]
+offset_top = -1.0
+offset_bottom = -1.0
+
+[node name="TactilControl1" parent="." instance=ExtResource("12_4rsws")]
 
 [editable path="pista_1_CIRCUIT"]

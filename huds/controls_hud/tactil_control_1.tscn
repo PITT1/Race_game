@@ -10,31 +10,33 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="brake_reverse" type="TouchScreenButton" parent="."]
-position = Vector2(908, 457)
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="brake_reverse" type="TouchScreenButton" parent="CanvasLayer"]
+position = Vector2(1422, 536)
 scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("1_dcn82")
 passby_press = true
 action = "ui_down"
 
-[node name="acelerate" type="TouchScreenButton" parent="."]
-position = Vector2(1037, 407)
-rotation = 3.14159
+[node name="acelerate" type="TouchScreenButton" parent="CanvasLayer"]
+position = Vector2(1551, 486)
+rotation = -3.14159
 scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("1_dcn82")
 passby_press = true
 action = "ui_up"
 
-[node name="left" type="TouchScreenButton" parent="."]
-position = Vector2(193, 445)
+[node name="left" type="TouchScreenButton" parent="CanvasLayer"]
+position = Vector2(210, 459)
 rotation = 1.5708
 scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("1_dcn82")
 passby_press = true
 action = "ui_left"
 
-[node name="right" type="TouchScreenButton" parent="."]
-position = Vector2(249, 568)
+[node name="right" type="TouchScreenButton" parent="CanvasLayer"]
+position = Vector2(266, 582)
 rotation = -1.5708
 scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("1_dcn82")

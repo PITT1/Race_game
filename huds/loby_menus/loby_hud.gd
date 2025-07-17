@@ -10,3 +10,7 @@ func _ready() -> void:
 	if str_money.contains("."):
 		real_part = str_money.split(".")
 		money_label.text = str(real_part[0])
+
+
+func _on_button_button_up() -> void:
+	get_tree().quit()

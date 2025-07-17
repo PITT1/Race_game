@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://c0e7xj0w2s5k1"]
+[gd_scene load_steps=33 format=3 uid="uid://c0e7xj0w2s5k1"]
 
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="1_758mf"]
 [ext_resource type="Script" uid="uid://kghgfx151qgh" path="res://Maps/circuit_test_2/test_2.gd" id="1_gkmgf"]
@@ -12,19 +12,20 @@
 [ext_resource type="ArrayMesh" uid="uid://dc4upx53e4gie" path="res://others/spawners/spawn_arrow.obj" id="10_am243"]
 [ext_resource type="PackedScene" uid="uid://bhevwsndruup5" path="res://others/cone/cone.tscn" id="10_gkmgf"]
 [ext_resource type="PackedScene" uid="uid://x4l2usdlfsxp" path="res://others/boxes/box_1.tscn" id="11_gkmgf"]
+[ext_resource type="PackedScene" uid="uid://ctvbggtg0dtyb" path="res://huds/controls_hud/tactil_control_1.tscn" id="13_j2xqt"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_4lugw"]
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_j2xqt"]
 sky_top_color = Color(0.461087, 0.641883, 0.858997, 1)
 sky_horizon_color = Color(0.631155, 0.676354, 0.730632, 1)
 ground_bottom_color = Color(0, 0, 0, 1)
 ground_horizon_color = Color(0.631155, 0.676354, 0.730632, 1)
 
-[sub_resource type="Sky" id="Sky_d4tgu"]
-sky_material = SubResource("ProceduralSkyMaterial_4lugw")
+[sub_resource type="Sky" id="Sky_alync"]
+sky_material = SubResource("ProceduralSkyMaterial_j2xqt")
 
-[sub_resource type="Environment" id="Environment_758mf"]
+[sub_resource type="Environment" id="Environment_s7vdf"]
 background_mode = 2
-sky = SubResource("Sky_d4tgu")
+sky = SubResource("Sky_alync")
 tonemap_mode = 2
 glow_enabled = true
 
@@ -126,14 +127,20 @@ min_distance_to_point_BOT = 10
 poitn_desviation_BOT = 1
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_758mf")
+environment = SubResource("Environment_s7vdf")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.899558, -0.282519, 0.333135, 0, 0.762668, 0.64679, -0.436802, 0.581825, -0.686064, 0, 0, 0)
-shadow_enabled = true
+light_bake_mode = 1
+shadow_bias = 0.0
+shadow_normal_bias = 1.885
+shadow_transmittance_bias = -9.494
+shadow_blur = 0.0
+directional_shadow_mode = 0
+sky_mode = 1
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-0.612589, -0.637666, 0.46703, 0, 0.590876, 0.806762, -0.790402, 0.494214, -0.361964, 44.2476, 27.3207, -4.84037)
+transform = Transform3D(-0.913681, -0.637617, 0.466457, 0, 0.590831, 0.805772, -1.17889, 0.494176, -0.36152, 44.2476, 27.3207, -4.84037)
 
 [node name="PhantomCameraHost" type="Node" parent="Camera3D"]
 process_priority = 300
@@ -481,5 +488,7 @@ color = Color(0, 0, 0, 1)
 libraries = {
 &"": SubResource("AnimationLibrary_alync")
 }
+
+[node name="TactilControl1" parent="." instance=ExtResource("13_j2xqt")]
 
 [editable path="pista_rc_1"]
