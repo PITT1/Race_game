@@ -64,3 +64,12 @@ func load_data():
 	var content = file.get_as_text()
 	file.close()
 	return content
+
+func init_save_game():
+	if not FileAccess.file_exists(SAVE_GAME_PATH):
+		var file = FileAccess.open(SAVE_GAME_PATH, FileAccess.WRITE)
+		file.store_string(JSON.stringify(player_canvas))
+		file.close()
+		print("archivo guardado por primera vez")
+	else:
+		print("el archivo de guardado ya existe")

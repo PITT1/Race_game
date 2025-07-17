@@ -1,0 +1,42 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctvbggtg0dtyb"]
+
+[ext_resource type="Texture2D" uid="uid://c23qydjjavpf1" path="res://images/arrow.png" id="1_dcn82"]
+
+[node name="TactilControl1" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="brake_reverse" type="TouchScreenButton" parent="."]
+position = Vector2(908, 457)
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("1_dcn82")
+passby_press = true
+action = "ui_down"
+
+[node name="acelerate" type="TouchScreenButton" parent="."]
+position = Vector2(1037, 407)
+rotation = 3.14159
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("1_dcn82")
+passby_press = true
+action = "ui_up"
+
+[node name="left" type="TouchScreenButton" parent="."]
+position = Vector2(193, 445)
+rotation = 1.5708
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("1_dcn82")
+passby_press = true
+action = "ui_left"
+
+[node name="right" type="TouchScreenButton" parent="."]
+position = Vector2(249, 568)
+rotation = -1.5708
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("1_dcn82")
+passby_press = true
+action = "ui_right"

@@ -4,6 +4,7 @@ var global_var = load("res://global_var.gd").new()
 var real_part: Array
 
 func _ready() -> void:
+	global_var.init_save_game()
 	var data = JSON.parse_string(global_var.load_data())
 	var str_money: String = str(data.money) 
 	if str_money.contains("."):

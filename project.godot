@@ -22,7 +22,8 @@ GlobalVar="*res://global_var.gd"
 
 [display]
 
-window/stretch/mode="canvas_items"
+window/stretch/mode="viewport"
+window/stretch/aspect="keep_height"
 
 [editor_plugins]
 
@@ -32,6 +33,10 @@ enabled=PackedStringArray("res://addons/phantom_camera/plugin.cfg")
 
 theme/custom_font="uid://cbwf465gr1onm"
 theme/default_font_antialiasing=0
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
 
 [layer_names]
 
