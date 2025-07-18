@@ -1,10 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://ch6uctkwrw1jr"]
+[gd_scene load_steps=8 format=3 uid="uid://ch6uctkwrw1jr"]
 
 [ext_resource type="ArrayMesh" uid="uid://baaqqufa1faxf" path="res://Cars/empaler_truck/empaler_truck_body.obj" id="1_4vlp5"]
 [ext_resource type="PhysicsMaterial" uid="uid://dioc2dlho64fc" path="res://car_physic_material/car_physic.tres" id="1_brnwu"]
 [ext_resource type="Script" uid="uid://dn8cru75adetk" path="res://player_controller/player_controller.gd" id="1_r77yt"]
 [ext_resource type="ArrayMesh" uid="uid://dmgdyspa701" path="res://Cars/empaler_truck/empaler_truck_front_wheel.obj" id="2_r77yt"]
-[ext_resource type="ArrayMesh" uid="uid://dpr5hvsc86g8i" path="res://Cars/rat_rod/bug_car_rear_wheel.obj" id="3_brnwu"]
 [ext_resource type="PackedScene" uid="uid://1d1e5ll020cp" path="res://huds/on_race_huds/race_hud.tscn" id="6_lgkmv"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_lgkmv"]
@@ -58,9 +57,9 @@ suspension_max_force = 100000.0
 damping_compression = 10.0
 damping_relaxation = 10.0
 
-[node name="BugCarRearWheel" type="MeshInstance3D" parent="wheel_2"]
+[node name="EmpalerTruckFrontWheel" type="MeshInstance3D" parent="wheel_2"]
 transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 0, 0)
-mesh = ExtResource("3_brnwu")
+mesh = ExtResource("2_r77yt")
 skeleton = NodePath("../..")
 
 [node name="wheel_3" type="VehicleWheel3D" parent="."]
@@ -74,9 +73,9 @@ suspension_max_force = 100000.0
 damping_compression = 10.0
 damping_relaxation = 10.0
 
-[node name="BugCarRearWheel" type="MeshInstance3D" parent="wheel_3"]
+[node name="EmpalerTruckFrontWheel" type="MeshInstance3D" parent="wheel_3"]
 transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 0, 0)
-mesh = ExtResource("3_brnwu")
+mesh = ExtResource("2_r77yt")
 skeleton = NodePath("../..")
 
 [node name="wheel_4" type="VehicleWheel3D" parent="."]
@@ -106,9 +105,9 @@ suspension_max_force = 100000.0
 damping_compression = 10.0
 damping_relaxation = 10.0
 
-[node name="BugCarRearWheel" type="MeshInstance3D" parent="wheel_5"]
+[node name="EmpalerTruckFrontWheel" type="MeshInstance3D" parent="wheel_5"]
 transform = Transform3D(-0.9, 0, -7.86805e-08, 0, 0.9, 0, 7.86805e-08, 0, -0.9, 0, 0, 0)
-mesh = ExtResource("3_brnwu")
+mesh = ExtResource("2_r77yt")
 skeleton = NodePath("../..")
 
 [node name="wheel_6" type="VehicleWheel3D" parent="."]
@@ -122,9 +121,9 @@ suspension_max_force = 100000.0
 damping_compression = 10.0
 damping_relaxation = 10.0
 
-[node name="BugCarRearWheel" type="MeshInstance3D" parent="wheel_6"]
+[node name="EmpalerTruckFrontWheel" type="MeshInstance3D" parent="wheel_6"]
 transform = Transform3D(-0.9, 0, -7.86805e-08, 0, 0.9, 0, 7.86805e-08, 0, -0.9, 0, 0, 0)
-mesh = ExtResource("3_brnwu")
+mesh = ExtResource("2_r77yt")
 skeleton = NodePath("../..")
 
 [node name="checkpoint_sensor" type="Area3D" parent="."]

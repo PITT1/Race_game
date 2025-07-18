@@ -1,7 +1,7 @@
 # Blender 4.3.2 MTL File: 'nomad.blend'
 # www.blender.org
 
-newmtl caucho
+newmtl caucho.005
 Ns 250.000000
 Ka 0.400000 0.400000 0.400000
 Kd 0.038034 0.038034 0.038034
@@ -11,7 +11,7 @@ Ni 1.500000
 d 1.000000
 illum 3
 
-newmtl rim
+newmtl rim.005
 Ns 360.000000
 Ka 0.800000 0.800000 0.800000
 Kd 0.800000 0.800000 0.800000

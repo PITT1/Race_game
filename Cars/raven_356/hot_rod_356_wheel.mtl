@@ -1,7 +1,7 @@
 # Blender 4.3.2 MTL File: 'hot_rod_356.blend'
 # www.blender.org
 
-newmtl caucho
+newmtl caucho.003
 Ns 111.111099
 Ka 0.466667 0.466667 0.466667
 Kd 0.075130 0.075130 0.075130
@@ -11,7 +11,7 @@ Ni 1.500000
 d 1.000000
 illum 3
 
-newmtl rin
+newmtl rin.003
 Ns 250.000000
 Ka 0.783333 0.783333 0.783333
 Kd 0.407629 0.407629 0.407629

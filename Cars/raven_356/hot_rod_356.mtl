@@ -1,7 +1,7 @@
 # Blender 4.3.2 MTL File: 'hot_rod_356.blend'
 # www.blender.org
 
-newmtl carroceria
+newmtl carroceria.001
 Ns 360.000000
 Ka 0.800000 0.800000 0.800000
 Ks 0.500000 0.500000 0.500000
@@ -11,7 +11,7 @@ d 1.000000
 illum 3
 map_Kd F:/blender_cars/textures/oxido_5.jpg
 
-newmtl caucho
+newmtl caucho.003
 Ns 111.111099
 Ka 0.466667 0.466667 0.466667
 Kd 0.075130 0.075130 0.075130
@@ -21,7 +21,7 @@ Ni 1.500000
 d 1.000000
 illum 3
 
-newmtl caucho.001
+newmtl caucho.004
 Ns 111.111099
 Ka 0.466667 0.466667 0.466667
 Kd 0.075130 0.075130 0.075130
@@ -31,7 +31,17 @@ Ni 1.500000
 d 1.000000
 illum 3
 
-newmtl inyectores
+newmtl escapes.001
+Ns 250.000000
+Ka 0.800000 0.800000 0.800000
+Kd 0.015909 0.015909 0.015909
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 3
+
+newmtl inyectores.001
 Ns 490.000000
 Ka 0.700000 0.700000 0.700000
 Kd 0.567980 0.000000 0.005603
@@ -41,7 +51,7 @@ Ni 1.500000
 d 1.000000
 illum 3
 
-newmtl luces
+newmtl luces.001
 Ns 360.000000
 Ka 0.900000 0.900000 0.900000
 Kd 0.788702 0.777389 0.800111
@@ -51,7 +61,7 @@ Ni 1.500000
 d 1.000000
 illum 3
 
-newmtl motor
+newmtl motor.001
 Ns 490.000000
 Ka 0.900000 0.900000 0.900000
 Kd 0.442584 0.442584 0.442584
@@ -61,7 +71,7 @@ Ni 1.500000
 d 1.000000
 illum 3
 
-newmtl rin
+newmtl rin.003
 Ns 250.000000
 Ka 0.783333 0.783333 0.783333
 Kd 0.407629 0.407629 0.407629
@@ -71,7 +81,7 @@ Ni 1.500000
 d 1.000000
 illum 3
 
-newmtl rin.001
+newmtl rin.004
 Ns 250.000000
 Ka 0.783333 0.783333 0.783333
 Kd 0.407629 0.407629 0.407629
@@ -81,7 +91,7 @@ Ni 1.500000
 d 1.000000
 illum 3
 
-newmtl vidrios
+newmtl vidrios.001
 Ns 250.000000
 Ka 0.900000 0.900000 0.900000
 Kd 0.028206 0.028206 0.028206

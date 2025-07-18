@@ -31,7 +31,7 @@ d 1.000000
 illum 3
 map_Kd F:/blender_cars/textures/oxido_6.jpg
 
-newmtl caucho
+newmtl caucho.001
 Ns 111.111099
 Ka 0.466667 0.466667 0.466667
 Kd 0.075130 0.075130 0.075130
@@ -41,7 +41,7 @@ Ni 1.500000
 d 1.000000
 illum 3
 
-newmtl caucho.001
+newmtl caucho.002
 Ns 111.111099
 Ka 0.466667 0.466667 0.466667
 Kd 0.075130 0.075130 0.075130
@@ -81,7 +81,7 @@ Ni 1.500000
 d 1.000000
 illum 3
 
-newmtl rin
+newmtl rin.001
 Ns 250.000000
 Ka 0.783333 0.783333 0.783333
 Kd 0.407629 0.407629 0.407629
@@ -91,7 +91,7 @@ Ni 1.500000
 d 1.000000
 illum 3
 
-newmtl rin.001
+newmtl rin.002
 Ns 250.000000
 Ka 0.783333 0.783333 0.783333
 Kd 0.407629 0.407629 0.407629

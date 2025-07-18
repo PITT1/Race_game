@@ -1,17 +1,7 @@
 # Blender 4.3.2 MTL File: 'hot_rod3.blend'
 # www.blender.org
 
-newmtl Material
-Ns 381.964569
-Ka 0.900000 0.900000 0.900000
-Kd 0.800016 0.000000 0.001456
-Ks 0.500000 0.500000 0.500000
-Ke 0.000000 0.000000 0.000000
-Ni 1.500000
-d 1.000000
-illum 3
-
-newmtl Material.001
+newmtl Material.002
 Ns 250.000000
 Ka 0.800000 0.800000 0.800000
 Kd 0.000000 0.000000 0.000000
@@ -21,7 +11,17 @@ Ni 1.500000
 d 1.000000
 illum 3
 
-newmtl carroceria
+newmtl Material.003
+Ns 381.964569
+Ka 0.900000 0.900000 0.900000
+Kd 0.800016 0.000000 0.001456
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 3
+
+newmtl carroceria.001
 Ns 444.444397
 Ka 0.770370 0.770370 0.770370
 Ks 0.500000 0.500000 0.500000
@@ -31,7 +31,7 @@ d 1.000000
 illum 3
 map_Kd F:/blender_cars/textures/Metal022_1K-JPG_Color.jpg
 
-newmtl chasis
+newmtl chasis.001
 Ns 131.742111
 Ka 0.900000 0.900000 0.900000
 Ks 0.500000 0.500000 0.500000
@@ -41,7 +41,7 @@ d 1.000000
 illum 3
 map_Kd F:/blender_cars/textures/Metal022_1K-JPG_Color.jpg
 
-newmtl luces
+newmtl luces.001
 Ns 250.000000
 Ka 0.900000 0.900000 0.900000
 Kd 0.800000 0.800000 0.800000
@@ -51,7 +51,7 @@ Ni 1.500000
 d 1.000000
 illum 3
 
-newmtl motor
+newmtl motor.001
 Ns 490.000000
 Ka 0.900000 0.900000 0.900000
 Kd 0.537416 0.537416 0.537416
@@ -61,7 +61,7 @@ Ni 1.500000
 d 1.000000
 illum 3
 
-newmtl vidrios
+newmtl vidrios.001
 Ns 462.846039
 Ka 0.703279 0.703279 0.703279
 Kd 0.202503 0.202503 0.202503

@@ -1,17 +1,7 @@
 # Blender 4.3.2 MTL File: 'bug_car.blend'
 # www.blender.org
 
-newmtl Material
-Ns 62.500000
-Ka 0.600000 0.600000 0.600000
-Kd 0.000000 0.000000 0.000000
-Ks 0.500000 0.500000 0.500000
-Ke 0.000000 0.000000 0.000000
-Ni 1.500000
-d 1.000000
-illum 3
-
-newmtl Material.001
+newmtl Material.002
 Ns 250.000000
 Ka 0.850000 0.850000 0.850000
 Kd 0.800000 0.800000 0.800000
@@ -21,7 +11,17 @@ Ni 1.500000
 d 1.000000
 illum 3
 
-newmtl carroceria
+newmtl Material.003
+Ns 62.500000
+Ka 0.600000 0.600000 0.600000
+Kd 0.000000 0.000000 0.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 3
+
+newmtl carroceria.001
 Ns 134.444458
 Ka 0.666667 0.666667 0.666667
 Ks 0.500000 0.500000 0.500000
@@ -31,7 +31,7 @@ d 1.000000
 illum 3
 map_Kd F:/blender_cars/textures/texture_3.jpg
 
-newmtl caucho
+newmtl caucho.001
 Ns 111.111099
 Ka 0.466667 0.466667 0.466667
 Kd 0.075130 0.075130 0.075130
@@ -41,7 +41,7 @@ Ni 1.500000
 d 1.000000
 illum 3
 
-newmtl luces
+newmtl luces.001
 Ns 587.777710
 Ka 0.883333 0.883333 0.883333
 Kd 0.800181 0.623454 0.586035
@@ -51,7 +51,7 @@ Ni 1.500000
 d 1.000000
 illum 3
 
-newmtl luces_cuerpo
+newmtl luces_cuerpo.001
 Ns 250.000000
 Ka 0.783333 0.783333 0.783333
 Ks 0.500000 0.500000 0.500000
@@ -61,7 +61,7 @@ d 1.000000
 illum 3
 map_Kd F:/blender_cars/textures/CorrugatedSteel007B_1K-JPG_Color.jpg
 
-newmtl luces_traceras
+newmtl luces_traceras.001
 Ns 250.000000
 Ka 0.816667 0.816667 0.816667
 Kd 0.800142 0.000000 0.002449
@@ -71,7 +71,7 @@ Ni 1.500000
 d 1.000000
 illum 3
 
-newmtl motor
+newmtl motor.001
 Ns 250.000000
 Ka 0.483333 0.483333 0.483333
 Kd 0.800000 0.800000 0.800000
@@ -81,7 +81,7 @@ Ni 1.500000
 d 1.000000
 illum 3
 
-newmtl rin
+newmtl rin.001
 Ns 250.000000
 Ka 0.783333 0.783333 0.783333
 Kd 0.407629 0.407629 0.407629
@@ -91,7 +91,7 @@ Ni 1.500000
 d 1.000000
 illum 3
 
-newmtl windows
+newmtl windows.001
 Ns 266.944427
 Ka 0.833333 0.833333 0.833333
 Kd 0.800000 0.800000 0.800000

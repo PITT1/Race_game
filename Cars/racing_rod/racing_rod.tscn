@@ -1,29 +1,13 @@
-[gd_scene load_steps=12 format=3 uid="uid://davupqses8n0i"]
+[gd_scene load_steps=8 format=3 uid="uid://davupqses8n0i"]
 
 [ext_resource type="ArrayMesh" uid="uid://dkn7sb6jgfydc" path="res://Cars/racing_rod/hot_rod_racing_body.obj" id="1_6427m"]
 [ext_resource type="Script" uid="uid://dn8cru75adetk" path="res://player_controller/player_controller.gd" id="1_ihxdo"]
 [ext_resource type="PhysicsMaterial" uid="uid://dioc2dlho64fc" path="res://car_physic_material/car_physic.tres" id="1_p3wy4"]
 [ext_resource type="ArrayMesh" uid="uid://dmgdyspa701" path="res://Cars/empaler_truck/empaler_truck_front_wheel.obj" id="2_ihxdo"]
-[ext_resource type="ArrayMesh" uid="uid://dpr5hvsc86g8i" path="res://Cars/rat_rod/bug_car_rear_wheel.obj" id="3_p3wy4"]
 [ext_resource type="PackedScene" uid="uid://1d1e5ll020cp" path="res://huds/on_race_huds/race_hud.tscn" id="6_gw4e7"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p3wy4"]
-albedo_color = Color(0.263679, 0.370093, 0.370124, 1)
-metallic = 0.81
-roughness = 0.47
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gw4e7"]
-albedo_color = Color(0.526423, 0.526423, 0.526423, 1)
-metallic = 0.84
-roughness = 0.51
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j3l61"]
-albedo_color = Color(0.417257, 0.417257, 0.417257, 1)
-metallic = 0.79
-roughness = 0.57
-
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_6427m"]
-points = PackedVector3Array(1.64579, -0.998407, 0.230856, 0.713589, 0.0881181, 2.24934, -1.50686, -1.0839, 0.220507, -0.062497, 1.02034, -1.0887, 0.60581, -0.807135, -1.84461, 0.480859, -1.23163, 2.56014, -0.68343, 0.165932, 2.24934, -0.784495, -1.15989, -1.30506, 0.868743, 0.554118, -0.622745, -0.838902, 0.631711, -0.544924, 0.0926564, -0.14422, -2.40874, 1.53702, -1.0839, -0.648789, -1.61563, -0.920813, -0.700566, -0.940745, -0.951244, 1.98755, 1.17969, -0.688034, -1.55465, -1.61563, -0.920813, 0.230856, 0.816446, -1.16265, -1.30867, 0.480859, 0.243745, 2.24934, 1.02422, -0.61022, 2.09419, -0.717211, 0.297036, -1.38922, 0.672014, 0.514849, -1.2385, -0.062497, -0.14422, -2.40874, 1.49031, -0.532627, -0.157277, -0.994056, -0.61022, 2.09419, -0.424775, -0.728685, -1.97696, -0.528276, 0.243745, 2.24934, 0.0926564, 1.02034, -1.01088, 0.169914, 0.942525, -1.32168, -0.400936, -1.11133, 2.29471, -0.68343, 0.0881181, 2.32716, 0.636013, 0.165932, 2.32716, 1.49031, -0.532627, -0.390254)
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_gw4e7"]
+points = PackedVector3Array(1.62828, -0.514277, -0.724041, 1.61959, -0.587271, -0.694473, 1.62176, -0.584964, -1.53477, 1.61959, -0.514068, -1.42699, 1.49358, -0.111553, -1.12893, 0.710843, 0.513088, 1.35381, 1.02028, -0.130851, 1.15113, 1.02028, -0.430167, 1.18642, 0.549143, -0.683547, -2.12899, 0.440515, -0.665718, 1.60132, 0.33468, -0.699908, 1.6452, 0.863542, -0.650826, -2.21483, 1.14722, -0.39409, -2.34741, 1.14132, -0.298443, -2.35361, 1.14722, -0.230902, -2.31593, 0.750569, 0.780522, -2.24917, 0.736913, 1.07774, -1.97924, 0.771054, 1.03873, -1.49519, 0.61463, 0.61314, 1.28037, 0.510967, 0.657817, 1.39768, 0.642562, 0.525673, 1.43107, 0.960066, -0.204264, 1.22743, 0.410409, -0.526863, 1.6266, -0.757495, -0.631529, -2.29161, -0.287602, -0.684806, 1.26368, 0.260813, -0.585593, 1.65426, -0.216839, -0.682079, 1.64233, -0.339743, -0.679982, 1.61229, 0.721085, -0.430586, -2.61495, 0.36851, -0.192937, -2.9173, 0.0416956, 0.307951, -3.21775, 0.661184, 0.211884, -2.69173, 0.715498, 0.996357, -2.09131, 0.145978, 1.32839, -2.2401, 0.0587656, 1.44292, -1.87909, -0.423231, 0.68068, 1.34952, -0.355882, 0.611042, 1.43202, 0.485518, 0.44408, 1.47351, -1.5362, -0.585174, -1.53382, -0.406782, -0.210137, -2.89679, -1.53403, -0.587271, -0.69352, -0.203493, -0.535253, 1.64949, -0.367676, -0.563779, 1.61706, -0.905539, -0.426601, 1.17593, -0.575931, 0.211884, -2.69173, -0.672455, 0.783039, -2.23629, -0.643901, 1.03768, -2.08797, -0.0669322, 1.34392, -2.18478, -0.686421, 1.03327, -1.47563, -0.61752, 0.558185, 1.3519, -0.547377, 0.544971, 1.42439, -0.399954, 0.44408, 1.47351, -1.54241, -0.514277, -0.723564, -1.53403, -0.514068, -1.4165, -0.934713, -0.12309, 1.15685, -1.40833, -0.111553, -1.12893)
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_p3wy4"]
 radius = 1.80891
@@ -38,18 +22,15 @@ center_of_mass = Vector3(0, -1, 0)
 script = ExtResource("1_ihxdo")
 
 [node name="HotRodRacingBody" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0.337491, -0.319444)
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 mesh = ExtResource("1_6427m")
-surface_material_override/0 = SubResource("StandardMaterial3D_p3wy4")
-surface_material_override/5 = SubResource("StandardMaterial3D_gw4e7")
-surface_material_override/6 = SubResource("StandardMaterial3D_j3l61")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0.337491, -0.319444)
-shape = SubResource("ConvexPolygonShape3D_6427m")
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_gw4e7")
 
 [node name="wheel_1" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.86676, -0.285866, 1.08133)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.86676, -0.364986, 0.829396)
 use_as_steering = true
 wheel_roll_influence = 1.5
 wheel_radius = 0.455
@@ -65,7 +46,7 @@ mesh = ExtResource("2_ihxdo")
 skeleton = NodePath("../..")
 
 [node name="wheel_2" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.86676, -0.266385, -0.885189)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.867, -0.346, -1.69)
 use_as_traction = true
 wheel_roll_influence = 1.5
 wheel_radius = 0.455
@@ -75,13 +56,13 @@ suspension_max_force = 100000.0
 damping_compression = 10.0
 damping_relaxation = 10.0
 
-[node name="BugCarRearWheel" type="MeshInstance3D" parent="wheel_2"]
+[node name="EmpalerTruckFrontWheel" type="MeshInstance3D" parent="wheel_2"]
 transform = Transform3D(-0.7, 0, -1.05697e-07, 0, 0.7, 0, 1.05697e-07, 0, -0.7, 0, 0, 0)
-mesh = ExtResource("3_p3wy4")
+mesh = ExtResource("2_ihxdo")
 skeleton = NodePath("../..")
 
 [node name="wheel_3" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.86, -0.285866, 1.08133)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.86, -0.364986, 0.829396)
 use_as_steering = true
 wheel_roll_influence = 1.5
 wheel_radius = 0.455
@@ -97,7 +78,7 @@ mesh = ExtResource("2_ihxdo")
 skeleton = NodePath("../..")
 
 [node name="wheel_4" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.86, -0.266385, -1.17304)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.86, -0.346, -1.696)
 use_as_traction = true
 wheel_roll_influence = 1.5
 wheel_radius = 0.455
@@ -107,9 +88,9 @@ suspension_max_force = 100000.0
 damping_compression = 10.0
 damping_relaxation = 10.0
 
-[node name="BugCarRearWheel" type="MeshInstance3D" parent="wheel_4"]
-transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
-mesh = ExtResource("3_p3wy4")
+[node name="EmpalerTruckFrontWheel" type="MeshInstance3D" parent="wheel_4"]
+transform = Transform3D(-0.7, 0, -1.05697e-07, 0, 0.7, 0, 1.05697e-07, 0, -0.7, 0, 0, 0)
+mesh = ExtResource("2_ihxdo")
 skeleton = NodePath("../..")
 
 [node name="checkpoint_sensor" type="Area3D" parent="."]
