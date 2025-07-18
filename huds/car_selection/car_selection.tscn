@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=3 uid="uid://bhehqj2450xtc"]
+[gd_scene load_steps=62 format=3 uid="uid://bhehqj2450xtc"]
 
 [ext_resource type="Script" uid="uid://bbkomqcnkihxo" path="res://huds/car_selection/car_selection.gd" id="1_u64g1"]
 [ext_resource type="ArrayMesh" uid="uid://rgbpy0gs4uf7" path="res://Cars/rat_rod/bug_car_body.obj" id="2_u64g1"]
@@ -18,7 +18,6 @@
 [ext_resource type="ArrayMesh" uid="uid://bb1tugpk4ot2k" path="res://Cars/pinkinator/monster_pink_all_model.obj" id="14_hg4ax"]
 [ext_resource type="ArrayMesh" uid="uid://cyxlf381qqk30" path="res://Cars/f1_70s/f1-70s_all_model.obj" id="15_7suyo"]
 [ext_resource type="ArrayMesh" uid="uid://b8bco4cers3uq" path="res://Cars/montana/montana_all_model.obj" id="16_4oqaj"]
-[ext_resource type="Texture2D" uid="uid://b2k1bq32hb5wo" path="res://Cars/montana/paint_1.png" id="17_am86g"]
 [ext_resource type="ArrayMesh" uid="uid://b33jr2qlyduou" path="res://Cars/monster/monster.obj" id="18_ovl38"]
 [ext_resource type="ArrayMesh" uid="uid://cfgih04qv01d0" path="res://Cars/z40/Z40_all_model.obj" id="21_ehe8b"]
 [ext_resource type="ArrayMesh" uid="uid://crt8e3jokavek" path="res://Cars/toreto/toreto_all_body.obj" id="22_u3eru"]
@@ -184,11 +183,6 @@ roughness = 0.38
 albedo_color = Color(0.705194, 0.705194, 0.705194, 1)
 metallic = 1.0
 roughness = 0.48
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lcj7q"]
-albedo_texture = ExtResource("17_am86g")
-metallic = 0.9
-roughness = 0.46
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k7gmd"]
 albedo_texture = ExtResource("24_vv7oi")
@@ -748,7 +742,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 141.033, 0, 0)
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0.669132, 0)
 mesh = ExtResource("16_4oqaj")
 skeleton = NodePath("../../..")
-surface_material_override/2 = SubResource("StandardMaterial3D_lcj7q")
 
 [node name="monster" type="Node3D" parent="vehicles"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 154.184, 0, 0)

@@ -4,12 +4,12 @@
 newmtl carroceria
 Ns 401.111084
 Ka 1.000000 1.000000 1.000000
+Kd 0.623753 0.442271 0.000000
 Ks 0.500000 0.500000 0.500000
 Ke 0.000000 0.000000 0.000000
 Ni 1.500000
 d 1.000000
 illum 3
-map_Kd F:/blender_cars/textures/pintura floral/paint_1.png
 
 newmtl escapes
 Ns 490.000000
