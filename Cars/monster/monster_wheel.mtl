@@ -1,7 +1,7 @@
 # Blender 4.3.2 MTL File: 'monster.blend'
 # www.blender.org
 
-newmtl cauchos
+newmtl cauchos.003
 Ns 250.000000
 Ka 0.600000 0.600000 0.600000
 Kd 0.052150 0.052150 0.052150
@@ -11,7 +11,7 @@ Ni 1.500000
 d 1.000000
 illum 3
 
-newmtl escapes
+newmtl escapes.003
 Ns 490.000000
 Ka 0.800000 0.800000 0.800000
 Kd 0.517585 0.517585 0.517585

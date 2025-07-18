@@ -1,7 +1,7 @@
 # Blender 4.3.2 MTL File: 'f1-70s.blend'
 # www.blender.org
 
-newmtl cauchos
+newmtl cauchos.001
 Ns 250.000000
 Ka 0.400000 0.400000 0.400000
 Kd 0.026443 0.026443 0.026443
@@ -11,7 +11,7 @@ Ni 1.500000
 d 1.000000
 illum 3
 
-newmtl rim
+newmtl rim.001
 Ns 250.000000
 Ka 0.600000 0.600000 0.600000
 Kd 1.000000 1.000000 1.000000

@@ -1,4 +1,4 @@
-[gd_scene load_steps=77 format=3 uid="uid://bhehqj2450xtc"]
+[gd_scene load_steps=64 format=3 uid="uid://bhehqj2450xtc"]
 
 [ext_resource type="Script" uid="uid://bbkomqcnkihxo" path="res://huds/car_selection/car_selection.gd" id="1_u64g1"]
 [ext_resource type="ArrayMesh" uid="uid://rgbpy0gs4uf7" path="res://Cars/rat_rod/bug_car_body.obj" id="2_u64g1"]
@@ -6,8 +6,8 @@
 [ext_resource type="ArrayMesh" uid="uid://dpr5hvsc86g8i" path="res://Cars/rat_rod/bug_car_rear_wheel.obj" id="4_c3i15"]
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="5_6rdnw"]
 [ext_resource type="ArrayMesh" uid="uid://djruo35vxgual" path="res://Cars/hot_rod_1/hot-rod-body.obj" id="6_c3i15"]
+[ext_resource type="ArrayMesh" uid="uid://b66hfh8q51e3h" path="res://Cars/hot_rod_1/wheel_hotrod_1.obj" id="6_fq8jf"]
 [ext_resource type="Script" uid="uid://csjccrhj5wnx7" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="6_mycvf"]
-[ext_resource type="ArrayMesh" uid="uid://cs400ksphy3ue" path="res://Cars/hot_rod_1/wheel.obj" id="7_6rdnw"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="7_btktd"]
 [ext_resource type="ArrayMesh" uid="uid://dvql0pec6iek8" path="res://Cars/sentinel_gt/corvette.obj" id="8_6rdnw"]
 [ext_resource type="ArrayMesh" uid="uid://bogrkkm22yith" path="res://Cars/empaler_truck/empaler_truck.obj" id="9_mycvf"]
@@ -20,8 +20,6 @@
 [ext_resource type="ArrayMesh" uid="uid://b8bco4cers3uq" path="res://Cars/montana/montana_all_model.obj" id="16_4oqaj"]
 [ext_resource type="Texture2D" uid="uid://b2k1bq32hb5wo" path="res://Cars/montana/paint_1.png" id="17_am86g"]
 [ext_resource type="ArrayMesh" uid="uid://b33jr2qlyduou" path="res://Cars/monster/monster.obj" id="18_ovl38"]
-[ext_resource type="Texture2D" uid="uid://bsvbcilt60rk8" path="res://Cars/monster/oxido_4_texture.png" id="19_ehe8b"]
-[ext_resource type="Texture2D" uid="uid://f60vfj15y5gq" path="res://Cars/monster/llamas_1_texture.png" id="20_u3eru"]
 [ext_resource type="ArrayMesh" uid="uid://cfgih04qv01d0" path="res://Cars/z40/Z40_all_model.obj" id="21_ehe8b"]
 [ext_resource type="ArrayMesh" uid="uid://crt8e3jokavek" path="res://Cars/toreto/toreto_all_body.obj" id="22_u3eru"]
 [ext_resource type="ArrayMesh" uid="uid://bl5jvh5mwftgv" path="res://Cars/nomad/nomad_all_model.obj" id="23_fq8jf"]
@@ -128,26 +126,6 @@ albedo_color = Color(0, 0, 0, 1)
 metallic = 0.51
 roughness = 0.4
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gt30f"]
-albedo_color = Color(0.643137, 0.329412, 0, 1)
-metallic = 0.41
-roughness = 0.38
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vscs0"]
-albedo_color = Color(0.639206, 0.639206, 0.639206, 1)
-metallic = 0.47
-roughness = 0.3
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_op732"]
-albedo_color = Color(0.568973, 0.568973, 0.568973, 1)
-metallic = 0.65
-roughness = 0.4
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dphnb"]
-albedo_color = Color(0.730876, 0.746142, 0.765898, 1)
-metallic = 0.77
-roughness = 0.65
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o8i27"]
 albedo_color = Color(0.135154, 0.411371, 0.703751, 1)
 metallic = 0.65
@@ -192,21 +170,6 @@ albedo_color = Color(0.417257, 0.417257, 0.417257, 1)
 metallic = 0.79
 roughness = 0.57
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cmwnc"]
-albedo_color = Color(0.612036, 0.612036, 0.612036, 1)
-metallic = 0.89
-roughness = 0.36
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hgpnr"]
-albedo_color = Color(0, 0, 0, 1)
-metallic = 0.69
-roughness = 0.36
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pekxc"]
-albedo_color = Color(0.0836618, 0.493095, 0.244651, 1)
-metallic = 0.75
-roughness = 0.43
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d02y5"]
 albedo_color = Color(0.635814, 0.62575, 0.625579, 1)
 metallic = 1.0
@@ -226,26 +189,6 @@ roughness = 0.48
 albedo_texture = ExtResource("17_am86g")
 metallic = 0.9
 roughness = 0.46
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o6p0r"]
-albedo_texture = ExtResource("19_ehe8b")
-metallic = 0.7
-roughness = 0.5
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vsuos"]
-albedo_color = Color(0.0214346, 0.0214346, 0.0214346, 1)
-metallic = 0.8
-roughness = 0.3
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xc6r1"]
-albedo_color = Color(1, 0, 0, 1)
-metallic = 0.8
-roughness = 0.3
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kn6nc"]
-albedo_texture = ExtResource("20_u3eru")
-metallic = 0.8
-roughness = 0.3
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k7gmd"]
 albedo_texture = ExtResource("24_vv7oi")
@@ -697,25 +640,25 @@ surface_material_override/1 = SubResource("StandardMaterial3D_6rdnw")
 surface_material_override/2 = SubResource("StandardMaterial3D_mycvf")
 surface_material_override/4 = SubResource("StandardMaterial3D_btktd")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="vehicles/hotrod1/Hot-rod-body"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.813407, -0.0477209, 1.71769)
-mesh = ExtResource("7_6rdnw")
-skeleton = NodePath("")
+[node name="WheelHotrod1" type="MeshInstance3D" parent="vehicles/hotrod1/Hot-rod-body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.820345, 0, 1.7058)
+mesh = ExtResource("6_fq8jf")
+skeleton = NodePath("../..")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="vehicles/hotrod1/Hot-rod-body"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.856201, -0.0477209, -1.6314)
-mesh = ExtResource("7_6rdnw")
-skeleton = NodePath("")
+[node name="WheelHotrod2" type="MeshInstance3D" parent="vehicles/hotrod1/Hot-rod-body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.875263, 0, -1.43543)
+mesh = ExtResource("6_fq8jf")
+skeleton = NodePath("../../wheel_1")
 
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="vehicles/hotrod1/Hot-rod-body"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.813, -0.048, 1.718)
-mesh = ExtResource("7_6rdnw")
-skeleton = NodePath("")
+[node name="WheelHotrod3" type="MeshInstance3D" parent="vehicles/hotrod1/Hot-rod-body"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.910276, 0, -1.37708)
+mesh = ExtResource("6_fq8jf")
+skeleton = NodePath("../../wheel_1")
 
-[node name="MeshInstance3D4" type="MeshInstance3D" parent="vehicles/hotrod1/Hot-rod-body"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.856, -0.048, -1.631)
-mesh = ExtResource("7_6rdnw")
-skeleton = NodePath("")
+[node name="WheelHotrod4" type="MeshInstance3D" parent="vehicles/hotrod1/Hot-rod-body"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.816914, 0, 1.71552)
+mesh = ExtResource("6_fq8jf")
+skeleton = NodePath("../../wheel_1")
 
 [node name="sentinel_gt" type="Node3D" parent="vehicles"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.8279, 0, 0)
@@ -737,12 +680,6 @@ transform = Transform3D(0.663324, 0, 0.748332, 0, 1, 0, -0.748332, 0, 0.663324, 
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 1.5949, 0)
 mesh = ExtResource("9_mycvf")
 skeleton = NodePath("../..")
-surface_material_override/0 = SubResource("StandardMaterial3D_gt30f")
-surface_material_override/2 = SubResource("StandardMaterial3D_vscs0")
-surface_material_override/3 = SubResource("StandardMaterial3D_op732")
-surface_material_override/8 = SubResource("StandardMaterial3D_dphnb")
-surface_material_override/9 = SubResource("StandardMaterial3D_dphnb")
-surface_material_override/10 = SubResource("StandardMaterial3D_dphnb")
 
 [node name="raven_356" type="Node3D" parent="vehicles"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59.3503, 0, 0)
@@ -776,9 +713,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 87.0001, 0, 0)
 transform = Transform3D(0.48, 0, 0, 0, 0.48, 0, 0, 0, 0.48, -0.0208592, 0.860799, 0.297836)
 mesh = ExtResource("12_8jbfh")
 skeleton = NodePath("../../..")
-surface_material_override/4 = SubResource("StandardMaterial3D_cmwnc")
-surface_material_override/5 = SubResource("StandardMaterial3D_hgpnr")
-surface_material_override/6 = SubResource("StandardMaterial3D_pekxc")
 
 [node name="thunderbolt" type="Node3D" parent="vehicles"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 100.792, 0, 0)
@@ -823,11 +757,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 154.184, 0, 0)
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 1.12166, 0)
 mesh = ExtResource("18_ovl38")
 skeleton = NodePath("../../..")
-surface_material_override/4 = SubResource("StandardMaterial3D_o6p0r")
-surface_material_override/6 = SubResource("StandardMaterial3D_vsuos")
-surface_material_override/7 = SubResource("StandardMaterial3D_o6p0r")
-surface_material_override/9 = SubResource("StandardMaterial3D_xc6r1")
-surface_material_override/10 = SubResource("StandardMaterial3D_kn6nc")
 
 [node name="z40" type="Node3D" parent="vehicles"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 167.577, 0, 0)

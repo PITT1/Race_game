@@ -1,25 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://igehpjs23h35"]
+[gd_scene load_steps=8 format=3 uid="uid://igehpjs23h35"]
 
 [ext_resource type="Script" uid="uid://bub163oegeem3" path="res://BOT_sistem/BOTS_for_race.gd" id="1_svmar"]
 [ext_resource type="PhysicsMaterial" uid="uid://dioc2dlho64fc" path="res://car_physic_material/car_physic.tres" id="1_uijpc"]
 [ext_resource type="ArrayMesh" uid="uid://dkk515yxuttsv" path="res://Cars/blade_rod/hot_rod2_body.obj" id="1_yq0n0"]
 [ext_resource type="ArrayMesh" uid="uid://d4kiuvteuggex" path="res://Cars/blade_rod/hot_rod2_front_wheel.obj" id="2_svmar"]
 [ext_resource type="ArrayMesh" uid="uid://uc3xmpbgj2rc" path="res://Cars/blade_rod/hot_rod2_rear_wheel.obj" id="3_uijpc"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b6jko"]
-albedo_color = Color(0.612036, 0.612036, 0.612036, 1)
-metallic = 0.89
-roughness = 0.36
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e3kia"]
-albedo_color = Color(0.0836618, 0.493095, 0.244651, 1)
-metallic = 0.75
-roughness = 0.43
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qnv5u"]
-albedo_color = Color(0.612036, 0.612036, 0.612036, 1)
-metallic = 0.89
-roughness = 0.36
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_m1ko2"]
 points = PackedVector3Array(-0.533573, -1.11188, 2.81951, 0.55186, -1.11188, 2.81951, -0.967899, -0.677256, -3.80258, 0.986186, -0.677256, -3.80258, -0.915083, 1.52877, -2.38217, 0.933371, 1.52877, -2.38217, -1.29358, -0.568866, 1.95103, 1.31187, -0.134774, 0.973734, 0.226179, 1.38455, 2.05917, -0.967899, 1.49347, -0.220515, -0.642218, 0.625021, 2.49375, 0.986186, 1.49347, -0.220515, 0.768896, -0.0261177, 2.7107, 1.20322, -0.786178, 1.84222, -0.798719, 0.497457, -3.35796, -0.533573, -0.786178, 3.14528, -1.29358, -0.134774, 0.756783, 1.31187, -0.35182, -0.545601, 0.839695, 0.193545, -3.54711, -1.29358, -0.786178, 1.95103, 0.877541, 0.625021, 1.95103, 0.55186, -0.786178, 3.14528, 0.117534, 0.733411, 2.60188, 1.20322, -0.568866, 2.05917, -0.859254, 0.625021, 1.95103, -0.825961, -0.120209, -3.6694, -0.750609, -0.0261177, 2.7107, 0.815623, 0.497025, -3.35277, 0.660505, 0.516365, 2.49375, -0.0992467, 0.733411, 2.60188, -0.82267, 0.193466, -3.552, -0.181542, 1.24621, 1.76926)
@@ -39,9 +24,6 @@ script = ExtResource("1_svmar")
 [node name="HotRod2Body" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.57, 0, 0, 0, 0.57, 0, 0, 0, 0.57, 0, 0, 0)
 mesh = ExtResource("1_yq0n0")
-surface_material_override/0 = SubResource("StandardMaterial3D_b6jko")
-surface_material_override/2 = SubResource("StandardMaterial3D_e3kia")
-surface_material_override/3 = SubResource("StandardMaterial3D_qnv5u")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.57, 0, 0, 0, 0.57, 0, 0, 0, 0.57, 0, 0, 0)

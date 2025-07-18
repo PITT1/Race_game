@@ -1,7 +1,7 @@
 # Blender 4.3.2 MTL File: 'monster.blend'
 # www.blender.org
 
-newmtl capo
+newmtl capo.001
 Ns 490.000000
 Ka 0.800000 0.800000 0.800000
 Ks 0.500000 0.500000 0.500000
@@ -11,7 +11,7 @@ d 1.000000
 illum 3
 map_Kd F:/blender_cars/textures/llamas/llamas_1_texture.png
 
-newmtl carroceria
+newmtl carroceria.001
 Ns 490.000000
 Ka 0.800000 0.800000 0.800000
 Kd 0.032493 0.800251 0.333221
@@ -21,7 +21,7 @@ Ni 1.500000
 d 1.000000
 illum 3
 
-newmtl luces_delanteras
+newmtl luces_delanteras.001
 Ns 250.000000
 Ka 0.800000 0.800000 0.800000
 Kd 0.800000 0.800000 0.800000
@@ -31,7 +31,7 @@ Ni 1.500000
 d 1.000000
 illum 3
 
-newmtl luces_traceras
+newmtl luces_traceras.001
 Ns 490.000000
 Ka 0.800000 0.800000 0.800000
 Kd 0.800079 0.010674 0.000000
@@ -41,7 +41,7 @@ Ni 1.500000
 d 1.000000
 illum 3
 
-newmtl metal
+newmtl metal.002
 Ns 360.000000
 Ka 0.800000 0.800000 0.800000
 Ks 0.500000 0.500000 0.500000
@@ -51,7 +51,7 @@ d 1.000000
 illum 3
 map_Kd F:/blender_cars/textures/oxido_4_texture.png
 
-newmtl metal.001
+newmtl metal.003
 Ns 360.000000
 Ka 0.800000 0.800000 0.800000
 Ks 0.500000 0.500000 0.500000
@@ -61,7 +61,7 @@ d 1.000000
 illum 3
 map_Kd F:/blender_cars/textures/oxido_4_texture.png
 
-newmtl vidrios
+newmtl vidrios.001
 Ns 640.000000
 Ka 0.800000 0.800000 0.800000
 Kd 0.020044 0.020044 0.020044

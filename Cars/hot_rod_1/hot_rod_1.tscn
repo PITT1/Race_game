@@ -1,30 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://de8rfk3kauv7p"]
+[gd_scene load_steps=8 format=3 uid="uid://de8rfk3kauv7p"]
 
 [ext_resource type="ArrayMesh" uid="uid://djruo35vxgual" path="res://Cars/hot_rod_1/hot-rod-body.obj" id="1_eyabc"]
 [ext_resource type="Script" uid="uid://dn8cru75adetk" path="res://player_controller/player_controller.gd" id="1_qjy37"]
 [ext_resource type="PhysicsMaterial" uid="uid://dioc2dlho64fc" path="res://car_physic_material/car_physic.tres" id="1_sattu"]
-[ext_resource type="ArrayMesh" uid="uid://cs400ksphy3ue" path="res://Cars/hot_rod_1/wheel.obj" id="2_qjy37"]
+[ext_resource type="ArrayMesh" uid="uid://b66hfh8q51e3h" path="res://Cars/hot_rod_1/wheel_hotrod_1.obj" id="4_qe6o7"]
 [ext_resource type="PackedScene" uid="uid://1d1e5ll020cp" path="res://huds/on_race_huds/race_hud.tscn" id="5_qe6o7"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qjy37"]
-albedo_color = Color(0.484983, 0.168594, 0.713228, 1)
-metallic = 0.6
-roughness = 0.38
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sattu"]
-albedo_color = Color(0.556863, 0, 0, 1)
-metallic = 0.46
-roughness = 0.35
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qe6o7"]
-albedo_color = Color(0.862745, 0.447059, 0, 1)
-metallic = 0.32
-roughness = 0.7
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gg0sc"]
-albedo_color = Color(0.574328, 0.574328, 0.574328, 1)
-metallic = 0.54
-roughness = 0.48
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_qjy37"]
 points = PackedVector3Array(1.09052, 0.0161749, 0.9028, 1.0901, 0.0342902, 0.900895, 0.414258, 0.0705208, 1.99916, 0.414258, -0.260937, 1.99916, 1.0901, -0.0019404, 0.900895, 1.05956, -0.0341016, 0.478661, 1.0602, -0.0174303, 0.483997, 1.06042, -0.000102609, 0.485521, 1.0602, 0.0173563, 0.483997, 1.05956, 0.0340277, 0.478661, 1.08113, 0.108983, 0.809436, 1.0822, 0.107145, 0.827347, 1.08882, 0.0517492, 0.895941, 1.05871, 0.0493863, 0.470659, 0.375395, 0.158997, 1.99916, 0.398243, -0.32119, 1.99916, 1.08882, -0.0192681, 0.895941, 1.0822, -0.0747955, 0.827347, 1.08113, -0.076502, 0.809436, 1.05871, -0.0494603, 0.470659, 1.05593, -0.0740078, 0.44627, 1.05807, -0.028457, 0.464943, 1.05807, 0.0282518, 0.464943, 1.05593, 0.0739339, 0.44627, 1.05743, 0.0629072, 0.459607, 0.887879, 0.958565, -0.756029, 1.08326, 0.101894, 0.844496, 1.08433, 0.0933619, 0.860501, 1.0854, 0.0818101, 0.874601, 1.08668, 0.0677642, 0.887557, 0.355109, 0.190633, 1.99916, 0.354041, -0.365428, 1.99916, 1.08326, -0.0695446, 0.844496, 1.08433, -0.0608808, 0.860501, 1.0854, -0.049329, 0.874601, 1.08668, -0.0352831, 0.887557, 0.777695, -0.281152, 0.365481, 0.887879, -0.281152, -0.756029, 1.05209, -0.0873974, 0.414259, 1.05401, -0.0822779, 0.431027, 1.05743, -0.0629811, 0.459607, 1.05017, -0.0891039, 0.397111, 1.04824, -0.0873974, 0.379962, 1.04461, -0.0740078, 0.347952, 1.04312, -0.0629811, 0.334614, 1.04312, 0.0629072, 0.334614, 1.04461, 0.0739339, 0.347952, 1.04824, 0.0871922, 0.379962, 1.05017, 0.0888987, 0.397111, 1.05209, 0.0871922, 0.414259, 1.05401, 0.0822039, 0.431027, 1.04632, 0.0822039, 0.363195, 1.04184, 0.0493863, 0.323563, 1.04034, 0.0173563, 0.310606, 1.04013, -0.000102609, 0.308701, 0.503729, 0.577093, -1.89393, 0.401446, 0.66465, -1.75521, 0.00341666, 0.702194, -1.73464, -0.000213385, 0.702194, -1.73502, -0.888092, 0.958565, -0.756029, 0.777908, 0.959615, 0.358241, 0.777695, 0.958565, 0.365481, 0.263716, 0.326892, 1.99916, 0.293824, -0.381443, 1.99916, 0.293824, -0.381443, 1.89398, -0.888092, -0.281152, -0.756029, 0.29297, -0.197533, -1.74454, 0.481949, -0.176793, -1.66795, 0.481949, -0.109057, -1.73578, 0.503729, 0.243535, -1.89393, 1.04034, -0.0174303, 0.310606, 1.04184, -0.0494603, 0.323563, 1.04632, -0.0822779, 0.363195, -0.503943, 0.577093, -1.89393, -0.000213385, 0.683816, -1.77008, 0.00726032, 0.683816, -1.76969, 0.401446, 0.651655, -1.77922, -0.00362992, 0.702194, -1.73464, -0.00747359, 0.683816, -1.76969, -0.777908, 0.958565, 0.365481, -0.778122, 0.959615, 0.358241, -0.405503, 0.66465, -1.75521, -1.04034, -0.000102609, 0.308701, -1.04056, 0.0173563, 0.310606, -1.04205, 0.0493863, 0.323563, -1.04333, 0.0629072, 0.334614, -1.04483, 0.0739339, 0.347952, -1.04654, 0.0822039, 0.363195, -1.04846, 0.0871922, 0.379962, -1.05038, 0.0888987, 0.397111, -1.0523, 0.0871922, 0.414259, -1.05422, 0.0822039, 0.431027, -1.05614, 0.0739339, 0.44627, -1.08134, 0.108983, 0.809436, -1.08241, 0.107145, 0.827347, -1.08348, 0.101894, 0.844496, 0.116163, 0.411955, 1.99916, 0.201364, 0.389245, 1.99916, -0.294038, -0.381443, 1.99916, -0.294038, -0.381443, 1.89398, -1.0523, -0.0873974, 0.414259, -1.05038, -0.0891039, 0.397111, -1.04846, -0.0873974, 0.379962, -1.04654, -0.0822779, 0.363195, -1.04483, -0.0740078, 0.347952, -1.04333, -0.0629811, 0.334614, -1.04205, -0.0494603, 0.323563, -1.04056, -0.0174303, 0.310606, -0.503943, 0.243535, -1.89393, -0.482162, -0.109057, -1.73578, -0.482162, -0.176793, -1.66795, -0.293184, -0.197533, -1.74454, -0.354255, -0.365428, 1.99916, -0.777908, -0.281152, 0.365481, -1.08134, -0.076502, 0.809436, 0.236597, -0.0566801, -1.83486, -0.405503, 0.651655, -1.77922, -1.08454, 0.0933619, 0.860501, -1.08561, 0.0818101, 0.874601, -0.263929, 0.326892, 1.99916, -0.201577, 0.389245, 1.99916, -0.116376, 0.411955, 1.99916, -1.05614, -0.0740078, 0.44627, -1.05828, 0.0282518, 0.464943, -1.06063, -0.000102609, 0.485521, -1.05892, 0.0493863, 0.470659, -1.05764, 0.0629072, 0.459607, -1.09031, 0.0342902, 0.900895, -1.08903, 0.0517492, 0.895941, -1.05422, -0.0822779, 0.431027, -0.23681, -0.0566801, -1.83486, -0.398456, -0.32119, 1.99916, -1.08348, -0.0695446, 0.844496, -1.08241, -0.0747955, 0.827347, -1.09031, -0.0019404, 0.900895, -1.05892, -0.0494603, 0.470659, -1.05764, -0.0629811, 0.459607, -1.08689, 0.0677642, 0.887557, -0.375608, 0.158997, 1.99916, -0.355322, 0.190633, 1.99916, -1.05828, -0.028457, 0.464943, -1.09074, 0.0161749, 0.9028, -1.06042, 0.0173563, 0.483997, -1.06042, -0.0174303, 0.483997, -1.05977, 0.0340277, 0.478661, -0.414471, 0.0705208, 1.99916, -0.414471, -0.260937, 1.99916, -1.08903, -0.0192681, 0.895941, -1.08689, -0.0352831, 0.887557, -1.08561, -0.049329, 0.874601, -1.08454, -0.0608808, 0.860501, -1.05977, -0.0341016, 0.478661)
@@ -44,10 +24,6 @@ script = ExtResource("1_qjy37")
 [node name="Hot-rod-body" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0234684)
 mesh = ExtResource("1_eyabc")
-surface_material_override/0 = SubResource("StandardMaterial3D_qjy37")
-surface_material_override/1 = SubResource("StandardMaterial3D_sattu")
-surface_material_override/2 = SubResource("StandardMaterial3D_qe6o7")
-surface_material_override/4 = SubResource("StandardMaterial3D_gg0sc")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0234684)
@@ -64,8 +40,9 @@ suspension_max_force = 100000.0
 damping_compression = 10.0
 damping_relaxation = 10.0
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="wheel_1"]
-mesh = ExtResource("2_qjy37")
+[node name="WheelHotrod1" type="MeshInstance3D" parent="wheel_1"]
+mesh = ExtResource("4_qe6o7")
+skeleton = NodePath("../..")
 
 [node name="wheel_2" type="VehicleWheel3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.856201, -0.0477209, -1.65487)
@@ -78,8 +55,9 @@ suspension_max_force = 100000.0
 damping_compression = 10.0
 damping_relaxation = 10.0
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="wheel_2"]
-mesh = ExtResource("2_qjy37")
+[node name="WheelHotrod2" type="MeshInstance3D" parent="wheel_2"]
+mesh = ExtResource("4_qe6o7")
+skeleton = NodePath("../../wheel_1")
 
 [node name="wheel_3" type="VehicleWheel3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.813, -0.048, 1.69453)
@@ -92,9 +70,10 @@ suspension_max_force = 100000.0
 damping_compression = 10.0
 damping_relaxation = 10.0
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="wheel_3"]
+[node name="WheelHotrod3" type="MeshInstance3D" parent="wheel_3"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
-mesh = ExtResource("2_qjy37")
+mesh = ExtResource("4_qe6o7")
+skeleton = NodePath("../../wheel_1")
 
 [node name="wheel_4" type="VehicleWheel3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.856, -0.048, -1.65447)
@@ -107,9 +86,10 @@ suspension_max_force = 100000.0
 damping_compression = 10.0
 damping_relaxation = 10.0
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="wheel_4"]
+[node name="WheelHotrod4" type="MeshInstance3D" parent="wheel_4"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
-mesh = ExtResource("2_qjy37")
+mesh = ExtResource("4_qe6o7")
+skeleton = NodePath("../../wheel_1")
 
 [node name="checkpoint_sensor" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0234684)

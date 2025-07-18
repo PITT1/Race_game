@@ -1,7 +1,7 @@
 # Blender 4.3.2 MTL File: 'f1-70s.blend'
 # www.blender.org
 
-newmtl carroceria
+newmtl carroceria.001
 Ns 490.000000
 Ka 0.800000 0.800000 0.800000
 Kd 0.068951 0.000000 1.000000
@@ -11,7 +11,7 @@ Ni 1.500000
 d 1.000000
 illum 3
 
-newmtl escapes
+newmtl escapes.001
 Ns 250.000000
 Ka 0.400000 0.400000 0.400000
 Kd 0.012320 0.012320 0.012320
@@ -21,7 +21,7 @@ Ni 1.500000
 d 1.000000
 illum 3
 
-newmtl motor
+newmtl motor.001
 Ns 490.000000
 Ka 0.800000 0.800000 0.800000
 Kd 0.800000 0.800000 0.800000
@@ -31,7 +31,7 @@ Ni 1.450000
 d 1.000000
 illum 3
 
-newmtl vidrios
+newmtl vidrios.001
 Ns 250.000000
 Ka 0.800000 0.800000 0.800000
 Kd 0.257357 0.257357 0.257357
