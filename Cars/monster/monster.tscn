@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://6wec7qfva6kd"]
+[gd_scene load_steps=13 format=3 uid="uid://6wec7qfva6kd"]
 
 [ext_resource type="PhysicsMaterial" uid="uid://dioc2dlho64fc" path="res://car_physic_material/car_physic.tres" id="1_bglxn"]
 [ext_resource type="Script" uid="uid://dn8cru75adetk" path="res://player_controller/player_controller.gd" id="1_lpv4x"]
@@ -7,11 +7,25 @@
 [ext_resource type="ArrayMesh" uid="uid://dnqiq5nsxt5ed" path="res://Cars/monster/monster_wheel.obj" id="4_gl0gl"]
 [ext_resource type="PackedScene" uid="uid://1d1e5ll020cp" path="res://huds/on_race_huds/race_hud.tscn" id="7_gl0gl"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ckt8u"]
+albedo_color = Color(0.595828, 0.595828, 0.595828, 1)
+metallic = 0.66
+roughness = 0.49
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bglxn"]
 albedo_color = Color(0.0728426, 0.0728426, 0.0728426, 1)
+metallic = 0.75
+roughness = 0.46
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vv6bu"]
+albedo_color = Color(0.190762, 0.190762, 0.190762, 1)
+metallic = 0.56
+roughness = 0.39
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gl0gl"]
 albedo_texture = ExtResource("3_bglxn")
+metallic = 0.69
+roughness = 0.38
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_lpv4x"]
 points = PackedVector3Array(2.20881, -0.655928, 3.52545, 2.05656, -0.00952423, 4.19785, 1.96487, -1.07999, 3.85503, 1.97698, -1.07511, -0.466694, 2.06867, -0.499576, -0.779706, 1.61798, 1.46438, -0.917994, 1.19411, 0.585137, 3.02364, -8.70228e-05, 0.574638, 3.35901, -2.05717, -0.00952423, 4.19785, 0.646968, -0.140005, 4.23843, 0.653456, -0.708795, 4.32289, 1.67854, -0.883518, 4.14899, 1.87793, -0.998626, 3.98255, 1.40994, 2.09091, -1.13329, 0.992122, 2.27126, -1.17884, 1.10977, -1.06874, 3.93369, -1.96547, -1.07999, 3.85503, 1.58944, -1.37432, 0.0566497, 1.07517, -0.671675, -3.94212, 1.58468, -0.316978, -3.47674, 1.3602, 2.06991, -1.86283, -1.26003, 0.516522, 3.16938, -0.872487, 2.28738, -1.13495, -2.20942, -0.655928, 3.52545, -1.87854, -0.998626, 3.98255, -1.67914, -0.883518, 4.14899, -0.654063, -0.708795, 4.32289, -0.647575, -0.140005, 4.23843, -1.37248, 2.11116, -1.10928, -1.61989, 1.46438, -0.917994, 1.22352, 2.23976, -1.86366, 0.949735, 2.45611, -1.78168, -1.11037, -1.06874, 3.93369, -1.97888, -1.07511, -0.466694, -1.67482, -1.33645, 0.0980535, -1.04939, -0.568941, -4.01416, 1.00769, -0.500326, -4.05557, 1.0012, 0.506773, -4.09449, 1.06176, 0.582137, -3.9355, -0.863404, 2.43548, -1.80321, -1.0243, 2.41599, -1.77505, -2.07058, -0.499201, -0.779706, -1.22197, 2.23939, -1.8562, -1.3621, 2.07066, -1.862, 0.854147, 0.509023, -4.09614, -1.58053, -0.318478, -3.49827, -0.982348, 0.506399, -4.09614, -0.918767, 0.195195, -4.13672, 0.977849, 0.178698, -4.10443, -1.06323, 0.575763, -3.93964)
@@ -31,7 +45,9 @@ script = ExtResource("1_lpv4x")
 [node name="MonsterBody" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0.0987265)
 mesh = ExtResource("1_to05h")
+surface_material_override/0 = SubResource("StandardMaterial3D_ckt8u")
 surface_material_override/2 = SubResource("StandardMaterial3D_bglxn")
+surface_material_override/3 = SubResource("StandardMaterial3D_vv6bu")
 surface_material_override/6 = SubResource("StandardMaterial3D_gl0gl")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

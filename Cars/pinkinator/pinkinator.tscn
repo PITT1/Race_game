@@ -1,10 +1,24 @@
-[gd_scene load_steps=8 format=3 uid="uid://eo506uxokoxq"]
+[gd_scene load_steps=11 format=3 uid="uid://eo506uxokoxq"]
 
 [ext_resource type="Script" uid="uid://dn8cru75adetk" path="res://player_controller/player_controller.gd" id="1_oqayv"]
 [ext_resource type="PhysicsMaterial" uid="uid://dioc2dlho64fc" path="res://car_physic_material/car_physic.tres" id="1_srb5a"]
 [ext_resource type="ArrayMesh" uid="uid://2w052jjpuubr" path="res://Cars/pinkinator/monster_pink_body.obj" id="1_y6k44"]
 [ext_resource type="ArrayMesh" uid="uid://c40jkc0fd2p2d" path="res://Cars/pinkinator/monster_pink_wheel.obj" id="4_srb5a"]
 [ext_resource type="PackedScene" uid="uid://1d1e5ll020cp" path="res://huds/on_race_huds/race_hud.tscn" id="5_m5i0a"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m5i0a"]
+albedo_color = Color(0.665917, 0.304346, 0.613795, 1)
+metallic = 0.7
+roughness = 0.52
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vrx4o"]
+metallic = 0.59
+roughness = 0.51
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1flrv"]
+albedo_color = Color(0.661081, 0.661081, 0.661081, 1)
+metallic = 0.67
+roughness = 0.38
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_m5i0a"]
 points = PackedVector3Array(2.74169, -1.06287, -5.3923, 1.74223, -1.44008, -5.49585, 2.29169, -1.05958, -5.86387, 2.29169, -0.70277, -5.69595, 1.57018, 1.10004, -5.02568, 2.37932, -0.142064, -4.65067, 2.21964, 0.375562, -3.9944, 2.2105, 0.501187, -3.28775, 2.48954, 0.430811, 5.50688, 2.72502, -0.768214, 6.91179, 2.68147, -1.17699, 6.82503, 1.29438, -1.4848, -5.53503, 1.2304, -1.29603, -5.91424, -0.00400519, -1.13391, -6.16472, 0.908358, -0.780381, -6.08356, 0.250833, 0.313079, -6.27946, 0.989002, 0.58406, -5.90025, 1.75567, 0.188441, -5.61059, 0.712659, 1.52361, -5.48466, 1.47287, 1.87253, 0.0230074, 1.44169, 1.87451, 1.53985, 1.78309, 0.956, 7.0909, 2.02448, 0.608395, 7.10769, 2.27771, -0.356481, 7.694, 2.55566, -0.760979, 7.30079, 2.61857, -1.13128, 7.16786, 2.31964, -1.18258, 7.53587, -1.30293, -1.4848, -5.53503, 1.139, -1.18291, 7.84372, -1.23895, -1.29603, -5.91424, -0.916906, -0.780381, -6.08356, -0.206693, 0.254213, -6.26127, -2.30024, -1.05958, -5.86387, -0.413144, 0.375233, -6.2109, -0.643788, 1.36181, -5.64837, 0.566423, 1.3286, -5.70854, 0.849218, 0.872799, -5.83308, -0.666907, 1.618, -5.3951, 0.552982, 1.62293, -5.32653, -1.48518, 1.87253, 0.0230074, 1.20406, 1.87484, 1.87009, -1.7583, 0.994148, 7.0881, 1.0304, 0.270985, 7.62963, 1.24169, -0.356481, 8.00744, 1.45137, -0.356481, 7.95147, 1.65943, -0.356481, 7.8927, 1.86696, -0.356481, 7.82973, 2.07287, -0.356481, 7.76396, 2.33093, -1.08392, 7.68, 1.17018, -1.11779, 8.01584, -1.75077, -1.44008, -5.49585, -0.859917, -1.17896, 7.83393, -1.59809, -1.17929, 7.73038, -2.3669, -1.18126, 7.45611, -2.69002, -1.17699, 6.82503, -1.23465, -1.1543, 7.98505, -2.75023, -1.06287, -5.3923, -2.30024, -0.70277, -5.69595, -0.901314, 0.787953, -5.92264, -1.59701, 1.07505, -5.02568, -2.49808, 0.430811, 5.50688, -1.44379, 1.87385, 1.55105, -1.21852, 1.87451, 1.86589, -2.35346, 0.413381, -3.9972, -2.38088, 0.42818, -3.03028, -2.0368, 0.594912, 7.11328, -2.28626, -0.356481, 7.694, -2.08142, -0.356481, 7.76396, -1.87551, -0.356481, 7.82973, -1.66798, -0.356481, 7.8927, -1.45992, -0.356481, 7.95147, -1.25024, -0.356481, 8.00744, -0.988411, 0.350569, 7.57086, -0.916906, -0.21803, 7.94027, 0.908358, -0.21803, 7.94027, -1.21583, -0.77216, 8.01444, 1.35836, -0.778408, 7.98365, -2.33572, -1.12272, 7.66741, -2.62712, -1.13128, 7.16786, -2.68249, -0.708032, 6.81104, -1.75239, 0.169696, -5.62599, -2.58787, -0.761636, 7.26161)
@@ -24,6 +38,9 @@ script = ExtResource("1_oqayv")
 [node name="MonsterPinkBody" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.38, 0, 0, 0, 0.38, 0, 0, 0, 0.38, 0, 0, 0)
 mesh = ExtResource("1_y6k44")
+surface_material_override/0 = SubResource("StandardMaterial3D_m5i0a")
+surface_material_override/2 = SubResource("StandardMaterial3D_vrx4o")
+surface_material_override/3 = SubResource("StandardMaterial3D_1flrv")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.38, 0, 0, 0, 0.38, 0, 0, 0, 0.38, 0, 0, 0)

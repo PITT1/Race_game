@@ -1,10 +1,20 @@
-[gd_scene load_steps=8 format=3 uid="uid://t2g61s7tynw8"]
+[gd_scene load_steps=10 format=3 uid="uid://t2g61s7tynw8"]
 
 [ext_resource type="ArrayMesh" uid="uid://tdcker0tc6op" path="res://Cars/montana/montana_body.obj" id="1_q0wj3"]
 [ext_resource type="PhysicsMaterial" uid="uid://dioc2dlho64fc" path="res://car_physic_material/car_physic.tres" id="1_wfsiv"]
 [ext_resource type="Script" uid="uid://dn8cru75adetk" path="res://player_controller/player_controller.gd" id="2_1ic3g"]
 [ext_resource type="ArrayMesh" uid="uid://ms1rxen6kn37" path="res://Cars/montana/montana_wheel.obj" id="3_7mcbj"]
 [ext_resource type="PackedScene" uid="uid://1d1e5ll020cp" path="res://huds/on_race_huds/race_hud.tscn" id="6_vhin2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1ic3g"]
+albedo_color = Color(0.73859, 0.73859, 0.73859, 1)
+metallic = 0.61
+roughness = 0.43
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vhin2"]
+albedo_color = Color(0.503175, 0.433, 0.204516, 1)
+metallic = 0.69
+roughness = 0.54
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_1ic3g"]
 points = PackedVector3Array(1.41613, -0.733546, -1.29694, 0.635661, -0.816317, -3.47177, 0.771224, -0.795327, -3.4725, 1.36564, -0.680676, -3.4407, 1.38377, -0.272961, -2.74057, 1.36926, 0.141487, -1.56862, 1.36564, 0.242277, -1.29694, 1.34109, -0.250585, 3.18422, 1.31906, -0.656518, 3.19723, 1.24793, -0.682656, 3.80777, 1.2192, -0.700874, 3.47179, 0.35254, -0.814931, -3.47322, -0.00924087, -0.661864, -3.56281, 1.31571, -0.681666, -3.54764, -0.00896192, -0.708794, 3.78826, 1.19075, 0.546232, -3.52091, 1.35225, 0.131982, -2.45372, 1.33747, 0.286039, -2.08306, 0.984332, 1.20444, -1.31139, 0.983774, 1.20087, 0.367056, 1.30818, 0.253762, 2.51082, 1.32603, 0.162675, 2.1192, 1.32296, 0.0925772, 2.90894, 1.23035, 0.379503, 3.46384, 1.26076, -0.177319, 3.79982, -0.0178879, -0.678498, 3.81861, -1.35595, -0.680082, -3.54041, -1.23684, -0.700874, 3.47179, -1.43349, -0.733546, -1.29694, -1.2123, 0.546034, -3.51368, -0.468929, 0.553361, -3.51729, 0.440126, 0.552173, -3.51946, -1.26501, -0.686616, 3.80199, -1.00421, 1.19434, -1.31501, -0.625133, 1.20642, -1.20229, 0.481688, 1.20642, -1.1929, 0.453515, 1.20662, 0.489887, 0.113212, 0.531183, 3.47035, -0.00896192, -0.160289, 3.79115, -1.28036, -0.183853, 3.79982, -1.26501, -0.686418, 3.80199, -1.38328, -0.395731, -2.74996, -1.3844, -0.0171238, -2.6069, -1.35204, -0.019698, 3.04911, -1.38328, 0.242277, -1.29694, -1.37798, 0.262475, -2.20661, -1.34172, -0.646221, 3.2189, -0.999745, 1.20345, 0.359831, -0.583014, 1.19632, 0.497835, -0.170466, 0.514946, 3.47107, -1.24828, 0.379305, 3.46384, -1.31996, -0.192764, 3.41326, -1.32777, 0.250198, 2.55128)
@@ -24,6 +34,8 @@ script = ExtResource("2_1ic3g")
 [node name="MontanaBody" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
 mesh = ExtResource("1_q0wj3")
+surface_material_override/0 = SubResource("StandardMaterial3D_1ic3g")
+surface_material_override/2 = SubResource("StandardMaterial3D_vhin2")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
