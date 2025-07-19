@@ -1,10 +1,13 @@
-[gd_scene load_steps=19 format=3 uid="uid://dl4l032e7tmky"]
+[gd_scene load_steps=22 format=3 uid="uid://dl4l032e7tmky"]
 
 [ext_resource type="PackedScene" uid="uid://deh3gsrnhaefo" path="res://Maps/loby_1/loby_1.glb" id="1_68xm8"]
 [ext_resource type="Script" uid="uid://ddn22yn6bgmbe" path="res://Maps/loby_1/loby_1.gd" id="1_jk0es"]
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="3_dbgys"]
+[ext_resource type="Texture2D" uid="uid://bm552631w02kq" path="res://Maps/textures/f1_circuits/Asphalt025C_1K-JPG_Color.jpg" id="3_r43wq"]
 [ext_resource type="Script" uid="uid://csjccrhj5wnx7" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="4_1vtqb"]
+[ext_resource type="Texture2D" uid="uid://bk3p8umc7mpd0" path="res://Maps/textures/f1_circuits/Grass001_1K-JPG_Color.jpg" id="4_6850l"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="5_f42dt"]
+[ext_resource type="Texture2D" uid="uid://dknkvpoyh81s8" path="res://Maps/textures/f1_circuits/Concrete042A_1K-JPG_Color.jpg" id="5_qrmfn"]
 [ext_resource type="PackedScene" uid="uid://cbnhucy2wtfwc" path="res://others/signals_to/to_select_car/to_select_car.tscn" id="9_jk0es"]
 [ext_resource type="PackedScene" uid="uid://brakaji82desp" path="res://others/signals_to/to_race/to_race.tscn" id="9_tb0jv"]
 [ext_resource type="PackedScene" uid="uid://b0fyvn1iybud7" path="res://others/ramps/ramp1.tscn" id="10_jk0es"]
@@ -24,17 +27,20 @@ sky_material = SubResource("ProceduralSkyMaterial_n0ykm")
 background_mode = 2
 sky = SubResource("Sky_n0ykm")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jk0es"]
-albedo_color = Color(0.224304, 0.224304, 0.224304, 1)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o6dls"]
+albedo_texture = ExtResource("3_r43wq")
+uv1_scale = Vector3(10, 10, 10)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6tc5e"]
 albedo_color = Color(0.967671, 0.967671, 0.967671, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n0ykm"]
-albedo_color = Color(1.20327e-07, 0.501869, 0.258139, 1)
+albedo_texture = ExtResource("4_6850l")
+uv1_scale = Vector3(10, 10, 10)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r43wq"]
-albedo_color = Color(0.489622, 0.489622, 0.489622, 1)
+albedo_texture = ExtResource("5_qrmfn")
+uv1_scale = Vector3(10, 10, 10)
 
 [sub_resource type="Resource" id="Resource_tb0jv"]
 script = ExtResource("5_f42dt")
@@ -62,7 +68,7 @@ sky_mode = 1
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.493831, 0, 0.154423)
 
 [node name="Plane_001" parent="loby_1" index="0"]
-surface_material_override/0 = SubResource("StandardMaterial3D_jk0es")
+surface_material_override/0 = SubResource("StandardMaterial3D_o6dls")
 surface_material_override/1 = SubResource("StandardMaterial3D_6tc5e")
 surface_material_override/2 = SubResource("StandardMaterial3D_n0ykm")
 surface_material_override/3 = SubResource("StandardMaterial3D_r43wq")
@@ -72,7 +78,6 @@ visible = false
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(-0.732591, 0.692228, -0.540246, -4.59305e-08, 0.617123, 0.782893, 1.35592, 0.374004, -0.29189, -11.355, 16.455, -6.135)
-fov = 52.5
 far = 100.0
 
 [node name="PhantomCameraHost" type="Node" parent="Camera3D"]

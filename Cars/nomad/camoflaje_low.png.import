@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://pgx01q58gm1s"
-path.s3tc="res://.godot/imported/camoflaje.png-f6577efd2a7ddb443be65292a1baea12.s3tc.ctex"
-path.etc2="res://.godot/imported/camoflaje.png-f6577efd2a7ddb443be65292a1baea12.etc2.ctex"
+uid="uid://bdwnnhcsb2omt"
+path.s3tc="res://.godot/imported/camoflaje_low.png-2468a1b92da8fd318dfe12b8e9b8a982.s3tc.ctex"
+path.etc2="res://.godot/imported/camoflaje_low.png-2468a1b92da8fd318dfe12b8e9b8a982.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://Cars/nomad/camoflaje.png"
-dest_files=["res://.godot/imported/camoflaje.png-f6577efd2a7ddb443be65292a1baea12.s3tc.ctex", "res://.godot/imported/camoflaje.png-f6577efd2a7ddb443be65292a1baea12.etc2.ctex"]
+source_file="res://Cars/nomad/camoflaje_low.png"
+dest_files=["res://.godot/imported/camoflaje_low.png-2468a1b92da8fd318dfe12b8e9b8a982.s3tc.ctex", "res://.godot/imported/camoflaje_low.png-2468a1b92da8fd318dfe12b8e9b8a982.etc2.ctex"]
 
 [params]
 

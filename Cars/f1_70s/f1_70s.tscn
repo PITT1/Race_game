@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://b5xsylen0fmlf"]
+[gd_scene load_steps=10 format=3 uid="uid://b5xsylen0fmlf"]
 
 [ext_resource type="Script" uid="uid://dn8cru75adetk" path="res://player_controller/player_controller.gd" id="1_c8ckq"]
 [ext_resource type="ArrayMesh" uid="uid://dtqptne17jy1f" path="res://Cars/f1_70s/f1-70s_body.obj" id="1_e5p01"]
@@ -7,8 +7,13 @@
 [ext_resource type="ArrayMesh" uid="uid://cvstq2c8y4e3e" path="res://Cars/f1_70s/f1-70s_rear_wheel.obj" id="3_c8ckq"]
 [ext_resource type="PackedScene" uid="uid://1d1e5ll020cp" path="res://huds/on_race_huds/race_hud.tscn" id="6_rwupv"]
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_g2ypv"]
-points = PackedVector3Array(-1.24969, 0.760595, -2.23672, 1.40211, -0.565117, 1.07735, 1.30995, -0.663225, 1.00148, -0.835124, 0.0980919, 2.40339, 1.23633, 1.50662, -2.15417, -0.586604, -0.896839, -2.73464, -1.41574, -0.730978, 0.580472, 0.821766, -0.813791, -2.65105, -1.24969, 1.50662, -2.3198, 0.739018, 0.263718, 2.40339, 0.7481, -0.789998, 2.33375, -0.700648, -0.813048, 2.38462, 1.31908, -0.813791, -0.579427, -1.33272, 0.0150438, 1.32605, -0.752652, 0.263718, 2.40339, 1.23633, 1.50662, -2.3198, 1.31908, 0.0150438, 1.32605, -0.835124, -0.813791, -2.65105, 0.572971, -0.896839, -2.73464, -1.24969, 1.50662, -2.15365, 1.23633, 0.760595, -2.23672, -0.721042, -0.687077, 2.45714, 1.40211, -0.482304, 0.0825565, 0.821766, 0.180905, 2.40339, -1.41574, -0.399256, 0.414327, -1.15765, -0.807844, -0.158509, 0.987538, -0.316678, -2.48594, 1.40211, -0.316678, 0.663025, -1.34009, -0.675363, 0.936954, 0.655995, -0.896839, -2.65105, -1.2435, -0.738518, -0.468511, 0.228159, -0.596226, 2.42501)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rwupv"]
+albedo_color = Color(0.309634, 0.480479, 0.709331, 1)
+metallic = 0.69
+roughness = 0.46
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_rwupv"]
+points = PackedVector3Array(3.91173, 2.21887, -9.40389, 2.90694, -0.527627, -3.42371, 2.23989, -0.247108, -6.08829, 1.27569, -0.739508, -6.73576, -3.91215, 2.21837, -9.40389, 3.9079, 3.78758, -9.71162, 3.70113, -0.829532, 8.02259, 3.70113, -0.844453, 8.02615, 3.70113, -0.870814, 8.01548, 3.32433, -0.826051, 0.0110674, -0.420656, -0.955865, -4.03205, -1.26921, -0.725084, -6.71264, 1.21366, -0.967802, -2.80826, -3.70231, -0.844453, 8.02615, -3.70231, -0.802674, 8.00836, -3.90372, 3.78808, -9.71162, -2.24107, -0.247108, -6.08829, -2.90812, -0.527627, -3.42371, -3.32551, -0.826051, 0.0110674, -3.70231, -0.870317, 8.01903, -3.70231, -0.85838, 8.02259, -0.00556779, 1.67027, 1.75069, 0.0135784, 0.123932, 8.2147, 3.70649, -0.366975, 6.39325, 3.70113, -0.796706, 7.99769, 1.27799, -0.829532, 8.45661, 1.27799, -0.844453, 8.45838, 1.27876, -0.894688, 8.4317, -0.874037, -1.29308, 7.97278, -0.946026, -0.962828, -3.6087, -1.27917, -0.844453, 8.45838, -1.27917, -0.829532, 8.45661, -1.21484, -0.967802, -2.80826, -1.27994, -0.875291, 8.44771)
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_g2ypv"]
 radius = 2.404
@@ -25,10 +30,11 @@ script = ExtResource("1_c8ckq")
 [node name="F1-70sBody" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0.0864999)
 mesh = ExtResource("1_e5p01")
+surface_material_override/0 = SubResource("StandardMaterial3D_rwupv")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.75, 0, 0, 0, 0.555, 0, 0, 0, 1.05, 0, 0.21, -0.124422)
-shape = SubResource("ConvexPolygonShape3D_g2ypv")
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0.0864999)
+shape = SubResource("ConvexPolygonShape3D_rwupv")
 
 [node name="wheel_1" type="VehicleWheel3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.813088, -0.12013, 1.47386)
