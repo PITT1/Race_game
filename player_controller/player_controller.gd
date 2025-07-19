@@ -11,8 +11,8 @@ var poitn_desviation: int = 0
 @onready var pCam: PhantomCamera3D = null
 
 @export_category("CAMERA")
-@export var camera_distance: float = 15
-@export var camera_height: float = 8
+@export var camera_distance: float = 8
+@export var camera_height: float = 3
 var target_offset = Vector2.ZERO
 var current_offset = Vector2.ZERO
 var wheels: Array = []

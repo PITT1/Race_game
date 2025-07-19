@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=3 uid="uid://bhehqj2450xtc"]
+[gd_scene load_steps=35 format=3 uid="uid://bhehqj2450xtc"]
 
 [ext_resource type="Script" uid="uid://bbkomqcnkihxo" path="res://huds/car_selection/car_selection.gd" id="1_u64g1"]
 [ext_resource type="ArrayMesh" uid="uid://rgbpy0gs4uf7" path="res://Cars/rat_rod/bug_car_body.obj" id="2_u64g1"]
@@ -22,7 +22,7 @@
 [ext_resource type="ArrayMesh" uid="uid://cfgih04qv01d0" path="res://Cars/z40/Z40_all_model.obj" id="21_ehe8b"]
 [ext_resource type="ArrayMesh" uid="uid://crt8e3jokavek" path="res://Cars/toreto/toreto_all_body.obj" id="22_u3eru"]
 [ext_resource type="ArrayMesh" uid="uid://bl5jvh5mwftgv" path="res://Cars/nomad/nomad_all_model.obj" id="23_fq8jf"]
-[ext_resource type="Texture2D" uid="uid://pgx01q58gm1s" path="res://Cars/nomad/camoflaje.png" id="24_vv7oi"]
+[ext_resource type="PackedScene" uid="uid://c2i8lvkgcsf8g" path="res://huds/fps_visual/fps_hud.tscn" id="23_ovl38"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_vv7oi"]
 sky_top_color = Color(0.461087, 0.641883, 0.858997, 1)
@@ -37,48 +37,9 @@ sky_material = SubResource("ProceduralSkyMaterial_vv7oi")
 [sub_resource type="Environment" id="Environment_gt30f"]
 background_mode = 2
 sky = SubResource("Sky_r43wq")
-sky_rotation = Vector3(0.767945, 0, 0)
+sky_rotation = Vector3(-1.40499, 0, 0)
 tonemap_mode = 2
 glow_enabled = true
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7suyo"]
-albedo_color = Color(0.771578, 2.28621e-06, 1.05888e-06, 1)
-metallic = 0.75
-roughness = 0.48
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8wghx"]
-albedo_color = Color(0.327081, 0.327354, 0.320814, 1)
-metallic = 0.85
-roughness = 0.3
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4oqaj"]
-albedo_color = Color(0.453232, 0.453232, 0.453232, 1)
-metallic = 0.53
-roughness = 0.48
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_am86g"]
-albedo_color = Color(0.854181, 3.77826e-06, 7.70092e-07, 1)
-metallic = 0.72
-roughness = 0.78
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jw762"]
-albedo_color = Color(0.964706, 0.482353, 0, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ovl38"]
-albedo_color = Color(0.0267215, 0.0267215, 0.0267215, 1)
-metallic = 0.51
-roughness = 0.43
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ehe8b"]
-albedo_color = Color(0.644073, 0.602524, 0.482867, 1)
-metallic = 0.45
-metallic_specular = 1.0
-roughness = 0.33
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u3eru"]
-albedo_color = Color(0.984314, 0, 0, 1)
-metallic = 0.63
-roughness = 0.62
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c3i15"]
 albedo_color = Color(0.484983, 0.168594, 0.713228, 1)
@@ -99,100 +60,6 @@ roughness = 0.7
 albedo_color = Color(0.574328, 0.574328, 0.574328, 1)
 metallic = 0.54
 roughness = 0.48
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gw526"]
-albedo_color = Color(0.513783, 0, 0, 1)
-metallic = 0.57
-roughness = 0.3
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8jbfh"]
-albedo_color = Color(0.655601, 0.655601, 0.655601, 1)
-metallic = 0.44
-roughness = 0.36
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6lp0e"]
-albedo_color = Color(0.552956, 0.552956, 0.552955, 1)
-metallic = 0.84
-roughness = 0.46
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fq8jf"]
-albedo_color = Color(1, 0, 0, 1)
-metallic = 0.59
-roughness = 0.22
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vv7oi"]
-albedo_color = Color(0, 0, 0, 1)
-metallic = 0.51
-roughness = 0.4
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o8i27"]
-albedo_color = Color(0.135154, 0.411371, 0.703751, 1)
-metallic = 0.65
-roughness = 0.42
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hyck2"]
-metallic = 0.38
-roughness = 0.36
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qq1jb"]
-albedo_color = Color(0.463587, 0.463587, 0.463587, 1)
-metallic = 0.86
-roughness = 0.21
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cp2nr"]
-albedo_color = Color(1, 0, 0, 1)
-metallic = 0.73
-roughness = 0.21
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7ktic"]
-albedo_color = Color(0.263679, 0.370093, 0.370124, 1)
-metallic = 0.81
-roughness = 0.47
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bgmxk"]
-albedo_color = Color(0, 0, 0, 1)
-metallic = 0.78
-roughness = 0.51
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lpntj"]
-albedo_color = Color(0.73859, 0.73859, 0.73859, 1)
-metallic = 0.77
-roughness = 0.09
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_llynu"]
-albedo_color = Color(0.526423, 0.526423, 0.526423, 1)
-metallic = 0.84
-roughness = 0.51
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a74dt"]
-albedo_color = Color(0.417257, 0.417257, 0.417257, 1)
-metallic = 0.79
-roughness = 0.57
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d02y5"]
-albedo_color = Color(0.635814, 0.62575, 0.625579, 1)
-metallic = 1.0
-roughness = 0.43
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_psw2t"]
-albedo_color = Color(0.628315, 0.628315, 0.628315, 1)
-metallic = 0.72
-roughness = 0.38
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_841ai"]
-albedo_color = Color(0.705194, 0.705194, 0.705194, 1)
-metallic = 1.0
-roughness = 0.48
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k7gmd"]
-albedo_texture = ExtResource("24_vv7oi")
-metallic = 0.52
-roughness = 0.46
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dbumn"]
-albedo_color = Color(0.118581, 0.118581, 0.118581, 1)
-metallic = 0.56
-roughness = 0.7
 
 [sub_resource type="Resource" id="Resource_c3i15"]
 script = ExtResource("7_btktd")
@@ -598,14 +465,6 @@ sky_mode = 1
 [node name="BugCarBody" type="MeshInstance3D" parent="vehicles/bugrod"]
 transform = Transform3D(0.56, 0, 0, 0, 0.56, 0, 0, 0, 0.56, 0, 0.860685, 0)
 mesh = ExtResource("2_u64g1")
-surface_material_override/0 = SubResource("StandardMaterial3D_7suyo")
-surface_material_override/1 = SubResource("StandardMaterial3D_8wghx")
-surface_material_override/2 = SubResource("StandardMaterial3D_4oqaj")
-surface_material_override/3 = SubResource("StandardMaterial3D_am86g")
-surface_material_override/4 = SubResource("StandardMaterial3D_jw762")
-surface_material_override/5 = SubResource("StandardMaterial3D_ovl38")
-surface_material_override/6 = SubResource("StandardMaterial3D_ehe8b")
-surface_material_override/7 = SubResource("StandardMaterial3D_u3eru")
 
 [node name="BugCarFrontWheel" type="MeshInstance3D" parent="vehicles/bugrod/BugCarBody"]
 transform = Transform3D(1.00446, 0, 0, 0, 1.00446, 0, 0, 0, 1.00446, 0.935343, -0.593379, 2.35492)
@@ -661,11 +520,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.8279, 0, 0)
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.691, -0.551)
 mesh = ExtResource("8_6rdnw")
 skeleton = NodePath("../../..")
-surface_material_override/0 = SubResource("StandardMaterial3D_gw526")
-surface_material_override/1 = SubResource("StandardMaterial3D_8jbfh")
-surface_material_override/5 = SubResource("StandardMaterial3D_6lp0e")
-surface_material_override/7 = SubResource("StandardMaterial3D_fq8jf")
-surface_material_override/8 = SubResource("StandardMaterial3D_vv7oi")
 
 [node name="empaler_truck" type="Node3D" parent="vehicles"]
 transform = Transform3D(0.663324, 0, 0.748332, 0, 1, 0, -0.748332, 0, 0.663324, 44.8691, 0, 0)
@@ -682,10 +536,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59.3503, 0, 0)
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0.994385, 0)
 mesh = ExtResource("10_btktd")
 skeleton = NodePath("../../..")
-surface_material_override/0 = SubResource("StandardMaterial3D_o8i27")
-surface_material_override/2 = SubResource("StandardMaterial3D_hyck2")
-surface_material_override/7 = SubResource("StandardMaterial3D_qq1jb")
-surface_material_override/8 = SubResource("StandardMaterial3D_cp2nr")
 
 [node name="racing_rod" type="Node3D" parent="vehicles"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 73.0855, 0, 0)
@@ -694,11 +544,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 73.0855, 0, 0)
 transform = Transform3D(0.67, 0, 0, 0, 0.67, 0, 0, 0, 0.67, 0, 1.101, 0)
 mesh = ExtResource("11_gw526")
 skeleton = NodePath("../..")
-surface_material_override/0 = SubResource("StandardMaterial3D_7ktic")
-surface_material_override/3 = SubResource("StandardMaterial3D_bgmxk")
-surface_material_override/4 = SubResource("StandardMaterial3D_lpntj")
-surface_material_override/5 = SubResource("StandardMaterial3D_llynu")
-surface_material_override/6 = SubResource("StandardMaterial3D_a74dt")
 
 [node name="blade_rod" type="Node3D" parent="vehicles"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 87.0001, 0, 0)
@@ -715,9 +560,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 100.792, 0, 0)
 transform = Transform3D(0.34, 0, 0, 0, 0.34, 0, 0, 0, 0.34, 0, 0.574573, 0)
 mesh = ExtResource("13_6lp0e")
 skeleton = NodePath("../../..")
-surface_material_override/0 = SubResource("StandardMaterial3D_d02y5")
-surface_material_override/2 = SubResource("StandardMaterial3D_psw2t")
-surface_material_override/4 = SubResource("StandardMaterial3D_841ai")
 
 [node name="pinkinator" type="Node3D" parent="vehicles"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 114.087, 0, 0)
@@ -773,11 +615,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 194.258, 0, 0)
 [node name="NomadAllModel" type="MeshInstance3D" parent="vehicles/nomad"]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 1.45247, 0)
 mesh = ExtResource("23_fq8jf")
-surface_material_override/3 = SubResource("StandardMaterial3D_k7gmd")
-surface_material_override/4 = SubResource("StandardMaterial3D_dbumn")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.994114, 0.108341, 0, -0.108341, 0.994114, 0, 1.455, 4.175)
+far = 20.0
 
 [node name="PhantomCameraHost" type="Node" parent="Camera3D"]
 process_priority = 300
@@ -867,6 +708,8 @@ grow_horizontal = 0
 size_flags_horizontal = 6
 theme_override_font_sizes/font_size = 60
 metadata/_edit_use_anchors_ = true
+
+[node name="FpsHud" parent="." instance=ExtResource("23_ovl38")]
 
 [connection signal="button_up" from="CanvasLayer/left" to="." method="_on_left_button_up"]
 [connection signal="button_up" from="CanvasLayer/right" to="." method="_on_right_button_up"]

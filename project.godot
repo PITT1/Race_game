@@ -13,7 +13,7 @@ config_version=5
 config/name="Car_game"
 run/main_scene="uid://dl4l032e7tmky"
 config/features=PackedStringArray("4.4", "Mobile")
-run/max_fps=60
+run/max_fps=30
 run/low_processor_mode=true
 config/icon="res://icon.svg"
 
@@ -26,7 +26,6 @@ GlobalVar="*res://global_var.gd"
 
 window/size/viewport_width=1612
 window/size/viewport_height=720
-window/frame_pacing/android/swappy_mode=1
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
@@ -62,16 +61,38 @@ limits/message_queue/max_size_mb=64
 [physics]
 
 3d/physics_engine="Jolt Physics"
+jolt_physics_3d/simulation/velocity_steps=3
 
 [rendering]
 
-occlusion_culling/bvh_build_quality=1
+occlusion_culling/bvh_build_quality=0
 textures/canvas_textures/default_texture_filter=0
-renderer/rendering_method="mobile"
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
 textures/vram_compression/import_etc2_astc=true
+textures/lossless_compression/force_png=true
+lights_and_shadows/directional_shadow/size=512
+lights_and_shadows/directional_shadow/size.mobile=512
 lights_and_shadows/directional_shadow/soft_shadow_filter_quality=0
 lights_and_shadows/positional_shadow/soft_shadow_filter_quality=0
+textures/default_filters/anisotropic_filtering_level=0
 camera/depth_of_field/depth_of_field_bokeh_quality=0
+environment/ssao/quality=0
+environment/ssao/half_size=false
+environment/ssao/fadeout_from=11.9
+environment/ssao/fadeout_to=64.0
+environment/ssil/quality=0
+environment/ssil/half_size=false
+environment/ssil/fadeout_from=18.7
+environment/ssil/fadeout_to=64.0
+textures/decals/filter=0
+textures/light_projectors/filter=0
+environment/glow/upscale_mode=0
+environment/screen_space_reflection/roughness_quality=0
+environment/subsurface_scattering/subsurface_scattering_quality=0
+environment/volumetric_fog/use_filter=0
+occlusion_culling/use_occlusion_culling=true
+lights_and_shadows/positional_shadow/atlas_size.mobile=512
 lights_and_shadows/positional_shadow/atlas_quadrant_0_subdiv=0
 lights_and_shadows/positional_shadow/atlas_quadrant_1_subdiv=0
 lights_and_shadows/positional_shadow/atlas_quadrant_2_subdiv=0
