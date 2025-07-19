@@ -37,9 +37,8 @@ sky_material = SubResource("ProceduralSkyMaterial_vv7oi")
 [sub_resource type="Environment" id="Environment_gt30f"]
 background_mode = 2
 sky = SubResource("Sky_r43wq")
-sky_rotation = Vector3(-1.40499, 0, 0)
+sky_rotation = Vector3(1.26536, 0, 0)
 tonemap_mode = 2
-glow_enabled = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c3i15"]
 albedo_color = Color(0.484983, 0.168594, 0.713228, 1)

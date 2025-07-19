@@ -26,8 +26,6 @@ sky_material = SubResource("ProceduralSkyMaterial_j2xqt")
 [sub_resource type="Environment" id="Environment_s7vdf"]
 background_mode = 2
 sky = SubResource("Sky_alync")
-tonemap_mode = 2
-glow_enabled = true
 
 [sub_resource type="Resource" id="Resource_gkmgf"]
 script = ExtResource("3_74nw3")
