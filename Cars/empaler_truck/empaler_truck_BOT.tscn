@@ -1,9 +1,27 @@
-[gd_scene load_steps=7 format=3 uid="uid://bxte01efysfbb"]
+[gd_scene load_steps=13 format=3 uid="uid://bxte01efysfbb"]
 
 [ext_resource type="PhysicsMaterial" uid="uid://dioc2dlho64fc" path="res://car_physic_material/car_physic.tres" id="1_5ay7i"]
 [ext_resource type="Script" uid="uid://bub163oegeem3" path="res://BOT_sistem/BOTS_for_race.gd" id="1_f8fad"]
 [ext_resource type="ArrayMesh" uid="uid://baaqqufa1faxf" path="res://Cars/empaler_truck/empaler_truck_body.obj" id="1_vjgtb"]
 [ext_resource type="ArrayMesh" uid="uid://dmgdyspa701" path="res://Cars/empaler_truck/empaler_truck_front_wheel.obj" id="2_f8fad"]
+[ext_resource type="Texture2D" uid="uid://w5qvlu4e8omx" path="res://Cars/empaler_truck/empaler_truck_texture_1 (1).png" id="4_1dkwi"]
+[ext_resource type="Texture2D" uid="uid://dra1c73gmh4an" path="res://Cars/empaler_truck/texture_3 (1).png" id="5_5l3tf"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3d4ap"]
+albedo_texture = ExtResource("4_1dkwi")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e3jqu"]
+albedo_color = Color(0.412152, 0.412152, 0.412152, 1)
+metallic = 0.48
+roughness = 0.41
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ep4fa"]
+albedo_color = Color(0.579691, 0.579691, 0.579691, 1)
+metallic = 0.82
+roughness = 0.62
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nlsfg"]
+albedo_texture = ExtResource("5_5l3tf")
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_f8fad"]
 points = PackedVector3Array(1.85753, -1.05356, -1.06917, 1.76298, -1.24065, -1.25943, 1.85716, -1.05321, -1.25943, 1.69243, -0.0176284, -0.33592, 1.8568, -1.05321, -0.116871, 1.76261, -1.24065, -0.117899, 1.76261, -1.24101, -1.06917, 1.59243, -1.32976, -1.26045, 0.84476, -1.15332, -4.51637, 0.84476, -1.14658, -4.539, 0.84476, -1.13593, -4.55854, 0.84476, -1.12137, -4.57602, 0.84476, -1.10362, -4.59042, 0.84476, -1.08374, -4.60173, 0.84476, -1.06208, -4.6079, 0.84476, -1.03936, -4.60996, 0.84476, -1.01664, -4.6079, 0.84476, -0.994629, -4.60173, 0.84476, -0.974748, -4.59042, 1.3586, 1.20185, -1.25737, 1.67534, 0.0462742, -0.331807, 1.28878, 1.33959, 1.17686, 1.55424, 0.237272, 1.37534, 1.43678, -1.40893, 2.57034, 1.59206, -1.32976, -0.117899, 1.5917, -1.33012, -1.0702, 0.459291, -1.13557, -5.44296, 0.28292, -1.51934, 2.57034, 0.459291, -0.987174, -5.44296, 0.84476, -0.956998, -4.57602, 1.01422, 1.98607, -1.72838, 1.35933, 1.2022, -1.06711, 0.992039, 2.0443, -1.70678, 1.36078, 1.19759, -0.114814, -1.28914, 1.33959, 1.17686, 0.28292, 0.677845, 2.50967, 0.0123641, -1.34041, 5.06319, 0.945492, 2.08761, -1.68827, 0.94331, 2.05566, -1.52372, 0.881125, 2.07838, -1.52475, 0.0123641, -1.36029, 5.06319, 0.363287, -1.43059, 4.42764, -0.459654, -1.13557, -5.44296, -0.283284, -1.51934, 2.57034, -0.459654, -0.987174, -5.44296, 0.882944, 2.10749, -1.67901, -1.36151, 1.19759, -0.114814, -1.6757, 0.0462742, -0.331807, -1.69279, -0.0176284, -0.33592, -1.55461, 0.237272, 1.37534, -0.0127277, -1.34041, 5.06319, -0.283284, 0.677845, 2.50967, -0.881489, 2.07838, -1.52475, -0.943673, 2.05566, -1.52372, -0.945855, 2.08761, -1.68827, -0.992402, 2.0443, -1.70678, 0.00400019, -1.36526, 5.06319, -0.363651, -1.43059, 4.42764, -0.845124, -1.15332, -4.51637, -0.845124, -1.14658, -4.539, -0.845124, -1.13593, -4.55854, -0.845124, -1.12137, -4.57602, -0.845124, -1.10362, -4.59042, -0.845124, -1.08374, -4.60173, -0.845124, -1.06208, -4.6079, -0.845124, -1.03936, -4.60996, -1.59279, -1.32976, -1.26045, -1.43715, -1.40893, 2.57034, -0.845124, -1.01664, -4.6079, -0.845124, -0.994629, -4.60173, -0.845124, -0.974748, -4.59042, -0.845124, -0.956998, -4.57602, -1.01459, 1.98607, -1.72838, -0.883307, 2.10749, -1.67901, -1.35969, 1.2022, -1.06711, -1.35896, 1.20185, -1.25737, -1.85753, -1.05321, -0.116871, -1.85753, -1.05321, -1.25943, -0.0127277, -1.36029, 5.06319, -0.00436378, -1.36526, 5.06319, -1.76334, -1.24065, -1.25943, -1.59206, -1.33012, -1.0702, -1.76298, -1.24101, -1.06917, -1.76298, -1.24065, -0.117899, -1.59243, -1.32976, -0.117899, -1.85753, -1.05356, -1.06917)
@@ -23,6 +41,10 @@ script = ExtResource("1_f8fad")
 [node name="EmpalerTruckBody" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.735, 0, 0, 0, 0.735, 0, 0, 0, 0.735, 0, 0, 0.889656)
 mesh = ExtResource("1_vjgtb")
+surface_material_override/0 = SubResource("StandardMaterial3D_3d4ap")
+surface_material_override/2 = SubResource("StandardMaterial3D_e3jqu")
+surface_material_override/3 = SubResource("StandardMaterial3D_ep4fa")
+surface_material_override/4 = SubResource("StandardMaterial3D_nlsfg")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.735, 0, 0, 0, 0.735, 0, 0, 0, 0.735, 0, 0, 0.889656)

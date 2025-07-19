@@ -1,9 +1,34 @@
-[gd_scene load_steps=7 format=3 uid="uid://dhrhbkegc35qf"]
+[gd_scene load_steps=12 format=3 uid="uid://dhrhbkegc35qf"]
 
 [ext_resource type="Script" uid="uid://bub163oegeem3" path="res://BOT_sistem/BOTS_for_race.gd" id="1_du4xg"]
 [ext_resource type="PhysicsMaterial" uid="uid://dioc2dlho64fc" path="res://car_physic_material/car_physic.tres" id="1_vvk1t"]
 [ext_resource type="ArrayMesh" uid="uid://ccuo25onnns44" path="res://Cars/sentinel_gt/corvette_body.obj" id="2_vvk1t"]
 [ext_resource type="ArrayMesh" uid="uid://c3ua5r7rpu2kl" path="res://Cars/sentinel_gt/corvette_wheel.obj" id="4_xk2tc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_du4xg"]
+albedo_color = Color(1, 0, 0, 1)
+metallic = 0.74
+roughness = 0.3
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vvk1t"]
+albedo_color = Color(0.811837, 0.811837, 0.811837, 1)
+metallic = 0.48
+roughness = 0.36
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4v76p"]
+albedo_color = Color(0.205117, 0.205117, 0.205117, 1)
+metallic = 0.52
+roughness = 0.61
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xk2tc"]
+albedo_color = Color(0.622881, 0.622881, 0.622881, 1)
+metallic = 0.77
+roughness = 0.51
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8mfhe"]
+albedo_color = Color(0.0851661, 0.0887956, 0.0957563, 1)
+metallic = 0.72
+roughness = 0.59
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_du4xg"]
 points = PackedVector3Array(2.22648, -0.442585, 0.714731, 2.22256, -0.483658, 0.713179, 2.01111, -0.571449, -2.23722, 2.22386, -0.401707, 0.711627, 2.08392, -0.506433, 2.21088, 2.21166, -0.522979, 0.707747, 2.03858, -0.676759, -1.43948, 1.48098, -0.597338, -2.2605, 1.4182, -0.357519, -2.5096, 1.44131, 0.840992, -2.56159, 1.89079, 0.358045, -2.29077, 1.9091, 0.28972, -2.25895, 2.03858, 0.0205072, -1.21676, 2.21427, -0.362191, 0.704643, 2.03858, 0.143921, -1.03906, 2.03858, 0.203097, -0.853591, 2.02986, -0.624201, 2.17829, 2.03945, -0.369588, 2.20157, 1.61351, 0.269475, 3.9088, 1.65711, -0.142617, 4.33095, 1.63575, -0.500788, 4.97349, 2.19422, -0.55938, 0.698435, -2.03901, -0.676759, -1.43948, -1.47967, -0.598312, -2.26516, 2.17155, -0.591109, 0.686018, 2.14365, -0.617194, 0.669722, 2.11226, -0.636465, 0.651874, 1.99062, -0.672866, 1.71812, 1.90256, -0.685908, 2.35677, -1.41863, -0.357519, -2.5096, 0.0483925, 0.836515, -2.56547, -1.44174, 0.840992, -2.56159, -0.000435829, 1.18943, -0.0527458, 1.01319, 1.18846, -0.0542979, 1.90997, 0.553677, -0.461704, 2.03858, 0.203097, -0.602163, 1.39117, 0.782789, 3.75282, 1.4012, 0.357072, 4.7888, 1.21504, 0.355904, 5.01927, 1.28697, -0.504097, 5.11162, -0.00305152, -0.547506, 5.33433, -2.11269, -0.636465, 0.651874, -2.14408, -0.617194, 0.669722, -2.17198, -0.591109, 0.686018, -2.19465, -0.55938, 0.698435, -2.21209, -0.522979, 0.707747, -2.22299, -0.483658, 0.713179, -2.01155, -0.570476, -2.238, -1.8764, -0.680652, 2.28228, -1.97013, -0.678122, 1.71656, -0.0488279, 0.836515, -2.56547, -1.91171, 0.310938, -2.28068, -1.83193, 0.435908, -2.29309, -1.9152, 0.566135, -0.578106, -1.06114, 1.16568, -0.00696111, -0.245449, 1.30272, 1.26648, -0.245013, 1.30272, 1.26648, 0.294713, 1.27858, 1.27424, 0.937328, 1.16743, 1.22224, 1.21242, 0.746194, 3.98252, 1.14834, 0.618498, 4.6561, 1.29656, 0.616941, 4.55755, -0.000435829, 0.33235, 5.36227, -1.28741, -0.504097, 5.11162, -1.63618, -0.500788, 4.97349, -2.0303, -0.624201, 2.17829, -2.08436, -0.506822, 2.21166, -2.22692, -0.442585, 0.714731, -2.2243, -0.401707, 0.711627, -2.03901, 0.0205072, -1.21676, -1.93351, -0.666442, 2.39169, -2.03901, 0.143921, -1.03906, -2.03901, 0.203097, -0.853591, -2.03901, 0.203097, -0.602163, -2.21471, -0.362191, 0.704643, -1.38201, 0.782984, 3.80869, -0.938635, 1.16763, 1.22147, -1.14964, 0.620055, 4.65455, -1.24599, 0.381988, 5.0022, -1.43041, 0.349869, 4.75621, -1.66539, -0.13775, 4.31931, -1.60436, 0.275704, 3.91268, -2.04599, -0.378348, 2.19847)
@@ -23,6 +48,11 @@ script = ExtResource("1_du4xg")
 [node name="CorvetteBody" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.0208251, -0.928404)
 mesh = ExtResource("2_vvk1t")
+surface_material_override/0 = SubResource("StandardMaterial3D_du4xg")
+surface_material_override/1 = SubResource("StandardMaterial3D_vvk1t")
+surface_material_override/3 = SubResource("StandardMaterial3D_4v76p")
+surface_material_override/5 = SubResource("StandardMaterial3D_xk2tc")
+surface_material_override/8 = SubResource("StandardMaterial3D_8mfhe")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.0208251, -0.928404)

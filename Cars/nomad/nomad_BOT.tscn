@@ -6,10 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://bdwnnhcsb2omt" path="res://Cars/nomad/camoflaje_low.png" id="4_yn304"]
 [ext_resource type="ArrayMesh" uid="uid://c2denl30f4rur" path="res://Cars/nomad/nomad_wheel.obj" id="5_744bi"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_edb17"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yn304"]
 albedo_color = Color(0.162066, 0.162066, 0.162066, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gwxe5"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_edb17"]
 albedo_texture = ExtResource("4_yn304")
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_yusj6"]
@@ -31,8 +31,8 @@ dificulty = 2
 [node name="NomadBody" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
 mesh = ExtResource("3_gwxe5")
-surface_material_override/0 = SubResource("StandardMaterial3D_edb17")
-surface_material_override/3 = SubResource("StandardMaterial3D_gwxe5")
+surface_material_override/0 = SubResource("StandardMaterial3D_yn304")
+surface_material_override/3 = SubResource("StandardMaterial3D_edb17")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
@@ -108,7 +108,7 @@ shape = SubResource("SphereShape3D_i1kv5")
 debug_color = Color(0.941176, 0.890196, 1, 0.615686)
 
 [node name="shock_sensor" type="RayCast3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.221311, 2.34872)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.26829, 2.34872)
 target_position = Vector3(0, 0, 1.165)
 collision_mask = 2
 

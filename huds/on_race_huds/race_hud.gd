@@ -1,6 +1,7 @@
 extends Control
-@onready var position_label: Label = $CanvasLayer/position_label
-@onready var lap_label: Label = $CanvasLayer/lap_label
+@onready var position_label: Label = $CanvasLayer/AspectRatioContainer/position_label
+@onready var lap_label: Label = $CanvasLayer/AspectRatioContainer/lap_label
+
 
 var car: VehicleBody3D = null
 @onready var race_list: Array = []
