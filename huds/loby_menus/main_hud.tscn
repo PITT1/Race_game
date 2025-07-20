@@ -1,0 +1,110 @@
+[gd_scene load_steps=5 format=3 uid="uid://dfib40d2ex4j7"]
+
+[ext_resource type="Texture2D" uid="uid://d1nhln2rp5eyj" path="res://images/gui_panel_green_1.png" id="1_8wpv5"]
+[ext_resource type="Script" uid="uid://bwqcew0mv25r0" path="res://huds/loby_menus/main_hud.gd" id="1_74350"]
+[ext_resource type="Texture2D" uid="uid://chmyp4bqcrya4" path="res://images/gui_panel_blue_1.png" id="2_74350"]
+[ext_resource type="Texture2D" uid="uid://c43c24nmgd855" path="res://images/gui_panel_red_1.png" id="3_eyn3i"]
+
+[node name="MainHud" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_74350")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -659.0
+offset_top = -322.0
+offset_right = 562.0
+offset_bottom = 1008.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(0.49, 0.49)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 200
+text = "Poly Race"
+horizontal_alignment = 1
+
+[node name="play_btn" type="TextureButton" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("1_8wpv5")
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer/play_btn"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -10.5
+offset_right = 20.0
+offset_bottom = 10.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 150
+text = "Play"
+
+[node name="options_btn" type="TextureButton" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("2_74350")
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer/options_btn"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -10.5
+offset_right = 20.0
+offset_bottom = 10.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 150
+text = "Options"
+
+[node name="quit_btn" type="TextureButton" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("3_eyn3i")
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer/quit_btn"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -10.5
+offset_right = 20.0
+offset_bottom = 10.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 150
+text = "Quit"
+
+[connection signal="button_up" from="CanvasLayer/VBoxContainer/quit_btn" to="." method="_on_quit_btn_button_up"]

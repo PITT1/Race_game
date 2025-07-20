@@ -6,7 +6,6 @@ var global_var = load("res://global_var.gd").new()
 var is_race = false
 
 func _ready() -> void:
-	Engine.max_fps = 60
 	physics_interpolation_mode = Node.PHYSICS_INTERPOLATION_MODE_ON
 	
 	var data = JSON.parse_string(global_var.load_data())

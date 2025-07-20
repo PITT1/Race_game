@@ -26,8 +26,8 @@ GlobalVar="*res://global_var.gd"
 
 window/size/viewport_width=1612
 window/size/viewport_height=720
-window/stretch/mode="canvas_items"
-window/stretch/aspect="expand"
+window/stretch/mode="viewport"
+window/stretch/aspect="ignore"
 
 [editor_plugins]
 
