@@ -11,8 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cbnhucy2wtfwc" path="res://others/signals_to/to_select_car/to_select_car.tscn" id="9_jk0es"]
 [ext_resource type="PackedScene" uid="uid://brakaji82desp" path="res://others/signals_to/to_race/to_race.tscn" id="9_tb0jv"]
 [ext_resource type="PackedScene" uid="uid://b0fyvn1iybud7" path="res://others/ramps/ramp1.tscn" id="10_jk0es"]
-[ext_resource type="PackedScene" uid="uid://jg3fambfdk88" path="res://huds/loby_menus/loby_hud.tscn" id="11_6tc5e"]
-[ext_resource type="PackedScene" uid="uid://ctvbggtg0dtyb" path="res://huds/controls_hud/tactil_control_1.tscn" id="12_n0ykm"]
+[ext_resource type="PackedScene" uid="uid://dfib40d2ex4j7" path="res://huds/loby_menus/main_hud.tscn" id="12_n0ykm"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_n0ykm"]
 sky_top_color = Color(0.461087, 0.641883, 0.858997, 1)
@@ -43,6 +42,12 @@ albedo_texture = ExtResource("5_qrmfn")
 uv1_scale = Vector3(10, 10, 10)
 
 [sub_resource type="Resource" id="Resource_tb0jv"]
+script = ExtResource("5_f42dt")
+duration = 1.0
+transition = 6
+ease = 2
+
+[sub_resource type="Resource" id="Resource_n0ykm"]
 script = ExtResource("5_f42dt")
 duration = 1.0
 transition = 0
@@ -77,8 +82,8 @@ surface_material_override/3 = SubResource("StandardMaterial3D_r43wq")
 visible = false
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-0.732591, 0.692228, -0.540246, -4.59305e-08, 0.617123, 0.782893, 1.35592, 0.374004, -0.29189, -11.355, 16.455, -6.135)
-far = 100.0
+transform = Transform3D(0.359997, 0.560164, -0.746069, 0, 0.799685, 0.60042, 0.932954, -0.216149, 0.287884, -3.42834, 2.42496, 4.28959)
+far = 200.0
 
 [node name="PhantomCameraHost" type="Node" parent="Camera3D"]
 process_priority = 300
@@ -87,13 +92,20 @@ script = ExtResource("3_dbgys")
 metadata/_custom_type_script = "uid://bd046eokvcnu2"
 
 [node name="PhantomCamera3D" type="Node3D" parent="."]
-transform = Transform3D(-0.732591, 0.692228, -0.540246, -4.59305e-08, 0.617123, 0.782893, 1.35592, 0.374004, -0.29189, -11.355, 16.455, -6.135)
+transform = Transform3D(0.554817, 0.560136, -0.742324, 0, 0.799644, 0.597407, 1.43784, -0.216139, 0.286439, -3.42834, 2.42496, 4.28959)
 top_level = true
 script = ExtResource("4_1vtqb")
 follow_mode = 2
 look_at_mode = 2
 tween_resource = SubResource("Resource_tb0jv")
 follow_offset = Vector3(-13.155, 17.935, -6.135)
+metadata/_custom_type_script = "uid://csjccrhj5wnx7"
+
+[node name="main_hud_cam" type="Node3D" parent="."]
+transform = Transform3D(0.359997, 0.560164, -0.746069, 0, 0.799685, 0.60042, 0.932954, -0.216149, 0.287884, -3.42834, 2.42496, 4.28959)
+script = ExtResource("4_1vtqb")
+priority = 1
+tween_resource = SubResource("Resource_n0ykm")
 metadata/_custom_type_script = "uid://csjccrhj5wnx7"
 
 [node name="Path3D" type="Path3D" parent="."]
@@ -112,8 +124,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.7734, 2.13947, 29.8051)
 [node name="ramp_1" parent="." instance=ExtResource("10_jk0es")]
 transform = Transform3D(5.57667, 0.0217846, 0.194263, -0.0487376, 2.4999, 1.58632e-08, -0.300947, -0.00117563, 3.59976, 8.137, 1.79567, -27.387)
 
-[node name="LobyHud" parent="." instance=ExtResource("11_6tc5e")]
+[node name="MainHud" parent="." instance=ExtResource("12_n0ykm")]
 
-[node name="TactilControl1" parent="." instance=ExtResource("12_n0ykm")]
+[connection signal="button_up" from="MainHud/CanvasLayer/VBoxContainer/play_btn" to="MainHud" method="_on_play_btn_button_up"]
 
 [editable path="loby_1"]
+[editable path="MainHud"]
