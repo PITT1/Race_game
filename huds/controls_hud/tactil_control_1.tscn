@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://ctvbggtg0dtyb"]
+[gd_scene load_steps=4 format=3 uid="uid://ctvbggtg0dtyb"]
 
-[ext_resource type="Texture2D" uid="uid://c23qydjjavpf1" path="res://images/arrow.png" id="1_dcn82"]
+[ext_resource type="Script" uid="uid://bxjmtwa3miope" path="res://huds/controls_hud/tactil_control_1.gd" id="1_djipi"]
+[ext_resource type="Texture2D" uid="uid://djxbko2j8rf6v" path="res://images/hud_controls_1.png" id="1_xqbiy"]
 [ext_resource type="PackedScene" uid="uid://c2i8lvkgcsf8g" path="res://huds/fps_visual/fps_hud.tscn" id="2_xqbiy"]
 
 [node name="TactilControl1" type="Control"]
@@ -10,37 +11,42 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_djipi")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="brake_reverse" type="TouchScreenButton" parent="CanvasLayer"]
-position = Vector2(1422, 536)
+modulate = Color(1, 1, 1, 0.392157)
+position = Vector2(1393, 686)
+rotation = -1.5708
 scale = Vector2(0.5, 0.5)
-texture_normal = ExtResource("1_dcn82")
+texture_normal = ExtResource("1_xqbiy")
 passby_press = true
 action = "ui_down"
 
 [node name="acelerate" type="TouchScreenButton" parent="CanvasLayer"]
-position = Vector2(1551, 486)
-rotation = -3.14159
+modulate = Color(1, 1, 1, 0.392157)
+position = Vector2(1566, 333)
+rotation = 1.5708
 scale = Vector2(0.5, 0.5)
-texture_normal = ExtResource("1_dcn82")
+texture_normal = ExtResource("1_xqbiy")
 passby_press = true
 action = "ui_up"
 
 [node name="left" type="TouchScreenButton" parent="CanvasLayer"]
-position = Vector2(210, 459)
-rotation = 1.5708
+modulate = Color(1, 1, 1, 0.392157)
+position = Vector2(65, 454)
 scale = Vector2(0.5, 0.5)
-texture_normal = ExtResource("1_dcn82")
+texture_normal = ExtResource("1_xqbiy")
 passby_press = true
 action = "ui_left"
 
 [node name="right" type="TouchScreenButton" parent="CanvasLayer"]
-position = Vector2(266, 582)
-rotation = -1.5708
+modulate = Color(1, 1, 1, 0.392157)
+position = Vector2(409, 632)
+rotation = -3.14159
 scale = Vector2(0.5, 0.5)
-texture_normal = ExtResource("1_dcn82")
+texture_normal = ExtResource("1_xqbiy")
 passby_press = true
 action = "ui_right"
 
@@ -53,3 +59,12 @@ anchor_bottom = 0.0
 offset_top = -3.0
 offset_bottom = -3.0
 grow_vertical = 1
+
+[connection signal="pressed" from="CanvasLayer/brake_reverse" to="." method="_on_brake_reverse_pressed"]
+[connection signal="released" from="CanvasLayer/brake_reverse" to="." method="_on_brake_reverse_released"]
+[connection signal="pressed" from="CanvasLayer/acelerate" to="." method="_on_acelerate_pressed"]
+[connection signal="released" from="CanvasLayer/acelerate" to="." method="_on_acelerate_released"]
+[connection signal="pressed" from="CanvasLayer/left" to="." method="_on_left_pressed"]
+[connection signal="released" from="CanvasLayer/left" to="." method="_on_left_released"]
+[connection signal="pressed" from="CanvasLayer/right" to="." method="_on_right_pressed"]
+[connection signal="released" from="CanvasLayer/right" to="." method="_on_right_released"]

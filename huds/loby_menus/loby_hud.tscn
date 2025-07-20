@@ -33,17 +33,3 @@ offset_bottom = 61.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 44
 vertical_alignment = 1
-
-[node name="Button" type="Button" parent="CanvasLayer"]
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -175.0
-offset_top = 8.0
-offset_right = -106.0
-offset_bottom = 59.0
-grow_horizontal = 0
-theme_override_font_sizes/font_size = 44
-text = "quit"
-
-[connection signal="button_up" from="CanvasLayer/Button" to="." method="_on_button_button_up"]
