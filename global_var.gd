@@ -38,6 +38,14 @@ var bot_list = {
 	toreto_BOT = "res://Cars/toreto/toreto_BOT.tscn",
 	nomad_BOT = "res://Cars/nomad/nomad_BOT.tscn"
 }
+#nobre de la pista, direccion de la pista, si esta desbloqueada o no
+var track_list = {
+	1 : ["track_1", "res://Maps/circuit_test_2/test_2.tscn", false],
+	2 : ["track_2", "res://Maps/rc_circuit/rc_circuit_1.tscn", false],
+	3 : ["track_3", "res://Maps/nascar_circuit/nascar_circuit.tscn", false],
+	4 : ["track_4", "res://Maps/basic_circuit_1/basic_circuit_1.tscn", false],
+	5 : ["track_5", "res://Maps/2_vias_circuit_1/pista_doble_1.tscn", false]
+}
 	
 	
 var player_canvas = {
