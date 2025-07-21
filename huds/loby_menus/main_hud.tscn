@@ -1,24 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://dfib40d2ex4j7"]
+[gd_scene load_steps=11 format=3 uid="uid://dfib40d2ex4j7"]
 
 [ext_resource type="Texture2D" uid="uid://d1nhln2rp5eyj" path="res://images/gui_panel_green_1.png" id="1_8wpv5"]
 [ext_resource type="Script" uid="uid://bwqcew0mv25r0" path="res://huds/loby_menus/main_hud.gd" id="1_74350"]
 [ext_resource type="Texture2D" uid="uid://chmyp4bqcrya4" path="res://images/gui_panel_blue_1.png" id="2_74350"]
+[ext_resource type="Texture2D" uid="uid://csnfylnydym1b" path="res://images/gui_panel_gray_1.png" id="3_72sv2"]
 [ext_resource type="Texture2D" uid="uid://c43c24nmgd855" path="res://images/gui_panel_red_1.png" id="3_eyn3i"]
-
-[sub_resource type="Animation" id="Animation_74350"]
-resource_name = "out"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CanvasLayer:transform")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3, 1),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Transform2D(1, 0, 0, 1, 0, 0), Transform2D(0.85, 0, 0, 1, 0, 0), Transform2D(1.635, 0, 0, 1, 0, 0)]
-}
 
 [sub_resource type="Animation" id="Animation_eyn3i"]
 length = 0.001
@@ -34,11 +20,121 @@ tracks/0/keys = {
 "update": 0,
 "values": [Transform2D(1, 0, 0, 1, 0, 0)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/page_1:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1007, 41)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/page_2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1812, 60)]
+}
+
+[sub_resource type="Animation" id="Animation_74350"]
+resource_name = "to_page_2"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer:transform")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/page_1:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1007, 41), Vector2(1817, 57)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/page_2:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1812, 60), Vector2(1056, 47)]
+}
+
+[sub_resource type="Animation" id="Animation_72sv2"]
+resource_name = "to_page_1"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/page_1:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1817, 57), Vector2(1007, 41)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/page_2:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1056, 47), Vector2(1822, 34)]
+}
+
+[sub_resource type="Animation" id="Animation_o3yh7"]
+resource_name = "to_practice"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/page_2:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1056, 47), Vector2(1794, 47)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_72sv2"]
 _data = {
 &"RESET": SubResource("Animation_eyn3i"),
-&"out": SubResource("Animation_74350")
+&"to_page_1": SubResource("Animation_72sv2"),
+&"to_page_2": SubResource("Animation_74350"),
+&"to_practice": SubResource("Animation_o3yh7")
 }
 
 [node name="MainHud" type="Control"]
@@ -49,39 +145,42 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_74350")
+metadata/_edit_use_anchors_ = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -659.0
-offset_top = -322.0
-offset_right = 562.0
-offset_bottom = 1008.0
-grow_horizontal = 0
+[node name="page_1" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.62469
+anchor_top = 0.0569444
+anchor_right = 0.995838
+anchor_bottom = 0.962083
+offset_right = 622.71
+offset_bottom = 678.3
+grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.49, 0.49)
 size_flags_horizontal = 4
 size_flags_vertical = 4
+alignment = 1
+metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer"]
+[node name="Label" type="Label" parent="CanvasLayer/page_1"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 200
 text = "Poly Race"
 horizontal_alignment = 1
 
-[node name="play_btn" type="TextureButton" parent="CanvasLayer/VBoxContainer"]
+[node name="play_btn" type="TextureButton" parent="CanvasLayer/page_1"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture_normal = ExtResource("1_8wpv5")
+texture_pressed = ExtResource("3_72sv2")
 stretch_mode = 4
 
-[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer/play_btn"]
+[node name="Label" type="Label" parent="CanvasLayer/page_1/play_btn"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -97,14 +196,15 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 150
 text = "Play"
 
-[node name="options_btn" type="TextureButton" parent="CanvasLayer/VBoxContainer"]
+[node name="options_btn" type="TextureButton" parent="CanvasLayer/page_1"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture_normal = ExtResource("2_74350")
+texture_pressed = ExtResource("3_72sv2")
 stretch_mode = 4
 
-[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer/options_btn"]
+[node name="Label" type="Label" parent="CanvasLayer/page_1/options_btn"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -120,14 +220,15 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 150
 text = "Options"
 
-[node name="quit_btn" type="TextureButton" parent="CanvasLayer/VBoxContainer"]
+[node name="quit_btn" type="TextureButton" parent="CanvasLayer/page_1"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture_normal = ExtResource("3_eyn3i")
+texture_pressed = ExtResource("3_72sv2")
 stretch_mode = 4
 
-[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer/quit_btn"]
+[node name="Label" type="Label" parent="CanvasLayer/page_1/quit_btn"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -143,11 +244,124 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 150
 text = "Quit"
 
+[node name="page_2" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 1.13027
+anchor_top = 0.0472222
+anchor_right = 1.47112
+anchor_bottom = 0.942222
+offset_left = -10.0
+offset_top = 26.0
+offset_right = 661.55
+offset_bottom = 813.6
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.45, 0.45)
+metadata/_edit_use_anchors_ = true
+
+[node name="quick_race_btn" type="TextureButton" parent="CanvasLayer/page_2"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("1_8wpv5")
+texture_pressed = ExtResource("3_72sv2")
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="CanvasLayer/page_2/quick_race_btn"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -10.5
+offset_right = 20.0
+offset_bottom = 10.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 140
+text = "Quick Race"
+
+[node name="practice_btn" type="TextureButton" parent="CanvasLayer/page_2"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("1_8wpv5")
+texture_pressed = ExtResource("3_72sv2")
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="CanvasLayer/page_2/practice_btn"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -10.5
+offset_right = 20.0
+offset_bottom = 10.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 140
+text = "Practice"
+
+[node name="grand_prix_btn" type="TextureButton" parent="CanvasLayer/page_2"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("1_8wpv5")
+texture_pressed = ExtResource("3_72sv2")
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="CanvasLayer/page_2/grand_prix_btn"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -10.5
+offset_right = 20.0
+offset_bottom = 10.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 140
+text = "Grand Prix"
+
+[node name="back_btn" type="TextureButton" parent="CanvasLayer/page_2"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("3_eyn3i")
+texture_pressed = ExtResource("3_72sv2")
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="CanvasLayer/page_2/back_btn"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -10.5
+offset_right = 20.0
+offset_bottom = 10.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 140
+text = "Back"
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_72sv2")
 }
-speed_scale = 2.0
 
-[connection signal="button_up" from="CanvasLayer/VBoxContainer/quit_btn" to="." method="_on_quit_btn_button_up"]
+[connection signal="button_up" from="CanvasLayer/page_1/play_btn" to="." method="_on_play_btn_button_up"]
+[connection signal="button_up" from="CanvasLayer/page_1/quit_btn" to="." method="_on_quit_btn_button_up"]
+[connection signal="button_up" from="CanvasLayer/page_2/practice_btn" to="." method="_on_practice_btn_button_up"]
+[connection signal="button_up" from="CanvasLayer/page_2/back_btn" to="." method="_on_back_btn_button_up"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

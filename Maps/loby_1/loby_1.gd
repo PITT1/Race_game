@@ -12,6 +12,7 @@ var initialized: bool = false
 
 func _ready() -> void:
 	main_hud_cam.priority_override = true
+	global_var.init_save_canvas()
 	var data = JSON.parse_string(global_var.load_data())
 	var car_name = data.car
 	var car_adrees = global_var.car_list[car_name]

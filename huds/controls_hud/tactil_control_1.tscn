@@ -14,6 +14,7 @@ grow_vertical = 2
 script = ExtResource("1_djipi")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
 
 [node name="brake_reverse" type="TouchScreenButton" parent="CanvasLayer"]
 modulate = Color(1, 1, 1, 0.392157)
@@ -23,6 +24,7 @@ scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("1_xqbiy")
 passby_press = true
 action = "ui_down"
+visibility_mode = 1
 
 [node name="acelerate" type="TouchScreenButton" parent="CanvasLayer"]
 modulate = Color(1, 1, 1, 0.392157)
