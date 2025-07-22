@@ -38,13 +38,13 @@ var bot_list = {
 	toreto_BOT = "res://Cars/toreto/toreto_BOT.tscn",
 	nomad_BOT = "res://Cars/nomad/nomad_BOT.tscn"
 }
-#nobre de la pista, direccion de la pista, si esta desbloqueada o no
+#nobre de la pista, direccion de la pista, imagen de la pista, si esta desbloqueado o no
 var track_list = {
-	1 : ["track_1", "res://Maps/circuit_test_2/test_2.tscn", false],
-	2 : ["track_2", "res://Maps/rc_circuit/rc_circuit_1.tscn", false],
-	3 : ["track_3", "res://Maps/nascar_circuit/nascar_circuit.tscn", false],
-	4 : ["track_4", "res://Maps/basic_circuit_1/basic_circuit_1.tscn", false],
-	5 : ["track_5", "res://Maps/2_vias_circuit_1/pista_doble_1.tscn", false]
+	1 : ["track_1", "res://Maps/circuit_test_2/test_2.tscn", "res://Maps/circuit_test_2/pista_1_selection_menu.png", false],
+	2 : ["track_2", "res://Maps/rc_circuit/rc_circuit_1.tscn", "res://Maps/rc_circuit/pista_rc_1_selection_menu.png", false],
+	3 : ["track_3", "res://Maps/nascar_circuit/nascar_circuit.tscn", "res://Maps/nascar_circuit/pista_nascar_circuit_1_selection_menu.png", false],
+	4 : ["track_4", "res://Maps/basic_circuit_1/basic_circuit_1.tscn", "res://Maps/basic_circuit_1/pista_basic_circuit_1_selection_menu.png", false],
+	5 : ["track_5", "res://Maps/2_vias_circuit_1/pista_doble_1.tscn", "res://Maps/2_vias_circuit_1/pista_doble_seleccion_menu.png", false]
 }
 	
 	

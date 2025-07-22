@@ -6,11 +6,13 @@ var selector: int = 1
 @onready var track_name: Label = $CanvasLayer/race_selector/VBoxContainer/track_name
 @onready var left_btn: Button = $CanvasLayer/race_selector/left_btn
 @onready var right_btn: Button = $CanvasLayer/race_selector/right_btn
+@onready var image_track: TextureRect = $CanvasLayer/race_selector/VBoxContainer/image_track
 
 func _ready() -> void:
 	track_list = global_var.track_list
 	print(track_list[selector])
 	track_name.text = track_list[selector][0] 
+	image_track.set_texture(load(track_list[selector][2]))
 
 
 func _on_quit_btn_button_up() -> void:
@@ -41,14 +43,15 @@ func _on_right_btn_button_up() -> void:
 	if selector > track_list.size():
 		selector = track_list.size()
 	track_name.text = track_list[selector][0]
+	image_track.set_texture(load(track_list[selector][2]))
 	
-
 
 func _on_left_btn_button_up() -> void:
 	selector -= 1
 	if selector < 1:
 		selector = 1
 	track_name.text = track_list[selector][0]
+	image_track.set_texture(load(track_list[selector][2]))
 
 
 func _on_to_race_button_up() -> void:

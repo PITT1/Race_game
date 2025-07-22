@@ -2,9 +2,11 @@
 
 [ext_resource type="Texture2D" uid="uid://d1nhln2rp5eyj" path="res://images/gui_panel_green_1.png" id="1_8wpv5"]
 [ext_resource type="Script" uid="uid://bwqcew0mv25r0" path="res://huds/loby_menus/main_hud.gd" id="1_74350"]
-[ext_resource type="Texture2D" uid="uid://chmyp4bqcrya4" path="res://images/gui_panel_blue_1.png" id="2_74350"]
 [ext_resource type="Texture2D" uid="uid://csnfylnydym1b" path="res://images/gui_panel_gray_1.png" id="3_72sv2"]
 [ext_resource type="Texture2D" uid="uid://c43c24nmgd855" path="res://images/gui_panel_red_1.png" id="3_eyn3i"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_eyn3i"]
+load_path = "res://.godot/imported/pista_1_selection_menu.png-923ed758ba2379d8b2ec289447c87bf4.ctex"
 
 [sub_resource type="Animation" id="Animation_eyn3i"]
 length = 0.001
@@ -57,6 +59,34 @@ tracks/3/keys = {
 "values": [Vector2(393, 843)]
 }
 
+[sub_resource type="Animation" id="Animation_72sv2"]
+resource_name = "to_page_1"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/page_1:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1817, 57), Vector2(1007, 41)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/page_2:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1056, 47), Vector2(1822, 34)]
+}
+
 [sub_resource type="Animation" id="Animation_74350"]
 resource_name = "to_page_2"
 length = 0.2
@@ -95,34 +125,6 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(1812, 60), Vector2(1056, 47)]
-}
-
-[sub_resource type="Animation" id="Animation_72sv2"]
-resource_name = "to_page_1"
-length = 0.2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CanvasLayer/page_1:position")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(1817, 57), Vector2(1007, 41)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("CanvasLayer/page_2:position")
-tracks/1/interp = 2
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(1056, 47), Vector2(1822, 34)]
 }
 
 [sub_resource type="Animation" id="Animation_o3yh7"]
@@ -166,7 +168,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(393, 843), Vector2(515, 37)]
+"values": [Vector2(393, 843), Vector2(476, 72)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_72sv2"]
@@ -192,20 +194,21 @@ metadata/_edit_use_anchors_ = true
 follow_viewport_enabled = true
 
 [node name="page_1" type="VBoxContainer" parent="CanvasLayer"]
-anchors_preset = -1
-anchor_left = 0.62469
-anchor_top = 0.0569444
-anchor_right = 0.995838
-anchor_bottom = 0.962083
-offset_right = 622.71
-offset_bottom = 678.3
-grow_horizontal = 2
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -605.0
+offset_top = -319.0
+offset_right = 277.0
+offset_bottom = 729.0
+grow_horizontal = 0
 grow_vertical = 2
 scale = Vector2(0.49, 0.49)
-size_flags_horizontal = 4
-size_flags_vertical = 4
+size_flags_horizontal = 3
+size_flags_vertical = 2
 alignment = 1
-metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="CanvasLayer/page_1"]
 layout_mode = 2
@@ -213,76 +216,19 @@ theme_override_font_sizes/font_size = 200
 text = "Poly Race"
 horizontal_alignment = 1
 
-[node name="play_btn" type="TextureButton" parent="CanvasLayer/page_1"]
+[node name="play_btn" type="Button" parent="CanvasLayer/page_1"]
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-texture_normal = ExtResource("1_8wpv5")
-texture_pressed = ExtResource("3_72sv2")
-stretch_mode = 4
-
-[node name="Label" type="Label" parent="CanvasLayer/page_1/play_btn"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -10.5
-offset_right = 20.0
-offset_bottom = 10.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 150
+theme_override_font_sizes/font_size = 200
 text = "Play"
 
-[node name="options_btn" type="TextureButton" parent="CanvasLayer/page_1"]
+[node name="options_btn" type="Button" parent="CanvasLayer/page_1"]
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-texture_normal = ExtResource("2_74350")
-texture_pressed = ExtResource("3_72sv2")
-stretch_mode = 4
-
-[node name="Label" type="Label" parent="CanvasLayer/page_1/options_btn"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -10.5
-offset_right = 20.0
-offset_bottom = 10.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 150
+theme_override_font_sizes/font_size = 200
 text = "Options"
 
-[node name="quit_btn" type="TextureButton" parent="CanvasLayer/page_1"]
+[node name="quit_btn" type="Button" parent="CanvasLayer/page_1"]
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-texture_normal = ExtResource("3_eyn3i")
-texture_pressed = ExtResource("3_72sv2")
-stretch_mode = 4
-
-[node name="Label" type="Label" parent="CanvasLayer/page_1/quit_btn"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -10.5
-offset_right = 20.0
-offset_bottom = 10.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 150
+theme_override_font_sizes/font_size = 200
 text = "Quit"
 
 [node name="page_2" type="VBoxContainer" parent="CanvasLayer"]
@@ -291,9 +237,9 @@ anchor_left = 1.13027
 anchor_top = 0.0472222
 anchor_right = 1.47112
 anchor_bottom = 0.942222
-offset_left = -10.0
+offset_left = -9.99524
 offset_top = 26.0
-offset_right = 661.55
+offset_right = 661.555
 offset_bottom = 813.6
 grow_horizontal = 2
 grow_vertical = 2
@@ -397,20 +343,28 @@ theme_override_font_sizes/font_size = 140
 text = "Back"
 
 [node name="race_selector" type="HBoxContainer" parent="CanvasLayer"]
-anchors_preset = -1
-anchor_left = 0.243797
-anchor_top = 1.17083
-anchor_right = 0.653226
-anchor_bottom = 1.53333
-metadata/_edit_use_anchors_ = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -413.0
+offset_top = 483.0
+offset_right = 247.0
+offset_bottom = 1096.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
 
 [node name="left_btn" type="Button" parent="CanvasLayer/race_selector"]
 layout_mode = 2
+size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 200
 text = "<<"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/race_selector"]
 layout_mode = 2
+alignment = 1
 
 [node name="track_name" type="Label" parent="CanvasLayer/race_selector/VBoxContainer"]
 layout_mode = 2
@@ -419,10 +373,12 @@ text = "pista_0"
 
 [node name="image_track" type="TextureRect" parent="CanvasLayer/race_selector/VBoxContainer"]
 layout_mode = 2
+texture = SubResource("CompressedTexture2D_eyn3i")
+expand_mode = 4
 
 [node name="to_race" type="Button" parent="CanvasLayer/race_selector/VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 100
+theme_override_font_sizes/font_size = 130
 text = "GO"
 
 [node name="right_btn" type="Button" parent="CanvasLayer/race_selector"]

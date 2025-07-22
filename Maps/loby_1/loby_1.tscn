@@ -126,7 +126,5 @@ transform = Transform3D(5.57667, 0.0217846, 0.194263, -0.0487376, 2.4999, 1.5863
 
 [node name="MainHud" parent="." instance=ExtResource("12_n0ykm")]
 
-[connection signal="button_up" from="MainHud/CanvasLayer/VBoxContainer/play_btn" to="MainHud" method="_on_play_btn_button_up"]
-
 [editable path="loby_1"]
 [editable path="MainHud"]
