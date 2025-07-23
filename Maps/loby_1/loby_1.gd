@@ -3,6 +3,7 @@ extends Node3D
 @onready var main_hud_cam: PhantomCamera3D = $main_hud_cam
 
 var num_checkpoints: int = 0
+var laps_num_to_finish = 5
 var global_var = load("res://global_var.gd").new()
 const LOBY_HUD = preload("res://huds/loby_menus/loby_hud.tscn")
 const TACTIL_CONTROL_1 = preload("res://huds/controls_hud/tactil_control_1.tscn")

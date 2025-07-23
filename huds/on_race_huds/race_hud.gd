@@ -1,6 +1,7 @@
 extends Control
-@onready var position_label: Label = $CanvasLayer/AspectRatioContainer/position_label
-@onready var lap_label: Label = $CanvasLayer/AspectRatioContainer/lap_label
+@onready var lap_label: Label = $CanvasLayer/MarginContainer/lap_label
+@onready var position_label: Label = $CanvasLayer/MarginContainer2/position_label
+
 
 
 var car: VehicleBody3D = null
@@ -8,9 +9,11 @@ var car: VehicleBody3D = null
 var label_text: String = ""
 var previous_lap: int = 0
 var previous_pos: int = 0
+var laps_to_finish: int
 
 func _ready() -> void:
 	car = get_parent()
+	laps_to_finish = get_parent().get_parent().laps_num_to_finish
 
 func _physics_process(delta: float) -> void:
 	if delta:
@@ -37,5 +40,5 @@ func show_position():
 
 func show_laps():
 	if car.laps_num != previous_lap:
-		lap_label.text = "lap: " + str(car.laps_num)
+		lap_label.text = "lap: " + str(car.laps_num) + "/" + str(laps_to_finish)
 		previous_lap = car.laps_num

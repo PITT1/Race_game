@@ -51,7 +51,7 @@ shape = SubResource("ConvexPolygonShape3D_gw4e7")
 [node name="wheel_1" type="VehicleWheel3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.86676, -0.364986, 0.829396)
 use_as_steering = true
-wheel_roll_influence = 1.5
+wheel_roll_influence = 1.0
 wheel_radius = 0.455
 wheel_friction_slip = 10.0
 suspension_stiffness = 150.0
@@ -83,7 +83,7 @@ skeleton = NodePath("../..")
 [node name="wheel_3" type="VehicleWheel3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.86, -0.364986, 0.829396)
 use_as_steering = true
-wheel_roll_influence = 1.5
+wheel_roll_influence = 1.0
 wheel_radius = 0.455
 wheel_friction_slip = 10.0
 suspension_stiffness = 150.0

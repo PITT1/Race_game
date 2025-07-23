@@ -53,7 +53,7 @@ shape = SubResource("ConvexPolygonShape3D_f8fad")
 [node name="wheel_1" type="VehicleWheel3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.927238, -0.962763, 2.07975)
 use_as_steering = true
-wheel_roll_influence = 2.0
+wheel_roll_influence = 1.0
 wheel_radius = 0.59
 wheel_friction_slip = 10.0
 suspension_stiffness = 100.0
@@ -101,7 +101,7 @@ skeleton = NodePath("../..")
 [node name="wheel_4" type="VehicleWheel3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.927, -0.962763, 2.07975)
 use_as_steering = true
-wheel_roll_influence = 2.0
+wheel_roll_influence = 1.0
 wheel_radius = 0.59
 wheel_friction_slip = 10.0
 suspension_stiffness = 100.0
@@ -156,7 +156,7 @@ shape = SubResource("SphereShape3D_iepmf")
 debug_color = Color(0.47455, 0.00208011, 0.733338, 0.133333)
 
 [node name="shock_sensor" type="RayCast3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0198343, 2.85095)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.85926, 4.28328)
 target_position = Vector3(0, 0, 1.165)
 collision_mask = 2
 

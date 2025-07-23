@@ -47,10 +47,9 @@ transform = Transform3D(0.38, 0, 0, 0, 0.38, 0, 0, 0, 0.38, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_m5i0a")
 
 [node name="wheel_1" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.728332, -0.443, 1.88021)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.728332, -0.400429, 1.88021)
 use_as_steering = true
 wheel_roll_influence = 1.5
-wheel_radius = 0.57
 wheel_friction_slip = 10.0
 suspension_stiffness = 100.0
 suspension_max_force = 100000.0
@@ -58,15 +57,14 @@ damping_compression = 10.0
 damping_relaxation = 10.0
 
 [node name="MonsterPinkWheel" type="MeshInstance3D" parent="wheel_1"]
-transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, 0, 0, 0)
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
 mesh = ExtResource("4_srb5a")
 skeleton = NodePath("../..")
 
 [node name="wheel_2" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.728, -0.443, 1.88055)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.728, -0.400429, 1.88055)
 use_as_steering = true
 wheel_roll_influence = 1.5
-wheel_radius = 0.57
 wheel_friction_slip = 10.0
 suspension_stiffness = 100.0
 suspension_max_force = 100000.0
@@ -74,15 +72,14 @@ damping_compression = 10.0
 damping_relaxation = 10.0
 
 [node name="MonsterPinkWheel" type="MeshInstance3D" parent="wheel_2"]
-transform = Transform3D(-0.45, 0, -3.93403e-08, 0, 0.45, 0, 3.93403e-08, 0, -0.45, 0, 0, 0)
+transform = Transform3D(-0.4, 0, -6.03983e-08, 0, 0.4, 0, 6.03983e-08, 0, -0.4, 0, 0, 0)
 mesh = ExtResource("4_srb5a")
 skeleton = NodePath("../..")
 
 [node name="wheel_3" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.728, -0.459, -1.37645)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.728, -0.374341, -1.30443)
 use_as_traction = true
 wheel_roll_influence = 1.5
-wheel_radius = 0.57
 wheel_friction_slip = 10.0
 suspension_stiffness = 100.0
 suspension_max_force = 100000.0
@@ -90,15 +87,14 @@ damping_compression = 10.0
 damping_relaxation = 10.0
 
 [node name="MonsterPinkWheel" type="MeshInstance3D" parent="wheel_3"]
-transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, 0, 0, 0)
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
 mesh = ExtResource("4_srb5a")
 skeleton = NodePath("../..")
 
 [node name="wheel_4" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.728, -0.459, -1.37645)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.728, -0.374341, -1.30443)
 use_as_traction = true
 wheel_roll_influence = 1.5
-wheel_radius = 0.57
 wheel_friction_slip = 10.0
 suspension_stiffness = 100.0
 suspension_max_force = 100000.0
@@ -106,12 +102,13 @@ damping_compression = 10.0
 damping_relaxation = 10.0
 
 [node name="MonsterPinkWheel" type="MeshInstance3D" parent="wheel_4"]
-transform = Transform3D(-0.45, 0, -3.93403e-08, 0, 0.45, 0, 3.93403e-08, 0, -0.45, 0, 0, 0)
+transform = Transform3D(-0.4, 0, -6.03983e-08, 0, 0.4, 0, 6.03983e-08, 0, -0.4, 0, 0, 0)
 mesh = ExtResource("4_srb5a")
 skeleton = NodePath("../..")
 
 [node name="checkpoint_sensor" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.259857)
+visible = false
 collision_layer = 0
 collision_mask = 128
 
