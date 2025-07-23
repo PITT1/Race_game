@@ -1,8 +1,9 @@
 extends Control
-@onready var brake_reverse: TouchScreenButton = $CanvasLayer/brake_reverse
-@onready var acelerate: TouchScreenButton = $CanvasLayer/acelerate
-@onready var left: TouchScreenButton = $CanvasLayer/left
-@onready var right: TouchScreenButton = $CanvasLayer/right
+@onready var brake_reverse: TouchScreenButton = $CanvasLayer/AspectRatioContainer/brake_reverse
+@onready var acelerate: TouchScreenButton = $CanvasLayer/AspectRatioContainer/acelerate
+@onready var left: TouchScreenButton = $CanvasLayer/AspectRatioContainer/left
+@onready var right: TouchScreenButton = $CanvasLayer/AspectRatioContainer/right
+
 
 var color_presed = Color(1, 1, 1, 0.60)
 var color_release = Color(1, 1, 1, 0.39)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://dl4l032e7tmky"]
+[gd_scene load_steps=20 format=3 uid="uid://dl4l032e7tmky"]
 
 [ext_resource type="PackedScene" uid="uid://deh3gsrnhaefo" path="res://Maps/loby_1/loby_1.glb" id="1_68xm8"]
 [ext_resource type="Script" uid="uid://ddn22yn6bgmbe" path="res://Maps/loby_1/loby_1.gd" id="1_jk0es"]
@@ -8,8 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://bk3p8umc7mpd0" path="res://Maps/textures/f1_circuits/Grass001_1K-JPG_Color.jpg" id="4_6850l"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="5_f42dt"]
 [ext_resource type="Texture2D" uid="uid://dknkvpoyh81s8" path="res://Maps/textures/f1_circuits/Concrete042A_1K-JPG_Color.jpg" id="5_qrmfn"]
-[ext_resource type="PackedScene" uid="uid://cbnhucy2wtfwc" path="res://others/signals_to/to_select_car/to_select_car.tscn" id="9_jk0es"]
-[ext_resource type="PackedScene" uid="uid://brakaji82desp" path="res://others/signals_to/to_race/to_race.tscn" id="9_tb0jv"]
 [ext_resource type="PackedScene" uid="uid://b0fyvn1iybud7" path="res://others/ramps/ramp1.tscn" id="10_jk0es"]
 [ext_resource type="PackedScene" uid="uid://dfib40d2ex4j7" path="res://huds/loby_menus/main_hud.tscn" id="12_n0ykm"]
 
@@ -114,12 +112,6 @@ transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 90.6599, 2.91922, -1
 [node name="PathFollow_0" type="PathFollow3D" parent="Path3D"]
 transform = Transform3D(0.999894, -0.000130738, -0.00127702, 0.000128872, 0.999827, -0.00146797, 0.00127727, 0.00146777, 0.999847, 1.15108, -0.0803156, -23.5127)
 progress = 28.25
-
-[node name="ToRace" parent="." instance=ExtResource("9_tb0jv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.89139, 23.9339)
-
-[node name="ToSelectCar" parent="." instance=ExtResource("9_jk0es")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.7734, 2.13947, 29.8051)
 
 [node name="ramp_1" parent="." instance=ExtResource("10_jk0es")]
 transform = Transform3D(5.57667, 0.0217846, 0.194263, -0.0487376, 2.4999, 1.58632e-08, -0.300947, -0.00117563, 3.59976, 8.137, 1.79567, -27.387)

@@ -21,7 +21,6 @@ func _ready() -> void:
 	var car_instantia = car_selected.instantiate()
 	add_child(car_instantia)
 	car_instantia.global_position = Vector3(0, 5, 0)
-	car_instantia.brake = 100
 	pCam.follow_target = car_instantia
 	pCam.look_at_target = car_instantia
 

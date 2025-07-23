@@ -60,3 +60,7 @@ func _on_to_race_button_up() -> void:
 
 func _on_quick_race_btn_button_up() -> void:
 	anim.play("to_quick_race")
+
+
+func _on_button_button_up() -> void:
+	get_tree().change_scene_to_file("res://huds/car_selection/car_selection.tscn")

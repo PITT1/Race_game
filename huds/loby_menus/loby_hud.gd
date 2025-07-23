@@ -1,6 +1,7 @@
 extends Control
 var global_var = load("res://global_var.gd").new()
-@onready var money_label: Label = $CanvasLayer/money_label
+@export var main_menu: PackedScene
+@onready var money_label: Label = $CanvasLayer/HBoxContainer/money_label
 var real_part: Array
 
 func _ready() -> void:
@@ -10,3 +11,7 @@ func _ready() -> void:
 	if str_money.contains("."):
 		real_part = str_money.split(".")
 		money_label.text = str(real_part[0])
+
+
+func _on_button_button_up() -> void:
+	get_tree().reload_current_scene()

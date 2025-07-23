@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://jg3fambfdk88"]
+[gd_scene load_steps=4 format=3 uid="uid://jg3fambfdk88"]
 
 [ext_resource type="Script" uid="uid://blkmwts4domw7" path="res://huds/loby_menus/loby_hud.gd" id="1_3v8fv"]
 [ext_resource type="Texture2D" uid="uid://id5qqqiqd8p3" path="res://images/money.png" id="1_s7w4f"]
+[ext_resource type="PackedScene" uid="uid://dfib40d2ex4j7" path="res://huds/loby_menus/main_hud.tscn" id="2_n66mj"]
 
 [node name="LobyHud" type="Control"]
 layout_mode = 3
@@ -11,25 +12,37 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_3v8fv")
+main_menu = ExtResource("2_n66mj")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
-offset_left = 73.0
-offset_right = 201.0
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
+offset_left = 100.0
+offset_right = 233.63
 offset_bottom = 128.0
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_s7w4f")
-stretch_mode = 4
+alignment = 1
 
-[node name="money_label" type="Label" parent="CanvasLayer"]
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -659.0
-offset_top = 5.0
-offset_right = -513.0
-offset_bottom = 61.0
-grow_horizontal = 2
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_s7w4f")
+stretch_mode = 2
+
+[node name="money_label" type="Label" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
 theme_override_font_sizes/font_size = 44
 vertical_alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.775434
+anchor_right = 0.880273
+anchor_bottom = 0.134722
+grow_horizontal = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="CanvasLayer/CenterContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 70
+text = "Back"
+
+[connection signal="button_up" from="CanvasLayer/CenterContainer/Button" to="." method="_on_button_button_up"]

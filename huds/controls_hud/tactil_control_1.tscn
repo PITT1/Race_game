@@ -16,9 +16,18 @@ script = ExtResource("1_djipi")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 follow_viewport_enabled = true
 
-[node name="brake_reverse" type="TouchScreenButton" parent="CanvasLayer"]
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_top = 0.229167
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="brake_reverse" type="TouchScreenButton" parent="CanvasLayer/AspectRatioContainer"]
 modulate = Color(1, 1, 1, 0.392157)
-position = Vector2(1393, 686)
+position = Vector2(1381.5, 476.001)
 rotation = -1.5708
 scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("1_xqbiy")
@@ -26,28 +35,28 @@ passby_press = true
 action = "ui_down"
 visibility_mode = 1
 
-[node name="acelerate" type="TouchScreenButton" parent="CanvasLayer"]
+[node name="acelerate" type="TouchScreenButton" parent="CanvasLayer/AspectRatioContainer"]
 modulate = Color(1, 1, 1, 0.392157)
-position = Vector2(1566, 333)
+position = Vector2(1554.5, 123.001)
 rotation = 1.5708
 scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("1_xqbiy")
 passby_press = true
 action = "ui_up"
 
-[node name="left" type="TouchScreenButton" parent="CanvasLayer"]
+[node name="left" type="TouchScreenButton" parent="CanvasLayer/AspectRatioContainer"]
 modulate = Color(1, 1, 1, 0.392157)
-position = Vector2(65, 454)
-scale = Vector2(0.5, 0.5)
+position = Vector2(47, 261)
+scale = Vector2(0.7, 0.7)
 texture_normal = ExtResource("1_xqbiy")
 passby_press = true
 action = "ui_left"
 
-[node name="right" type="TouchScreenButton" parent="CanvasLayer"]
+[node name="right" type="TouchScreenButton" parent="CanvasLayer/AspectRatioContainer"]
 modulate = Color(1, 1, 1, 0.392157)
-position = Vector2(409, 632)
+position = Vector2(525, 514)
 rotation = -3.14159
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.7, 0.7)
 texture_normal = ExtResource("1_xqbiy")
 passby_press = true
 action = "ui_right"
@@ -62,11 +71,11 @@ offset_top = -3.0
 offset_bottom = -3.0
 grow_vertical = 1
 
-[connection signal="pressed" from="CanvasLayer/brake_reverse" to="." method="_on_brake_reverse_pressed"]
-[connection signal="released" from="CanvasLayer/brake_reverse" to="." method="_on_brake_reverse_released"]
-[connection signal="pressed" from="CanvasLayer/acelerate" to="." method="_on_acelerate_pressed"]
-[connection signal="released" from="CanvasLayer/acelerate" to="." method="_on_acelerate_released"]
-[connection signal="pressed" from="CanvasLayer/left" to="." method="_on_left_pressed"]
-[connection signal="released" from="CanvasLayer/left" to="." method="_on_left_released"]
-[connection signal="pressed" from="CanvasLayer/right" to="." method="_on_right_pressed"]
-[connection signal="released" from="CanvasLayer/right" to="." method="_on_right_released"]
+[connection signal="pressed" from="CanvasLayer/AspectRatioContainer/brake_reverse" to="." method="_on_brake_reverse_pressed"]
+[connection signal="released" from="CanvasLayer/AspectRatioContainer/brake_reverse" to="." method="_on_brake_reverse_released"]
+[connection signal="pressed" from="CanvasLayer/AspectRatioContainer/acelerate" to="." method="_on_acelerate_pressed"]
+[connection signal="released" from="CanvasLayer/AspectRatioContainer/acelerate" to="." method="_on_acelerate_released"]
+[connection signal="pressed" from="CanvasLayer/AspectRatioContainer/left" to="." method="_on_left_pressed"]
+[connection signal="released" from="CanvasLayer/AspectRatioContainer/left" to="." method="_on_left_released"]
+[connection signal="pressed" from="CanvasLayer/AspectRatioContainer/right" to="." method="_on_right_pressed"]
+[connection signal="released" from="CanvasLayer/AspectRatioContainer/right" to="." method="_on_right_released"]
