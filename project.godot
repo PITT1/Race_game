@@ -36,6 +36,7 @@ enabled=PackedStringArray("res://addons/phantom_camera/plugin.cfg")
 
 [gui]
 
+theme/custom="uid://csi40yx6vlfqs"
 theme/custom_font="uid://cbwf465gr1onm"
 theme/default_font_antialiasing=0
 
