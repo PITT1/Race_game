@@ -64,7 +64,7 @@ func put_cars():
 	bots.sort()
 	var bots_sort = bots
 	var bot_adress = bots_sort.values()
-	starting_grid.append(global_var.car_list[player.car])
+	starting_grid.append(global_var.car_list[player.car][0])
 	for i in vehicle_num: #car_spawners.size() cantidad de carros que apareceran
 		starting_grid.append(bot_adress[i])
 	

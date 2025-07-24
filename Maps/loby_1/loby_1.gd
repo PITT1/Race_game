@@ -16,7 +16,7 @@ func _ready() -> void:
 	global_var.init_save_canvas()
 	var data = JSON.parse_string(global_var.load_data())
 	var car_name = data.car
-	var car_adrees = global_var.car_list[car_name]
+	var car_adrees = global_var.car_list[car_name][0]
 	
 	var car_selected = load(car_adrees)
 	var car_instantia = car_selected.instantiate()

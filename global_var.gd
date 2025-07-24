@@ -3,22 +3,22 @@ extends Node
 const SAVE_GAME_PATH: String = "user://save_game1.dat"
 
 
-var car_list = {
-	bugrod = "res://Cars/rat_rod/bug_rod.tscn",
-	hotrod1 = "res://Cars/hot_rod_1/hot_rod_1.tscn",
-	sentinel_gt = "res://Cars/sentinel_gt/sentinel_gt.tscn",
-	empaler_truck = "res://Cars/empaler_truck/empaler_truck.tscn",
-	raven_356 = "res://Cars/raven_356/raven_356.tscn",
-	racing_rod = "res://Cars/racing_rod/racing_rod.tscn",
-	blade_rod = "res://Cars/blade_rod/blade_rod.tscn",
-	thunderbolt = "res://Cars/thunderbolt/thunderbolt.tscn",
-	pinkinator = "res://Cars/pinkinator/pinkinator.tscn",
-	f1_70s = "res://Cars/f1_70s/f1_70s.tscn",
-	montana = "res://Cars/montana/montana.tscn",
-	monster = "res://Cars/monster/monster.tscn",
-	z40 = "res://Cars/z40/z40.tscn",
-	toreto = "res://Cars/toreto/toreto.tscn",
-	nomad = "res://Cars/nomad/nomad.tscn"
+var car_list = { #direccion y precio en tienda
+	bugrod = ["res://Cars/rat_rod/bug_rod.tscn", 5000],
+	hotrod1 = ["res://Cars/hot_rod_1/hot_rod_1.tscn", 10000],
+	sentinel_gt = ["res://Cars/sentinel_gt/sentinel_gt.tscn", 12000],
+	empaler_truck = ["res://Cars/empaler_truck/empaler_truck.tscn", 10000],
+	raven_356 = ["res://Cars/raven_356/raven_356.tscn", 15000],
+	racing_rod = ["res://Cars/racing_rod/racing_rod.tscn", 13000],
+	blade_rod = ["res://Cars/blade_rod/blade_rod.tscn", 20000],
+	thunderbolt = ["res://Cars/thunderbolt/thunderbolt.tscn", 18000],
+	pinkinator = ["res://Cars/pinkinator/pinkinator.tscn", 17000],
+	f1_70s = ["res://Cars/f1_70s/f1_70s.tscn", 30000],
+	montana = ["res://Cars/montana/montana.tscn", 15000],
+	monster = ["res://Cars/monster/monster.tscn", 10000],
+	z40 = ["res://Cars/z40/z40.tscn", 25000],
+	toreto = ["res://Cars/toreto/toreto.tscn", 28000],
+	nomad = ["res://Cars/nomad/nomad.tscn", 20000]
 }
 
 var bot_list = {
