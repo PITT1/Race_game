@@ -40,17 +40,41 @@ var bot_list = {
 }
 #nobre de la pista, direccion de la pista, imagen de la pista, si esta desbloqueado o no
 var track_list = {
-	1 : ["track_1", "res://Maps/circuit_test_2/test_2.tscn", "res://Maps/circuit_test_2/pista_1_selection_menu.png", false],
-	2 : ["track_2", "res://Maps/rc_circuit/rc_circuit_1.tscn", "res://Maps/rc_circuit/pista_rc_1_selection_menu.png", false],
-	3 : ["track_3", "res://Maps/nascar_circuit/nascar_circuit.tscn", "res://Maps/nascar_circuit/pista_nascar_circuit_1_selection_menu.png", false],
-	4 : ["track_4", "res://Maps/basic_circuit_1/basic_circuit_1.tscn", "res://Maps/basic_circuit_1/pista_basic_circuit_1_selection_menu.png", false],
-	5 : ["track_5", "res://Maps/2_vias_circuit_1/pista_doble_1.tscn", "res://Maps/2_vias_circuit_1/pista_doble_seleccion_menu.png", false]
+	1 : ["track_1", "res://Maps/circuit_test_2/test_2.tscn", "res://Maps/circuit_test_2/pista_1_selection_menu.png"],
+	2 : ["track_2", "res://Maps/rc_circuit/rc_circuit_1.tscn", "res://Maps/rc_circuit/pista_rc_1_selection_menu.png"],
+	3 : ["track_3", "res://Maps/nascar_circuit/nascar_circuit.tscn", "res://Maps/nascar_circuit/pista_nascar_circuit_1_selection_menu.png"],
+	4 : ["track_4", "res://Maps/basic_circuit_1/basic_circuit_1.tscn", "res://Maps/basic_circuit_1/pista_basic_circuit_1_selection_menu.png"],
+	5 : ["track_5", "res://Maps/2_vias_circuit_1/pista_doble_1.tscn", "res://Maps/2_vias_circuit_1/pista_doble_seleccion_menu.png"]
 }
 	
 	
 var player_canvas = {
 	money = 0,
-	car = "bugrod"
+	car = "bugrod",
+	tracks_data = { #pista bloqueada??, mejor tiempo al competir
+		1 : [true, "00:00"],
+		2 : [false, "00:00"],
+		3 : [false, "00:00"],
+		4 : [false, "00:00"],
+		5 : [false, "00:00"],
+	},
+	cars_data = { #en true: estn disponibles, en false: estan bloqueados
+		bugrod = true,
+		hotrod1 = false,
+		sentinel_gt = false,
+		empaler_truck = false,
+		raven_356 = false,
+		racing_rod = false,
+		blade_rod = false,
+		thunderbolt = false,
+		pinkinator = false,
+		f1_70s = false,
+		montana = false,
+		monster = false,
+		z40 = false,
+		toreto = false,
+		nomad = false
+	},
 }
 
 func init_save_canvas():

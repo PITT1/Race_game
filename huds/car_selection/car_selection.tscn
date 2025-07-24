@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://bhehqj2450xtc"]
+[gd_scene load_steps=36 format=3 uid="uid://bhehqj2450xtc"]
 
 [ext_resource type="Script" uid="uid://bbkomqcnkihxo" path="res://huds/car_selection/car_selection.gd" id="1_u64g1"]
 [ext_resource type="ArrayMesh" uid="uid://rgbpy0gs4uf7" path="res://Cars/rat_rod/bug_car_body.obj" id="2_u64g1"]
@@ -23,6 +23,7 @@
 [ext_resource type="ArrayMesh" uid="uid://crt8e3jokavek" path="res://Cars/toreto/toreto_all_body.obj" id="22_u3eru"]
 [ext_resource type="ArrayMesh" uid="uid://bl5jvh5mwftgv" path="res://Cars/nomad/nomad_all_model.obj" id="23_fq8jf"]
 [ext_resource type="PackedScene" uid="uid://c2i8lvkgcsf8g" path="res://huds/fps_visual/fps_hud.tscn" id="23_ovl38"]
+[ext_resource type="PackedScene" uid="uid://k6nx4p6ccnvk" path="res://huds/money_display.tscn" id="24_ehe8b"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_vv7oi"]
 sky_top_color = Color(0.461087, 0.641883, 0.858997, 1)
@@ -684,6 +685,10 @@ metadata/_edit_use_anchors_ = true
 anchors_preset = -1
 anchor_right = 0.186104
 anchor_bottom = 0.166667
+offset_left = 5.0
+offset_top = 581.0
+offset_right = 5.0
+offset_bottom = 581.0
 theme_override_font_sizes/font_size = 60
 text = "Go Back"
 metadata/_edit_use_anchors_ = true
@@ -708,7 +713,14 @@ size_flags_horizontal = 6
 theme_override_font_sizes/font_size = 60
 metadata/_edit_use_anchors_ = true
 
-[node name="FpsHud" parent="." instance=ExtResource("23_ovl38")]
+[node name="FpsHud" parent="CanvasLayer" instance=ExtResource("23_ovl38")]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.0
+grow_vertical = 1
+
+[node name="MoneyDisplay" parent="CanvasLayer" instance=ExtResource("24_ehe8b")]
 
 [connection signal="button_up" from="CanvasLayer/left" to="." method="_on_left_button_up"]
 [connection signal="button_up" from="CanvasLayer/right" to="." method="_on_right_button_up"]

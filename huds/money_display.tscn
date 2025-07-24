@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://k6nx4p6ccnvk"]
+
+[ext_resource type="Script" uid="uid://da8h33kufnhwr" path="res://huds/money_display.gd" id="1_62wwv"]
+[ext_resource type="Texture2D" uid="uid://id5qqqiqd8p3" path="res://images/money.png" id="1_ssy4y"]
+
+[node name="MoneyDisplay" type="HBoxContainer"]
+offset_left = 100.0
+offset_right = 233.63
+offset_bottom = 128.0
+alignment = 1
+script = ExtResource("1_62wwv")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("1_ssy4y")
+stretch_mode = 2
+
+[node name="money_label" type="Label" parent="."]
+layout_mode = 2
+theme_override_font_sizes/font_size = 44
+vertical_alignment = 1
