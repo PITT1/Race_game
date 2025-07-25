@@ -85,6 +85,13 @@ func init_save_canvas():
 		print("archivo guardado por primera vez")
 	else:
 		print("el archivo de guardado ya existe")
+	
+	var saved_content = JSON.parse_string(load_data())
+	
+	if player_canvas.size() != saved_content.size():
+		saved_content.merge(player_canvas, false)
+		save_data(JSON.stringify(saved_content))
+		print("se hizo merge en el save_game_path")
 
 func save_data(content: String):
 	var file = FileAccess.open(SAVE_GAME_PATH, FileAccess.WRITE)
