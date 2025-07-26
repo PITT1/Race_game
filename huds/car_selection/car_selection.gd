@@ -35,7 +35,6 @@ func _ready() -> void:
 	car_num.text = str(0) + "/" + str(car_list.size() - 1)
 	
 	car_list_global = global_var.car_list
-	print(car_list_global[car_list[0].name][1])  #aqui estan los precios
 	
 	var cars_data_saved = JSON.parse_string(global_var.load_data())
 	cars_unloke_data = cars_data_saved["cars_data"]
@@ -87,13 +86,13 @@ func _on_select_button_up() -> void:
 	if select_btn.text.contains("unlock with:"):
 		if data.money >= car_list_global[car_list[selector].name][1]: #si el dinero del jugador es mayor o igual al costo del vehiculo
 			data.money -= car_list_global[car_list[selector].name][1]
-			select_btn.text = "select"
+			select_btn.text = "Select"
 			cars_unloke_data[car_list[selector].name] = true
 			data.cars_data = cars_unloke_data
-			money_display.reset_money()
 			global_var.save_data(JSON.stringify(data))
 		else:
 			print("no puedes comprarlo")
 	else:
 		data.car = car_list[selector].name
 		global_var.save_data(JSON.stringify(data))
+	money_display.reset_money()
