@@ -9,3 +9,10 @@ func _ready() -> void:
 	if str_money.contains("."):
 		real_part = str_money.split(".")
 		money_label.text = str(real_part[0])
+
+func reset_money():
+	var data = JSON.parse_string(global_var.load_data())
+	var str_money: String = str(data.money) 
+	if str_money.contains("."):
+		real_part = str_money.split(".")
+		money_label.text = str(real_part[0])

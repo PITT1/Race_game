@@ -4,6 +4,7 @@ extends Node3D
 @onready var car_name_label: Label = $CanvasLayer/car_name_label
 @onready var car_num: Label = $CanvasLayer/car_num
 @onready var select_btn: Button = $CanvasLayer/select
+@onready var money_display: HBoxContainer = $CanvasLayer/MoneyDisplay
 
 var car_list: Array = []
 var car_list_global: Dictionary = {}
@@ -52,7 +53,6 @@ func _on_left_button_up() -> void:
 	car_name_label.text = car_list[selector].name
 	car_num.text = str(selector) + "/" + str(car_list.size() - 1)
 	
-	print(car_list_global[car_list[selector].name][1]) # precio
 	
 	if cars_unloke_data[car_list[selector].name] == false:
 		select_btn.text = "unlock with: " + str(car_list_global[car_list[selector].name][1])
@@ -71,7 +71,6 @@ func _on_right_button_up() -> void:
 	car_name_label.text = car_list[selector].name
 	car_num.text = str(selector) + "/" + str(car_list.size() - 1)
 	
-	print(car_list_global[car_list[selector].name][1])  #precio
 	
 	if cars_unloke_data[car_list[selector].name] == false:
 		select_btn.text = "unlock with: " + str(car_list_global[car_list[selector].name][1])
@@ -85,5 +84,16 @@ func _on_go_back_button_up() -> void:
 
 func _on_select_button_up() -> void:
 	var data = JSON.parse_string(global_var.load_data())
-	data.car = car_list[selector].name
-	global_var.save_data(JSON.stringify(data))
+	if select_btn.text.contains("unlock with:"):
+		if data.money >= car_list_global[car_list[selector].name][1]: #si el dinero del jugador es mayor o igual al costo del vehiculo
+			data.money -= car_list_global[car_list[selector].name][1]
+			select_btn.text = "select"
+			cars_unloke_data[car_list[selector].name] = true
+			data.cars_data = cars_unloke_data
+			money_display.reset_money()
+			global_var.save_data(JSON.stringify(data))
+		else:
+			print("no puedes comprarlo")
+	else:
+		data.car = car_list[selector].name
+		global_var.save_data(JSON.stringify(data))
