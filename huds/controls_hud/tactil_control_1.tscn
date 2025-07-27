@@ -1,8 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://ctvbggtg0dtyb"]
 
 [ext_resource type="Script" uid="uid://bxjmtwa3miope" path="res://huds/controls_hud/tactil_control_1.gd" id="1_djipi"]
-[ext_resource type="Texture2D" uid="uid://djxbko2j8rf6v" path="res://images/hud_controls_1.png" id="1_xqbiy"]
 [ext_resource type="PackedScene" uid="uid://c2i8lvkgcsf8g" path="res://huds/fps_visual/fps_hud.tscn" id="2_xqbiy"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xqbiy"]
+load_path = "res://.godot/imported/hud_controls_1.png-b1be69cbd5263be057a3d1530e1b321f.ctex"
 
 [node name="TactilControl1" type="Control"]
 layout_mode = 3
@@ -30,7 +32,7 @@ modulate = Color(1, 1, 1, 0.392157)
 position = Vector2(1381.5, 476.001)
 rotation = -1.5708
 scale = Vector2(0.5, 0.5)
-texture_normal = ExtResource("1_xqbiy")
+texture_normal = SubResource("CompressedTexture2D_xqbiy")
 passby_press = true
 action = "ui_down"
 visibility_mode = 1
@@ -40,7 +42,7 @@ modulate = Color(1, 1, 1, 0.392157)
 position = Vector2(1554.5, 123.001)
 rotation = 1.5708
 scale = Vector2(0.5, 0.5)
-texture_normal = ExtResource("1_xqbiy")
+texture_normal = SubResource("CompressedTexture2D_xqbiy")
 passby_press = true
 action = "ui_up"
 
@@ -48,7 +50,7 @@ action = "ui_up"
 modulate = Color(1, 1, 1, 0.392157)
 position = Vector2(47, 261)
 scale = Vector2(0.7, 0.7)
-texture_normal = ExtResource("1_xqbiy")
+texture_normal = SubResource("CompressedTexture2D_xqbiy")
 passby_press = true
 action = "ui_left"
 
@@ -57,7 +59,7 @@ modulate = Color(1, 1, 1, 0.392157)
 position = Vector2(525, 514)
 rotation = -3.14159
 scale = Vector2(0.7, 0.7)
-texture_normal = ExtResource("1_xqbiy")
+texture_normal = SubResource("CompressedTexture2D_xqbiy")
 passby_press = true
 action = "ui_right"
 
