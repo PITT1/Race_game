@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://div7ucgh4jkyc"
-path.s3tc="res://.godot/imported/pista_2_RoadLines003_1K-JPG_Color.jpg-797aad418d4ae4b19b2f19b9a839fc60.s3tc.ctex"
-path.etc2="res://.godot/imported/pista_2_RoadLines003_1K-JPG_Color.jpg-797aad418d4ae4b19b2f19b9a839fc60.etc2.ctex"
+uid="uid://mqrwnqjdmj2e"
+path.s3tc="res://.godot/imported/pista_2_RoadLines003_1K-JPG_Color.jpg-db9f9f0e1aacfc46826b8c80a9ce77cc.s3tc.ctex"
+path.etc2="res://.godot/imported/pista_2_RoadLines003_1K-JPG_Color.jpg-db9f9f0e1aacfc46826b8c80a9ce77cc.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -15,8 +15,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Maps/track_2/pista_2_RoadLines003_1K-JPG_Color.jpg"
-dest_files=["res://.godot/imported/pista_2_RoadLines003_1K-JPG_Color.jpg-797aad418d4ae4b19b2f19b9a839fc60.s3tc.ctex", "res://.godot/imported/pista_2_RoadLines003_1K-JPG_Color.jpg-797aad418d4ae4b19b2f19b9a839fc60.etc2.ctex"]
+source_file="res://Maps/textures/f1_circuits/pista_2_RoadLines003_1K-JPG_Color.jpg"
+dest_files=["res://.godot/imported/pista_2_RoadLines003_1K-JPG_Color.jpg-db9f9f0e1aacfc46826b8c80a9ce77cc.s3tc.ctex", "res://.godot/imported/pista_2_RoadLines003_1K-JPG_Color.jpg-db9f9f0e1aacfc46826b8c80a9ce77cc.etc2.ctex"]
 
 [params]
 
