@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dj4dtbco6y4fl"
-path.s3tc="res://.godot/imported/pista_2_edificio_1.jpg-9127eacdd829e7573a6ed745e9ccdcd7.s3tc.ctex"
-path.etc2="res://.godot/imported/pista_2_edificio_1.jpg-9127eacdd829e7573a6ed745e9ccdcd7.etc2.ctex"
+uid="uid://dso6e0oseioqo"
+path.s3tc="res://.godot/imported/building_1_edificio_1.jpg-2971d8349aab5aa6756d82dcea2ea188.s3tc.ctex"
+path.etc2="res://.godot/imported/building_1_edificio_1.jpg-2971d8349aab5aa6756d82dcea2ea188.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -15,8 +15,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Maps/track_2/pista_2_edificio_1.jpg"
-dest_files=["res://.godot/imported/pista_2_edificio_1.jpg-9127eacdd829e7573a6ed745e9ccdcd7.s3tc.ctex", "res://.godot/imported/pista_2_edificio_1.jpg-9127eacdd829e7573a6ed745e9ccdcd7.etc2.ctex"]
+source_file="res://others/decoration/building_1_edificio_1.jpg"
+dest_files=["res://.godot/imported/building_1_edificio_1.jpg-2971d8349aab5aa6756d82dcea2ea188.s3tc.ctex", "res://.godot/imported/building_1_edificio_1.jpg-2971d8349aab5aa6756d82dcea2ea188.etc2.ctex"]
 
 [params]
 
