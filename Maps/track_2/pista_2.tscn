@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://tiexehciir1c"]
+[gd_scene load_steps=33 format=3 uid="uid://tiexehciir1c"]
 
 [ext_resource type="PackedScene" uid="uid://dyg4jg5jx7jd4" path="res://Maps/track_2/pista_2.glb" id="1_gwq5r"]
 [ext_resource type="Script" uid="uid://kghgfx151qgh" path="res://Maps/circuit_test_2/test_2.gd" id="1_w3f2m"]
@@ -13,6 +13,7 @@
 [ext_resource type="ArrayMesh" uid="uid://dc4upx53e4gie" path="res://others/spawners/spawn_arrow.obj" id="7_fo33c"]
 [ext_resource type="PackedScene" uid="uid://ctvbggtg0dtyb" path="res://huds/controls_hud/tactil_control_1.tscn" id="8_01p8v"]
 [ext_resource type="Texture2D" uid="uid://wyvhiviq75ye" path="res://Maps/track_2/pista_2_meta_line.jpg" id="8_p1mtw"]
+[ext_resource type="ArrayOccluder3D" uid="uid://cjnibg3buhlsd" path="res://Maps/track_2/pista_2.occ" id="14_xxyac"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g2klq"]
 albedo_texture = ExtResource("4_fo33c")
@@ -178,7 +179,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 132.997, 3.75555, 60.4087)
 curve = SubResource("Curve3D_w3f2m")
 
 [node name="PathFollow_0" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.0448132, 8.75644e-06, -0.998844, -0.000195373, 0.999828, -9.09357e-12, 0.998842, 0.000195173, 0.0448133, 31.494, -5.34058e-05, -0.883616)
+transform = Transform3D(0.0448132, 8.6839e-06, -0.998844, -0.000193754, 0.999828, 1.2731e-11, 0.998842, 0.000193556, 0.0448132, 31.494, -5.34058e-05, -0.883616)
 progress = 28.25
 
 [node name="PathFollow_1" type="PathFollow3D" parent="Path3D"]
@@ -795,5 +796,8 @@ visible = false
 mesh = ExtResource("7_fo33c")
 
 [node name="TactilControl1" parent="." instance=ExtResource("8_01p8v")]
+
+[node name="OccluderInstance3D" type="OccluderInstance3D" parent="."]
+occluder = ExtResource("14_xxyac")
 
 [editable path="pista_2_meshes"]

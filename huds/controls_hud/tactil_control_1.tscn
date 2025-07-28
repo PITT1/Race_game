@@ -4,7 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://c2i8lvkgcsf8g" path="res://huds/fps_visual/fps_hud.tscn" id="2_xqbiy"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xqbiy"]
-load_path = "res://.godot/imported/hud_controls_1.png-b1be69cbd5263be057a3d1530e1b321f.ctex"
 
 [node name="TactilControl1" type="Control"]
 layout_mode = 3

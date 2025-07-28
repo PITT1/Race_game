@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://cjb4nd6otxjsg"]
+[gd_scene load_steps=30 format=3 uid="uid://cjb4nd6otxjsg"]
 
 [ext_resource type="Script" uid="uid://kghgfx151qgh" path="res://Maps/circuit_test_2/test_2.gd" id="1_6mnti"]
 [ext_resource type="PackedScene" uid="uid://cd2fjxhklg8i1" path="res://huds/on_race_huds/countdown.tscn" id="2_lppdq"]
@@ -13,6 +13,7 @@
 [ext_resource type="ArrayMesh" uid="uid://dc4upx53e4gie" path="res://others/spawners/spawn_arrow.obj" id="10_ow4v7"]
 [ext_resource type="Texture2D" uid="uid://bm552631w02kq" path="res://Maps/textures/f1_circuits/Asphalt025C_1K-JPG_Color.jpg" id="11_gsmhb"]
 [ext_resource type="PackedScene" uid="uid://ctvbggtg0dtyb" path="res://huds/controls_hud/tactil_control_1.tscn" id="12_4rsws"]
+[ext_resource type="ArrayOccluder3D" uid="uid://b84embmtakow" path="res://Maps/circuit_test_2/test_2.occ" id="14_i1n1h"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_uxm7u"]
 sky_top_color = Color(0.461087, 0.641883, 0.858997, 1)
@@ -124,6 +125,7 @@ sky_mode = 1
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(-0.732591, 0.692228, -0.540246, -4.59305e-08, 0.617123, 0.782893, 1.35592, 0.374004, -0.29189, -11.355, 16.455, -6.135)
 current = true
+far = 300.0
 
 [node name="PhantomCameraHost" type="Node" parent="Camera3D"]
 process_priority = 300
@@ -524,5 +526,8 @@ visible = false
 mesh = ExtResource("10_ow4v7")
 
 [node name="TactilControl1" parent="." instance=ExtResource("12_4rsws")]
+
+[node name="OccluderInstance3D" type="OccluderInstance3D" parent="."]
+occluder = ExtResource("14_i1n1h")
 
 [editable path="pista_1_CIRCUIT"]

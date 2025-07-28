@@ -44,7 +44,8 @@ var track_list = {
 	2 : ["track_2", "res://Maps/rc_circuit/rc_circuit_1.tscn", "res://Maps/rc_circuit/pista_rc_1_selection_menu.png"],
 	3 : ["track_3", "res://Maps/nascar_circuit/nascar_circuit.tscn", "res://Maps/nascar_circuit/pista_nascar_circuit_1_selection_menu.png"],
 	4 : ["track_4", "res://Maps/basic_circuit_1/basic_circuit_1.tscn", "res://Maps/basic_circuit_1/pista_basic_circuit_1_selection_menu.png"],
-	5 : ["track_5", "res://Maps/2_vias_circuit_1/pista_doble_1.tscn", "res://Maps/2_vias_circuit_1/pista_doble_seleccion_menu.png"]
+	5 : ["track_5", "res://Maps/2_vias_circuit_1/pista_doble_1.tscn", "res://Maps/2_vias_circuit_1/pista_doble_seleccion_menu.png"],
+	6 : ["track_6", "res://Maps/track_2/pista_2.tscn", "res://Maps/track_2/pista_2_selection_menu.png"]
 }
 	
 	
@@ -52,11 +53,12 @@ var player_canvas = {
 	money = 0,
 	car = "bugrod",
 	tracks_data = { #pista bloqueada??, mejor tiempo al competir
-		1 : [true, "00:00"],
-		2 : [false, "00:00"],
-		3 : [false, "00:00"],
-		4 : [false, "00:00"],
-		5 : [false, "00:00"],
+		1 : [true, "00:00:00"],
+		2 : [false, "00:00:00"],
+		3 : [false, "00:00:00"],
+		4 : [false, "00:00:00"],
+		5 : [false, "00:00:00"],
+		6 : [false, "00:00:00"]
 	},
 	cars_data = { #en true: estn disponibles, en false: estan bloqueados
 		bugrod = true,
