@@ -27,7 +27,7 @@ points = PackedVector3Array(2.74169, -1.06287, -5.3923, 1.74223, -1.44008, -5.49
 radius = 2.354
 
 [node name="pinkinator" type="VehicleBody3D"]
-collision_mask = 123
+collision_mask = 1019
 mass = 200.0
 physics_material_override = ExtResource("1_srb5a")
 gravity_scale = 5.0

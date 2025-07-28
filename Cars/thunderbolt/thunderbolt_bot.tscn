@@ -28,7 +28,7 @@ points = PackedVector3Array(1.95159, 0.577448, 5.82971, 0.96777, 0.949113, 5.936
 radius = 1.80891
 
 [node name="ThunderboltBot" type="VehicleBody3D"]
-collision_mask = 507
+collision_mask = 1019
 mass = 200.0
 physics_material_override = ExtResource("1_l18o8")
 gravity_scale = 5.0

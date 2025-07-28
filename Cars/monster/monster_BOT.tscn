@@ -33,7 +33,7 @@ points = PackedVector3Array(2.20881, -0.655928, 3.52545, 2.05656, -0.00952423, 4
 radius = 2.404
 
 [node name="MonsterBot" type="VehicleBody3D"]
-collision_mask = 251
+collision_mask = 763
 mass = 200.0
 physics_material_override = ExtResource("1_vjh5r")
 gravity_scale = 5.0

@@ -37,7 +37,7 @@ points = PackedVector3Array(2.22648, -0.442585, 0.714731, 2.22256, -0.483658, 0.
 radius = 1.80891
 
 [node name="SentinelGtBot" type="VehicleBody3D"]
-collision_mask = 507
+collision_mask = 1019
 mass = 200.0
 physics_material_override = ExtResource("1_vvk1t")
 gravity_scale = 5.0

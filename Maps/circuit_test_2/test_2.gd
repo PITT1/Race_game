@@ -91,3 +91,7 @@ func _comparar_posiciones(a:VehicleBody3D, b:VehicleBody3D):
 		return a.laps_num > b.laps_num
 		
 	return a.checkpoint_store.size() > b.checkpoint_store.size()
+
+
+func _on_abyss_sensor_body_entered(body: Node3D) -> void:
+	body.call_lakitu()

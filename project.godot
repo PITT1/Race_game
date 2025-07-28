@@ -55,6 +55,7 @@ pointing/emulate_touch_from_mouse=true
 3d_physics/layer_7="projectil"
 3d_physics/layer_8="checkpoints"
 3d_physics/layer_9="action_icons"
+3d_physics/layer_10="abyss"
 
 [memory]
 

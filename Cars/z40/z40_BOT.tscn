@@ -17,7 +17,7 @@ points = PackedVector3Array(1.54096, -0.668416, -1.17853, 1.54096, -0.423516, -1
 radius = 2.404
 
 [node name="Z40Bot" type="VehicleBody3D"]
-collision_mask = 251
+collision_mask = 763
 mass = 200.0
 physics_material_override = ExtResource("1_c5gpq")
 gravity_scale = 5.0

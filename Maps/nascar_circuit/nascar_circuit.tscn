@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://coq6k5s1owo2s"]
+[gd_scene load_steps=22 format=3 uid="uid://coq6k5s1owo2s"]
 
 [ext_resource type="PackedScene" uid="uid://cmolawirn8q8f" path="res://Maps/nascar_circuit/nascar_circuit.glb" id="1_4hug8"]
 [ext_resource type="Script" uid="uid://kghgfx151qgh" path="res://Maps/circuit_test_2/test_2.gd" id="1_w1t2r"]
@@ -89,6 +89,9 @@ _data = {
 &"init_race": SubResource("Animation_am243")
 }
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_aad1i"]
+size = Vector3(1082.53, 7.29736, 982.998)
+
 [node name="NascarCircuit" type="Node3D"]
 script = ExtResource("1_w1t2r")
 countdown = ExtResource("2_jvpel")
@@ -135,7 +138,7 @@ transform = Transform3D(-0.0934637, 0, -0.995471, 0, 0.999828, 0, 0.995468, 0, -
 progress = 28.25
 
 [node name="PathFollow_1" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.0934698, 0, -0.995617, 0, 0.999998, 0, 0.995533, 0, -0.0934777, 44.483, -3.05176e-05, 2.48443)
+transform = Transform3D(-0.0934698, 0, -0.995617, 0, 0.999998, 0, 0.995533, 0, -0.0934776, 44.483, -3.05176e-05, 2.48443)
 
 [node name="PathFollow_2" type="PathFollow3D" parent="Path3D"]
 transform = Transform3D(-0.0934723, 0, -0.995621, 0, 1, 0, 0.99556, 0, -0.093478, 44.483, -3.05176e-05, 2.48443)
@@ -493,5 +496,15 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -29.01
 mesh = ExtResource("6_1nag2")
 
 [node name="TactilControl1" parent="." instance=ExtResource("8_aad1i")]
+
+[node name="abyss_sensor" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 142.443, 29.0877, -96.5104)
+collision_layer = 512
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="abyss_sensor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -136.873, -43.1845, 131.233)
+shape = SubResource("BoxShape3D_aad1i")
+
+[connection signal="body_entered" from="abyss_sensor" to="." method="_on_abyss_sensor_body_entered"]
 
 [editable path="StaticBody3D/nascar_circuit"]

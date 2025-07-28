@@ -9,14 +9,15 @@ var is_on_race = false
 @export var path_to_follow: int = 0
 @export var min_distance_to_point = 30 
 @export var poitn_desviation = 5
-@onready var path_follow = []
+@onready var path_follow: Array = []
 var random_path
 var paths_in_race: Array = []
 var speed = 5.0 
 var target_progress = 0.0
 
-var checkpoint_store = []
-var priority_point_store = []
+var checkpoint_store: Array = []
+var last_checkpoint
+var priority_point_store: Array = []
 var all_checkpoints: int
 var laps_num: int = 1
 
@@ -91,6 +92,7 @@ func start_race():
 
 
 func _on_checkpoint_sensor_area_entered(area: Area3D) -> void:
+	last_checkpoint = area
 	if not checkpoint_store.has(area.name) and not area.name.contains("priority"):
 		checkpoint_store.append(area.name)
 	elif not checkpoint_store.has(area.name) and area.name.contains("priority"):
@@ -131,3 +133,9 @@ func set_random_path_follow():
 		random_path = paths_in_race.pick_random()
 		path_follow = random_path.get_children()
 		path_follow[path_to_follow].progress = 0
+
+func call_lakitu():
+	set_global_position(last_checkpoint.get_global_position() + Vector3(0, 5, 0))
+	linear_velocity = Vector3.ZERO
+	angular_velocity = Vector3.ZERO
+	rotation = last_checkpoint.rotation

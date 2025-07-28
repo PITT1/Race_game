@@ -20,7 +20,7 @@ points = PackedVector3Array(2.59045, -1.06977, 5.93272, 2.51906, 0.188699, 4.995
 radius = 2.404
 
 [node name="Nomad" type="VehicleBody3D"]
-collision_mask = 507
+collision_mask = 1019
 mass = 200.0
 physics_material_override = ExtResource("1_07jqt")
 gravity_scale = 5.0

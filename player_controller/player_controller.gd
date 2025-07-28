@@ -25,6 +25,7 @@ var is_on_pista: bool = true
 @onready var path_follow = [$"../Path3D/PathFollow_0", $"../Path3D/PathFollow_1", $"../Path3D/PathFollow_2", $"../Path3D/PathFollow_3", $"../Path3D/PathFollow_4", $"../Path3D/PathFollow_5", $"../Path3D/PathFollow_6", $"../Path3D/PathFollow_7"]
 
 var checkpoint_store = []
+var last_checkpoint
 var priority_point_store = []
 var all_checkpoints: int
 var laps_num: int = 1
@@ -62,6 +63,7 @@ func _physics_process(delta: float) -> void:
 	
 
 func _on_checkpoint_sensor_area_entered(area: Area3D) -> void:
+	last_checkpoint = area
 	var num = area.name.split("_")[1]
 	if num != "point" and num != "0":
 		var numInt = int(num)
@@ -133,3 +135,9 @@ func traction_by_terrain_control():
 		elif surface.contains("terrain"):
 			is_on_pista = false
 		
+
+func call_lakitu():
+	set_global_position(last_checkpoint.get_global_position() + Vector3(0, 5, 0))
+	linear_velocity = Vector3.ZERO
+	angular_velocity = Vector3.ZERO
+	rotation = last_checkpoint.rotation

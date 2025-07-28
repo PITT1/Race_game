@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://cjb4nd6otxjsg"]
+[gd_scene load_steps=31 format=3 uid="uid://cjb4nd6otxjsg"]
 
 [ext_resource type="Script" uid="uid://kghgfx151qgh" path="res://Maps/circuit_test_2/test_2.gd" id="1_6mnti"]
 [ext_resource type="PackedScene" uid="uid://cd2fjxhklg8i1" path="res://huds/on_race_huds/countdown.tscn" id="2_lppdq"]
@@ -104,6 +104,9 @@ _data = {
 &"init_race": SubResource("Animation_am243")
 }
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_i1n1h"]
+size = Vector3(1025.58, 7.29736, 982.998)
+
 [node name="Test2" type="Node3D"]
 script = ExtResource("1_6mnti")
 countdown = ExtResource("2_lppdq")
@@ -180,13 +183,13 @@ transform = Transform3D(0.999934, -1.8752e-06, -0.00127722, 1.13679e-13, 0.99999
 transform = Transform3D(0.999934, -1.8752e-06, -0.00127722, 1.13679e-13, 0.999999, -0.00146819, 0.00127713, 0.00146819, 0.999998, 1.115, -0.121792, 4.73727)
 
 [node name="PathFollow_10" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.999934, -1.8752e-06, -0.00127722, 1.13679e-13, 0.999999, -0.00146819, 0.00127714, 0.00146819, 0.999998, 1.115, -0.121792, 4.73727)
+transform = Transform3D(0.999934, -1.8752e-06, -0.00127722, 1.13679e-13, 0.999999, -0.00146819, 0.00127713, 0.00146819, 0.999998, 1.115, -0.121792, 4.73727)
 
 [node name="PathFollow_11" type="PathFollow3D" parent="Path3D"]
 transform = Transform3D(0.999934, -1.8752e-06, -0.00127722, 1.13679e-13, 0.999999, -0.00146819, 0.00127714, 0.00146819, 0.999998, 1.115, -0.121792, 4.73727)
 
 [node name="PathFollow_12" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.999935, -1.8752e-06, -0.00127722, 1.1368e-13, 0.999999, -0.00146819, 0.00127714, 0.00146819, 0.999998, 1.115, -0.121792, 4.73727)
+transform = Transform3D(0.999934, -1.8752e-06, -0.00127722, 1.13679e-13, 0.999999, -0.00146819, 0.00127714, 0.00146819, 0.999998, 1.115, -0.121792, 4.73727)
 
 [node name="conos" type="Node3D" parent="."]
 
@@ -570,5 +573,15 @@ mesh = ExtResource("10_ow4v7")
 
 [node name="OccluderInstance3D" type="OccluderInstance3D" parent="."]
 occluder = ExtResource("14_i1n1h")
+
+[node name="abyss_sensor" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 142.443, 29.0877, -96.5104)
+collision_layer = 512
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="abyss_sensor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -165.346, -47.869, 131.233)
+shape = SubResource("BoxShape3D_i1n1h")
+
+[connection signal="body_entered" from="abyss_sensor" to="." method="_on_abyss_sensor_body_entered"]
 
 [editable path="pista_1_CIRCUIT"]

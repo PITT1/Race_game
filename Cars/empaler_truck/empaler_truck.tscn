@@ -31,7 +31,7 @@ points = PackedVector3Array(1.85753, -1.05356, -1.06917, 1.76298, -1.24065, -1.2
 radius = 1.80891
 
 [node name="EmpalerTruck" type="VehicleBody3D"]
-collision_mask = 511
+collision_mask = 1019
 mass = 300.0
 physics_material_override = ExtResource("1_brnwu")
 gravity_scale = 4.0

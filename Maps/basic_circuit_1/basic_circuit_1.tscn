@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://daldokiad1rs2"]
+[gd_scene load_steps=21 format=3 uid="uid://daldokiad1rs2"]
 
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="1_dqlug"]
 [ext_resource type="Script" uid="uid://kghgfx151qgh" path="res://Maps/circuit_test_2/test_2.gd" id="1_eco0a"]
@@ -86,6 +86,9 @@ _data = {
 &"RESET": SubResource("Animation_j2xqt"),
 &"init_race": SubResource("Animation_am243")
 }
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_avde0"]
+size = Vector3(1101.72, 1, 1220.56)
 
 [node name="BasicCircuit1" type="Node3D"]
 script = ExtResource("1_eco0a")
@@ -879,3 +882,15 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -29.01
 mesh = ExtResource("5_eshm2")
 
 [node name="TactilControl1" parent="." instance=ExtResource("8_avde0")]
+
+[node name="abyss_sensor" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 151.614, 18.8488, -33.2177)
+collision_layer = 512
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="abyss_sensor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -137.953, -44.7203, 12.453)
+shape = SubResource("BoxShape3D_avde0")
+
+[connection signal="body_entered" from="abyss_sensor" to="." method="_on_abyss_sensor_body_entered"]
+
+[editable path="pista_basic_1"]
