@@ -44,6 +44,7 @@ scale = Vector2(0.5, 0.5)
 texture_normal = SubResource("CompressedTexture2D_xqbiy")
 passby_press = true
 action = "ui_up"
+visibility_mode = 1
 
 [node name="left" type="TouchScreenButton" parent="CanvasLayer/AspectRatioContainer"]
 modulate = Color(1, 1, 1, 0.392157)
@@ -52,6 +53,7 @@ scale = Vector2(0.7, 0.7)
 texture_normal = SubResource("CompressedTexture2D_xqbiy")
 passby_press = true
 action = "ui_left"
+visibility_mode = 1
 
 [node name="right" type="TouchScreenButton" parent="CanvasLayer/AspectRatioContainer"]
 modulate = Color(1, 1, 1, 0.392157)
@@ -61,6 +63,7 @@ scale = Vector2(0.7, 0.7)
 texture_normal = SubResource("CompressedTexture2D_xqbiy")
 passby_press = true
 action = "ui_right"
+visibility_mode = 1
 
 [node name="FpsHud" parent="." instance=ExtResource("2_xqbiy")]
 layout_mode = 1

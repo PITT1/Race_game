@@ -135,7 +135,17 @@ func set_random_path_follow():
 		path_follow[path_to_follow].progress = 0
 
 func call_lakitu():
-	set_global_position(last_checkpoint.get_global_position() + Vector3(0, 5, 0))
-	linear_velocity = Vector3.ZERO
-	angular_velocity = Vector3.ZERO
-	rotation = last_checkpoint.rotation
+	if last_checkpoint:
+		set_global_position(last_checkpoint.get_global_position() + Vector3(0, 5, 0))
+		linear_velocity = Vector3.ZERO
+		angular_velocity = Vector3.ZERO
+		rotation = last_checkpoint.rotation
+		path_follow[path_to_follow].progress -= min_distance_to_point
+	else:
+		for item in get_parent().get_children():
+			if item.name == "checkpoints_sistem":
+				last_checkpoint = item.get_child(0)
+		set_global_position(last_checkpoint.get_global_position() + Vector3(0, 5, 0))
+		linear_velocity = Vector3.ZERO
+		angular_velocity = Vector3.ZERO
+		rotation = last_checkpoint.rotation
