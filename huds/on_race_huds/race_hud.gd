@@ -31,7 +31,7 @@ func show_position():
 		for i in race_list.size():
 			if race_list[i] == car:
 				if i != previous_pos:
-					label_text = "pos: " + str(i + 1)
+					label_text = "pos: " + str(i + 1) + "/" + str(race_list.size())
 					position_label.set_text(label_text)
 					previous_pos = i
 	else:

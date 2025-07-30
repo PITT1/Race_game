@@ -56,7 +56,7 @@ func _physics_process(delta: float) -> void:
 		else:
 			engine_force = Input.get_axis("ui_down", "ui_up") * ENGINE_POWER_REDUCTOR
 	else:
-		brake = 100
+		brake = 20
 	update_pcam()
 	
 	traction_by_terrain_control()

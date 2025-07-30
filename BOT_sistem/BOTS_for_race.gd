@@ -48,7 +48,7 @@ func _physics_process(delta: float) -> void:
 				recovery_mode = true
 				shock_timer_sensor.start()
 	else:
-		brake = 100
+		brake = 20
 	
 	if recovery_mode and is_on_race: #BOT
 		engine_force = -ENGINE_POWER
