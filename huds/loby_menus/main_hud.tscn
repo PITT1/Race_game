@@ -259,9 +259,9 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -605.0
+offset_left = -1412.0
 offset_top = -319.0
-offset_right = 277.0
+offset_right = 1314.0
 offset_bottom = 765.0
 grow_horizontal = 0
 grow_vertical = 2
@@ -279,17 +279,17 @@ horizontal_alignment = 1
 [node name="play_btn" type="Button" parent="CanvasLayer/page_1"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 200
-text = "Play"
+text = "main_menu_play"
 
 [node name="options_btn" type="Button" parent="CanvasLayer/page_1"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 200
-text = "Options"
+text = "main_menu_options"
 
 [node name="quit_btn" type="Button" parent="CanvasLayer/page_1"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 200
-text = "Quit"
+text = "main_menu_quit"
 
 [node name="page_2" type="VBoxContainer" parent="CanvasLayer"]
 anchors_preset = -1
@@ -297,10 +297,10 @@ anchor_left = 1.13027
 anchor_top = 0.0472222
 anchor_right = 1.47112
 anchor_bottom = 0.942222
-offset_left = -9.99524
-offset_top = 26.0
-offset_right = 661.555
-offset_bottom = 813.6
+offset_left = 0.00476074
+offset_top = 1.52588e-05
+offset_right = 1764.55
+offset_bottom = 787.6
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.45, 0.45)
@@ -310,25 +310,25 @@ metadata/_edit_use_anchors_ = true
 layout_mode = 2
 size_flags_vertical = 4
 theme_override_font_sizes/font_size = 200
-text = "Grand Prix"
+text = "main_menu_grandprix"
 
 [node name="quick_race_btn" type="Button" parent="CanvasLayer/page_2"]
 layout_mode = 2
 size_flags_vertical = 4
 theme_override_font_sizes/font_size = 200
-text = "Quick Race"
+text = "main_menu_single_race"
 
 [node name="practice_btn" type="Button" parent="CanvasLayer/page_2"]
 layout_mode = 2
 size_flags_vertical = 4
 theme_override_font_sizes/font_size = 200
-text = "Practice"
+text = "main_menu_practice"
 
 [node name="back_btn" type="Button" parent="CanvasLayer/page_2"]
 layout_mode = 2
 size_flags_vertical = 4
 theme_override_font_sizes/font_size = 200
-text = "Back"
+text = "main_menu_back"
 
 [node name="race_selector" type="HBoxContainer" parent="CanvasLayer"]
 anchors_preset = 15
@@ -337,7 +337,7 @@ anchor_bottom = 1.0
 offset_left = 393.0
 offset_top = 843.0
 offset_right = 393.0
-offset_bottom = 843.0
+offset_bottom = 1381.0
 grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
@@ -365,7 +365,7 @@ expand_mode = 4
 [node name="to_race" type="Button" parent="CanvasLayer/race_selector/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 130
-text = "GO"
+text = "main_menu_go"
 
 [node name="right_btn" type="Button" parent="CanvasLayer/race_selector"]
 layout_mode = 2
@@ -381,7 +381,7 @@ anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -558.0
 offset_top = -193.0
-offset_right = -56.0
+offset_right = 498.0
 offset_bottom = -59.0
 grow_horizontal = 2
 grow_vertical = 0
@@ -389,7 +389,7 @@ grow_vertical = 0
 [node name="Button" type="Button" parent="CanvasLayer/to_car_selection"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 90
-text = "Change Car"
+text = "main_menu_change_car"
 
 [node name="MoneyDisplay" parent="CanvasLayer" instance=ExtResource("3_8wpv5")]
 

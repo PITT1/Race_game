@@ -1392,7 +1392,7 @@ offset_right = 6.10352e-05
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 60
-text = "Select"
+text = "select_car_hud_select"
 metadata/_edit_use_anchors_ = true
 
 [node name="go_back" type="Button" parent="CanvasLayer"]
@@ -1404,7 +1404,7 @@ offset_top = 581.0
 offset_right = 5.0
 offset_bottom = 581.0
 theme_override_font_sizes/font_size = 60
-text = "Go Back"
+text = "select_car_hud_back"
 metadata/_edit_use_anchors_ = true
 
 [node name="car_name_label" type="Label" parent="CanvasLayer"]

@@ -29,6 +29,7 @@ var last_checkpoint
 var priority_point_store = []
 var all_checkpoints: int
 var laps_num: int = 1
+var position_from_hud: int = 0
 var vel: int = 0
 
 var previous: int = -1
@@ -92,8 +93,7 @@ func _on_checkpoint_sensor_area_entered(area: Area3D) -> void:
 	
 	if laps_num >= get_parent().laps_num_to_finish + 1:
 			print("FIN DE LA CARRERA")
-			get_parent().race_result.append(name)
-			print(get_parent().race_result)
+			get_parent().race_result = position_from_hud
 			get_parent().player_is_finish = true
 			is_on_race = false
 			engine_force = 0

@@ -1,0 +1,18 @@
+keys,es,en
+main_menu_play,Jugar,Play
+main_menu_options,Opciones,Options
+main_menu_quit,Quit,Salir
+main_menu_change_car,Cambiar vehiculo,Change vehicle
+main_menu_grandprix,Grand Prix,Grand Prix
+main_menu_single_race,Carrera Rapida,Single Race
+main_menu_practice,Practica,Practice
+main_menu_back,Atrás,Back
+main_menu_go,¡Vamos!,Go!
+on_finish_race_1,Finalizaste en:,You finished in:
+on_finish_race_2,Recompensa:,Yoy reward
+on_finish_race_3,Menu principal,To main menu
+race_hud_show_laps,Vuelta:,Lap:
+race_hud_show_pos,Pos:,Pos:
+select_car_hud_back,Atrás,Go back
+select_car_hud_unlock_with,Desbloquear Con:,Unlock with:
+select_car_hud_select,Seleccionar,Select

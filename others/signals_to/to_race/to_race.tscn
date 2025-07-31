@@ -1,8 +1,150 @@
-[gd_scene load_steps=8 format=3 uid="uid://brakaji82desp"]
+[gd_scene load_steps=13 format=3 uid="uid://brakaji82desp"]
 
 [ext_resource type="ArrayMesh" uid="uid://hspr6mh1wqo3" path="res://others/signals_to/to_race/to_race.obj" id="1_iynm8"]
 [ext_resource type="Script" uid="uid://8wxj664ekvsi" path="res://others/signals_to/to_race/to_race.gd" id="1_rrha5"]
-[ext_resource type="PackedScene" uid="uid://dqqd5jgymydsp" path="res://huds/loby_menus/to_race_menu.tscn" id="2_wa4o3"]
+
+[sub_resource type="GDScript" id="GDScript_rrha5"]
+script/source = "extends Control
+
+@onready var anim: AnimationPlayer = $AnimationPlayer
+
+
+func input_anim():
+	anim.play(\"input\")
+	
+func output_anim():
+	anim.play(\"output\")
+
+
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	if anim_name == \"output\":
+		queue_free()
+
+
+func _on_to_f_1_race_button_up() -> void:
+	get_tree().change_scene_to_file(\"res://Maps/circuit_test_2/test_2.tscn\")
+
+
+func _on_to_rc_circuit_button_up() -> void:
+	get_tree().change_scene_to_file(\"res://Maps/rc_circuit/rc_circuit_1.tscn\")
+
+
+func _on_nascar_circuit_button_up() -> void:
+	get_tree().change_scene_to_file(\"res://Maps/nascar_circuit/nascar_circuit.tscn\")
+
+
+func _on_double_circuit_button_up() -> void:
+	get_tree().change_scene_to_file(\"res://Maps/2_vias_circuit_1/pista_doble_1.tscn\")
+
+
+func _on_basic_circuit_button_up() -> void:
+	get_tree().change_scene_to_file(\"res://Maps/basic_circuit_1/basic_circuit_1.tscn\")
+"
+
+[sub_resource type="Animation" id="Animation_gwf60"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/VBoxContainer:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_607i0"]
+resource_name = "input"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/VBoxContainer:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_fgc3l"]
+resource_name = "output"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/VBoxContainer:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_256t0"]
+_data = {
+&"RESET": SubResource("Animation_gwf60"),
+&"input": SubResource("Animation_607i0"),
+&"output": SubResource("Animation_fgc3l")
+}
+
+[sub_resource type="PackedScene" id="PackedScene_wa4o3"]
+_bundled = {
+"conn_count": 6,
+"conns": PackedInt32Array(1073741833, 1073741832, 56, 55, 2, 0, 0, 1073741835, 1073741834, 58, 57, 2, 0, 0, 1073741837, 1073741836, 60, 59, 2, 0, 0, 1073741839, 1073741838, 62, 61, 2, 0, 0, 1073741841, 1073741840, 64, 63, 2, 0, 0, 1073741843, 1073741842, 66, 65, 2, 0, 0),
+"editable_instances": [],
+"names": PackedStringArray("ToRaceMenu", "Control", "layout_mode", "anchors_preset", "anchor_right", "anchor_bottom", "grow_horizontal", "grow_vertical", "script", "CanvasLayer", "CanvasLayer", "scale", "transform", "VBoxContainer", "VBoxContainer", "modulate", "anchors_preset", "anchor_left", "anchor_top", "anchor_right", "anchor_bottom", "offset_left", "offset_top", "offset_right", "offset_bottom", "grow_horizontal", "grow_vertical", "to_f1_race", "Button", "layout_mode", "theme_override_font_sizes/font_size", "text", "to_rc_circuit", "Button", "layout_mode", "theme_override_font_sizes/font_size", "text", "nascar_circuit", "Button", "layout_mode", "theme_override_font_sizes/font_size", "text", "double_circuit", "Button", "layout_mode", "theme_override_font_sizes/font_size", "text", "basic_circuit", "Button", "layout_mode", "theme_override_font_sizes/font_size", "text", "AnimationPlayer", "AnimationPlayer", "libraries", "_on_to_f_1_race_button_up", "button_up", "_on_to_rc_circuit_button_up", "button_up", "_on_nascar_circuit_button_up", "button_up", "_on_double_circuit_button_up", "button_up", "_on_basic_circuit_button_up", "button_up", "_on_animation_player_animation_finished", "animation_finished"),
+"node_count": 9,
+"node_paths": [NodePath("."), NodePath("./CanvasLayer"), NodePath("./CanvasLayer/VBoxContainer"), NodePath("./CanvasLayer/VBoxContainer"), NodePath("./CanvasLayer/VBoxContainer"), NodePath("./CanvasLayer/VBoxContainer"), NodePath("./CanvasLayer/VBoxContainer"), NodePath("."), NodePath("."), NodePath("CanvasLayer/VBoxContainer/to_f1_race"), NodePath("."), NodePath("CanvasLayer/VBoxContainer/to_rc_circuit"), NodePath("."), NodePath("CanvasLayer/VBoxContainer/nascar_circuit"), NodePath("."), NodePath("CanvasLayer/VBoxContainer/double_circuit"), NodePath("."), NodePath("CanvasLayer/VBoxContainer/basic_circuit"), NodePath("."), NodePath("AnimationPlayer")],
+"nodes": PackedInt32Array(-1, -1, 1, 0, -1, 7, 2, 0, 3, 1, 4, 2, 5, 3, 6, 4, 7, 5, 8, 6, 0, 1073741824, 0, 10, 9, -1, 2, 11, 7, 12, 8, 0, 1073741825, 0, 14, 13, -1, 12, 15, 9, 16, 10, 17, 11, 18, 12, 19, 13, 20, 14, 21, 15, 22, 16, 23, 17, 24, 18, 25, 19, 26, 20, 0, 1073741826, 0, 28, 27, -1, 3, 29, 21, 30, 22, 31, 23, 0, 1073741827, 0, 33, 32, -1, 3, 34, 24, 35, 25, 36, 26, 0, 1073741828, 0, 38, 37, -1, 3, 39, 27, 40, 28, 41, 29, 0, 1073741829, 0, 43, 42, -1, 3, 44, 30, 45, 31, 46, 32, 0, 1073741830, 0, 48, 47, -1, 3, 49, 33, 50, 34, 51, 35, 0, 1073741831, 0, 53, 52, -1, 1, 54, 36, 0),
+"variants": [3, 15, 1.0, 1.0, 2, 2, SubResource("GDScript_rrha5"), Vector2(0, 0), Transform2D(0, 0, 0, 0, 0, 0), Color(1, 1, 1, 0), 8, 0.5, 0.5, 0.5, 0.5, -20.0, -20.0, 20.0, 20.0, 2, 2, 2, 33, "F1 race", 2, 33, "RC circuit", 2, 33, "Nascar circuit", 2, 33, "pista double", 2, 33, "basic circuit", {
+&"": SubResource("AnimationLibrary_256t0")
+}],
+"version": 3
+}
 
 [sub_resource type="Animation" id="Animation_wa4o3"]
 length = 0.001
@@ -72,7 +214,7 @@ radius = 1.92432
 
 [node name="ToRace" type="Node3D"]
 script = ExtResource("1_rrha5")
-race_hud = ExtResource("2_wa4o3")
+race_hud = SubResource("PackedScene_wa4o3")
 
 [node name="ToRace" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
