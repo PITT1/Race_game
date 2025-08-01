@@ -29,6 +29,6 @@ metadata/_edit_use_anchors_ = true
 [node name="Button" type="Button" parent="CanvasLayer/CenterContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 70
-text = "Back"
+text = "id_15"
 
 [connection signal="button_up" from="CanvasLayer/CenterContainer/Button" to="." method="_on_button_button_up"]

@@ -140,7 +140,7 @@ grow_vertical = 2
 modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 70
-text = "on_finish_race_1 "
+text = "id_10"
 
 [node name="num_finished_label" type="Label" parent="CanvasLayer/VBoxContainer"]
 modulate = Color(1, 1, 1, 0)
@@ -154,7 +154,7 @@ vertical_alignment = 1
 modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 60
-text = "on_finish_race_2"
+text = "id_11"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -166,12 +166,12 @@ alignment = 1
 [node name="back_btn" type="Button" parent="CanvasLayer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
-text = "on_finish_race_3"
+text = "id_12"
 
 [node name="next_race_btn" type="Button" parent="CanvasLayer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
-text = "Next race"
+text = "id_18"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

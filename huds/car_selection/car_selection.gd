@@ -54,9 +54,9 @@ func _on_left_button_up() -> void:
 	
 	
 	if cars_unloke_data[car_list[selector].name] == false:
-		select_btn.text = "select_car_hud_unlock_with" + str(car_list_global[car_list[selector].name][1])
+		select_btn.text = tr("id_16") + " $" + str(car_list_global[car_list[selector].name][1])
 	else:
-		select_btn.text = "select_car_hud_select"
+		select_btn.set_text("id_17") 
 
 func _on_right_button_up() -> void:
 	if selector + 1 < car_list.size():
@@ -72,9 +72,9 @@ func _on_right_button_up() -> void:
 	
 	
 	if cars_unloke_data[car_list[selector].name] == false:
-		select_btn.text = "select_car_hud_unlock_with" + str(car_list_global[car_list[selector].name][1])
+		select_btn.text = tr("id_16") + " $" + str(car_list_global[car_list[selector].name][1])
 	else:
-		select_btn.text = "select_car_hud_select"
+		select_btn.set_text("id_17") 
 
 
 func _on_go_back_button_up() -> void:
@@ -83,10 +83,10 @@ func _on_go_back_button_up() -> void:
 
 func _on_select_button_up() -> void:
 	var data = JSON.parse_string(global_var.load_data())
-	if select_btn.text.contains("select_car_hud_unlock_with"):
+	if select_btn.text.contains(tr("id_16")):
 		if data.money >= car_list_global[car_list[selector].name][1]: #si el dinero del jugador es mayor o igual al costo del vehiculo
 			data.money -= car_list_global[car_list[selector].name][1]
-			select_btn.text = "select_car_hud_select"
+			select_btn.text = "id_17"
 			cars_unloke_data[car_list[selector].name] = true
 			data.cars_data = cars_unloke_data
 			global_var.save_data(JSON.stringify(data))
