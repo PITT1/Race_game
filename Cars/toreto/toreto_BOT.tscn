@@ -44,6 +44,7 @@ dificulty = 2
 
 [node name="ToretoBody" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0652078)
+lod_bias = 0.5
 mesh = ExtResource("3_cp888")
 surface_material_override/0 = SubResource("StandardMaterial3D_xld1b")
 surface_material_override/1 = SubResource("StandardMaterial3D_dm8l3")
@@ -66,6 +67,7 @@ damping_compression = 10.0
 damping_relaxation = 10.0
 
 [node name="ToretoWheel" type="MeshInstance3D" parent="wheel_1"]
+lod_bias = 0.5
 mesh = ExtResource("4_l0w0e")
 skeleton = NodePath("../..")
 
@@ -82,6 +84,7 @@ damping_relaxation = 10.0
 
 [node name="ToretoWheel" type="MeshInstance3D" parent="wheel_2"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+lod_bias = 0.5
 mesh = ExtResource("4_l0w0e")
 skeleton = NodePath("../..")
 
@@ -98,6 +101,7 @@ damping_relaxation = 10.0
 
 [node name="ToretoRearWheel" type="MeshInstance3D" parent="wheel_3"]
 transform = Transform3D(1.17, 0, 0, 0, 1.17, 0, 0, 0, 1.17, 0, 0, 0)
+lod_bias = 0.5
 mesh = ExtResource("5_inj4q")
 skeleton = NodePath("../..")
 
@@ -114,6 +118,7 @@ damping_relaxation = 10.0
 
 [node name="ToretoRearWheel" type="MeshInstance3D" parent="wheel_4"]
 transform = Transform3D(-1.17, 0, -1.76665e-07, 0, 1.17, 0, 1.76665e-07, 0, -1.17, 0, 0, 0)
+lod_bias = 0.5
 mesh = ExtResource("5_inj4q")
 skeleton = NodePath("../..")
 

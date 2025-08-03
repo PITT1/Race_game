@@ -47,6 +47,7 @@ script = ExtResource("1_du4xg")
 
 [node name="CorvetteBody" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.0208251, -0.928404)
+lod_bias = 0.5
 mesh = ExtResource("2_vvk1t")
 surface_material_override/0 = SubResource("StandardMaterial3D_du4xg")
 surface_material_override/1 = SubResource("StandardMaterial3D_vvk1t")
@@ -71,6 +72,7 @@ damping_relaxation = 10.0
 
 [node name="CorvetteWheel" type="MeshInstance3D" parent="wheel_1"]
 transform = Transform3D(0.62, 0, 0, 0, 0.62, 0, 0, 0, 0.62, 0, 0, 0)
+lod_bias = 0.5
 mesh = ExtResource("4_xk2tc")
 skeleton = NodePath("../..")
 
@@ -87,6 +89,7 @@ damping_relaxation = 10.0
 
 [node name="CorvetteWheel" type="MeshInstance3D" parent="wheel_2"]
 transform = Transform3D(-0.62, 0, -9.36174e-08, 0, 0.62, 0, 9.36174e-08, 0, -0.62, 0, 0, 0)
+lod_bias = 0.5
 mesh = ExtResource("4_xk2tc")
 skeleton = NodePath("../..")
 
@@ -103,6 +106,7 @@ damping_relaxation = 10.0
 
 [node name="CorvetteWheel" type="MeshInstance3D" parent="wheel_3"]
 transform = Transform3D(1.375, 0, 0, 0, 0.62, 0, 0, 0, 0.62, -0.1, 0, 0)
+lod_bias = 0.5
 mesh = ExtResource("4_xk2tc")
 
 [node name="wheel_4" type="VehicleWheel3D" parent="."]
@@ -118,6 +122,7 @@ damping_relaxation = 10.0
 
 [node name="CorvetteWheel" type="MeshInstance3D" parent="wheel_4"]
 transform = Transform3D(-1.375, 0, -9.36174e-08, 0, 0.62, 0, 2.07619e-07, 0, -0.62, 0.1, 0, 0)
+lod_bias = 0.5
 mesh = ExtResource("4_xk2tc")
 skeleton = NodePath("../..")
 

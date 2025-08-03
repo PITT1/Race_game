@@ -40,6 +40,7 @@ script = ExtResource("1_u3bej")
 
 [node name="Hot-rod-body" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0234684)
+lod_bias = 0.5
 mesh = ExtResource("2_qdks1")
 surface_material_override/0 = SubResource("StandardMaterial3D_qdks1")
 surface_material_override/1 = SubResource("StandardMaterial3D_wrbpk")
@@ -62,6 +63,7 @@ damping_compression = 10.0
 damping_relaxation = 10.0
 
 [node name="WheelHotrod1" type="MeshInstance3D" parent="wheel_1"]
+lod_bias = 0.5
 mesh = ExtResource("4_qdks1")
 skeleton = NodePath("../..")
 
@@ -77,6 +79,7 @@ damping_compression = 10.0
 damping_relaxation = 10.0
 
 [node name="WheelHotrod2" type="MeshInstance3D" parent="wheel_2"]
+lod_bias = 0.5
 mesh = ExtResource("4_qdks1")
 skeleton = NodePath("../../wheel_1")
 
@@ -93,6 +96,7 @@ damping_relaxation = 10.0
 
 [node name="WheelHotrod3" type="MeshInstance3D" parent="wheel_3"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+lod_bias = 0.5
 mesh = ExtResource("4_qdks1")
 skeleton = NodePath("../../wheel_1")
 
@@ -109,6 +113,7 @@ damping_relaxation = 10.0
 
 [node name="WheelHotrod4" type="MeshInstance3D" parent="wheel_4"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+lod_bias = 0.5
 mesh = ExtResource("4_qdks1")
 skeleton = NodePath("../../wheel_1")
 

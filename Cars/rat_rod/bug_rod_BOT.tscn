@@ -40,6 +40,7 @@ dificulty = 2
 
 [node name="BugCarBody" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.129173)
+lod_bias = 0.5
 mesh = ExtResource("2_0pkha")
 surface_material_override/0 = SubResource("StandardMaterial3D_qnlqo")
 surface_material_override/1 = SubResource("StandardMaterial3D_c4f5u")
@@ -61,6 +62,7 @@ damping_compression = 10.0
 damping_relaxation = 10.0
 
 [node name="BugCarFrontWheel" type="MeshInstance3D" parent="wheel_1"]
+lod_bias = 0.5
 mesh = ExtResource("3_31ayi")
 skeleton = NodePath("../..")
 
@@ -77,6 +79,7 @@ damping_relaxation = 10.0
 
 [node name="BugCarFrontWheel" type="MeshInstance3D" parent="wheel_2"]
 transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0, 0, 0)
+lod_bias = 0.5
 mesh = ExtResource("3_31ayi")
 skeleton = NodePath("../..")
 
@@ -92,6 +95,7 @@ damping_compression = 10.0
 damping_relaxation = 10.0
 
 [node name="BugCarRearWheel" type="MeshInstance3D" parent="wheel_3"]
+lod_bias = 0.5
 mesh = ExtResource("4_qnlqo")
 skeleton = NodePath("../..")
 
@@ -108,6 +112,7 @@ damping_relaxation = 10.0
 
 [node name="BugCarRearWheel" type="MeshInstance3D" parent="wheel_4"]
 transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0, 0, 0)
+lod_bias = 0.5
 mesh = ExtResource("4_qnlqo")
 skeleton = NodePath("../..")
 

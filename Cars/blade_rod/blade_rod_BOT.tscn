@@ -250,6 +250,7 @@ damping_relaxation = 10.0
 
 [node name="HotRod2FrontWheel" type="MeshInstance3D" parent="wheel_1"]
 transform = Transform3D(0.57, 0, 0, 0, 0.57, 0, 0, 0, 0.57, 0.00183773, 0, -0.00718415)
+lod_bias = 0.5
 mesh = ExtResource("2_svmar")
 
 [node name="wheel_2" type="VehicleWheel3D" parent="."]
@@ -265,6 +266,7 @@ damping_relaxation = 10.0
 
 [node name="HotRod2FrontWheel" type="MeshInstance3D" parent="wheel_2"]
 transform = Transform3D(-0.57, 0, -8.60676e-08, 0, 0.57, 0, 8.60676e-08, 0, -0.57, 0.00183773, 0, -0.00718415)
+lod_bias = 0.5
 mesh = ExtResource("2_svmar")
 
 [node name="wheel_3" type="VehicleWheel3D" parent="."]
@@ -280,6 +282,7 @@ damping_relaxation = 10.0
 
 [node name="HotRod2RearWheel" type="MeshInstance3D" parent="wheel_3"]
 transform = Transform3D(0.64, 0, 0, 0, 0.64, 0, 0, 0, 0.64, 0, 0, 0)
+lod_bias = 0.5
 mesh = ExtResource("3_uijpc")
 
 [node name="wheel_4" type="VehicleWheel3D" parent="."]
@@ -295,6 +298,7 @@ damping_relaxation = 10.0
 
 [node name="HotRod2RearWheel" type="MeshInstance3D" parent="wheel_4"]
 transform = Transform3D(-0.64, 0, -5.59506e-08, 0, 0.64, 0, 5.59506e-08, 0, -0.64, 0, 0, 0)
+lod_bias = 0.5
 mesh = ExtResource("3_uijpc")
 skeleton = NodePath("../..")
 
@@ -316,6 +320,7 @@ collision_mask = 2
 
 [node name="HotRod2Body" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.57, 0, 0, 0, 0.57, 0, 0, 0, 0.57, 0, 0, 0)
+lod_bias = 0.5
 mesh = SubResource("ArrayMesh_nvvph")
 surface_material_override/0 = SubResource("StandardMaterial3D_e3kia")
 surface_material_override/2 = SubResource("StandardMaterial3D_qnv5u")

@@ -40,6 +40,7 @@ script = ExtResource("1_f8fad")
 
 [node name="EmpalerTruckBody" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.735, 0, 0, 0, 0.735, 0, 0, 0, 0.735, 0, 0, 0.889656)
+lod_bias = 0.2
 mesh = ExtResource("1_vjgtb")
 surface_material_override/0 = SubResource("StandardMaterial3D_3d4ap")
 surface_material_override/2 = SubResource("StandardMaterial3D_e3jqu")
@@ -63,6 +64,7 @@ damping_relaxation = 10.0
 
 [node name="EmpalerTruckFrontWheel" type="MeshInstance3D" parent="wheel_1"]
 transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 0, 0)
+lod_bias = 0.5
 mesh = ExtResource("2_f8fad")
 skeleton = NodePath("../..")
 
@@ -79,6 +81,7 @@ damping_relaxation = 10.0
 
 [node name="EmpalerTruckFrontWheel" type="MeshInstance3D" parent="wheel_2"]
 transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 0, 0)
+lod_bias = 0.5
 mesh = ExtResource("2_f8fad")
 skeleton = NodePath("../..")
 
@@ -95,6 +98,7 @@ damping_relaxation = 10.0
 
 [node name="EmpalerTruckFrontWheel" type="MeshInstance3D" parent="wheel_3"]
 transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 0, 0)
+lod_bias = 0.5
 mesh = ExtResource("2_f8fad")
 skeleton = NodePath("../..")
 
@@ -111,6 +115,7 @@ damping_relaxation = 10.0
 
 [node name="EmpalerTruckFrontWheel" type="MeshInstance3D" parent="wheel_4"]
 transform = Transform3D(-0.9, 0, -1.35896e-07, 0, 0.9, 0, 1.35896e-07, 0, -0.9, 0, 0, 0)
+lod_bias = 0.5
 mesh = ExtResource("2_f8fad")
 skeleton = NodePath("../..")
 
@@ -127,6 +132,7 @@ damping_relaxation = 10.0
 
 [node name="EmpalerTruckFrontWheel" type="MeshInstance3D" parent="wheel_5"]
 transform = Transform3D(-0.9, 0, -7.86805e-08, 0, 0.9, 0, 7.86805e-08, 0, -0.9, 0, 0, 0)
+lod_bias = 0.5
 mesh = ExtResource("2_f8fad")
 skeleton = NodePath("../..")
 
@@ -143,6 +149,7 @@ damping_relaxation = 10.0
 
 [node name="EmpalerTruckFrontWheel" type="MeshInstance3D" parent="wheel_6"]
 transform = Transform3D(-0.9, 0, -7.86805e-08, 0, 0.9, 0, 7.86805e-08, 0, -0.9, 0, 0, 0)
+lod_bias = 0.5
 mesh = ExtResource("2_f8fad")
 skeleton = NodePath("../..")
 
