@@ -63,8 +63,12 @@ func put_cars():
 	var bots: Dictionary = global_var.bot_list
 	var bot_adress: Array = bots.values()
 	var bots_random: Array
-	for i in bot_adress:
-		bots_random.append(bot_adress.pick_random())
+	
+	while bots_random.size() <= vehicle_num:
+		var pick_random: String = bot_adress.pick_random()
+		if not bots_random.has(pick_random):
+			bots_random.append(pick_random)
+	
 	
 	starting_grid.append(global_var.car_list[player.car][0])
 	for i in vehicle_num: #car_spawners.size() cantidad de carros que apareceran
