@@ -60,13 +60,15 @@ func get_cars():
 
 func put_cars():
 	var player = JSON.parse_string(global_var.load_data())
-	var bots = global_var.bot_list
-	bots.sort()
-	var bots_sort = bots
-	var bot_adress = bots_sort.values()
+	var bots: Dictionary = global_var.bot_list
+	var bot_adress: Array = bots.values()
+	var bots_random: Array
+	for i in bot_adress:
+		bots_random.append(bot_adress.pick_random())
+	
 	starting_grid.append(global_var.car_list[player.car][0])
 	for i in vehicle_num: #car_spawners.size() cantidad de carros que apareceran
-		starting_grid.append(bot_adress[i])
+		starting_grid.append(bots_random[i])
 	
 	starting_grid.pop_back()
 	starting_grid.reverse() #autos para la linea de partida + el jugador

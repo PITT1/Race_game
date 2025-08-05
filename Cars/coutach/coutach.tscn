@@ -1,5 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://d3myqwmyfi1ag"]
+[gd_scene load_steps=12 format=3 uid="uid://d3myqwmyfi1ag"]
 
+[ext_resource type="PhysicsMaterial" uid="uid://dioc2dlho64fc" path="res://car_physic_material/car_physic.tres" id="1_28i8o"]
 [ext_resource type="Script" uid="uid://dn8cru75adetk" path="res://player_controller/player_controller.gd" id="1_obppx"]
 [ext_resource type="ArrayMesh" uid="uid://bct26e6v51le1" path="res://Cars/coutach/Countach_body.obj" id="2_ppwx5"]
 [ext_resource type="ArrayMesh" uid="uid://dljhijh5c3n6q" path="res://Cars/coutach/Countach_wheel.obj" id="3_28i8o"]
@@ -34,11 +35,14 @@ radius = 1.80891
 [node name="Coutach" type="VehicleBody3D"]
 collision_mask = 1019
 mass = 200.0
+physics_material_override = ExtResource("1_28i8o")
+gravity_scale = 4.0
 center_of_mass_mode = 1
 center_of_mass = Vector3(0, -1, 0)
 script = ExtResource("1_obppx")
 
 [node name="CountachBody" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.557507, -0.0922555)
 lod_bias = 0.5
 mesh = ExtResource("2_ppwx5")
 surface_material_override/0 = SubResource("StandardMaterial3D_obppx")
@@ -47,72 +51,75 @@ surface_material_override/2 = SubResource("StandardMaterial3D_28i8o")
 surface_material_override/3 = SubResource("StandardMaterial3D_p5q20")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.557507, -0.0922555)
 shape = SubResource("ConvexPolygonShape3D_p5q20")
 
 [node name="wheel_1" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.838961, -0.668959, 1.469)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.868373, -0.0278009, 1.4015)
 use_as_steering = true
 wheel_roll_influence = 1.5
-wheel_radius = 0.43
+wheel_radius = 0.425
 wheel_friction_slip = 10.0
-suspension_stiffness = 150.0
+suspension_stiffness = 200.0
 suspension_max_force = 100000.0
 damping_compression = 10.0
 damping_relaxation = 10.0
 
 [node name="CountachWheel" type="MeshInstance3D" parent="wheel_1"]
+transform = Transform3D(0.87, 0, 0, 0, 0.87, 0, 0, 0, 0.87, 0, 0, 0)
 mesh = ExtResource("3_28i8o")
 skeleton = NodePath("../..")
 
 [node name="wheel_2" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.839, -0.663399, 1.46874)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.868, -0.0278009, 1.40184)
 use_as_steering = true
 wheel_roll_influence = 1.5
-wheel_radius = 0.43
+wheel_radius = 0.425
 wheel_friction_slip = 10.0
-suspension_stiffness = 150.0
+suspension_stiffness = 200.0
 suspension_max_force = 100000.0
 damping_compression = 10.0
 damping_relaxation = 10.0
 
 [node name="CountachWheel2" type="MeshInstance3D" parent="wheel_2"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.87, 0, -7.60578e-08, 0, 0.87, 0, 7.60578e-08, 0, -0.87, 0, 0, 0)
 mesh = ExtResource("3_28i8o")
 skeleton = NodePath("../..")
 
 [node name="wheel_3" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.838961, -0.682159, -1.37283)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.868041, -0.042196, -1.4413)
 use_as_traction = true
 wheel_roll_influence = 1.5
-wheel_radius = 0.43
+wheel_radius = 0.425
 wheel_friction_slip = 10.0
-suspension_stiffness = 150.0
+suspension_stiffness = 200.0
 suspension_max_force = 100000.0
 damping_compression = 10.0
 damping_relaxation = 10.0
 
 [node name="CountachWheel3" type="MeshInstance3D" parent="wheel_3"]
+transform = Transform3D(0.87, 0, 0, 0, 0.87, 0, 0, 0, 0.87, 0, 0, 0)
 mesh = ExtResource("3_28i8o")
 skeleton = NodePath("../..")
 
 [node name="wheel_4" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.839, -0.6762, -1.37283)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.868, -0.042196, -1.4413)
 use_as_traction = true
 wheel_roll_influence = 1.5
-wheel_radius = 0.43
+wheel_radius = 0.425
 wheel_friction_slip = 10.0
-suspension_stiffness = 150.0
+suspension_stiffness = 200.0
 suspension_max_force = 100000.0
 damping_compression = 10.0
 damping_relaxation = 10.0
 
 [node name="CountachWheel4" type="MeshInstance3D" parent="wheel_4"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.87, 0, -7.60578e-08, 0, 0.87, 0, 7.60578e-08, 0, -0.87, 0, 0, 0)
 mesh = ExtResource("3_28i8o")
 skeleton = NodePath("../..")
 
 [node name="checkpoint_sensor" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.115698)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.219836)
 collision_layer = 0
 collision_mask = 128
 
@@ -121,5 +128,23 @@ shape = SubResource("SphereShape3D_28i8o")
 debug_color = Color(0.47455, 0.00208011, 0.733338, 0.133333)
 
 [node name="RaceHud" parent="." instance=ExtResource("4_ppwx5")]
+
+[node name="bumper_1" type="VehicleWheel3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7165, 0.126119, 2.26276)
+use_as_steering = true
+wheel_roll_influence = 1.5
+wheel_radius = 0.425
+wheel_friction_slip = 1.0
+suspension_stiffness = 200.0
+suspension_max_force = 100000.0
+
+[node name="bumper_2" type="VehicleWheel3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.716, 0.126, 2.263)
+use_as_steering = true
+wheel_roll_influence = 1.5
+wheel_radius = 0.425
+wheel_friction_slip = 1.0
+suspension_stiffness = 200.0
+suspension_max_force = 100000.0
 
 [connection signal="area_entered" from="checkpoint_sensor" to="." method="_on_checkpoint_sensor_area_entered"]
