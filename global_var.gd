@@ -18,7 +18,8 @@ var car_list = { #direccion y precio en tienda
 	monster = ["res://Cars/monster/monster.tscn", 10000],
 	z40 = ["res://Cars/z40/z40.tscn", 25000],
 	toreto = ["res://Cars/toreto/toreto.tscn", 28000],
-	nomad = ["res://Cars/nomad/nomad.tscn", 20000]
+	nomad = ["res://Cars/nomad/nomad.tscn", 20000],
+	coutach = ["res://Cars/coutach/coutach.tscn", 40000]
 }
 
 var bot_list = {
@@ -36,7 +37,8 @@ var bot_list = {
 	monster_BOT = "res://Cars/monster/monster_BOT.tscn",
 	z40_BOT = "res://Cars/z40/z40_BOT.tscn",
 	toreto_BOT = "res://Cars/toreto/toreto_BOT.tscn",
-	nomad_BOT = "res://Cars/nomad/nomad_BOT.tscn"
+	nomad_BOT = "res://Cars/nomad/nomad_BOT.tscn",
+	coutach_BOT = "res://Cars/coutach/coutach_BOT.tscn"
 }
 #nobre de la pista, direccion de la pista, imagen de la pista, si esta desbloqueado o no
 var track_list = {
