@@ -23,80 +23,88 @@ radius = 2.404
 collision_mask = 1019
 mass = 200.0
 physics_material_override = ExtResource("1_07jqt")
-gravity_scale = 5.0
+gravity_scale = 4.0
 center_of_mass_mode = 1
-center_of_mass = Vector3(0, -2, 0)
+center_of_mass = Vector3(0, -1, 0)
 script = ExtResource("2_m0uk8")
 
 [node name="NomadBody" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.345405, -0.228443)
 mesh = ExtResource("1_clnsf")
 surface_material_override/0 = SubResource("StandardMaterial3D_xld48")
 surface_material_override/3 = SubResource("StandardMaterial3D_ejo1p")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.345405, -0.228443)
 shape = SubResource("ConvexPolygonShape3D_07jqt")
 
 [node name="wheel_1" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.886, -0.605485, 1.63645)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.813088, -0.12013, 1.47386)
 use_as_steering = true
-wheel_roll_influence = 2.0
-wheel_radius = 0.505
+wheel_roll_influence = 1.5
+wheel_radius = 0.515
 wheel_friction_slip = 10.0
-suspension_stiffness = 150.0
+suspension_stiffness = 200.0
 suspension_max_force = 100000.0
 damping_compression = 10.0
 damping_relaxation = 10.0
 
 [node name="NomadWheel" type="MeshInstance3D" parent="wheel_1"]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
+lod_bias = 0.5
 mesh = ExtResource("3_py1xi")
+skeleton = NodePath("../..")
 
 [node name="wheel_2" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.88, -0.605883, 1.63618)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.813, -0.12013, 1.4742)
 use_as_steering = true
-wheel_roll_influence = 2.0
-wheel_radius = 0.505
+wheel_roll_influence = 1.5
+wheel_radius = 0.515
 wheel_friction_slip = 10.0
-suspension_stiffness = 150.0
+suspension_stiffness = 200.0
 suspension_max_force = 100000.0
 damping_compression = 10.0
 damping_relaxation = 10.0
 
-[node name="NomadWheel" type="MeshInstance3D" parent="wheel_2"]
+[node name="NomadWheel2" type="MeshInstance3D" parent="wheel_2"]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
+lod_bias = 0.5
 mesh = ExtResource("3_py1xi")
+skeleton = NodePath("../..")
 
 [node name="wheel_3" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.886, -0.618684, -1.37256)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.812756, -0.0251866, -1.74741)
 use_as_traction = true
-wheel_roll_influence = 2.0
-wheel_radius = 0.505
+wheel_roll_influence = 1.5
+wheel_radius = 0.515
 wheel_friction_slip = 10.0
-suspension_stiffness = 150.0
+suspension_stiffness = 200.0
 suspension_max_force = 100000.0
 damping_compression = 10.0
 damping_relaxation = 10.0
 
-[node name="NomadWheel" type="MeshInstance3D" parent="wheel_3"]
+[node name="NomadWheel3" type="MeshInstance3D" parent="wheel_3"]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
+lod_bias = 0.5
 mesh = ExtResource("3_py1xi")
+skeleton = NodePath("../..")
 
 [node name="wheel_4" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.88, -0.618684, -1.37256)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.813, -0.0251866, -1.74741)
 use_as_traction = true
-wheel_roll_influence = 2.0
-wheel_radius = 0.505
+wheel_roll_influence = 1.5
+wheel_radius = 0.515
 wheel_friction_slip = 10.0
-suspension_stiffness = 150.0
+suspension_stiffness = 200.0
 suspension_max_force = 100000.0
 damping_compression = 10.0
 damping_relaxation = 10.0
 
-[node name="NomadWheel" type="MeshInstance3D" parent="wheel_4"]
+[node name="NomadWheel4" type="MeshInstance3D" parent="wheel_4"]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
+lod_bias = 0.5
 mesh = ExtResource("3_py1xi")
+skeleton = NodePath("../..")
 
 [node name="checkpoint_sensor" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.043565)
@@ -106,6 +114,24 @@ collision_mask = 128
 [node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoint_sensor"]
 shape = SubResource("SphereShape3D_xld48")
 debug_color = Color(0.941176, 0.890196, 1, 0.615686)
+
+[node name="bumper_1" type="VehicleWheel3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7165, -0.0335896, 2.1846)
+use_as_steering = true
+wheel_roll_influence = 1.5
+wheel_radius = 0.425
+wheel_friction_slip = 1.0
+suspension_stiffness = 200.0
+suspension_max_force = 100000.0
+
+[node name="bumper_2" type="VehicleWheel3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.716, -0.0337086, 2.18484)
+use_as_steering = true
+wheel_roll_influence = 1.5
+wheel_radius = 0.425
+wheel_friction_slip = 1.0
+suspension_stiffness = 200.0
+suspension_max_force = 100000.0
 
 [node name="RaceHud" parent="." instance=ExtResource("6_m0uk8")]
 

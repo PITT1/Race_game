@@ -1,28 +1,23 @@
-[gd_scene load_steps=10 format=3 uid="uid://dtfi4a51gx5qf"]
+[gd_scene load_steps=9 format=3 uid="uid://dtfi4a51gx5qf"]
 
 [ext_resource type="Script" uid="uid://bub163oegeem3" path="res://BOT_sistem/BOTS_for_race.gd" id="1_m1ul4"]
 [ext_resource type="ArrayMesh" uid="uid://bct26e6v51le1" path="res://Cars/coutach/Countach_body.obj" id="2_2bcoa"]
 [ext_resource type="ArrayMesh" uid="uid://dljhijh5c3n6q" path="res://Cars/coutach/Countach_wheel.obj" id="3_7ykmc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m1ul4"]
-albedo_color = Color(0.724951, 0.891586, 0.988656, 1)
-metallic = 0.44
-roughness = 0.67
+albedo_color = Color(0.892034, 0.892034, 0.892034, 1)
+metallic = 0.74
+roughness = 0.46
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2bcoa"]
-albedo_color = Color(0.152476, 0.152476, 0.152476, 1)
-metallic = 0.77
-roughness = 0.21
+albedo_color = Color(0, 0, 0, 1)
+metallic = 0.7
+roughness = 0.39
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7ykmc"]
-albedo_color = Color(0, 0, 0, 1)
-metallic = 1.0
-roughness = 0.0
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5bg4d"]
 albedo_color = Color(1, 0, 0, 1)
-metallic = 0.9
-roughness = 0.33
+metallic = 0.7
+roughness = 0.13
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_w6ttq"]
 points = PackedVector3Array(-0.943697, -0.269981, -1.99368, 1.09859, -0.486312, 1.08845, -1.14562, -0.812448, 1.92743, 1.1012, -0.65729, -1.86905, -0.588937, 0.201192, -0.786599, 0.791306, 0.117328, -2.0244, -0.990448, -0.269981, 2.31485, 0.735968, -0.7737, 2.45349, -0.990448, -0.734922, -1.86905, -1.06803, 0.117328, -1.48163, 0.616796, 0.197066, 0.556453, 1.02361, -0.269981, 2.31485, 1.1012, 0.117328, -0.784477, -0.649747, 0.196585, 0.556109, 0.769789, -0.7495, -1.3525, -0.680558, -0.424926, 2.62507, 1.02372, -0.7737, 1.94994, -1.14562, -0.65729, -1.86905, 0.307191, -0.560591, -2.10266, -0.758144, 0.117328, -2.0244, -0.702806, -0.7737, 2.45349, 0.0939397, -0.424926, 2.70275, 0.626458, 0.204585, -0.725913, -1.14562, -0.65729, 2.00511, 1.02361, 0.117328, -1.55931, -0.648384, -0.491622, -2.06841, -0.864644, 0.00119578, 1.23995, 0.545012, 0.192532, 0.619029, 0.946251, -0.347294, 2.4702, -0.649069, 0.0259117, -2.07077, 0.979223, -0.196075, -1.99914, 1.10111, -0.703851, 1.01798)
@@ -38,14 +33,13 @@ center_of_mass_mode = 1
 center_of_mass = Vector3(0, -1, 0)
 script = ExtResource("1_m1ul4")
 
-[node name="CountachBody" type="MeshInstance3D" parent="."]
+[node name="CountachBody2" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.557507, -0.0922555)
 lod_bias = 0.5
 mesh = ExtResource("2_2bcoa")
 surface_material_override/0 = SubResource("StandardMaterial3D_m1ul4")
 surface_material_override/1 = SubResource("StandardMaterial3D_2bcoa")
-surface_material_override/2 = SubResource("StandardMaterial3D_7ykmc")
-surface_material_override/3 = SubResource("StandardMaterial3D_5bg4d")
+surface_material_override/3 = SubResource("StandardMaterial3D_7ykmc")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.557507, -0.0922555)
