@@ -110,5 +110,6 @@ shape = SubResource("SphereShape3D_g2ypv")
 debug_color = Color(0.941176, 0.890196, 1, 0.615686)
 
 [node name="RaceHud" parent="." instance=ExtResource("6_rwupv")]
+metadata/_edit_use_anchors_ = true
 
 [connection signal="area_entered" from="checkpoint_sensor" to="." method="_on_checkpoint_sensor_area_entered"]

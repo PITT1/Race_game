@@ -19,7 +19,8 @@ var car_list = { #direccion y precio en tienda
 	z40 = ["res://Cars/z40/z40.tscn", 25000],
 	toreto = ["res://Cars/toreto/toreto.tscn", 28000],
 	nomad = ["res://Cars/nomad/nomad.tscn", 20000],
-	coutach = ["res://Cars/coutach/coutach.tscn", 40000]
+	coutach = ["res://Cars/coutach/coutach.tscn", 40000],
+	p_917k = ["res://Cars/p_917K/917k.tscn", 35000]
 }
 
 var bot_list = {

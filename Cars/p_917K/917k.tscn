@@ -1,0 +1,108 @@
+[gd_scene load_steps=8 format=3 uid="uid://csba84s0ui3u7"]
+
+[ext_resource type="ArrayMesh" uid="uid://bl6xiw16ajooo" path="res://Cars/p_917K/porsche_917_body.obj" id="1_mdlq6"]
+[ext_resource type="PhysicsMaterial" uid="uid://dioc2dlho64fc" path="res://car_physic_material/car_physic.tres" id="1_vdcbv"]
+[ext_resource type="Script" uid="uid://dn8cru75adetk" path="res://player_controller/player_controller.gd" id="2_kskex"]
+[ext_resource type="ArrayMesh" uid="uid://bobsj7aai5w76" path="res://Cars/f1_70s/f1-70s_front_wheel.obj" id="4_fah8l"]
+[ext_resource type="PackedScene" uid="uid://1d1e5ll020cp" path="res://huds/on_race_huds/race_hud.tscn" id="5_fah8l"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_vdcbv"]
+points = PackedVector3Array(0.959745, 0.345616, 1.77593, 0.958242, 0.427889, 2.35279, 0.958242, 0.193615, 2.26386, 0.958242, -0.409934, 0.932312, 0.958242, -0.386661, -0.644119, 0.958242, -0.348115, -1.66467, 0.958242, -0.343115, -1.79281, 0.958242, -0.182023, -1.7805, 0.958242, 0.129706, -1.75633, 0.958242, 0.187797, -1.62318, 0.958242, 0.247343, -1.46676, 0.958242, 0.272525, -1.33543, 0.213444, 0.51389, 0.210446, 0.213444, 0.51289, 0.28432, 0, 0.518708, 0.283408, -0.95843, 0.427889, 2.35279, 0.566302, 0.296707, 2.31995, 0.638076, 0.29407, 2.31859, 0.61459, 0.237979, 2.29761, 0.598995, 0.211979, 2.28758, 0.570248, 0.206706, 2.28575, 0.236366, -0.401661, 1.49457, -0.95843, -0.409934, 0.932312, -0.95843, -0.386661, -0.644119, 0.648035, -0.375388, -0.961047, -0.95843, -0.348115, -1.66467, 0, -0.330115, -2.12752, 0.648035, -0.358297, -1.40247, 0.91653, -0.330115, -2.11293, 0.91653, -0.178205, -2.10381, 0.91653, -0.0700228, -2.09697, 0.367138, -0.330115, -2.12205, -0.95843, 0.129706, -1.75633, 0.816009, 0.162979, -1.68018, 0.84889, -0.0323862, -2.04453, 0.840998, 0.0364324, -1.92232, 0.687867, 0.0979783, -1.81288, -0.95843, 0.187797, -1.62318, -0.95843, 0.247343, -1.46676, 0.0770351, 0.496072, -0.565229, 0.109728, 0.491981, -0.545164, 0.105594, 0.51789, 0.0914273, 0, 0.518708, 0.0959873, -0.105782, 0.51789, 0.0914273, -0.213632, 0.51389, 0.210446, -0.213632, 0.51289, 0.28432, -0.959745, 0.345616, 1.77593, -0.95843, 0.193615, 2.26386, -0.638264, 0.29407, 2.31859, -0.56649, 0.296707, 2.31995, -0.95843, 0.272525, -1.33543, 0.384612, 0.215888, 2.2894, 0.625112, 0.273161, 2.31083, -0.570436, 0.206706, 2.28575, -0.236554, -0.401661, 1.49457, -0.648222, -0.375388, -0.961047, -0.95843, -0.343115, -1.79281, -0.648222, -0.358297, -1.40247, -0.367326, -0.330115, -2.12205, -0.501292, -0.308842, -2.25931, 0.501104, -0.308842, -2.25931, 0.538494, -0.308842, -2.25612, 0.890977, -0.308842, -2.22557, 0.890977, -0.176933, -2.2128, 0.86843, -0.202387, -2.24791, 0.830664, -0.221387, -2.27892, 0.780122, -0.0988412, -2.16036, 0.820706, -0.0700228, -2.11111, -0.816197, 0.162979, -1.68018, -0.688243, 0.0979783, -1.81288, -0.841186, 0.0364324, -1.92232, -0.849077, -0.0323862, -2.04453, -0.916718, -0.0700228, -2.09697, -0.95843, -0.182023, -1.7805, 0.718681, -0.0269316, -2.03495, -0.077223, 0.496072, -0.565229, 0, 0.50389, -0.425234, -0.109916, 0.491981, -0.545164, -0.599183, 0.211979, 2.28758, -0.614778, 0.237979, 2.29761, -0.6253, 0.273161, 2.31083, -0.3848, 0.215888, 2.2894, -0.916718, -0.178205, -2.10381, -0.916718, -0.330115, -2.11293, -0.538682, -0.308842, -2.25612, -0.830852, -0.274479, -2.28074, -0.538119, -0.274479, -2.30354, 0.537931, -0.274479, -2.30354, 0.830664, -0.274479, -2.28074, 0.775988, -0.253569, -2.29488, 0.506365, -0.221387, -2.29625, 0.6377, -0.130205, -2.21325, 0.71436, -0.120023, -2.19593, 0.570436, -0.11175, -2.18225, -0.780309, -0.0988412, -2.16036, -0.820894, -0.0700228, -2.11111, -0.718869, -0.0269316, -2.03495, -0.830852, -0.221387, -2.27892, -0.868618, -0.202387, -2.24791, -0.891165, -0.176933, -2.2128, -0.891165, -0.308842, -2.22557, -0.776176, -0.253569, -2.29488, -0.519705, -0.253569, -2.30582, 0.519517, -0.253569, -2.30582, 0.506365, -0.241569, -2.30263, -0.506553, -0.221387, -2.29625, -0.637888, -0.130205, -2.21325, -0.570624, -0.11175, -2.18225, -0.714548, -0.120023, -2.19593, -0.506553, -0.241569, -2.30263)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_5e0vh"]
+radius = 2.404
+
+[node name="p_917k" type="VehicleBody3D"]
+collision_mask = 1019
+mass = 200.0
+physics_material_override = ExtResource("1_vdcbv")
+gravity_scale = 4.0
+center_of_mass_mode = 1
+center_of_mass = Vector3(0, -1, 0)
+script = ExtResource("2_kskex")
+
+[node name="Porsche917Body" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.205259, 0)
+mesh = ExtResource("1_mdlq6")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.205259, 0)
+shape = SubResource("ConvexPolygonShape3D_vdcbv")
+
+[node name="wheel_1" type="VehicleWheel3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.813088, -0.12013, 1.1898)
+use_as_steering = true
+wheel_roll_influence = 1.5
+wheel_radius = 0.38
+wheel_friction_slip = 10.0
+suspension_stiffness = 200.0
+suspension_max_force = 100000.0
+damping_compression = 10.0
+damping_relaxation = 10.0
+
+[node name="F1-70sFrontWheel" type="MeshInstance3D" parent="wheel_1"]
+transform = Transform3D(-0.225, 0, -1.96701e-08, 0, 0.225, 0, 1.96701e-08, 0, -0.225, 0, 0, 0)
+mesh = ExtResource("4_fah8l")
+skeleton = NodePath("../..")
+
+[node name="wheel_2" type="VehicleWheel3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.813, -0.12013, 1.19014)
+use_as_steering = true
+wheel_roll_influence = 1.5
+wheel_radius = 0.38
+wheel_friction_slip = 10.0
+suspension_stiffness = 200.0
+suspension_max_force = 100000.0
+damping_compression = 10.0
+damping_relaxation = 10.0
+
+[node name="F1-70sFrontWheel2" type="MeshInstance3D" parent="wheel_2"]
+transform = Transform3D(0.225, 0, 0, 0, 0.225, 0, 0, 0, 0.225, 0, 0, 0)
+mesh = ExtResource("4_fah8l")
+skeleton = NodePath("../..")
+
+[node name="wheel_3" type="VehicleWheel3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.812756, -0.0251866, -1.46545)
+use_as_traction = true
+wheel_roll_influence = 1.5
+wheel_radius = 0.38
+wheel_friction_slip = 10.0
+suspension_stiffness = 200.0
+suspension_max_force = 100000.0
+damping_compression = 10.0
+damping_relaxation = 10.0
+
+[node name="F1-70sFrontWheel3" type="MeshInstance3D" parent="wheel_3"]
+transform = Transform3D(-0.385, 0, -1.96701e-08, 0, 0.225, 0, 3.36578e-08, 0, -0.225, 0, 0, 0)
+mesh = ExtResource("4_fah8l")
+skeleton = NodePath("../..")
+
+[node name="wheel_4" type="VehicleWheel3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.813, -0.0251866, -1.46545)
+use_as_traction = true
+wheel_roll_influence = 1.5
+wheel_radius = 0.38
+wheel_friction_slip = 10.0
+suspension_stiffness = 200.0
+suspension_max_force = 100000.0
+damping_compression = 10.0
+damping_relaxation = 10.0
+
+[node name="F1-70sFrontWheel4" type="MeshInstance3D" parent="wheel_4"]
+transform = Transform3D(0.385, 0, 0, 0, 0.225, 0, 0, 0, 0.225, 0, 0, 0)
+mesh = ExtResource("4_fah8l")
+skeleton = NodePath("../..")
+
+[node name="checkpoint_sensor" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0864999)
+collision_layer = 0
+collision_mask = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoint_sensor"]
+shape = SubResource("SphereShape3D_5e0vh")
+debug_color = Color(0.941176, 0.890196, 1, 0.615686)
+
+[node name="RaceHud" parent="." instance=ExtResource("5_fah8l")]
+metadata/_edit_use_anchors_ = true
+
+[connection signal="area_entered" from="checkpoint_sensor" to="." method="_on_checkpoint_sensor_area_entered"]
