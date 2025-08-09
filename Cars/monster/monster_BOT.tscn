@@ -142,7 +142,7 @@ shape = SubResource("SphereShape3D_b4yu3")
 debug_color = Color(0.941176, 0.890196, 1, 0.615686)
 
 [node name="shock_sensor" type="RayCast3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.154278, 2.41191)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.42195, 2.01917)
 target_position = Vector3(0, 0, 1.165)
 collision_mask = 2
 

@@ -82,7 +82,8 @@ var player_canvas = {
 		z40 = false,
 		toreto = false,
 		nomad = false,
-		coutach = false
+		coutach = false,
+		p_917k = false
 	},
 }
 

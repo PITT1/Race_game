@@ -1,4 +1,4 @@
-[gd_scene load_steps=113 format=4 uid="uid://bhehqj2450xtc"]
+[gd_scene load_steps=120 format=4 uid="uid://bhehqj2450xtc"]
 
 [ext_resource type="Script" uid="uid://bbkomqcnkihxo" path="res://huds/car_selection/car_selection.gd" id="1_u64g1"]
 [ext_resource type="ArrayMesh" uid="uid://rgbpy0gs4uf7" path="res://Cars/rat_rod/bug_car_body.obj" id="2_u64g1"]
@@ -45,6 +45,7 @@
 [ext_resource type="PackedScene" uid="uid://lmhgcdaxkj1d" path="res://Cars/coutach/Countach_body.fbx" id="40_psw2t"]
 [ext_resource type="ArrayMesh" uid="uid://c2denl30f4rur" path="res://Cars/nomad/nomad_wheel.obj" id="40_vsuos"]
 [ext_resource type="ArrayMesh" uid="uid://dljhijh5c3n6q" path="res://Cars/coutach/Countach_wheel.obj" id="41_841ai"]
+[ext_resource type="ArrayMesh" uid="uid://bl6xiw16ajooo" path="res://Cars/p_917K/porsche_917_body.obj" id="42_841ai"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_vv7oi"]
 sky_top_color = Color(0.461087, 0.641883, 0.858997, 1)
@@ -499,6 +500,36 @@ albedo_color = Color(1, 0, 0, 1)
 metallic = 0.7
 roughness = 0.13
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_twh67"]
+albedo_color = Color(0, 0.792157, 0.788235, 1)
+metallic = 0.54
+roughness = 0.54
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hsxqr"]
+albedo_color = Color(0.0562916, 0.0562916, 0.0562916, 1)
+metallic = 0.66
+roughness = 0.43
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o1r61"]
+albedo_color = Color(0, 0, 0, 1)
+metallic = 0.9
+roughness = 0.21
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qatha"]
+albedo_color = Color(15.414, 16.917, 16.917, 1)
+metallic = 0.74
+roughness = 0.41
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s5ogb"]
+albedo_color = Color(42.481, 0, 0, 1)
+metallic = 0.54
+roughness = 0.28
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wol51"]
+albedo_color = Color(0.863387, 0.306668, 0, 1)
+metallic = 0.74
+roughness = 0.36
+
 [sub_resource type="Resource" id="Resource_c3i15"]
 script = ExtResource("7_btktd")
 duration = 1.0
@@ -700,6 +731,18 @@ tracks/15/keys = {
 "update": 0,
 "values": [Vector3(0, 0, 0)]
 }
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("vehicles/p_917k:rotation")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_wibte"]
 resource_name = "rotate"
@@ -892,6 +935,18 @@ tracks/15/path = NodePath("vehicles/coutach:rotation")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 6.28319, 0)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("vehicles/p_917k:rotation")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
 "times": PackedFloat32Array(0, 10),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
@@ -1410,6 +1465,39 @@ mesh = ExtResource("41_841ai")
 [node name="CountachWheel4" type="MeshInstance3D" parent="vehicles/coutach/Countach_body"]
 transform = Transform3D(-0.87, 0, -7.60578e-08, 0, 0.87, 0, 7.60578e-08, 0, -0.87, -0.867996, -0.666487, -1.38236)
 mesh = ExtResource("41_841ai")
+
+[node name="p_917k" type="Node3D" parent="vehicles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 219.319, 0, 0)
+
+[node name="Porsche917Body" type="MeshInstance3D" parent="vehicles/p_917k"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.205259, 0)
+mesh = ExtResource("42_841ai")
+surface_material_override/0 = SubResource("StandardMaterial3D_twh67")
+surface_material_override/1 = SubResource("StandardMaterial3D_hsxqr")
+surface_material_override/2 = SubResource("StandardMaterial3D_o1r61")
+surface_material_override/3 = SubResource("StandardMaterial3D_qatha")
+surface_material_override/4 = SubResource("StandardMaterial3D_s5ogb")
+surface_material_override/5 = SubResource("StandardMaterial3D_wol51")
+
+[node name="F1-70sFrontWheel" type="MeshInstance3D" parent="vehicles/p_917k/Porsche917Body"]
+transform = Transform3D(0.225, 0, -2.84217e-14, 0, 0.225, 0, 2.84217e-14, 0, 0.225, -0.813095, -0.325389, -1.1898)
+mesh = ExtResource("26_bgmxk")
+skeleton = NodePath("../..")
+
+[node name="F1-70sFrontWheel2" type="MeshInstance3D" parent="vehicles/p_917k/Porsche917Body"]
+transform = Transform3D(-0.225, 0, 1.96701e-08, 0, 0.225, 0, -1.96701e-08, 0, -0.225, 0.813004, -0.325389, -1.19014)
+mesh = ExtResource("26_bgmxk")
+skeleton = NodePath("../..")
+
+[node name="F1-70sFrontWheel3" type="MeshInstance3D" parent="vehicles/p_917k/Porsche917Body"]
+transform = Transform3D(0.385, 0, -2.84217e-14, 0, 0.225, 0, -2.13163e-14, 0, 0.225, -0.689041, -0.230446, 1.46545)
+mesh = ExtResource("26_bgmxk")
+skeleton = NodePath("../..")
+
+[node name="F1-70sFrontWheel4" type="MeshInstance3D" parent="vehicles/p_917k/Porsche917Body"]
+transform = Transform3D(-0.385, 0, 1.96701e-08, 0, 0.225, 0, -3.36578e-08, 0, -0.225, 0.689011, -0.230446, 1.46545)
+mesh = ExtResource("26_bgmxk")
+skeleton = NodePath("../..")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.921864, 0.387514, 0, -0.387514, 0.921864, 0, 2.145, 4.175)
