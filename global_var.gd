@@ -39,7 +39,8 @@ var bot_list = {
 	z40_BOT = "res://Cars/z40/z40_BOT.tscn",
 	toreto_BOT = "res://Cars/toreto/toreto_BOT.tscn",
 	nomad_BOT = "res://Cars/nomad/nomad_BOT.tscn",
-	coutach_BOT = "res://Cars/coutach/coutach_BOT.tscn"
+	coutach_BOT = "res://Cars/coutach/coutach_BOT.tscn",
+	p_917k_BOT = "res://Cars/p_917K/p_917k_BOT.tscn"
 }
 #nobre de la pista, direccion de la pista, imagen de la pista, si esta desbloqueado o no
 var track_list = {
@@ -54,7 +55,7 @@ var track_list = {
 	
 	
 var player_canvas = {
-	money = 0,
+	money = 10000,
 	car = "bugrod",
 	tracks_data = { #pista bloqueada??, mejor tiempo al competir
 		1 : [true, "00:00:00"],
@@ -80,7 +81,8 @@ var player_canvas = {
 		monster = false,
 		z40 = false,
 		toreto = false,
-		nomad = false
+		nomad = false,
+		coutach = false
 	},
 }
 
@@ -106,6 +108,8 @@ func save_data(content: String):
 	file.close()
 
 func load_data():
+	if not FileAccess.file_exists(SAVE_GAME_PATH):
+		init_save_canvas()
 	var file = FileAccess.open(SAVE_GAME_PATH, FileAccess.READ)
 	var content = file.get_as_text()
 	file.close()

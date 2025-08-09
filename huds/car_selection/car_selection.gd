@@ -30,6 +30,7 @@ func _ready() -> void:
 	car_list.append($vehicles/z40)
 	car_list.append($vehicles/toreto)
 	car_list.append($vehicles/nomad)
+	car_list.append($vehicles/coutach)
 	
 	car_name_label.text = car_list[0].name
 	car_num.text = str(0) + "/" + str(car_list.size() - 1)
