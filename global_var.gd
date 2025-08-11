@@ -98,7 +98,7 @@ func init_save_canvas():
 	
 	var saved_content = JSON.parse_string(load_data())
 	
-	if player_canvas.size() != saved_content.size():
+	if player_canvas.size() != saved_content.size() or player_canvas.cars_data.size() != saved_content.cars_data.size() or player_canvas.tracks_data.size() != saved_content.tracks_data.size():
 		saved_content.merge(player_canvas, false)
 		save_data(JSON.stringify(saved_content))
 		print("se hizo merge en el save_game_path")

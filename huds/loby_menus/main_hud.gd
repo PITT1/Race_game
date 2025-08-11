@@ -10,7 +10,6 @@ var selector: int = 1
 
 func _ready() -> void:
 	track_list = global_var.track_list
-	print(track_list[selector])
 	track_name.text = track_list[selector][0] 
 	image_track.set_texture(load(track_list[selector][2]))
 

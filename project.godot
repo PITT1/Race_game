@@ -69,6 +69,7 @@ limits/message_queue/max_size_mb=64
 
 3d/physics_engine="Jolt Physics"
 jolt_physics_3d/simulation/velocity_steps=3
+common/physics_interpolation=true
 
 [rendering]
 
