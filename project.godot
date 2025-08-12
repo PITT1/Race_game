@@ -14,8 +14,10 @@ config/name="Poly Race"
 config/version="0.5"
 run/main_scene="uid://dl4l032e7tmky"
 config/features=PackedStringArray("4.4", "Mobile")
+run/max_fps=60
 run/low_processor_mode=true
-config/icon="res://icon.svg"
+boot_splash/image="uid://bcdal1ijwciut"
+config/icon="uid://biicunfsdne1u"
 
 [autoload]
 

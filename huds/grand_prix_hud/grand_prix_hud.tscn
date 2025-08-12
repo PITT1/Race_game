@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://dxvqdu27q3ur5"]
+[gd_scene load_steps=2 format=3 uid="uid://dxvqdu27q3ur5"]
+
+[ext_resource type="Texture2D" uid="uid://bcdal1ijwciut" path="res://images/game_portada.png" id="1_py2jf"]
 
 [node name="GrandPrixHud" type="Control"]
 layout_mode = 3
@@ -10,3 +12,26 @@ grow_vertical = 2
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 follow_viewport_enabled = true
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_py2jf")
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -10.5
+offset_right = 20.0
+offset_bottom = 10.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "reune puntos en 4 carreras aleatorias, si logras tener la cantidad de puntos"
