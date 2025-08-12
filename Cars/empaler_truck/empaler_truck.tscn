@@ -36,12 +36,12 @@ mass = 300.0
 physics_material_override = ExtResource("1_brnwu")
 gravity_scale = 4.0
 center_of_mass_mode = 1
-center_of_mass = Vector3(0, -3, 0)
+center_of_mass = Vector3(0, -1, 0)
 script = ExtResource("1_r77yt")
 stering_asiste_on = false
 
 [node name="EmpalerTruckBody" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.735, 0, 0, 0, 0.735, 0, 0, 0, 0.735, 0, 0, 0.889656)
+transform = Transform3D(0.735, 0, 0, 0, 0.735, 0, 0, 0, 0.735, 0, 0.956433, 0.889656)
 mesh = ExtResource("1_4vlp5")
 surface_material_override/0 = SubResource("StandardMaterial3D_ckcyv")
 surface_material_override/2 = SubResource("StandardMaterial3D_opyhi")
@@ -49,13 +49,13 @@ surface_material_override/3 = SubResource("StandardMaterial3D_h3s1p")
 surface_material_override/4 = SubResource("StandardMaterial3D_p8ru7")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.735, 0, 0, 0, 0.735, 0, 0, 0, 0.735, 0, 0, 0.889656)
+transform = Transform3D(0.735, 0, 0, 0, 0.735, 0, 0, 0, 0.735, 0, 0.956433, 0.889656)
 shape = SubResource("ConvexPolygonShape3D_lgkmv")
 
 [node name="wheel_1" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.927238, -0.962763, 2.07975)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.927238, -0.00633019, 2.07975)
 use_as_steering = true
-wheel_roll_influence = 2.0
+wheel_roll_influence = 1.5
 wheel_radius = 0.59
 wheel_friction_slip = 10.0
 suspension_stiffness = 100.0
@@ -69,9 +69,9 @@ mesh = ExtResource("2_r77yt")
 skeleton = NodePath("../..")
 
 [node name="wheel_2" type="VehicleWheel3D" parent="."]
-transform = Transform3D(0.94, 0, 0, 0, 0.94, 0, 0, 0, 0.94, 0.9273, -0.904502, -1.08524)
+transform = Transform3D(0.94, 0, 0, 0, 0.94, 0, 0, 0, 0.94, 0.9273, 0.0519308, -1.08524)
 use_as_traction = true
-wheel_roll_influence = 2.0
+wheel_roll_influence = 1.5
 wheel_radius = 0.59
 wheel_friction_slip = 10.0
 suspension_stiffness = 100.0
@@ -85,9 +85,9 @@ mesh = ExtResource("2_r77yt")
 skeleton = NodePath("../..")
 
 [node name="wheel_3" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9273, -0.904502, -2.39934)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9273, 0.0519308, -2.39934)
 use_as_traction = true
-wheel_roll_influence = 2.0
+wheel_roll_influence = 1.5
 wheel_radius = 0.59
 wheel_friction_slip = 10.0
 suspension_stiffness = 100.0
@@ -101,9 +101,9 @@ mesh = ExtResource("2_r77yt")
 skeleton = NodePath("../..")
 
 [node name="wheel_4" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.927, -0.962763, 2.07975)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.927, -0.00633019, 2.07975)
 use_as_steering = true
-wheel_roll_influence = 2.0
+wheel_roll_influence = 1.5
 wheel_radius = 0.59
 wheel_friction_slip = 10.0
 suspension_stiffness = 100.0
@@ -117,9 +117,9 @@ mesh = ExtResource("2_r77yt")
 skeleton = NodePath("../..")
 
 [node name="wheel_5" type="VehicleWheel3D" parent="."]
-transform = Transform3D(0.94, 0, 0, 0, 0.94, 0, 0, 0, 0.94, -0.927, -0.904502, -1.08524)
+transform = Transform3D(0.94, 0, 0, 0, 0.94, 0, 0, 0, 0.94, -0.927, 0.0519308, -1.08524)
 use_as_traction = true
-wheel_roll_influence = 2.0
+wheel_roll_influence = 1.5
 wheel_radius = 0.59
 wheel_friction_slip = 10.0
 suspension_stiffness = 100.0
@@ -133,9 +133,9 @@ mesh = ExtResource("2_r77yt")
 skeleton = NodePath("../..")
 
 [node name="wheel_6" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.927, -0.904502, -2.39934)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.927, 0.0519308, -2.39934)
 use_as_traction = true
-wheel_roll_influence = 2.0
+wheel_roll_influence = 1.5
 wheel_radius = 0.59
 wheel_friction_slip = 10.0
 suspension_stiffness = 100.0

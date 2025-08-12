@@ -78,25 +78,23 @@ albedo_color = Color(0.744181, 0.744181, 0.744181, 1)
 metallic = 0.49
 roughness = 0.57
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c3i15"]
-albedo_color = Color(0.484983, 0.168594, 0.713228, 1)
-metallic = 0.6
-roughness = 0.38
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_353rc"]
+albedo_color = Color(0.534468, 0.313631, 1, 1)
+metallic = 0.5
+roughness = 0.52
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6rdnw"]
-albedo_color = Color(0.556863, 0, 0, 1)
-metallic = 0.46
-roughness = 0.35
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a3ugu"]
+albedo_color = Color(1, 0, 0, 1)
+metallic = 0.62
+roughness = 0.51
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mycvf"]
-albedo_color = Color(0.862745, 0.447059, 0, 1)
-metallic = 0.32
-roughness = 0.7
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a3lmk"]
+albedo_color = Color(0.764452, 0.409174, 0.0942213, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_btktd"]
-albedo_color = Color(0.574328, 0.574328, 0.574328, 1)
-metallic = 0.54
-roughness = 0.48
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pnqyq"]
+albedo_color = Color(0.171637, 0.171637, 0.171637, 1)
+metallic = 0.75
+roughness = 0.41
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gt30f"]
 albedo_color = Color(1, 0, 0, 1)
@@ -1010,32 +1008,32 @@ skeleton = NodePath("../..")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0.69, 0)
 
 [node name="Hot-rod-body" type="MeshInstance3D" parent="vehicles/hotrod1"]
-transform = Transform3D(0.74, 0, 0, 0, 0.74, 0, 0, 0, 0.74, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0234684)
 mesh = ExtResource("6_c3i15")
-surface_material_override/0 = SubResource("StandardMaterial3D_c3i15")
-surface_material_override/1 = SubResource("StandardMaterial3D_6rdnw")
-surface_material_override/2 = SubResource("StandardMaterial3D_mycvf")
-surface_material_override/4 = SubResource("StandardMaterial3D_btktd")
+surface_material_override/0 = SubResource("StandardMaterial3D_353rc")
+surface_material_override/1 = SubResource("StandardMaterial3D_a3ugu")
+surface_material_override/2 = SubResource("StandardMaterial3D_a3lmk")
+surface_material_override/3 = SubResource("StandardMaterial3D_pnqyq")
 
 [node name="WheelHotrod1" type="MeshInstance3D" parent="vehicles/hotrod1/Hot-rod-body"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.820345, 0, 1.7058)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.813407, -0.0477209, 1.71769)
 mesh = ExtResource("6_fq8jf")
 skeleton = NodePath("../..")
 
 [node name="WheelHotrod2" type="MeshInstance3D" parent="vehicles/hotrod1/Hot-rod-body"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.875263, 0, -1.43543)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.856201, -0.0477209, -1.6314)
 mesh = ExtResource("6_fq8jf")
-skeleton = NodePath("../../wheel_1")
+skeleton = NodePath("")
 
 [node name="WheelHotrod3" type="MeshInstance3D" parent="vehicles/hotrod1/Hot-rod-body"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.910276, 0, -1.37708)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.813, -0.048, 1.718)
 mesh = ExtResource("6_fq8jf")
-skeleton = NodePath("../../wheel_1")
+skeleton = NodePath("")
 
 [node name="WheelHotrod4" type="MeshInstance3D" parent="vehicles/hotrod1/Hot-rod-body"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.816914, 0, 1.71552)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.856, -0.048, -1.631)
 mesh = ExtResource("6_fq8jf")
-skeleton = NodePath("../../wheel_1")
+skeleton = NodePath("")
 
 [node name="sentinel_gt" type="Node3D" parent="vehicles"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.828, 0.69, 0)
