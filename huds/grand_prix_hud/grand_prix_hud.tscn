@@ -22,16 +22,37 @@ grow_vertical = 2
 texture = ExtResource("1_py2jf")
 stretch_mode = 6
 
-[node name="Label" type="Label" parent="CanvasLayer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -10.5
-offset_right = 20.0
-offset_bottom = 10.5
+offset_left = -471.5
+offset_top = -114.0
+offset_right = 471.5
+offset_bottom = 114.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "reune puntos en 4 carreras aleatorias, si logras tener la cantidad de puntos"
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 18
+
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 39
+text = "reune puntos en  4 carreras aleatorias."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 39
+text = "Si logras tener un puntaje alto, ganaras el Grand Prix"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 55
+text = "Siguiente"

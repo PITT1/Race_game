@@ -41,3 +41,7 @@ func _physics_process(delta: float) -> void:
 		add_child(controls_instantia)
 		
 		initialized = true
+
+
+func _on_grand_prix_btn_button_up() -> void:
+	get_tree().change_scene_to_file("res://huds/grand_prix_hud/grand_prix_hud.tscn")
