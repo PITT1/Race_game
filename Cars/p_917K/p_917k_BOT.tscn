@@ -53,6 +53,7 @@ dificulty = 2
 
 [node name="Porsche917Body" type="MeshInstance3D" parent="."]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.205259, 0)
+lod_bias = 0.5
 mesh = ExtResource("2_uvmg3")
 surface_material_override/0 = SubResource("StandardMaterial3D_uvmg3")
 surface_material_override/1 = SubResource("StandardMaterial3D_ndahe")

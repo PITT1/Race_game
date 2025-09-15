@@ -1,0 +1,122 @@
+[gd_scene load_steps=8 format=3 uid="uid://cpm1xpc4hfurx"]
+
+[ext_resource type="PhysicsMaterial" uid="uid://dioc2dlho64fc" path="res://car_physic_material/car_physic.tres" id="1_81vfp"]
+[ext_resource type="Script" uid="uid://dn8cru75adetk" path="res://player_controller/player_controller.gd" id="1_ejnlq"]
+[ext_resource type="ArrayMesh" uid="uid://dyxcao4gyn6cb" path="res://Cars/spyder/spyder_wheel.obj" id="3_iepup"]
+[ext_resource type="PackedScene" uid="uid://1d1e5ll020cp" path="res://huds/on_race_huds/race_hud.tscn" id="4_nckym"]
+[ext_resource type="PackedScene" uid="uid://cmxuxyw5iojla" path="res://Cars/spyder/spyder.glb" id="6_iepup"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_1o0qs"]
+points = PackedVector3Array(0.963424, -0.383534, 1.92976, 0.957576, 0.266703, 1.44072, 0.957387, 0.252829, 1.67106, 0.957765, 0.132612, 1.83431, 0.959463, -0.0940439, 1.92497, 0.857587, -0.187006, 2.0628, 0.857587, -0.372434, 2.04622, 0.853059, -0.384723, 2.04585, 0.840231, -0.398003, 2.0488, 0.643649, -0.44161, 1.92682, 0.96267, -0.347261, -0.597983, 0.952105, 0.520812, -1.44118, 0.827402, 0.380081, 1.47758, 0.827402, 0.35798, 1.69943, 0.827402, 0.228151, 1.88001, 0.836835, -0.0725378, 2.06428, 0.832307, -0.379867, 2.05433, 0.832873, -0.10445, 2.06612, 0.643649, -0.415446, 2.07386, 0.276898, -0.417924, 2.07386, -0.643943, -0.44161, 1.92682, 0.605917, -0.388192, -1.53515, 0.951539, -0.277292, -1.53515, 0.951539, -0.0676816, -1.51931, 0.871171, 0.520812, -1.62176, 0.0105124, 0.570861, -1.49241, 0.040509, 0.570861, 0.306758, 0.0740902, 0.52993, 0.621851, -0.827695, 0.35798, 1.69943, -0.827695, 0.228151, 1.88001, -0.837128, -0.0725378, 2.06428, 0.645158, -0.112973, 2.07386, 0.652893, -0.135669, 2.07386, -0.277191, -0.417924, 2.07386, -0.643943, -0.415446, 2.07386, -0.840524, -0.398003, 2.0488, -0.963718, -0.383534, 1.92976, -0.962963, -0.347261, -0.597983, -0.606211, -0.388192, -1.53515, 0.0080598, -0.205836, -1.66783, 0.472536, -0.202466, -1.65603, 0.797783, -0.126551, -1.65935, 0.69836, 0.520812, -1.69104, -0.010806, 0.570861, -1.49241, -0.0408027, 0.570861, 0.306758, -0.0743838, 0.52993, 0.621851, -0.827695, 0.380081, 1.47758, -0.957681, 0.252829, 1.67106, -0.958058, 0.132612, 1.83431, -0.857881, -0.187006, 2.0628, -0.833167, -0.10445, 2.06612, -0.645452, -0.112973, 2.07386, -0.959756, -0.0940439, 1.92497, -0.653187, -0.135669, 2.07386, -0.832601, -0.379867, 2.05433, -0.857881, -0.372434, 2.04622, -0.853353, -0.384723, 2.04585, -0.95787, 0.266703, 1.44072, -0.952399, 0.520812, -1.44118, -0.951833, -0.277292, -1.53515, -0.798076, -0.126551, -1.65935, -0.47283, -0.202466, -1.65603, -0.00835347, -0.205836, -1.66783, -0.698653, 0.520812, -1.69104, -0.871464, 0.520812, -1.62176, -0.951833, -0.0676816, -1.51931)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_5o70g"]
+radius = 1.80891
+
+[node name="Spyder" type="VehicleBody3D"]
+collision_mask = 1019
+mass = 200.0
+physics_material_override = ExtResource("1_81vfp")
+gravity_scale = 4.0
+center_of_mass_mode = 1
+center_of_mass = Vector3(0, -1, 0)
+script = ExtResource("1_ejnlq")
+
+[node name="spyder" parent="." instance=ExtResource("6_iepup")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0745842, -0.298669)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0819093, -0.291329)
+shape = SubResource("ConvexPolygonShape3D_1o0qs")
+
+[node name="wheel_1" type="VehicleWheel3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.813088, -0.0827507, 1.20849)
+use_as_steering = true
+wheel_roll_influence = 1.5
+wheel_radius = 0.38
+wheel_friction_slip = 10.0
+suspension_stiffness = 200.0
+suspension_max_force = 100000.0
+damping_compression = 10.0
+damping_relaxation = 10.0
+
+[node name="SpyderWheel4" type="MeshInstance3D" parent="wheel_1"]
+mesh = ExtResource("3_iepup")
+skeleton = NodePath("../..")
+
+[node name="wheel_2" type="VehicleWheel3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.813, -0.0827507, 1.20883)
+use_as_steering = true
+wheel_roll_influence = 1.5
+wheel_radius = 0.38
+wheel_friction_slip = 10.0
+suspension_stiffness = 200.0
+suspension_max_force = 100000.0
+damping_compression = 10.0
+damping_relaxation = 10.0
+
+[node name="SpyderWheel3" type="MeshInstance3D" parent="wheel_2"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+mesh = ExtResource("3_iepup")
+skeleton = NodePath("../..")
+
+[node name="wheel_3" type="VehicleWheel3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.812756, -0.0746168, -1.41561)
+use_as_traction = true
+wheel_roll_influence = 1.5
+wheel_radius = 0.38
+wheel_friction_slip = 10.0
+suspension_stiffness = 200.0
+suspension_max_force = 100000.0
+damping_compression = 10.0
+damping_relaxation = 10.0
+
+[node name="SpyderWheel2" type="MeshInstance3D" parent="wheel_3"]
+mesh = ExtResource("3_iepup")
+skeleton = NodePath("../..")
+
+[node name="wheel_4" type="VehicleWheel3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.813, -0.0746168, -1.41561)
+use_as_traction = true
+wheel_roll_influence = 1.5
+wheel_radius = 0.38
+wheel_friction_slip = 10.0
+suspension_stiffness = 200.0
+suspension_max_force = 100000.0
+damping_compression = 10.0
+damping_relaxation = 10.0
+
+[node name="SpyderWheel" type="MeshInstance3D" parent="wheel_4"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+mesh = ExtResource("3_iepup")
+skeleton = NodePath("../..")
+
+[node name="checkpoint_sensor" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.219836)
+collision_layer = 0
+collision_mask = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoint_sensor"]
+shape = SubResource("SphereShape3D_5o70g")
+debug_color = Color(0.47455, 0.00208011, 0.733338, 0.133333)
+
+[node name="RaceHud" parent="." instance=ExtResource("4_nckym")]
+
+[node name="bumper_1" type="VehicleWheel3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7165, 0.0432577, 1.67896)
+use_as_steering = true
+wheel_roll_influence = 1.5
+wheel_radius = 0.425
+wheel_friction_slip = 0.1
+suspension_stiffness = 200.0
+suspension_max_force = 100000.0
+
+[node name="bumper_2" type="VehicleWheel3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.716, 0.0431387, 1.6792)
+use_as_steering = true
+wheel_roll_influence = 1.5
+wheel_radius = 0.425
+wheel_friction_slip = 0.1
+suspension_stiffness = 200.0
+suspension_max_force = 100000.0
+
+[connection signal="area_entered" from="checkpoint_sensor" to="." method="_on_checkpoint_sensor_area_entered"]

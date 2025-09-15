@@ -53,6 +53,7 @@ script = ExtResource("2_kskex")
 
 [node name="Porsche917Body" type="MeshInstance3D" parent="."]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.205259, 0)
+lod_bias = 0.5
 mesh = ExtResource("1_mdlq6")
 surface_material_override/0 = SubResource("StandardMaterial3D_fah8l")
 surface_material_override/1 = SubResource("StandardMaterial3D_5e0vh")

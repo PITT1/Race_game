@@ -20,7 +20,8 @@ var car_list = { #direccion y precio en tienda
 	toreto = ["res://Cars/toreto/toreto.tscn", 28000],
 	nomad = ["res://Cars/nomad/nomad.tscn", 20000],
 	coutach = ["res://Cars/coutach/coutach.tscn", 40000],
-	p_917k = ["res://Cars/p_917K/917k.tscn", 35000]
+	p_917k = ["res://Cars/p_917K/917k.tscn", 35000],
+	spyder = ["res://Cars/spyder/spyder.tscn", 50000]
 }
 
 var bot_list = {
@@ -40,7 +41,8 @@ var bot_list = {
 	toreto_BOT = "res://Cars/toreto/toreto_BOT.tscn",
 	nomad_BOT = "res://Cars/nomad/nomad_BOT.tscn",
 	coutach_BOT = "res://Cars/coutach/coutach_BOT.tscn",
-	p_917k_BOT = "res://Cars/p_917K/p_917k_BOT.tscn"
+	p_917k_BOT = "res://Cars/p_917K/p_917k_BOT.tscn",
+	spyder = "res://Cars/spyder/spyder_BOT.tscn"
 }
 #nobre de la pista, direccion de la pista, imagen de la pista, si esta desbloqueado o no
 var track_list = {
@@ -83,7 +85,8 @@ var player_canvas = {
 		toreto = false,
 		nomad = false,
 		coutach = false,
-		p_917k = false
+		p_917k = false,
+		spyder = false
 	},
 }
 
