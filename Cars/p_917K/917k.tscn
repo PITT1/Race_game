@@ -67,7 +67,7 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.2
 shape = SubResource("ConvexPolygonShape3D_vdcbv")
 
 [node name="wheel_1" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.813088, -0.12013, 1.1898)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.813088, -0.0100817, 1.1898)
 use_as_steering = true
 wheel_roll_influence = 1.5
 wheel_radius = 0.38
@@ -83,7 +83,7 @@ mesh = ExtResource("4_fah8l")
 skeleton = NodePath("../..")
 
 [node name="wheel_2" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.813, -0.12013, 1.19014)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.813, -0.0100817, 1.19014)
 use_as_steering = true
 wheel_roll_influence = 1.5
 wheel_radius = 0.38

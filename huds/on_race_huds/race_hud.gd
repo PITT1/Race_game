@@ -1,6 +1,7 @@
 extends Control
 @onready var lap_label: Label = $CanvasLayer/MarginContainer/lap_label
-@onready var position_label: Label = $VBoxContainer/MarginContainer2/position_label
+@onready var position_label: Label = $CanvasLayer/VBoxContainer/MarginContainer2/position_label
+@onready var pause_btn: Button = $CanvasLayer/MarginContainer2/pause_btn
 
 
 
@@ -22,6 +23,8 @@ func _physics_process(delta: float) -> void:
 	show_position()
 	
 	show_laps()
+	
+	
 	
 
 func show_position():
