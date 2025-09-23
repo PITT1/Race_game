@@ -2,7 +2,8 @@ extends Control
 @onready var lap_label: Label = $CanvasLayer/MarginContainer/lap_label
 @onready var position_label: Label = $CanvasLayer/VBoxContainer/MarginContainer2/position_label
 @onready var pause_btn: Button = $CanvasLayer/MarginContainer2/pause_btn
-
+var PAUSE_HUD = preload("res://huds/on_race_huds/pause_hud.tscn")
+@onready var canvas_layer: CanvasLayer = $CanvasLayer
 
 
 var car: VehicleBody3D = null
@@ -15,6 +16,11 @@ var laps_to_finish: int
 func _ready() -> void:
 	car = get_parent()
 	laps_to_finish = get_parent().get_parent().laps_num_to_finish
+	
+	if car.get_parent().name == "Loby1":
+		canvas_layer.visible = false
+	else:
+		canvas_layer.visible = true
 
 func _physics_process(delta: float) -> void:
 	if delta:
@@ -46,3 +52,8 @@ func show_laps():
 	if car.laps_num != previous_lap:
 		lap_label.text = tr("id_13") + " " + str(car.laps_num) + "/" + str(laps_to_finish)
 		previous_lap = car.laps_num
+
+
+func _on_pause_btn_button_up() -> void:
+	add_child(PAUSE_HUD.instantiate())
+	get_tree().paused = true

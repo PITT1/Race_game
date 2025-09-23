@@ -60,3 +60,5 @@ theme_override_constants/margin_right = 30
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "pausa"
+
+[connection signal="button_up" from="CanvasLayer/MarginContainer2/pause_btn" to="." method="_on_pause_btn_button_up"]
