@@ -32,10 +32,9 @@ anim_speed_max = 1.0
 
 [sub_resource type="QuadMesh" id="QuadMesh_va7n3"]
 
-[node name="WheelSmoke" type="Node3D"]
-
-[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+[node name="wheel_smoke" type="GPUParticles3D"]
 material_override = SubResource("StandardMaterial3D_nhtou")
+emitting = false
 amount = 30
 process_material = SubResource("ParticleProcessMaterial_u7vej")
 draw_pass_1 = SubResource("QuadMesh_va7n3")

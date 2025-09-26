@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://catsrvt7ppsr4"
+path="res://.godot/imported/Full-Throttle-Burn_2.ogg-deaa834a72104ac8e30981e7d2e6db40.oggvorbisstr"
+
+[deps]
+
+source_file="res://sounds/background music/Full-Throttle-Burn_2.ogg"
+dest_files=["res://.godot/imported/Full-Throttle-Burn_2.ogg-deaa834a72104ac8e30981e7d2e6db40.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

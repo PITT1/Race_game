@@ -283,6 +283,8 @@ anchor_left = 0.62469
 anchor_top = 0.0569444
 anchor_right = 0.973952
 anchor_bottom = 0.794667
+offset_left = -0.000244141
+offset_top = 3.05176e-05
 offset_right = 585.99
 offset_bottom = 552.84
 grow_horizontal = 0
@@ -327,6 +329,7 @@ offset_bottom = 800.6
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.45, 0.45)
+alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="grand_prix_btn" type="Button" parent="CanvasLayer/page_2"]
@@ -397,13 +400,35 @@ size_flags_horizontal = 10
 theme_override_font_sizes/font_size = 200
 text = ">>"
 
+[node name="options_page" type="VBoxContainer" parent="CanvasLayer"]
+offset_left = 547.0
+offset_top = -442.0
+offset_right = 1053.0
+offset_bottom = -325.0
+alignment = 1
+
+[node name="bg_music_button" type="CheckButton" parent="CanvasLayer/options_page"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "musica de fondo"
+
+[node name="bg_volume_range" type="HSlider" parent="CanvasLayer/options_page"]
+layout_mode = 2
+theme = ExtResource("1_b61mc")
+max_value = 1.0
+step = 0.1
+value = 0.7
+
 [node name="to_car_selection" type="CenterContainer" parent="CanvasLayer"]
 anchors_preset = -1
 anchor_left = 0.153846
 anchor_top = 0.731944
 anchor_right = 0.406948
 anchor_bottom = 0.918056
-offset_left = -1.52588e-05
+offset_left = 0.000259399
+offset_top = 0.000305176
+offset_right = 0.000305176
+offset_bottom = 0.000305176
 grow_horizontal = 2
 grow_vertical = 0
 metadata/_edit_use_anchors_ = true
@@ -414,6 +439,7 @@ theme_override_font_sizes/font_size = 90
 text = "id_4"
 
 [node name="MoneyDisplay" parent="CanvasLayer" instance=ExtResource("3_8wpv5")]
+offset_right = 335.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
