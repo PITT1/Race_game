@@ -63,3 +63,11 @@ func _on_quick_race_btn_button_up() -> void:
 
 func _on_button_button_up() -> void:
 	get_tree().change_scene_to_file("res://huds/car_selection/car_selection.tscn")
+
+
+func _on_options_btn_button_up() -> void:
+	anim.play("to_menu_options")
+
+
+func _on_save_and_back_options_btn_button_up() -> void:
+	anim.play("exit_menu_options")

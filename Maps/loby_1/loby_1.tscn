@@ -150,16 +150,6 @@ transform = Transform3D(-5.58137, -0.021803, 0.126064, -0.0487376, 2.4999, 1.619
 
 [node name="MainHud" parent="." instance=ExtResource("12_n0ykm")]
 
-[node name="page_1" parent="MainHud/CanvasLayer" index="0"]
-offset_left = -0.000244141
-offset_top = 3.05176e-05
-
-[node name="to_car_selection" parent="MainHud/CanvasLayer" index="3"]
-offset_left = 0.000259399
-offset_top = 0.000305176
-offset_right = 0.000305176
-offset_bottom = 0.000305176
-
 [node name="loop_1" parent="." instance=ExtResource("11_6tc5e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.172, 1.219, 30.078)
 
