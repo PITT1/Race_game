@@ -7,6 +7,7 @@ var selector: int = 1
 @onready var left_btn: Button = $CanvasLayer/race_selector/left_btn
 @onready var right_btn: Button = $CanvasLayer/race_selector/right_btn
 @onready var image_track: TextureRect = $CanvasLayer/race_selector/VBoxContainer/image_track
+@onready var bg_volume_range: HSlider = $CanvasLayer/options_page/VBoxContainer/bg_volume_range
 
 func _ready() -> void:
 	track_list = global_var.track_list
@@ -71,3 +72,18 @@ func _on_options_btn_button_up() -> void:
 
 func _on_save_and_back_options_btn_button_up() -> void:
 	anim.play("exit_menu_options")
+
+
+func _on_bg_music_button_toggled(toggled_on: bool) -> void:
+	if toggled_on:
+		print("togle_on")
+		BgMusicManager.select_random_music()
+		BgMusicManager.play()
+	else:
+		print("togle_off")
+		BgMusicManager.stop()
+
+
+func _on_bg_volume_range_drag_ended(value_changed: bool) -> void:
+	if value_changed:
+		BgMusicManager.set_volume_linear(bg_volume_range.value)

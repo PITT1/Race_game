@@ -8,7 +8,8 @@ var music_list: Array = [BURNING_ASPHALT, FULL_THROTTLE_BURN, FULL_THROTTLE_BURN
 var current_track_index = 0
 
 func _ready() -> void:
-	stream = BURNING_ASPHALT
+	select_random_music()
+	play()
 
 func select_random_music():
 	var next_track = current_track_index
@@ -20,6 +21,4 @@ func select_random_music():
 
 func set_bg_volume(vol: float):
 	set_volume_linear(vol)
-
-func put_bg_music():
-	play()
+	

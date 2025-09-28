@@ -23,7 +23,7 @@ config/icon="uid://biicunfsdne1u"
 
 PhantomCameraManager="*res://addons/phantom_camera/scripts/managers/phantom_camera_manager.gd"
 GlobalVar="*res://global_var.gd"
-BackgroundMusicManager="*res://background_music_manager.gd"
+BgMusicManager="*res://bg_music_manager.gd"
 
 [display]
 
