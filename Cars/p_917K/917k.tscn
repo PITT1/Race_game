@@ -1,10 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://csba84s0ui3u7"]
+[gd_scene load_steps=15 format=3 uid="uid://csba84s0ui3u7"]
 
 [ext_resource type="ArrayMesh" uid="uid://bl6xiw16ajooo" path="res://Cars/p_917K/porsche_917_body.obj" id="1_mdlq6"]
 [ext_resource type="PhysicsMaterial" uid="uid://dioc2dlho64fc" path="res://car_physic_material/car_physic.tres" id="1_vdcbv"]
 [ext_resource type="Script" uid="uid://dn8cru75adetk" path="res://player_controller/player_controller.gd" id="2_kskex"]
 [ext_resource type="ArrayMesh" uid="uid://bobsj7aai5w76" path="res://Cars/f1_70s/f1-70s_front_wheel.obj" id="4_fah8l"]
 [ext_resource type="PackedScene" uid="uid://1d1e5ll020cp" path="res://huds/on_race_huds/race_hud.tscn" id="5_fah8l"]
+[ext_resource type="AudioStream" uid="uid://scjir0vifrwd" path="res://sounds/engine_sounds/aventador_sound.ogg" id="6_5e0vh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fah8l"]
 albedo_color = Color(0, 0.792157, 0.788235, 1)
@@ -160,5 +161,10 @@ wheel_radius = 0.425
 wheel_friction_slip = 0.1
 suspension_stiffness = 200.0
 suspension_max_force = 100000.0
+
+[node name="engine_sound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("6_5e0vh")
+unit_size = 9.9
+max_distance = 100.0
 
 [connection signal="area_entered" from="checkpoint_sensor" to="." method="_on_checkpoint_sensor_area_entered"]

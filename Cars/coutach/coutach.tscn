@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://d3myqwmyfi1ag"]
+[gd_scene load_steps=12 format=3 uid="uid://d3myqwmyfi1ag"]
 
 [ext_resource type="PhysicsMaterial" uid="uid://dioc2dlho64fc" path="res://car_physic_material/car_physic.tres" id="1_28i8o"]
 [ext_resource type="Script" uid="uid://dn8cru75adetk" path="res://player_controller/player_controller.gd" id="1_obppx"]
 [ext_resource type="ArrayMesh" uid="uid://dljhijh5c3n6q" path="res://Cars/coutach/Countach_wheel.obj" id="3_28i8o"]
 [ext_resource type="PackedScene" uid="uid://1d1e5ll020cp" path="res://huds/on_race_huds/race_hud.tscn" id="4_ppwx5"]
 [ext_resource type="PackedScene" uid="uid://lmhgcdaxkj1d" path="res://Cars/coutach/Countach_body.fbx" id="5_28i8o"]
+[ext_resource type="AudioStream" uid="uid://fq7urvm8fuav" path="res://sounds/engine_sounds/v10_lambo.ogg" id="6_p5q20"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_p5q20"]
 points = PackedVector3Array(-0.943697, -0.269981, -1.99368, 1.09859, -0.486312, 1.08845, -1.14562, -0.812448, 1.92743, 1.1012, -0.65729, -1.86905, -0.588937, 0.201192, -0.786599, 0.791306, 0.117328, -2.0244, -0.990448, -0.269981, 2.31485, 0.735968, -0.7737, 2.45349, -0.990448, -0.734922, -1.86905, -1.06803, 0.117328, -1.48163, 0.616796, 0.197066, 0.556453, 1.02361, -0.269981, 2.31485, 1.1012, 0.117328, -0.784477, -0.649747, 0.196585, 0.556109, 0.769789, -0.7495, -1.3525, -0.680558, -0.424926, 2.62507, 1.02372, -0.7737, 1.94994, -1.14562, -0.65729, -1.86905, 0.307191, -0.560591, -2.10266, -0.758144, 0.117328, -2.0244, -0.702806, -0.7737, 2.45349, 0.0939397, -0.424926, 2.70275, 0.626458, 0.204585, -0.725913, -1.14562, -0.65729, 2.00511, 1.02361, 0.117328, -1.55931, -0.648384, -0.491622, -2.06841, -0.864644, 0.00119578, 1.23995, 0.545012, 0.192532, 0.619029, 0.946251, -0.347294, 2.4702, -0.649069, 0.0259117, -2.07077, 0.979223, -0.196075, -1.99914, 1.10111, -0.703851, 1.01798)
@@ -141,6 +142,11 @@ lod_bias = 0.5
 surface_material_override/0 = SubResource("StandardMaterial3D_28i8o")
 surface_material_override/1 = SubResource("StandardMaterial3D_p5q20")
 surface_material_override/3 = SubResource("StandardMaterial3D_bf3q5")
+
+[node name="engine_sound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("6_p5q20")
+unit_size = 9.9
+max_distance = 100.0
 
 [connection signal="area_entered" from="checkpoint_sensor" to="." method="_on_checkpoint_sensor_area_entered"]
 

@@ -1,4 +1,5 @@
 extends VehicleBody3D
+@onready var engine_sound: AudioStreamPlayer3D = $engine_sound
 
 @export var MAX_STEER = 0.7
 @export var ENGINE_POWER = 1500
@@ -46,6 +47,8 @@ func _ready() -> void:
 	for item in childs:
 		if item.get_class() == "VehicleWheel3D":
 			wheels.append(item)
+	
+	engine_sound.play()
 
 func _physics_process(delta: float) -> void:
 	stering_asist()
@@ -61,6 +64,8 @@ func _physics_process(delta: float) -> void:
 	update_pcam()
 	
 	traction_by_terrain_control()
+	
+	engine_sound_controller()
 	
 
 func _on_checkpoint_sensor_area_entered(area: Area3D) -> void:
@@ -153,3 +158,10 @@ func call_lakitu():
 		linear_velocity = Vector3.ZERO
 		angular_velocity = Vector3.ZERO
 		rotation = last_checkpoint.rotation
+
+func engine_sound_controller():
+	var speed = linear_velocity.length()
+	var normalized_speed = clamp(speed, 0, 80)
+	engine_sound.pitch_scale = 0.0125 * normalized_speed + 0.4
+	print(engine_sound.pitch_scale)
+	
