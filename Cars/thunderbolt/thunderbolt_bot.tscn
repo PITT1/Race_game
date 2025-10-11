@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://cnkh1n6ut1tdy"]
+[gd_scene load_steps=12 format=3 uid="uid://cnkh1n6ut1tdy"]
 
 [ext_resource type="PhysicsMaterial" uid="uid://dioc2dlho64fc" path="res://car_physic_material/car_physic.tres" id="1_l18o8"]
 [ext_resource type="Script" uid="uid://bub163oegeem3" path="res://BOT_sistem/BOTS_for_race.gd" id="1_p433n"]
 [ext_resource type="ArrayMesh" uid="uid://b5k6e6cnxe8me" path="res://Cars/thunderbolt/hot_rod3_body.obj" id="1_udoe6"]
 [ext_resource type="ArrayMesh" uid="uid://d4kiuvteuggex" path="res://Cars/blade_rod/hot_rod2_front_wheel.obj" id="2_ethln"]
 [ext_resource type="ArrayMesh" uid="uid://uc3xmpbgj2rc" path="res://Cars/blade_rod/hot_rod2_rear_wheel.obj" id="3_7wn8a"]
+[ext_resource type="AudioStream" uid="uid://cibs5ukttcxl1" path="res://sounds/engine_sounds/audi_R8_sound.ogg" id="6_e4op3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l18o8"]
 albedo_color = Color(0.619905, 0.632541, 0.621377, 1)
@@ -128,6 +129,11 @@ target_position = Vector3(0, 0, 1.165)
 collision_mask = 2
 
 [node name="shock_timer_sensor" type="Timer" parent="."]
+
+[node name="engine_sound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("6_e4op3")
+unit_size = 9.9
+max_distance = 50.0
 
 [connection signal="area_entered" from="checkpoint_sensor" to="." method="_on_checkpoint_sensor_area_entered"]
 [connection signal="timeout" from="shock_timer_sensor" to="." method="_on_shock_timer_sensor_timeout"]

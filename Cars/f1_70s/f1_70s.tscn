@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://b5xsylen0fmlf"]
+[gd_scene load_steps=11 format=3 uid="uid://b5xsylen0fmlf"]
 
 [ext_resource type="Script" uid="uid://dn8cru75adetk" path="res://player_controller/player_controller.gd" id="1_c8ckq"]
 [ext_resource type="ArrayMesh" uid="uid://dtqptne17jy1f" path="res://Cars/f1_70s/f1-70s_body.obj" id="1_e5p01"]
@@ -6,6 +6,7 @@
 [ext_resource type="ArrayMesh" uid="uid://bobsj7aai5w76" path="res://Cars/f1_70s/f1-70s_front_wheel.obj" id="2_wxaeb"]
 [ext_resource type="ArrayMesh" uid="uid://cvstq2c8y4e3e" path="res://Cars/f1_70s/f1-70s_rear_wheel.obj" id="3_c8ckq"]
 [ext_resource type="PackedScene" uid="uid://1d1e5ll020cp" path="res://huds/on_race_huds/race_hud.tscn" id="6_rwupv"]
+[ext_resource type="AudioStream" uid="uid://cmj34w4sk2yb8" path="res://sounds/engine_sounds/f1_renault_sound.ogg" id="7_1vo4y"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rwupv"]
 albedo_color = Color(0.309634, 0.480479, 0.709331, 1)
@@ -111,5 +112,10 @@ debug_color = Color(0.941176, 0.890196, 1, 0.615686)
 
 [node name="RaceHud" parent="." instance=ExtResource("6_rwupv")]
 metadata/_edit_use_anchors_ = true
+
+[node name="engine_sound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("7_1vo4y")
+unit_size = 9.9
+max_distance = 50.0
 
 [connection signal="area_entered" from="checkpoint_sensor" to="." method="_on_checkpoint_sensor_area_entered"]

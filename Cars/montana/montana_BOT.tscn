@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://bk0we1scwqpef"]
+[gd_scene load_steps=10 format=3 uid="uid://bk0we1scwqpef"]
 
 [ext_resource type="PhysicsMaterial" uid="uid://dioc2dlho64fc" path="res://car_physic_material/car_physic.tres" id="1_qlm8h"]
 [ext_resource type="Script" uid="uid://bub163oegeem3" path="res://BOT_sistem/BOTS_for_race.gd" id="2_oll7t"]
 [ext_resource type="ArrayMesh" uid="uid://tdcker0tc6op" path="res://Cars/montana/montana_body.obj" id="3_xgp5d"]
 [ext_resource type="ArrayMesh" uid="uid://ms1rxen6kn37" path="res://Cars/montana/montana_wheel.obj" id="5_ebxvl"]
+[ext_resource type="AudioStream" uid="uid://bxjt0pivj7myd" path="res://sounds/engine_sounds/V2_sound.ogg" id="5_qlm8h"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nbac2"]
 albedo_color = Color(0.73859, 0.73859, 0.73859, 1)
@@ -124,6 +125,11 @@ target_position = Vector3(0, 0, 1.165)
 collision_mask = 2
 
 [node name="shock_timer_sensor" type="Timer" parent="."]
+
+[node name="engine_sound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("5_qlm8h")
+unit_size = 9.9
+max_distance = 50.0
 
 [connection signal="area_entered" from="checkpoint_sensor" to="." method="_on_checkpoint_sensor_area_entered"]
 [connection signal="timeout" from="shock_timer_sensor" to="." method="_on_shock_timer_sensor_timeout"]

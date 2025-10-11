@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://dhrhbkegc35qf"]
+[gd_scene load_steps=13 format=3 uid="uid://dhrhbkegc35qf"]
 
 [ext_resource type="Script" uid="uid://bub163oegeem3" path="res://BOT_sistem/BOTS_for_race.gd" id="1_du4xg"]
 [ext_resource type="PhysicsMaterial" uid="uid://dioc2dlho64fc" path="res://car_physic_material/car_physic.tres" id="1_vvk1t"]
 [ext_resource type="ArrayMesh" uid="uid://ccuo25onnns44" path="res://Cars/sentinel_gt/corvette_body.obj" id="2_vvk1t"]
 [ext_resource type="ArrayMesh" uid="uid://c3ua5r7rpu2kl" path="res://Cars/sentinel_gt/corvette_wheel.obj" id="4_xk2tc"]
+[ext_resource type="AudioStream" uid="uid://cibs5ukttcxl1" path="res://sounds/engine_sounds/audi_R8_sound.ogg" id="5_vvk1t"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_du4xg"]
 albedo_color = Color(1, 0, 0, 1)
@@ -141,6 +142,11 @@ target_position = Vector3(0, 0, 1.165)
 collision_mask = 2
 
 [node name="shock_timer_sensor" type="Timer" parent="."]
+
+[node name="engine_sound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("5_vvk1t")
+unit_size = 9.9
+max_distance = 50.0
 
 [connection signal="area_entered" from="checkpoint_sensor" to="." method="_on_checkpoint_sensor_area_entered"]
 [connection signal="timeout" from="shock_timer_sensor" to="." method="_on_shock_timer_sensor_timeout"]

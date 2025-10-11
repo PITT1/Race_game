@@ -1,10 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://clyqsoa81b2rw"]
+[gd_scene load_steps=14 format=3 uid="uid://clyqsoa81b2rw"]
 
 [ext_resource type="Script" uid="uid://dn8cru75adetk" path="res://player_controller/player_controller.gd" id="1_8e5np"]
 [ext_resource type="ArrayMesh" uid="uid://ccuo25onnns44" path="res://Cars/sentinel_gt/corvette_body.obj" id="1_e76x8"]
 [ext_resource type="PhysicsMaterial" uid="uid://dioc2dlho64fc" path="res://car_physic_material/car_physic.tres" id="1_vu82b"]
 [ext_resource type="ArrayMesh" uid="uid://c3ua5r7rpu2kl" path="res://Cars/sentinel_gt/corvette_wheel.obj" id="2_eh15g"]
 [ext_resource type="PackedScene" uid="uid://1d1e5ll020cp" path="res://huds/on_race_huds/race_hud.tscn" id="6_gqndx"]
+[ext_resource type="AudioStream" uid="uid://0nv3pdppojuj" path="res://sounds/engine_sounds/muscle_sound_1.ogg" id="6_tjky1"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vu82b"]
 albedo_color = Color(1, 0, 0, 1)
@@ -60,7 +61,7 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.0208251, -0.928404
 shape = SubResource("ConvexPolygonShape3D_vu82b")
 
 [node name="wheel_1" type="VehicleWheel3D" parent="."]
-transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0.66, -0.187815, 0.91297)
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0.66, -0.125307, 0.91297)
 use_as_steering = true
 wheel_roll_influence = 1.5
 wheel_radius = 0.425
@@ -76,7 +77,7 @@ mesh = ExtResource("2_eh15g")
 skeleton = NodePath("../..")
 
 [node name="wheel_2" type="VehicleWheel3D" parent="."]
-transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -0.66, -0.185815, 0.91297)
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -0.66, -0.123307, 0.91297)
 use_as_steering = true
 wheel_roll_influence = 1.5
 wheel_radius = 0.425
@@ -92,7 +93,7 @@ mesh = ExtResource("2_eh15g")
 skeleton = NodePath("../..")
 
 [node name="wheel_3" type="VehicleWheel3D" parent="."]
-transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0.855425, -0.251397, -1.28783)
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0.855425, -0.188889, -1.28783)
 use_as_traction = true
 wheel_roll_influence = 1.5
 wheel_radius = 0.425
@@ -107,7 +108,7 @@ transform = Transform3D(1.375, 0, 0, 0, 0.62, 0, 0, 0, 0.62, -0.1, 0, 0)
 mesh = ExtResource("2_eh15g")
 
 [node name="wheel_4" type="VehicleWheel3D" parent="."]
-transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -0.855, -0.251787, -1.287)
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -0.855, -0.189279, -1.287)
 use_as_traction = true
 wheel_roll_influence = 1.5
 wheel_radius = 0.425
@@ -132,5 +133,10 @@ shape = SubResource("SphereShape3D_vu82b")
 debug_color = Color(0.47455, 0.00208011, 0.733338, 0.133333)
 
 [node name="RaceHud" parent="." instance=ExtResource("6_gqndx")]
+
+[node name="engine_sound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("6_tjky1")
+unit_size = 9.9
+max_distance = 50.0
 
 [connection signal="area_entered" from="checkpoint_sensor" to="." method="_on_checkpoint_sensor_area_entered"]

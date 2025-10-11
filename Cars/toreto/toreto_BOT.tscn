@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://bpxmjexrsg7e6"]
+[gd_scene load_steps=13 format=3 uid="uid://bpxmjexrsg7e6"]
 
 [ext_resource type="PhysicsMaterial" uid="uid://dioc2dlho64fc" path="res://car_physic_material/car_physic.tres" id="1_xld1b"]
 [ext_resource type="Script" uid="uid://bub163oegeem3" path="res://BOT_sistem/BOTS_for_race.gd" id="2_dm8l3"]
 [ext_resource type="ArrayMesh" uid="uid://d2jve6ncou77a" path="res://Cars/toreto/toreto_body.obj" id="3_cp888"]
 [ext_resource type="ArrayMesh" uid="uid://cr77eiokivfeo" path="res://Cars/toreto/toreto_wheel.obj" id="4_l0w0e"]
 [ext_resource type="ArrayMesh" uid="uid://c0a2j440bttm3" path="res://Cars/toreto/toreto_rear_wheel.obj" id="5_inj4q"]
+[ext_resource type="AudioStream" uid="uid://cibs5ukttcxl1" path="res://sounds/engine_sounds/audi_R8_sound.ogg" id="6_dm8l3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xld1b"]
 albedo_color = Color(0.0987284, 0.0987284, 0.0987284, 1)
@@ -137,6 +138,11 @@ target_position = Vector3(0, 0, 1.165)
 collision_mask = 2
 
 [node name="shock_timer_sensor" type="Timer" parent="."]
+
+[node name="engine_sound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("6_dm8l3")
+unit_size = 9.9
+max_distance = 50.0
 
 [connection signal="area_entered" from="checkpoint_sensor" to="." method="_on_checkpoint_sensor_area_entered"]
 [connection signal="timeout" from="shock_timer_sensor" to="." method="_on_shock_timer_sensor_timeout"]

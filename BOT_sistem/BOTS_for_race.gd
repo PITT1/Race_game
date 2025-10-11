@@ -21,6 +21,8 @@ var priority_point_store: Array = []
 var all_checkpoints: int
 var laps_num: int = 1
 
+@onready var engine_sound: AudioStreamPlayer3D = $engine_sound
+
 #sistema bot para detectar cuando el auto no avanza
 @onready var shock_sensor: RayCast3D = $shock_sensor
 var recovery_mode: bool = false
@@ -35,6 +37,7 @@ func _ready() -> void:
 			path_follow = item.get_children()
 	
 	set_random_path_follow()
+	engine_sound.play()
 
 func _physics_process(delta: float) -> void:
 	if delta:
@@ -52,6 +55,8 @@ func _physics_process(delta: float) -> void:
 	
 	if recovery_mode and is_on_race: #BOT
 		engine_force = -ENGINE_POWER
+	
+	engine_sound_controller()
 
 
 func bot_sistem(): #BOT
@@ -151,3 +156,8 @@ func call_lakitu():
 		linear_velocity = Vector3.ZERO
 		angular_velocity = Vector3.ZERO
 		rotation = last_checkpoint.rotation
+
+func engine_sound_controller():
+	var speed_car = linear_velocity.length()
+	var normalized_speed = clamp(speed_car, 0, 80)
+	engine_sound.pitch_scale = 0.0125 * normalized_speed + 0.4

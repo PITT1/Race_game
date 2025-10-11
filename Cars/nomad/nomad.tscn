@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://b8rfttgi51mw5"]
+[gd_scene load_steps=12 format=3 uid="uid://b8rfttgi51mw5"]
 
 [ext_resource type="PhysicsMaterial" uid="uid://dioc2dlho64fc" path="res://car_physic_material/car_physic.tres" id="1_07jqt"]
 [ext_resource type="ArrayMesh" uid="uid://d1xkvgaassmlq" path="res://Cars/nomad/nomad_body.obj" id="1_clnsf"]
@@ -6,6 +6,7 @@
 [ext_resource type="ArrayMesh" uid="uid://c2denl30f4rur" path="res://Cars/nomad/nomad_wheel.obj" id="3_py1xi"]
 [ext_resource type="Texture2D" uid="uid://bdwnnhcsb2omt" path="res://Cars/nomad/camoflaje_low.png" id="4_m0uk8"]
 [ext_resource type="PackedScene" uid="uid://1d1e5ll020cp" path="res://huds/on_race_huds/race_hud.tscn" id="6_m0uk8"]
+[ext_resource type="AudioStream" uid="uid://0nv3pdppojuj" path="res://sounds/engine_sounds/muscle_sound_1.ogg" id="7_xld48"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xld48"]
 albedo_color = Color(0.162066, 0.162066, 0.162066, 1)
@@ -134,5 +135,10 @@ suspension_stiffness = 200.0
 suspension_max_force = 100000.0
 
 [node name="RaceHud" parent="." instance=ExtResource("6_m0uk8")]
+
+[node name="engine_sound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("7_xld48")
+unit_size = 9.9
+max_distance = 50.0
 
 [connection signal="area_entered" from="checkpoint_sensor" to="." method="_on_checkpoint_sensor_area_entered"]

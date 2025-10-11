@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://t2g61s7tynw8"]
+[gd_scene load_steps=11 format=3 uid="uid://t2g61s7tynw8"]
 
 [ext_resource type="ArrayMesh" uid="uid://tdcker0tc6op" path="res://Cars/montana/montana_body.obj" id="1_q0wj3"]
 [ext_resource type="PhysicsMaterial" uid="uid://dioc2dlho64fc" path="res://car_physic_material/car_physic.tres" id="1_wfsiv"]
 [ext_resource type="Script" uid="uid://dn8cru75adetk" path="res://player_controller/player_controller.gd" id="2_1ic3g"]
 [ext_resource type="ArrayMesh" uid="uid://ms1rxen6kn37" path="res://Cars/montana/montana_wheel.obj" id="3_7mcbj"]
+[ext_resource type="AudioStream" uid="uid://3w5dngw11j8u" path="res://sounds/engine_sounds/camaro_sound1.ogg" id="6_om1uj"]
 [ext_resource type="PackedScene" uid="uid://1d1e5ll020cp" path="res://huds/on_race_huds/race_hud.tscn" id="6_vhin2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1ic3g"]
@@ -115,5 +116,10 @@ shape = SubResource("SphereShape3D_7mcbj")
 debug_color = Color(0.941176, 0.890196, 1, 0.615686)
 
 [node name="RaceHud" parent="." instance=ExtResource("6_vhin2")]
+
+[node name="engine_sound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("6_om1uj")
+unit_size = 9.9
+max_distance = 50.0
 
 [connection signal="area_entered" from="checkpoint_sensor" to="." method="_on_checkpoint_sensor_area_entered"]

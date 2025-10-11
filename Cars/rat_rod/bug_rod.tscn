@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://b6m4yvkxlcpuo"]
+[gd_scene load_steps=14 format=3 uid="uid://b6m4yvkxlcpuo"]
 
 [ext_resource type="ArrayMesh" uid="uid://rgbpy0gs4uf7" path="res://Cars/rat_rod/bug_car_body.obj" id="1_h54rw"]
 [ext_resource type="Script" uid="uid://dn8cru75adetk" path="res://player_controller/player_controller.gd" id="1_q3ra6"]
@@ -7,6 +7,7 @@
 [ext_resource type="ArrayMesh" uid="uid://dpr5hvsc86g8i" path="res://Cars/rat_rod/bug_car_rear_wheel.obj" id="3_tabbm"]
 [ext_resource type="Texture2D" uid="uid://dra1c73gmh4an" path="res://Cars/empaler_truck/texture_3 (1).png" id="4_i2rf7"]
 [ext_resource type="PackedScene" uid="uid://1d1e5ll020cp" path="res://huds/on_race_huds/race_hud.tscn" id="6_xx7w4"]
+[ext_resource type="AudioStream" uid="uid://bxjt0pivj7myd" path="res://sounds/engine_sounds/V2_sound.ogg" id="8_vwscl"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vwscl"]
 albedo_texture = ExtResource("4_i2rf7")
@@ -122,5 +123,10 @@ shape = SubResource("SphereShape3D_q3ra6")
 debug_color = Color(0.941176, 0.890196, 1, 0.615686)
 
 [node name="RaceHud" parent="." instance=ExtResource("6_xx7w4")]
+
+[node name="engine_sound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("8_vwscl")
+unit_size = 9.9
+max_distance = 50.0
 
 [connection signal="area_entered" from="checkpoint_sensor" to="." method="_on_checkpoint_sensor_area_entered"]

@@ -163,5 +163,4 @@ func engine_sound_controller():
 	var speed = linear_velocity.length()
 	var normalized_speed = clamp(speed, 0, 80)
 	engine_sound.pitch_scale = 0.0125 * normalized_speed + 0.4
-	print(engine_sound.pitch_scale)
 	
