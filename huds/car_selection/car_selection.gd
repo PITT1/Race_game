@@ -6,6 +6,9 @@ extends Node3D
 @onready var select_btn: Button = $CanvasLayer/select
 @onready var money_display: HBoxContainer = $CanvasLayer/MoneyDisplay
 
+@onready var pop_sound: AudioStreamPlayer = $pop_sound
+@onready var reject_sound: AudioStreamPlayer = $reject_sound
+
 var car_list: Array = []
 var car_list_global: Dictionary = {}
 var selector: int = 0
@@ -44,6 +47,7 @@ func _ready() -> void:
 	
 	
 func _on_left_button_up() -> void:
+	pop_sound.play()
 	if selector > 0:
 		selector -= 1
 	pCam.follow_target = car_list[selector]
@@ -62,6 +66,7 @@ func _on_left_button_up() -> void:
 		select_btn.set_text("id_17") 
 
 func _on_right_button_up() -> void:
+	pop_sound.play()
 	if selector + 1 < car_list.size():
 		selector += 1
 	pCam.follow_target = car_list[selector]
@@ -81,6 +86,7 @@ func _on_right_button_up() -> void:
 
 
 func _on_go_back_button_up() -> void:
+	pop_sound.play()
 	get_tree().change_scene_to_file("res://Maps/loby_1/loby_1.tscn")
 
 
@@ -95,6 +101,7 @@ func _on_select_button_up() -> void:
 			global_var.save_data(JSON.stringify(data))
 		else:
 			print("no puedes comprarlo")
+			reject_sound.play()
 	else:
 		data.car = car_list[selector].name
 		global_var.save_data(JSON.stringify(data))

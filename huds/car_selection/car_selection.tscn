@@ -1,4 +1,4 @@
-[gd_scene load_steps=122 format=4 uid="uid://bhehqj2450xtc"]
+[gd_scene load_steps=124 format=4 uid="uid://bhehqj2450xtc"]
 
 [ext_resource type="Script" uid="uid://bbkomqcnkihxo" path="res://huds/car_selection/car_selection.gd" id="1_u64g1"]
 [ext_resource type="ArrayMesh" uid="uid://rgbpy0gs4uf7" path="res://Cars/rat_rod/bug_car_body.obj" id="2_u64g1"]
@@ -48,6 +48,8 @@
 [ext_resource type="ArrayMesh" uid="uid://bl6xiw16ajooo" path="res://Cars/p_917K/porsche_917_body.obj" id="42_841ai"]
 [ext_resource type="PackedScene" uid="uid://cmxuxyw5iojla" path="res://Cars/spyder/spyder.glb" id="43_o6p0r"]
 [ext_resource type="ArrayMesh" uid="uid://dyxcao4gyn6cb" path="res://Cars/spyder/spyder_wheel.obj" id="44_vsuos"]
+[ext_resource type="AudioStream" uid="uid://c73ukd0knm1h7" path="res://sounds/hud/pop_sound.ogg" id="49_xc6r1"]
+[ext_resource type="AudioStream" uid="uid://4w5boyjy3sj4" path="res://sounds/hud/reject_sound.ogg" id="50_kn6nc"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_vv7oi"]
 sky_top_color = Color(0.461087, 0.641883, 0.858997, 1)
@@ -1647,6 +1649,12 @@ theme_override_font_sizes/font_size = 60
 metadata/_edit_use_anchors_ = true
 
 [node name="MoneyDisplay" parent="CanvasLayer" instance=ExtResource("24_ehe8b")]
+
+[node name="pop_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("49_xc6r1")
+
+[node name="reject_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("50_kn6nc")
 
 [connection signal="button_up" from="CanvasLayer/left" to="." method="_on_left_button_up"]
 [connection signal="button_up" from="CanvasLayer/right" to="." method="_on_right_button_up"]

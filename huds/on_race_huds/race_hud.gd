@@ -4,6 +4,7 @@ extends Control
 @onready var pause_btn: Button = $CanvasLayer/MarginContainer2/pause_btn
 var PAUSE_HUD = preload("res://huds/on_race_huds/pause_hud.tscn")
 @onready var canvas_layer: CanvasLayer = $CanvasLayer
+@onready var anim: AnimationPlayer = $AnimationPlayer
 
 
 var car: VehicleBody3D = null
@@ -40,6 +41,7 @@ func show_position():
 		for i in race_list.size():
 			if race_list[i] == car:
 				if i != previous_pos:
+					anim.play("position_anim")
 					label_text = tr("id_14")+ " " + str(i + 1) + "/" + str(race_list.size())
 					get_parent().position_from_hud = i + 1
 					position_label.set_text(label_text)
