@@ -35,6 +35,10 @@ var vel: int = 0
 
 var previous: int = -1
 
+#smoke particles
+var drift: float = 1.0
+const WHEEL_SMOKE = preload("res://particles/smoke/wheel_smoke.tscn")
+
 func _ready() -> void:
 	gravity_scale = 4
 	all_checkpoints = get_parent().num_checkpoints 
@@ -49,6 +53,7 @@ func _ready() -> void:
 			wheels.append(item)
 	
 	engine_sound.play()
+	
 
 func _physics_process(delta: float) -> void:
 	stering_asist()
@@ -142,6 +147,11 @@ func traction_by_terrain_control():
 			is_on_pista = true
 		elif surface.contains("terrain"):
 			is_on_pista = false
+		
+		#drift_smoke_particles
+		drift = wheel.get_skidinfo()
+		if drift < 0.5:
+			pass #emites particulas de humo
 		
 
 func call_lakitu():
