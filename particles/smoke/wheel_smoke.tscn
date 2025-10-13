@@ -15,8 +15,8 @@ particles_anim_v_frames = 8
 particles_anim_loop = true
 
 [sub_resource type="Curve" id="Curve_vqxc7"]
-_limits = [0.0, 2.0, 0.0, 1.0]
-_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.492, 1.15953), 0.0, 0.0, 0, 0, Vector2(1, 2), 0.0, 0.0, 0, 0]
+_limits = [0.0, 5.0, 0.0, 1.0]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.828, 3.1323), 6.63247, 6.63247, 0, 0, Vector2(1, 5), 0.0, 0.0, 0, 0]
 point_count = 3
 
 [sub_resource type="CurveTexture" id="CurveTexture_nhtou"]

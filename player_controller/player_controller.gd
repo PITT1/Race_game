@@ -38,6 +38,7 @@ var previous: int = -1
 #smoke particles
 var drift: float = 1.0
 const WHEEL_SMOKE = preload("res://particles/smoke/wheel_smoke.tscn")
+var smoke_particles: Array = []
 
 func _ready() -> void:
 	gravity_scale = 4
@@ -51,6 +52,12 @@ func _ready() -> void:
 	for item in childs:
 		if item.get_class() == "VehicleWheel3D":
 			wheels.append(item)
+			
+			#instantia smoke particles
+			var inst_smoke_particles = WHEEL_SMOKE.instantiate()
+			add_child(inst_smoke_particles)
+			inst_smoke_particles.position = item.position
+			smoke_particles.append(inst_smoke_particles)
 	
 	engine_sound.play()
 	
@@ -149,10 +156,14 @@ func traction_by_terrain_control():
 			is_on_pista = false
 		
 		#drift_smoke_particles
+	for wheel in wheels:
 		drift = wheel.get_skidinfo()
-		if drift < 0.5:
-			pass #emites particulas de humo
-		
+		if drift < 0.9:
+			for smoke in smoke_particles:
+				smoke.emitting = true
+		else:
+			for smoke in smoke_particles:
+				smoke.emitting = false
 
 func call_lakitu():
 	if last_checkpoint:
