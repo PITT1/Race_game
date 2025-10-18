@@ -50,7 +50,7 @@ func _ready() -> void:
 	
 	var childs = get_children()
 	for item in childs:
-		if item.get_class() == "VehicleWheel3D":
+		if item.get_class() == "VehicleWheel3D" and item.name.containsn("Wheel"):
 			wheels.append(item)
 			
 			#instantia smoke particles
@@ -60,7 +60,6 @@ func _ready() -> void:
 			smoke_particles.append(inst_smoke_particles)
 	
 	engine_sound.play()
-	
 
 func _physics_process(delta: float) -> void:
 	stering_asist()

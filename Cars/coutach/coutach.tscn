@@ -14,11 +14,14 @@ points = PackedVector3Array(-0.943697, -0.269981, -1.99368, 1.09859, -0.486312, 
 radius = 1.80891
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_28i8o"]
-albedo_color = Color(0.892034, 0.892034, 0.892034, 1)
+shading_mode = 2
+specular_mode = 2
 metallic = 0.74
 roughness = 0.46
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p5q20"]
+shading_mode = 2
+specular_mode = 2
 albedo_color = Color(0, 0, 0, 1)
 metallic = 0.7
 roughness = 0.39

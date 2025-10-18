@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8l1qgygr27xu"]
+
+[ext_resource type="ArrayMesh" uid="uid://cukgsisnad3nr" path="res://others/decoration/barricade_1.obj" id="1_2dcmp"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_2dcmp"]
+points = PackedVector3Array(-0.37338, -0.515346, -0.780235, -0.37338, -0.363062, -0.780235, 0.37338, -0.515346, -0.780235, -0.37338, -0.515346, 0.780082, -0.19093, 0.620117, -0.398977, 0.37338, -0.363062, -0.780235, -0.37338, -0.363062, 0.780082, 0.37338, -0.515346, 0.780082, 0.190783, 0.620117, -0.398977, -0.19093, 0.620117, 0.398671, 0.37338, -0.363062, 0.780082, 0.190783, 0.620117, 0.398671)
+
+[node name="Barricade1" type="RigidBody3D"]
+collision_layer = 1024
+collision_mask = 1095
+mass = 500.0
+gravity_scale = 4.0
+
+[node name="Barricade1" type="MeshInstance3D" parent="."]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
+mesh = ExtResource("1_2dcmp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_2dcmp")

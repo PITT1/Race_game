@@ -48,33 +48,47 @@ point_count = 61
 [sub_resource type="BoxMesh" id="BoxMesh_s7vdf"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_758mf"]
+shading_mode = 2
+specular_mode = 2
 albedo_texture = ExtResource("2_46ir1")
 uv1_scale = Vector3(50, 50, 50)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vd6h8"]
+shading_mode = 2
+specular_mode = 2
 albedo_color = Color(0.219501, 0.219501, 0.219501, 1)
 metallic = 0.35
 roughness = 0.62
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_74nw3"]
+shading_mode = 2
+specular_mode = 2
 albedo_color = Color(0.845474, 0.138035, 0.106862, 1)
 metallic = 0.68
 roughness = 0.63
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gkmgf"]
+shading_mode = 2
+specular_mode = 2
 albedo_texture = ExtResource("3_4lugw")
 uv1_scale = Vector3(50, 50, 50)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_am243"]
+shading_mode = 2
+specular_mode = 2
 albedo_color = Color(0.0885599, 0.0885599, 0.0885599, 1)
 metallic = 0.27
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j2xqt"]
+shading_mode = 2
+specular_mode = 2
 albedo_color = Color(0.612036, 0.612036, 0.612036, 1)
 metallic = 0.51
 roughness = 0.58
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_alync"]
+shading_mode = 2
+specular_mode = 2
 albedo_texture = ExtResource("4_d4tgu")
 uv1_scale = Vector3(50, 50, 50)
 
