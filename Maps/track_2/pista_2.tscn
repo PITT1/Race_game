@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://tiexehciir1c"]
+[gd_scene load_steps=40 format=3 uid="uid://tiexehciir1c"]
 
 [ext_resource type="PackedScene" uid="uid://dyg4jg5jx7jd4" path="res://Maps/track_2/pista_2.glb" id="1_gwq5r"]
 [ext_resource type="Script" uid="uid://kghgfx151qgh" path="res://Maps/circuit_test_2/test_2.gd" id="1_w3f2m"]
@@ -120,6 +120,11 @@ data = PackedVector3Array(0.9568, 0, -1.1549, 0.4784, 0.125, -1.2165, 0.4784, 0,
 shading_mode = 2
 specular_mode = 2
 albedo_color = Color(0.161594, 0.590675, 0.956007, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wge7r"]
+shading_mode = 2
+specular_mode = 2
+albedo_color = Color(0.266464, 0.688594, 0.477496, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7i4gk"]
 shading_mode = 2
@@ -892,6 +897,9 @@ transform = Transform3D(-0.99998, 0, 0.00635301, 0, 1, 0, -0.00635301, 0, -0.999
 [node name="green_stand3" parent="decoration" instance=ExtResource("14_3522a")]
 transform = Transform3D(-0.989553, 0, -0.144166, 0, 1, 0, 0.144166, 0, -0.989553, 54.1536, 16.632, 97.8581)
 
+[node name="green_stand" parent="decoration/green_stand3" index="0"]
+surface_material_override/1 = SubResource("StandardMaterial3D_wge7r")
+
 [node name="blue_stand3" parent="decoration" instance=ExtResource("12_71ruq")]
 transform = Transform3D(-0.991945, 0, 0.126666, 0, 1, 0, -0.126666, 0, -0.991945, 16.3607, 17.6207, 97.9527)
 
@@ -918,6 +926,18 @@ shape = SubResource("ConcavePolygonShape3D_aujcy")
 [node name="red_stand4" parent="decoration" instance=ExtResource("13_2mp3i")]
 transform = Transform3D(0.164221, 0, -0.986424, 0, 1, 0, 0.986424, 0, 0.164221, -146.653, 13.0617, -3.433)
 
+[node name="building_2" parent="decoration" instance=ExtResource("9_fo33c")]
+transform = Transform3D(0.798877, 0, 0.601494, 0, 1, 0, -0.601494, 0, 0.798877, 84.9565, 42.6848, -128.055)
+
+[node name="building_3" parent="decoration" instance=ExtResource("9_fo33c")]
+transform = Transform3D(0.798877, 0, 0.601494, 0, 1, 0, -0.601494, 0, 0.798877, 144.783, 42.6848, 122.196)
+
+[node name="building_4" parent="decoration" instance=ExtResource("9_fo33c")]
+transform = Transform3D(0.355825, 0, 0.934553, 0, 1, 0, -0.934553, 0, 0.355825, -38.3897, 42.6848, 128.253)
+
+[node name="building_5" parent="decoration" instance=ExtResource("9_fo33c")]
+transform = Transform3D(0.275235, 0, 0.961377, 0, 1, 0, -0.961377, 0, 0.275235, -252.688, 42.6848, 24.6945)
+
 [node name="OccluderInstance3D" type="OccluderInstance3D" parent="."]
 occluder = ExtResource("15_aujcy")
 
@@ -926,5 +946,6 @@ occluder = ExtResource("15_aujcy")
 [editable path="pista_2"]
 [editable path="decoration/arch_1"]
 [editable path="decoration/blue_stand2"]
+[editable path="decoration/green_stand3"]
 [editable path="decoration/blue_stand3"]
 [editable path="decoration/arch_2"]
