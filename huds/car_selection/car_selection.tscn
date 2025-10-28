@@ -1,4 +1,4 @@
-[gd_scene load_steps=124 format=4 uid="uid://bhehqj2450xtc"]
+[gd_scene load_steps=127 format=4 uid="uid://bhehqj2450xtc"]
 
 [ext_resource type="Script" uid="uid://bbkomqcnkihxo" path="res://huds/car_selection/car_selection.gd" id="1_u64g1"]
 [ext_resource type="ArrayMesh" uid="uid://rgbpy0gs4uf7" path="res://Cars/rat_rod/bug_car_body.obj" id="2_u64g1"]
@@ -48,6 +48,9 @@
 [ext_resource type="ArrayMesh" uid="uid://bl6xiw16ajooo" path="res://Cars/p_917K/porsche_917_body.obj" id="42_841ai"]
 [ext_resource type="PackedScene" uid="uid://cmxuxyw5iojla" path="res://Cars/spyder/spyder.glb" id="43_o6p0r"]
 [ext_resource type="ArrayMesh" uid="uid://dyxcao4gyn6cb" path="res://Cars/spyder/spyder_wheel.obj" id="44_vsuos"]
+[ext_resource type="PackedScene" uid="uid://72e47il1wfuu" path="res://Cars/vision_gt/vision_gt_body.glb" id="45_dbumn"]
+[ext_resource type="ArrayMesh" uid="uid://bpdsisi0abovm" path="res://Cars/vision_gt/vision_gt_front_wheel.obj" id="46_vlmii"]
+[ext_resource type="ArrayMesh" uid="uid://blpgpbc2dclqv" path="res://Cars/vision_gt/vision_gt_rear_wheel.obj" id="47_colc5"]
 [ext_resource type="AudioStream" uid="uid://c73ukd0knm1h7" path="res://sounds/hud/pop_sound.ogg" id="49_xc6r1"]
 [ext_resource type="AudioStream" uid="uid://4w5boyjy3sj4" path="res://sounds/hud/reject_sound.ogg" id="50_kn6nc"]
 
@@ -757,6 +760,18 @@ tracks/17/keys = {
 "update": 0,
 "values": [Vector3(0, 0, 0)]
 }
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("vehicles/vision_gt:rotation")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_wibte"]
 resource_name = "rotate"
@@ -973,6 +988,18 @@ tracks/17/path = NodePath("vehicles/spyder:rotation")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 6.28319, 0)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("vehicles/vision_gt:rotation")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
 "times": PackedFloat32Array(0, 10),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
@@ -1551,6 +1578,32 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.813
 mesh = ExtResource("44_vsuos")
 skeleton = NodePath("")
 
+[node name="vision_gt" type="Node3D" parent="vehicles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 241.642, 0, 0)
+
+[node name="vision_gt_body" parent="vehicles/vision_gt" instance=ExtResource("45_dbumn")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="VisionGtFrontWheel" type="MeshInstance3D" parent="vehicles/vision_gt/vision_gt_body"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.776993, -0.01, -1.086)
+mesh = ExtResource("46_vlmii")
+skeleton = NodePath("../..")
+
+[node name="VisionGtFrontWheel2" type="MeshInstance3D" parent="vehicles/vision_gt/vision_gt_body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.776993, -0.01, -1.086)
+mesh = ExtResource("46_vlmii")
+skeleton = NodePath("../..")
+
+[node name="VisionGtRearWheel" type="MeshInstance3D" parent="vehicles/vision_gt/vision_gt_body"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.72171, -0.01, 1.296)
+mesh = ExtResource("47_colc5")
+skeleton = NodePath("../..")
+
+[node name="VisionGtRearWheel2" type="MeshInstance3D" parent="vehicles/vision_gt/vision_gt_body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.722, -0.01, 1.296)
+mesh = ExtResource("47_colc5")
+skeleton = NodePath("../..")
+
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.921864, 0.387514, 0, -0.387514, 0.921864, 0, 2.145, 4.175)
 far = 20.0
@@ -1662,3 +1715,4 @@ stream = ExtResource("50_kn6nc")
 [connection signal="button_up" from="CanvasLayer/go_back" to="." method="_on_go_back_button_up"]
 
 [editable path="vehicles/coutach/Countach_body"]
+[editable path="vehicles/vision_gt/vision_gt_body"]

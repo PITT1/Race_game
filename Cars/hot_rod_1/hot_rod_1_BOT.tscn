@@ -31,7 +31,7 @@ points = PackedVector3Array(1.09052, 0.0161749, 0.9028, 1.0901, 0.0342902, 0.900
 radius = 1.80891
 
 [node name="HotRod1Bot" type="VehicleBody3D"]
-collision_mask = 763
+collision_mask = 1787
 mass = 200.0
 physics_material_override = ExtResource("1_qdks1")
 gravity_scale = 5.0

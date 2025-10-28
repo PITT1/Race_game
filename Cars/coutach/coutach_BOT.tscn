@@ -27,7 +27,7 @@ points = PackedVector3Array(-0.943697, -0.269981, -1.99368, 1.09859, -0.486312, 
 radius = 1.80891
 
 [node name="CoutachBot" type="VehicleBody3D"]
-collision_mask = 763
+collision_mask = 1787
 mass = 200.0
 gravity_scale = 4.0
 center_of_mass_mode = 1

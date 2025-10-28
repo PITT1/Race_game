@@ -20,7 +20,7 @@ points = PackedVector3Array(3.91173, 2.21887, -9.40389, 2.90694, -0.527627, -3.4
 radius = 2.404
 
 [node name="F170s" type="VehicleBody3D"]
-collision_mask = 1019
+collision_mask = 2043
 mass = 200.0
 physics_material_override = ExtResource("1_g2ypv")
 gravity_scale = 3.0

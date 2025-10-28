@@ -1,0 +1,132 @@
+[gd_scene load_steps=10 format=3 uid="uid://c2p4xrrj6fnf5"]
+
+[ext_resource type="PhysicsMaterial" uid="uid://dioc2dlho64fc" path="res://car_physic_material/car_physic.tres" id="1_0u0mx"]
+[ext_resource type="PackedScene" uid="uid://72e47il1wfuu" path="res://Cars/vision_gt/vision_gt_body.glb" id="1_r1al6"]
+[ext_resource type="ArrayMesh" uid="uid://bpdsisi0abovm" path="res://Cars/vision_gt/vision_gt_front_wheel.obj" id="2_fwrrx"]
+[ext_resource type="Script" uid="uid://dn8cru75adetk" path="res://player_controller/player_controller.gd" id="2_kel4n"]
+[ext_resource type="ArrayMesh" uid="uid://blpgpbc2dclqv" path="res://Cars/vision_gt/vision_gt_rear_wheel.obj" id="3_7sd4u"]
+[ext_resource type="PackedScene" uid="uid://1d1e5ll020cp" path="res://huds/on_race_huds/race_hud.tscn" id="6_4t3xg"]
+[ext_resource type="AudioStream" uid="uid://3w5dngw11j8u" path="res://sounds/engine_sounds/camaro_sound1.ogg" id="7_5xk70"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_84xrp"]
+points = PackedVector3Array(0.881413, 0.242649, -1.28712, 0.881413, -0.247024, -1.29236, 0.881413, 0.0962314, -1.38991, 0.820673, 0.0457349, -1.62209, 0.687978, 0.052397, -1.75108, 0.689358, 0.186323, -1.52696, 0.755102, 0.301549, -1.28228, 0.875718, 0.296476, -1.16619, 0.859325, 0.522159, 1.72236, 0.874165, -0.217801, 1.04154, 0.876754, -0.247857, -1.28954, 0.782021, -0.251263, -1.73012, 0.783746, -0.247024, -1.73132, 0.881413, -0.0854653, -1.38467, 0.689876, -0.0176319, -1.80267, 0.642078, 0.00106776, -1.81718, 0.341314, 0.0142408, -1.95665, 0.670205, 0.0618604, -1.74745, 0.737329, 0.309876, -1.28147, 0.740262, 0.360751, -1.14684, 0.75769, 0.352499, -1.14926, -0.859498, 0.522159, 1.72236, 0.479704, 0.522159, 2.06781, 0.858635, 0.441758, 1.73728, 0.0880032, 0.470148, -0.649831, -0.000172496, 0.496191, -0.394674, -0.000172496, 0.50785, -0.158865, 0.853459, 0.171408, 1.56435, 0.828438, 0.22463, 1.68165, 0.495751, -0.0492016, 1.8453, 0.595143, -0.23264, 1.38296, 0.857945, -0.221132, 0.985511, -0.782193, -0.251263, -1.73012, 0.611363, -0.251263, -1.8196, 0.643459, -0.224387, -1.8196, 0.547518, -0.224387, -1.86515, 0.31871, -0.224387, -1.96431, 0.31871, -0.212577, -1.96431, 0.0840344, -0.212577, -2.03445, -0.000172496, -0.213334, -2.05017, -0.000172496, -0.0271709, -2.01228, -0.341487, 0.0142408, -1.95665, -0.737501, 0.309876, -1.28147, -0.740435, 0.360751, -1.14684, 0.0446919, 0.457959, -0.72924, -0.874338, -0.217801, 1.04154, -0.858808, 0.441758, 1.73728, -0.479876, 0.522159, 2.06781, -0.0883483, 0.470148, -0.649831, -0.757863, 0.352499, -1.14926, -0.875891, 0.296476, -1.16619, -0.881412, 0.242649, -1.28712, 0.479704, 0.498538, 2.06176, 0.843795, 0.441758, 1.75058, 0.758898, 0.263089, 1.75501, 0.487124, -0.0495045, 1.84571, 0.290065, -0.108556, 1.81024, 0.290065, -0.166093, 1.70382, 0.495751, -0.146409, 1.66472, 0.495751, -0.196906, 1.54339, 0.487124, -0.197284, 1.54379, 0.0239852, -0.171544, 1.70704, 0.487124, -0.231807, 1.39021, -0.595316, -0.23264, 1.38296, -0.783919, -0.247024, -1.73132, -0.643631, -0.224387, -1.8196, -0.611709, -0.251263, -1.8196, -0.876926, -0.247857, -1.28954, -0.881412, -0.247024, -1.29236, -0.000172496, -0.225145, -2.05017, 0.0840344, -0.224387, -2.03445, -0.0842069, -0.212577, -2.03445, -0.318882, -0.212577, -1.96431, -0.318882, -0.224387, -1.96431, -0.547691, -0.224387, -1.86515, -0.690221, -0.0176319, -1.80267, -0.642251, 0.00106776, -1.81718, -0.688151, 0.052397, -1.75108, -0.670377, 0.0618604, -1.74745, -0.689704, 0.186323, -1.52696, -0.755275, 0.301549, -1.28228, -0.0448644, 0.457959, -0.72924, -0.858117, -0.221132, 0.985511, -0.495924, -0.0492016, 1.8453, -0.828611, 0.22463, 1.68165, -0.853804, 0.171408, 1.56435, -0.843968, 0.441758, 1.75058, -0.479876, 0.498538, 2.06176, -0.821018, 0.0457349, -1.62209, -0.881412, 0.0962314, -1.38991, 0.0338209, -0.0591192, 1.86546, -0.290238, -0.108556, 1.81024, -0.0241577, -0.171544, 1.70704, -0.487296, -0.231807, 1.39021, -0.290238, -0.166093, 1.70382, -0.487296, -0.197284, 1.54379, -0.495924, -0.196906, 1.54339, -0.495924, -0.146409, 1.66472, -0.881412, -0.0854653, -1.38467, -0.0842069, -0.224387, -2.03445, -0.487296, -0.0495045, 1.84571, -0.759071, 0.263089, 1.75501, -0.0339934, -0.0591192, 1.86546)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_xboog"]
+radius = 1.80891
+
+[node name="VisionGt" type="VehicleBody3D"]
+collision_mask = 2043
+mass = 180.0
+physics_material_override = ExtResource("1_0u0mx")
+gravity_scale = 4.0
+center_of_mass_mode = 1
+center_of_mass = Vector3(0, -1, 0)
+script = ExtResource("2_kel4n")
+
+[node name="vision_gt_body" parent="." instance=ExtResource("1_r1al6")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+visible = false
+shape = SubResource("ConvexPolygonShape3D_84xrp")
+
+[node name="wheel_1" type="VehicleWheel3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.777, -0.01, 1.086)
+use_as_steering = true
+wheel_roll_influence = 1.5
+wheel_radius = 0.38
+wheel_friction_slip = 10.0
+suspension_stiffness = 200.0
+suspension_max_force = 100000.0
+damping_compression = 10.0
+damping_relaxation = 10.0
+
+[node name="VisionGtFrontWheel" type="MeshInstance3D" parent="wheel_1"]
+mesh = ExtResource("2_fwrrx")
+skeleton = NodePath("../..")
+
+[node name="wheel_2" type="VehicleWheel3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.777, -0.01, 1.086)
+use_as_steering = true
+wheel_roll_influence = 1.5
+wheel_radius = 0.38
+wheel_friction_slip = 10.0
+suspension_stiffness = 200.0
+suspension_max_force = 100000.0
+damping_compression = 10.0
+damping_relaxation = 10.0
+
+[node name="VisionGtFrontWheel2" type="MeshInstance3D" parent="wheel_2"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+mesh = ExtResource("2_fwrrx")
+skeleton = NodePath("../..")
+
+[node name="wheel_3" type="VehicleWheel3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.72171, -0.01, -1.296)
+use_as_traction = true
+wheel_roll_influence = 1.5
+wheel_radius = 0.38
+wheel_friction_slip = 10.0
+suspension_stiffness = 200.0
+suspension_max_force = 100000.0
+damping_compression = 10.0
+damping_relaxation = 10.0
+
+[node name="VisionGtRearWheel" type="MeshInstance3D" parent="wheel_3"]
+mesh = ExtResource("3_7sd4u")
+skeleton = NodePath("../..")
+
+[node name="wheel_4" type="VehicleWheel3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.722, -0.01, -1.296)
+use_as_traction = true
+wheel_roll_influence = 1.5
+wheel_radius = 0.38
+wheel_friction_slip = 10.0
+suspension_stiffness = 200.0
+suspension_max_force = 100000.0
+damping_compression = 10.0
+damping_relaxation = 10.0
+
+[node name="VisionGtRearWheel2" type="MeshInstance3D" parent="wheel_4"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+mesh = ExtResource("3_7sd4u")
+skeleton = NodePath("../..")
+
+[node name="bumper_1" type="VehicleWheel3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7165, 0.116057, 1.67896)
+use_as_steering = true
+wheel_roll_influence = 1.5
+wheel_radius = 0.425
+wheel_friction_slip = 0.1
+suspension_stiffness = 200.0
+suspension_max_force = 100000.0
+
+[node name="bumper_2" type="VehicleWheel3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.716, 0.115938, 1.6792)
+use_as_steering = true
+wheel_roll_influence = 1.5
+wheel_radius = 0.425
+wheel_friction_slip = 0.1
+suspension_stiffness = 200.0
+suspension_max_force = 100000.0
+
+[node name="checkpoint_sensor" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.219836)
+collision_layer = 0
+collision_mask = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoint_sensor"]
+shape = SubResource("SphereShape3D_xboog")
+debug_color = Color(0.47455, 0.00208011, 0.733338, 0.133333)
+
+[node name="RaceHud" parent="." instance=ExtResource("6_4t3xg")]
+
+[node name="engine_sound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("7_5xk70")
+unit_size = 9.9
+max_distance = 50.0
+
+[connection signal="area_entered" from="checkpoint_sensor" to="." method="_on_checkpoint_sensor_area_entered"]
+
+[editable path="vision_gt_body"]

@@ -21,7 +21,8 @@ var car_list = { #direccion y precio en tienda
 	nomad = ["res://Cars/nomad/nomad.tscn", 20000],
 	coutach = ["res://Cars/coutach/coutach.tscn", 40000],
 	p_917k = ["res://Cars/p_917K/917k.tscn", 35000],
-	spyder = ["res://Cars/spyder/spyder.tscn", 50000]
+	spyder = ["res://Cars/spyder/spyder.tscn", 50000],
+	vision_gt = ["res://Cars/vision_gt/vision_gt.tscn", 80000]
 }
 
 var bot_list = {
@@ -86,7 +87,8 @@ var player_canvas = {
 		nomad = false,
 		coutach = false,
 		p_917k = false,
-		spyder = false
+		spyder = false,
+		vision_gt = false
 	},
 }
 

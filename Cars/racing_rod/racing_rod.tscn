@@ -30,7 +30,7 @@ points = PackedVector3Array(1.62828, -0.514277, -0.724041, 1.61959, -0.587271, -
 radius = 1.80891
 
 [node name="RacingRod" type="VehicleBody3D"]
-collision_mask = 1019
+collision_mask = 2043
 mass = 200.0
 physics_material_override = ExtResource("1_p3wy4")
 gravity_scale = 5.0

@@ -43,7 +43,7 @@ points = PackedVector3Array(0.959745, 0.345616, 1.77593, 0.958242, 0.427889, 2.3
 radius = 2.404
 
 [node name="P917kBot" type="VehicleBody3D"]
-collision_mask = 763
+collision_mask = 1787
 mass = 200.0
 physics_material_override = ExtResource("1_uvmg3")
 gravity_scale = 4.0

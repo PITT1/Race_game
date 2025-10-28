@@ -35,7 +35,7 @@ points = PackedVector3Array(0.92342, -0.0347119, -1.34303, 0.914743, -0.0651863,
 radius = 2.404
 
 [node name="Toreto" type="VehicleBody3D"]
-collision_mask = 1019
+collision_mask = 2043
 mass = 200.0
 physics_material_override = ExtResource("1_xsx2t")
 gravity_scale = 3.0

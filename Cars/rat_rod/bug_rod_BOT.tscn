@@ -30,7 +30,7 @@ points = PackedVector3Array(1.37439, -0.619936, 0.623275, 1.37036, -0.543326, 0.
 radius = 1.80891
 
 [node name="BugRodBot" type="VehicleBody3D"]
-collision_mask = 763
+collision_mask = 1787
 mass = 200.0
 physics_material_override = ExtResource("1_0pkha")
 gravity_scale = 5.0

@@ -23,7 +23,7 @@ points = PackedVector3Array(1.41613, -0.733546, -1.29694, 0.635661, -0.816317, -
 radius = 1.80891
 
 [node name="MontanaBot" type="VehicleBody3D"]
-collision_mask = 763
+collision_mask = 1787
 mass = 200.0
 physics_material_override = ExtResource("1_qlm8h")
 gravity_scale = 5.0
