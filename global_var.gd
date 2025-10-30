@@ -22,7 +22,8 @@ var car_list = { #direccion y precio en tienda
 	coutach = ["res://Cars/coutach/coutach.tscn", 40000],
 	p_917k = ["res://Cars/p_917K/917k.tscn", 35000],
 	spyder = ["res://Cars/spyder/spyder.tscn", 50000],
-	vision_gt = ["res://Cars/vision_gt/vision_gt.tscn", 80000]
+	vision_gt = ["res://Cars/vision_gt/vision_gt.tscn", 80000],
+	mcallen = ["res://Cars/mcallen/mcallen.tscn", 70000]
 }
 
 var bot_list = {
@@ -43,7 +44,8 @@ var bot_list = {
 	nomad_BOT = "res://Cars/nomad/nomad_BOT.tscn",
 	coutach_BOT = "res://Cars/coutach/coutach_BOT.tscn",
 	p_917k_BOT = "res://Cars/p_917K/p_917k_BOT.tscn",
-	spyder = "res://Cars/spyder/spyder_BOT.tscn"
+	spyder = "res://Cars/spyder/spyder_BOT.tscn",
+	vision_gt_BOT = "res://Cars/vision_gt/vision_gt_BOT.tscn"
 }
 #nobre de la pista, direccion de la pista, imagen de la pista, si esta desbloqueado o no
 var track_list = {
@@ -88,7 +90,8 @@ var player_canvas = {
 		coutach = false,
 		p_917k = false,
 		spyder = false,
-		vision_gt = false
+		vision_gt = false,
+		mcallen = false
 	},
 }
 
@@ -104,8 +107,9 @@ func init_save_canvas():
 	var saved_content = JSON.parse_string(load_data())
 	
 	if player_canvas.size() != saved_content.size() or player_canvas.cars_data.size() != saved_content.cars_data.size() or player_canvas.tracks_data.size() != saved_content.tracks_data.size():
-		saved_content.merge(player_canvas, false)
-		save_data(JSON.stringify(saved_content))
+		var hola = (JSON.stringify(saved_content.merged(player_canvas)))
+		print(hola)
+		save_data(hola)
 		print("se hizo merge en el save_game_path")
 
 func save_data(content: String):

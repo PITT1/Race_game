@@ -24,6 +24,9 @@ script = ExtResource("1_jv23b")
 [node name="spyder" parent="." instance=ExtResource("3_73gd6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0745842, -0.298669)
 
+[node name="Cube" parent="spyder" index="0"]
+lod_bias = 0.5
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0819093, -0.291329)
 shape = SubResource("ConvexPolygonShape3D_owv6a")
@@ -131,3 +134,5 @@ max_distance = 50.0
 
 [connection signal="area_entered" from="checkpoint_sensor" to="." method="_on_checkpoint_sensor_area_entered"]
 [connection signal="timeout" from="shock_timer_sensor" to="." method="_on_shock_timer_sensor_timeout"]
+
+[editable path="spyder"]
