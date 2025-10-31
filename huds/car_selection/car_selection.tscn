@@ -1,4 +1,4 @@
-[gd_scene load_steps=126 format=4 uid="uid://bhehqj2450xtc"]
+[gd_scene load_steps=127 format=4 uid="uid://bhehqj2450xtc"]
 
 [ext_resource type="Script" uid="uid://bbkomqcnkihxo" path="res://huds/car_selection/car_selection.gd" id="1_u64g1"]
 [ext_resource type="ArrayMesh" uid="uid://rgbpy0gs4uf7" path="res://Cars/rat_rod/bug_car_body.obj" id="2_u64g1"]
@@ -49,6 +49,7 @@
 [ext_resource type="PackedScene" uid="uid://cmxuxyw5iojla" path="res://Cars/spyder/spyder.glb" id="43_o6p0r"]
 [ext_resource type="ArrayMesh" uid="uid://dyxcao4gyn6cb" path="res://Cars/spyder/spyder_wheel.obj" id="44_vsuos"]
 [ext_resource type="PackedScene" uid="uid://dsb68f8jonlle" path="res://Cars/vision_gt/vision_gt_body_definitive.glb" id="45_k7gmd"]
+[ext_resource type="PackedScene" uid="uid://bl6pbx5vbxdwr" path="res://Cars/butti/butti_v1.glb" id="47_dbumn"]
 [ext_resource type="PackedScene" uid="uid://b7buvibc2f8e2" path="res://Cars/mcallen/mc_laren.glb" id="48_vlmii"]
 [ext_resource type="AudioStream" uid="uid://c73ukd0knm1h7" path="res://sounds/hud/pop_sound.ogg" id="49_xc6r1"]
 [ext_resource type="AudioStream" uid="uid://4w5boyjy3sj4" path="res://sounds/hud/reject_sound.ogg" id="50_kn6nc"]
@@ -783,6 +784,18 @@ tracks/19/keys = {
 "update": 0,
 "values": [Vector3(0, 0, 0)]
 }
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("vehicles/butti:rotation")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_wibte"]
 resource_name = "rotate"
@@ -1023,6 +1036,18 @@ tracks/19/path = NodePath("vehicles/mcallen:rotation")
 tracks/19/interp = 1
 tracks/19/loop_wrap = true
 tracks/19/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 6.28319, 0)]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("vehicles/butti:rotation")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
 "times": PackedFloat32Array(0, 10),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
@@ -1602,14 +1627,19 @@ mesh = ExtResource("44_vsuos")
 skeleton = NodePath("")
 
 [node name="vision_gt" type="Node3D" parent="vehicles"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 241.642, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 245.544, 0, 0)
 
 [node name="vision_gt_body_definitive" parent="vehicles/vision_gt" instance=ExtResource("45_k7gmd")]
 
 [node name="mcallen" type="Node3D" parent="vehicles"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 250.151, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 260.532, 0, 0)
 
 [node name="mc_laren" parent="vehicles/mcallen" instance=ExtResource("48_vlmii")]
+
+[node name="butti" type="Node3D" parent="vehicles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 275.657, 0, 0)
+
+[node name="butti_v1" parent="vehicles/butti" instance=ExtResource("47_dbumn")]
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.921864, 0.387514, 0, -0.387514, 0.921864, 0, 2.145, 4.175)

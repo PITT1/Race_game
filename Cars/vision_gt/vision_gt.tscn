@@ -514,6 +514,7 @@ script = ExtResource("2_kel4n")
 
 [node name="Cube" type="MeshInstance3D" parent="."]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.000876567, -0.0119412)
+lod_bias = 0.5
 mesh = SubResource("ArrayMesh_84xrp")
 skeleton = NodePath("")
 
