@@ -36,5 +36,7 @@ anim_speed_max = 1.0
 material_override = SubResource("StandardMaterial3D_nhtou")
 emitting = false
 amount = 30
+lifetime = 1.25
+speed_scale = 2.0
 process_material = SubResource("ParticleProcessMaterial_u7vej")
 draw_pass_1 = SubResource("QuadMesh_va7n3")
