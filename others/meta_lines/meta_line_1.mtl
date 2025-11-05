@@ -1,0 +1,22 @@
+# Blender 4.3.2 MTL File: 'decert_track.blend'
+# www.blender.org
+
+newmtl flag
+Ns 250.000000
+Ka 0.500000 0.500000 0.500000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 3
+map_Kd D:/car_game/car_game/Maps/textures/f1_circuits/pista_2_meta_line.jpg
+
+newmtl palo
+Ns 250.000000
+Ka 0.333333 0.333333 0.333333
+Kd 0.017225 0.017225 0.017225
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 3

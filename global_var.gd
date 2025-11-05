@@ -24,7 +24,8 @@ var car_list = { #direccion y precio en tienda
 	spyder = ["res://Cars/spyder/spyder.tscn", 50000],
 	vision_gt = ["res://Cars/vision_gt/vision_gt.tscn", 80000],
 	mcallen = ["res://Cars/mcallen/mcallen.tscn", 70000],
-	butti = ["res://Cars/butti/butti.tscn", 80000]
+	butti = ["res://Cars/butti/butti.tscn", 80000],
+	revolut = ["res://Cars/revolut/revolut.tscn", 40000]
 }
 
 var bot_list = {
@@ -95,7 +96,8 @@ var player_canvas = {
 		spyder = false,
 		vision_gt = false,
 		mcallen = false,
-		butti = false
+		butti = false,
+		revolut = false
 	},
 }
 

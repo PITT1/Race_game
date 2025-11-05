@@ -85,7 +85,7 @@ func bot_sistem(): #BOT
 	steering = relative_angle
 		
 	if dificulty == 1:
-		engine_force = ENGINE_POWER / 1.5
+		engine_force = ENGINE_POWER * 0.9
 	elif dificulty == 2:
 		engine_force = ENGINE_POWER
 	elif dificulty == 3:
