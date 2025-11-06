@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://ch0xpj42c478j"]
+
+[ext_resource type="ArrayMesh" uid="uid://duat8fugflt7c" path="res://others/rocks/rock_3.obj" id="1_b81ld"]
+[ext_resource type="Texture2D" uid="uid://d1nn6hofqxcdg" path="res://Maps/textures/rock_compres/Rock030_1K-JPG_Color.jpg" id="2_dsyf6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oik4x"]
+albedo_texture = ExtResource("2_dsyf6")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ey7n2"]
+points = PackedVector3Array(-5.33473, 3.04544, -2.60769, -3.84184, 5.07134, 1.69752, -4.99314, 3.92383, -2.4086, -4.79845, 3.69812, -3.13996, -4.7387, 2.99966, -3.31693, -4.57985, 2.03998, -2.88074, -3.54875, -0.154025, -1.16294, -4.21436, 1.89319, 0.436653, -3.74555, 2.03525, 1.03944, -3.31048, 5.09107, 2.25952, -3.23808, 5.64431, 1.9768, -3.67386, 5.71376, 1.39406, -3.22121, 6.37117, -1.40903, -2.94569, 6.25832, -2.09477, -1.062, 4.63964, -4.59577, -0.923537, 3.96092, -4.80246, -2.091, 0.538903, -3.53951, -2.49866, 0.104837, -3.05563, -3.39482, -0.0822065, -1.92126, -2.88876, -0.529689, -1.40143, -1.76838, -0.545474, 0.617074, 1.06839, -1.19105, 2.24224, -0.219264, 2.35488, 1.80121, 1.84576, -1.22262, 2.15722, 0.528587, 0.610721, 2.13993, -2.69265, 6.43589, -1.39728, 0.216514, 2.51193, 1.44383, -0.276899, 4.3579, -4.60199, -0.405524, 3.28536, -4.46719, -1.48021, 0.136405, -3.30448, -1.78455, -0.297661, -2.80401, 0.741556, -1.00874, -0.696333, 1.50698, -1.62669, 1.96297, -0.73798, -1.00006, 0.737354, 1.62295, -1.01427, 0.687582, 1.1457, 1.95001, -2.84756, 0.820277, 1.86004, -3.18351, 0.651589, 2.14574, -3.39089, 0.486415, -0.4484, -1.66549, 1.1928, -0.667012, -0.80901, 1.28417, 0.516805, -1.72494)
+
+[node name="Rock3" type="StaticBody3D"]
+collision_layer = 2
+collision_mask = 1093
+
+[node name="Rock3" type="MeshInstance3D" parent="."]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0.0897011, 0, -0.0606501)
+mesh = ExtResource("1_b81ld")
+surface_material_override/0 = SubResource("StandardMaterial3D_oik4x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0.0897011, 0, -0.0606501)
+shape = SubResource("ConvexPolygonShape3D_ey7n2")

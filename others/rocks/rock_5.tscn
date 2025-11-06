@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://c8v4jhn33pqgt"]
+
+[ext_resource type="ArrayMesh" uid="uid://5fcxxplvjq6p" path="res://others/rocks/rock_5.obj" id="1_6jmfe"]
+[ext_resource type="Texture2D" uid="uid://d1nn6hofqxcdg" path="res://Maps/textures/rock_compres/Rock030_1K-JPG_Color.jpg" id="2_q2ihq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ru5dl"]
+albedo_texture = ExtResource("2_q2ihq")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_f7ce7"]
+points = PackedVector3Array(2.72742, 5.50853, -0.334447, 2.70129, 4.92321, 1.21382, 3.83698, 4.57018, -0.390866, 2.75904, 4.54444, -1.45867, -1.35749, 3.94381, -1.9035, -1.49361, 4.06393, -0.236455, -1.95283, 3.22182, 1.21263, 1.84678, 3.05204, 2.31488, 3.42588, 4.29193, 1.22094, 3.31932, 0.30505, -0.395617, 2.76798, 0.112601, -2.01812, -1.6476, 0.469919, -3.75227, -2.90634, 1.11775, -2.47957, -2.75579, 2.97237, -0.951495, -3.18614, 1.90716, 0.289135, -2.34262, 0.895268, 1.3807, 1.37518, 1.09201, 1.86472, 2.9041, 0.712012, 1.28449, 2.29088, -0.752806, -0.962779, -1.86003, -0.321941, -3.28725, -3.0899, 1.31449, -0.462726, -2.23126, 0.0506991, -0.784019, 1.51061, -0.337876, 0.828384)
+
+[node name="Rock5" type="StaticBody3D"]
+collision_layer = 2
+collision_mask = 1093
+
+[node name="Rock5" type="MeshInstance3D" parent="."]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0.03266, 0, 0.0396144)
+mesh = ExtResource("1_6jmfe")
+surface_material_override/0 = SubResource("StandardMaterial3D_ru5dl")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0.03266, 0, 0.0396144)
+shape = SubResource("ConvexPolygonShape3D_f7ce7")
