@@ -168,5 +168,10 @@ stream = ExtResource("7_5l3tf")
 unit_size = 9.9
 max_distance = 50.0
 
+[node name="escort_system_interval" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
 [connection signal="area_entered" from="checkpoint_sensor" to="." method="_on_checkpoint_sensor_area_entered"]
 [connection signal="timeout" from="shock_timer_sensor" to="." method="_on_shock_timer_sensor_timeout"]
+[connection signal="timeout" from="escort_system_interval" to="." method="_on_escort_system_interval_timeout"]

@@ -43,11 +43,6 @@ func _ready() -> void:
 	set_random_path_follow()
 	engine_sound.play()
 
-func _process(delta: float) -> void:
-	if delta:
-		pass
-	escort_system()
-
 
 
 func _physics_process(delta: float) -> void:
@@ -186,3 +181,7 @@ func escort_system():
 		dificulty = 1
 	else:
 		dificulty = 3
+
+
+func _on_escort_system_interval_timeout() -> void:
+	escort_system()
