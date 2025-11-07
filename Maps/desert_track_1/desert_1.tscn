@@ -174,6 +174,7 @@ shadow_mesh = SubResource("ArrayMesh_y7khp")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nphd0"]
 albedo_texture = ExtResource("6_wr2y2")
+uv1_scale = Vector3(0.5, 1, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t05g1"]
 albedo_texture = ExtResource("7_ji8kx")
@@ -530,7 +531,7 @@ directional_shadow_mode = 0
 sky_mode = 1
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-0.732591, 0.692228, -0.540246, -4.59305e-08, 0.617123, 0.782893, 1.35592, 0.374004, -0.29189, -11.355, 16.455, -6.135)
+transform = Transform3D(0.0119727, 0, 0.999928, 0, 1, 0, -0.999928, 0, 0.0119727, -1.77437, 2.1994, 0)
 current = true
 far = 300.0
 
@@ -559,40 +560,40 @@ transform = Transform3D(0.00486587, 0, -0.999827, 0, 0.999828, 0, 0.999827, 0, 0
 progress = 28.25
 
 [node name="PathFollow_1" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.00668293, 0, -0.999975, 0, 0.999998, 0, 0.999881, 0, -0.00668356, -98.5408, -3.05176e-05, 119.093)
+transform = Transform3D(-0.00668294, 0, -0.999975, 0, 0.999998, 0, 0.999881, 0, -0.00668356, -98.5408, -3.05176e-05, 119.093)
 
 [node name="PathFollow_2" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.00668313, 0, -0.999977, 0, 1, 0, 0.99991, 0, -0.00668357, -98.5408, -3.05176e-05, 119.093)
+transform = Transform3D(-0.00668313, 0, -0.999977, 0, 1, 0, 0.99991, 0, -0.00668358, -98.5408, -3.05176e-05, 119.093)
 
 [node name="PathFollow_3" type="PathFollow3D" parent="Path3D"]
 transform = Transform3D(-0.00668307, 0, -0.999976, 0, 0.999999, 0, 0.999901, 0, -0.00668357, -98.5408, -3.05176e-05, 119.093)
 
 [node name="PathFollow_4" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.00668313, 0, -0.999977, 0, 1, 0, 0.99991, 0, -0.00668357, -98.5408, -3.05176e-05, 119.093)
+transform = Transform3D(-0.00668313, 0, -0.999977, 0, 1, 0, 0.99991, 0, -0.00668358, -98.5408, -3.05176e-05, 119.093)
 
 [node name="PathFollow_5" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.00668313, 0, -0.999977, 0, 1, 0, 0.99991, 0, -0.00668357, -98.5408, -3.05176e-05, 119.093)
+transform = Transform3D(-0.00668313, 0, -0.999977, 0, 1, 0, 0.99991, 0, -0.00668358, -98.5408, -3.05176e-05, 119.093)
 
 [node name="PathFollow_6" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.00668313, 0, -0.999977, 0, 1, 0, 0.99991, 0, -0.00668357, -98.5408, -3.05176e-05, 119.093)
+transform = Transform3D(-0.00668313, 0, -0.999977, 0, 1, 0, 0.99991, 0, -0.00668358, -98.5408, -3.05176e-05, 119.093)
 
 [node name="PathFollow_7" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.00668313, 0, -0.999977, 0, 1, 0, 0.99991, 0, -0.00668357, -98.5408, -3.05176e-05, 119.093)
+transform = Transform3D(-0.00668313, 0, -0.999977, 0, 1, 0, 0.99991, 0, -0.00668358, -98.5408, -3.05176e-05, 119.093)
 
 [node name="PathFollow_8" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.00668313, 0, -0.999977, 0, 1, 0, 0.99991, 0, -0.00668357, -98.5408, -3.05176e-05, 119.093)
+transform = Transform3D(-0.00668313, 0, -0.999977, 0, 1, 0, 0.99991, 0, -0.00668358, -98.5408, -3.05176e-05, 119.093)
 
 [node name="PathFollow_9" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.00668313, 0, -0.999977, 0, 1, 0, 0.99991, 0, -0.00668357, -98.5408, -3.05176e-05, 119.093)
+transform = Transform3D(-0.00668313, 0, -0.999977, 0, 1, 0, 0.99991, 0, -0.00668358, -98.5408, -3.05176e-05, 119.093)
 
 [node name="PathFollow_10" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.00668313, 0, -0.999977, 0, 1, 0, 0.99991, 0, -0.00668357, -98.5408, -3.05176e-05, 119.093)
+transform = Transform3D(-0.00668313, 0, -0.999977, 0, 1, 0, 0.99991, 0, -0.00668358, -98.5408, -3.05176e-05, 119.093)
 
 [node name="PathFollow_11" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.00668313, 0, -0.999977, 0, 1, 0, 0.99991, 0, -0.00668357, -98.5408, -3.05176e-05, 119.093)
+transform = Transform3D(-0.00668313, 0, -0.999977, 0, 1, 0, 0.99991, 0, -0.00668358, -98.5408, -3.05176e-05, 119.093)
 
 [node name="PathFollow_12" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.00668313, 0, -0.999977, 0, 1, 0, 0.99991, 0, -0.00668357, -98.5408, -3.05176e-05, 119.093)
+transform = Transform3D(-0.00668313, 0, -0.999977, 0, 1, 0, 0.99991, 0, -0.00668358, -98.5408, -3.05176e-05, 119.093)
 
 [node name="pista_body" type="StaticBody3D" parent="."]
 collision_layer = 2
@@ -1147,7 +1148,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -341.52, 2.38718, 268.142)
 collision_layer = 128
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/priority_point_1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("BoxShape3D_2mpbm")
 debug_color = Color(1, 0, 0, 1)
 
@@ -1467,7 +1467,7 @@ debug_color = Color(1, 1, 1, 0.42)
 occluder = ExtResource("20_g5b67")
 
 [node name="PhantomCamera_init_anim" type="Node3D" parent="."]
-transform = Transform3D(0.0119727, 0, 0.999928, 0, 1, 0, -0.999928, 0, 0.0119727, -1.77437, 4.67493, 0)
+transform = Transform3D(0.0119727, 0, 0.999928, 0, 1, 0, -0.999928, 0, 0.0119727, -1.77437, 2.1994, 0)
 script = ExtResource("2_0wf4l")
 priority = 1
 tween_resource = SubResource("Resource_g5b67")

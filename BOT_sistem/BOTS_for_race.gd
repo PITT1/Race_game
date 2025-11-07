@@ -28,6 +28,10 @@ var laps_num: int = 1
 var recovery_mode: bool = false
 @onready var shock_timer_sensor: Timer = $shock_timer_sensor
 
+var race_order: Array = []
+var bot_position: int = 0
+var player_position: int = 0
+
 func _ready() -> void:
 	gravity_scale = 4
 	all_checkpoints = get_parent().num_checkpoints #esto hay que cambiarlo para el futuro ya que no se podra entrar al loby ni eventos de destruccion
@@ -38,6 +42,13 @@ func _ready() -> void:
 	
 	set_random_path_follow()
 	engine_sound.play()
+
+func _process(delta: float) -> void:
+	if delta:
+		pass
+	escort_system()
+
+
 
 func _physics_process(delta: float) -> void:
 	if delta:
@@ -84,11 +95,11 @@ func bot_sistem(): #BOT
 		
 	steering = relative_angle
 		
-	if dificulty == 1:
+	if dificulty == 1: #lento
 		engine_force = ENGINE_POWER * 0.9
-	elif dificulty == 2:
+	elif dificulty == 2: #normal
 		engine_force = ENGINE_POWER
-	elif dificulty == 3:
+	elif dificulty == 3: #rapido
 		engine_force = ENGINE_POWER * 1.1
 	
 
@@ -161,3 +172,17 @@ func engine_sound_controller():
 	var speed_car = linear_velocity.length()
 	var normalized_speed = clamp(speed_car, 0, 80)
 	engine_sound.pitch_scale = 0.0125 * normalized_speed + 0.4
+
+func escort_system():
+	race_order = get_parent().race_order
+	for i in range(race_order.size()):
+		if race_order[i].name == name:
+			bot_position = i + 1
+		
+		if not race_order[i].name.contains("Bot"):
+			player_position = i + 1
+	
+	if player_position > bot_position:
+		dificulty = 1
+	else:
+		dificulty = 3
