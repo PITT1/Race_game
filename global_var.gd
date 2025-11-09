@@ -59,7 +59,8 @@ var track_list = {
 	4 : ["Floating 1", "res://Maps/basic_circuit_1/basic_circuit_1.tscn", "res://Maps/basic_circuit_1/pista_basic_circuit_1_selection_menu.png"],
 	5 : ["Floating 2", "res://Maps/2_vias_circuit_1/pista_doble_1.tscn", "res://Maps/2_vias_circuit_1/pista_doble_seleccion_menu.png"],
 	6 : ["track_4", "res://Maps/track_2/pista_2.tscn", "res://Maps/track_2/pista_2_selection_menu.png"],
-	7 : ["Floating 3", "res://Maps/floating_track_3/floating_track_3.tscn", "res://Maps/floating_track_3/floating_track_3_selection_menu.png"]
+	7 : ["Floating 3", "res://Maps/floating_track_3/floating_track_3.tscn", "res://Maps/floating_track_3/floating_track_3_selection_menu.png"],
+	8 : ["Desert_1", "res://Maps/desert_track_1/desert_1.tscn", "res://Maps/desert_track_1/desert_1_selection_menu.png"]
 }
 	
 	
@@ -73,7 +74,8 @@ var player_canvas = {
 		4 : [false, "00:00:00"],
 		5 : [false, "00:00:00"],
 		6 : [false, "00:00:00"],
-		7 : [false, "00:00:00"]
+		7 : [false, "00:00:00"],
+		8 : [false, "00:00:00"]
 	},
 	cars_data = { #en true: estn disponibles, en false: estan bloqueados
 		bugrod = true,

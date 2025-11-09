@@ -19,6 +19,7 @@ run/low_processor_mode=true
 boot_splash/use_filter=false
 boot_splash/image="uid://bcdal1ijwciut"
 config/icon="uid://biicunfsdne1u"
+boot_splash/minimum_display_time=1
 
 [autoload]
 
@@ -105,6 +106,7 @@ environment/screen_space_reflection/roughness_quality=0
 environment/subsurface_scattering/subsurface_scattering_quality=0
 environment/volumetric_fog/use_filter=0
 occlusion_culling/use_occlusion_culling=true
+mesh_lod/lod_change/threshold_pixels=0.5
 lights_and_shadows/positional_shadow/atlas_size.mobile=512
 lights_and_shadows/positional_shadow/atlas_quadrant_0_subdiv=0
 lights_and_shadows/positional_shadow/atlas_quadrant_1_subdiv=0

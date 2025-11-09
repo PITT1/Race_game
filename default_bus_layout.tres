@@ -1,0 +1,14 @@
+[gd_resource type="AudioBusLayout" load_steps=3 format=3 uid="uid://di40vkhkmhvpb"]
+
+[sub_resource type="AudioEffectEQ6" id="AudioEffectEQ6_j3pel"]
+resource_name = "EQ6"
+
+[sub_resource type="AudioEffectFilter" id="AudioEffectFilter_j3pel"]
+resource_name = "Filter"
+
+[resource]
+bus/0/volume_db = -4.97353
+bus/0/effect/0/effect = SubResource("AudioEffectEQ6_j3pel")
+bus/0/effect/0/enabled = false
+bus/0/effect/1/effect = SubResource("AudioEffectFilter_j3pel")
+bus/0/effect/1/enabled = false
