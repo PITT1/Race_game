@@ -181,6 +181,6 @@ func call_lakitu():
 
 func engine_sound_controller():
 	var speed = linear_velocity.length()
-	var normalized_speed = clamp(speed, 0, 80)
-	engine_sound.pitch_scale = 0.0125 * normalized_speed + 0.4
+	var normalized_speed = clamp(speed, 0, 150)
+	engine_sound.pitch_scale = 0.00667 * normalized_speed + 0.1
 	

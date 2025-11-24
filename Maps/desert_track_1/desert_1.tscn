@@ -1472,3 +1472,5 @@ script = ExtResource("2_0wf4l")
 priority = 1
 tween_resource = SubResource("Resource_g5b67")
 metadata/_custom_type_script = "uid://csjccrhj5wnx7"
+
+[connection signal="body_entered" from="abyss_sensor" to="." method="_on_abyss_sensor_body_entered"]

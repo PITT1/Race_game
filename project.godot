@@ -21,6 +21,10 @@ boot_splash/image="uid://bcdal1ijwciut"
 config/icon="uid://biicunfsdne1u"
 boot_splash/minimum_display_time=1
 
+[audio]
+
+buses/default_bus_layout=""
+
 [autoload]
 
 PhantomCameraManager="*res://addons/phantom_camera/scripts/managers/phantom_camera_manager.gd"
