@@ -633,43 +633,43 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 73.296, 6.27944, 5.18541)
 curve = SubResource("Curve3D_f2qnn")
 
 [node name="PathFollow_0" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.0866167, 0, -0.99609, 0, 0.999827, 0, 0.996087, 0, 0.086617, -6.2775, -2.09808e-05, -6.00895)
+transform = Transform3D(0.0866171, 0, -0.99609, 0, 0.999827, 0, 0.996087, 0, 0.0866173, -6.2775, -2.09808e-05, -6.00895)
 
 [node name="PathFollow_1" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.0866223, 0, -0.996229, 0, 0.999963, 0, 0.996152, 0, 0.086629, -6.2775, -2.09808e-05, -6.00895)
+transform = Transform3D(0.0866227, 0, -0.996229, 0, 0.999963, 0, 0.996152, 0, 0.0866294, -6.2775, -2.09808e-05, -6.00895)
 
 [node name="PathFollow_2" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.0866246, 0, -0.996231, 0, 0.999965, 0, 0.996178, 0, 0.0866292, -6.2775, -2.09808e-05, -6.00895)
+transform = Transform3D(0.086625, 0, -0.996231, 0, 0.999965, 0, 0.996178, 0, 0.0866296, -6.2775, -2.09808e-05, -6.00895)
 
 [node name="PathFollow_3" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.086623, 0, -0.996229, 0, 0.999964, 0, 0.99616, 0, 0.086629, -6.2775, -2.09808e-05, -6.00895)
+transform = Transform3D(0.0866234, 0, -0.996229, 0, 0.999964, 0, 0.99616, 0, 0.0866294, -6.2775, -2.09808e-05, -6.00895)
 
 [node name="PathFollow_4" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.0866246, 0, -0.996231, 0, 0.999965, 0, 0.996178, 0, 0.0866292, -6.2775, -2.09808e-05, -6.00895)
+transform = Transform3D(0.086625, 0, -0.996231, 0, 0.999965, 0, 0.996178, 0, 0.0866296, -6.2775, -2.09808e-05, -6.00895)
 
 [node name="PathFollow_5" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.0866246, 0, -0.996231, 0, 0.999965, 0, 0.996178, 0, 0.0866292, -6.2775, -2.09808e-05, -6.00895)
+transform = Transform3D(0.086625, 0, -0.996231, 0, 0.999965, 0, 0.996178, 0, 0.0866296, -6.2775, -2.09808e-05, -6.00895)
 
 [node name="PathFollow_6" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.0866246, 0, -0.996231, 0, 0.999965, 0, 0.996178, 0, 0.0866292, -6.2775, -2.09808e-05, -6.00895)
+transform = Transform3D(0.086625, 0, -0.996231, 0, 0.999965, 0, 0.996178, 0, 0.0866296, -6.2775, -2.09808e-05, -6.00895)
 
 [node name="PathFollow_7" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.0866246, 0, -0.996231, 0, 0.999965, 0, 0.996178, 0, 0.0866292, -6.2775, -2.09808e-05, -6.00895)
+transform = Transform3D(0.086625, 0, -0.996231, 0, 0.999965, 0, 0.996178, 0, 0.0866296, -6.2775, -2.09808e-05, -6.00895)
 
 [node name="PathFollow_8" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.0866246, 0, -0.996231, 0, 0.999965, 0, 0.996178, 0, 0.0866292, -6.2775, -2.09808e-05, -6.00895)
+transform = Transform3D(0.086625, 0, -0.996231, 0, 0.999965, 0, 0.996178, 0, 0.0866296, -6.2775, -2.09808e-05, -6.00895)
 
 [node name="PathFollow_9" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.0866246, 0, -0.996231, 0, 0.999965, 0, 0.996178, 0, 0.0866292, -6.2775, -2.09808e-05, -6.00895)
+transform = Transform3D(0.086625, 0, -0.996231, 0, 0.999965, 0, 0.996178, 0, 0.0866296, -6.2775, -2.09808e-05, -6.00895)
 
 [node name="PathFollow_10" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.0866246, 0, -0.996231, 0, 0.999965, 0, 0.996178, 0, 0.0866292, -6.2775, -2.09808e-05, -6.00895)
+transform = Transform3D(0.086625, 0, -0.996231, 0, 0.999965, 0, 0.996178, 0, 0.0866296, -6.2775, -2.09808e-05, -6.00895)
 
 [node name="PathFollow_11" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.0866246, 0, -0.996231, 0, 0.999965, 0, 0.996178, 0, 0.0866292, -6.2775, -2.09808e-05, -6.00895)
+transform = Transform3D(0.086625, 0, -0.996231, 0, 0.999965, 0, 0.996178, 0, 0.0866296, -6.2775, -2.09808e-05, -6.00895)
 
 [node name="PathFollow_12" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.0866246, 0, -0.996231, 0, 0.999965, 0, 0.996178, 0, 0.0866292, -6.2775, -2.09808e-05, -6.00895)
+transform = Transform3D(0.086625, 0, -0.996231, 0, 0.999965, 0, 0.996178, 0, 0.0866296, -6.2775, -2.09808e-05, -6.00895)
 
 [node name="checkpoints_sistem" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 92.4362, 0, -98.6407)
