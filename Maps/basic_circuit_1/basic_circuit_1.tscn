@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=4 uid="uid://daldokiad1rs2"]
+[gd_scene load_steps=67 format=4 uid="uid://daldokiad1rs2"]
 
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="1_dqlug"]
 [ext_resource type="Script" uid="uid://kghgfx151qgh" path="res://Maps/circuit_test_2/test_2.gd" id="1_eco0a"]
@@ -10,20 +10,21 @@
 [ext_resource type="PackedScene" uid="uid://ctvbggtg0dtyb" path="res://huds/controls_hud/tactil_control_1.tscn" id="8_avde0"]
 [ext_resource type="Texture2D" uid="uid://chn5wjgi0tjqt" path="res://Maps/textures/f1_circuits/rejillas circulares.png" id="9_f2qnn"]
 [ext_resource type="Texture2D" uid="uid://wyvhiviq75ye" path="res://Maps/textures/f1_circuits/pista_2_meta_line.jpg" id="10_f2qnn"]
+[ext_resource type="Texture2D" uid="uid://cknbcuhq0hjnk" path="res://Maps/textures/f1_circuits/rejillas_2.png" id="11_3m78f"]
 [ext_resource type="ArrayOccluder3D" uid="uid://duk54745q0y46" path="res://Maps/basic_circuit_1/basic_circuit_1.occ" id="11_st4y5"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_avde0"]
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_st4y5"]
 sky_top_color = Color(0.461087, 0.641883, 0.858997, 1)
 sky_horizon_color = Color(0.631155, 0.676354, 0.730632, 1)
 ground_bottom_color = Color(0, 0, 0, 1)
 ground_horizon_color = Color(0.631155, 0.676354, 0.730632, 1)
 
-[sub_resource type="Sky" id="Sky_8yx5d"]
-sky_material = SubResource("ProceduralSkyMaterial_avde0")
+[sub_resource type="Sky" id="Sky_3m78f"]
+sky_material = SubResource("ProceduralSkyMaterial_st4y5")
 
-[sub_resource type="Environment" id="Environment_f2qnn"]
+[sub_resource type="Environment" id="Environment_c1b42"]
 background_mode = 2
-sky = SubResource("Sky_8yx5d")
+sky = SubResource("Sky_3m78f")
 
 [sub_resource type="Resource" id="Resource_f2qnn"]
 script = ExtResource("3_g4mv0")
@@ -194,9 +195,7 @@ transparency = 1
 albedo_texture = ExtResource("9_f2qnn")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c1b42"]
-emission_enabled = true
-emission = Color(1, 1, 1, 1)
-emission_energy_multiplier = 10.0
+shading_mode = 0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0hdww"]
 albedo_texture = ExtResource("10_f2qnn")
@@ -261,8 +260,8 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_1g2cg")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d2h3o"]
-transparency = 1
-albedo_texture = ExtResource("9_f2qnn")
+shading_mode = 0
+albedo_texture = ExtResource("11_3m78f")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s8d7r"]
 emission_enabled = true
@@ -597,7 +596,7 @@ vehicle_num = 12
 poitn_desviation_BOT = 2
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_f2qnn")
+environment = SubResource("Environment_c1b42")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.899558, -0.282519, 0.333135, 0, 0.762668, 0.64679, -0.436802, 0.581825, -0.686064, 0, 0, 0)

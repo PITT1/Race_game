@@ -13,18 +13,18 @@
 [ext_resource type="Texture2D" uid="uid://wyvhiviq75ye" path="res://Maps/textures/f1_circuits/pista_2_meta_line.jpg" id="11_gmdgo"]
 [ext_resource type="ArrayOccluder3D" uid="uid://doa1lx5h1n4m6" path="res://Maps/nascar_circuit/nascar_circuit.occ" id="12_tjk3s"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_aad1i"]
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_tjk3s"]
 sky_top_color = Color(0.461087, 0.641883, 0.858997, 1)
 sky_horizon_color = Color(0.631155, 0.676354, 0.730632, 1)
 ground_bottom_color = Color(0, 0, 0, 1)
 ground_horizon_color = Color(0.631155, 0.676354, 0.730632, 1)
 
-[sub_resource type="Sky" id="Sky_mj5r1"]
-sky_material = SubResource("ProceduralSkyMaterial_aad1i")
+[sub_resource type="Sky" id="Sky_y5slj"]
+sky_material = SubResource("ProceduralSkyMaterial_tjk3s")
 
-[sub_resource type="Environment" id="Environment_lledn"]
+[sub_resource type="Environment" id="Environment_ob834"]
 background_mode = 2
-sky = SubResource("Sky_mj5r1")
+sky = SubResource("Sky_y5slj")
 
 [sub_resource type="Resource" id="Resource_jvpel"]
 script = ExtResource("5_jvpel")
@@ -1652,7 +1652,7 @@ min_distance_to_point_BOT = 15
 poitn_desviation_BOT = 0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_lledn")
+environment = SubResource("Environment_ob834")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.899558, -0.282519, 0.333135, 0, 0.762668, 0.64679, -0.436802, 0.581825, -0.686064, 0, 0, 0)
