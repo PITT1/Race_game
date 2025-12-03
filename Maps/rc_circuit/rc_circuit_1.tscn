@@ -800,6 +800,8 @@ script = ExtResource("19_enonn")
 [node name="CollisionShape3D" parent="vel_reductor" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.8983, 1.22689, -11.1735)
 
+[connection signal="body_entered" from="vel_reductor" to="vel_reductor" method="_on_body_entered"]
+
 [editable path="pista_rc_1"]
 [editable path="decoration/red_stand2"]
 [editable path="decoration/green_stand2"]

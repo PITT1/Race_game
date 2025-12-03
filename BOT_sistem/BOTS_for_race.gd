@@ -32,6 +32,8 @@ var race_order: Array = []
 var bot_position: int = 0
 var player_position: int = 0
 
+var vel_reduction: float = 0.0
+
 func _ready() -> void:
 	gravity_scale = 4
 	all_checkpoints = get_parent().num_checkpoints #esto hay que cambiarlo para el futuro ya que no se podra entrar al loby ni eventos de destruccion
