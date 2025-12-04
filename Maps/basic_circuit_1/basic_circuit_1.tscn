@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=4 uid="uid://daldokiad1rs2"]
+[gd_scene load_steps=68 format=4 uid="uid://daldokiad1rs2"]
 
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="1_dqlug"]
 [ext_resource type="Script" uid="uid://kghgfx151qgh" path="res://Maps/circuit_test_2/test_2.gd" id="1_eco0a"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://wyvhiviq75ye" path="res://Maps/textures/f1_circuits/pista_2_meta_line.jpg" id="10_f2qnn"]
 [ext_resource type="Texture2D" uid="uid://cknbcuhq0hjnk" path="res://Maps/textures/f1_circuits/rejillas_2.png" id="11_3m78f"]
 [ext_resource type="ArrayOccluder3D" uid="uid://duk54745q0y46" path="res://Maps/basic_circuit_1/basic_circuit_1.occ" id="11_st4y5"]
+[ext_resource type="PackedScene" uid="uid://cmsodlxlif01f" path="res://others/velocity_reductor/vel_reductor.tscn" id="13_c1b42"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_st4y5"]
 sky_top_color = Color(0.461087, 0.641883, 0.858997, 1)
@@ -1293,4 +1294,27 @@ shape = SubResource("ConcavePolygonShape3D_d2h3o")
 [node name="OccluderInstance3D" type="OccluderInstance3D" parent="."]
 occluder = ExtResource("11_st4y5")
 
+[node name="vel_reductors" type="Node3D" parent="."]
+
+[node name="vel_reductor" parent="vel_reductors" instance=ExtResource("13_c1b42")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 157.246, -3.8147e-06, -140.411)
+velocity_reduction = 40.0
+
+[node name="CollisionShape3D" parent="vel_reductors/vel_reductor" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.97514, -0.930281, -13.1142)
+
+[node name="vel_reductor2" parent="vel_reductors" instance=ExtResource("13_c1b42")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -150.376, -3.8147e-06, -231.836)
+velocity_reduction = 40.0
+
+[node name="CollisionShape3D" parent="vel_reductors/vel_reductor2" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.97514, -0.930281, -13.1142)
+
 [connection signal="body_entered" from="abyss_sensor" to="." method="_on_abyss_sensor_body_entered"]
+[connection signal="body_entered" from="vel_reductors/vel_reductor" to="vel_reductors/vel_reductor" method="_on_body_entered"]
+[connection signal="body_exited" from="vel_reductors/vel_reductor" to="vel_reductors/vel_reductor" method="_on_body_exited"]
+[connection signal="body_entered" from="vel_reductors/vel_reductor2" to="vel_reductors/vel_reductor2" method="_on_body_entered"]
+[connection signal="body_exited" from="vel_reductors/vel_reductor2" to="vel_reductors/vel_reductor2" method="_on_body_exited"]
+
+[editable path="vel_reductors/vel_reductor"]
+[editable path="vel_reductors/vel_reductor2"]

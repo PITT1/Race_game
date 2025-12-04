@@ -46,7 +46,6 @@ func _ready() -> void:
 	engine_sound.play()
 
 
-
 func _physics_process(delta: float) -> void:
 	if delta:
 		pass
@@ -91,13 +90,19 @@ func bot_sistem(): #BOT
 		
 		
 	steering = relative_angle
-		
-	if dificulty == 1: #lento
-		engine_force = ENGINE_POWER * 0.9
-	elif dificulty == 2: #normal
-		engine_force = ENGINE_POWER
-	elif dificulty == 3: #rapido
-		engine_force = ENGINE_POWER * 1.1
+	
+	if vel_reduction > 0:
+		if linear_velocity.length() > vel_reduction:
+			engine_force = -ENGINE_POWER
+		else:
+			engine_force = ENGINE_POWER
+	else:
+		if dificulty == 1: #lento
+			engine_force = ENGINE_POWER * 0.9
+		elif dificulty == 2: #normal
+			engine_force = ENGINE_POWER
+		elif dificulty == 3: #rapido
+			engine_force = ENGINE_POWER * 1.1
 	
 
 func start_race():

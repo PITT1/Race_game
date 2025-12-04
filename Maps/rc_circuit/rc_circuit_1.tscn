@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://c0e7xj0w2s5k1"]
+[gd_scene load_steps=47 format=3 uid="uid://c0e7xj0w2s5k1"]
 
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="1_758mf"]
 [ext_resource type="Script" uid="uid://kghgfx151qgh" path="res://Maps/circuit_test_2/test_2.gd" id="1_gkmgf"]
@@ -18,7 +18,6 @@
 [ext_resource type="PackedScene" uid="uid://dy6hukm2elmq7" path="res://others/decoration/blue_stand.glb" id="16_enonn"]
 [ext_resource type="ArrayOccluder3D" uid="uid://c5ac80birlkoe" path="res://Maps/rc_circuit/rc_circuit_1.occ" id="17_lbryg"]
 [ext_resource type="PackedScene" uid="uid://cmsodlxlif01f" path="res://others/velocity_reductor/vel_reductor.tscn" id="18_lge22"]
-[ext_resource type="Script" uid="uid://blsd77oo8dw63" path="res://others/velocity_reductor/vel_reductor.gd" id="19_enonn"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_j2xqt"]
 sky_top_color = Color(0.461087, 0.641883, 0.858997, 1)
@@ -162,6 +161,12 @@ albedo_color = Color(0.699983, 0.400664, 0, 1)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v5iao"]
 shading_mode = 2
 albedo_color = Color(0.224304, 0.224304, 0.224304, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lge22"]
+size = Vector3(38.7347, 7.45885, 62.8167)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_enonn"]
+size = Vector3(41.508, 7.45885, 57.6187)
 
 [node name="RcCircuit1" type="Node3D"]
 script = ExtResource("1_gkmgf")
@@ -790,17 +795,37 @@ transform = Transform3D(0.986935, 0, -0.161122, 0, 1, 0, 0.161122, 0, 0.986935, 
 surface_material_override/0 = SubResource("StandardMaterial3D_wbbut")
 surface_material_override/1 = SubResource("StandardMaterial3D_hu3m3")
 
+[node name="vel_reductors" type="Node3D" parent="."]
+
+[node name="vel_reductor" parent="vel_reductors" instance=ExtResource("18_lge22")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 94.7861, 0, 64.6036)
+
+[node name="CollisionShape3D" parent="vel_reductors/vel_reductor" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.0519, 1.22689, 8.01444)
+
+[node name="vel_reductor2" parent="vel_reductors" instance=ExtResource("18_lge22")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 55.0364, 0, 7.92201)
+
+[node name="CollisionShape3D" parent="vel_reductors/vel_reductor2" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.4093, 1.22689, -4.23388)
+shape = SubResource("BoxShape3D_lge22")
+
+[node name="vel_reductor3" parent="vel_reductors" instance=ExtResource("18_lge22")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.09458, 0, 71.5913)
+
+[node name="CollisionShape3D" parent="vel_reductors/vel_reductor3" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.0227, 1.22689, -1.63489)
+shape = SubResource("BoxShape3D_enonn")
+
 [node name="OccluderInstance3D" type="OccluderInstance3D" parent="."]
 occluder = ExtResource("17_lbryg")
 
-[node name="vel_reductor" parent="." instance=ExtResource("18_lge22")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 94.7861, 0, 64.6036)
-script = ExtResource("19_enonn")
-
-[node name="CollisionShape3D" parent="vel_reductor" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.8983, 1.22689, -11.1735)
-
-[connection signal="body_entered" from="vel_reductor" to="vel_reductor" method="_on_body_entered"]
+[connection signal="body_entered" from="vel_reductors/vel_reductor" to="vel_reductors/vel_reductor" method="_on_body_entered"]
+[connection signal="body_exited" from="vel_reductors/vel_reductor" to="vel_reductors/vel_reductor" method="_on_body_exited"]
+[connection signal="body_entered" from="vel_reductors/vel_reductor2" to="vel_reductors/vel_reductor2" method="_on_body_entered"]
+[connection signal="body_exited" from="vel_reductors/vel_reductor2" to="vel_reductors/vel_reductor2" method="_on_body_exited"]
+[connection signal="body_entered" from="vel_reductors/vel_reductor3" to="vel_reductors/vel_reductor3" method="_on_body_entered"]
+[connection signal="body_exited" from="vel_reductors/vel_reductor3" to="vel_reductors/vel_reductor3" method="_on_body_exited"]
 
 [editable path="pista_rc_1"]
 [editable path="decoration/red_stand2"]
@@ -821,4 +846,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.8983, 1.22689, -11.1735)
 [editable path="decoration/blue_stand7"]
 [editable path="decoration/red_stand6"]
 [editable path="decoration/green_stand8"]
-[editable path="vel_reductor"]
+[editable path="vel_reductors/vel_reductor"]
+[editable path="vel_reductors/vel_reductor2"]
+[editable path="vel_reductors/vel_reductor3"]

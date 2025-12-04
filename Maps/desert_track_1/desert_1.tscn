@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=4 uid="uid://8t6kus1xruwb"]
+[gd_scene load_steps=72 format=4 uid="uid://8t6kus1xruwb"]
 
 [ext_resource type="Script" uid="uid://kghgfx151qgh" path="res://Maps/circuit_test_2/test_2.gd" id="1_cvtsk"]
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="1_xyjja"]
@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://c11g8fxcbhxps" path="res://others/rocks/rock_4.tscn" id="18_amp66"]
 [ext_resource type="PackedScene" uid="uid://c8v4jhn33pqgt" path="res://others/rocks/rock_5.tscn" id="19_l10e4"]
 [ext_resource type="ArrayOccluder3D" uid="uid://ddqfwn22phkix" path="res://Maps/desert_track_1/desert_1.occ" id="20_g5b67"]
+[ext_resource type="PackedScene" uid="uid://cmsodlxlif01f" path="res://others/velocity_reductor/vel_reductor.tscn" id="21_ferbx"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ferbx"]
 sky_top_color = Color(0.461087, 0.641883, 0.858997, 1)
@@ -508,6 +509,15 @@ script = ExtResource("3_o4560")
 duration = 1.0
 transition = 4
 ease = 2
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_l10e4"]
+size = Vector3(18.4806, 23.7779, 57.9992)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6sawf"]
+size = Vector3(30.9581, 23.7779, 53.189)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1myg5"]
+size = Vector3(30.9581, 23.7779, 39.3783)
 
 [node name="Desert1" type="Node3D"]
 script = ExtResource("1_cvtsk")
@@ -1473,4 +1483,50 @@ priority = 1
 tween_resource = SubResource("Resource_g5b67")
 metadata/_custom_type_script = "uid://csjccrhj5wnx7"
 
+[node name="vel_reductors" type="Node3D" parent="."]
+
+[node name="vel_reductor" parent="vel_reductors" instance=ExtResource("21_ferbx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 62.1898, 0, 8.06701)
+velocity_reduction = 40.0
+
+[node name="CollisionShape3D" parent="vel_reductors/vel_reductor" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.5675, 0, 2.85866)
+
+[node name="vel_reductor2" parent="vel_reductors" instance=ExtResource("21_ferbx")]
+transform = Transform3D(0.804251, 0, -0.594289, 0, 1, 0, 0.594289, 0, 0.804251, -66.8329, 0, 129.629)
+velocity_reduction = 40.0
+
+[node name="CollisionShape3D" parent="vel_reductors/vel_reductor2" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.4778, 1.4749, 2.85869)
+shape = SubResource("BoxShape3D_l10e4")
+
+[node name="vel_reductor3" parent="vel_reductors" instance=ExtResource("21_ferbx")]
+transform = Transform3D(-0.137531, 0, -0.990498, 0, 1, 0, 0.990498, 0, -0.137531, -392.383, 0, 180.556)
+velocity_reduction = 40.0
+
+[node name="CollisionShape3D" parent="vel_reductors/vel_reductor3" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.682, 1.4749, 7.70712)
+shape = SubResource("BoxShape3D_6sawf")
+
+[node name="vel_reductor4" parent="vel_reductors" instance=ExtResource("21_ferbx")]
+transform = Transform3D(0.295208, 0, -0.955433, 0, 1, 0, 0.955433, 0, 0.295208, 200.382, 2.28882e-05, 162.446)
+velocity_reduction = 40.0
+
+[node name="CollisionShape3D" parent="vel_reductors/vel_reductor4" index="0"]
+transform = Transform3D(0.999999, 0, -1.78814e-07, 0, 1, 0, 1.78814e-07, 0, 0.999999, 32.682, 1.4749, 2.41249)
+shape = SubResource("BoxShape3D_1myg5")
+
 [connection signal="body_entered" from="abyss_sensor" to="." method="_on_abyss_sensor_body_entered"]
+[connection signal="body_entered" from="vel_reductors/vel_reductor" to="vel_reductors/vel_reductor" method="_on_body_entered"]
+[connection signal="body_exited" from="vel_reductors/vel_reductor" to="vel_reductors/vel_reductor" method="_on_body_exited"]
+[connection signal="body_entered" from="vel_reductors/vel_reductor2" to="vel_reductors/vel_reductor2" method="_on_body_entered"]
+[connection signal="body_exited" from="vel_reductors/vel_reductor2" to="vel_reductors/vel_reductor2" method="_on_body_exited"]
+[connection signal="body_entered" from="vel_reductors/vel_reductor3" to="vel_reductors/vel_reductor3" method="_on_body_entered"]
+[connection signal="body_exited" from="vel_reductors/vel_reductor3" to="vel_reductors/vel_reductor3" method="_on_body_exited"]
+[connection signal="body_entered" from="vel_reductors/vel_reductor4" to="vel_reductors/vel_reductor4" method="_on_body_entered"]
+[connection signal="body_exited" from="vel_reductors/vel_reductor4" to="vel_reductors/vel_reductor4" method="_on_body_exited"]
+
+[editable path="vel_reductors/vel_reductor"]
+[editable path="vel_reductors/vel_reductor2"]
+[editable path="vel_reductors/vel_reductor3"]
+[editable path="vel_reductors/vel_reductor4"]
