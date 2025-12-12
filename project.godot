@@ -30,6 +30,7 @@ buses/default_bus_layout=""
 PhantomCameraManager="*res://addons/phantom_camera/scripts/managers/phantom_camera_manager.gd"
 GlobalVar="*res://global_var.gd"
 BgMusicManager="*res://bg_music_manager.gd"
+Ads="*res://ads.gd"
 
 [display]
 

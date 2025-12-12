@@ -12,6 +12,11 @@ var on_play: bool = false
 var initialized: bool = false
 
 func _ready() -> void:
+	if Ads.admob_init:
+		MobileAds.initialize()
+		print("inicializando ads")
+		Ads.admob_init = false
+	
 	main_hud_cam.priority_override = true
 	global_var.init_save_canvas()
 	var data = JSON.parse_string(global_var.load_data())
@@ -24,6 +29,9 @@ func _ready() -> void:
 	car_instantia.global_position = Vector3(0, 5, 0)
 	pCam.follow_target = car_instantia
 	pCam.look_at_target = car_instantia
+	
+	Ads._create_ad_banner()
+	Ads._on_load_pressed_rewarded_ad()
 
 func _physics_process(delta: float) -> void:
 	if delta:

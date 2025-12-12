@@ -1,4 +1,4 @@
-[gd_scene load_steps=128 format=4 uid="uid://bhehqj2450xtc"]
+[gd_scene load_steps=129 format=4 uid="uid://bhehqj2450xtc"]
 
 [ext_resource type="Script" uid="uid://bbkomqcnkihxo" path="res://huds/car_selection/car_selection.gd" id="1_u64g1"]
 [ext_resource type="ArrayMesh" uid="uid://rgbpy0gs4uf7" path="res://Cars/rat_rod/bug_car_body.obj" id="2_u64g1"]
@@ -53,6 +53,7 @@
 [ext_resource type="PackedScene" uid="uid://b7buvibc2f8e2" path="res://Cars/mcallen/mc_laren.glb" id="48_vlmii"]
 [ext_resource type="AudioStream" uid="uid://c73ukd0knm1h7" path="res://sounds/hud/pop_sound.ogg" id="49_xc6r1"]
 [ext_resource type="AudioStream" uid="uid://4w5boyjy3sj4" path="res://sounds/hud/reject_sound.ogg" id="50_kn6nc"]
+[ext_resource type="ArrayOccluder3D" uid="uid://d0y26uepik8jo" path="res://huds/car_selection/car_selection.occ" id="54_vlmii"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_vv7oi"]
 sky_top_color = Color(0.461087, 0.641883, 0.858997, 1)
@@ -1749,6 +1750,9 @@ stream = ExtResource("49_xc6r1")
 
 [node name="reject_sound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("50_kn6nc")
+
+[node name="OccluderInstance3D" type="OccluderInstance3D" parent="."]
+occluder = ExtResource("54_vlmii")
 
 [connection signal="button_up" from="CanvasLayer/left" to="." method="_on_left_button_up"]
 [connection signal="button_up" from="CanvasLayer/right" to="." method="_on_right_button_up"]

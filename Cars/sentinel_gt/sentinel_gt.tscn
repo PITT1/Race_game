@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://clyqsoa81b2rw"]
+[gd_scene load_steps=16 format=3 uid="uid://clyqsoa81b2rw"]
 
 [ext_resource type="Script" uid="uid://dn8cru75adetk" path="res://player_controller/player_controller.gd" id="1_8e5np"]
 [ext_resource type="ArrayMesh" uid="uid://ccuo25onnns44" path="res://Cars/sentinel_gt/corvette_body.obj" id="1_e76x8"]
@@ -13,19 +13,34 @@ metallic = 0.74
 roughness = 0.3
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gqndx"]
-albedo_color = Color(0.811837, 0.811837, 0.811837, 1)
+albedo_color = Color(0.595828, 0.595828, 0.595828, 1)
 metallic = 0.48
 roughness = 0.36
+emission_enabled = true
+emission = Color(0.886262, 0.886261, 0.886262, 1)
+emission_energy_multiplier = 2.65
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jkoal"]
+albedo_color = Color(0.666569, 0.666569, 0.666569, 1)
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 10.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tjky1"]
-albedo_color = Color(0.205117, 0.205117, 0.205117, 1)
+albedo_color = Color(0.108721, 0.108721, 0.108721, 1)
 metallic = 0.52
 roughness = 0.61
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7bnkr"]
-albedo_color = Color(0.622881, 0.622881, 0.622881, 1)
+albedo_color = Color(0.547633, 0.547633, 0.547633, 1)
 metallic = 0.77
 roughness = 0.51
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h6eib"]
+albedo_color = Color(0.993553, 0.00121155, 0.0632848, 1)
+emission_enabled = true
+emission = Color(1, 0, 0, 1)
+emission_energy_multiplier = 10.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nfg2h"]
 albedo_color = Color(0.0851661, 0.0887956, 0.0957563, 1)
@@ -52,8 +67,10 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.0208251, -0.928404
 mesh = ExtResource("1_e76x8")
 surface_material_override/0 = SubResource("StandardMaterial3D_vu82b")
 surface_material_override/1 = SubResource("StandardMaterial3D_gqndx")
+surface_material_override/2 = SubResource("StandardMaterial3D_jkoal")
 surface_material_override/3 = SubResource("StandardMaterial3D_tjky1")
 surface_material_override/5 = SubResource("StandardMaterial3D_7bnkr")
+surface_material_override/7 = SubResource("StandardMaterial3D_h6eib")
 surface_material_override/8 = SubResource("StandardMaterial3D_nfg2h")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

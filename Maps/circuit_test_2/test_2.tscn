@@ -284,7 +284,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 90.6599, 2.91922, -121.999)
 curve = SubResource("Curve3D_6mnti")
 
 [node name="PathFollow_0" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.999827, 0.000128292, -0.00127702, -0.000130167, 0.999827, -0.00146797, 0.00127681, 0.0014681, 0.999847, 1.15108, -0.0803156, -23.5127)
+transform = Transform3D(0.999827, -0.000132771, -0.00127702, 0.000130896, 0.999827, -0.00146797, 0.00127719, 0.00146777, 0.999847, 1.15108, -0.0803156, -23.5127)
 progress = 28.25
 
 [node name="PathFollow_1" type="PathFollow3D" parent="Path3D"]
