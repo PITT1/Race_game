@@ -81,7 +81,6 @@ func _on_button_button_up() -> void:
 func _on_options_btn_button_up() -> void:
 	pop_sound.play()
 	anim.play("to_menu_options")
-	Ads._on_show_pressed()
 
 
 func _on_save_and_back_options_btn_button_up() -> void:

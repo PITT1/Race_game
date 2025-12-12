@@ -31,7 +31,6 @@ func _ready() -> void:
 	pCam.look_at_target = car_instantia
 	
 	Ads._create_ad_banner()
-	Ads._on_load_pressed_rewarded_ad()
 
 func _physics_process(delta: float) -> void:
 	if delta:

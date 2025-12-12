@@ -47,6 +47,6 @@ func _on_load_pressed_rewarded_ad():
 	RewardedAdLoader.new().load(unit_id, AdRequest.new(), rewarded_ad_load_callback)
 
 # button signal on scene
-func _on_show_pressed():
+func _on_show_pressed_rewarded_ad():
 	if _rewarded_ad:
 		_rewarded_ad.show()
