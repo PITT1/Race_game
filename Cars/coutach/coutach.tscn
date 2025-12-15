@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://d3myqwmyfi1ag"]
+[gd_scene load_steps=13 format=3 uid="uid://d3myqwmyfi1ag"]
 
 [ext_resource type="PhysicsMaterial" uid="uid://dioc2dlho64fc" path="res://car_physic_material/car_physic.tres" id="1_28i8o"]
 [ext_resource type="Script" uid="uid://dn8cru75adetk" path="res://player_controller/player_controller.gd" id="1_obppx"]
@@ -13,11 +13,8 @@ points = PackedVector3Array(-0.943697, -0.269981, -1.99368, 1.09859, -0.486312, 
 [sub_resource type="SphereShape3D" id="SphereShape3D_28i8o"]
 radius = 1.80891
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_28i8o"]
-shading_mode = 2
-specular_mode = 2
-metallic = 0.74
-roughness = 0.46
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lttc5"]
+albedo_color = Color(0.91504, 0.914931, 0.917393, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p5q20"]
 shading_mode = 2
@@ -26,10 +23,18 @@ albedo_color = Color(0, 0, 0, 1)
 metallic = 0.7
 roughness = 0.39
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w8lrl"]
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 7.7
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bf3q5"]
 albedo_color = Color(1, 0, 0, 1)
 metallic = 0.7
 roughness = 0.13
+emission_enabled = true
+emission = Color(1, 0, 0, 1)
+emission_energy_multiplier = 10.0
 
 [node name="Coutach" type="VehicleBody3D"]
 collision_mask = 2043
@@ -45,7 +50,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.557507, -0.0922555)
 shape = SubResource("ConvexPolygonShape3D_p5q20")
 
 [node name="wheel_1" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.868373, -0.0278009, 1.4015)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.868373, 0.00495126, 1.4015)
 use_as_steering = true
 wheel_roll_influence = 1.5
 wheel_radius = 0.425
@@ -61,7 +66,7 @@ mesh = ExtResource("3_28i8o")
 skeleton = NodePath("../..")
 
 [node name="wheel_2" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.868, -0.0278009, 1.40184)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.868, 0.00495126, 1.40184)
 use_as_steering = true
 wheel_roll_influence = 1.5
 wheel_radius = 0.425
@@ -77,7 +82,7 @@ mesh = ExtResource("3_28i8o")
 skeleton = NodePath("../..")
 
 [node name="wheel_3" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.868041, -0.042196, -1.4413)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.868041, 0.0102074, -1.4413)
 use_as_traction = true
 wheel_roll_influence = 1.5
 wheel_radius = 0.425
@@ -93,7 +98,7 @@ mesh = ExtResource("3_28i8o")
 skeleton = NodePath("../..")
 
 [node name="wheel_4" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.868, -0.042196, -1.4413)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.868, 0.0102074, -1.4413)
 use_as_traction = true
 wheel_roll_influence = 1.5
 wheel_radius = 0.425
@@ -142,8 +147,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.557507, -0.0922555)
 
 [node name="Cube" parent="Countach_body" index="0"]
 lod_bias = 0.5
-surface_material_override/0 = SubResource("StandardMaterial3D_28i8o")
+surface_material_override/0 = SubResource("StandardMaterial3D_lttc5")
 surface_material_override/1 = SubResource("StandardMaterial3D_p5q20")
+surface_material_override/2 = SubResource("StandardMaterial3D_w8lrl")
 surface_material_override/3 = SubResource("StandardMaterial3D_bf3q5")
 
 [node name="engine_sound" type="AudioStreamPlayer3D" parent="."]

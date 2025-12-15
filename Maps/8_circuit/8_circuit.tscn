@@ -20,12 +20,13 @@ sky_horizon_color = Color(0.631155, 0.676354, 0.730632, 1)
 ground_bottom_color = Color(0, 0, 0, 1)
 ground_horizon_color = Color(0.631155, 0.676354, 0.730632, 1)
 
-[sub_resource type="Sky" id="Sky_alync"]
+[sub_resource type="Sky" id="Sky_r82bl"]
 sky_material = SubResource("ProceduralSkyMaterial_kysnh")
 
 [sub_resource type="Environment" id="Environment_r82bl"]
 background_mode = 2
-sky = SubResource("Sky_alync")
+sky = SubResource("Sky_r82bl")
+reflected_light_source = 1
 
 [sub_resource type="Resource" id="Resource_xbfq3"]
 script = ExtResource("6_uiyng")

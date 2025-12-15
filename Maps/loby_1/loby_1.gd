@@ -31,6 +31,10 @@ func _ready() -> void:
 	pCam.look_at_target = car_instantia
 	
 	Ads._create_ad_banner()
+	
+	Options.init_save_options_canvas()
+	
+	BgMusicManager.set_bg_volume(Options.load_data().music_volume)
 
 func _physics_process(delta: float) -> void:
 	if delta:

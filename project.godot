@@ -31,6 +31,7 @@ PhantomCameraManager="*res://addons/phantom_camera/scripts/managers/phantom_came
 GlobalVar="*res://global_var.gd"
 BgMusicManager="*res://bg_music_manager.gd"
 Ads="*res://ads.gd"
+Options="*res://options.gd"
 
 [display]
 

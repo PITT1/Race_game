@@ -9,6 +9,7 @@ var current_track_index = 0
 
 func _ready() -> void:
 	select_random_music()
+	set_volume_linear(0.0)
 	play()
 
 func select_random_music():

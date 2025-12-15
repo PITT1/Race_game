@@ -34,6 +34,7 @@ sky_material = SubResource("ProceduralSkyMaterial_ferbx")
 [sub_resource type="Environment" id="Environment_hcykn"]
 background_mode = 2
 sky = SubResource("Sky_alync")
+reflected_light_source = 1
 
 [sub_resource type="Resource" id="Resource_quypj"]
 script = ExtResource("3_o4560")

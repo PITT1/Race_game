@@ -187,7 +187,6 @@ surface_material_override/3 = SubResource("StandardMaterial3D_r43wq")
 visible = false
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.359997, 0.560164, -0.746069, 0, 0.799685, 0.60042, 0.932954, -0.216149, 0.287884, -3.42834, 2.42496, 4.28959)
 far = 200.0
 
 [node name="PhantomCameraHost" type="Node" parent="Camera3D"]
