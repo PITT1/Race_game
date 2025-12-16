@@ -11,6 +11,10 @@ var selector: int = 1
 @onready var image_track: TextureRect = $CanvasLayer/race_selector/VBoxContainer/image_track
 @onready var bg_volume_range: HSlider = $CanvasLayer/options_page/VBoxContainer/bg_volume_range
 @onready var bg_music_button: CheckButton = $CanvasLayer/options_page/VBoxContainer/bg_music_button
+@onready var set_spanish_button: Button = $CanvasLayer/options_page/VBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer/set_spanish_button
+@onready var set_english_button: Button = $CanvasLayer/options_page/VBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer/set_english_button
+var lang_selected: String = ""
+
 var options_file: Dictionary = {}
 
 func _ready() -> void:
@@ -22,6 +26,24 @@ func _ready() -> void:
 	options_file = Options.load_data()
 	bg_music_button.button_pressed = options_file.music
 	bg_volume_range.value = options_file.music_volume
+	
+	#options_languages
+	if lang_selected == "default":
+		lang_selected = TranslationServer.get_locale()
+		if lang_selected == "es":
+			set_spanish_button.disabled = true
+			set_english_button.disabled = false
+		elif lang_selected == "en":
+			set_spanish_button.disabled = false
+			set_english_button.disabled = true
+	else:
+		TranslationServer.set_locale(options_file.language)
+		if TranslationServer.get_locale() == "es":
+			set_spanish_button.disabled = true
+			set_english_button.disabled = false
+		elif TranslationServer.get_locale() == "en":
+			set_spanish_button.disabled = false
+			set_english_button.disabled = true
 
 func _on_quit_btn_button_up() -> void:
 	pop_sound.play()
@@ -110,3 +132,21 @@ func _on_bg_volume_range_drag_ended(value_changed: bool) -> void:
 	if value_changed:
 		BgMusicManager.set_volume_linear(bg_volume_range.value)
 		options_file.music_volume = bg_volume_range.value
+
+
+func _on_set_spanish_button_button_up() -> void:
+	TranslationServer.set_locale("es")
+	set_english_button.disabled = false
+	set_spanish_button.disabled = true
+	options_file.language = "es"
+	Options.save_data(options_file)
+	print(options_file)
+
+
+func _on_set_english_button_button_up() -> void:
+	TranslationServer.set_locale("en")
+	set_english_button.disabled = true
+	set_spanish_button.disabled = false
+	options_file.language = "en"
+	Options.save_data(options_file)
+	print(options_file)

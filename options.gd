@@ -28,3 +28,11 @@ func load_data():
 		var content = file.get_as_text()
 		file.close()
 		return JSON.parse_string(content)
+	else:
+		var file = FileAccess.open(SAVE_OPTIONS_PATH, FileAccess.WRITE)
+		file.store_string(JSON.stringify(options_file_canvas))
+		file.close()
+		file = FileAccess.open(SAVE_OPTIONS_PATH, FileAccess.READ)
+		var content = file.get_as_text()
+		file.close()
+		return JSON.parse_string(content)
