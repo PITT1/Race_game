@@ -1,5 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://dxvqdu27q3ur5"]
+[gd_scene load_steps=3 format=3 uid="uid://dxvqdu27q3ur5"]
 
+[ext_resource type="Script" uid="uid://c6nmurltgi7mr" path="res://huds/grand_prix_hud/grand_prix_hud.gd" id="1_8p04f"]
 [ext_resource type="Texture2D" uid="uid://bcdal1ijwciut" path="res://images/game_portada.png" id="1_py2jf"]
 
 [node name="GrandPrixHud" type="Control"]
@@ -9,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_8p04f")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 follow_viewport_enabled = true
@@ -38,21 +40,36 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/separation = 18
 
+[node name="Label4" type="Label" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 68
+text = "id_24"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Label" type="Label" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 39
-text = "reune puntos en  4 carreras aleatorias."
+text = "id_25"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label2" type="Label" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 39
-text = "Si logras tener un puntaje alto, ganaras el Grand Prix"
+text = "id_26"
 horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="CanvasLayer/VBoxContainer"]
+[node name="Label3" type="Label" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 39
+text = "id_27"
+horizontal_alignment = 1
+
+[node name="back_btn" type="Button" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 55
-text = "Siguiente"
+text = "id_12"
+
+[connection signal="button_up" from="CanvasLayer/VBoxContainer/back_btn" to="." method="_on_back_btn_button_up"]

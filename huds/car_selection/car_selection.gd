@@ -106,6 +106,7 @@ func _on_select_button_up() -> void:
 			data.cars_data = cars_unloke_data
 			global_var.save_data(JSON.stringify(data))
 			Ads._on_show_pressed_rewarded_ad()
+			Ads._on_load_pressed_rewarded_ad()
 		else:
 			print("no puedes comprarlo")
 			reject_sound.play()
