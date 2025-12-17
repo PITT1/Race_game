@@ -5,10 +5,10 @@ extends Control
 var global_var = load("res://global_var.gd").new()
 var track_list: Dictionary = {}
 var selector: int = 1
-@onready var track_name: Label = $CanvasLayer/race_selector/VBoxContainer/track_name
-@onready var left_btn: Button = $CanvasLayer/race_selector/left_btn
-@onready var right_btn: Button = $CanvasLayer/race_selector/right_btn
-@onready var image_track: TextureRect = $CanvasLayer/race_selector/VBoxContainer/image_track
+@onready var track_name: Label = $CanvasLayer/race_selector/HBoxContainer/VBoxContainer/track_name
+@onready var left_btn: Button = $CanvasLayer/race_selector/HBoxContainer/left_btn
+@onready var right_btn: Button = $CanvasLayer/race_selector/HBoxContainer/right_btn
+@onready var image_track: TextureRect = $CanvasLayer/race_selector/HBoxContainer/VBoxContainer/image_track
 @onready var bg_volume_range: HSlider = $CanvasLayer/options_page/VBoxContainer/bg_volume_range
 @onready var bg_music_button: CheckButton = $CanvasLayer/options_page/VBoxContainer/bg_music_button
 @onready var set_spanish_button: Button = $CanvasLayer/options_page/VBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer/set_spanish_button
@@ -59,14 +59,6 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "to_practice":
 		pop_sound.play()
 		queue_free()
-
-
-func _on_practice_btn_button_up() -> void:
-	pop_sound.play()
-	get_parent().on_play = true
-	get_parent().pCam.priority = 2
-	anim.play("to_practice")
-
 
 func _on_back_btn_button_up() -> void:
 	pop_sound.play()
@@ -150,3 +142,8 @@ func _on_set_english_button_button_up() -> void:
 	options_file.language = "en"
 	Options.save_data(options_file)
 	print(options_file)
+
+
+func _on_to_back_menu_button_up() -> void:
+	pop_sound.play()
+	anim.play("back_to_page_2_from_race_selector")

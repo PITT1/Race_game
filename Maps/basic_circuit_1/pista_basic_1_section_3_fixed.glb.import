@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://gohdvjtglwdh"
-path="res://.godot/imported/pista_basic_1.glb-7ed656014a4cbb7c92a3f94b4fd7ec7f.scn"
+uid="uid://bl7deqg48bcoh"
+path="res://.godot/imported/pista_basic_1_section_3_fixed.glb-0ff4fbe7df1547b3f1788c67976ca761.scn"
 
 [deps]
 
-source_file="res://Maps/basic_circuit_1/pista_basic_1.glb"
-dest_files=["res://.godot/imported/pista_basic_1.glb-7ed656014a4cbb7c92a3f94b4fd7ec7f.scn"]
+source_file="res://Maps/basic_circuit_1/pista_basic_1_section_3_fixed.glb"
+dest_files=["res://.godot/imported/pista_basic_1_section_3_fixed.glb-0ff4fbe7df1547b3f1788c67976ca761.scn"]
 
 [params]
 
@@ -32,18 +32,6 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-_subresources={
-"nodes": {
-"PATH:Plane": {
-"generate/physics": true
-},
-"PATH:pista": {
-"generate/physics": true,
-"physics/layer": 2,
-"physics/mask": 79,
-"physics/shape_type": 2
-}
-}
-}
+_subresources={}
 gltf/naming_version=1
 gltf/embedded_image_handling=1
