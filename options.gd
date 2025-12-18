@@ -2,10 +2,11 @@ extends Node
 
 const SAVE_OPTIONS_PATH: String = "user://options.dat"
 
-var options_file_canvas = {
+var options_file_canvas: Dictionary = {
 	language = "default",
 	music = true,
-	music_volume = 0.7
+	music_volume = 0.7,
+	view_fps = false
 }
 
 func init_save_options_canvas():
@@ -16,6 +17,12 @@ func init_save_options_canvas():
 		print("archivo de opciones guardado por primera vez")
 	else:
 		print("el archivo de opciones ya existe")
+	
+	var data: Dictionary = load_data()
+	if options_file_canvas.size() != data.size():
+		data.merge(options_file_canvas)
+		save_data(data)
+		print("actualizando el option file canvas")
 
 func save_data(content: Dictionary):
 	var file = FileAccess.open(SAVE_OPTIONS_PATH, FileAccess.WRITE)
