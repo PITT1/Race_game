@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://k6nx4p6ccnvk"]
+[gd_scene load_steps=3 format=3 uid="uid://k6nx4p6ccnvk"]
 
 [ext_resource type="Script" uid="uid://da8h33kufnhwr" path="res://huds/money_display.gd" id="1_62wwv"]
+[ext_resource type="Theme" uid="uid://ddgjgocq6jx50" path="res://theme/money_dysplay.tres" id="2_62wwv"]
 
 [node name="MoneyDisplay" type="HBoxContainer"]
 offset_left = 100.0
@@ -9,7 +10,12 @@ offset_bottom = 128.0
 alignment = 1
 script = ExtResource("1_62wwv")
 
-[node name="money_label" type="Label" parent="."]
+[node name="money_label" type="Button" parent="."]
 layout_mode = 2
+theme = ExtResource("2_62wwv")
 theme_override_font_sizes/font_size = 44
-vertical_alignment = 1
+action_mode = 0
+text = "50.000$"
+flat = true
+
+[connection signal="button_up" from="money_label" to="." method="_on_money_label_button_up"]
