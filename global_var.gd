@@ -25,7 +25,8 @@ var car_list = { #direccion y precio en tienda
 	vision_gt = ["res://Cars/vision_gt/vision_gt.tscn", 80000],
 	mcallen = ["res://Cars/mcallen/mcallen.tscn", 70000],
 	butti = ["res://Cars/butti/butti.tscn", 80000],
-	revolut = ["res://Cars/revolut/revolut.tscn", 40000]
+	revolut = ["res://Cars/revolut/revolut.tscn", 40000],
+	shark = ["res://Cars/shark/shark.tscn", 75000]
 }
 
 var bot_list = {
@@ -50,7 +51,8 @@ var bot_list = {
 	vision_gt_BOT = "res://Cars/vision_gt/vision_gt_BOT.tscn",
 	mcallen_BOT = "res://Cars/mcallen/macallen_BOT.tscn",
 	butti_BOT = "res://Cars/butti/butti_BOT.tscn",
-	revolut_BOT = "res://Cars/revolut/revolut_BOT.tscn"
+	revolut_BOT = "res://Cars/revolut/revolut_BOT.tscn",
+	shark_BOT = "res://Cars/shark/shark_BOT.tscn"
 }
 #nobre de la pista, direccion de la pista, imagen de la pista, si esta desbloqueado o no
 var track_list = {
@@ -102,7 +104,8 @@ var player_canvas = {
 		vision_gt = false,
 		mcallen = false,
 		butti = false,
-		revolut = false
+		revolut = false,
+		shark = false
 	},
 }
 
