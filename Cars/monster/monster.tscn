@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://6wec7qfva6kd"]
+[gd_scene load_steps=19 format=3 uid="uid://6wec7qfva6kd"]
 
 [ext_resource type="PhysicsMaterial" uid="uid://dioc2dlho64fc" path="res://car_physic_material/car_physic.tres" id="1_bglxn"]
 [ext_resource type="Script" uid="uid://dn8cru75adetk" path="res://player_controller/player_controller.gd" id="1_lpv4x"]
@@ -38,6 +38,9 @@ albedo_texture = ExtResource("3_bglxn")
 metallic = 0.56
 roughness = 0.48
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_ckt8u"]
+size = Vector3(1.93018, 0.864227, 4.41064)
+
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ckt8u"]
 points = PackedVector3Array(2.06857, -0.499576, -0.779667, 1.97701, -1.07511, -0.466779, 1.5844, -0.316978, -3.4766, 1.35993, 2.06991, -1.86256, 1.61803, 1.46438, -0.917795, 1.51147, 0.309553, 3.02764, 1.54712, -0.566316, 3.12837, 1.58966, -1.37432, 0.056735, 1.0751, -0.671675, -3.94212, 1.42962, -0.731291, 3.41531, 1.00744, -0.500326, -4.05506, 1.00136, 0.506773, -4.09398, 1.06173, 0.582137, -3.93525, 1.22339, 2.23976, -1.86409, 1.40977, 2.09091, -1.13376, 1.28093, 0.488776, 3.1795, 1.4592, 0.249562, 3.16577, 1.42962, -0.327852, 3.41531, -1.67478, -1.33645, 0.0979447, 1.35061, -1.27833, 0.672589, -1.35227, -1.27833, 0.672589, -1.04961, -0.568941, -4.01385, -0.000220299, -0.748164, 3.65952, -0.918739, 0.195195, -4.13672, 0.977858, 0.178698, -4.10467, 0.854282, 0.509023, -4.09627, 0.949497, 2.45611, -1.78167, 0.992039, 2.27126, -1.17955, 1.19381, 0.585137, 3.02382, -0.000220299, 0.574638, 3.35884, -0.000220299, 0.350797, 3.46568, -0.000220299, -0.344724, 3.65952, -1.97866, -1.07511, -0.466779, -1.43006, -0.731291, 3.41531, -1.58079, -0.318478, -3.49797, -0.98235, 0.506399, -4.09627, -0.863636, 2.43548, -1.8038, -0.87255, 2.28738, -1.13453, -1.25989, 0.516522, 3.16958, -1.43006, -0.327852, 3.41531, -2.07023, -0.499201, -0.78043, -1.54756, -0.555443, 3.12837, -1.3624, 2.07066, -1.8618, -1.06338, 0.575763, -3.93983, -1.22181, 2.23939, -1.85569, -1.02449, 2.41599, -1.7748, -1.37253, 2.11116, -1.10934, -1.44222, 0.456906, 3.01925, -1.43371, 0.3313, 3.18103, -1.48557, 0.0973347, 3.0223, -1.61968, 1.46438, -0.917795)
 
@@ -64,9 +67,12 @@ surface_material_override/4 = SubResource("StandardMaterial3D_msou8")
 surface_material_override/5 = SubResource("StandardMaterial3D_al3ox")
 surface_material_override/6 = SubResource("StandardMaterial3D_v6sfk")
 
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00854492, 0.14003, -0.0319824)
+shape = SubResource("BoxShape3D_ckt8u")
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0.489594, 0.0987265)
-visible = false
 shape = SubResource("ConvexPolygonShape3D_ckt8u")
 
 [node name="wheel_1" type="VehicleWheel3D" parent="."]
