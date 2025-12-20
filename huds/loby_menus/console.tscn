@@ -39,6 +39,7 @@ theme_override_font_sizes/font_size = 80
 placeholder_text = "console"
 
 [node name="LineEdit" type="LineEdit" parent="CanvasLayer/CenterContainer/LineEdit"]
+layout_mode = 0
 theme_override_font_sizes/font_size = 80
 placeholder_text = "console"
 
