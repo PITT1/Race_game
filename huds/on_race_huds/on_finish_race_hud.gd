@@ -29,5 +29,12 @@ func set_finish_result(position: int, reward):
 	
 
 func _on_back_btn_button_up() -> void:
+	get_tree().change_scene_to_file("res://Maps/loby_1/loby_1.tscn")
+
+
+func _on_btn_bunnus_reward_button_up() -> void:
+	var data = JSON.parse_string(global_var.load_data())
+	data.money += 1500
+	global_var.save_data(JSON.stringify(data))
 	Ads._on_show_pressed_rewarded_ad()
 	get_tree().change_scene_to_file("res://Maps/loby_1/loby_1.tscn")

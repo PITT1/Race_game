@@ -11,14 +11,14 @@ config_version=5
 [application]
 
 config/name="Poly Race"
-config/version="0.5"
+config/version="0.6"
 run/main_scene="uid://dl4l032e7tmky"
 config/features=PackedStringArray("4.4", "Mobile")
 run/max_fps=60
 run/low_processor_mode=true
 boot_splash/use_filter=false
 boot_splash/image="uid://bcdal1ijwciut"
-config/icon="uid://biicunfsdne1u"
+config/icon="uid://otdllthlxcbw"
 boot_splash/minimum_display_time=1
 
 [audio]
