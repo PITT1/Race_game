@@ -38,11 +38,6 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 80
 placeholder_text = "console"
 
-[node name="LineEdit" type="LineEdit" parent="CanvasLayer/CenterContainer/LineEdit"]
-layout_mode = 0
-theme_override_font_sizes/font_size = 80
-placeholder_text = "console"
-
 [node name="Button" type="Button" parent="CanvasLayer"]
 anchors_preset = 8
 anchor_left = 0.5
