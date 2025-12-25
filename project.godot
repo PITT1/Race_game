@@ -11,9 +11,23 @@ config_version=5
 [application]
 
 config/name="Poly Race"
+config/description="Poly Race es un emocionante videojuego de carreras arcade con un estilo gráfico minimalista de pocos polígonos.
+Compite en pistas llenas de adrenalina, demuestra tus habilidades al volante y gana dinero dentro del juego para desbloquear una gran variedad de autos.
+
+✨ Características principales:
+
+Diversión sin límites en diferentes pistas de carreras.
+
+Sistema de recompensas para adquirir y coleccionar nuevos vehículos.
+
+Estilo visual único con gráficos low-poly.
+
+Actualizaciones constantes con más pistas, autos y modos de juego.
+
+🎮 ¡La velocidad y la estrategia se combinan en Poly Race! ¿Estás listo para convertirte en el campeón y dominar cada circuito?"
 config/version="0.6"
 run/main_scene="uid://dl4l032e7tmky"
-config/features=PackedStringArray("4.4", "Mobile")
+config/features=PackedStringArray("4.5", "Mobile")
 run/max_fps=60
 run/low_processor_mode=true
 boot_splash/use_filter=false
@@ -47,9 +61,9 @@ enabled=PackedStringArray("res://addons/admob/plugin.cfg", "res://addons/phantom
 
 [gui]
 
+theme/default_font_antialiasing=0
 theme/custom="uid://csi40yx6vlfqs"
 theme/custom_font="uid://cbwf465gr1onm"
-theme/default_font_antialiasing=0
 
 [input_devices]
 
