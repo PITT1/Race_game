@@ -38,6 +38,8 @@ var previous: int = -1
 #smoke particles
 var drift: float = 1.0
 const WHEEL_SMOKE = preload("res://particles/smoke/wheel_smoke.tscn")
+var DRIFT_SOUND = preload("res://sounds/drift_sound/drift_sound.ogg")
+var drift_sound: AudioStreamPlayer3D = AudioStreamPlayer3D.new()
 var smoke_particles: Array = []
 
 func _ready() -> void:
@@ -59,6 +61,12 @@ func _ready() -> void:
 			inst_smoke_particles.position = item.position
 			smoke_particles.append(inst_smoke_particles)
 	
+	drift_sound.stream = DRIFT_SOUND
+	drift_sound.max_distance = 50
+	drift_sound.pitch_scale = 1
+	drift_sound.max_db = 1
+	drift_sound.volume_db = -10
+	add_child(drift_sound)
 	engine_sound.play()
 
 func _physics_process(delta: float) -> void:
@@ -144,6 +152,8 @@ func stering_asist():
 			MAX_STEER = 0.3
 		elif vel < 40:
 			MAX_STEER = 0.2
+	else:
+		MAX_STEER = 0.6
 
 
 func traction_by_terrain_control():
@@ -157,12 +167,22 @@ func traction_by_terrain_control():
 		#drift_smoke_particles
 	for wheel in wheels:
 		drift = wheel.get_skidinfo()
-		if drift < 0.9:
+		if drift < 1.0:
 			for smoke in smoke_particles:
 				smoke.emitting = true
 		else:
 			for smoke in smoke_particles:
 				smoke.emitting = false
+	#sonido de derrape
+	if drift < 1.0:
+		if drift_sound.playing == false:
+			drift_sound.play()
+		stering_asiste_on = false
+	else:
+		if drift_sound.playing == true:
+			drift_sound.stop()
+		stering_asiste_on = true
+
 
 func call_lakitu():
 	if last_checkpoint:

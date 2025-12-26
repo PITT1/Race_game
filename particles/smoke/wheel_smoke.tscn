@@ -13,9 +13,10 @@ point_count = 3
 curve = SubResource("Curve_nhtou")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_h63mk"]
-direction = Vector3(0, 1, 0)
-initial_velocity_max = 3.4499998
-gravity = Vector3(0, 5, 0)
+direction = Vector3(0, 0, 0)
+spread = 14.795
+initial_velocity_max = 1.4499999
+gravity = Vector3(0, 2.85, 0)
 scale_curve = SubResource("CurveTexture_u7vej")
 
 [sub_resource type="SphereMesh" id="SphereMesh_vqxc7"]
@@ -27,7 +28,7 @@ material_override = SubResource("StandardMaterial3D_h63mk")
 cast_shadow = 0
 lod_bias = 0.3
 emitting = false
-amount = 25
+amount = 30
 lifetime = 1.2
 speed_scale = 2.0
 process_material = SubResource("ParticleProcessMaterial_h63mk")

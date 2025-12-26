@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=4 uid="uid://dl4l032e7tmky"]
+[gd_scene load_steps=30 format=4 uid="uid://dl4l032e7tmky"]
 
 [ext_resource type="PackedScene" uid="uid://deh3gsrnhaefo" path="res://Maps/loby_1/loby_1.glb" id="1_68xm8"]
 [ext_resource type="Script" uid="uid://ddn22yn6bgmbe" path="res://Maps/loby_1/loby_1.gd" id="1_jk0es"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://dyhnoq8nihi21" path="res://Maps/loby_1/loop_1.fbx" id="11_6tc5e"]
 [ext_resource type="PackedScene" uid="uid://dfib40d2ex4j7" path="res://huds/loby_menus/main_hud.tscn" id="12_n0ykm"]
 [ext_resource type="ArrayMesh" uid="uid://dyxcao4gyn6cb" path="res://Cars/spyder/spyder_wheel.obj" id="12_r43wq"]
+[ext_resource type="ArrayOccluder3D" uid="uid://bu3tv76ib5ks" path="res://Maps/loby_1/loby_1.occ" id="13_r43wq"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_n0ykm"]
 sky_top_color = Color(0.461087, 0.641883, 0.858997, 1)
@@ -19,12 +20,12 @@ sky_horizon_color = Color(0.631155, 0.676354, 0.730632, 1)
 ground_bottom_color = Color(0, 0, 0, 1)
 ground_horizon_color = Color(0.631155, 0.676354, 0.730632, 1)
 
-[sub_resource type="Sky" id="Sky_n0ykm"]
+[sub_resource type="Sky" id="Sky_uxm7u"]
 sky_material = SubResource("ProceduralSkyMaterial_n0ykm")
 
-[sub_resource type="Environment" id="Environment_6850l"]
+[sub_resource type="Environment" id="Environment_r43wq"]
 background_mode = 2
-sky = SubResource("Sky_n0ykm")
+sky = SubResource("Sky_uxm7u")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o6dls"]
 albedo_texture = ExtResource("3_r43wq")
@@ -157,7 +158,7 @@ data = PackedVector3Array(3.214, 0, 0, 1.2113, 0, 0.5018, 2.9693, 0, 1.2299, 2.9
 script = ExtResource("1_jk0es")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_6850l")
+environment = SubResource("Environment_r43wq")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.899558, -0.282519, 0.333135, 0, 0.762668, 0.64679, -0.436802, 0.581825, -0.686064, 0, 0, 0)
@@ -558,6 +559,9 @@ skeleton = NodePath("../..")
 transform = Transform3D(-0.846065, -0.507373, -0.163543, 0.302891, -0.205087, -0.930697, 0.43867, -0.836966, 0.327196, -1.52871, 0.703547, 5.29217)
 mesh = ExtResource("12_r43wq")
 skeleton = NodePath("../..")
+
+[node name="OccluderInstance3D" type="OccluderInstance3D" parent="."]
+occluder = ExtResource("13_r43wq")
 
 [connection signal="button_up" from="MainHud/CanvasLayer/page_2/grand_prix_btn" to="." method="_on_grand_prix_btn_button_up"]
 [connection signal="button_up" from="MainHud/CanvasLayer/options_page/VBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer/set_spanish_button" to="MainHud" method="_on_set_spanish_button_button_up"]
