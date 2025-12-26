@@ -2,75 +2,123 @@ extends Node
 
 var global_var = load("res://global_var.gd").new()
 
-#rewarded ad
-var _rewarded_ad : RewardedAd
-var on_user_earned_reward_listener := OnUserEarnedRewardListener.new()
+# Rewarded Ad
+var rewarded_ad : RewardedAd
+var rewarded_ad_is_view : bool = false
+var rewarded_ad_is_loaded : bool = false
 
-#intersticial ads
-var _interstitial_ad : InterstitialAd
+var on_user_earned_reward_listener := OnUserEarnedRewardListener.new()
+var rewarded_ad_load_callback := RewardedAdLoadCallback.new()
+var unit_id_android_rewarded = "ca-app-pub-3940256099942544/5224354917" # ad de prueba
+
+# Interstitial Ad
+var interstitial_ad : InterstitialAd
+var interstitial_ad_is_view : bool = false
+var interstitial_ad_is_loaded : bool = false
+
+var interstitial_ad_load_callback := InterstitialAdLoadCallback.new()
+var unit_id_android_interstitial : String = "ca-app-pub-3940256099942544/1033173712" # ad de prueba
+
+# Full screen callbacks (compartidos)
+var _full_screen_content_callback := FullScreenContentCallback.new()
 
 func _ready() -> void:
-	#iniciando ads
+	# Inicializar AdMob
 	MobileAds.initialize()
 	print("iniciando admob")
 	
-	#callback de recompensa al jugador 1500 de dinero
+	# Rewarded Ads
 	on_user_earned_reward_listener.on_user_earned_reward = func(rewarded_item : RewardedItem):
 		var data = JSON.parse_string(global_var.load_data())
 		data.money += rewarded_item.amount
 		global_var.save_data(JSON.stringify(data))
+	
+	rewarded_ad_load_callback.on_ad_failed_to_load = on_rewarded_ad_failed_to_load
+	rewarded_ad_load_callback.on_ad_loaded = on_rewarded_ad_loaded
+	
+	# Interstitial Ads
+	interstitial_ad_load_callback.on_ad_failed_to_load = on_interstitial_ad_failed_to_load
+	interstitial_ad_load_callback.on_ad_loaded = on_interstitial_ad_loaded
+	
+	# Callbacks de pantalla completa
+	_full_screen_content_callback.on_ad_dismissed_full_screen_content = func() -> void:
+		print("on_ad_dismissed_full_screen_content")
+		if interstitial_ad_is_view:
+			free_memory_interstitial_ad()
+			_load_interstitial_ad()
+		if rewarded_ad_is_view:
+			free_memory_rewarded_ad()
+			_load_rewarded_ad()
+	
+	_full_screen_content_callback.on_ad_failed_to_show_full_screen_content = func(ad_error : AdError) -> void:
+		print("Error al mostrar anuncio: %s" % ad_error.message)
+		if interstitial_ad_is_view:
+			free_memory_interstitial_ad()
+			_load_interstitial_ad()
+		if rewarded_ad_is_view:
+			free_memory_rewarded_ad()
+			_load_rewarded_ad()
 
-func _on_load_pressed_rewarded_ad():
-	#free memory
-	if _rewarded_ad:
-		#always call this method on all AdFormats to free memory on Android/iOS
-		_rewarded_ad.destroy()
-		_rewarded_ad = null
-		
-	var unit_id : String
-	if OS.get_name() == "Android":
-		unit_id = "ca-app-pub-3940256099942544/5224354917" #ad de prueba
-	elif OS.get_name() == "iOS":
-		unit_id = "ca-app-pub-3940256099942544/1712485313"
-	
-	var rewarded_ad_load_callback := RewardedAdLoadCallback.new()
-	rewarded_ad_load_callback.on_ad_failed_to_load = func(adError : LoadAdError) -> void:
-		print(adError.message)
-	
-	rewarded_ad_load_callback.on_ad_loaded = func(rewarded_ad : RewardedAd) -> void:
-		print("rewarded ad loaded" + str(rewarded_ad._uid))
-		_rewarded_ad = rewarded_ad
-	
-	RewardedAdLoader.new().load(unit_id, AdRequest.new(), rewarded_ad_load_callback)
+# Rewarded Ads
 
-# button signal on scene
-func _on_show_pressed_rewarded_ad():
-	if _rewarded_ad:
-		_rewarded_ad.show()
+func _load_rewarded_ad():
+	if not rewarded_ad:
+		RewardedAdLoader.new().load(unit_id_android_rewarded, AdRequest.new(), rewarded_ad_load_callback)
+		rewarded_ad_is_view = false
+		rewarded_ad_is_loaded = false
+
+func on_rewarded_ad_failed_to_load(adError : LoadAdError) -> void:
+	print("Error al cargar rewarded: %s" % adError.message)
+	_load_rewarded_ad()
+
+func on_rewarded_ad_loaded(rewarded_ad_loaded : RewardedAd) -> void:
+	rewarded_ad = rewarded_ad_loaded
+	rewarded_ad.full_screen_content_callback = _full_screen_content_callback
+	rewarded_ad_is_loaded = true
+	print("Rewarded cargado correctamente")
+
+func _show_rewarded_ad():
+	if rewarded_ad and rewarded_ad_is_loaded and not rewarded_ad_is_view:
+		rewarded_ad.show(on_user_earned_reward_listener)
+		rewarded_ad_is_view = true
+		rewarded_ad_is_loaded = false
+	else:
+		print("Rewarded aún no está listo")
+
+func free_memory_rewarded_ad():
+	if rewarded_ad:
+		rewarded_ad.destroy()
+		rewarded_ad = null
+		rewarded_ad_is_loaded = false
+
+# Interstitial Ads
 
 func _load_interstitial_ad():
-	#free memory
-	if _interstitial_ad:
-		#always call this method on all AdFormats to free memory on Android/iOS
-		_interstitial_ad.destroy()
-		_interstitial_ad = null
-	
-	var unit_id : String
-	if OS.get_name() == "Android":
-		unit_id = "ca-app-pub-3940256099942544/1033173712" #ad de prueba
-	elif OS.get_name() == "iOS":
-		unit_id = "ca-app-pub-3940256099942544/4411468910"
-	
-	var interstitial_ad_load_callback := InterstitialAdLoadCallback.new()
-	interstitial_ad_load_callback.on_ad_failed_to_load = func(adError : LoadAdError) -> void:
-		print(adError.message)
-	
-	interstitial_ad_load_callback.on_ad_loaded = func(interstitial_ad : InterstitialAd) -> void:
-		print("interstitial ad loaded" + str(interstitial_ad._uid))
-		_interstitial_ad = interstitial_ad
-	
-	InterstitialAdLoader.new().load(unit_id, AdRequest.new(), interstitial_ad_load_callback)
+	if not interstitial_ad:
+		InterstitialAdLoader.new().load(unit_id_android_interstitial, AdRequest.new(), interstitial_ad_load_callback)
+		interstitial_ad_is_view = false
+		interstitial_ad_is_loaded = false
+
+func on_interstitial_ad_failed_to_load(adError : LoadAdError) -> void:
+	print("Error al cargar interstitial: %s" % adError.message)
+	_load_interstitial_ad()
+
+func on_interstitial_ad_loaded(interstitial_ad_loaded : InterstitialAd) -> void:
+	interstitial_ad = interstitial_ad_loaded
+	interstitial_ad.full_screen_content_callback = _full_screen_content_callback
+	interstitial_ad_is_loaded = true
+	print("Interstitial cargado correctamente")
 
 func _show_interstitial_ad():
-	if _interstitial_ad:
-		_interstitial_ad.show()
+	if interstitial_ad and interstitial_ad_is_loaded and not interstitial_ad_is_view:
+		interstitial_ad.show()
+		interstitial_ad_is_view = true
+		interstitial_ad_is_loaded = false
+	else:
+		print("Interstitial aún no está listo")
+
+func free_memory_interstitial_ad():
+	if interstitial_ad:
+		interstitial_ad.destroy()
+		interstitial_ad = null
+		interstitial_ad_is_loaded = false

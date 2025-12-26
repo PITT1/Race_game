@@ -17,7 +17,6 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 
 
 func _on_reboot_race_btn_button_up() -> void:
-	Ads._show_interstitial_ad()
 	get_tree().reload_current_scene()
 
 

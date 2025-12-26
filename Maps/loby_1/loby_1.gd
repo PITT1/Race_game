@@ -28,6 +28,9 @@ func _ready() -> void:
 	Options.init_save_options_canvas()
 	
 	BgMusicManager.set_bg_volume(Options.load_data().music_volume)
+	
+	#cargando anuncios
+	Ads._load_interstitial_ad()
 
 func _physics_process(delta: float) -> void:
 	if delta:

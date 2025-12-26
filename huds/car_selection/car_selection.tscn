@@ -1690,8 +1690,6 @@ roughness = 0.36
 
 [sub_resource type="Resource" id="Resource_c3i15"]
 script = ExtResource("7_btktd")
-duration = 1.0
-transition = 0
 ease = 0
 metadata/_custom_type_script = "uid://8umksf8e80fw"
 
@@ -3043,7 +3041,7 @@ surface_material_override/2 = SubResource("StandardMaterial3D_yp5re")
 surface_material_override/3 = SubResource("StandardMaterial3D_hdy6u")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.921864, 0.387514, 0, -0.387514, 0.921864, 0, 2.145, 4.175)
+transform = Transform3D(1, 0, 0, 0, 0.9218638, 0.387514, 0, -0.387514, 0.9218638, 0, 2.145, 4.175)
 far = 20.0
 
 [node name="PhantomCameraHost" type="Node" parent="Camera3D"]
@@ -3053,7 +3051,7 @@ script = ExtResource("5_6rdnw")
 metadata/_custom_type_script = "uid://bd046eokvcnu2"
 
 [node name="PhantomCamera3D" type="Node3D" parent="." node_paths=PackedStringArray("follow_target", "look_at_target")]
-transform = Transform3D(0.999999, 0, 0, 0, 0.921849, 0.387508, 0, -0.387508, 0.921849, 0, 2.145, 4.175)
+transform = Transform3D(0.999999, 0, 0, 0, 0.92184865, 0.38750762, 0, -0.38750762, 0.92184865, 0, 2.145, 4.175)
 top_level = true
 script = ExtResource("6_mycvf")
 follow_mode = 2

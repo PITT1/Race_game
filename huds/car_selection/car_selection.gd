@@ -50,8 +50,6 @@ func _ready() -> void:
 	var cars_data_saved = JSON.parse_string(global_var.load_data())
 	cars_unloke_data = cars_data_saved["cars_data"]
 	
-	Ads._load_interstitial_ad()
-	
 	
 func _on_left_button_up() -> void:
 	pop_sound.play()
@@ -103,7 +101,6 @@ func _on_select_button_up() -> void:
 			data.cars_data = cars_unloke_data
 			global_var.save_data(JSON.stringify(data))
 			Ads._show_interstitial_ad()
-			Ads._load_interstitial_ad()
 		else:
 			print("no puedes comprarlo")
 			reject_sound.play()
