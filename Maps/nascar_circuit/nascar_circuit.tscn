@@ -1,4 +1,4 @@
-[gd_scene load_steps=86 format=4 uid="uid://coq6k5s1owo2s"]
+[gd_scene load_steps=88 format=4 uid="uid://coq6k5s1owo2s"]
 
 [ext_resource type="Script" uid="uid://kghgfx151qgh" path="res://Maps/circuit_test_2/test_2.gd" id="1_w1t2r"]
 [ext_resource type="PackedScene" uid="uid://cd2fjxhklg8i1" path="res://huds/on_race_huds/countdown.tscn" id="2_jvpel"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://dq0vp3to25jng" path="res://Maps/textures/f1_circuits/road_texture_1.jpg" id="10_tjk3s"]
 [ext_resource type="Texture2D" uid="uid://wyvhiviq75ye" path="res://Maps/textures/f1_circuits/pista_2_meta_line.jpg" id="11_gmdgo"]
 [ext_resource type="ArrayOccluder3D" uid="uid://doa1lx5h1n4m6" path="res://Maps/nascar_circuit/nascar_circuit.occ" id="12_tjk3s"]
+[ext_resource type="PackedScene" uid="uid://cmsodlxlif01f" path="res://others/velocity_reductor/vel_reductor.tscn" id="12_y5slj"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_tjk3s"]
 sky_top_color = Color(0.461087, 0.641883, 0.858997, 1)
@@ -28,9 +29,6 @@ sky = SubResource("Sky_tjk3s")
 
 [sub_resource type="Resource" id="Resource_jvpel"]
 script = ExtResource("5_jvpel")
-duration = 1.0
-transition = 0
-ease = 2
 
 [sub_resource type="Curve3D" id="Curve3D_lledn"]
 closed = true
@@ -1643,6 +1641,9 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_khgrf")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_ob834"]
+size = Vector3(134.11884, 25.5041, 57.451324)
+
 [node name="NascarCircuit" type="Node3D"]
 script = ExtResource("1_w1t2r")
 countdown = ExtResource("2_jvpel")
@@ -1680,7 +1681,8 @@ script = ExtResource("4_1nag2")
 follow_mode = 2
 look_at_mode = 2
 tween_resource = SubResource("Resource_jvpel")
-follow_offset = Vector3(-13.155, 17.935, -6.135)
+follow_offset = Vector3(16.18, 26.495, -8.99)
+follow_damping = true
 metadata/_custom_type_script = "uid://csjccrhj5wnx7"
 
 [node name="Path3D" type="Path3D" parent="."]
@@ -1688,129 +1690,129 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 91.5931, 2.91922, -99.6017)
 curve = SubResource("Curve3D_lledn")
 
 [node name="PathFollow_0" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.00689483, 0, -0.999822, 0, 0.999828, 0, 0.999822, 0, -0.00689483, 6.54652, -6.2199, -8.10461)
+transform = Transform3D(-0.0068948255, 0, -0.999822, 0, 0.999828, 0, 0.999822, 0, -0.0068948255, 6.54652, -6.2199, -8.10461)
 
 [node name="PathFollow_1" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.00689527, 0, -0.999968, 0, 0.999996, 0, 0.999887, 0, -0.00689583, 6.54652, -6.2199, -8.10461)
+transform = Transform3D(-0.0068952735, 0, -0.999968, 0, 0.999996, 0, 0.999887, 0, -0.006895832, 6.54652, -6.2199, -8.10461)
 
 [node name="PathFollow_2" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.00689546, 0, -0.999974, 0, 0.999998, 0, 0.999914, 0, -0.00689587, 6.54652, -6.2199, -8.10461)
+transform = Transform3D(-0.0068954593, 0, -0.999974, 0, 0.999998, 0, 0.999914, 0, -0.006895873, 6.54652, -6.2199, -8.10461)
 
 [node name="PathFollow_3" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.00689538, 0, -0.99997, 0, 0.999997, 0, 0.999903, 0, -0.00689585, 6.54652, -6.2199, -8.10461)
+transform = Transform3D(-0.006895384, 0, -0.99997, 0, 0.999997, 0, 0.999903, 0, -0.0068958458, 6.54652, -6.2199, -8.10461)
 
 [node name="PathFollow_4" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.00689546, 0, -0.999974, 0, 0.999998, 0, 0.999914, 0, -0.00689587, 6.54652, -6.2199, -8.10461)
+transform = Transform3D(-0.0068954593, 0, -0.999974, 0, 0.999998, 0, 0.999914, 0, -0.006895873, 6.54652, -6.2199, -8.10461)
 
 [node name="PathFollow_5" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.00689546, 0, -0.999974, 0, 0.999998, 0, 0.999914, 0, -0.00689587, 6.54652, -6.2199, -8.10461)
+transform = Transform3D(-0.0068954593, 0, -0.999974, 0, 0.999998, 0, 0.999914, 0, -0.006895873, 6.54652, -6.2199, -8.10461)
 
 [node name="PathFollow_6" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.00689546, 0, -0.999974, 0, 0.999998, 0, 0.999914, 0, -0.00689587, 6.54652, -6.2199, -8.10461)
+transform = Transform3D(-0.0068954593, 0, -0.999974, 0, 0.999998, 0, 0.999914, 0, -0.006895873, 6.54652, -6.2199, -8.10461)
 
 [node name="PathFollow_7" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.00689546, 0, -0.999974, 0, 0.999998, 0, 0.999914, 0, -0.00689587, 6.54652, -6.2199, -8.10461)
+transform = Transform3D(-0.0068954593, 0, -0.999974, 0, 0.999998, 0, 0.999914, 0, -0.006895873, 6.54652, -6.2199, -8.10461)
 
 [node name="PathFollow_8" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.00689546, 0, -0.999974, 0, 0.999998, 0, 0.999914, 0, -0.00689587, 6.54652, -6.2199, -8.10461)
+transform = Transform3D(-0.0068954593, 0, -0.999974, 0, 0.999998, 0, 0.999914, 0, -0.006895873, 6.54652, -6.2199, -8.10461)
 
 [node name="PathFollow_9" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.00689546, 0, -0.999974, 0, 0.999998, 0, 0.999914, 0, -0.00689587, 6.54652, -6.2199, -8.10461)
+transform = Transform3D(-0.0068954593, 0, -0.999974, 0, 0.999998, 0, 0.999914, 0, -0.006895873, 6.54652, -6.2199, -8.10461)
 
 [node name="PathFollow_10" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.00689546, 0, -0.999974, 0, 0.999998, 0, 0.999914, 0, -0.00689587, 6.54652, -6.2199, -8.10461)
+transform = Transform3D(-0.0068954593, 0, -0.999974, 0, 0.999998, 0, 0.999914, 0, -0.006895873, 6.54652, -6.2199, -8.10461)
 
 [node name="PathFollow_11" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.00689546, 0, -0.999974, 0, 0.999998, 0, 0.999914, 0, -0.00689587, 6.54652, -6.2199, -8.10461)
+transform = Transform3D(-0.0068954593, 0, -0.999974, 0, 0.999998, 0, 0.999914, 0, -0.006895873, 6.54652, -6.2199, -8.10461)
 
 [node name="PathFollow_12" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.00689546, 0, -0.999974, 0, 0.999998, 0, 0.999914, 0, -0.00689587, 6.54652, -6.2199, -8.10461)
+transform = Transform3D(-0.0068954593, 0, -0.999974, 0, 0.999998, 0, 0.999914, 0, -0.006895873, 6.54652, -6.2199, -8.10461)
 
 [node name="Path3D2" type="Path3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 91.5931, 2.91922, -99.6017)
 curve = SubResource("Curve3D_gmdgo")
 
 [node name="PathFollow_0" type="PathFollow3D" parent="Path3D2"]
-transform = Transform3D(-0.0101673, 0, -0.999775, 0, 0.999828, 0, 0.999775, 0, -0.0101673, 3.27894, -6.26848, -3.88901)
+transform = Transform3D(-0.010167254, 0, -0.999775, 0, 0.999828, 0, 0.999775, 0, -0.010167254, 3.27894, -6.26848, -3.88901)
 
 [node name="PathFollow_1" type="PathFollow3D" parent="Path3D2"]
-transform = Transform3D(-0.0101679, 0, -0.999923, 0, 0.999994, 0, 0.99984, 0, -0.0101688, 3.27894, -6.26848, -3.88901)
+transform = Transform3D(-0.010167915, 0, -0.999923, 0, 0.999994, 0, 0.99984, 0, -0.010168759, 3.27894, -6.26848, -3.88901)
 
 [node name="PathFollow_2" type="PathFollow3D" parent="Path3D2"]
-transform = Transform3D(-0.0101682, 0, -0.999928, 0, 0.999997, 0, 0.999867, 0, -0.0101688, 3.27894, -6.26848, -3.88901)
+transform = Transform3D(-0.01016819, 0, -0.999928, 0, 0.999997, 0, 0.999867, 0, -0.01016881, 3.27894, -6.26848, -3.88901)
 
 [node name="PathFollow_3" type="PathFollow3D" parent="Path3D2"]
-transform = Transform3D(-0.0101681, 0, -0.999924, 0, 0.999995, 0, 0.999856, 0, -0.0101688, 3.27894, -6.26848, -3.88901)
+transform = Transform3D(-0.010168078, 0, -0.999924, 0, 0.999995, 0, 0.999856, 0, -0.010168769, 3.27894, -6.26848, -3.88901)
 
 [node name="PathFollow_4" type="PathFollow3D" parent="Path3D2"]
-transform = Transform3D(-0.0101682, 0, -0.999928, 0, 0.999997, 0, 0.999867, 0, -0.0101688, 3.27894, -6.26848, -3.88901)
+transform = Transform3D(-0.01016819, 0, -0.999928, 0, 0.999997, 0, 0.999867, 0, -0.01016881, 3.27894, -6.26848, -3.88901)
 
 [node name="PathFollow_5" type="PathFollow3D" parent="Path3D2"]
-transform = Transform3D(-0.0101682, 0, -0.999928, 0, 0.999997, 0, 0.999867, 0, -0.0101688, 3.27894, -6.26848, -3.88901)
+transform = Transform3D(-0.01016819, 0, -0.999928, 0, 0.999997, 0, 0.999867, 0, -0.01016881, 3.27894, -6.26848, -3.88901)
 
 [node name="PathFollow_6" type="PathFollow3D" parent="Path3D2"]
-transform = Transform3D(-0.0101682, 0, -0.999928, 0, 0.999997, 0, 0.999867, 0, -0.0101688, 3.27894, -6.26848, -3.88901)
+transform = Transform3D(-0.01016819, 0, -0.999928, 0, 0.999997, 0, 0.999867, 0, -0.01016881, 3.27894, -6.26848, -3.88901)
 
 [node name="PathFollow_7" type="PathFollow3D" parent="Path3D2"]
-transform = Transform3D(-0.0101682, 0, -0.999928, 0, 0.999997, 0, 0.999867, 0, -0.0101688, 3.27894, -6.26848, -3.88901)
+transform = Transform3D(-0.01016819, 0, -0.999928, 0, 0.999997, 0, 0.999867, 0, -0.01016881, 3.27894, -6.26848, -3.88901)
 
 [node name="PathFollow_8" type="PathFollow3D" parent="Path3D2"]
-transform = Transform3D(-0.0101682, 0, -0.999928, 0, 0.999997, 0, 0.999867, 0, -0.0101688, 3.27894, -6.26848, -3.88901)
+transform = Transform3D(-0.01016819, 0, -0.999928, 0, 0.999997, 0, 0.999867, 0, -0.01016881, 3.27894, -6.26848, -3.88901)
 
 [node name="PathFollow_9" type="PathFollow3D" parent="Path3D2"]
-transform = Transform3D(-0.0101682, 0, -0.999928, 0, 0.999997, 0, 0.999867, 0, -0.0101688, 3.27894, -6.26848, -3.88901)
+transform = Transform3D(-0.01016819, 0, -0.999928, 0, 0.999997, 0, 0.999867, 0, -0.01016881, 3.27894, -6.26848, -3.88901)
 
 [node name="PathFollow_10" type="PathFollow3D" parent="Path3D2"]
-transform = Transform3D(-0.0101682, 0, -0.999928, 0, 0.999997, 0, 0.999867, 0, -0.0101688, 3.27894, -6.26848, -3.88901)
+transform = Transform3D(-0.01016819, 0, -0.999928, 0, 0.999997, 0, 0.999867, 0, -0.01016881, 3.27894, -6.26848, -3.88901)
 
 [node name="PathFollow_11" type="PathFollow3D" parent="Path3D2"]
-transform = Transform3D(-0.0101682, 0, -0.999928, 0, 0.999997, 0, 0.999867, 0, -0.0101688, 3.27894, -6.26848, -3.88901)
+transform = Transform3D(-0.01016819, 0, -0.999928, 0, 0.999997, 0, 0.999867, 0, -0.01016881, 3.27894, -6.26848, -3.88901)
 
 [node name="PathFollow_12" type="PathFollow3D" parent="Path3D2"]
-transform = Transform3D(-0.0101682, 0, -0.999928, 0, 0.999997, 0, 0.999867, 0, -0.0101688, 3.27894, -6.26848, -3.88901)
+transform = Transform3D(-0.01016819, 0, -0.999928, 0, 0.999997, 0, 0.999867, 0, -0.01016881, 3.27894, -6.26848, -3.88901)
 
 [node name="Path3D3" type="Path3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 91.5931, 2.91922, -99.6017)
 curve = SubResource("Curve3D_tjk3s")
 
 [node name="PathFollow_0" type="PathFollow3D" parent="Path3D3"]
-transform = Transform3D(-0.00947671, 0, -0.99978, 0, 0.999826, 0, 0.999782, 0, -0.00947669, 3.69353, -5.06425, -12.1376)
+transform = Transform3D(-0.009476712, 0, -0.99978, 0, 0.999826, 0, 0.999782, 0, -0.009476692, 3.69353, -5.06425, -12.1376)
 
 [node name="PathFollow_1" type="PathFollow3D" parent="Path3D3"]
-transform = Transform3D(-0.00947714, 0, -0.999895, 0, 0.999993, 0, 0.999827, 0, -0.00947778, 3.69353, -5.06425, -12.1376)
+transform = Transform3D(-0.0094771385, 0, -0.99989456, 0, 0.999993, 0, 0.999827, 0, -0.009477778, 3.69353, -5.06425, -12.1376)
 
 [node name="PathFollow_2" type="PathFollow3D" parent="Path3D3"]
-transform = Transform3D(-0.00947725, 0, -0.999901, 0, 0.999995, 0, 0.999839, 0, -0.00947784, 3.69353, -5.06425, -12.1376)
+transform = Transform3D(-0.009477248, 0, -0.9999006, 0, 0.999995, 0, 0.9998386, 0, -0.009477836, 3.69353, -5.06425, -12.1376)
 
 [node name="PathFollow_3" type="PathFollow3D" parent="Path3D3"]
-transform = Transform3D(-0.00947715, 0, -0.999896, 0, 0.999994, 0, 0.999828, 0, -0.00947779, 3.69353, -5.06425, -12.1376)
+transform = Transform3D(-0.009477143, 0, -0.9998956, 0, 0.999994, 0, 0.99982756, 0, -0.009477789, 3.69353, -5.06425, -12.1376)
 
 [node name="PathFollow_4" type="PathFollow3D" parent="Path3D3"]
-transform = Transform3D(-0.00947725, 0, -0.999901, 0, 0.999995, 0, 0.999839, 0, -0.00947784, 3.69353, -5.06425, -12.1376)
+transform = Transform3D(-0.009477248, 0, -0.9999006, 0, 0.999995, 0, 0.9998386, 0, -0.009477836, 3.69353, -5.06425, -12.1376)
 
 [node name="PathFollow_5" type="PathFollow3D" parent="Path3D3"]
-transform = Transform3D(-0.00947725, 0, -0.999901, 0, 0.999995, 0, 0.999839, 0, -0.00947784, 3.69353, -5.06425, -12.1376)
+transform = Transform3D(-0.009477248, 0, -0.9999006, 0, 0.999995, 0, 0.9998386, 0, -0.009477836, 3.69353, -5.06425, -12.1376)
 
 [node name="PathFollow_6" type="PathFollow3D" parent="Path3D3"]
-transform = Transform3D(-0.00947725, 0, -0.999901, 0, 0.999995, 0, 0.999839, 0, -0.00947784, 3.69353, -5.06425, -12.1376)
+transform = Transform3D(-0.009477248, 0, -0.9999006, 0, 0.999995, 0, 0.9998386, 0, -0.009477836, 3.69353, -5.06425, -12.1376)
 
 [node name="PathFollow_7" type="PathFollow3D" parent="Path3D3"]
-transform = Transform3D(-0.00947725, 0, -0.999901, 0, 0.999995, 0, 0.999839, 0, -0.00947784, 3.69353, -5.06425, -12.1376)
+transform = Transform3D(-0.009477248, 0, -0.9999006, 0, 0.999995, 0, 0.9998386, 0, -0.009477836, 3.69353, -5.06425, -12.1376)
 
 [node name="PathFollow_8" type="PathFollow3D" parent="Path3D3"]
-transform = Transform3D(-0.00947725, 0, -0.999901, 0, 0.999995, 0, 0.999839, 0, -0.00947784, 3.69353, -5.06425, -12.1376)
+transform = Transform3D(-0.009477248, 0, -0.9999006, 0, 0.999995, 0, 0.9998386, 0, -0.009477836, 3.69353, -5.06425, -12.1376)
 
 [node name="PathFollow_9" type="PathFollow3D" parent="Path3D3"]
-transform = Transform3D(-0.00947725, 0, -0.999901, 0, 0.999995, 0, 0.999839, 0, -0.00947784, 3.69353, -5.06425, -12.1376)
+transform = Transform3D(-0.009477248, 0, -0.9999006, 0, 0.999995, 0, 0.9998386, 0, -0.009477836, 3.69353, -5.06425, -12.1376)
 
 [node name="PathFollow_10" type="PathFollow3D" parent="Path3D3"]
-transform = Transform3D(-0.00947725, 0, -0.999901, 0, 0.999995, 0, 0.999839, 0, -0.00947784, 3.69353, -5.06425, -12.1376)
+transform = Transform3D(-0.009477248, 0, -0.9999006, 0, 0.999995, 0, 0.9998386, 0, -0.009477836, 3.69353, -5.06425, -12.1376)
 
 [node name="PathFollow_11" type="PathFollow3D" parent="Path3D3"]
-transform = Transform3D(-0.00947725, 0, -0.999901, 0, 0.999995, 0, 0.999839, 0, -0.00947784, 3.69353, -5.06425, -12.1376)
+transform = Transform3D(-0.009477248, 0, -0.9999006, 0, 0.999995, 0, 0.9998386, 0, -0.009477836, 3.69353, -5.06425, -12.1376)
 
 [node name="PathFollow_12" type="PathFollow3D" parent="Path3D3"]
-transform = Transform3D(-0.00947725, 0, -0.999901, 0, 0.999995, 0, 0.999839, 0, -0.00947784, 3.69353, -5.06425, -12.1376)
+transform = Transform3D(-0.009477248, 0, -0.9999006, 0, 0.999995, 0, 0.9998386, 0, -0.009477836, 3.69353, -5.06425, -12.1376)
 
 [node name="checkpoints_sistem" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 92.4362, 0, -98.6407)
@@ -2239,7 +2241,32 @@ transform = Transform3D(-1.17718e-06, 0, 26.9307, 0, 26.9307, 0, -26.9307, 0, -1
 mesh = SubResource("ArrayMesh_o20hm")
 skeleton = NodePath("")
 
+[node name="vel_reduction" type="Node3D" parent="."]
+
+[node name="vel_reductor2" parent="vel_reduction" instance=ExtResource("12_y5slj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 161.238, 0, -44.896717)
+velocity_reduction = 50.0
+
+[node name="CollisionShape3D" parent="vel_reduction/vel_reductor2" index="0"]
+transform = Transform3D(-0.010960403, 0, 0.9999399, 0, 1, 0, -0.9999399, 0, -0.010960403, 0, 0, 0)
+shape = SubResource("BoxShape3D_ob834")
+
+[node name="vel_reductor3" parent="vel_reduction" instance=ExtResource("12_y5slj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -53.690536, 3.1590328, -44.896717)
+velocity_reduction = 50.0
+
+[node name="CollisionShape3D" parent="vel_reduction/vel_reductor3" index="0"]
+transform = Transform3D(-0.010960403, 0, 0.9999399, 0, 1, 0, -0.9999399, 0, -0.010960403, 0, 0, 0)
+shape = SubResource("BoxShape3D_ob834")
+
 [node name="OccluderInstance3D" type="OccluderInstance3D" parent="."]
 occluder = ExtResource("12_tjk3s")
 
 [connection signal="body_entered" from="abyss_sensor" to="." method="_on_abyss_sensor_body_entered"]
+[connection signal="body_entered" from="vel_reduction/vel_reductor2" to="vel_reduction/vel_reductor2" method="_on_body_entered"]
+[connection signal="body_exited" from="vel_reduction/vel_reductor2" to="vel_reduction/vel_reductor2" method="_on_body_exited"]
+[connection signal="body_entered" from="vel_reduction/vel_reductor3" to="vel_reduction/vel_reductor3" method="_on_body_entered"]
+[connection signal="body_exited" from="vel_reduction/vel_reductor3" to="vel_reduction/vel_reductor3" method="_on_body_exited"]
+
+[editable path="vel_reduction/vel_reductor2"]
+[editable path="vel_reduction/vel_reductor3"]

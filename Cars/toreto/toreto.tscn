@@ -217,22 +217,23 @@ gravity_scale = 3.0
 center_of_mass_mode = 1
 center_of_mass = Vector3(0, -1, 0)
 script = ExtResource("2_c0lmv")
+ENGINE_POWER = 1600
 
 [node name="Cube" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.483411, 0, 0, 0, 0.483411, 0, 0, 0, 0.483411, 0, 0, 0)
+transform = Transform3D(0.483411, 0, 0, 0, 0.483411, 0, 0, 0, 0.483411, 0, 0, -0.13736916)
 mesh = SubResource("ArrayMesh_lwgyu")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0652078)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.20257697)
 shape = SubResource("ConvexPolygonShape3D_ka8i3")
 
 [node name="wheel_1" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.67, -0.392661, 1.55234)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.67, -0.392661, 1.4149709)
 use_as_steering = true
 wheel_roll_influence = 1.5
 wheel_radius = 0.355
-wheel_friction_slip = 10.0
+wheel_friction_slip = 2.0
 suspension_stiffness = 150.0
 suspension_max_force = 100000.0
 damping_compression = 10.0
@@ -243,11 +244,11 @@ mesh = ExtResource("2_xsx2t")
 skeleton = NodePath("../..")
 
 [node name="wheel_2" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.670348, -0.393059, 1.55208)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.670348, -0.393059, 1.4147109)
 use_as_steering = true
 wheel_roll_influence = 1.5
 wheel_radius = 0.355
-wheel_friction_slip = 10.0
+wheel_friction_slip = 2.0
 suspension_stiffness = 150.0
 suspension_max_force = 100000.0
 damping_compression = 10.0
@@ -259,11 +260,11 @@ mesh = ExtResource("2_xsx2t")
 skeleton = NodePath("../..")
 
 [node name="wheel_3" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.67, -0.40586, -1.37283)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.67, -0.40586, -1.5101992)
 use_as_traction = true
 wheel_roll_influence = 1.5
 wheel_radius = 0.405
-wheel_friction_slip = 10.0
+wheel_friction_slip = 2.0
 suspension_stiffness = 150.0
 suspension_max_force = 100000.0
 damping_compression = 10.0
@@ -275,11 +276,11 @@ mesh = ExtResource("3_c0lmv")
 skeleton = NodePath("../..")
 
 [node name="wheel_4" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.670348, -0.40586, -1.37283)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.670348, -0.40586, -1.5101992)
 use_as_traction = true
 wheel_roll_influence = 1.5
 wheel_radius = 0.405
-wheel_friction_slip = 10.0
+wheel_friction_slip = 2.0
 suspension_stiffness = 150.0
 suspension_max_force = 100000.0
 damping_compression = 10.0
@@ -291,7 +292,7 @@ mesh = ExtResource("3_c0lmv")
 skeleton = NodePath("../..")
 
 [node name="checkpoint_sensor" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.265052)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.40242115)
 collision_layer = 0
 collision_mask = 128
 

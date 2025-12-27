@@ -29,9 +29,6 @@ sky = SubResource("Sky_y5slj")
 
 [sub_resource type="Resource" id="Resource_xbfq3"]
 script = ExtResource("6_uiyng")
-duration = 1.0
-transition = 0
-ease = 2
 
 [sub_resource type="Curve3D" id="Curve3D_twkc3"]
 closed = true
@@ -1583,7 +1580,8 @@ script = ExtResource("5_ydo05")
 follow_mode = 2
 look_at_mode = 2
 tween_resource = SubResource("Resource_xbfq3")
-follow_offset = Vector3(-13.155, 17.935, -6.135)
+follow_offset = Vector3(16.18, 26.495, -8.99)
+follow_damping = true
 metadata/_custom_type_script = "uid://csjccrhj5wnx7"
 
 [node name="Path3D" type="Path3D" parent="."]
@@ -1591,7 +1589,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -53.5873, -8.83966, -8.68538)
 curve = SubResource("Curve3D_twkc3")
 
 [node name="PathFollow_0" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.0681761, 0, 0.99752, 0, 0.999836, 0, -0.997516, 0, 0.0681764, -7.84297, 6.10352e-05, -0.84734)
+transform = Transform3D(0.06817611, 0, 0.99752, 0, 0.999836, 0, -0.997516, 0, 0.06817639, -7.84297, 6.10352e-05, -0.84734)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Path3D/PathFollow_0"]
 transform = Transform3D(3.68, 0, 0, 0, 3.68, 0, 0, 0, 3.68, 0, 0, 0)
@@ -1599,7 +1597,7 @@ visible = false
 mesh = SubResource("SphereMesh_ydo05")
 
 [node name="PathFollow_1" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.0681801, 0, 0.99766, 0, 0.999976, 0, -0.997575, 0, 0.0681859, -7.84297, 6.10352e-05, -0.84734)
+transform = Transform3D(0.068180144, 0, 0.99765986, 0, 0.999976, 0, -0.997575, 0, 0.06818595, -7.84297, 6.10352e-05, -0.84734)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Path3D/PathFollow_1"]
 transform = Transform3D(3.68, 0, 0, 0, 3.68, 0, 0, 0, 3.68, 0, 0, 0)
@@ -1607,7 +1605,7 @@ visible = false
 mesh = SubResource("SphereMesh_ydo05")
 
 [node name="PathFollow_2" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.0681824, 0, 0.99766, 0, 0.999976, 0, -0.997608, 0, 0.0681859, -7.84297, 6.10352e-05, -0.84734)
+transform = Transform3D(0.0681824, 0, 0.99765986, 0, 0.999976, 0, -0.997608, 0, 0.06818595, -7.84297, 6.10352e-05, -0.84734)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Path3D/PathFollow_2"]
 transform = Transform3D(3.68, 0, 0, 0, 3.68, 0, 0, 0, 3.68, 0, 0, 0)
@@ -1615,7 +1613,7 @@ visible = false
 mesh = SubResource("SphereMesh_ydo05")
 
 [node name="PathFollow_3" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.0681818, 0, 0.99766, 0, 0.999976, 0, -0.997599, 0, 0.0681859, -7.84297, 6.10352e-05, -0.84734)
+transform = Transform3D(0.06818178, 0, 0.99765986, 0, 0.999976, 0, -0.997599, 0, 0.06818595, -7.84297, 6.10352e-05, -0.84734)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Path3D/PathFollow_3"]
 transform = Transform3D(3.68, 0, 0, 0, 3.68, 0, 0, 0, 3.68, 0, 0, 0)
@@ -1623,7 +1621,7 @@ visible = false
 mesh = SubResource("SphereMesh_ydo05")
 
 [node name="PathFollow_4" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.0681824, 0, 0.99766, 0, 0.999976, 0, -0.997608, 0, 0.0681859, -7.84297, 6.10352e-05, -0.84734)
+transform = Transform3D(0.0681824, 0, 0.99765986, 0, 0.999976, 0, -0.997608, 0, 0.06818595, -7.84297, 6.10352e-05, -0.84734)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Path3D/PathFollow_4"]
 transform = Transform3D(3.68, 0, 0, 0, 3.68, 0, 0, 0, 3.68, 0, 0, 0)
@@ -1631,7 +1629,7 @@ visible = false
 mesh = SubResource("SphereMesh_ydo05")
 
 [node name="PathFollow_5" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.0681824, 0, 0.99766, 0, 0.999976, 0, -0.997608, 0, 0.0681859, -7.84297, 6.10352e-05, -0.84734)
+transform = Transform3D(0.0681824, 0, 0.99765986, 0, 0.999976, 0, -0.997608, 0, 0.06818595, -7.84297, 6.10352e-05, -0.84734)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Path3D/PathFollow_5"]
 transform = Transform3D(3.68, 0, 0, 0, 3.68, 0, 0, 0, 3.68, 0, 0, 0)
@@ -1639,7 +1637,7 @@ visible = false
 mesh = SubResource("SphereMesh_ydo05")
 
 [node name="PathFollow_6" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.0681824, 0, 0.99766, 0, 0.999976, 0, -0.997608, 0, 0.0681859, -7.84297, 6.10352e-05, -0.84734)
+transform = Transform3D(0.0681824, 0, 0.99765986, 0, 0.999976, 0, -0.997608, 0, 0.06818595, -7.84297, 6.10352e-05, -0.84734)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Path3D/PathFollow_6"]
 transform = Transform3D(3.68, 0, 0, 0, 3.68, 0, 0, 0, 3.68, 0, 0, 0)
@@ -1647,7 +1645,7 @@ visible = false
 mesh = SubResource("SphereMesh_ydo05")
 
 [node name="PathFollow_7" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.0681824, 0, 0.99766, 0, 0.999976, 0, -0.997608, 0, 0.0681859, -7.84297, 6.10352e-05, -0.84734)
+transform = Transform3D(0.0681824, 0, 0.99765986, 0, 0.999976, 0, -0.997608, 0, 0.06818595, -7.84297, 6.10352e-05, -0.84734)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Path3D/PathFollow_7"]
 transform = Transform3D(3.68, 0, 0, 0, 3.68, 0, 0, 0, 3.68, 0, 0, 0)
@@ -1655,7 +1653,7 @@ visible = false
 mesh = SubResource("SphereMesh_ydo05")
 
 [node name="PathFollow_8" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.0681824, 0, 0.99766, 0, 0.999976, 0, -0.997608, 0, 0.0681859, -7.84297, 6.10352e-05, -0.84734)
+transform = Transform3D(0.0681824, 0, 0.99765986, 0, 0.999976, 0, -0.997608, 0, 0.06818595, -7.84297, 6.10352e-05, -0.84734)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Path3D/PathFollow_8"]
 transform = Transform3D(3.68, 0, 0, 0, 3.68, 0, 0, 0, 3.68, 0, 0, 0)
@@ -1663,7 +1661,7 @@ visible = false
 mesh = SubResource("SphereMesh_ydo05")
 
 [node name="PathFollow_9" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.0681824, 0, 0.99766, 0, 0.999976, 0, -0.997608, 0, 0.0681859, -7.84297, 6.10352e-05, -0.84734)
+transform = Transform3D(0.0681824, 0, 0.99765986, 0, 0.999976, 0, -0.997608, 0, 0.06818595, -7.84297, 6.10352e-05, -0.84734)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Path3D/PathFollow_9"]
 transform = Transform3D(3.68, 0, 0, 0, 3.68, 0, 0, 0, 3.68, 0, 0, 0)
@@ -1671,7 +1669,7 @@ visible = false
 mesh = SubResource("SphereMesh_ydo05")
 
 [node name="PathFollow_10" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.0681824, 0, 0.99766, 0, 0.999976, 0, -0.997608, 0, 0.0681859, -7.84297, 6.10352e-05, -0.84734)
+transform = Transform3D(0.0681824, 0, 0.99765986, 0, 0.999976, 0, -0.997608, 0, 0.06818595, -7.84297, 6.10352e-05, -0.84734)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Path3D/PathFollow_10"]
 transform = Transform3D(3.68, 0, 0, 0, 3.68, 0, 0, 0, 3.68, 0, 0, 0)
@@ -1679,7 +1677,7 @@ visible = false
 mesh = SubResource("SphereMesh_ydo05")
 
 [node name="PathFollow_11" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.0681824, 0, 0.99766, 0, 0.999976, 0, -0.997608, 0, 0.0681859, -7.84297, 6.10352e-05, -0.84734)
+transform = Transform3D(0.0681824, 0, 0.99765986, 0, 0.999976, 0, -0.997608, 0, 0.06818595, -7.84297, 6.10352e-05, -0.84734)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Path3D/PathFollow_11"]
 transform = Transform3D(3.68, 0, 0, 0, 3.68, 0, 0, 0, 3.68, 0, 0, 0)
@@ -1687,7 +1685,7 @@ visible = false
 mesh = SubResource("SphereMesh_ydo05")
 
 [node name="PathFollow_12" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.0681824, 0, 0.99766, 0, 0.999976, 0, -0.997608, 0, 0.0681859, -7.84297, 6.10352e-05, -0.84734)
+transform = Transform3D(0.0681824, 0, 0.99765986, 0, 0.999976, 0, -0.997608, 0, 0.06818595, -7.84297, 6.10352e-05, -0.84734)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Path3D/PathFollow_12"]
 transform = Transform3D(3.68, 0, 0, 0, 3.68, 0, 0, 0, 3.68, 0, 0, 0)
@@ -1696,7 +1694,6 @@ mesh = SubResource("SphereMesh_ydo05")
 
 [node name="checkpoints_sistem" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -60.3308, -7.39686, -1.79544)
-visible = false
 
 [node name="point_0" type="Area3D" parent="checkpoints_sistem"]
 transform = Transform3D(-0.101681, 0, -0.994817, 0, 1, 0, 0.994817, 0, -0.101681, 0, 4.52527, -7.78413)

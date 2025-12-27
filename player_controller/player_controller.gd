@@ -152,8 +152,6 @@ func stering_asist():
 			MAX_STEER = 0.3
 		elif vel < 40:
 			MAX_STEER = 0.2
-	else:
-		MAX_STEER = 0.6
 
 
 func traction_by_terrain_control():
@@ -177,12 +175,9 @@ func traction_by_terrain_control():
 	if drift < 1.0:
 		if drift_sound.playing == false:
 			drift_sound.play()
-		stering_asiste_on = false
 	else:
 		if drift_sound.playing == true:
 			drift_sound.stop()
-		stering_asiste_on = true
-
 
 func call_lakitu():
 	if last_checkpoint:
