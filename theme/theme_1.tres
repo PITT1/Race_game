@@ -1,85 +1,8 @@
-[gd_resource type="Theme" load_steps=5 format=3 uid="uid://csi40yx6vlfqs"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_40wi0"]
-bg_color = Color(0.108571, 0.152076, 0.265071, 1)
-border_width_left = 10
-border_width_top = 10
-border_width_right = 10
-border_width_bottom = 10
-border_color = Color(0.302477, 0.623761, 0.630245, 1)
-border_blend = true
-corner_radius_top_left = 15
-corner_radius_top_right = 15
-corner_radius_bottom_right = 15
-corner_radius_bottom_left = 15
-corner_detail = 5
-shadow_color = Color(0.0537552, 0.0573308, 0.0557972, 0.6)
-shadow_size = 11
-shadow_offset = Vector2(5.985, 6.72)
-anti_aliasing_size = 4.466
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fdsfy"]
-bg_color = Color(0.108571, 0.152076, 0.265071, 1)
-border_width_left = 10
-border_width_top = 10
-border_width_right = 10
-border_width_bottom = 10
-border_color = Color(0.302477, 0.623761, 0.630245, 1)
-border_blend = true
-corner_radius_top_left = 15
-corner_radius_top_right = 15
-corner_radius_bottom_right = 15
-corner_radius_bottom_left = 15
-corner_detail = 5
-shadow_color = Color(0.0537552, 0.0573308, 0.0557972, 0.6)
-shadow_size = 11
-shadow_offset = Vector2(5.985, 6.72)
-anti_aliasing_size = 4.466
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ruqm1"]
-bg_color = Color(0.108571, 0.152076, 0.265071, 1)
-border_width_left = 10
-border_width_top = 10
-border_width_right = 10
-border_width_bottom = 10
-border_color = Color(0.302477, 0.623761, 0.630245, 1)
-border_blend = true
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-corner_detail = 5
-shadow_color = Color(0.0537552, 0.0573308, 0.0557972, 0.6)
-shadow_size = 11
-shadow_offset = Vector2(5.985, 6.72)
-anti_aliasing_size = 4.466
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u6cb5"]
-bg_color = Color(0.110763, 0.424597, 0.568346, 1)
-border_width_left = 10
-border_width_top = 10
-border_width_right = 10
-border_width_bottom = 10
-border_color = Color(0.302477, 0.623761, 0.630245, 1)
-border_blend = true
-corner_radius_top_left = 15
-corner_radius_top_right = 15
-corner_radius_bottom_right = 15
-corner_radius_bottom_left = 15
-corner_detail = 5
-shadow_color = Color(0.0537552, 0.0573308, 0.0557972, 0.6)
-shadow_size = 11
-shadow_offset = Vector2(5.985, 6.72)
-anti_aliasing_size = 4.466
+[gd_resource type="Theme" format=3 uid="uid://csi40yx6vlfqs"]
 
 [resource]
 Button/colors/font_color = Color(0.825957, 0.814891, 0.812692, 1)
 Button/colors/font_outline_color = Color(0, 0, 0, 1)
-Button/constants/outline_size = 4
-Button/styles/focus = SubResource("StyleBoxFlat_40wi0")
-Button/styles/hover = SubResource("StyleBoxFlat_fdsfy")
-Button/styles/normal = SubResource("StyleBoxFlat_ruqm1")
-Button/styles/pressed = SubResource("StyleBoxFlat_u6cb5")
 Label/colors/font_color = Color(0.83251, 0.839804, 0.864649, 1)
 Label/colors/font_outline_color = Color(0, 0, 0, 1)
 Label/constants/outline_size = 20

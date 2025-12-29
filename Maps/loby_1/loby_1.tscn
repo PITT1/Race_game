@@ -26,6 +26,8 @@ sky_material = SubResource("ProceduralSkyMaterial_n0ykm")
 [sub_resource type="Environment" id="Environment_r43wq"]
 background_mode = 2
 sky = SubResource("Sky_uxm7u")
+ambient_light_source = 1
+reflected_light_source = 1
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o6dls"]
 albedo_texture = ExtResource("3_r43wq")
@@ -184,7 +186,7 @@ visible = false
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.359997, 0.560164, -0.746069, 0, 0.799685, 0.60042, 0.932954, -0.216149, 0.287884, -3.42834, 2.42496, 4.28959)
-far = 200.0
+far = 80.0
 
 [node name="PhantomCameraHost" type="Node" parent="Camera3D"]
 process_priority = 300

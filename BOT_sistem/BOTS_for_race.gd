@@ -34,6 +34,14 @@ var player_position: int = 0
 
 var vel_reduction: float = 0.0
 
+#smoke particles
+var wheels: Array = []
+var drift: float = 1.0
+const WHEEL_SMOKE = preload("res://particles/smoke/wheel_smoke.tscn")
+var DRIFT_SOUND = preload("res://sounds/drift_sound/drift_sound.ogg")
+var drift_sound: AudioStreamPlayer3D = AudioStreamPlayer3D.new()
+var smoke_particles: Array = []
+
 func _ready() -> void:
 	gravity_scale = 4
 	all_checkpoints = get_parent().num_checkpoints #esto hay que cambiarlo para el futuro ya que no se podra entrar al loby ni eventos de destruccion
@@ -44,6 +52,17 @@ func _ready() -> void:
 	
 	set_random_path_follow()
 	engine_sound.play()
+	
+	var childs = get_children()
+	for item in childs:
+		if item.get_class() == "VehicleWheel3D" and item.name.containsn("Wheel"):
+			wheels.append(item)
+			
+			#instantia smoke particles
+			var inst_smoke_particles = WHEEL_SMOKE.instantiate()
+			add_child(inst_smoke_particles)
+			inst_smoke_particles.position = item.position
+			smoke_particles.append(inst_smoke_particles)
 
 
 func _physics_process(delta: float) -> void:
@@ -64,6 +83,8 @@ func _physics_process(delta: float) -> void:
 		engine_force = -ENGINE_POWER
 	
 	engine_sound_controller()
+	
+	drift_smoke_system()
 
 
 func bot_sistem(): #BOT
@@ -192,3 +213,21 @@ func escort_system():
 
 func _on_escort_system_interval_timeout() -> void:
 	escort_system()
+
+func drift_smoke_system():
+	#drift_smoke_particles
+	for wheel in wheels:
+		drift = wheel.get_skidinfo()
+		if drift < 1.0:
+			for smoke in smoke_particles:
+				smoke.emitting = true
+		else:
+			for smoke in smoke_particles:
+				smoke.emitting = false
+	#sonido de derrape
+	if drift < 1.0:
+		if drift_sound.playing == false:
+			drift_sound.play()
+	else:
+		if drift_sound.playing == true:
+			drift_sound.stop()

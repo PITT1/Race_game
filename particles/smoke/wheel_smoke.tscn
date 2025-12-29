@@ -27,6 +27,7 @@ rings = 4
 material_override = SubResource("StandardMaterial3D_h63mk")
 cast_shadow = 0
 lod_bias = 0.3
+visibility_range_end = 100.0
 emitting = false
 amount = 30
 lifetime = 1.2
