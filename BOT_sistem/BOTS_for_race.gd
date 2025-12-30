@@ -59,10 +59,10 @@ func _ready() -> void:
 			wheels.append(item)
 			
 			#instantia smoke particles
-			var inst_smoke_particles = WHEEL_SMOKE.instantiate()
-			add_child(inst_smoke_particles)
-			inst_smoke_particles.position = item.position
-			smoke_particles.append(inst_smoke_particles)
+			#var inst_smoke_particles = WHEEL_SMOKE.instantiate()
+			#add_child(inst_smoke_particles)
+			#inst_smoke_particles.position = item.position
+			#smoke_particles.append(inst_smoke_particles)
 
 
 func _physics_process(delta: float) -> void:
@@ -216,14 +216,14 @@ func _on_escort_system_interval_timeout() -> void:
 
 func drift_smoke_system():
 	#drift_smoke_particles
-	for wheel in wheels:
-		drift = wheel.get_skidinfo()
-		if drift < 1.0:
-			for smoke in smoke_particles:
-				smoke.emitting = true
-		else:
-			for smoke in smoke_particles:
-				smoke.emitting = false
+	#for wheel in wheels:
+		#drift = wheel.get_skidinfo()
+		#if drift < 1.0:
+			#for smoke in smoke_particles:
+				#smoke.emitting = true
+		#else:
+			#for smoke in smoke_particles:
+				#smoke.emitting = false
 	#sonido de derrape
 	if drift < 1.0:
 		if drift_sound.playing == false:
