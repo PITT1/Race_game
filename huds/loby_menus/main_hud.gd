@@ -147,3 +147,7 @@ func _on_set_english_button_button_up() -> void:
 func _on_to_back_menu_button_up() -> void:
 	pop_sound.play()
 	anim.play("back_to_page_2_from_race_selector")
+
+
+func _on_grand_prix_btn_button_up() -> void:
+	get_tree().change_scene_to_file("res://huds/grand_prix_hud/grand_prix_hud.tscn")

@@ -81,11 +81,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.813088, -0.12013, 1.47386)
 use_as_steering = true
 wheel_roll_influence = 1.5
 wheel_radius = 0.57
-wheel_friction_slip = 1.0
-suspension_stiffness = 200.0
+wheel_friction_slip = 2.5
+suspension_stiffness = 100.0
 suspension_max_force = 100000.0
-damping_compression = 10.0
-damping_relaxation = 10.0
+damping_compression = 4.0
+damping_relaxation = 5.0
 
 [node name="F1-70sRearWheel" type="MeshInstance3D" parent="wheel_1"]
 transform = Transform3D(0.28, 0, 0, 0, 0.28, 0, 0, 0, 0.28, 0, 0, 0)
@@ -97,11 +97,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.813, -0.12013, 1.4742)
 use_as_steering = true
 wheel_roll_influence = 1.5
 wheel_radius = 0.57
-wheel_friction_slip = 1.0
-suspension_stiffness = 200.0
+wheel_friction_slip = 2.5
+suspension_stiffness = 100.0
 suspension_max_force = 100000.0
-damping_compression = 10.0
-damping_relaxation = 10.0
+damping_compression = 4.0
+damping_relaxation = 5.0
 
 [node name="F1-70sRearWheel" type="MeshInstance3D" parent="wheel_2"]
 transform = Transform3D(0.28, 0, 0, 0, 0.28, 0, 0, 0, 0.28, 0, 0, 0)
@@ -113,11 +113,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.812756, -0.0251866, -1.5408
 use_as_traction = true
 wheel_roll_influence = 1.5
 wheel_radius = 0.57
-wheel_friction_slip = 1.0
-suspension_stiffness = 200.0
+wheel_friction_slip = 2.5
+suspension_stiffness = 100.0
 suspension_max_force = 100000.0
-damping_compression = 10.0
-damping_relaxation = 10.0
+damping_compression = 4.0
+damping_relaxation = 5.0
 
 [node name="F1-70sRearWheel" type="MeshInstance3D" parent="wheel_3"]
 transform = Transform3D(0.28, 0, 0, 0, 0.28, 0, 0, 0, 0.28, 0, 0, 0)
@@ -129,11 +129,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.813, -0.0251866, -1.54083)
 use_as_traction = true
 wheel_roll_influence = 1.5
 wheel_radius = 0.57
-wheel_friction_slip = 1.0
-suspension_stiffness = 200.0
+wheel_friction_slip = 2.5
+suspension_stiffness = 100.0
 suspension_max_force = 100000.0
-damping_compression = 10.0
-damping_relaxation = 10.0
+damping_compression = 4.0
+damping_relaxation = 5.0
 
 [node name="F1-70sRearWheel" type="MeshInstance3D" parent="wheel_4"]
 transform = Transform3D(0.28, 0, 0, 0, 0.28, 0, 0, 0, 0.28, 0, 0, 0)

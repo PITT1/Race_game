@@ -586,7 +586,7 @@ mesh = SubResource("ArrayMesh_thsqy")
 skeleton = NodePath("")
 
 [node name="bumper_1" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.905472, -0.0478901, 2.12249)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, -0.048, 2.122)
 use_as_steering = true
 wheel_roll_influence = 1.5
 wheel_radius = 0.475
@@ -595,7 +595,7 @@ suspension_stiffness = 200.0
 suspension_max_force = 100000.0
 
 [node name="bumper_2" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.905, -0.0479471, 2.12323)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, -0.048, 2.123)
 use_as_steering = true
 wheel_roll_influence = 1.5
 wheel_radius = 0.475

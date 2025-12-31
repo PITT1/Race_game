@@ -11,9 +11,9 @@ func _on_button_button_up() -> void:
 		data.money += 150000
 		print("añadiendo 150.000$")
 		global_var.save_data(JSON.stringify(data))
-		get_tree().change_scene_to_file("res://Maps/loby_1/loby_1.tscn")
+		get_tree().change_scene_to_file("res://Maps/loby_rework/loby_rework.tscn")
 	else:
-		get_tree().change_scene_to_file("res://Maps/loby_1/loby_1.tscn")
+		get_tree().change_scene_to_file("res://Maps/loby_rework/loby_rework.tscn")
 	
 	# view frames per seconds
 	

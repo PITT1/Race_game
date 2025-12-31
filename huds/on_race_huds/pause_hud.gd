@@ -22,4 +22,4 @@ func _on_reboot_race_btn_button_up() -> void:
 
 func _on_go_to_main_menu_btn_button_up() -> void:
 	Ads._show_interstitial_ad()
-	get_tree().change_scene_to_file("res://Maps/loby_1/loby_1.tscn")
+	get_tree().change_scene_to_file("res://Maps/loby_rework/loby_rework.tscn")

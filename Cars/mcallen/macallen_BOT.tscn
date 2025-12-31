@@ -541,24 +541,6 @@ transform = Transform3D(0.0106797, -0.999943, 0, 0.999943, 0.0106797, 0, 0, 0, 1
 mesh = SubResource("ArrayMesh_7hane")
 skeleton = NodePath("")
 
-[node name="bumper_1" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.861871, -0.0100099, 2.5174)
-use_as_steering = true
-wheel_roll_influence = 1.5
-wheel_radius = 0.425
-wheel_friction_slip = 0.1
-suspension_stiffness = 200.0
-suspension_max_force = 100000.0
-
-[node name="bumper_2" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, -0.862, -0.01, 2.51788)
-use_as_steering = true
-wheel_roll_influence = 1.5
-wheel_radius = 0.425
-wheel_friction_slip = 0.1
-suspension_stiffness = 200.0
-suspension_max_force = 100000.0
-
 [node name="checkpoint_sensor" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.170712)
 collision_layer = 0

@@ -18,7 +18,7 @@ func _ready() -> void:
 	car = get_parent()
 	laps_to_finish = get_parent().get_parent().laps_num_to_finish
 	
-	if car.get_parent().name == "Loby1":
+	if car.get_parent().name == "LobyRework":
 		canvas_layer.visible = false
 	else:
 		canvas_layer.visible = true

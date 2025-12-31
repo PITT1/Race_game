@@ -25,7 +25,7 @@ Estilo visual único con gráficos low-poly.
 Actualizaciones constantes con más pistas, autos y modos de juego.
 
 🎮 ¡La velocidad y la estrategia se combinan en Poly Race! ¿Estás listo para convertirte en el campeón y dominar cada circuito?"
-run/main_scene="uid://dl4l032e7tmky"
+run/main_scene="uid://ut6b48jgsc2u"
 config/features=PackedStringArray("4.5", "Mobile")
 run/max_fps=60
 run/low_processor_mode=true

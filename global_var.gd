@@ -59,7 +59,7 @@ var track_list = {
 	1 : ["Track 1", "res://Maps/circuit_test_2/test_2.tscn", "res://Maps/circuit_test_2/pista_1_selection_menu.png"],
 	2 : ["Track 2", "res://Maps/rc_circuit/rc_circuit_1.tscn", "res://Maps/rc_circuit/pista_rc_1_selection_menu.png"],
 	3 : ["Stadium 1", "res://Maps/nascar_circuit/nascar_circuit.tscn", "res://Maps/nascar_circuit/pista_nascar_circuit_1_selection_menu.png"],
-	4 : ["Floating 1", "res://Maps/basic_circuit_1/basic_circuit_1.tscn", "res://Maps/basic_circuit_1/pista_basic_circuit_1_selection_menu.png"],
+	4 : ["Snow 1", "res://Maps/basic_circuit_1/basic_circuit_1.tscn", "res://Maps/basic_circuit_1/pista_basic_circuit_1_selection_menu.png"],
 	5 : ["Floating 2", "res://Maps/2_vias_circuit_1/pista_doble_1.tscn", "res://Maps/2_vias_circuit_1/pista_doble_seleccion_menu.png"],
 	6 : ["Track 4", "res://Maps/track_2/pista_2.tscn", "res://Maps/track_2/pista_2_selection_menu.png"],
 	7 : ["Floating 3", "res://Maps/floating_track_3/floating_track_3.tscn", "res://Maps/floating_track_3/floating_track_3_selection_menu.png"],
