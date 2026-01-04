@@ -460,7 +460,7 @@ albedo_texture = ExtResource("3_f8fad")
 
 [node name="EmpalerTruckBot" type="VehicleBody3D"]
 collision_mask = 1787
-mass = 300.0
+mass = 200.0
 physics_material_override = ExtResource("1_5ay7i")
 gravity_scale = 4.0
 center_of_mass_mode = 1

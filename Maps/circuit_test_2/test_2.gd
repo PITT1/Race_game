@@ -40,6 +40,10 @@ func _ready() -> void:
 	await get_tree().create_timer(4.2).timeout
 	for car in car_list:
 		car.start_race()
+	
+	
+	if anim.get_animation_list().has("water_texture"):
+		anim.play("water_texture")
 
 func _physics_process(delta: float) -> void:
 	if delta:
