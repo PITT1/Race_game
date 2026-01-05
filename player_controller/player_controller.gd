@@ -32,6 +32,8 @@ var all_checkpoints: int
 var laps_num: int = 1
 var position_from_hud: int = 0
 var vel: int = 0
+var sensor_storage: Array = []
+var distance_to_sensor: float = 0.0
 
 var previous: int = -1
 
@@ -68,6 +70,11 @@ func _ready() -> void:
 	drift_sound.volume_db = -10
 	add_child(drift_sound)
 	engine_sound.play()
+	
+	if get_parent().name != "LobyRework":
+		for item in get_parent().get_children():
+			if item.name == "dist_sen":
+				sensor_storage = item.get_children()
 
 func _physics_process(delta: float) -> void:
 	stering_asist()

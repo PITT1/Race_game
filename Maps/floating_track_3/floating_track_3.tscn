@@ -888,7 +888,6 @@ mesh = SubResource("SphereMesh_5bv8q")
 
 [node name="checkpoints_sistem" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.28194, 0)
-visible = false
 
 [node name="point_0" type="Area3D" parent="checkpoints_sistem"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 92.05866, 4.23551, 97.75848)
@@ -1459,15 +1458,6 @@ transform = Transform3D(0.0260544, 0, 0.99966, 0, 1, 0, -0.99966, 0, 0.0260544, 
 collision_layer = 128
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_60"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.9211, 5.18872, 0.49884)
-shape = SubResource("BoxShape3D_iyycd")
-debug_color = Color(0, 0, 1, 1)
-
-[node name="point_61" type="Area3D" parent="checkpoints_sistem"]
-transform = Transform3D(0.0260544, 0, 0.99966, 0, 1, 0, -0.99966, 0, 0.0260544, 69.03759, 4.688696, 95.82064)
-collision_layer = 128
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_61"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.9211, 5.18872, 0.49884)
 shape = SubResource("BoxShape3D_iyycd")
 debug_color = Color(0, 0, 1, 1)

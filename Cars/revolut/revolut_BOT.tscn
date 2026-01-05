@@ -421,7 +421,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.715971, -0.233336, 1.05921)
 use_as_steering = true
 wheel_roll_influence = 1.5
 wheel_radius = 0.355
-wheel_friction_slip = 1.4
+wheel_friction_slip = 2.0
 suspension_stiffness = 200.0
 suspension_max_force = 100000.0
 damping_compression = 10.0
@@ -438,7 +438,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.715972, -0.233336, 1.05921
 use_as_steering = true
 wheel_roll_influence = 1.5
 wheel_radius = 0.355
-wheel_friction_slip = 1.4
+wheel_friction_slip = 2.0
 suspension_stiffness = 200.0
 suspension_max_force = 100000.0
 damping_compression = 10.0
@@ -455,7 +455,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.715971, -0.233336, -1.51594
 use_as_traction = true
 wheel_roll_influence = 1.5
 wheel_radius = 0.355
-wheel_friction_slip = 1.4
+wheel_friction_slip = 2.0
 suspension_stiffness = 200.0
 suspension_max_force = 100000.0
 damping_compression = 10.0
@@ -472,7 +472,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.715972, -0.233336, -1.5159
 use_as_traction = true
 wheel_roll_influence = 1.5
 wheel_radius = 0.355
-wheel_friction_slip = 1.4
+wheel_friction_slip = 2.0
 suspension_stiffness = 200.0
 suspension_max_force = 100000.0
 damping_compression = 10.0
@@ -483,24 +483,6 @@ transform = Transform3D(0, -0.739791, 0, 0.739791, 0, 0, 0, 0, 0.739791, 0, 0, 0
 lod_bias = 0.5
 mesh = SubResource("ArrayMesh_nkeee")
 skeleton = NodePath("")
-
-[node name="bumper_1" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.861871, 0.172102, 1.88434)
-use_as_steering = true
-wheel_roll_influence = 1.5
-wheel_radius = 0.425
-wheel_friction_slip = 0.1
-suspension_stiffness = 200.0
-suspension_max_force = 100000.0
-
-[node name="bumper_2" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, -0.862, 0.172112, 1.88482)
-use_as_steering = true
-wheel_roll_influence = 1.5
-wheel_radius = 0.425
-wheel_friction_slip = 0.1
-suspension_stiffness = 200.0
-suspension_max_force = 100000.0
 
 [node name="checkpoint_sensor" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.221208, -0.0713868)

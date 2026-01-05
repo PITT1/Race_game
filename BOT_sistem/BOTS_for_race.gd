@@ -31,6 +31,8 @@ var recovery_mode: bool = false
 var race_order: Array = []
 var bot_position: int = 0
 var player_position: int = 0
+var sensor_storage: Array = []
+var distance_to_sensor: float = 0.0
 
 var vel_reduction: float = 0.0
 

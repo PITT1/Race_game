@@ -22,26 +22,26 @@ radius = 2.404
 collision_mask = 2043
 mass = 200.0
 physics_material_override = ExtResource("1_smpox")
-gravity_scale = 5.0
+gravity_scale = 4.0
 center_of_mass_mode = 1
 center_of_mass = Vector3(0, -1, 0)
 script = ExtResource("1_mpwrr")
 
 [node name="Z40Body" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -0.00133407, 0, -0.552349)
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -0.00133407, 0.21836078, -0.45408666)
 mesh = ExtResource("2_smpox")
 surface_material_override/0 = SubResource("StandardMaterial3D_oqw6a")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -0.00133407, 0, -0.552349)
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -0.00133407, 0.21836078, -0.45408666)
 shape = SubResource("ConvexPolygonShape3D_oqw6a")
 
 [node name="wheel_1" type="VehicleWheel3D" parent="."]
-transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.829366, -0.24803, 0.985258)
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.829366, -0.029669225, 1.0835203)
 use_as_steering = true
-wheel_roll_influence = 1.0
+wheel_roll_influence = 1.4
 wheel_radius = 0.42
-wheel_friction_slip = 2.0
+wheel_friction_slip = 3.0
 suspension_stiffness = 200.0
 suspension_max_force = 100000.0
 damping_compression = 10.0
@@ -52,11 +52,11 @@ transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
 mesh = ExtResource("3_smpox")
 
 [node name="wheel_2" type="VehicleWheel3D" parent="."]
-transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -0.829, -0.248844, 0.985)
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -0.829, -0.030483216, 1.0832623)
 use_as_steering = true
-wheel_roll_influence = 1.0
+wheel_roll_influence = 1.4
 wheel_radius = 0.42
-wheel_friction_slip = 2.0
+wheel_friction_slip = 3.0
 suspension_stiffness = 200.0
 suspension_max_force = 100000.0
 damping_compression = 10.0
@@ -67,11 +67,11 @@ transform = Transform3D(-0.8, 0, -1.20797e-07, 0, 0.8, 0, 1.20797e-07, 0, -0.8, 
 mesh = ExtResource("3_smpox")
 
 [node name="wheel_3" type="VehicleWheel3D" parent="."]
-transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.896, -0.248428, -1.734)
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.896, -0.03006722, -1.6357377)
 use_as_traction = true
-wheel_roll_influence = 1.5
+wheel_roll_influence = 1.4
 wheel_radius = 0.42
-wheel_friction_slip = 2.0
+wheel_friction_slip = 3.0
 suspension_stiffness = 200.0
 suspension_max_force = 100000.0
 damping_compression = 10.0
@@ -82,11 +82,11 @@ transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
 mesh = ExtResource("3_smpox")
 
 [node name="wheel_4" type="VehicleWheel3D" parent="."]
-transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -0.896, -0.248428, -1.734)
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -0.896, -0.03006722, -1.6357377)
 use_as_traction = true
-wheel_roll_influence = 1.5
+wheel_roll_influence = 1.4
 wheel_radius = 0.42
-wheel_friction_slip = 2.0
+wheel_friction_slip = 3.0
 suspension_stiffness = 200.0
 suspension_max_force = 100000.0
 damping_compression = 10.0
@@ -96,26 +96,8 @@ damping_relaxation = 10.0
 transform = Transform3D(-0.8, 0, -1.20797e-07, 0, 0.8, 0, 1.20797e-07, 0, -0.8, 0, 0, 0)
 mesh = ExtResource("3_smpox")
 
-[node name="bumper_1" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.905472, -0.0875629, 2.12249)
-use_as_steering = true
-wheel_roll_influence = 1.5
-wheel_radius = 0.475
-wheel_friction_slip = 0.1
-suspension_stiffness = 200.0
-suspension_max_force = 100000.0
-
-[node name="bumper_2" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.905, -0.08762, 2.12323)
-use_as_steering = true
-wheel_roll_influence = 1.5
-wheel_radius = 0.475
-wheel_friction_slip = 0.1
-suspension_stiffness = 200.0
-suspension_max_force = 100000.0
-
 [node name="checkpoint_sensor" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.199844)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.21836078, -0.10158169)
 visible = false
 collision_layer = 0
 collision_mask = 128
