@@ -34,6 +34,7 @@ var position_from_hud: int = 0
 var vel: int = 0
 var sensor_storage: Array = []
 var distance_to_sensor: float = 0.0
+var next_dist_sensor: int = 0
 
 var previous: int = -1
 
@@ -92,6 +93,8 @@ func _physics_process(delta: float) -> void:
 	traction_by_terrain_control()
 	
 	engine_sound_controller()
+	
+	dist_sensor_sistem()
 	
 
 func _on_checkpoint_sensor_area_entered(area: Area3D) -> void:
@@ -206,3 +209,9 @@ func engine_sound_controller():
 	var normalized_speed = clamp(speed, 0, 150)
 	engine_sound.pitch_scale = 0.00667 * normalized_speed + 0.1
 	
+func dist_sensor_sistem():
+	distance_to_sensor = global_position.distance_to(sensor_storage[next_dist_sensor].global_position)
+	if distance_to_sensor < 50:
+		next_dist_sensor = next_dist_sensor + 1
+		if next_dist_sensor >= sensor_storage.size():
+			next_dist_sensor = 0

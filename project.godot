@@ -89,6 +89,7 @@ locale/translations=PackedStringArray("res://translate/translate.en.translation"
 3d_physics/layer_9="action_icons"
 3d_physics/layer_10="abyss"
 3d_physics/layer_11="objetos pesados"
+3d_physics/layer_12="dist_sensor"
 
 [memory]
 

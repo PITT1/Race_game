@@ -290,40 +290,40 @@ transform = Transform3D(0.999827, -0.00013277114, -0.0012770237, 0.0001308962, 0
 progress = 28.25
 
 [node name="PathFollow_1" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.99986255, -1.8751958e-06, -0.0012772139, 1.1367132e-13, 0.999997, -0.0014681874, 0.0012770435, 0.0014681864, 0.999996, 1.115, -0.121792, 4.73727)
+transform = Transform3D(0.9998624, -1.8751958e-06, -0.0012772139, 1.136713e-13, 0.999997, -0.0014681874, 0.0012770433, 0.0014681864, 0.999996, 1.115, -0.121792, 4.73727)
 
 [node name="PathFollow_2" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.9998915, -1.8751994e-06, -0.0012772165, 1.1367461e-13, 0.9999989, -0.0014681902, 0.0012770805, 0.0014681892, 0.999998, 1.115, -0.121792, 4.73727)
+transform = Transform3D(0.99989134, -1.8751994e-06, -0.0012772165, 1.1367459e-13, 0.9999989, -0.0014681902, 0.0012770803, 0.0014681892, 0.999998, 1.115, -0.121792, 4.73727)
 
 [node name="PathFollow_3" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.9998825, -1.8751975e-06, -0.0012772152, 1.1367359e-13, 0.999998, -0.0014681888, 0.001277069, 0.0014681878, 0.999997, 1.115, -0.121792, 4.73727)
+transform = Transform3D(0.99988234, -1.8751975e-06, -0.0012772152, 1.1367357e-13, 0.999998, -0.0014681888, 0.0012770687, 0.0014681878, 0.999997, 1.115, -0.121792, 4.73727)
 
 [node name="PathFollow_4" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.9998915, -1.8751994e-06, -0.0012772165, 1.1367461e-13, 0.9999989, -0.0014681902, 0.0012770805, 0.0014681892, 0.999998, 1.115, -0.121792, 4.73727)
+transform = Transform3D(0.99989134, -1.8751994e-06, -0.0012772165, 1.1367459e-13, 0.9999989, -0.0014681902, 0.0012770803, 0.0014681892, 0.999998, 1.115, -0.121792, 4.73727)
 
 [node name="PathFollow_5" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.9998915, -1.8751994e-06, -0.0012772165, 1.1367461e-13, 0.9999989, -0.0014681902, 0.0012770805, 0.0014681892, 0.999998, 1.115, -0.121792, 4.73727)
+transform = Transform3D(0.99989134, -1.8751994e-06, -0.0012772165, 1.1367459e-13, 0.9999989, -0.0014681902, 0.0012770803, 0.0014681892, 0.999998, 1.115, -0.121792, 4.73727)
 
 [node name="PathFollow_6" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.9998915, -1.8751994e-06, -0.0012772165, 1.1367461e-13, 0.9999989, -0.0014681902, 0.0012770805, 0.0014681892, 0.999998, 1.115, -0.121792, 4.73727)
+transform = Transform3D(0.99989134, -1.8751994e-06, -0.0012772165, 1.1367459e-13, 0.9999989, -0.0014681902, 0.0012770803, 0.0014681892, 0.999998, 1.115, -0.121792, 4.73727)
 
 [node name="PathFollow_7" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.9998915, -1.8751994e-06, -0.0012772165, 1.1367461e-13, 0.9999989, -0.0014681902, 0.0012770805, 0.0014681892, 0.999998, 1.115, -0.121792, 4.73727)
+transform = Transform3D(0.99989134, -1.8751994e-06, -0.0012772165, 1.1367459e-13, 0.9999989, -0.0014681902, 0.0012770803, 0.0014681892, 0.999998, 1.115, -0.121792, 4.73727)
 
 [node name="PathFollow_8" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.9998915, -1.8751994e-06, -0.0012772165, 1.1367461e-13, 0.9999989, -0.0014681902, 0.0012770805, 0.0014681892, 0.999998, 1.115, -0.121792, 4.73727)
+transform = Transform3D(0.99989134, -1.8751994e-06, -0.0012772165, 1.1367459e-13, 0.9999989, -0.0014681902, 0.0012770803, 0.0014681892, 0.999998, 1.115, -0.121792, 4.73727)
 
 [node name="PathFollow_9" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.9998915, -1.8751994e-06, -0.0012772165, 1.1367461e-13, 0.9999989, -0.0014681902, 0.0012770805, 0.0014681892, 0.999998, 1.115, -0.121792, 4.73727)
+transform = Transform3D(0.99989134, -1.8751994e-06, -0.0012772165, 1.1367459e-13, 0.9999989, -0.0014681902, 0.0012770803, 0.0014681892, 0.999998, 1.115, -0.121792, 4.73727)
 
 [node name="PathFollow_10" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.9998915, -1.8751994e-06, -0.0012772165, 1.1367461e-13, 0.9999989, -0.0014681902, 0.0012770805, 0.0014681892, 0.999998, 1.115, -0.121792, 4.73727)
+transform = Transform3D(0.99989134, -1.8751994e-06, -0.0012772165, 1.1367459e-13, 0.9999989, -0.0014681902, 0.0012770803, 0.0014681892, 0.999998, 1.115, -0.121792, 4.73727)
 
 [node name="PathFollow_11" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.9998915, -1.8751994e-06, -0.0012772165, 1.1367461e-13, 0.9999989, -0.0014681902, 0.0012770805, 0.0014681892, 0.999998, 1.115, -0.121792, 4.73727)
+transform = Transform3D(0.99989134, -1.8751994e-06, -0.0012772165, 1.1367459e-13, 0.9999989, -0.0014681902, 0.0012770803, 0.0014681892, 0.999998, 1.115, -0.121792, 4.73727)
 
 [node name="PathFollow_12" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.9998915, -1.8751994e-06, -0.0012772165, 1.1367461e-13, 0.9999989, -0.0014681902, 0.0012770805, 0.0014681892, 0.999998, 1.115, -0.121792, 4.73727)
+transform = Transform3D(0.99989134, -1.8751994e-06, -0.0012772165, 1.1367459e-13, 0.9999989, -0.0014681902, 0.0012770803, 0.0014681892, 0.999998, 1.115, -0.121792, 4.73727)
 
 [node name="conos" type="Node3D" parent="."]
 
@@ -705,7 +705,7 @@ debug_color = Color(0, 0, 1, 1)
 
 [node name="distance_sensor_0" type="Area3D" parent="dist_sen"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 84.26644, 0, -216.42578)
-collision_layer = 128
+collision_layer = 2048
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="dist_sen/distance_sensor_0"]
 transform = Transform3D(0.9118839, 0, 0.4104483, 0, 1, 0, -0.4104483, 0, 0.9118839, 6.3494644, 8.075741, -3.4350128)
@@ -714,7 +714,7 @@ debug_color = Color(1, 1, 1, 1)
 
 [node name="distance_sensor_1" type="Area3D" parent="dist_sen"]
 transform = Transform3D(-0.09890292, 0, 0.9950971, 0, 1, 0, -0.9950971, 0, -0.09890292, -104.44799, 6.4434204, -228.86371)
-collision_layer = 128
+collision_layer = 2048
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="dist_sen/distance_sensor_1"]
 transform = Transform3D(0.9118839, 0, 0.4104483, 0, 1, 0, -0.4104483, 0, 0.9118839, 0, 0, 0)
@@ -723,7 +723,7 @@ debug_color = Color(1, 1, 1, 1)
 
 [node name="distance_sensor_2" type="Area3D" parent="dist_sen"]
 transform = Transform3D(-0.99559313, 0, 0.09377821, 0, 1, 0, -0.09377821, 0, -0.99559313, -108.09577, 8.497391, -71.21676)
-collision_layer = 128
+collision_layer = 2048
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="dist_sen/distance_sensor_2"]
 transform = Transform3D(0.9118839, 0, 0.4104483, 0, 1, 0, -0.4104483, 0, 0.9118839, 0, 0, 0)
@@ -732,7 +732,7 @@ debug_color = Color(1, 1, 1, 1)
 
 [node name="distance_sensor_3" type="Area3D" parent="dist_sen"]
 transform = Transform3D(-0.92393976, 0, -0.38253826, 0, 1, 0, 0.38253826, 0, -0.92393976, 40.692345, 6.40287, -143.76808)
-collision_layer = 128
+collision_layer = 2048
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="dist_sen/distance_sensor_3"]
 transform = Transform3D(0.9118839, 0, 0.4104483, 0, 1, 0, -0.4104483, 0, 0.9118839, 0, 0, 0)
@@ -741,7 +741,7 @@ debug_color = Color(1, 1, 1, 1)
 
 [node name="distance_sensor_4" type="Area3D" parent="dist_sen"]
 transform = Transform3D(-0.3298059, 0, 0.9440488, 0, 1, 0, -0.9440488, 0, -0.3298059, -81.34946, 9.880402, -0.33525848)
-collision_layer = 128
+collision_layer = 2048
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="dist_sen/distance_sensor_4"]
 transform = Transform3D(0.9118839, 0, 0.4104483, 0, 1, 0, -0.4104483, 0, 0.9118839, 0, 0, 0)
@@ -750,7 +750,7 @@ debug_color = Color(1, 1, 1, 1)
 
 [node name="distance_sensor_5" type="Area3D" parent="dist_sen"]
 transform = Transform3D(-0.94053155, 0, -0.33970657, 0, 1, 0, 0.33970657, 0, -0.94053155, -66.34109, 9.843597, 309.15884)
-collision_layer = 128
+collision_layer = 2048
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="dist_sen/distance_sensor_5"]
 transform = Transform3D(0.9118839, 0, 0.4104483, 0, 1, 0, -0.4104483, 0, 0.9118839, 0, 0, 0)
@@ -759,7 +759,7 @@ debug_color = Color(1, 1, 1, 1)
 
 [node name="distance_sensor_6" type="Area3D" parent="dist_sen"]
 transform = Transform3D(0.6883671, 0, -0.72536236, 0, 1, 0, 0.72536236, 0, 0.6883671, 49.94832, 10.046185, 172.65804)
-collision_layer = 128
+collision_layer = 2048
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="dist_sen/distance_sensor_6"]
 transform = Transform3D(0.9118839, 0, 0.4104483, 0, 1, 0, -0.4104483, 0, 0.9118839, 0, 0, 0)
@@ -768,7 +768,7 @@ debug_color = Color(1, 1, 1, 1)
 
 [node name="distance_sensor_7" type="Area3D" parent="dist_sen"]
 transform = Transform3D(-0.48190665, 0, -0.87622267, 0, 1, 0, 0.87622267, 0, -0.48190665, 30.985653, 10.226353, -40.991005)
-collision_layer = 128
+collision_layer = 2048
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="dist_sen/distance_sensor_7"]
 transform = Transform3D(0.91188127, 0, 0.41044766, 0, 1, 0, -0.41044766, 0, 0.91188127, 0, 0, 0)
@@ -777,7 +777,7 @@ debug_color = Color(1, 1, 1, 1)
 
 [node name="distance_sensor_8" type="Area3D" parent="dist_sen"]
 transform = Transform3D(-0.48190665, 0, -0.87622267, 0, 1, 0, 0.87622267, 0, -0.48190665, 75.06909, 7.004444, 114.24468)
-collision_layer = 128
+collision_layer = 2048
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="dist_sen/distance_sensor_8"]
 transform = Transform3D(0.91188127, 0, 0.41044766, 0, 1, 0, -0.41044766, 0, 0.91188127, 0, 0, 0)
