@@ -33,6 +33,8 @@ var bot_position: int = 0
 var player_position: int = 0
 var sensor_storage: Array = []
 var distance_to_sensor: float = 0.0
+var next_dist_sensor: int = 0
+var checkpoints_to_sen: Array = [] 
 
 var vel_reduction: float = 0.0
 
@@ -65,6 +67,11 @@ func _ready() -> void:
 			#add_child(inst_smoke_particles)
 			#inst_smoke_particles.position = item.position
 			#smoke_particles.append(inst_smoke_particles)
+	
+	if get_parent().name != "LobyRework":
+		for item in get_parent().get_children():
+			if item.name == "checkpoints_sistem":
+				checkpoints_to_sen = item.get_children()
 
 
 func _physics_process(delta: float) -> void:
@@ -87,6 +94,8 @@ func _physics_process(delta: float) -> void:
 	engine_sound_controller()
 	
 	drift_smoke_system()
+	
+	dist_sensor_sistem()
 
 
 func bot_sistem(): #BOT
@@ -133,6 +142,10 @@ func start_race():
 
 
 func _on_checkpoint_sensor_area_entered(area: Area3D) -> void:
+	next_dist_sensor = next_dist_sensor + 1
+	if next_dist_sensor >= checkpoints_to_sen.size():
+		next_dist_sensor = 0
+	
 	last_checkpoint = area
 	if not checkpoint_store.has(area.name) and not area.name.contains("priority"):
 		checkpoint_store.append(area.name)
@@ -233,3 +246,7 @@ func drift_smoke_system():
 	else:
 		if drift_sound.playing == true:
 			drift_sound.stop()
+
+func dist_sensor_sistem():
+	if get_parent().name != "LobyRework":
+		distance_to_sensor = global_position.distance_to(checkpoints_to_sen[next_dist_sensor].global_position)

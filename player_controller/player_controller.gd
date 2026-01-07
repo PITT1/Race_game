@@ -32,9 +32,9 @@ var all_checkpoints: int
 var laps_num: int = 1
 var position_from_hud: int = 0
 var vel: int = 0
-var sensor_storage: Array = []
 var distance_to_sensor: float = 0.0
 var next_dist_sensor: int = 0
+var checkpoints_to_sen: Array = [] 
 
 var previous: int = -1
 
@@ -74,8 +74,8 @@ func _ready() -> void:
 	
 	if get_parent().name != "LobyRework":
 		for item in get_parent().get_children():
-			if item.name == "dist_sen":
-				sensor_storage = item.get_children()
+			if item.name == "checkpoints_sistem":
+				checkpoints_to_sen = item.get_children()
 
 func _physics_process(delta: float) -> void:
 	stering_asist()
@@ -98,16 +98,11 @@ func _physics_process(delta: float) -> void:
 	
 
 func _on_checkpoint_sensor_area_entered(area: Area3D) -> void:
+	next_dist_sensor = next_dist_sensor + 1
+	if next_dist_sensor >= checkpoints_to_sen.size():
+		next_dist_sensor = 0
+
 	last_checkpoint = area
-	var num = area.name.split("_")[1]
-	if num != "point" and num != "0":
-		var numInt = int(num)
-		if numInt >= previous:
-			previous = numInt
-		else:
-			print("direccion erronea")
-			previous = numInt
-		
 	if not checkpoint_store.has(area.name) and not area.name.contains("priority"):
 		checkpoint_store.append(area.name)
 	elif not checkpoint_store.has(area.name) and area.name.contains("priority"):
@@ -210,8 +205,5 @@ func engine_sound_controller():
 	engine_sound.pitch_scale = 0.00667 * normalized_speed + 0.1
 	
 func dist_sensor_sistem():
-	distance_to_sensor = global_position.distance_to(sensor_storage[next_dist_sensor].global_position)
-	if distance_to_sensor < 50:
-		next_dist_sensor = next_dist_sensor + 1
-		if next_dist_sensor >= sensor_storage.size():
-			next_dist_sensor = 0
+	if get_parent().name != "LobyRework":
+		distance_to_sensor = global_position.distance_to(checkpoints_to_sen[next_dist_sensor].global_position)

@@ -105,7 +105,6 @@ skeleton = NodePath("../..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.5093963, -0.3053082)
-visible = false
 shape = SubResource("ConvexPolygonShape3D_e2xuo")
 
 [node name="bumper_1" type="VehicleWheel3D" parent="."]

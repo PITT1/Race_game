@@ -45,11 +45,11 @@ func _ready() -> void:
 	if anim.get_animation_list().has("water_texture"):
 		anim.play("water_texture")
 
-func _physics_process(delta: float) -> void:
+func _process(delta: float) -> void:
 	if delta:
 		pass
-		
-	ordenar_carrera()
+	
+	call_deferred("ordenar_carrera")
 	
 	if player_is_finish and not finish_hud_instance:
 		finish_hud_instance = on_finish_race_hud.instantiate()
@@ -100,9 +100,11 @@ func ordenar_carrera():
 func _comparar_posiciones(a:VehicleBody3D, b:VehicleBody3D):
 	if a.laps_num != b.laps_num:
 		return a.laps_num > b.laps_num
-		
-	return a.checkpoint_store.size() > b.checkpoint_store.size()
-
+	
+	if a.checkpoint_store.size() != b.checkpoint_store.size():
+		return a.checkpoint_store.size() > b.checkpoint_store.size()
+	
+	return a.distance_to_sensor < b.distance_to_sensor
 
 func _on_abyss_sensor_body_entered(body: Node3D) -> void:
 	body.call_lakitu()
