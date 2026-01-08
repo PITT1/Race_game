@@ -44,12 +44,12 @@ func _ready() -> void:
 	
 	#if anim.get_animation_list().has("water_texture"):
 		#anim.play("water_texture")
+	
+	
 
 func _process(delta: float) -> void:
 	if delta:
 		pass
-	
-	call_deferred("ordenar_carrera")
 	
 	if player_is_finish and not finish_hud_instance:
 		finish_hud_instance = on_finish_race_hud.instantiate()
@@ -108,3 +108,7 @@ func _comparar_posiciones(a:VehicleBody3D, b:VehicleBody3D):
 
 func _on_abyss_sensor_body_entered(body: Node3D) -> void:
 	body.call_lakitu()
+
+
+func _on_position_timer_timeout() -> void:
+	call_deferred("ordenar_carrera")

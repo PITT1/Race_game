@@ -1360,11 +1360,16 @@ transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 36.9302,
 [node name="OccluderInstance3D" type="OccluderInstance3D" parent="."]
 occluder = ExtResource("15_4vs7p")
 
+[node name="position_timer" type="Timer" parent="."]
+wait_time = 0.2
+autostart = true
+
 [connection signal="body_entered" from="abyss_sensor" to="." method="_on_abyss_sensor_body_entered"]
 [connection signal="body_entered" from="Node3D/vel_reductor" to="Node3D/vel_reductor" method="_on_body_entered"]
 [connection signal="body_exited" from="Node3D/vel_reductor" to="Node3D/vel_reductor" method="_on_body_exited"]
 [connection signal="body_entered" from="Node3D/vel_reductor2" to="Node3D/vel_reductor2" method="_on_body_entered"]
 [connection signal="body_exited" from="Node3D/vel_reductor2" to="Node3D/vel_reductor2" method="_on_body_exited"]
+[connection signal="timeout" from="position_timer" to="." method="_on_position_timer_timeout"]
 
 [editable path="Node3D/vel_reductor"]
 [editable path="Node3D/vel_reductor2"]
