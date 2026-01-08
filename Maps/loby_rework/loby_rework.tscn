@@ -1010,7 +1010,7 @@ progress = 28.25
 [node name="MainHud" parent="." instance=ExtResource("4_6q881")]
 
 [node name="version_label" parent="MainHud/CanvasLayer/page_1" index="4"]
-text = "Version(0.9.12)"
+text = "Version(0.9.13)"
 
 [node name="bg_music_button" parent="MainHud/CanvasLayer/options_page/VBoxContainer" index="0"]
 text = "id_19"

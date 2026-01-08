@@ -75,7 +75,9 @@ func _ready() -> void:
 	if get_parent().name != "LobyRework":
 		for item in get_parent().get_children():
 			if item.name == "checkpoints_sistem":
-				checkpoints_to_sen = item.get_children()
+				for i in item.get_children():
+					if not i.name.contains("priority"):
+						checkpoints_to_sen.append(i)
 
 func _physics_process(delta: float) -> void:
 	stering_asist()
