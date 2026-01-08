@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://cjb4nd6otxjsg"]
+[gd_scene load_steps=50 format=3 uid="uid://cjb4nd6otxjsg"]
 
 [ext_resource type="Script" uid="uid://kghgfx151qgh" path="res://Maps/circuit_test_2/test_2.gd" id="1_6mnti"]
 [ext_resource type="PackedScene" uid="uid://cd2fjxhklg8i1" path="res://huds/on_race_huds/countdown.tscn" id="2_lppdq"]
@@ -183,6 +183,27 @@ data = PackedVector3Array(16.2691, -0.0111, -18.4912, 15.9637, -0.0364, -19.3384
 [sub_resource type="BoxShape3D" id="BoxShape3D_8fw60"]
 size = Vector3(58.3376, 41.73407, 5.27968)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_exsch"]
+size = Vector3(35.376427, 41.73407, 5.27968)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tllax"]
+size = Vector3(65.92466, 41.73407, 5.27968)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5wv4n"]
+size = Vector3(63.448048, 41.73407, 5.27968)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_21wph"]
+size = Vector3(67.181625, 41.73407, 5.27968)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_k47hm"]
+size = Vector3(123.587746, 41.73407, 5.27968)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_crcnj"]
+size = Vector3(40.01189, 41.73407, 5.27968)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lwrar"]
+size = Vector3(63.9647, 41.73407, 5.27968)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_i1n1h"]
 size = Vector3(1025.58, 7.29736, 982.998)
 
@@ -284,40 +305,40 @@ transform = Transform3D(0.999827, -0.00013277114, -0.0012770237, 0.0001308962, 0
 progress = 28.25
 
 [node name="PathFollow_1" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.999862, -1.8751958e-06, -0.0012772139, 1.1367126e-13, 0.999997, -0.0014681874, 0.0012770428, 0.0014681864, 0.999996, 1.115, -0.121792, 4.73727)
+transform = Transform3D(0.99986184, -1.8751958e-06, -0.0012772139, 1.1367124e-13, 0.999997, -0.0014681874, 0.0012770426, 0.0014681864, 0.999996, 1.115, -0.121792, 4.73727)
 
 [node name="PathFollow_2" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.999891, -1.8751994e-06, -0.0012772165, 1.1367455e-13, 0.9999989, -0.0014681902, 0.0012770798, 0.0014681892, 0.999998, 1.115, -0.121792, 4.73727)
+transform = Transform3D(0.9998908, -1.8751994e-06, -0.0012772165, 1.1367453e-13, 0.9999989, -0.0014681902, 0.0012770796, 0.0014681892, 0.999998, 1.115, -0.121792, 4.73727)
 
 [node name="PathFollow_3" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.999882, -1.8751975e-06, -0.0012772152, 1.1367353e-13, 0.999998, -0.0014681888, 0.0012770683, 0.0014681878, 0.999997, 1.115, -0.121792, 4.73727)
+transform = Transform3D(0.9998818, -1.8751975e-06, -0.0012772152, 1.1367351e-13, 0.999998, -0.0014681888, 0.001277068, 0.0014681878, 0.999997, 1.115, -0.121792, 4.73727)
 
 [node name="PathFollow_4" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.999891, -1.8751994e-06, -0.0012772165, 1.1367455e-13, 0.9999989, -0.0014681902, 0.0012770798, 0.0014681892, 0.999998, 1.115, -0.121792, 4.73727)
+transform = Transform3D(0.9998908, -1.8751994e-06, -0.0012772165, 1.1367453e-13, 0.9999989, -0.0014681902, 0.0012770796, 0.0014681892, 0.999998, 1.115, -0.121792, 4.73727)
 
 [node name="PathFollow_5" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.999891, -1.8751994e-06, -0.0012772165, 1.1367455e-13, 0.9999989, -0.0014681902, 0.0012770798, 0.0014681892, 0.999998, 1.115, -0.121792, 4.73727)
+transform = Transform3D(0.9998908, -1.8751994e-06, -0.0012772165, 1.1367453e-13, 0.9999989, -0.0014681902, 0.0012770796, 0.0014681892, 0.999998, 1.115, -0.121792, 4.73727)
 
 [node name="PathFollow_6" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.999891, -1.8751994e-06, -0.0012772165, 1.1367455e-13, 0.9999989, -0.0014681902, 0.0012770798, 0.0014681892, 0.999998, 1.115, -0.121792, 4.73727)
+transform = Transform3D(0.9998908, -1.8751994e-06, -0.0012772165, 1.1367453e-13, 0.9999989, -0.0014681902, 0.0012770796, 0.0014681892, 0.999998, 1.115, -0.121792, 4.73727)
 
 [node name="PathFollow_7" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.999891, -1.8751994e-06, -0.0012772165, 1.1367455e-13, 0.9999989, -0.0014681902, 0.0012770798, 0.0014681892, 0.999998, 1.115, -0.121792, 4.73727)
+transform = Transform3D(0.9998908, -1.8751994e-06, -0.0012772165, 1.1367453e-13, 0.9999989, -0.0014681902, 0.0012770796, 0.0014681892, 0.999998, 1.115, -0.121792, 4.73727)
 
 [node name="PathFollow_8" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.999891, -1.8751994e-06, -0.0012772165, 1.1367455e-13, 0.9999989, -0.0014681902, 0.0012770798, 0.0014681892, 0.999998, 1.115, -0.121792, 4.73727)
+transform = Transform3D(0.9998908, -1.8751994e-06, -0.0012772165, 1.1367453e-13, 0.9999989, -0.0014681902, 0.0012770796, 0.0014681892, 0.999998, 1.115, -0.121792, 4.73727)
 
 [node name="PathFollow_9" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.999891, -1.8751994e-06, -0.0012772165, 1.1367455e-13, 0.9999989, -0.0014681902, 0.0012770798, 0.0014681892, 0.999998, 1.115, -0.121792, 4.73727)
+transform = Transform3D(0.9998908, -1.8751994e-06, -0.0012772165, 1.1367453e-13, 0.9999989, -0.0014681902, 0.0012770796, 0.0014681892, 0.999998, 1.115, -0.121792, 4.73727)
 
 [node name="PathFollow_10" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.999891, -1.8751994e-06, -0.0012772165, 1.1367455e-13, 0.9999989, -0.0014681902, 0.0012770798, 0.0014681892, 0.999998, 1.115, -0.121792, 4.73727)
+transform = Transform3D(0.9998908, -1.8751994e-06, -0.0012772165, 1.1367453e-13, 0.9999989, -0.0014681902, 0.0012770796, 0.0014681892, 0.999998, 1.115, -0.121792, 4.73727)
 
 [node name="PathFollow_11" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.999891, -1.8751994e-06, -0.0012772165, 1.1367455e-13, 0.9999989, -0.0014681902, 0.0012770798, 0.0014681892, 0.999998, 1.115, -0.121792, 4.73727)
+transform = Transform3D(0.9998908, -1.8751994e-06, -0.0012772165, 1.1367453e-13, 0.9999989, -0.0014681902, 0.0012770796, 0.0014681892, 0.999998, 1.115, -0.121792, 4.73727)
 
 [node name="PathFollow_12" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.999891, -1.8751994e-06, -0.0012772165, 1.1367455e-13, 0.9999989, -0.0014681902, 0.0012770798, 0.0014681892, 0.999998, 1.115, -0.121792, 4.73727)
+transform = Transform3D(0.9998908, -1.8751994e-06, -0.0012772165, 1.1367453e-13, 0.9999989, -0.0014681902, 0.0012770796, 0.0014681892, 0.999998, 1.115, -0.121792, 4.73727)
 
 [node name="conos" type="Node3D" parent="."]
 
@@ -489,7 +510,7 @@ shape = SubResource("BoxShape3D_8fw60")
 debug_color = Color(0, 0, 1, 1)
 
 [node name="point_2" type="Area3D" parent="checkpoints_sistem"]
-transform = Transform3D(0.117399, 0, 0.993085, 0, 1, 0, -0.993085, 0, 0.117399, 66.4857, 5.8987637, -234.289)
+transform = Transform3D(-0.012722857, 0, 0.9999193, 0, 1, 0, -0.9999193, 0, -0.012722857, 59.34675, 5.8987637, -234.289)
 collision_layer = 128
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_2"]
@@ -498,70 +519,70 @@ shape = SubResource("BoxShape3D_8fw60")
 debug_color = Color(0, 0, 1, 1)
 
 [node name="point_3" type="Area3D" parent="checkpoints_sistem"]
-transform = Transform3D(-0.126874, 0, 0.991919, 0, 1, 0, -0.991919, 0, -0.126874, 1.43996, 9.21986, -214.341)
-collision_layer = 128
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_3"]
-transform = Transform3D(0.99999577, 0, -1.0430813e-07, 0, 1, 0, 1.0430813e-07, 0, 0.99999577, 6.1035156e-05, -6.7402024, 0.49884033)
-shape = SubResource("BoxShape3D_8fw60")
-debug_color = Color(0, 0, 1, 1)
-
-[node name="point_4" type="Area3D" parent="checkpoints_sistem"]
 transform = Transform3D(-0.126874, 0, 0.991919, 0, 1, 0, -0.991919, 0, -0.126874, -90.2251, 9.21986, -229.87)
 collision_layer = 128
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_4"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498833)
 shape = SubResource("BoxShape3D_8fw60")
 debug_color = Color(0, 0, 1, 1)
 
+[node name="point_4" type="Area3D" parent="checkpoints_sistem"]
+transform = Transform3D(-1.5314602, 0, -0.2695686, 0, 1.5549998, 0, 0.2695686, 0, -1.5314602, -127.166, 3.65667, -177.759)
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498825)
+shape = SubResource("BoxShape3D_8fw60")
+debug_color = Color(0, 0, 1, 1)
+
 [node name="point_5" type="Area3D" parent="checkpoints_sistem"]
-transform = Transform3D(-1.55058, 0, -0.117214, 0, 1.555, 0, 0.117214, 0, -1.55058, -127.166, 3.65667, -177.759)
+transform = Transform3D(-0.71959186, 0, -1.3953807, 0, 1.5700002, 0, 1.3953807, 0, -0.71959186, -98.98706, 1.1689, -46.0829)
 collision_layer = 128
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_5"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498825)
-shape = SubResource("BoxShape3D_8fw60")
+transform = Transform3D(0.9999999, 0, 0, 0, 1.0000001, 0, 0, 0, 0.9999999, -6.2619095, 0, 0.4988327)
+shape = SubResource("BoxShape3D_exsch")
 debug_color = Color(0, 0, 1, 1)
 
 [node name="point_6" type="Area3D" parent="checkpoints_sistem"]
-transform = Transform3D(-1.38365, 0, -0.296199, 0, 1.415, 0, 0.296199, 0, -1.38365, -119.361, 2.6735, -138.203)
+transform = Transform3D(-0.5304516, 0, -0.84771466, 0, 1, 0, 0.84771466, 0, -0.5304516, 29.55217, 9.21986, -149.70438)
 collision_layer = 128
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_6"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498825)
-shape = SubResource("BoxShape3D_8fw60")
+transform = Transform3D(1, 0, -2.9802322e-08, 0, 1, 0, 2.9802322e-08, 0, 1, -3.7935333, 0, 0.4988327)
+shape = SubResource("BoxShape3D_tllax")
 debug_color = Color(0, 0, 1, 1)
 
 [node name="point_7" type="Area3D" parent="checkpoints_sistem"]
-transform = Transform3D(-1.49375, 0, -0.483333, 0, 1.57, 0, 0.483333, 0, -1.49375, -109.586, 1.1689, -97.065)
+transform = Transform3D(-0.76331156, 0, 0.64603096, 0, 1, 0, -0.64603096, 0, -0.76331156, 26.348293, 9.21986, -87.02301)
 collision_layer = 128
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_7"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498825)
-shape = SubResource("BoxShape3D_8fw60")
+transform = Transform3D(1.0000005, 0, 0, 0, 1, 0, 0, 0, 1.0000005, -0.05770111, 0, 0.49884033)
+shape = SubResource("BoxShape3D_5wv4n")
 debug_color = Color(0, 0, 1, 1)
 
 [node name="point_8" type="Area3D" parent="checkpoints_sistem"]
-transform = Transform3D(0.719097, 0, -0.694909, 0, 1, 0, 0.694909, 0, 0.719097, -36.9057, 9.21986, -106.496)
+transform = Transform3D(-0.99680305, 0, -0.079903096, 0, 1, 0, 0.079903096, 0, -0.99680305, -91.57505, 9.219852, 52.52684)
 collision_layer = 128
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_8"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498825)
-shape = SubResource("BoxShape3D_8fw60")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.338028, 0, 0.49883652)
+shape = SubResource("BoxShape3D_21wph")
 debug_color = Color(0, 0, 1, 1)
 
 [node name="point_9" type="Area3D" parent="checkpoints_sistem"]
-transform = Transform3D(0.719097, 0, -0.694909, 0, 1, 0, 0.694909, 0, 0.719097, -13.3764, 9.21986, -150.411)
+transform = Transform3D(-0.996228, 0, 0.08677313, 0, 1, 0, -0.08677313, 0, -0.996228, -51.88618, 9.21985, 175.02377)
 collision_layer = 128
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_9"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498825)
-shape = SubResource("BoxShape3D_8fw60")
+transform = Transform3D(1.0000021, 0, 2.9802322e-08, 0, 1, 0, -2.9802322e-08, 0, 1.0000021, 0, 0, 0)
+shape = SubResource("BoxShape3D_k47hm")
 debug_color = Color(0, 0, 1, 1)
 
 [node name="point_10" type="Area3D" parent="checkpoints_sistem"]
-transform = Transform3D(-0.944279, 0, 0.329147, 0, 1, 0, -0.329147, 0, -0.944279, 32.64, 9.21986, -101.463)
+transform = Transform3D(-0.99986327, 0, 0.016562432, 0, 1, 0, -0.016562432, 0, -0.99986327, -73.778244, 9.21985, 274.74582)
 collision_layer = 128
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_10"]
@@ -570,7 +591,7 @@ shape = SubResource("BoxShape3D_8fw60")
 debug_color = Color(0, 0, 1, 1)
 
 [node name="point_11" type="Area3D" parent="checkpoints_sistem"]
-transform = Transform3D(-0.695762, 0, 0.718272, 0, 1, 0, -0.718272, 0, -0.695762, -74.5969, 9.21986, -5.42034)
+transform = Transform3D(0.0200873, 0, -0.999798, 0, 1, 0, 0.999798, 0, 0.0200873, -41.611794, 9.21985, 309.3488)
 collision_layer = 128
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_11"]
@@ -579,7 +600,7 @@ shape = SubResource("BoxShape3D_8fw60")
 debug_color = Color(0, 0, 1, 1)
 
 [node name="point_12" type="Area3D" parent="checkpoints_sistem"]
-transform = Transform3D(-0.99972, 0, -0.0236818, 0, 1, 0, 0.0236818, 0, -0.99972, -91.8756, 9.21986, 48.0004)
+transform = Transform3D(0.83601826, 0, -0.5487018, 0, 1, 0, 0.5487018, 0, 0.83601826, -13.4838505, 9.219842, 278.6652)
 collision_layer = 128
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_12"]
@@ -588,7 +609,7 @@ shape = SubResource("BoxShape3D_8fw60")
 debug_color = Color(0, 0, 1, 1)
 
 [node name="point_13" type="Area3D" parent="checkpoints_sistem"]
-transform = Transform3D(-0.9166, 0, 0.399805, 0, 1, 0, -0.399805, 0, -0.9166, -61.493, 9.21985, 240.644)
+transform = Transform3D(0.821408, 0, -0.570341, 0, 1, 0, 0.570341, 0, 0.821408, 28.172325, 9.21985, 207.30936)
 collision_layer = 128
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_13"]
@@ -597,7 +618,7 @@ shape = SubResource("BoxShape3D_8fw60")
 debug_color = Color(0, 0, 1, 1)
 
 [node name="point_14" type="Area3D" parent="checkpoints_sistem"]
-transform = Transform3D(-0.928797, 0, -0.37059, 0, 1, 0, 0.37059, 0, -0.928797, -69.5823, 9.21985, 278.184)
+transform = Transform3D(0.897259, 0, 0.441506, 0, 1, 0, -0.441506, 0, 0.897259, 2.39681, 9.21985, 69.5372)
 collision_layer = 128
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_14"]
@@ -606,25 +627,25 @@ shape = SubResource("BoxShape3D_8fw60")
 debug_color = Color(0, 0, 1, 1)
 
 [node name="point_15" type="Area3D" parent="checkpoints_sistem"]
-transform = Transform3D(0.0200873, 0, -0.999798, 0, 1, 0, 0.999798, 0, 0.0200873, -39.067, 9.21985, 300.142)
+transform = Transform3D(0.19043231, 0, -0.9817009, 0, 1, 0, 0.9817009, 0, 0.19043231, 26.870113, 9.21985, -30.218819)
 collision_layer = 128
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_15"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498825)
-shape = SubResource("BoxShape3D_8fw60")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.48983, 0, 0.49882126)
+shape = SubResource("BoxShape3D_crcnj")
 debug_color = Color(0, 0, 1, 1)
 
 [node name="point_16" type="Area3D" parent="checkpoints_sistem"]
-transform = Transform3D(0.733647, 0, -0.679531, 0, 1, 0, 0.679531, 0, 0.733647, -6.34156, 9.21985, 266.556)
+transform = Transform3D(-0.82459, 0, 0.0260003, 0, 0.825, 0, -0.0260003, 0, -0.82459, 53.187428, 7.31348, 1.8283)
 collision_layer = 128
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_16"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498825)
-shape = SubResource("BoxShape3D_8fw60")
+transform = Transform3D(1, 0, 3.7252903e-08, 0, 1, 0, -3.7252903e-08, 0, 1, -2.8135529, 0, 0.49882543)
+shape = SubResource("BoxShape3D_lwrar")
 debug_color = Color(0, 0, 1, 1)
 
 [node name="point_17" type="Area3D" parent="checkpoints_sistem"]
-transform = Transform3D(0.821408, 0, -0.570341, 0, 1, 0, 0.570341, 0, 0.821408, 45.3898, 9.21985, 183.455)
+transform = Transform3D(0.69813, 0, -0.0511328, 0, 0.7, 0, 0.0511328, 0, 0.69813, 54.63433, 6.34783, 67.2182)
 collision_layer = 128
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_17"]
@@ -633,7 +654,7 @@ shape = SubResource("BoxShape3D_8fw60")
 debug_color = Color(0, 0, 1, 1)
 
 [node name="point_18" type="Area3D" parent="checkpoints_sistem"]
-transform = Transform3D(0.897259, 0, 0.441506, 0, 1, 0, -0.441506, 0, 0.897259, 2.39681, 9.21985, 69.5372)
+transform = Transform3D(0.123042, 0, 0.678941, 0, 0.69, 0, -0.678941, 0, 0.123042, 72.49361, 5.60216, 113.58458)
 collision_layer = 128
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_18"]
@@ -642,55 +663,10 @@ shape = SubResource("BoxShape3D_8fw60")
 debug_color = Color(0, 0, 1, 1)
 
 [node name="point_19" type="Area3D" parent="checkpoints_sistem"]
-transform = Transform3D(0.92706, 0, -0.374914, 0, 1, 0, 0.374914, 0, 0.92706, 1.65807, 9.21985, -12.2566)
-collision_layer = 128
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_19"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498825)
-shape = SubResource("BoxShape3D_8fw60")
-debug_color = Color(0, 0, 1, 1)
-
-[node name="point_20" type="Area3D" parent="checkpoints_sistem"]
-transform = Transform3D(-0.82459, 0, 0.0260003, 0, 0.825, 0, -0.0260003, 0, -0.82459, 55.2609, 7.31348, 1.8283)
-collision_layer = 128
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_20"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498825)
-shape = SubResource("BoxShape3D_8fw60")
-debug_color = Color(0, 0, 1, 1)
-
-[node name="point_21" type="Area3D" parent="checkpoints_sistem"]
-transform = Transform3D(0.69813, 0, -0.0511328, 0, 0.7, 0, 0.0511328, 0, 0.69813, 53.4078, 6.34783, 69.3013)
-collision_layer = 128
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_21"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498825)
-shape = SubResource("BoxShape3D_8fw60")
-debug_color = Color(0, 0, 1, 1)
-
-[node name="point_22" type="Area3D" parent="checkpoints_sistem"]
-transform = Transform3D(0.123042, 0, 0.678941, 0, 0.69, 0, -0.678941, 0, 0.123042, 71.5231, 5.60216, 106.043)
-collision_layer = 128
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_22"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498825)
-shape = SubResource("BoxShape3D_8fw60")
-debug_color = Color(0, 0, 1, 1)
-
-[node name="point_23" type="Area3D" parent="checkpoints_sistem"]
 transform = Transform3D(0.731728, 0, -0.0692718, 0, 0.735, 0, 0.0692718, 0, 0.731728, 97.4575, 6.11826, 73.8918)
 collision_layer = 128
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_23"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498825)
-shape = SubResource("BoxShape3D_8fw60")
-debug_color = Color(0, 0, 1, 1)
-
-[node name="point_24" type="Area3D" parent="checkpoints_sistem"]
-transform = Transform3D(0.999553, 0, 0.0299104, 0, 1, 0, -0.0299104, 0, 0.999553, 109.162, 8.44577, -37.9673)
-collision_layer = 128
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_24"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoints_sistem/point_19"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498825)
 shape = SubResource("BoxShape3D_8fw60")
 debug_color = Color(0, 0, 1, 1)

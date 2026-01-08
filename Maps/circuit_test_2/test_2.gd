@@ -42,8 +42,8 @@ func _ready() -> void:
 		car.start_race()
 	
 	
-	if anim.get_animation_list().has("water_texture"):
-		anim.play("water_texture")
+	#if anim.get_animation_list().has("water_texture"):
+		#anim.play("water_texture")
 
 func _process(delta: float) -> void:
 	if delta:
