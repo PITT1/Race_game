@@ -556,7 +556,7 @@ sky_mode = 1
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.0119727, 0, 0.999928, 0, 1, 0, -0.999928, 0, 0.0119727, -1.77437, 2.1994, 0)
 current = true
-far = 500.0
+far = 300.0
 
 [node name="PhantomCameraHost" type="Node" parent="Camera3D"]
 process_priority = 300
@@ -584,40 +584,40 @@ transform = Transform3D(0.004865872, 0, -0.999827, 0, 0.999828, 0, 0.999827, 0, 
 progress = 28.25
 
 [node name="PathFollow_1" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.006682827, 0, -0.9999587, 0, 0.999998, 0, 0.9998647, 0, -0.0066834553, -98.5408, -3.05176e-05, 119.093)
+transform = Transform3D(-0.006682826, 0, -0.9999586, 0, 0.999998, 0, 0.9998646, 0, -0.0066834544, -98.5408, -3.05176e-05, 119.093)
 
 [node name="PathFollow_2" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.006683021, 0, -0.9999607, 0, 1, 0, 0.9998937, 0, -0.006683469, -98.5408, -3.05176e-05, 119.093)
+transform = Transform3D(-0.0066830204, 0, -0.9999606, 0, 1, 0, 0.9998936, 0, -0.006683468, -98.5408, -3.05176e-05, 119.093)
 
 [node name="PathFollow_3" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.006682961, 0, -0.9999597, 0, 0.999999, 0, 0.9998847, 0, -0.006683462, -98.5408, -3.05176e-05, 119.093)
+transform = Transform3D(-0.0066829603, 0, -0.9999596, 0, 0.999999, 0, 0.9998846, 0, -0.0066834614, -98.5408, -3.05176e-05, 119.093)
 
 [node name="PathFollow_4" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.006683021, 0, -0.9999607, 0, 1, 0, 0.9998937, 0, -0.006683469, -98.5408, -3.05176e-05, 119.093)
+transform = Transform3D(-0.0066830204, 0, -0.9999606, 0, 1, 0, 0.9998936, 0, -0.006683468, -98.5408, -3.05176e-05, 119.093)
 
 [node name="PathFollow_5" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.006683021, 0, -0.9999607, 0, 1, 0, 0.9998937, 0, -0.006683469, -98.5408, -3.05176e-05, 119.093)
+transform = Transform3D(-0.0066830204, 0, -0.9999606, 0, 1, 0, 0.9998936, 0, -0.006683468, -98.5408, -3.05176e-05, 119.093)
 
 [node name="PathFollow_6" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.006683021, 0, -0.9999607, 0, 1, 0, 0.9998937, 0, -0.006683469, -98.5408, -3.05176e-05, 119.093)
+transform = Transform3D(-0.0066830204, 0, -0.9999606, 0, 1, 0, 0.9998936, 0, -0.006683468, -98.5408, -3.05176e-05, 119.093)
 
 [node name="PathFollow_7" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.006683021, 0, -0.9999607, 0, 1, 0, 0.9998937, 0, -0.006683469, -98.5408, -3.05176e-05, 119.093)
+transform = Transform3D(-0.0066830204, 0, -0.9999606, 0, 1, 0, 0.9998936, 0, -0.006683468, -98.5408, -3.05176e-05, 119.093)
 
 [node name="PathFollow_8" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.006683021, 0, -0.9999607, 0, 1, 0, 0.9998937, 0, -0.006683469, -98.5408, -3.05176e-05, 119.093)
+transform = Transform3D(-0.0066830204, 0, -0.9999606, 0, 1, 0, 0.9998936, 0, -0.006683468, -98.5408, -3.05176e-05, 119.093)
 
 [node name="PathFollow_9" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.006683021, 0, -0.9999607, 0, 1, 0, 0.9998937, 0, -0.006683469, -98.5408, -3.05176e-05, 119.093)
+transform = Transform3D(-0.0066830204, 0, -0.9999606, 0, 1, 0, 0.9998936, 0, -0.006683468, -98.5408, -3.05176e-05, 119.093)
 
 [node name="PathFollow_10" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.006683021, 0, -0.9999607, 0, 1, 0, 0.9998937, 0, -0.006683469, -98.5408, -3.05176e-05, 119.093)
+transform = Transform3D(-0.0066830204, 0, -0.9999606, 0, 1, 0, 0.9998936, 0, -0.006683468, -98.5408, -3.05176e-05, 119.093)
 
 [node name="PathFollow_11" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.006683021, 0, -0.9999607, 0, 1, 0, 0.9998937, 0, -0.006683469, -98.5408, -3.05176e-05, 119.093)
+transform = Transform3D(-0.0066830204, 0, -0.9999606, 0, 1, 0, 0.9998936, 0, -0.006683468, -98.5408, -3.05176e-05, 119.093)
 
 [node name="PathFollow_12" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.006683021, 0, -0.9999607, 0, 1, 0, 0.9998937, 0, -0.006683469, -98.5408, -3.05176e-05, 119.093)
+transform = Transform3D(-0.0066830204, 0, -0.9999606, 0, 1, 0, 0.9998936, 0, -0.006683468, -98.5408, -3.05176e-05, 119.093)
 
 [node name="pista_body" type="StaticBody3D" parent="."]
 collision_layer = 2
