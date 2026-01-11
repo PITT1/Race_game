@@ -113,15 +113,18 @@ func _on_checkpoint_sensor_area_entered(area: Area3D) -> void:
 	
 	if checkpoint_store.size() == all_checkpoints and area.name == "point_0":
 		laps_num += 1
+		next_dist_sensor = 1
 		checkpoint_store = ["point_0"]
 		priority_point_store.clear()
 	elif priority_point_store.size() == get_parent().priority_points_num and area.name == "point_0" and get_parent().priority_points_num != 0:
 		laps_num += 1
+		next_dist_sensor = 1
 		checkpoint_store = ["point_0"]
 		priority_point_store.clear()
 	elif area.name == "point_0" and priority_point_store.size() == get_parent().priority_points_num:
 		if get_parent().priority_points_num != 0:
 			laps_num += 1
+			next_dist_sensor = 1
 			checkpoint_store = ["point_0"]
 			priority_point_store.clear()
 	
@@ -133,6 +136,7 @@ func _on_checkpoint_sensor_area_entered(area: Area3D) -> void:
 			engine_force = 0
 			steering = 0
 			brake = 20
+	
 
 func start_race():
 	is_on_race = true
