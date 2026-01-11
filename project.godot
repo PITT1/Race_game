@@ -95,6 +95,10 @@ locale/translations=PackedStringArray("res://translate/translate.en.translation"
 
 limits/message_queue/max_size_mb=64
 
+[phantom_camera]
+
+tips/show_jitter_tips=false
+
 [physics]
 
 3d/run_on_separate_thread=true
@@ -107,6 +111,8 @@ occlusion_culling/bvh_build_quality=0
 textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="mobile"
 textures/vram_compression/import_etc2_astc=true
+textures/vram_compression/compress_with_gpu=false
+textures/vram_compression/cache_gpu_compressor=false
 textures/lossless_compression/force_png=true
 lights_and_shadows/directional_shadow/size=512
 lights_and_shadows/directional_shadow/size.mobile=512
@@ -125,6 +131,7 @@ environment/ssil/fadeout_from=18.7
 environment/ssil/fadeout_to=64.0
 textures/decals/filter=0
 textures/light_projectors/filter=0
+occlusion_culling/occlusion_rays_per_thread=256
 environment/glow/upscale_mode=0
 environment/screen_space_reflection/roughness_quality=0
 environment/subsurface_scattering/subsurface_scattering_quality=0

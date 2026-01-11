@@ -78,7 +78,6 @@ func _ready() -> void:
 				for i in item.get_children():
 					if not i.name.contains("priority"):
 						checkpoints_to_sen.append(i)
-	print(checkpoints_to_sen)
 
 func _physics_process(delta: float) -> void:
 	stering_asist()
