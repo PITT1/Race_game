@@ -7,9 +7,9 @@
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="3_o4560"]
 [ext_resource type="ArrayMesh" uid="uid://dc4upx53e4gie" path="res://others/spawners/spawn_arrow.obj" id="4_0wf4l"]
 [ext_resource type="PackedScene" uid="uid://ctvbggtg0dtyb" path="res://huds/controls_hud/tactil_control_1.tscn" id="5_o4560"]
-[ext_resource type="Texture2D" uid="uid://cvps5jusg2fnd" path="res://Maps/textures/road_lines_compres/RoadLines010_1K-PNG_Displacement.png" id="6_wr2y2"]
+[ext_resource type="Texture2D" uid="uid://d4leoji2rq7ci" path="res://Maps/textures/road_lines_compres/RoadLines010_1K-PNG_Displacement.jpg" id="6_hcykn"]
 [ext_resource type="Texture2D" uid="uid://ddoiftxsxqnra" path="res://Maps/textures/sand_compres/Ground080_1K-JPG_Color.jpg" id="7_ji8kx"]
-[ext_resource type="Texture2D" uid="uid://c6kir55w0b8np" path="res://Maps/textures/concreto/Concrete042A_1K-JPG_Color.jpg" id="11_ferbx"]
+[ext_resource type="Texture2D" uid="uid://o505a7cg1rt" path="res://Maps/textures/f1_circuits/Concrete042A_1K-JPG_Color.jpg" id="8_2mpbm"]
 [ext_resource type="PackedScene" uid="uid://bhevwsndruup5" path="res://others/cone/cone.tscn" id="13_t05g1"]
 [ext_resource type="ArrayMesh" uid="uid://c1yskjvt07qs5" path="res://others/meta_lines/meta_line_1.obj" id="14_d75ak"]
 [ext_resource type="PackedScene" uid="uid://cvnk4vd57bay3" path="res://others/rocks/rock_1.tscn" id="15_ferbx"]
@@ -174,14 +174,14 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_y7khp")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nphd0"]
-albedo_texture = ExtResource("6_wr2y2")
+albedo_texture = ExtResource("6_hcykn")
 uv1_scale = Vector3(0.5, 1, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t05g1"]
 albedo_texture = ExtResource("7_ji8kx")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d75ak"]
-albedo_texture = ExtResource("11_ferbx")
+albedo_texture = ExtResource("8_2mpbm")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_22fox"]
 albedo_texture = ExtResource("15_g5b67")
@@ -227,7 +227,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_x0icl")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hcykn"]
-albedo_texture = ExtResource("11_ferbx")
+albedo_texture = ExtResource("8_2mpbm")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pdl8s"]
 
@@ -264,7 +264,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_kcmg6")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2mpbm"]
-albedo_texture = ExtResource("11_ferbx")
+albedo_texture = ExtResource("8_2mpbm")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hdex6"]
 
@@ -301,7 +301,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_tgy74")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_amp66"]
-albedo_texture = ExtResource("11_ferbx")
+albedo_texture = ExtResource("8_2mpbm")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ad036"]
 
@@ -338,7 +338,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_qlw6e")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l10e4"]
-albedo_texture = ExtResource("11_ferbx")
+albedo_texture = ExtResource("8_2mpbm")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7agaw"]
 
@@ -375,7 +375,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ysd4u")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6sawf"]
-albedo_texture = ExtResource("11_ferbx")
+albedo_texture = ExtResource("8_2mpbm")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xyjja"]
 size = Vector3(58.3376, 18.7666, 5.27968)
@@ -584,40 +584,40 @@ transform = Transform3D(0.004865872, 0, -0.999827, 0, 0.999828, 0, 0.999827, 0, 
 progress = 28.25
 
 [node name="PathFollow_1" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.0066828253, 0, -0.9999584, 0, 0.999998, 0, 0.9998644, 0, -0.0066834535, -98.5408, -3.05176e-05, 119.093)
+transform = Transform3D(-0.0066828234, 0, -0.99995816, 0, 0.999998, 0, 0.99986416, 0, -0.0066834516, -98.5408, -3.05176e-05, 119.093)
 
 [node name="PathFollow_2" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.006683019, 0, -0.9999604, 0, 1, 0, 0.9998934, 0, -0.006683467, -98.5408, -3.05176e-05, 119.093)
+transform = Transform3D(-0.0066830176, 0, -0.9999602, 0, 1, 0, 0.9998932, 0, -0.006683465, -98.5408, -3.05176e-05, 119.093)
 
 [node name="PathFollow_3" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.006682959, 0, -0.9999594, 0, 0.999999, 0, 0.9998844, 0, -0.00668346, -98.5408, -3.05176e-05, 119.093)
+transform = Transform3D(-0.0066829575, 0, -0.9999592, 0, 0.999999, 0, 0.9998842, 0, -0.0066834586, -98.5408, -3.05176e-05, 119.093)
 
 [node name="PathFollow_4" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.006683019, 0, -0.9999604, 0, 1, 0, 0.9998934, 0, -0.006683467, -98.5408, -3.05176e-05, 119.093)
+transform = Transform3D(-0.0066830176, 0, -0.9999602, 0, 1, 0, 0.9998932, 0, -0.006683465, -98.5408, -3.05176e-05, 119.093)
 
 [node name="PathFollow_5" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.006683019, 0, -0.9999604, 0, 1, 0, 0.9998934, 0, -0.006683467, -98.5408, -3.05176e-05, 119.093)
+transform = Transform3D(-0.0066830176, 0, -0.9999602, 0, 1, 0, 0.9998932, 0, -0.006683465, -98.5408, -3.05176e-05, 119.093)
 
 [node name="PathFollow_6" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.006683019, 0, -0.9999604, 0, 1, 0, 0.9998934, 0, -0.006683467, -98.5408, -3.05176e-05, 119.093)
+transform = Transform3D(-0.0066830176, 0, -0.9999602, 0, 1, 0, 0.9998932, 0, -0.006683465, -98.5408, -3.05176e-05, 119.093)
 
 [node name="PathFollow_7" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.006683019, 0, -0.9999604, 0, 1, 0, 0.9998934, 0, -0.006683467, -98.5408, -3.05176e-05, 119.093)
+transform = Transform3D(-0.0066830176, 0, -0.9999602, 0, 1, 0, 0.9998932, 0, -0.006683465, -98.5408, -3.05176e-05, 119.093)
 
 [node name="PathFollow_8" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.006683019, 0, -0.9999604, 0, 1, 0, 0.9998934, 0, -0.006683467, -98.5408, -3.05176e-05, 119.093)
+transform = Transform3D(-0.0066830176, 0, -0.9999602, 0, 1, 0, 0.9998932, 0, -0.006683465, -98.5408, -3.05176e-05, 119.093)
 
 [node name="PathFollow_9" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.006683019, 0, -0.9999604, 0, 1, 0, 0.9998934, 0, -0.006683467, -98.5408, -3.05176e-05, 119.093)
+transform = Transform3D(-0.0066830176, 0, -0.9999602, 0, 1, 0, 0.9998932, 0, -0.006683465, -98.5408, -3.05176e-05, 119.093)
 
 [node name="PathFollow_10" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.006683019, 0, -0.9999604, 0, 1, 0, 0.9998934, 0, -0.006683467, -98.5408, -3.05176e-05, 119.093)
+transform = Transform3D(-0.0066830176, 0, -0.9999602, 0, 1, 0, 0.9998932, 0, -0.006683465, -98.5408, -3.05176e-05, 119.093)
 
 [node name="PathFollow_11" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.006683019, 0, -0.9999604, 0, 1, 0, 0.9998934, 0, -0.006683467, -98.5408, -3.05176e-05, 119.093)
+transform = Transform3D(-0.0066830176, 0, -0.9999602, 0, 1, 0, 0.9998932, 0, -0.006683465, -98.5408, -3.05176e-05, 119.093)
 
 [node name="PathFollow_12" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.006683019, 0, -0.9999604, 0, 1, 0, 0.9998934, 0, -0.006683467, -98.5408, -3.05176e-05, 119.093)
+transform = Transform3D(-0.0066830176, 0, -0.9999602, 0, 1, 0, 0.9998932, 0, -0.006683465, -98.5408, -3.05176e-05, 119.093)
 
 [node name="pista_body" type="StaticBody3D" parent="."]
 collision_layer = 2

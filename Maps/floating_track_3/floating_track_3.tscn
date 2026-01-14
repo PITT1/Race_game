@@ -3,14 +3,14 @@
 [ext_resource type="Script" uid="uid://kghgfx151qgh" path="res://Maps/circuit_test_2/test_2.gd" id="1_3ganc"]
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="2_mf7dr"]
 [ext_resource type="PackedScene" uid="uid://cd2fjxhklg8i1" path="res://huds/on_race_huds/countdown.tscn" id="2_xdeyh"]
-[ext_resource type="Texture2D" uid="uid://cadxecc4g5hoj" path="res://Maps/textures/f1_circuits/float_track_texture.png" id="3_moo7l"]
 [ext_resource type="Script" uid="uid://csjccrhj5wnx7" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="3_ra3pa"]
+[ext_resource type="Texture2D" uid="uid://ca7pqnbb6sqwd" path="res://Maps/textures/water/water_texture.jpg" id="3_xt684"]
 [ext_resource type="Texture2D" uid="uid://wyvhiviq75ye" path="res://Maps/textures/f1_circuits/pista_2_meta_line.jpg" id="4_03dmh"]
-[ext_resource type="Texture2D" uid="uid://bonu6e8oclpok" path="res://Maps/textures/canyon/canyon_texture_1.png" id="4_5k0qj"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="4_iyycd"]
-[ext_resource type="Texture2D" uid="uid://dvm4b815utaol" path="res://Maps/textures/f1_circuits/piano_texture.png" id="4_jup2g"]
+[ext_resource type="Texture2D" uid="uid://lxy87jwwpunf" path="res://Maps/textures/canyon/canyon_texture_1.jpg" id="4_xt684"]
 [ext_resource type="ArrayMesh" uid="uid://dc4upx53e4gie" path="res://others/spawners/spawn_arrow.obj" id="5_ra3pa"]
-[ext_resource type="Texture2D" uid="uid://isgch5tyu5nh" path="res://Maps/textures/water/water_texture.png" id="6_jup2g"]
+[ext_resource type="Texture2D" uid="uid://bpoe8tcni0xfd" path="res://Maps/textures/f1_circuits/float_track_texture.jpg" id="5_xt684"]
+[ext_resource type="Texture2D" uid="uid://co20v8pwux4iu" path="res://Maps/textures/f1_circuits/piano_texture.jpg" id="6_xt684"]
 [ext_resource type="PackedScene" uid="uid://ctvbggtg0dtyb" path="res://huds/controls_hud/tactil_control_1.tscn" id="7_xdeyh"]
 [ext_resource type="PackedScene" uid="uid://cmsodlxlif01f" path="res://others/velocity_reductor/vel_reductor.tscn" id="12_03dmh"]
 [ext_resource type="Texture2D" uid="uid://b5j4nvvqw57ld" path="res://Maps/textures/signals/transit_arrow_right.png" id="13_xt684"]
@@ -33,7 +33,7 @@ reflected_light_source = 1
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4vs7p"]
 shading_mode = 0
-albedo_texture = ExtResource("6_jup2g")
+albedo_texture = ExtResource("3_xt684")
 uv1_scale = Vector3(20.56, 20.56, 20.56)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_xt684"]
@@ -98,7 +98,7 @@ shadow_mesh = SubResource("ArrayMesh_4kphi")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5k0qj"]
 shading_mode = 2
-albedo_texture = ExtResource("4_5k0qj")
+albedo_texture = ExtResource("4_xt684")
 uv1_offset = Vector3(9.29, 5, 5)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_jup2g"]
@@ -264,10 +264,10 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_numqu")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2krn1"]
-albedo_texture = ExtResource("3_moo7l")
+albedo_texture = ExtResource("5_xt684")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ir16o"]
-albedo_texture = ExtResource("4_jup2g")
+albedo_texture = ExtResource("6_xt684")
 uv1_scale = Vector3(0.955, 0.955, 0.955)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_av3b6"]

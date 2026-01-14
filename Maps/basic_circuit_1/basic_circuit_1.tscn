@@ -8,7 +8,7 @@
 [ext_resource type="ArrayMesh" uid="uid://dc4upx53e4gie" path="res://others/spawners/spawn_arrow.obj" id="5_eshm2"]
 [ext_resource type="PackedScene" uid="uid://ctvbggtg0dtyb" path="res://huds/controls_hud/tactil_control_1.tscn" id="8_avde0"]
 [ext_resource type="Texture2D" uid="uid://bxemxoswitwth" path="res://Maps/textures/snow/wooden_boards.png" id="9_gxjyc"]
-[ext_resource type="Texture2D" uid="uid://bm552631w02kq" path="res://Maps/textures/f1_circuits/Asphalt025C_1K-JPG_Color.jpg" id="10_c1b42"]
+[ext_resource type="Texture2D" uid="uid://yjr02p5cd4rk" path="res://Maps/textures/f1_circuits/Asphalt025C_1K-JPG_Color.jpg" id="10_c1b42"]
 [ext_resource type="Texture2D" uid="uid://wyvhiviq75ye" path="res://Maps/textures/f1_circuits/pista_2_meta_line.jpg" id="10_f2qnn"]
 [ext_resource type="Texture2D" uid="uid://cjdlxut5gdht5" path="res://Maps/textures/snow/snow.png" id="11_0hdww"]
 [ext_resource type="ArrayOccluder3D" uid="uid://duk54745q0y46" path="res://Maps/basic_circuit_1/basic_circuit_1.occ" id="11_st4y5"]

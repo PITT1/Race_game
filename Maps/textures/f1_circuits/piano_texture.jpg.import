@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1nn6hofqxcdg"
-path.s3tc="res://.godot/imported/Rock030_1K-JPG_Color.jpg-2f3ffdd4812c7f9472c6f0851c766037.s3tc.ctex"
-path.etc2="res://.godot/imported/Rock030_1K-JPG_Color.jpg-2f3ffdd4812c7f9472c6f0851c766037.etc2.ctex"
+uid="uid://co20v8pwux4iu"
+path.s3tc="res://.godot/imported/piano_texture.jpg-ba08cf05af202402f6be012b0d55b7fb.s3tc.ctex"
+path.etc2="res://.godot/imported/piano_texture.jpg-ba08cf05af202402f6be012b0d55b7fb.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://Maps/textures/rock_compres/Rock030_1K-JPG_Color.jpg"
-dest_files=["res://.godot/imported/Rock030_1K-JPG_Color.jpg-2f3ffdd4812c7f9472c6f0851c766037.s3tc.ctex", "res://.godot/imported/Rock030_1K-JPG_Color.jpg-2f3ffdd4812c7f9472c6f0851c766037.etc2.ctex"]
+source_file="res://Maps/textures/f1_circuits/piano_texture.jpg"
+dest_files=["res://.godot/imported/piano_texture.jpg-ba08cf05af202402f6be012b0d55b7fb.s3tc.ctex", "res://.godot/imported/piano_texture.jpg-ba08cf05af202402f6be012b0d55b7fb.etc2.ctex"]
 
 [params]
 

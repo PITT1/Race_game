@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=4 uid="uid://bsbl6q4twm4sq"]
+[gd_scene load_steps=63 format=4 uid="uid://bsbl6q4twm4sq"]
 
 [ext_resource type="Script" uid="uid://kghgfx151qgh" path="res://Maps/circuit_test_2/test_2.gd" id="1_do5se"]
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="2_7ee7v"]
@@ -7,7 +7,7 @@
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="4_kteyo"]
 [ext_resource type="ArrayMesh" uid="uid://dc4upx53e4gie" path="res://others/spawners/spawn_arrow.obj" id="6_7ee7v"]
 [ext_resource type="PackedScene" uid="uid://ctvbggtg0dtyb" path="res://huds/controls_hud/tactil_control_1.tscn" id="8_kteyo"]
-[ext_resource type="Texture2D" uid="uid://cadxecc4g5hoj" path="res://Maps/textures/f1_circuits/float_track_texture.png" id="8_l57my"]
+[ext_resource type="Texture2D" uid="uid://bpoe8tcni0xfd" path="res://Maps/textures/f1_circuits/float_track_texture.jpg" id="8_l64ia"]
 [ext_resource type="Texture2D" uid="uid://wyvhiviq75ye" path="res://Maps/textures/f1_circuits/pista_2_meta_line.jpg" id="10_l64ia"]
 [ext_resource type="PackedScene" uid="uid://cmsodlxlif01f" path="res://others/velocity_reductor/vel_reductor.tscn" id="11_l64ia"]
 [ext_resource type="ArrayOccluder3D" uid="uid://byd54hh5epxa5" path="res://Maps/2_vias_circuit_1/pista_doble_1.occ" id="11_ujkey"]
@@ -195,7 +195,7 @@ shadow_mesh = SubResource("ArrayMesh_fba01")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qhgyu"]
 shading_mode = 0
-albedo_texture = ExtResource("8_l57my")
+albedo_texture = ExtResource("8_l64ia")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ujkey"]
 shading_mode = 0
@@ -441,11 +441,7 @@ shadow_mesh = SubResource("ArrayMesh_6p3as")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_idnly"]
 shading_mode = 0
-albedo_texture = ExtResource("8_l57my")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2qj23"]
-shading_mode = 0
-albedo_color = Color(0.628315, 0.628315, 0.628315, 1)
+albedo_texture = ExtResource("8_l64ia")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ueion"]
 shading_mode = 0
@@ -1337,7 +1333,6 @@ mesh = SubResource("ArrayMesh_vbn5j")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_idnly")
 surface_material_override/1 = SubResource("StandardMaterial3D_ujkey")
-surface_material_override/2 = SubResource("StandardMaterial3D_2qj23")
 surface_material_override/3 = SubResource("StandardMaterial3D_ueion")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="pista/StaticBody3D3"]

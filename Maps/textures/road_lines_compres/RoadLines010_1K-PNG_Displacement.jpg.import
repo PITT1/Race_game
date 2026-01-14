@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1nn6hofqxcdg"
-path.s3tc="res://.godot/imported/Rock030_1K-JPG_Color.jpg-2f3ffdd4812c7f9472c6f0851c766037.s3tc.ctex"
-path.etc2="res://.godot/imported/Rock030_1K-JPG_Color.jpg-2f3ffdd4812c7f9472c6f0851c766037.etc2.ctex"
+uid="uid://d4leoji2rq7ci"
+path.s3tc="res://.godot/imported/RoadLines010_1K-PNG_Displacement.jpg-2caf3e47004fe065a299862caa72d505.s3tc.ctex"
+path.etc2="res://.godot/imported/RoadLines010_1K-PNG_Displacement.jpg-2caf3e47004fe065a299862caa72d505.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://Maps/textures/rock_compres/Rock030_1K-JPG_Color.jpg"
-dest_files=["res://.godot/imported/Rock030_1K-JPG_Color.jpg-2f3ffdd4812c7f9472c6f0851c766037.s3tc.ctex", "res://.godot/imported/Rock030_1K-JPG_Color.jpg-2f3ffdd4812c7f9472c6f0851c766037.etc2.ctex"]
+source_file="res://Maps/textures/road_lines_compres/RoadLines010_1K-PNG_Displacement.jpg"
+dest_files=["res://.godot/imported/RoadLines010_1K-PNG_Displacement.jpg-2caf3e47004fe065a299862caa72d505.s3tc.ctex", "res://.godot/imported/RoadLines010_1K-PNG_Displacement.jpg-2caf3e47004fe065a299862caa72d505.etc2.ctex"]
 
 [params]
 

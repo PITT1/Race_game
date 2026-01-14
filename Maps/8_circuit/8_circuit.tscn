@@ -3,13 +3,13 @@
 [ext_resource type="Texture2D" uid="uid://chn5wjgi0tjqt" path="res://Maps/textures/f1_circuits/rejillas circulares.png" id="1_e5tf6"]
 [ext_resource type="Script" uid="uid://kghgfx151qgh" path="res://Maps/circuit_test_2/test_2.gd" id="1_kha17"]
 [ext_resource type="PackedScene" uid="uid://cd2fjxhklg8i1" path="res://huds/on_race_huds/countdown.tscn" id="2_10qsa"]
-[ext_resource type="Texture2D" uid="uid://cadxecc4g5hoj" path="res://Maps/textures/f1_circuits/float_track_texture.png" id="2_hno3d"]
 [ext_resource type="Texture2D" uid="uid://wyvhiviq75ye" path="res://Maps/textures/f1_circuits/pista_2_meta_line.jpg" id="3_o1mka"]
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="4_twkc3"]
 [ext_resource type="Script" uid="uid://csjccrhj5wnx7" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="5_ydo05"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="6_uiyng"]
 [ext_resource type="ArrayMesh" uid="uid://dc4upx53e4gie" path="res://others/spawners/spawn_arrow.obj" id="7_ydo05"]
 [ext_resource type="PackedScene" uid="uid://ctvbggtg0dtyb" path="res://huds/controls_hud/tactil_control_1.tscn" id="8_uiyng"]
+[ext_resource type="Texture2D" uid="uid://bpoe8tcni0xfd" path="res://Maps/textures/f1_circuits/float_track_texture.jpg" id="9_r82bl"]
 [ext_resource type="Texture2D" uid="uid://bk3p8umc7mpd0" path="res://Maps/textures/f1_circuits/Grass001_1K-JPG_Color.jpg" id="11_10qsa"]
 [ext_resource type="ArrayOccluder3D" uid="uid://b3f0s562ka856" path="res://Maps/8_circuit/8_circuit.occ" id="12_kysnh"]
 [ext_resource type="PackedScene" uid="uid://cmsodlxlif01f" path="res://others/velocity_reductor/vel_reductor.tscn" id="13_r82bl"]
@@ -268,11 +268,12 @@ albedo_color = Color(0.79608804, 0.023020817, 2.8878452e-07, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uiyng"]
 shading_mode = 0
+albedo_color = Color(0.85750073, 0.85750073, 0.85750073, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xbfq3"]
 shading_mode = 0
 specular_mode = 2
-albedo_texture = ExtResource("2_hno3d")
+albedo_texture = ExtResource("9_r82bl")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kha17"]
 shading_mode = 0
