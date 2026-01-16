@@ -212,4 +212,5 @@ func engine_sound_controller():
 	
 func dist_sensor_sistem():
 	if get_parent().name != "LobyRework":
-		distance_to_sensor = global_position.distance_to(checkpoints_to_sen[next_dist_sensor].global_position)
+		if get_parent().name != "CarSelectionRework":
+			distance_to_sensor = global_position.distance_to(checkpoints_to_sen[next_dist_sensor].global_position)
