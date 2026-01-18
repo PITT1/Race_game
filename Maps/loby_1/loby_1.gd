@@ -2,6 +2,7 @@ extends Node3D
 @onready var pCam: PhantomCamera3D = $PhantomCamera3D
 @onready var main_hud_cam: PhantomCamera3D = $main_hud_cam
 @onready var car_spawner: MeshInstance3D = $car_spawner
+@onready var money_display: HBoxContainer = $MainHud/CanvasLayer/MoneyDisplay
 
 var num_checkpoints: int = 0
 var laps_num_to_finish = 5
@@ -30,6 +31,8 @@ func _ready() -> void:
 	
 	#cargando anuncios
 	Ads._load_interstitial_ad()
+	money_display.reset_money()
+	
 
 
 func _on_grand_prix_btn_button_up() -> void:

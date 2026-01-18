@@ -251,7 +251,7 @@ center_of_mass = Vector3(0, -1, 0)
 script = ExtResource("1_yva7t")
 
 [node name="HotRod2Body" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.57, 0, 0, 0, 0.57, 0, 0, 0, 0.57, 0, 0.151529, 0.0491722)
+transform = Transform3D(0.57, 0, 0, 0, 0.57, 0, 0, 0, 0.57, 0, 0.4108203, -0.06606837)
 mesh = SubResource("ArrayMesh_nvvph")
 surface_material_override/0 = SubResource("StandardMaterial3D_bts8s")
 surface_material_override/2 = SubResource("StandardMaterial3D_kmfqj")
@@ -259,15 +259,15 @@ surface_material_override/4 = SubResource("StandardMaterial3D_m8hun")
 surface_material_override/6 = SubResource("StandardMaterial3D_6cfs0")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00280762, 0.0574951, -0.146912)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00280762, 0.31678638, -0.26215255)
 shape = SubResource("BoxShape3D_m8hun")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.57, 0, 0, 0, 0.57, 0, 0, 0, 0.57, 0, 0.151529, 0.0491722)
+transform = Transform3D(0.57, 0, 0, 0, 0.57, 0, 0, 0, 0.57, 0, 0.4108203, -0.06606837)
 shape = SubResource("ConvexPolygonShape3D_m8hun")
 
 [node name="wheel_1" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.738911, -0.291527, 1.19477)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.738911, -0.03223571, 1.0795294)
 use_as_steering = true
 wheel_roll_influence = 1.5
 wheel_radius = 0.465
@@ -282,7 +282,7 @@ transform = Transform3D(0.57, 0, 0, 0, 0.57, 0, 0, 0, 0.57, 0.00183773, 0, -0.00
 mesh = ExtResource("2_yva7t")
 
 [node name="wheel_2" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.739, -0.289544, 1.19472)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.739, -0.030252695, 1.0794795)
 use_as_steering = true
 wheel_roll_influence = 1.5
 wheel_radius = 0.465
@@ -297,7 +297,7 @@ transform = Transform3D(-0.57, 0, -8.60676e-08, 0, 0.57, 0, 8.60676e-08, 0, -0.5
 mesh = ExtResource("2_yva7t")
 
 [node name="wheel_3" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.734695, -0.181415, -1.35535)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.734695, 0.077876285, -1.4705906)
 use_as_traction = true
 wheel_roll_influence = 1.5
 wheel_radius = 0.625
@@ -312,7 +312,7 @@ transform = Transform3D(0.64, 0, 0, 0, 0.64, 0, 0, 0, 0.64, 0, 0, 0)
 mesh = ExtResource("3_bb8mo")
 
 [node name="wheel_4" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.739, -0.181533, -1.35489)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.739, 0.0777583, -1.4701306)
 use_as_traction = true
 wheel_roll_influence = 1.5
 wheel_radius = 0.625

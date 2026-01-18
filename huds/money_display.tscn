@@ -10,12 +10,25 @@ offset_bottom = 128.0
 alignment = 1
 script = ExtResource("1_62wwv")
 
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.33155137, 0.9840494, 0.21625346, 1)
+theme_override_colors/font_outline_color = Color(0.21470258, 0.21470258, 0.21470249, 0.6745098)
+theme_override_font_sizes/font_size = 44
+text = "$"
+
 [node name="money_label" type="Button" parent="."]
 layout_mode = 2
 theme = ExtResource("2_62wwv")
+theme_override_colors/font_color = Color(0.33155137, 0.9840494, 0.21625346, 1)
+theme_override_colors/font_outline_color = Color(0.21470258, 0.21470258, 0.21470249, 0.6745098)
 theme_override_font_sizes/font_size = 44
 action_mode = 0
 text = "50.000$"
 flat = true
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.06
+
 [connection signal="button_up" from="money_label" to="." method="_on_money_label_button_up"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
