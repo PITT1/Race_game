@@ -21,6 +21,8 @@ var laps_num_to_finish: int = 0
 var num_checkpoints: int = 0
 var is_race = false
 
+var candado_visible_anterior = false
+
 
 func _ready() -> void:
 	money_display.reset_money()
@@ -38,8 +40,6 @@ func _ready() -> void:
 	add_child(car_instantia)
 	car_instantia.axis_lock_linear_x = true
 	car_instantia.steering = 0.5
-	
-	padlock()
 	
 	
 
@@ -130,7 +130,13 @@ func _on_select_button_up() -> void:
 func padlock():
 	if select.text.contains(tr("id_16")):
 		padlock_anim.visible = true
-		anim.play("padlock_input")
 	elif select.text.contains(tr("id_17")):
 		padlock_anim.visible = false
-		anim.play("padlock_output")
+	
+	if padlock_anim.visible != candado_visible_anterior:
+		if padlock_anim.visible:
+			anim.play("padlock_input")
+		else:
+			anim.play("padlock_output")
+		
+	candado_visible_anterior = padlock_anim.visible

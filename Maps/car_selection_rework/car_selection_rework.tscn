@@ -436,21 +436,6 @@ transparency = 1
 shading_mode = 0
 albedo_color = Color(0, 0, 0, 0)
 
-[sub_resource type="Animation" id="Animation_dx3bn"]
-resource_name = "padlock_input"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("MeshInstance3D:surface_material_override/0:albedo_color")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 0.84705883)]
-}
-
 [sub_resource type="Animation" id="Animation_7up0l"]
 length = 0.001
 tracks/0/type = "value"
@@ -466,6 +451,21 @@ tracks/0/keys = {
 "values": [Color(0, 0, 0, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_dx3bn"]
+resource_name = "padlock_input"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D:surface_material_override/0:albedo_color")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 0.90588236)]
+}
+
 [sub_resource type="Animation" id="Animation_rl54o"]
 resource_name = "padlock_output"
 tracks/0/type = "value"
@@ -478,7 +478,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(0, 0, 0, 0.84705883), Color(0, 0, 0, 0)]
+"values": [Color(0, 0, 0, 0.90588236), Color(0, 0, 0, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_37638"]
@@ -663,6 +663,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="PadlockAnim" parent="." instance=ExtResource("7_rl54o")]
 transform = Transform3D(0.32, 0, 0, 0, 0.32, 0, 0, 0, 0.32, 3.4043493, 1.5887694, 0)
+visible = false
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.29237166, 0.9563048, 0, -0.9563048, 0.29237166, 0, 0, 0, 1, 2.7625742, 2.0098314, 0)
@@ -673,6 +674,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_mb4jr")
 libraries = {
 &"": SubResource("AnimationLibrary_37638")
 }
+speed_scale = 5.0
 
 [connection signal="button_up" from="CanvasLayer/left" to="." method="_on_left_button_up"]
 [connection signal="button_up" from="CanvasLayer/right" to="." method="_on_right_button_up"]
