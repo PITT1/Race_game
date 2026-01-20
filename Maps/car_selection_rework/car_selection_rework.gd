@@ -7,6 +7,8 @@ var car_names: Array = []
 var selected_car_name: String = ""
 var data_loaded: Dictionary
 @onready var money_display: HBoxContainer = $CanvasLayer/MoneyDisplay
+@onready var padlock_anim: Node3D = $PadlockAnim
+@onready var anim: AnimationPlayer = $AnimationPlayer
 
 #hud
 @onready var car_name_label: Label = $CanvasLayer/car_name_label
@@ -37,6 +39,8 @@ func _ready() -> void:
 	car_instantia.axis_lock_linear_x = true
 	car_instantia.steering = 0.5
 	
+	padlock()
+	
 	
 
 
@@ -65,6 +69,7 @@ func _on_left_button_up() -> void:
 	car_instantia.axis_lock_linear_x = true
 	car_instantia.steering = 0.5
 	
+	padlock()
 
 
 func _on_right_button_up() -> void:
@@ -94,6 +99,8 @@ func _on_right_button_up() -> void:
 	add_child(car_instantia)
 	car_instantia.axis_lock_linear_x = true
 	car_instantia.steering = 0.5
+	
+	padlock()
 
 
 func _on_go_back_button_up() -> void:
@@ -117,3 +124,13 @@ func _on_select_button_up() -> void:
 		global_var.save_data(JSON.stringify(data_loaded))
 	
 	money_display.reset_money()
+	
+	padlock()
+
+func padlock():
+	if select.text.contains(tr("id_16")):
+		padlock_anim.visible = true
+		anim.play("padlock_input")
+	elif select.text.contains(tr("id_17")):
+		padlock_anim.visible = false
+		anim.play("padlock_output")
