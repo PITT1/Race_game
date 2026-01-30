@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cpm1xpc4hfurx"]
+[gd_scene format=3 uid="uid://cpm1xpc4hfurx"]
 
 [ext_resource type="PhysicsMaterial" uid="uid://dioc2dlho64fc" path="res://car_physic_material/car_physic.tres" id="1_81vfp"]
 [ext_resource type="Script" uid="uid://dn8cru75adetk" path="res://player_controller/player_controller.gd" id="1_ejnlq"]
@@ -13,7 +13,7 @@ points = PackedVector3Array(0.963424, -0.383534, 1.92976, 0.957576, 0.266703, 1.
 [sub_resource type="SphereShape3D" id="SphereShape3D_5o70g"]
 radius = 1.80891
 
-[node name="Spyder" type="VehicleBody3D"]
+[node name="Spyder" type="VehicleBody3D" unique_id=491543251]
 collision_mask = 2043
 mass = 200.0
 physics_material_override = ExtResource("1_81vfp")
@@ -22,17 +22,17 @@ center_of_mass_mode = 1
 center_of_mass = Vector3(0, -1, 0)
 script = ExtResource("1_ejnlq")
 
-[node name="spyder" parent="." instance=ExtResource("6_iepup")]
+[node name="spyder" parent="." unique_id=985759209 instance=ExtResource("6_iepup")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0745842, -0.298669)
 
 [node name="Cube" parent="spyder" index="0"]
 lod_bias = 0.5
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=821019419]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0819093, -0.291329)
 shape = SubResource("ConvexPolygonShape3D_1o0qs")
 
-[node name="wheel_1" type="VehicleWheel3D" parent="."]
+[node name="wheel_1" type="VehicleWheel3D" parent="." unique_id=545813184]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.813088, -0.0827507, 1.20849)
 use_as_steering = true
 wheel_roll_influence = 1.5
@@ -43,11 +43,11 @@ suspension_max_force = 100000.0
 damping_compression = 10.0
 damping_relaxation = 10.0
 
-[node name="SpyderWheel4" type="MeshInstance3D" parent="wheel_1"]
+[node name="SpyderWheel4" type="MeshInstance3D" parent="wheel_1" unique_id=1007187547]
 mesh = ExtResource("3_iepup")
 skeleton = NodePath("../..")
 
-[node name="wheel_2" type="VehicleWheel3D" parent="."]
+[node name="wheel_2" type="VehicleWheel3D" parent="." unique_id=89595806]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.813, -0.0827507, 1.20883)
 use_as_steering = true
 wheel_roll_influence = 1.5
@@ -58,12 +58,12 @@ suspension_max_force = 100000.0
 damping_compression = 10.0
 damping_relaxation = 10.0
 
-[node name="SpyderWheel3" type="MeshInstance3D" parent="wheel_2"]
+[node name="SpyderWheel3" type="MeshInstance3D" parent="wheel_2" unique_id=875730010]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 mesh = ExtResource("3_iepup")
 skeleton = NodePath("../..")
 
-[node name="wheel_3" type="VehicleWheel3D" parent="."]
+[node name="wheel_3" type="VehicleWheel3D" parent="." unique_id=1457268725]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.812756, -0.0746168, -1.41561)
 use_as_traction = true
 wheel_roll_influence = 1.5
@@ -74,11 +74,11 @@ suspension_max_force = 100000.0
 damping_compression = 10.0
 damping_relaxation = 10.0
 
-[node name="SpyderWheel2" type="MeshInstance3D" parent="wheel_3"]
+[node name="SpyderWheel2" type="MeshInstance3D" parent="wheel_3" unique_id=1549310354]
 mesh = ExtResource("3_iepup")
 skeleton = NodePath("../..")
 
-[node name="wheel_4" type="VehicleWheel3D" parent="."]
+[node name="wheel_4" type="VehicleWheel3D" parent="." unique_id=761911792]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.813, -0.0746168, -1.41561)
 use_as_traction = true
 wheel_roll_influence = 1.5
@@ -89,23 +89,23 @@ suspension_max_force = 100000.0
 damping_compression = 10.0
 damping_relaxation = 10.0
 
-[node name="SpyderWheel" type="MeshInstance3D" parent="wheel_4"]
+[node name="SpyderWheel" type="MeshInstance3D" parent="wheel_4" unique_id=1374007743]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 mesh = ExtResource("3_iepup")
 skeleton = NodePath("../..")
 
-[node name="checkpoint_sensor" type="Area3D" parent="."]
+[node name="checkpoint_sensor" type="Area3D" parent="." unique_id=1522802019]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.219836)
 collision_layer = 0
 collision_mask = 128
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoint_sensor"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="checkpoint_sensor" unique_id=2086110069]
 shape = SubResource("SphereShape3D_5o70g")
 debug_color = Color(0.47455, 0.00208011, 0.733338, 0.133333)
 
-[node name="RaceHud" parent="." instance=ExtResource("4_nckym")]
+[node name="RaceHud" parent="." unique_id=698811342 instance=ExtResource("4_nckym")]
 
-[node name="bumper_1" type="VehicleWheel3D" parent="."]
+[node name="bumper_1" type="VehicleWheel3D" parent="." unique_id=926072801]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0.043, 1.356)
 use_as_steering = true
 wheel_roll_influence = 1.5
@@ -114,7 +114,7 @@ wheel_friction_slip = 0.1
 suspension_stiffness = 200.0
 suspension_max_force = 100000.0
 
-[node name="bumper_2" type="VehicleWheel3D" parent="."]
+[node name="bumper_2" type="VehicleWheel3D" parent="." unique_id=813279056]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0.043, 1.356)
 use_as_steering = true
 wheel_roll_influence = 1.5
@@ -123,7 +123,7 @@ wheel_friction_slip = 0.1
 suspension_stiffness = 200.0
 suspension_max_force = 100000.0
 
-[node name="engine_sound" type="AudioStreamPlayer3D" parent="."]
+[node name="engine_sound" type="AudioStreamPlayer3D" parent="." unique_id=2082175643]
 stream = ExtResource("6_nckym")
 unit_size = 9.9
 max_distance = 50.0
