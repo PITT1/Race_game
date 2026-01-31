@@ -8,6 +8,10 @@
 
 config_version=5
 
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
 [application]
 
 config/name="Poly Race (4.5)"
@@ -26,7 +30,7 @@ Actualizaciones constantes con más pistas, autos y modos de juego.
 
 🎮 ¡La velocidad y la estrategia se combinan en Poly Race! ¿Estás listo para convertirte en el campeón y dominar cada circuito?"
 run/main_scene="uid://ut6b48jgsc2u"
-config/features=PackedStringArray("4.5", "Mobile")
+config/features=PackedStringArray("4.6", "Mobile")
 run/max_fps=60
 run/low_processor_mode=true
 boot_splash/use_filter=false
@@ -40,7 +44,7 @@ buses/default_bus_layout=""
 
 [autoload]
 
-PhantomCameraManager="*res://addons/phantom_camera/scripts/managers/phantom_camera_manager.gd"
+PhantomCameraManager="*uid://duq6jhf6unyis"
 GlobalVar="*res://global_var.gd"
 BgMusicManager="*res://bg_music_manager.gd"
 Ads="*res://ads.gd"
@@ -133,7 +137,6 @@ textures/decals/filter=0
 textures/light_projectors/filter=0
 occlusion_culling/occlusion_rays_per_thread=256
 environment/glow/upscale_mode=0
-environment/screen_space_reflection/roughness_quality=0
 environment/subsurface_scattering/subsurface_scattering_quality=0
 environment/volumetric_fog/use_filter=0
 occlusion_culling/use_occlusion_culling=true
@@ -143,3 +146,4 @@ lights_and_shadows/positional_shadow/atlas_quadrant_0_subdiv=0
 lights_and_shadows/positional_shadow/atlas_quadrant_1_subdiv=0
 lights_and_shadows/positional_shadow/atlas_quadrant_2_subdiv=0
 lights_and_shadows/positional_shadow/atlas_quadrant_3_subdiv=0
+environment/screen_space_reflection/roughness_quality=0
