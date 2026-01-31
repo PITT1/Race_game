@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Poly Race"
+config/name="Poly Race (4.5)"
 config/description="Poly Race es un emocionante videojuego de carreras arcade con un estilo gráfico minimalista de pocos polígonos.
 Compite en pistas llenas de adrenalina, demuestra tus habilidades al volante y gana dinero dentro del juego para desbloquear una gran variedad de autos.
 
