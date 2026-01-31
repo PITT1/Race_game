@@ -29,10 +29,9 @@ func set_finish_result(position: int, reward):
 	
 
 func _on_back_btn_button_up() -> void:
-	Ads._show_interstitial_ad()
 	get_tree().change_scene_to_file("res://Maps/loby_rework/loby_rework.tscn")
 
 
 func _on_btn_bunnus_reward_button_up() -> void:
-	Ads._show_rewarded_ad()
+	Ads._load_and_show_rewarded_ad()
 	get_tree().change_scene_to_file("res://Maps/loby_rework/loby_rework.tscn")

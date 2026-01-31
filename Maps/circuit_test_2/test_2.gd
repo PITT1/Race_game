@@ -26,7 +26,6 @@ var race_result: int
 var global_var = load("res://global_var.gd").new()
 
 func _ready() -> void:
-	Ads._load_rewarded_ad()
 	num_checkpoints = checkpoints_sistem.get_child_count()
 	anim.play("init_race")
 	put_cars()

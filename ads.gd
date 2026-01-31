@@ -4,8 +4,6 @@ var global_var = load("res://global_var.gd").new()
 
 # Rewarded Ad
 var rewarded_ad : RewardedAd
-var rewarded_ad_is_view : bool = false
-var rewarded_ad_is_loaded : bool = false
 
 var on_user_earned_reward_listener := OnUserEarnedRewardListener.new()
 var rewarded_ad_load_callback := RewardedAdLoadCallback.new()
@@ -46,50 +44,37 @@ func _ready() -> void:
 		if interstitial_ad_is_view:
 			free_memory_interstitial_ad()
 			_load_interstitial_ad()
-		if rewarded_ad_is_view:
-			free_memory_rewarded_ad()
-			_load_rewarded_ad()
+			
+		free_memory_rewarded_ad()
 	
 	_full_screen_content_callback.on_ad_failed_to_show_full_screen_content = func(ad_error : AdError) -> void:
 		print("Error al mostrar anuncio: %s" % ad_error.message)
 		if interstitial_ad_is_view:
 			free_memory_interstitial_ad()
 			_load_interstitial_ad()
-		if rewarded_ad_is_view:
-			free_memory_rewarded_ad()
-			_load_rewarded_ad()
+			
+		free_memory_rewarded_ad()
 
 # Rewarded Ads
 
-func _load_rewarded_ad():
-	if not rewarded_ad:
-		RewardedAdLoader.new().load(unit_id_android_rewarded, AdRequest.new(), rewarded_ad_load_callback)
-		rewarded_ad_is_view = false
-		rewarded_ad_is_loaded = false
+func _load_and_show_rewarded_ad():
+	RewardedAdLoader.new().load(unit_id_android_rewarded, AdRequest.new(), rewarded_ad_load_callback)
+	
 
 func on_rewarded_ad_failed_to_load(adError : LoadAdError) -> void:
 	print("Error al cargar rewarded: %s" % adError.message)
-	_load_rewarded_ad()
 
 func on_rewarded_ad_loaded(rewarded_ad_loaded : RewardedAd) -> void:
 	rewarded_ad = rewarded_ad_loaded
 	rewarded_ad.full_screen_content_callback = _full_screen_content_callback
-	rewarded_ad_is_loaded = true
 	print("Rewarded cargado correctamente")
-
-func _show_rewarded_ad():
-	if rewarded_ad and rewarded_ad_is_loaded and not rewarded_ad_is_view:
-		rewarded_ad.show(on_user_earned_reward_listener)
-		rewarded_ad_is_view = true
-		rewarded_ad_is_loaded = false
-	else:
-		print("Rewarded aún no está listo")
+	#mostramos el rewarded ad, nada mas esta listo
+	rewarded_ad.show(on_user_earned_reward_listener)
 
 func free_memory_rewarded_ad():
 	if rewarded_ad:
 		rewarded_ad.destroy()
 		rewarded_ad = null
-		rewarded_ad_is_loaded = false
 
 # Interstitial Ads
 
