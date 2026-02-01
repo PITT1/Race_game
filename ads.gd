@@ -7,7 +7,7 @@ var rewarded_ad : RewardedAd
 
 var on_user_earned_reward_listener := OnUserEarnedRewardListener.new()
 var rewarded_ad_load_callback := RewardedAdLoadCallback.new()
-var unit_id_android_rewarded = "ca-app-pub-3940256099942544/5224354917" # ad de prueba
+var unit_id_android_rewarded = "ca-app-pub-5481742624574647/8031980714" # ad real
 
 # Interstitial Ad
 var interstitial_ad : InterstitialAd
@@ -15,7 +15,7 @@ var interstitial_ad_is_view : bool = false
 var interstitial_ad_is_loaded : bool = false
 
 var interstitial_ad_load_callback := InterstitialAdLoadCallback.new()
-var unit_id_android_interstitial : String = "ca-app-pub-3940256099942544/1033173712" # ad de prueba
+var unit_id_android_interstitial : String = "ca-app-pub-5481742624574647/8865731999" # ad real
 
 # Full screen callbacks (compartidos)
 var _full_screen_content_callback := FullScreenContentCallback.new()
@@ -30,6 +30,11 @@ func _ready() -> void:
 		var data = JSON.parse_string(global_var.load_data())
 		data.money += rewarded_item.amount
 		global_var.save_data(JSON.stringify(data))
+		for item in get_parent().get_children():
+			if item.name == "LobyRework":
+				var loby = item
+				var money_disp = loby.get_node("MainHud/CanvasLayer/MoneyDisplay")
+				money_disp.reset_money()
 	
 	rewarded_ad_load_callback.on_ad_failed_to_load = on_rewarded_ad_failed_to_load
 	rewarded_ad_load_callback.on_ad_loaded = on_rewarded_ad_loaded
@@ -43,7 +48,6 @@ func _ready() -> void:
 		print("on_ad_dismissed_full_screen_content")
 		if interstitial_ad_is_view:
 			free_memory_interstitial_ad()
-			_load_interstitial_ad()
 			
 		free_memory_rewarded_ad()
 	

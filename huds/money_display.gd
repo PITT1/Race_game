@@ -15,16 +15,17 @@ func _ready() -> void:
 
 
 func reset_money():
-	var data = JSON.parse_string(global_var.load_data())
-	num_target = data.money
-	num = int(money_label.text)
+	if not money_label == null:
+		var data = JSON.parse_string(global_var.load_data())
+		num_target = data.money
+		num = int(money_label.text)
 	
-	if num < num_target:
-		direction = +1000
-		timer.start()
-	elif num > num_target:
-		direction = -1000
-		timer.start()
+		if num < num_target:
+			direction = +1000
+			timer.start()
+		elif num > num_target:
+			direction = -1000
+			timer.start()
 
 func _on_timer_timeout() -> void:
 	num += direction

@@ -41,6 +41,8 @@ func _ready() -> void:
 	car_instantia.axis_lock_linear_x = true
 	car_instantia.steering = 0.5
 	
+	Ads._load_interstitial_ad()
+	
 	
 
 
@@ -104,6 +106,7 @@ func _on_right_button_up() -> void:
 
 
 func _on_go_back_button_up() -> void:
+	Ads._show_interstitial_ad()
 	get_tree().change_scene_to_file("res://Maps/loby_rework/loby_rework.tscn")
 
 
