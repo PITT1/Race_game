@@ -15,7 +15,7 @@ var poitn_desviation: int = 0
 @export var camera_distance: float = 5
 @export var camera_height: float = 2.5
 var target_offset = Vector2.ZERO
-var current_offset = Vector2.ZERO
+var current_offset = Vector3.ZERO
 var wheels: Array = []
 var surface: String = ""
 var is_on_pista: bool = true
@@ -153,11 +153,17 @@ func _on_checkpoint_sensor_area_entered(area: Area3D) -> void:
 func start_race():
 	is_on_race = true
 
-func update_pcam():
-	var forward_direction = -global_transform.basis.z.normalized()
-	target_offset = Vector2(forward_direction.x * camera_distance, forward_direction.z * camera_distance)
-	current_offset = current_offset.lerp(target_offset, 0.02)
-	pCam.follow_offset = Vector3(current_offset.x, camera_height, current_offset.y)
+func update_pcam() -> void:
+	var forward_direction: Vector3 = -global_transform.basis.z.normalized()
+	
+	# Calculate target offset in full 3D to include vertical (pitch) component
+	var target_offseet: Vector3 = forward_direction * camera_distance
+	
+	# Smoothly interpolate current offset towards target
+	current_offset = current_offset.lerp(target_offseet, 0.02)
+	
+	# Apply the offset: X (lateral), Y (height + vertical offset), Z (depth)
+	pCam.follow_offset = Vector3(current_offset.x, camera_height + current_offset.y, current_offset.z)
 
 
 func stering_asist():
