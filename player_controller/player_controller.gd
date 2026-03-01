@@ -20,6 +20,16 @@ var wheels: Array = []
 var surface: String = ""
 var is_on_pista: bool = true
 
+@export_category("SOUND")
+@export var pitch_scale_min: float = 0.1  # Pitch mínimo (equivalente a idle_pitch)
+@export var pitch_scale_max: float = 1.0  # Pitch máximo (equivalente a redline_pitch)
+@export var pitch_smoothing: float = 10.0  # Valor más alto para transiciones más rápidas, más bajo para más lentas.
+@export var num_gears: int = 5  # Number of gears (4, 5, or 6)
+@export var max_speed: float = 100.0  # Maximum speed for normalization
+@export var idle_pitch: float = 0.1  # Pitch at idle (low RPM)
+@export var redline_pitch: float = 2.0  # Pitch at redline (high RPM)
+@export var shift_drop_factor: float = 0.6  # Fraction of redline pitch after shift (e.g., 0.6 for drop to 60% of max RPM)
+
 
 @export var is_player: bool = true
 @export var path_to_follow: int = 0
@@ -46,6 +56,8 @@ var drift_sound: AudioStreamPlayer3D = AudioStreamPlayer3D.new()
 var smoke_particles: Array = []
 
 func _ready() -> void:
+	engine_sound.max_db = 6.0
+	engine_sound.max_distance = 100
 	gravity_scale = 4
 	all_checkpoints = get_parent().num_checkpoints 
 	var siblings = get_parent().get_children()
@@ -94,7 +106,7 @@ func _physics_process(delta: float) -> void:
 	
 	traction_by_terrain_control()
 	
-	engine_sound_controller()
+	engine_sound_controller(delta)
 	
 	dist_sensor_sistem()
 	
@@ -205,10 +217,23 @@ func call_lakitu():
 		angular_velocity = Vector3.ZERO
 		rotation = last_checkpoint.rotation
 
-func engine_sound_controller():
-	var speed = linear_velocity.length()
-	var normalized_speed = clamp(speed, 0, 150)
-	engine_sound.pitch_scale = 0.00667 * normalized_speed + 0.1
+func engine_sound_controller(delta):
+	var speed_car = linear_velocity.length()
+	var normalized_speed = clamp(speed_car / max_speed, 0.0, 1.0)
+	var effective_gear = normalized_speed * num_gears
+	var gear = floor(effective_gear)  # Current gear index (0 to num_gears-1)
+	var progress = fmod(effective_gear, 1.0)  # Progress within the current gear (0 to 1)
+	
+	var min_pitch_this_gear: float
+	if gear == 0:
+		min_pitch_this_gear = pitch_scale_min
+	else:
+		min_pitch_this_gear = pitch_scale_max * shift_drop_factor
+	
+	var target_pitch = min_pitch_this_gear + progress * (pitch_scale_max - min_pitch_this_gear)
+	
+	# Suaviza la transición usando lerp.
+	engine_sound.pitch_scale = lerp(engine_sound.pitch_scale, target_pitch, pitch_smoothing * delta)
 	
 func dist_sensor_sistem():
 	if get_parent().name != "LobyRework":
