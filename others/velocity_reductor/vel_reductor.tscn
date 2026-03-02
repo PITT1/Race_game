@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://blsd77oo8dw63" path="res://others/velocity_reductor/vel_reductor.gd" id="1_cxddr"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_n1lb4"]
-size = Vector3(56.9534, 25.5041, 44.3723)
+size = Vector3(22.83564, 25.5041, 44.3723)
 
 [node name="vel_reductor" type="Area3D"]
 script = ExtResource("1_cxddr")
