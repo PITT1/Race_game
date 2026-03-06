@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://d30d12cgb1qui"
-path="res://.godot/imported/nascar_circuit_rework_2.glb-b7ba8024a644bc14111d739c802d4c27.scn"
+uid="uid://cc6q0mjxrkict"
+path="res://.godot/imported/nascar_circuit_REWORK.glb-d8fa34741d0676e754c0c90ab02e6300.scn"
 
 [deps]
 
-source_file="res://Maps/nascar_circuit/nascar_circuit_rework_2.glb"
-dest_files=["res://.godot/imported/nascar_circuit_rework_2.glb-b7ba8024a644bc14111d739c802d4c27.scn"]
+source_file="res://Maps/nascar_circuit/nascar_circuit_REWORK.glb"
+dest_files=["res://.godot/imported/nascar_circuit_REWORK.glb-d8fa34741d0676e754c0c90ab02e6300.scn"]
 
 [params]
 

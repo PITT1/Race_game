@@ -21,7 +21,7 @@ var surface: String = ""
 var is_on_pista: bool = true
 
 @export_category("SOUND")
-@export var pitch_scale_min: float = 0.1  # Pitch mínimo (equivalente a idle_pitch)
+@export var pitch_scale_min: float = 0.3  # Pitch mínimo (equivalente a idle_pitch)
 @export var pitch_scale_max: float = 1.0  # Pitch máximo (equivalente a redline_pitch)
 @export var pitch_smoothing: float = 10.0  # Valor más alto para transiciones más rápidas, más bajo para más lentas.
 @export var num_gears: int = 5  # Number of gears (4, 5, or 6)
