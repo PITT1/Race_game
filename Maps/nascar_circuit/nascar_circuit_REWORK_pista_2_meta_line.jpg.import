@@ -2,21 +2,21 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5ss781amdolb"
-path.s3tc="res://.godot/imported/nascar_circuit_REWORK_Ground079S_1K-JPG_Color.jpg-04b70c150cb72d5672d005132cd0085b.s3tc.ctex"
-path.etc2="res://.godot/imported/nascar_circuit_REWORK_Ground079S_1K-JPG_Color.jpg-04b70c150cb72d5672d005132cd0085b.etc2.ctex"
+uid="uid://cxqtm05qv8p60"
+path.s3tc="res://.godot/imported/nascar_circuit_REWORK_pista_2_meta_line.jpg-048d4211966846ba6586f18ddfcab44d.s3tc.ctex"
+path.etc2="res://.godot/imported/nascar_circuit_REWORK_pista_2_meta_line.jpg-048d4211966846ba6586f18ddfcab44d.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "fea53bdc9645cf7f5f31d6395c0d124d"
+"md5": "27550bf35569a956e28fdbfc0e6cfbb3"
 }
 
 [deps]
 
-source_file="res://Maps/nascar_circuit/nascar_circuit_REWORK_Ground079S_1K-JPG_Color.jpg"
-dest_files=["res://.godot/imported/nascar_circuit_REWORK_Ground079S_1K-JPG_Color.jpg-04b70c150cb72d5672d005132cd0085b.s3tc.ctex", "res://.godot/imported/nascar_circuit_REWORK_Ground079S_1K-JPG_Color.jpg-04b70c150cb72d5672d005132cd0085b.etc2.ctex"]
+source_file="res://Maps/nascar_circuit/nascar_circuit_REWORK_pista_2_meta_line.jpg"
+dest_files=["res://.godot/imported/nascar_circuit_REWORK_pista_2_meta_line.jpg-048d4211966846ba6586f18ddfcab44d.s3tc.ctex", "res://.godot/imported/nascar_circuit_REWORK_pista_2_meta_line.jpg-048d4211966846ba6586f18ddfcab44d.etc2.ctex"]
 
 [params]
 
