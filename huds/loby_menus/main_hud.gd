@@ -85,7 +85,8 @@ func _on_left_btn_button_up() -> void:
 
 func _on_to_race_button_up() -> void:
 	pop_sound.play()
-	get_tree().change_scene_to_file(track_list[selector][1])
+	#get_tree().change_scene_to_file(track_list[selector][1])
+	SceneManager.load_scene(track_list[selector][1])
 
 
 func _on_quick_race_btn_button_up() -> void:
@@ -95,7 +96,8 @@ func _on_quick_race_btn_button_up() -> void:
 
 func _on_button_button_up() -> void:
 	pop_sound.play()
-	get_tree().change_scene_to_file("res://Maps/car_selection_rework/car_selection_rework.tscn")
+	#get_tree().change_scene_to_file("res://Maps/car_selection_rework/car_selection_rework.tscn")
+	SceneManager.load_scene("res://Maps/car_selection_rework/car_selection_rework.tscn")
 
 
 func _on_options_btn_button_up() -> void:

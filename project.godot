@@ -45,6 +45,7 @@ GlobalVar="*res://global_var.gd"
 BgMusicManager="*res://bg_music_manager.gd"
 Ads="*res://ads.gd"
 Options="*res://options.gd"
+SceneManager="*res://scene_manager.gd"
 
 [display]
 

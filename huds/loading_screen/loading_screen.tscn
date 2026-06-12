@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://chnsr57gdr8l3"]
+[gd_scene load_steps=2 format=3 uid="uid://chnsr57gdr8l3"]
+
+[ext_resource type="Script" uid="uid://dny257blql4pk" path="res://huds/loading_screen/loading_screen.gd" id="1_66k21"]
 
 [node name="LoadingScreen" type="Control"]
 layout_mode = 3
@@ -7,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_66k21")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
