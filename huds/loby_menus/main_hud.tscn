@@ -431,7 +431,7 @@ text = "id_3"
 [node name="version_label" type="Label" parent="CanvasLayer/page_1"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 64
-text = "Version(0.9.8)"
+text = "Version(0.9.20)"
 
 [node name="page_2" type="VBoxContainer" parent="CanvasLayer"]
 anchors_preset = -1

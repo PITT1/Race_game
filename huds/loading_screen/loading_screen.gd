@@ -3,6 +3,7 @@ extends Control
 @onready var label: Label = $CanvasLayer/ColorRect/CenterContainer/VBoxContainer/Label
 @onready var progress_bar: ProgressBar = $CanvasLayer/ColorRect/CenterContainer/VBoxContainer/ProgressBar
 
+
 var target_scene: String = ""
 var progress: Array = []
 
